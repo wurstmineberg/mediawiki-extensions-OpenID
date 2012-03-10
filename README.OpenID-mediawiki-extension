@@ -461,6 +461,7 @@ The big changes for the future:
   into that account now
 
 == CHANGES ==
+* 1.002 added missing system text 'right-openid-converter-access'
 * 1.001 convenience release with download of the version for PHP 5.3.x
 	from https://github.com/Wikinaut/php-openid/tree/mw-extension-openid
 * 1.000 release version

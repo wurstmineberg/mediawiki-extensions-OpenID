@@ -23,7 +23,7 @@ Status: 1.000 20120212
 - keep user from setting password in OpenID account except case S/OO
 - OpenID-only enabled account owners cannot set their password when the account
   lacks an e-mail address - which cannot be set up because they don't have a
-  password (rat race condition) 
+  password (race condition) 
   https://bugzilla.wikimedia.org/show_bug.cgi?id=34357
   This is a regression from implementation of
   Changing your email address should require entering your password
@@ -38,7 +38,6 @@ Status: 1.000 20120212
 - configurable regexps for finding a user ID from an OpenID.
 - deal with difference between canonical ID and "display ID" with XRIs
 - support RP discovery
-- README (always keep README up to date)
 
 * warn if a user account has been used as a login before attaching an
   OpenID (I think, this is solved; marked with * instead of +)

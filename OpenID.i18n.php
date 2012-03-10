@@ -135,6 +135,7 @@ You would not able to log in without an OpenID.',
 	'openid-provider-label-other-username' => 'Enter your $1 username',
 
 	'specialpages-group-openid' => 'OpenID service pages and status information',
+	'right-openid-converter-access' => 'Can add or convert their account to use OpenID identities',
 	'right-openid-dashboard-access' => 'Standard access to the OpenID dashboard',
 	'right-openid-dashboard-admin' => 'Administrator access to the OpenID dashboard',
 
