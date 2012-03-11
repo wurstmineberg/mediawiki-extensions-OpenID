@@ -88,7 +88,7 @@ you can choose one from the options below.',
 	'openidalreadyloggedin' => 'You are already logged in.',
 	'openidalreadyloggedintext' => "'''You are already logged in, $1!'''
 
-You can manage (view, delete, add further) OpenIDs in the [[Special:Preferences#prefsection-openid|OpenID tab]] of your preferences.",
+You can manage (view, delete, add further) OpenIDs in the [[Special:Preferences#mw-prefsection-openid|OpenID tab]] of your preferences.",
 	'openidnousername' => 'No username specified.',
 	'openidbadusername' => 'Bad username specified.',
 	'openidautosubmit' => 'This page includes a form that should be automatically submitted if you have JavaScript enabled.
