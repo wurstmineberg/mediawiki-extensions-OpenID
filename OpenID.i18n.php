@@ -617,7 +617,7 @@ pues escoyer unu ente les opciones d'abaxo.",
 	'openidalreadyloggedin' => 'Yá aniciasti sesión.',
 	'openidalreadyloggedintext' => "'''Yá tas identificáu, $1!'''
 
-Pues xestionar (ver, desaniciar, amestar otres) les OpenID na [[Special:Preferences#prefsection-openid|llingüeta OpenID]] de les preferencies.",
+Pues xestionar (ver, desaniciar, amestar otres) les OpenID na [[Special:Preferences#mw-prefsection-openid|llingüeta OpenID]] de les preferencies.",
 	'openidnousername' => "Nun escribisti dengún nome d'usuariu.",
 	'openidbadusername' => "Escribisti mal el nome d'usuariu.",
 	'openid-urls-desc' => 'OpenIDs asociaes cola to cuenta:',
@@ -722,7 +722,7 @@ $messages['be-tarask'] = array(
 	'openidalreadyloggedin' => 'Вы ўжо ўвайшлі.',
 	'openidalreadyloggedintext' => "'''Вы ўжо ўвайшлі, $1!'''
 
-Вы можаце кіраваць (праглядаць, выдаляць, дадаваць) OpenID ва ўкладцы Вашых  [[Special:Preferences#prefsection-openid|наладаў]] OpenID.",
+Вы можаце кіраваць (праглядаць, выдаляць, дадаваць) OpenID ва ўкладцы Вашых  [[Special:Preferences#mw-prefsection-openid|наладаў]] OpenID.",
 	'openidnousername' => 'Не пазначана імя ўдзельніка.',
 	'openidbadusername' => 'Пазначана няслушнае імя ўдзельніка.',
 	'openidautosubmit' => 'Гэта старонка ўтрымлівае форму, якая павінна быць аўтаматычна адпраўлена, калі ў Вас уключаны JavaScript.
@@ -957,7 +957,7 @@ gellout a rit dibab unan eus ar c'hinnigoù a-is.",
 	'openidalreadyloggedin' => "Kevreet oc'h c'hoazh.",
 	'openidalreadyloggedintext' => "'''Kevreet oc'h c'hoazh, $1!'''
 
-Gallout a rit merañ (gwelet, diverkañ, ouzhpennañ) OpenIDoù all en ivinell [[Special:Preferences#prefsection-openid|OpenID]] ho penndibaboù.",
+Gallout a rit merañ (gwelet, diverkañ, ouzhpennañ) OpenIDoù all en ivinell [[Special:Preferences#mw-prefsection-openid|OpenID]] ho penndibaboù.",
 	'openidnousername' => "N'eus bet diferet anv implijer ebet.",
 	'openidbadusername' => 'Un anv implijer fall zo bet lakaet.',
 	'openidautosubmit' => "Er bajenn-mañ ez eus ur furmskrid hag a c'hallfe bezañ kaset emgefre m'hoc'h eus gweredekaet JavaScript.
@@ -1340,7 +1340,7 @@ du kannst einen aus der untenstehenden Liste auswählen.',
 	'openidalreadyloggedin' => 'Du bist bereits angemeldet.',
 	'openidalreadyloggedintext' => "'''Du bist bereits angemeldet, $1.'''
 
-Du kannst diese und weitere OpenIDs unter dem Reiter [[Special:Preferences#prefsection-openid|OpenID]] deiner Kontoeinstellungen verwalten (ansehen, löschen sowie weitere hinzufügen).",
+Du kannst diese und weitere OpenIDs unter dem Reiter [[Special:Preferences#mw-prefsection-openid|OpenID]] deiner Kontoeinstellungen verwalten (ansehen, löschen sowie weitere hinzufügen).",
 	'openidnousername' => 'Kein Benutzername angegeben.',
 	'openidbadusername' => 'Falscher Benutzername angegeben.',
 	'openidautosubmit' => 'Diese Seite enthält ein Formular, das automatisch übertragen wird, wenn JavaSkript aktiviert ist. Falls nicht, klicke bitte auf „Continue“ (Weiter).',
@@ -1422,7 +1422,7 @@ Sie können einen aus der untenstehenden Liste auswählen.',
 	'openidalreadyloggedin' => 'Sie sind bereits angemeldet.',
 	'openidalreadyloggedintext' => "'''Sie sind bereits angemeldet, $1.'''
 
-Sie können diese und weitere OpenIDs unter dem Reiter [[Special:Preferences#prefsection-openid|OpenID]] Ihrer Kontoeinstellungen verwalten (ansehen, löschen sowie weitere hinzufügen).",
+Sie können diese und weitere OpenIDs unter dem Reiter [[Special:Preferences#mw-prefsection-openid|OpenID]] Ihrer Kontoeinstellungen verwalten (ansehen, löschen sowie weitere hinzufügen).",
 	'openidautosubmit' => 'Diese Seite enthält ein Formular, das automatisch übertragen wird, wenn JavaSkript aktiviert ist. Falls nicht, klicken Sie bitte auf „Continue“ (Weiter).',
 	'openidclientonlytext' => 'Sie können keine Benutzerkonten aus diesem Wiki als OpenID für andere Seiten verwenden.',
 	'openidlogininstructions' => '{{SITENAME}} unterstützt den [//openid.net/ OpenID-Standard] für eine einheitliche Anmeldung auf mehreren Websites.
@@ -1527,6 +1527,7 @@ OpenID śi zmóžnja se pla rozdźělnych websedłow pśizjawiś, bźez togo až
 (Glědaj [//en.wikipedia.org/wiki/OpenID nastawk OpenID we Wikipediji] za dalšne informacije.)
 
 Jo wjele [//openid.net/get/ póbitowarjow OpenID] a snaź maš južo konto z OpenID pla drugeje słužby.',
+	'openidlogininstructions-openidloginonly' => "Móžoš se na {{GRAMMAR:lokatiw|{{SITENAME}}}} ''jano'' z OpenID pśizjawiś.",
 	'openidupdateuserinfo' => 'Móje wósobinske informacije aktualizěrowaś:',
 	'openiddelete' => 'OpenID wulašowaś',
 	'openiddelete-text' => 'Pśez kliknjenje na tłócašk "{{int:openiddelete-button}}", wótpórajoš OpenID $1 z twójogo konta. Njamóžoš se wěcej z toś tym OpenID pśizjawiś.',
@@ -1542,6 +1543,7 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'openid-pref-update-userinfo-on-login' => 'Kuždy raz, gaž se pízjawjam, slědujuce informacije z identity OpenID aktualizěrowaś:',
 	'openid-urls-desc' => 'OpenID, kótarež su z twójim kontom zwězane:',
 	'openid-urls-action' => 'Akcija',
+	'openid-urls-registration' => 'Registěrowański cas',
 	'openid-urls-delete' => 'Lašowaś',
 	'openid-add-url' => 'Nowy OpenID pśidaś',
 	'openid-login-or-create-account' => 'Pśizjawiś abo nowe konto załožyś',
@@ -1550,6 +1552,12 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'openid-provider-label-yahoo' => 'Z pomocu twójogo konta Yahoo se pśizjawiś',
 	'openid-provider-label-aol' => 'Zapódaj swójo wužywarske mě AOL',
 	'openid-provider-label-other-username' => 'Zapódaj swójo wužywarske mě $1',
+	'specialpages-group-openid' => 'Boki OpenID-słužbow a statusowych informacijow',
+	'right-openid-converter-access' => 'Móźo konto za wužywanje OpenID-identitow pśidaś abo konwertěrowaś',
+	'openid-dashboard-introduction' => 'Aktualne nastajenja rozšyrjenja OpenID ([$1 pomoc])',
+	'openid-dashboard-number-openid-users' => 'Licba wužywarjow z OpenID',
+	'openid-dashboard-number-openids-in-database' => 'Licba wšych OpenID (dogromady)',
+	'openid-dashboard-number-users-without-openid' => 'Licba wužywarjow bźez OpenID',
 );
 
 /** Ewe (Eʋegbe) */
@@ -1809,7 +1817,7 @@ puedes escoger uno de las opciones debajo.',
 	'openidalreadyloggedin' => 'Ya has iniciado sesión.',
 	'openidalreadyloggedintext' => "'''¡Ya ha iniciado sesión, $1!'''
 
-Puede gestionar (ver, eliminar, añadir) identificadores OpenID en la [[Special:Preferences#prefsection-openid|pestaña OpenID]] de sus  preferencias.",
+Puede gestionar (ver, eliminar, añadir) identificadores OpenID en la [[Special:Preferences#mw-prefsection-openid|pestaña OpenID]] de sus  preferencias.",
 	'openidnousername' => 'No se especificó ningún nombre de usuario.',
 	'openidbadusername' => 'Nombre de usuario mal especificado.',
 	'openidautosubmit' => 'Esta página incluye un formulario que será enviado automáticamnte si dispones de JavaScript.
@@ -1850,6 +1858,7 @@ No podrás iniciar sesión sin un OpenID.',
 	'openid-provider-label-aol' => 'Introduce tu nombre de usuario de AOL',
 	'openid-provider-label-other-username' => 'Introduce tu nombre de usuario de $1',
 	'specialpages-group-openid' => 'Páginas de servicio de OpenID e información de estado',
+	'right-openid-converter-access' => 'Puede agregar o convertir su cuenta para utilizar identidades OpenID',
 	'right-openid-dashboard-access' => 'Acceso estándar al tablero de OpenID',
 	'right-openid-dashboard-admin' => 'Acceso de administrador al tablero de OpenID',
 	'openid-dashboard-title' => 'Tablero de OpenID',
@@ -2068,7 +2077,7 @@ Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Pre
 	'openidalreadyloggedin' => 'Vous êtes déjà connecté.',
 	'openidalreadyloggedintext' => "'''Vous êtes déjà connecté, $1 !'''
 
-Vous pouvez gérer (voir, supprimer et en ajouter d'autres) OpenID dans l'onglet [[Special:Preferences#prefsection-openid|OpenID]] de vos préférences.",
+Vous pouvez gérer (voir, supprimer et en ajouter d'autres) OpenID dans l'onglet [[Special:Preferences#mw-prefsection-openid|OpenID]] de vos préférences.",
 	'openidnousername' => 'Aucun nom d’utilisateur n’a été indiqué.',
 	'openidbadusername' => 'Un mauvais nom d’utilisatteur a été indiqué.',
 	'openidautosubmit' => 'Cette page comprend un formulaire qui pourrait être envoyé automatiquement si vous avez activé JavaScript.
@@ -2237,7 +2246,7 @@ Pode engadir un contrasinal opcional no seu [[Special:Preferences#prefsection-pe
 	'openidalreadyloggedin' => 'Xa está identificado.',
 	'openidalreadyloggedintext' => "'''Xa está identificado como $1!'''
 
-Pode xestionar (ollar, borrar, engadir) os OpenID na [[Special:Preferences#prefsection-openid|lapela OpenID]] das súas preferencias.",
+Pode xestionar (ollar, borrar, engadir) os OpenID na [[Special:Preferences#mw-prefsection-openid|lapela OpenID]] das súas preferencias.",
 	'openidnousername' => 'Non especificou ningún nome de usuario.',
 	'openidbadusername' => 'O nome de usuario especificado é incorrecto.',
 	'openidautosubmit' => 'Esta páxina inclúe un formulario que debería ser enviado automaticamente se ten o JavaScript activado.
@@ -2484,7 +2493,7 @@ $messages['he'] = array(
 	'openidalreadyloggedin' => 'אתם כבר מחוברים לחשבון.',
 	'openidalreadyloggedintext' => "'''$1, {{GENDER:$1|אתה כבר מחובר|את כבר מחוברת}} לחשבון!'''
 
-אפשר לנהל (להציג, למחוק ולהוסיף) מזהי OpenID ב[[Special:Preferences#prefsection-openid|לשונית OpenID]] בדף ההעדפות שלך.",
+אפשר לנהל (להציג, למחוק ולהוסיף) מזהי OpenID ב[[Special:Preferences#mw-prefsection-openid|לשונית OpenID]] בדף ההעדפות שלך.",
 	'openidnousername' => 'לא צוין שם משתמש.',
 	'openidbadusername' => 'שם המשתמש שצוין אינו תקין.',
 	'openidautosubmit' => 'דף זה מכיל טופס שאמור להשלח אוטומטית אם יש לכם JavaScript פעיל.
@@ -2743,7 +2752,7 @@ Faktulatiwne hesło hodźi so w twojim [[Special:Preferences#prefsection-persona
 	'openidalreadyloggedin' => 'Sy hižo přizjewjeny.',
 	'openidalreadyloggedintext' => "'''Sy hižo přizjewjeny, $1!'''
 
-Móžeš OpenID na [[Special:Preferences#prefsection-openid|rajtarku OpenID]] swojich nastajenjow zrjadować (sej wobhladać, zhašeć, přidać).",
+Móžeš OpenID na [[Special:Preferences#mw-prefsection-openid|rajtarku OpenID]] swojich nastajenjow zrjadować (sej wobhladać, zhašeć, přidać).",
 	'openidnousername' => 'Žane wužiwarske mjeno podate.',
 	'openidbadusername' => 'Wopačne wužiwarske mjeno podate.',
 	'openidautosubmit' => 'Tuta strona wobsahuje formular, kotryž měł so awtomatisce wotpósłać, jeli sy JavaScript zmóžnił. Jeli nic, spytaj tłóčatko "Continue" (Dale).',
@@ -2780,6 +2789,7 @@ Ty njemóhł so bjez OpenID přizjewić.',
 	'openid-provider-label-aol' => 'Zapodaj swoje wužiwarske mjeno AOL',
 	'openid-provider-label-other-username' => 'Zapodaj swoje wužiwarske mjeno $1',
 	'specialpages-group-openid' => 'Strony OpenID-słužbow a statusowych informacijow',
+	'right-openid-converter-access' => 'Móže konto za wužiwanje OpenID-identitow přidać abo konwertować',
 	'right-openid-dashboard-access' => 'Standardny přistup na OpenID-přehlad',
 	'right-openid-dashboard-admin' => 'Administratorowy přistup na OpenID-přehlad',
 	'openid-dashboard-title' => 'OpenID-přehlad',
@@ -2949,7 +2959,7 @@ tu pote seliger un del optiones in basso.',
 	'openidalreadyloggedin' => 'Tu es jam authenticate.',
 	'openidalreadyloggedintext' => "'''Tu es jam authenticate, \$1!'''
 
-Tu pote gerer (vider, deler, adder altere) OpenIDs in le [[Special:Preferences#prefsection-openid|scheda \"OpenID\"]] de tu preferentias.",
+Tu pote gerer (vider, deler, adder altere) OpenIDs in le [[Special:Preferences#mw-prefsection-openid|scheda \"OpenID\"]] de tu preferentias.",
 	'openidnousername' => 'Nulle nomine de usator specificate.',
 	'openidbadusername' => 'Mal nomine de usator specificate.',
 	'openidautosubmit' => 'Iste pagina include un formulario que debe esser submittite automaticamente si tu ha JavaScript activate.
@@ -2990,6 +3000,7 @@ Il esserea impossibile aperir un session sin OpenID.',
 	'openid-provider-label-aol' => 'Entra tu pseudonymo de AOL',
 	'openid-provider-label-other-username' => 'Entra tu nomine de usator de $1',
 	'specialpages-group-openid' => 'Paginas de servicio OpenID e informationes de stato',
+	'right-openid-converter-access' => 'Pote adder o converter su conto pro usar identitates OpenID',
 	'right-openid-dashboard-access' => 'Accesso standard al pannello de instrumentos OpenID',
 	'right-openid-dashboard-admin' => 'Accesso administrator al pannello de instrumentos OpenID',
 	'openid-dashboard-title' => 'Pannello de instrumentos OpenID',
@@ -3843,7 +3854,7 @@ $messages['mk'] = array(
 	'openidalreadyloggedin' => 'Веќе сте најавени.',
 	'openidalreadyloggedintext' => "'''Веќе сте најавени, $1!'''
 
-Можете да раководите со (погледате, избришете, додавате повеќе) OpenID-ја во [[Special:Preferences#prefsection-openid|јазичето за OpenID]] во вашите нагодувања",
+Можете да раководите со (погледате, избришете, додавате повеќе) OpenID-ја во [[Special:Preferences#mw-prefsection-openid|јазичето за OpenID]] во вашите нагодувања",
 	'openidnousername' => 'Немате наведено корисничко име.',
 	'openidbadusername' => 'Беше назначено грешно име.',
 	'openidautosubmit' => 'На оваа страница стои образец кој треба да се поднесе автоматски ако имате овозможено JavaScript.
@@ -3885,6 +3896,7 @@ OpenID ви овозможува да се најавувате на многу 
 	'openid-provider-label-aol' => 'Внесете го вашето име на AOL',
 	'openid-provider-label-other-username' => 'Внесете го вашето $1 корисничко име',
 	'specialpages-group-openid' => 'Службени страници и статусни информации на OpenID',
+	'right-openid-converter-access' => 'Може да ја додава или претвора својата сметка за употреба на OpenID-идентитети',
 	'right-openid-dashboard-access' => 'Стандарден пристап до таблата на OpenID',
 	'right-openid-dashboard-admin' => 'Администраторски пристап до таблата на OpenID',
 	'openid-dashboard-title' => 'Табла на OpenID',
@@ -4085,7 +4097,7 @@ anda boleh memilih satu daripada pilihan-pilihan berikut.',
 	'openidalreadyloggedin' => 'Anda sudah log masuk.',
 	'openidalreadyloggedintext' => "'''Anda sudah log masuk, $1!'''
 
-Anda boleh menguruskan (lihat, hapuskan, tambahkan lagi) OpenID dalam [[Special:Preferences#prefsection-openid|tab OpenID]] dalam keutamaan anda.",
+Anda boleh menguruskan (lihat, hapuskan, tambahkan lagi) OpenID dalam [[Special:Preferences#mw-prefsection-openid|tab OpenID]] dalam keutamaan anda.",
 	'openidnousername' => 'Nama pengguna tidak dinyatakan.',
 	'openidbadusername' => 'Nama pengguna yang dinyatakan tidak sah.',
 	'openidautosubmit' => 'Laman ini mempunyai borang yang sepatutnya diserahkan secara automatik jika JavaScript dihidupkan.
@@ -4352,7 +4364,7 @@ Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Pr
 	'openidalreadyloggedin' => 'U bent al aangemeld.',
 	'openidalreadyloggedintext' => "'''U bent al aangemeld, $1!'''
 
-U kunt OpenID's beheren (bekijken, verwijderen en toevoegen) in het [[Special:Preferences#prefsection-openid|tabblad OpenID]] in uw voorkeuren.",
+U kunt OpenID's beheren (bekijken, verwijderen en toevoegen) in het [[Special:Preferences#mw-prefsection-openid|tabblad OpenID]] in uw voorkeuren.",
 	'openidnousername' => 'Er is geen gebruikersnaam opgegeven.',
 	'openidbadusername' => 'De opgegeven gebruikersnaam is niet toegestaan.',
 	'openidautosubmit' => 'Deze pagina bevat een formulier dat automatisch wordt verzonden als JavaScript is ingeschaked.
@@ -4608,6 +4620,7 @@ $messages['pdt'] = array(
 );
 
 /** Polish (Polski)
+ * @author BeginaFelicysym
  * @author Maikking
  * @author Sp5uhe
  */
@@ -4668,7 +4681,7 @@ Możesz wybrać spośród propozycji podanych poniżej.',
 	'openidalreadyloggedin' => 'Jesteś już zalogowany.',
 	'openidalreadyloggedintext' => "'''Już jesteś zalogowany jako $1!'''
 
-Możesz zarządzać (przeglądać, usuwać, dodawać dalsze) OpenID w [[Special:Preferences#prefsection-openid|zakładce OpenID]] w swoich preferencjach.",
+Możesz zarządzać (przeglądać, usuwać, dodawać dalsze) OpenID w [[Special:Preferences#mw-prefsection-openid|zakładce OpenID]] w swoich preferencjach.",
 	'openidnousername' => 'Nie wybrano żadnej nazwy użytkownika.',
 	'openidbadusername' => 'Wybrano nieprawidłową nazwę użytkownika.',
 	'openidautosubmit' => 'Strona zawiera formularz, który powinien zostać automatycznie przesłany jeśli masz włączoną obsługę JavaScript.
@@ -4709,6 +4722,7 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openid-provider-label-aol' => 'Wprowadź nazwę wyświetlaną AOL',
 	'openid-provider-label-other-username' => 'Wprowadź swoją nazwę użytkownika $1',
 	'specialpages-group-openid' => 'OpenID – strony diagnostyczne i statusu',
+	'right-openid-converter-access' => 'Można dodać lub przystosować ich konto do używania tożsamości OpenID',
 	'right-openid-dashboard-access' => 'Standardowy dostęp do zarządzania OpenID',
 	'right-openid-dashboard-admin' => 'Administracyjny dostęp do zarządzania OpenID',
 	'openid-dashboard-title' => 'Zarządzanie OpenID',
@@ -4903,7 +4917,7 @@ pode escolher uma das opções abaixo.',
 	'openidalreadyloggedin' => 'Já está autenticado.',
 	'openidalreadyloggedintext' => "'''Já está autenticado, $1!'''
 
-Pode gerir (ver, eliminar, etc.) OpenIDs no separador [[Special:Preferences#prefsection-openid|OpenID]] das suas preferências.",
+Pode gerir (ver, eliminar, etc.) OpenIDs no separador [[Special:Preferences#mw-prefsection-openid|OpenID]] das suas preferências.",
 	'openidnousername' => 'Nenhum nome de utilizador especificado.',
 	'openidbadusername' => 'Nome de utilizador especificado inválido.',
 	'openidautosubmit' => 'Esta página inclui um formulário que deverá ser automaticamente submetido se tiver JavaScript activado.
@@ -5225,7 +5239,7 @@ $messages['ru'] = array(
 	'openidalreadyloggedin' => 'Вы уже вошли.',
 	'openidalreadyloggedintext' => "''' Вы уже вошли,  $1!'''
 
-Вы можете управлять (просматривать, удалять, добавлять) записи OpenID на [[Special:Preferences#prefsection-openid|вкладке OpenID]] в ваших предпочтениях.",
+Вы можете управлять (просматривать, удалять, добавлять) записи OpenID на [[Special:Preferences#mw-prefsection-openid|вкладке OpenID]] в ваших предпочтениях.",
 	'openidnousername' => 'Не указано имя участника.',
 	'openidbadusername' => 'Указано неверное имя участника.',
 	'openidautosubmit' => 'Эта страница содержит форму, которая должна быть автоматически отправлена, если у вас включён JavaScript.
@@ -5514,7 +5528,7 @@ svojega si lahko izberete med spodnjimi možnostmi.',
 	'openidalreadyloggedin' => 'Ste že prijavljeni.',
 	'openidalreadyloggedintext' => "'''$1, ste že prijavljeni!'''
 
-OpenID-je lahko upravljate (si jih ogledate, izbrišete in drugo) na [[Special:Preferences#prefsection-openid|zavihku OpenID]] v vaših nastavitvah.",
+OpenID-je lahko upravljate (si jih ogledate, izbrišete in drugo) na [[Special:Preferences#mw-prefsection-openid|zavihku OpenID]] v vaših nastavitvah.",
 	'openidnousername' => 'Uporabniško ime ni določeno.',
 	'openidbadusername' => 'Določeno je neustrezno uporabniško ime.',
 	'openidautosubmit' => 'Ta stran vsebuje obrazec, ki bi se moral potrditi samodejno, če imate omogočen JavaScript.
@@ -5860,7 +5874,7 @@ Du kan välja ett från alternativen nedan.',
 	'openidalreadyloggedin' => 'Du är redan inloggad.',
 	'openidalreadyloggedintext' => "'''Du är redan inloggad, $1!'''
 
-Du kan hantera (visa, radera, m.m) OpenID:n i [[Special:Preferences#prefsection-openid|OpenID-fliken]] under dina inställningar.",
+Du kan hantera (visa, radera, m.m) OpenID:n i [[Special:Preferences#mw-prefsection-openid|OpenID-fliken]] under dina inställningar.",
 	'openidnousername' => 'Inget användarnamn angivet.',
 	'openidbadusername' => 'Ogiltigt användarnamn angivet.',
 	'openidautosubmit' => 'Denna sida innehåller ett formulär som kommer levereras automatiskt om du har slagit på JavaScript.
@@ -6508,7 +6522,7 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidalreadyloggedin' => 'Bạn đã đăng nhập rồi.',
 	'openidalreadyloggedintext' => "'''Bạn đã đăng nhập rồi, $1!'''
 
-Quản lý (xem, xóa, và thêm) các OpenID trong [[Special:Preferences#prefsection-openid|thẻ OpenID]] tại trang tùy chọn.",
+Quản lý (xem, xóa, và thêm) các OpenID trong [[Special:Preferences#mw-prefsection-openid|thẻ OpenID]] tại trang tùy chọn.",
 	'openidnousername' => 'Chưa chỉ định tên người dùng.',
 	'openidbadusername' => 'Tên người dùng không hợp lệ.',
 	'openidautosubmit' => 'Trang này có một mẫu sẽ tự động đăng lên nếu bạn kích hoạt JavaScript.
@@ -6658,7 +6672,7 @@ $messages['zh-hans'] = array(
 	'openidalreadyloggedin' => '您已经登录了。',
 	'openidalreadyloggedintext' => "'''您已经登录，$1！'''
 
-您可以在您的设置的[[Special:Preferences#prefsection-openid|OpenID 选项卡]]中管理（查看、删除和进一步添加）OpenID。",
+您可以在您的设置的[[Special:Preferences#mw-prefsection-openid|OpenID 选项卡]]中管理（查看、删除和进一步添加）OpenID。",
 	'openidnousername' => '没有指定用户名。',
 	'openidbadusername' => '指定的用户名是错误的。',
 	'openidautosubmit' => '本页包含的表单在启用JavaScript的情况下可以自动提交。
