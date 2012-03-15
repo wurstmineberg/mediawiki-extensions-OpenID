@@ -230,6 +230,13 @@ $messages['niu'] = array(
 	'openidchoosepassword' => 'Kupu fufu:',
 );
 
+/** Ṫuroyo (Ṫuroyo)
+ * @author Ariyo
+ */
+$messages['tru'] = array(
+	'openidlanguage' => 'Leşono:',
+);
+
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj
