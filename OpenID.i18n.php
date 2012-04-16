@@ -2937,7 +2937,7 @@ Iste OpenID e alteres (si presente) pote esser gerite in le [[Special:Preference
 Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#prefsection-personal|profilo de usator]].",
 	'openidusernameprefix' => 'Usator OpenID',
 	'openidserverlogininstructions' => 'Le sito $3 requesta que tu entra le contrasigno de tu conto "$2", pagina $1 (isto es tu URL de OpenID).',
-	'openidtrustinstructions' => 'Controla si tu vole repartir datos con $1.',
+	'openidtrustinstructions' => 'Controla si tu vole divider datos con $1.',
 	'openidallowtrust' => 'Permitte que $1 se fide a iste conto de usator.',
 	'openidnopolicy' => 'Le sito non ha specificate un politica de confidentialitate.',
 	'openidpolicy' => 'Consulta le <a target="_new" href="$1">politica de confidentialitate</a> pro plus informationes.',
