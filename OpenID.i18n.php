@@ -3245,6 +3245,7 @@ Non saresti in grado di accedere senza un OpenID.',
  * @author Fryed-peach
  * @author Hosiryuhosi
  * @author Schu
+ * @author Shirayuki
  * @author Whym
  * @author 青子守歌
  */
@@ -3331,7 +3332,7 @@ $messages['ja'] = array(
 	'openid-provider-label-google' => 'あなたの Google アカウントを用いてログインする',
 	'openid-provider-label-yahoo' => 'あなたの Yahoo アカウントを用いてログインする',
 	'openid-provider-label-aol' => 'あなたの AOL スクリーンネームを入力します',
-	'openid-provider-label-other-username' => 'あなたの $1 での利用者名を入力します',
+	'openid-provider-label-other-username' => 'あなたの $1 での利用者名を入力',
 	'specialpages-group-openid' => 'OpenID のサービスページとステータス情報',
 	'right-openid-dashboard-access' => 'OpenID ダッシュボードへの標準アクセス',
 	'right-openid-dashboard-admin' => 'OpenID ダッシュボードへの管理者アクセス',
