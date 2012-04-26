@@ -3843,7 +3843,7 @@ $messages['mk'] = array(
 	'openidfullname' => 'Полно име',
 	'openidemail' => 'Е-пошта',
 	'openidlanguage' => 'Јазик',
-	'openidtimezone' => 'Часовна зона',
+	'openidtimezone' => 'Часовен појас',
 	'openidchooselegend' => 'Избор на корисничко име и сметка',
 	'openidchooseinstructions' => 'Сите корисници треба да имаат прекар;
 можете да изберете едно од долунаведените предлози:',
