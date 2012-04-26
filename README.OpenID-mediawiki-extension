@@ -1,5 +1,5 @@
 MediaWiki OpenID extension README.OpenID-mediawiki-extension file
-version 1.001 20120220
+version 1.004 20120427
 Homepage and manual http://www.mediawiki.org/wiki/Extension:OpenID
 
 Please check OpenID.setup.php for the current program version number
@@ -461,6 +461,8 @@ The big changes for the future:
   into that account now
 
 == CHANGES ==
+* 1.004 links to preferences tabs corrected
+* 1.003 changed system text openidalreadyloggedintext
 * 1.002 added missing system text 'right-openid-converter-access'
 * 1.001 convenience release with download of the version for PHP 5.3.x
 	from https://github.com/Wikinaut/php-openid/tree/mw-extension-openid

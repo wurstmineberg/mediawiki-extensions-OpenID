@@ -53,8 +53,8 @@ Please consult an [[Special:ListUsers/sysop|administrator]].',
 
 Your OpenID is $2 .
 
-This and optional further OpenIDs can be managed in the [[Special:Preferences#prefsection-openid|OpenID tab]] of your preferences.<br />
-An optional account password can be added in your [[Special:Preferences#prefsection-personal|User profile]].",
+This and optional further OpenIDs can be managed in the [[Special:Preferences#mw-prefsection-openid|OpenID tab]] of your preferences.<br />
+An optional account password can be added in your [[Special:Preferences#mw-prefsection-personal|User profile]].",
 	'openidusernameprefix' => 'OpenIDUser',
 	'openidserverlogininstructions' => '$3 requests that you enter your password for your user $2 page $1 (this is your OpenID URL)',
 	'openidtrustinstructions' => 'Check if you want to share data with $1.',
