@@ -589,8 +589,8 @@ Consulta con un [[Special:ListUsers/sysop|alministrador]].",
 
 La to OpenID ye $2.
 
-Esti y otros OpenID opcionales se puen xestionar na [[Special:Preferences#prefsection-openid|llingüeta OpenID]] de les preferencies.<br />
-Se pue amestar una conseña de cuenta opcional nel [[Special:Preferences#prefsection-personal|perfil d'usuariu]].",
+Esti y otros OpenID opcionales se puen xestionar na [[Special:Preferences#mw-prefsection-openid|llingüeta OpenID]] de les preferencies.<br />
+Se pue amestar una conseña de cuenta opcional nel [[Special:Preferences#mw-prefsection-personal|perfil d'usuariu]].",
 	'openidusernameprefix' => 'Usuariu OpenID',
 	'openidserverlogininstructions' => "$3 pide qu'escribas la to conseña de la páxina $1 pal usuariu $2 (esta ye la URL del to OpenID)",
 	'openidtrustinstructions' => 'Comprueba si quies compartir datos con $1.',
@@ -694,8 +694,8 @@ $messages['be-tarask'] = array(
 
 Ваш OpenID: $2.
 
-Гэты і дадатковыя OpenID могуць наладжаныя ў [[Special:Preferences#prefsection-openid|OpenID tab]].<br />
-Неабавязковы пароль для рахунка можа быць даданы ў Вашым [[Special:Preferences#prefsection-personal|профілі]].",
+Гэты і дадатковыя OpenID могуць наладжаныя ў [[Special:Preferences#mw-prefsection-openid|OpenID tab]].<br />
+Неабавязковы пароль для рахунка можа быць даданы ў Вашым [[Special:Preferences#mw-prefsection-personal|профілі]].",
 	'openidusernameprefix' => 'КарыстальнікOpenID',
 	'openidserverlogininstructions' => '$3 падаў запыт, каб Вы ўвялі Ваш пароль для {{GENDER:$2|удзельніка|удзельніцы}} $1 (гэта Ваш URL-адрас OpenID).',
 	'openidtrustinstructions' => 'Пазначце, калі Вы жадаеце даць доступ да зьвестак для $1.',
@@ -929,8 +929,8 @@ Kit e darempred, mar plij, gant unan eus [[Special:ListUsers/sysop|merourien ]] 
 
 $2 eo hoc'h OpenID.
 
-Gallout a rit merañ an OpenID-mañ ha re all diret dre an ivinell [[Special:Preferences#prefsection-openid|OpenID]] en ho Penndibaboù.<br />
-Gallout a rit ouzhpennañ ur ger-tremen kont diret en ho [[Special:Preferences#prefsection-personal|profil implijer]].",
+Gallout a rit merañ an OpenID-mañ ha re all diret dre an ivinell [[Special:Preferences#mw-prefsection-openid|OpenID]] en ho Penndibaboù.<br />
+Gallout a rit ouzhpennañ ur ger-tremen kont diret en ho [[Special:Preferences#mw-prefsection-personal|profil implijer]].",
 	'openidusernameprefix' => 'Implijer OpenID',
 	'openidserverlogininstructions' => "Goulenn a ra $3 e lakfec'h ho ker-tremen evit ho pajenn $1 implijer $2 (URL OpenID)",
 	'openidtrustinstructions' => "Gwiriañ ha c'hoant hoc'h eus da rannañ titouroù gant $1.",
@@ -1312,8 +1312,8 @@ Bitte benachrichtige einen [[Special:ListUsers/sysop|Administrator]].',
 
 Deine OpenID lautet $2.
 
-Diese und weitere OpenIDs können unter dem Reiter [[Special:Preferences#prefsection-openid|OpenID]] deiner Kontoeinstellungen verwaltet werden.<br />
-Ein fakultatives Benutzerkontopasswort kann hingegen unter dem Reiter [[Special:Preferences#prefsection-personal|Benutzerdaten]] deiner Kontoeinstellungen festgelegt werden.",
+Diese und weitere OpenIDs können unter dem Reiter [[Special:Preferences#mw-prefsection-openid|OpenID]] deiner Kontoeinstellungen verwaltet werden.<br />
+Ein fakultatives Benutzerkontopasswort kann hingegen unter dem Reiter [[Special:Preferences#mw-prefsection-personal|Benutzerdaten]] deiner Kontoeinstellungen festgelegt werden.",
 	'openidusernameprefix' => 'OpenID-Benutzer',
 	'openidserverlogininstructions' => '$3 erfordert die Eingabe deines Passworts für dein Benutzerkonto $2 auf der Seite $1 (OpenID-URL)',
 	'openidtrustinstructions' => 'Prüfe, ob du Daten mit $1 teilen möchtest.',
@@ -1413,8 +1413,8 @@ Bitte benachrichtigen Sie einen [[Special:ListUsers/sysop|Administrator]].',
 
 Ihre OpenID lautet $2.
 
-Diese und weitere OpenIDs können unter dem Reiter [[Special:Preferences#prefsection-openid|OpenID]] Ihrer Kontoeinstellungen verwaltet werden.<br />
-Ein fakultatives Benutzerkontopasswort kann hingegen unter dem Reiter [[Special:Preferences#prefsection-personal|Benutzerdaten]] Ihrer Kontoeinstellungen festgelegt werden.",
+Diese und weitere OpenIDs können unter dem Reiter [[Special:Preferences#mw-prefsection-openid|OpenID]] Ihrer Kontoeinstellungen verwaltet werden.<br />
+Ein fakultatives Benutzerkontopasswort kann hingegen unter dem Reiter [[Special:Preferences#mw-prefsection-personal|Benutzerdaten]] Ihrer Kontoeinstellungen festgelegt werden.",
 	'openidserverlogininstructions' => '$3 erfordert die Eingabe Ihres Passworts für Ihr Benutzerkonto $2 auf der Seite $1 (OpenID-URL)',
 	'openidtrustinstructions' => 'Prüfen Sie, ob Sie Daten mit $1 teilen möchten.',
 	'openidchooseinstructions' => 'Alle Benutzer benötigen einen Benutzernamen;
@@ -1491,8 +1491,8 @@ Pšosym staj se z [[Special:ListUsers/sysop|administratorom]] do zwiska.',
 
 Twój OpenID jo $2.
 
-Toś ten a dalšne OpenID daju se na [[Special:Preferences#prefsection-openid|OpenID-rejtarku]] twójich nastajenjow zastojaś.<br />
-Faktulatiwne gronidło dajo se w twójom [[Special:Preferences#prefsection-personal|wužywarskem profilu]] pśidaś.",
+Toś ten a dalšne OpenID daju se na [[Special:Preferences#mw-prefsection-openid|OpenID-rejtarku]] twójich nastajenjow zastojaś.<br />
+Faktulatiwne gronidło dajo se w twójom [[Special:Preferences#mw-prefsection-personal|wužywarskem profilu]] pśidaś.",
 	'openidusernameprefix' => 'Wužywaŕ OpenID',
 	'openidserverlogininstructions' => '$3 se pomina, až zapódajoš swójo gronidło za swójo wužywarske konto $2 na boku $1 (to jo jo twój OpenID-URL)',
 	'openidtrustinstructions' => 'Kontrolěruj, lěc coš daty z $1 źěliś.',
@@ -1789,8 +1789,8 @@ Consulta a un [[Special:ListUsers/sysop|administrador]].',
 
 Tu OpenID es $2 .
 
-Ésta y otras OpenID opcionales pueden administrarse en la [[Special:Preferences#prefsection-openid|pestaña OpenID]] de sus preferencias.<br />
-Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preferences#prefsection-personal|perfil de usuario]].",
+Ésta y otras OpenID opcionales pueden administrarse en la [[Special:Preferences#mw-prefsection-openid|pestaña OpenID]] de sus preferencias.<br />
+Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preferences#mw-prefsection-personal|perfil de usuario]].",
 	'openidusernameprefix' => 'OpenIDUser',
 	'openidserverlogininstructions' => '$3 solicita que introduzcas tu contraseña para tu página de usuario $2 $1 (ésta es tu URL de OpenID)',
 	'openidtrustinstructions' => 'Comprueba si quieres compartir datos con $1.',
@@ -2050,8 +2050,8 @@ Veuillez vous mettre en rapport avec un [[Special:ListUsers/sysop|administrateur
 
 Votre OpenID est $2.
 
-Cet OpenID et d'autres optionnels peuvent être gérés dans l'[[Special:Preferences#prefsection-openid|onglet OpenID]] de vos préférences.<br />
-Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Preferences#prefsection-personal|profil utilisateur]].",
+Cet OpenID et d'autres optionnels peuvent être gérés dans l'[[Special:Preferences#mw-prefsection-openid|onglet OpenID]] de vos préférences.<br />
+Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Preferences#mw-prefsection-personal|profil utilisateur]].",
 	'openidusernameprefix' => 'Utilisateur OpenID',
 	'openidserverlogininstructions' => '$3 demande que vous entriez votre mot de passe pour votre page $1 utilisateur $2 (URL OpenID)',
 	'openidtrustinstructions' => 'Cochez si vous désirez partager les données avec $1.',
@@ -2220,8 +2220,8 @@ Por favor, consúlteo cun [[Special:ListUsers/sysop|administrador]] do sitio.',
 
 O seu OpenID é $2.
 
-Pode xestionar este e outros OpenID e contrasinais opcionais na [[Special:Preferences#prefsection-openid|lapela OpenID]] das súas preferencias.<br />
-Pode engadir un contrasinal opcional no seu [[Special:Preferences#prefsection-personal|perfil de usuario]].",
+Pode xestionar este e outros OpenID e contrasinais opcionais na [[Special:Preferences#mw-prefsection-openid|lapela OpenID]] das súas preferencias.<br />
+Pode engadir un contrasinal opcional no seu [[Special:Preferences#mw-prefsection-personal|perfil de usuario]].",
 	'openidusernameprefix' => 'Usuario do OpenID',
 	'openidserverlogininstructions' => '$3 solicita que insira o seu contrasinal para o seu usuario $2 páxina $1 (este é o enderezo URL do seu OpenID)',
 	'openidtrustinstructions' => 'Comprobe se quere compartir datos con $1.',
@@ -2466,9 +2466,9 @@ $messages['he'] = array(
 
 ה־OpenID שלך הוא $2 .
 
-ניתן לההל את ה־OpenID הזה ואת הבאים אחריו ב[[Special:Preferences#prefsection-openid|לשונית OpenID]] בדף ההעדפות שלך.<br />
+ניתן לההל את ה־OpenID הזה ואת הבאים אחריו ב[[Special:Preferences#mw-prefsection-openid|לשונית OpenID]] בדף ההעדפות שלך.<br />
 
-ניתן להוסיף ססמה לחשבון ב[[Special:Preferences#prefsection-personal|דף המידע האישי בהעדפות]].",
+ניתן להוסיף ססמה לחשבון ב[[Special:Preferences#mw-prefsection-personal|דף המידע האישי בהעדפות]].",
 	'openidusernameprefix' => 'משתמשOpenID',
 	'openidserverlogininstructions' => 'אתר $3 דורש שתכתבו את סיסמתכם לדף המשתמש $2 בכתובת $1 (זוהי כתובת ה־OpenID שלכם)',
 	'openidtrustinstructions' => 'סמנו אם ברצונכם לשתף מידע עם $1.',
@@ -2727,8 +2727,8 @@ $messages['hsb'] = array(
 
 Twój OpenID je $2.
 
-Tutón a dalše OpenID hodźa so na [[Special:Preferences#prefsection-openid|OpenID-rajtarku]] twojich nastajenjow zrjadować.<br />
-Faktulatiwne hesło hodźi so w twojim [[Special:Preferences#prefsection-personal|wužiwarskim profilu]] přidać.",
+Tutón a dalše OpenID hodźa so na [[Special:Preferences#mw-prefsection-openid|OpenID-rajtarku]] twojich nastajenjow zrjadować.<br />
+Faktulatiwne hesło hodźi so w twojim [[Special:Preferences#mw-prefsection-personal|wužiwarskim profilu]] přidać.",
 	'openidusernameprefix' => 'Wužiwar OpenID',
 	'openidserverlogininstructions' => '$3 sej žada, zo zapodaš swoje hesło za swoje wužiwarske konto $2 na stronje $1 (to je twój OpenID-URL)',
 	'openidtrustinstructions' => 'Pruwuj, hač chceš z $1 daty dźělić.',
@@ -2933,8 +2933,8 @@ Per favor contacta un [[Special:ListUsers/sysop|administrator]].',
 
 Tu OpenID es $2 .
 
-Iste OpenID e alteres (si presente) pote esser gerite in le [[Special:Preferences#prefsection-openid|scheda OpenID]] de tu preferentias.<br />
-Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#prefsection-personal|profilo de usator]].",
+Iste OpenID e alteres (si presente) pote esser gerite in le [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] de tu preferentias.<br />
+Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#mw-prefsection-personal|profilo de usator]].",
 	'openidusernameprefix' => 'Usator OpenID',
 	'openidserverlogininstructions' => 'Le sito $3 requesta que tu entra le contrasigno de tu conto "$2", pagina $1 (isto es tu URL de OpenID).',
 	'openidtrustinstructions' => 'Controla si tu vole divider datos con $1.',
@@ -3687,8 +3687,8 @@ Kontaktéiert w.e.g. een [[Special:ListUsers/sysop|Administrateur]].",
 
 Är OpenID ass $2.
 
-Dës a weider OpenId'en, , kann am [[Special:Preferences#prefsection-openid|OpenID Tab]] vun Ären Astellungen geréiert ginn.<br />
-En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#prefsection-personal|Benotzerprofil]] derbäigesat ginn.",
+Dës a weider OpenId'en, , kann am [[Special:Preferences#mw-prefsection-openid|OpenID Tab]] vun Ären Astellungen geréiert ginn.<br />
+En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#mw-prefsection-personal|Benotzerprofil]] derbäigesat ginn.",
 	'openidusernameprefix' => 'OpenIDBenotzer',
 	'openidserverlogininstructions' => '$3 freet datt Dir Äert Passwuert agitt fir Är $2-Benotzersäit $1 (dëst ass Är OpenID URL).',
 	'openidtrustinstructions' => 'Klickt un wann Dir Donnéeën mat $1 deele wellt.',
@@ -3829,8 +3829,8 @@ $messages['mk'] = array(
 
 Вашиот OpenID гласи $2 .
 
-Можете да раководите со ова и други незадолжителни OpenID-ја во [[Special:Preferences#prefsection-openid|јазичето за OpenID]] во вашите нагодувања.<br />
-По желба можете да додадете и лозинка на сметката во вашиот [[Special:Preferences#prefsection-personal|корисничкиот профил]].",
+Можете да раководите со ова и други незадолжителни OpenID-ја во [[Special:Preferences#mw-prefsection-openid|јазичето за OpenID]] во вашите нагодувања.<br />
+По желба можете да додадете и лозинка на сметката во вашиот [[Special:Preferences#mw-prefsection-personal|корисничкиот профил]].",
 	'openidusernameprefix' => 'OpenIDКорисник',
 	'openidserverlogininstructions' => '$3 бара да ја внесете лозинката за вашиот корисник $2 страница $1 (OpenID URL)',
 	'openidtrustinstructions' => 'Штиклирајте ако сакате да споделувате податоци со $1.',
@@ -4072,8 +4072,8 @@ Sila hubungi [[Special:ListUsers/sysop|pentadbir]].',
 
 OpenID anda ialah $2 .
 
-Ini dan OpenID pilihan yang lain boleh diuruskan dalam [[Special:Preferences#prefsection-openid|tab OpenID]] keutamaan anda.<br />
-Kata laluan akaun pilihan boleh ditambahkan ke dalam [[Special:Preferences#prefsection-personal|Profil pengguna]] anda.",
+Ini dan OpenID pilihan yang lain boleh diuruskan dalam [[Special:Preferences#mw-prefsection-openid|tab OpenID]] keutamaan anda.<br />
+Kata laluan akaun pilihan boleh ditambahkan ke dalam [[Special:Preferences#mw-prefsection-personal|Profil pengguna]] anda.",
 	'openidusernameprefix' => 'PenggunaOpenID',
 	'openidserverlogininstructions' => '$3 meminta supaya anda memasukkan kata laluan anda untuk laman $2 anda, $1 (iaitu URL OpenID anda)',
 	'openidtrustinstructions' => 'Raitkan jika anda ingin berkongsi data dengan $1.',
@@ -4341,8 +4341,8 @@ Raadpleeg een  [[Special:ListUsers/sysop|beheerder]].",
 
 Uw OpenID is $2 .
 
-Dit OpenID en andere toekomstige OpenID's kunt u beheren in het [[Special:Preferences#prefsection-openid|tabblad OpenID]] van uw voorkeuren.<br />
-Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Preferences#prefsection-personal|gebruikersprofiel]].",
+Dit OpenID en andere toekomstige OpenID's kunt u beheren in het [[Special:Preferences#mw-prefsection-openid|tabblad OpenID]] van uw voorkeuren.<br />
+Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Preferences#mw-prefsection-personal|gebruikersprofiel]].",
 	'openidusernameprefix' => 'OpenIDGebruiker',
 	'openidserverlogininstructions' => '$3 vraag om het invoeren van uw wachtwoord voor uw gebruiker $2 pagina $1 (URL voor OpenID).',
 	'openidtrustinstructions' => 'Controleer of u gegevens wilt delen met $1.',
@@ -4658,8 +4658,8 @@ Skonsultuj to z [[Special:ListUsers/sysop|administratorem]].',
 
 Twój OpenID to $2.
 
-Tym i innymi dodatkowymi OpenID możesz zarządzać w [[Special:Preferences#prefsection-openid|zakładce OpenID]] w swoich preferencjach.<br />
-Opcjonalne hasło do konta możesz dodać w swoim [[Special:Preferences#prefsection-personal|profilu użytkownika]].",
+Tym i innymi dodatkowymi OpenID możesz zarządzać w [[Special:Preferences#mw-prefsection-openid|zakładce OpenID]] w swoich preferencjach.<br />
+Opcjonalne hasło do konta możesz dodać w swoim [[Special:Preferences#mw-prefsection-personal|profilu użytkownika]].",
 	'openidusernameprefix' => 'UżytkownikOpenID',
 	'openidserverlogininstructions' => '$3 zażądało abyś podał hasło użytkownika $2 strona $1 (to jest Twój OpenID adres URL).',
 	'openidtrustinstructions' => 'Sprawdź, czy chcesz wymieniać informacje z $1.',
@@ -4895,7 +4895,7 @@ Por favor, consulte um [[Special:ListUsers/sysop|administrador]].',
 
 O seu OpenID é $2.
 
-Este OpenID pode ser gerido no separador do [[Special:Preferences#prefsection-openid|OpenID]] das tuas preferências.<br />Uma senha da conta opcional pode ser adicionada no teu [[Special:Preferences#prefsection-personal|Perfil do utilizador]].",
+Este OpenID pode ser gerido no separador do [[Special:Preferences#mw-prefsection-openid|OpenID]] das tuas preferências.<br />Uma senha da conta opcional pode ser adicionada no teu [[Special:Preferences#mw-prefsection-personal|Perfil do utilizador]].",
 	'openidusernameprefix' => 'UtilizadorOpenID',
 	'openidserverlogininstructions' => '$3 pede que introduza a palavra-chave do seu utilizador $2 página $1 (a URL do seu OpenID)',
 	'openidtrustinstructions' => 'Verifique se pretender partilhar dados com $1.',
@@ -5106,8 +5106,8 @@ Vă rugăm să contactați un [[Special:ListUsers/sysop|administrator]].',
 
 OpenID-ul dumneavoastră este $2 .
 
-Acesta și alte OpenID-uri opționale pot fi administrate în [[Special:Preferences#prefsection-openid|fila OpenID]] din cadrul preferințelor dumneavoastră.<br />
-O parolă opțională a contului poate fi adăugată în secțiunea [[Special:Preferences#prefsection-personal|Informații personale]].",
+Acesta și alte OpenID-uri opționale pot fi administrate în [[Special:Preferences#mw-prefsection-openid|fila OpenID]] din cadrul preferințelor dumneavoastră.<br />
+O parolă opțională a contului poate fi adăugată în secțiunea [[Special:Preferences#mw-prefsection-personal|Informații personale]].",
 	'openidusernameprefix' => 'Utilizator OpenID',
 	'openidserverlogininstructions' => '$3 vă solicită să introduceți parola pentru pagina $2 dumneavoastră de utilizator $1 (URL OpenID)',
 	'openidtrustinstructions' => 'Verificați dacă doriți să partajați datele cu $1.',
@@ -5216,8 +5216,8 @@ $messages['ru'] = array(
 
 Ваш идентификатор OpenID: ''$2''.
 
-Этот и возможные дальнейшие идентификаторы OpenID могут быть настроены на [[Special:Preferences#prefsection-openid|вкладке OpenID]] в ваших настройках.<br />
-Необязательный пароль к учётной записи может быть добавлен в вашем [[Special:Preferences#prefsection-personal|профиле пользователя]].",
+Этот и возможные дальнейшие идентификаторы OpenID могут быть настроены на [[Special:Preferences#mw-prefsection-openid|вкладке OpenID]] в ваших настройках.<br />
+Необязательный пароль к учётной записи может быть добавлен в вашем [[Special:Preferences#mw-prefsection-personal|профиле пользователя]].",
 	'openidusernameprefix' => 'УчастникOpenID',
 	'openidserverlogininstructions' => 'Введите ниже свой пароль, чтобы войти на $3 как участник $2 (личная страница $1 — это ваш OpenID URL).',
 	'openidtrustinstructions' => 'Отметьте, если вы хотите предоставить доступ к данным для $1.',
@@ -5505,8 +5505,8 @@ Posvetujte se z [[Special:ListUsers/sysop|administratorjem]].',
 
 Vaš OpenID je $2.
 
-Ta in izbirne nadaljne OpenID-je lahko uprabljate na [[Special:Preferences#prefsection-openid|zavihku OpenID]] v svojih nastavitvah.<br />
-Izbirno geslo računa lahko dodate v svojih [[Special:Preferences#prefsection-personal|Podatkih o uporabniku]].",
+Ta in izbirne nadaljne OpenID-je lahko uprabljate na [[Special:Preferences#mw-prefsection-openid|zavihku OpenID]] v svojih nastavitvah.<br />
+Izbirno geslo računa lahko dodate v svojih [[Special:Preferences#mw-prefsection-personal|Podatkih o uporabniku]].",
 	'openidusernameprefix' => 'UporabnikOpenID',
 	'openidserverlogininstructions' => '$3 zahteva, da vnesete svoje geslo za vašega uporabnika $2, stran $1 (URL OpenID).',
 	'openidtrustinstructions' => 'Označite, če želite deliti podatke s $1.',
@@ -5622,8 +5622,8 @@ $messages['sr-ec'] = array(
 
 Ваш OpenID је $2 .
 
-Можете да управљате овим и другим необавезним налозима OpenID-ја у [[Special:Preferences#prefsection-openid|језичку за OpenID]] у вашим подешавањима.<br />
-Можете додати и лозинку налога у вашем [[Special:Preferences#prefsection-personal|корисничком профилу]].",
+Можете да управљате овим и другим необавезним налозима OpenID-ја у [[Special:Preferences#mw-prefsection-openid|језичку за OpenID]] у вашим подешавањима.<br />
+Можете додати и лозинку налога у вашем [[Special:Preferences#mw-prefsection-personal|корисничком профилу]].",
 	'openidoptional' => 'Необавезно',
 	'openidrequired' => 'Обавезно',
 	'openidnickname' => 'Надимак',
@@ -5684,8 +5684,8 @@ $messages['sr-el'] = array(
 
 Vaš OpenID je $2 .
 
-Možete da upravljate ovim i drugim neobaveznim nalozima OpenID-ja u [[Special:Preferences#prefsection-openid|jezičku za OpenID]] u vašim podešavanjima.<br />
-Možete dodati i lozinku naloga u vašem [[Special:Preferences#prefsection-personal|korisničkom profilu]].",
+Možete da upravljate ovim i drugim neobaveznim nalozima OpenID-ja u [[Special:Preferences#mw-prefsection-openid|jezičku za OpenID]] u vašim podešavanjima.<br />
+Možete dodati i lozinku naloga u vašem [[Special:Preferences#mw-prefsection-personal|korisničkom profilu]].",
 	'openidoptional' => 'Neobavezno',
 	'openidrequired' => 'Obavezno',
 	'openidnickname' => 'Nadimak',
@@ -5852,8 +5852,8 @@ Var god konsultera en [[Special:ListUsers/sysop|administratör]].',
 
 Ditt OpenID är $2.
 
-Du kan hantera detta och andra OpenID:n i [[Special:Preferences#prefsection-openid|OpenID-fliken]] bland dina inställningar.<br />
-Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Preferences#prefsection-personal|Användarprofil]].",
+Du kan hantera detta och andra OpenID:n i [[Special:Preferences#mw-prefsection-openid|OpenID-fliken]] bland dina inställningar.<br />
+Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Preferences#mw-prefsection-personal|Användarprofil]].",
 	'openidusernameprefix' => 'OpenID-användare',
 	'openidserverlogininstructions' => '$3 begär att du anger ditt lösenord för ditt användare $2s sida $1 (detta är din OpenID-URL)',
 	'openidtrustinstructions' => 'Kolla om du vill dela data med $1.',
@@ -6501,8 +6501,8 @@ Xin hãy liên lạc với [[Special:ListUsers/sysop|bảo quản viên]].',
 
 Địa chỉ OpenID của bạn là <code>&lt;$2></code>.
 
-Quản lý OpenID này và các OpenID sau trong [[Special:Preferences#prefsection-openid|thẻ OpenID]] của trang tùy chọn.<br />
-Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special:Preferences#prefsection-personal|thẻ Thông tin cá nhân]].",
+Quản lý OpenID này và các OpenID sau trong [[Special:Preferences#mw-prefsection-openid|thẻ OpenID]] của trang tùy chọn.<br />
+Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special:Preferences#mw-prefsection-personal|thẻ Thông tin cá nhân]].",
 	'openidusernameprefix' => 'Thành viên OpenID',
 	'openidserverlogininstructions' => '$2, $3 yêu cầu bạn nhập mật khẩu cho trang cá nhân của bạn, $1, tức là địa chỉ OpenID của bạn.',
 	'openidtrustinstructions' => 'Hãy kiểm tra hộp này nếu bạn muốn cho $1 biết thông tin cá nhân của bạn.',
@@ -6650,8 +6650,8 @@ $messages['zh-hans'] = array(
 
 您的OpenID是 $2 。
 
-这个和可能将来的OpenID可以在您的设置里的[[Special:Preferences#prefsection-openid|OpenID选项卡]]中管理。<br />
-可选的账户密码可以在您的[[Special:Preferences#prefsection-personal|用户设置]]里添加。",
+这个和可能将来的OpenID可以在您的设置里的[[Special:Preferences#mw-prefsection-openid|OpenID选项卡]]中管理。<br />
+可选的账户密码可以在您的[[Special:Preferences#mw-prefsection-personal|用户设置]]里添加。",
 	'openidusernameprefix' => 'OpenID用户',
 	'openidserverlogininstructions' => '$3请求您为用户$2的用户页面$1输入密码（这是您的OpenID URL）',
 	'openidtrustinstructions' => '请确认您是否愿与$1分享数据。',
