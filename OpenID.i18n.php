@@ -3250,24 +3250,29 @@ Non saresti in grado di accedere senza un OpenID.',
  * @author 青子守歌
  */
 $messages['ja'] = array(
-	'openid-desc' => '[//openid.net/ OpenID]によるウィキへのログインを可能にし、ウィキユーザーアカウントを他のOpenID対応サイトにログインすることを可能にする。',
-	'openidlogin' => 'OpenIDでログイン / アカウントを作成',
+	'openid-desc' => '[//openid.net/ OpenID] でウィキにログインできるようにする。これをウィキで有効にすると、ウィキの利用者アカウントの URL を OpenID として他の OpenID 対応サイトにもログインできる',
+	'openidlogin' => 'OpenID でログイン/アカウントを作成',
 	'openidserver' => 'OpenID サーバー',
 	'openidxrds' => 'Yadis ファイル',
 	'openidconvert' => 'OpenID コンバーター',
 	'openiderror' => '検証エラー',
 	'openiderrortext' => 'OpenID URLの検証中にエラーが発生しました。',
-	'openidconfigerror' => 'OpenID設定エラー',
+	'openidconfigerror' => 'OpenID 設定エラー',
 	'openidconfigerrortext' => 'このウィキの OpenID 格納設定は無効です。[[Special:ListUsers/sysop|管理者]]に相談してください。',
-	'openidpermission' => 'OpenID パーミッション・エラー',
+	'openidpermission' => 'OpenID パーミッションエラー',
 	'openidpermissiontext' => 'あなたが与えた OpenID はこのサーバーにログインすることを許可されていません。',
 	'openidcancel' => '検証中止',
-	'openidcanceltext' => 'OpenID URLの検証は中止されました。',
+	'openidcanceltext' => 'OpenID URL の検証は中止されました。',
 	'openidfailure' => '検証失敗',
-	'openidfailuretext' => 'OpenID URLの検証は失敗しました。エラーメッセージ: "$1"',
+	'openidfailuretext' => 'OpenID URL の検証は失敗しました。エラーメッセージ："$1"',
 	'openidsuccess' => '検証成功',
-	'openidsuccesstext' => 'OpenID URLの検証は成功しました。',
-	'openidusernameprefix' => 'OpenIDユーザー',
+	'openidsuccesstext' => "'''利用者 $1 の検証とログインに成功しました'''。
+
+あなたの OpenID は $2 です。
+
+これと他の OpenID（省略可能）は個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で管理できます。<br />
+アカウントパスワード（省略可能）は[[Special:Preferences#mw-prefsection-personal|利用者情報]]で追加できます。",
+	'openidusernameprefix' => 'OpenID ユーザー',
 	'openidserverlogininstructions' => '$3 に利用者 $2 (利用者ページ $1) としてログインするには以下にパスワードを入力してください。',
 	'openidtrustinstructions' => '$1 とデータを共有したいか確認してください。',
 	'openidallowtrust' => '$1 がこの利用者アカウントを信用するのを許可する。',
@@ -3280,7 +3285,7 @@ $messages['ja'] = array(
 	'openidemail' => 'メールアドレス',
 	'openidlanguage' => '言語',
 	'openidtimezone' => '時間帯',
-	'openidchooselegend' => '利用者名の選択',
+	'openidchooselegend' => '利用者名とアカウントの選択',
 	'openidchooseinstructions' => 'すべての利用者はニックネームが必要です。以下の選択肢から1つを選ぶことができます。',
 	'openidchoosenick' => 'あなたのニックネーム（$1）',
 	'openidchoosefull' => 'あなたのフルネーム ($1)',
@@ -3299,6 +3304,9 @@ $messages['ja'] = array(
 	'openidalreadyloggedin' => "'''$1 さん、あなたは既にログインしています！'''
 
 将来は OpenID を使ってログインしたい場合は、[[Special:OpenIDConvert|あなたのアカウントを OpenID を使うように変換する]]ことができます。",
+	'openidalreadyloggedintext' => "'''$1 さん、あなたは既にログインしています！'''
+
+個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で、あなたの OpenID を管理（表示、削除、追加など）できます。",
 	'openidnousername' => '利用者名が指定されていません。',
 	'openidbadusername' => '利用者名の指定が不正です。',
 	'openidautosubmit' => 'このページにあるフォームはあなたが JavaScript を有効にしていれば自動的に送信されるはずです。そうならない場合は、 "Continue" (続ける) ボタンを試してください。',
@@ -3309,6 +3317,7 @@ $messages['ja'] = array(
 あなたが既に {{SITENAME}} でアカウントをもっている場合は、いつもどおりに利用者名とパスワードで[[Special:UserLogin|ログイン]]できます。将来、OpenID を使うためには、通常のログインをした後で[[Special:OpenIDConvert|あなたのアカウントを OpenID に変換する]]ことができます。
 
 多くの [//openid.net/get/ OpenID プロバイダー]が存在し、あなたは既に別のサービスで OpenID が有効となったアカウントを保持しているかもしれません。',
+	'openidlogininstructions-openidloginonly' => "OpenID で{{SITENAME}}''のみ''にログインできます。",
 	'openidupdateuserinfo' => '自分の個人情報を更新:',
 	'openiddelete' => 'OpenID を削除',
 	'openiddelete-text' => '「{{int:openiddelete-button}}」ボタンをクリックすると、あなたのアカウントから OpenID $1 を除去します。以降、あなたはこの OpenID を使ってログインすることができなくなります。',
@@ -3323,11 +3332,12 @@ $messages['ja'] = array(
 	'openid-prefstext' => '[//openid.net/ OpenID] の設定',
 	'openid-pref-hide' => 'OpenID でログインしている場合に、あなたの OpenID をあなたの利用者ページで表示しない。',
 	'openid-pref-update-userinfo-on-login' => 'ログインするたびに、次の情報を OpenID のペルソナから更新する:',
-	'openid-urls-desc' => 'あなたのアカウントに関連づけられた OpenID:',
+	'openid-urls-desc' => 'あなたのアカウントに関連付けられた OpenID：',
 	'openid-urls-action' => '操作',
+	'openid-urls-registration' => '登録日時',
 	'openid-urls-delete' => '削除',
 	'openid-add-url' => '新しい OpenID を追加',
-	'openid-login-or-create-account' => 'サインインあるいは新規アカウントの作成',
+	'openid-login-or-create-account' => 'ログインまたは新規アカウント作成',
 	'openid-provider-label-openid' => 'あなたの OpenID URL を入力します',
 	'openid-provider-label-google' => 'あなたの Google アカウントを用いてログインする',
 	'openid-provider-label-yahoo' => 'あなたの Yahoo アカウントを用いてログインする',
