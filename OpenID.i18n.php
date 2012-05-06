@@ -2543,6 +2543,7 @@ OpenID מאפשר לכם להיכנס לחשבון במגוון אתרים מב�
 	'openid-provider-label-aol' => 'כתבו את כינוי המסך שלכם ב־AOL',
 	'openid-provider-label-other-username' => 'כתבו את שם המשתמש שלכם ב־$1',
 	'specialpages-group-openid' => 'דפי שירות ומידע על המצב של OpenID',
+	'right-openid-converter-access' => 'יכול להוסיף או להמיר את החשבון לשימוש בזהויות OpenId',
 	'right-openid-dashboard-access' => 'גישה רגילה ללוח הבקרה של OpenID',
 	'right-openid-dashboard-admin' => 'גישת מפעיל ללוח הבקרה של OpenID',
 	'openid-dashboard-title' => 'לוח הבקרה של OpenID',
@@ -3349,7 +3350,7 @@ $messages['ja'] = array(
 	'openid-dashboard-title' => 'OpenID ダッシュボード',
 	'openid-dashboard-title-admin' => 'OpenID ダッシュボード (管理者)',
 	'openid-dashboard-introduction' => '現在の OpenID 拡張機能の設定 ([$1 ヘルプ])',
-	'openid-dashboard-number-openid-users' => 'OpenIDを持つ利用者の数',
+	'openid-dashboard-number-openid-users' => 'OpenID を持つ利用者の数',
 	'openid-dashboard-number-openids-in-database' => 'OpenID の数 (合計)',
 	'openid-dashboard-number-users-without-openid' => 'OpenID を持たない利用者の数',
 );
