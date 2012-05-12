@@ -2161,7 +2161,7 @@ $messages['frp'] = array(
 	'openidemail' => 'Adrèce èlèctronica',
 	'openidlanguage' => 'Lengoua',
 	'openidtimezone' => 'Zona horèra',
-	'openidchooselegend' => 'Chouèx du nom d’utilisator et du compto',
+	'openidchooselegend' => 'Chouèx du nom d’usanciér et du compto',
 	'openidchoosenick' => 'Voutron surnom ($1)',
 	'openidchoosefull' => 'Voutron nom complèt ($1)',
 	'openidchooseurl' => 'Un nom chouèsi dês voutron OpenID ($1)',
@@ -2170,8 +2170,8 @@ $messages['frp'] = array(
 	'openidchooseexisting' => 'Un compto ègzistent sur ceti vouiqui',
 	'openidchooseusername' => 'Nom d’usanciér :',
 	'openidchoosepassword' => 'Contresegno :',
-	'openidnousername' => 'Nion nom d’utilisator at étâ spècefiâ.',
-	'openidbadusername' => 'Un crouyo nom d’utilisator at étâ spècefiâ.',
+	'openidnousername' => 'Nion nom d’usanciér at étâ spècefiâ.',
+	'openidbadusername' => 'Un crouyo nom d’usanciér at étâ spècefiâ.',
 	'openidloginlabel' => 'Adrèce OpenID',
 	'openidupdateuserinfo' => 'Betar a jorn mes balyês a mè :',
 	'openiddelete' => 'Suprimar l’OpenID',
@@ -2183,7 +2183,7 @@ $messages['frp'] = array(
 	'openid-login-or-create-account' => 'Sè branchiér ou ben fâre un compto novél',
 	'openid-provider-label-openid' => 'Buchiéd voutra adrèce OpenID',
 	'openid-provider-label-aol' => 'Buchiéd voutron nom AOL',
-	'openid-provider-label-other-username' => 'Buchiéd voutron nom d’utilisator $1',
+	'openid-provider-label-other-username' => 'Buchiéd voutron nom d’usanciér $1',
 	'openid-dashboard-title' => 'Tablô de bôrd OpenID',
 	'openid-dashboard-title-admin' => 'Tablô de bôrd OpenID (administrator)',
 );
@@ -4443,6 +4443,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
  * @author Harald Khan
  * @author Jon Harald Søby
  * @author Nghtwlkr
+ * @author Njardarlogar
  */
 $messages['nn'] = array(
 	'openid-desc' => 'Logg inn på wikien med ein [//openid.net/ OpenID] og logg inn på andre sider som bruker OpenID med kontoen herifrå',
@@ -4640,6 +4641,13 @@ $messages['pdc'] = array(
  */
 $messages['pdt'] = array(
 	'openidchoosepassword' => 'Passwuat:',
+);
+
+/** Pälzisch (Pälzisch)
+ * @author Manuae
+ */
+$messages['pfl'] = array(
+	'openid-urls-delete' => 'Lesche',
 );
 
 /** Polish (Polski)
@@ -6049,7 +6057,7 @@ $messages['tg-cyrl'] = array(
 	'openidchoosepassword' => 'Калимаи убур:',
 );
 
-/** Tajik (Latin script) (tojikī)
+/** Tajik (Latin script) (Tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -6178,6 +6186,7 @@ Hindi ka maaaring makalagda na walang OpenID.',
 
 /** Turkish (Türkçe)
  * @author Joseph
+ * @author Suelnur
  */
 $messages['tr'] = array(
 	'openid-desc' => 'Vikiye bir [//openid.net/ OpenID] ile giriş yapın, ve diğer OpenID kullanan web sitelerine bir viki kullanıcı hesabıyla giriş yapın.',
@@ -6211,7 +6220,7 @@ Lütfen bir [[Special:ListUsers/sysop|yöneticiye]] danışın.',
 	'openidemail' => 'E-posta adresi',
 	'openidlanguage' => 'Dil',
 	'openidtimezone' => 'Saat dilimi',
-	'openidchooselegend' => 'Kullanıcı adı tercihi',
+	'openidchooselegend' => 'Kullanıcı adı ve hesap seçimi',
 	'openidchooseinstructions' => 'Tüm kullanıcılar için bir kullanıcı adı gereklidir;
 aşağıdaki seçeneklerden birini seçebilirsiniz.',
 	'openidchoosenick' => 'Rumuzunuz ($1)',
@@ -6263,7 +6272,7 @@ OpenID olmadan giriş yapamazsınız.",
 	'openid-urls-action' => 'Eylem',
 	'openid-urls-delete' => 'Sil',
 	'openid-add-url' => 'Yeni bir OpenID ekle',
-	'openid-login-or-create-account' => 'Oturum açın ya da Yeni Hesap Oluşturun',
+	'openid-login-or-create-account' => 'Oturum açın ya da yeni hesap oluşturun',
 	'openid-provider-label-openid' => 'OpenID URLnizi girin',
 	'openid-provider-label-google' => 'Google hesabınızı kullanarak giriş yapın',
 	'openid-provider-label-yahoo' => 'Yahoo hesabınızı kullanarak giriş yapın',
@@ -6278,7 +6287,7 @@ $messages['ug-arab'] = array(
 	'openidlanguage' => 'تىل',
 );
 
-/** Uyghur (Latin script) (Uyghurche‎)
+/** Uyghur (Latin script) (Uyghurche)
  * @author Jose77
  */
 $messages['ug-latn'] = array(
@@ -6467,7 +6476,7 @@ Ghe xe molti [//openid.net/get/ Provider OpenID], e te podaressi verghe zà un a
 	'openid-provider-label-other-username' => 'Inserissi el to nome utente $1',
 );
 
-/** Veps (Vepsan kel')
+/** Veps (Vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
