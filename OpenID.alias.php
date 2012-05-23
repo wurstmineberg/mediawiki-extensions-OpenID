@@ -34,6 +34,14 @@ $specialPageAliases['arz'] = array(
 	'OpenIDXRDS' => array( 'إكس_آر_دى_إس_Open_ID' ),
 );
 
+/** German (Deutsch) */
+$specialPageAliases['de'] = array(
+	'OpenIDLogin' => array( 'OpenID-Anmeldung' ),
+	'OpenIDConvert' => array( 'OpenID-Umwandlung' ),
+	'OpenIDServer' => array( 'OpenID-Server' ),
+	'OpenIDXRDS' => array( 'OpenID-XRDS' ),
+);
+
 /** Finnish (Suomi) */
 $specialPageAliases['fi'] = array(
 	'OpenIDLogin' => array( 'OpenID-kirjautuminen' ),
