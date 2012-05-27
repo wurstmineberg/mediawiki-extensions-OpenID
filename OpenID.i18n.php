@@ -3302,9 +3302,7 @@ $messages['ja'] = array(
 	'openidconvertsuccesstext' => 'あなたは OpenID の $1 への変換に成功しました。',
 	'openidconvertyourstext' => 'これは既にあなたの OpenID です。',
 	'openidconvertothertext' => 'これは他の誰かの OpenID です。',
-	'openidalreadyloggedin' => "'''$1 さん、あなたは既にログインしています！'''
-
-将来は OpenID を使ってログインしたい場合は、[[Special:OpenIDConvert|あなたのアカウントを OpenID を使うように変換する]]ことができます。",
+	'openidalreadyloggedin' => 'あなたは既にログインしています。',
 	'openidalreadyloggedintext' => "'''$1 さん、あなたは既にログインしています！'''
 
 個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で、あなたの OpenID を管理（表示、削除、追加など）できます。",
@@ -3345,6 +3343,7 @@ $messages['ja'] = array(
 	'openid-provider-label-aol' => 'あなたの AOL スクリーンネームを入力します',
 	'openid-provider-label-other-username' => 'あなたの $1 での利用者名を入力',
 	'specialpages-group-openid' => 'OpenID のサービスページとステータス情報',
+	'right-openid-converter-access' => 'OpenID を使用するアカウントを追加または変換',
 	'right-openid-dashboard-access' => 'OpenID ダッシュボードへの標準アクセス',
 	'right-openid-dashboard-admin' => 'OpenID ダッシュボードへの管理者アクセス',
 	'openid-dashboard-title' => 'OpenID ダッシュボード',
