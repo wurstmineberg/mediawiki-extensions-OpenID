@@ -3484,7 +3484,7 @@ $messages['ko'] = array(
 당신의 OpenID는 $2입니다.
 
 이와 선택적인 추가 OpenID는 사용자 환경 설정의 [[Special:Preferences#mw-prefsection-openid|OpenID 탭]]에서 관리할 수 있습니다.<br />
-선택적인 계정 암호는 [[Special:Preferences#mw-prefsection-personal|기본 정보]]에서 더할 수 있습니다.",
+선택적인 계정 비밀번호는 [[Special:Preferences#mw-prefsection-personal|기본 정보]]에서 더할 수 있습니다.",
 	'openidusernameprefix' => '오픈ID 사용자',
 	'openidserverlogininstructions' => '$2 사용자로서 $1 문서에 비밀번호를 입력하여 $3에 요청하세요. (사용자의 OpenID URL)',
 	'openidtrustinstructions' => '$1과 데이터를 공유하려면 체크하세요.',
@@ -3494,21 +3494,21 @@ $messages['ko'] = array(
 	'openidoptional' => '선택 사항',
 	'openidrequired' => '필수 사항',
 	'openidnickname' => '별명',
-	'openidfullname' => '전체이름',
+	'openidfullname' => '전체 이름',
 	'openidemail' => '메일 주소',
 	'openidlanguage' => '언어',
 	'openidtimezone' => '시간대',
 	'openidchooselegend' => '사용자 이름과 계정 선택',
 	'openidchooseinstructions' => '모든 사용자는 별명을 가져야 합니다.
-아래의 옵션 중 하나를 선택할 수 있습니다..',
+아래의 옵션 중 하나를 선택할 수 있습니다.',
 	'openidchoosenick' => '당신의 별명 ($1)',
 	'openidchoosefull' => '전체 이름은 ($1)',
 	'openidchooseurl' => 'OpenID로 부터 선택한 이름 ($1)',
 	'openidchooseauto' => '자동 생성된 이름 ($1)',
-	'openidchoosemanual' => '선택하신 이름:',
+	'openidchoosemanual' => '선택한 이름:',
 	'openidchooseexisting' => '이 위키에 이미 존재하는 계정입니다',
 	'openidchooseusername' => '사용자 이름:',
-	'openidchoosepassword' => '암호:',
+	'openidchoosepassword' => '비밀번호:',
 	'openidconvertinstructions' => '이 양식은 OpenID URL을 통한 로그인을 설정하거나 OpenID URL을 추가하기 위한 곳입니다.',
 	'openidconvertoraddmoreids' => 'OpenID로 변환하거나 OpenID URL을 추가합니다.',
 	'openidconvertsuccess' => 'OpenID로의 변환이 완료되었습니다',
@@ -3516,16 +3516,22 @@ $messages['ko'] = array(
 	'openidconvertyourstext' => '이미 사용중인 OpenID입니다.',
 	'openidconvertothertext' => '다른 사용자의 OpenID입니다.',
 	'openidalreadyloggedin' => '이미 로그인하였습니다.',
+	'openidalreadyloggedintext' => "'''$1 계정으로 이미 로그인했습니다!'''
+
+사용자 환경 설정의 [[Special:Preferences#mw-prefsection-openid|OpenID 탭]]에서 OpenID를 관리(보기, 삭제, 추가)할 수 있습니다.",
 	'openidnousername' => '사용자 이름을 지정하지 않았습니다.',
 	'openidbadusername' => '잘못된 사용자 이름을 지정하였습니다.',
-	'openidautosubmit' => '자바 스크립트가 허용된 경우 자동으로 데이터가 전송됩니다..
-	만약 자동으로 로그인되지 않는다면 ""계속"" 버튼을 눌러주세요.',
+	'openidautosubmit' => '자바 스크립트가 허용된 경우 자동으로 데이터가 전송됩니다.
+만약 자동으로 되지 않는다면 "계속" 버튼을 눌러주세요.',
 	'openidclientonlytext' => '{{SITENAME}}은 OpenID 서비스 제공자로서 동작하지 않습니다.',
 	'openidloginlabel' => 'OpenID URL 주소',
 	'openidlogininstructions' => '{{SITENAME}}에서는 다양한 웹사이트에서의 Single Sign-On을 지원하는 [//openid.net/ OpenID] 기능을 제공합니다.
 OpenID는 다른 많은 웹사이트에서 서로 다른 비밀번호나 사용자 이름을 입력하는 불편없이 편리하게 로그인할 수 있도록 도와줍니다.
 (OpenID에 대한 자세한 정보는 [//ko.wikipedia.org/wiki/OpenID 위키백과 OpenID 문서]를 참고하세요.)
 다양한 사이트에서 [//openid.net/get/ OpenID 서비스를 제공하며], 이미 사용중인 다른 서비스가 OpenID 서비스 계정을 제공할 수도 있습니다.',
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}}(은)는 OpenID''로만'' 로그인을 할 수 있습니다.",
+	'openidlogininstructions-passwordloginallowed' => '{{SITENAME}}에 계정이 이미 있을 경우 사용하는 사용자 이름과 비밀번호로 [[Special:UserLogin|로그인]]할 수 있습니다.
+나중에 OpenID를 사용하려면, 정상적으로 로그인한 후 [[Special:OpenIDConvert|계정을 OpenID로 변환]]할 수 있습니다.',
 	'openidupdateuserinfo' => '내 개인 정보를 갱신:',
 	'openiddelete' => 'OpenID 삭제',
 	'openiddelete-text' => '"{{int:openiddelete-button}}" 버튼을 누르시면, [$1 OpenID 정보]를 당신의 사용자 계정으로부터 삭제할 것입니다.
@@ -3533,10 +3539,11 @@ OpenID는 다른 많은 웹사이트에서 서로 다른 비밀번호나 사용�
 	'openiddelete-button' => '확인',
 	'openiddeleteerrornopassword' => '계정에 비밀번호를 설정하지 않았기 때문에 모든 OpenID 계정을 삭제할 수 없습니다.
 OpenID 없이 로그인할 수 없습니다.',
-	'openiddeleteerroropenidonly' => 'OpenID를 이용해서만 로그인 할 수 있기 때문에 모든 OpenID 계정을 삭제 할 수 없습니다.
+	'openiddeleteerroropenidonly' => 'OpenID를 이용해서만 로그인 할 수 있기 때문에 모든 OpenID 계정을 삭제할 수 없습니다.
 OpenID 없이 로그인 할 수 없습니다.',
 	'openiddelete-sucess' => '사용자 계정으로부터 OpenID 정보가 삭제되었습니다. [[특수기능:OpenIDConvert|OpenID 변환]] 페이지로 돌아갑니다.',
 	'openiddelete-error' => '사용자 계정으로부터 OpenID 정보를 삭제하는 과정에 오류가 발생하였습니다.',
+	'openid-openids-were-not-merged' => 'OpenID가 사용자 계정을 병합하는 동안 병합하지 못했습니다.',
 	'prefs-openid' => 'OpenID 설정',
 	'openid-prefstext' => '[//openid.net/ OpenID] 사용자 설정',
 	'openid-pref-hide' => 'OpenID로 로그인한 경우, 사용자 페이지에서 OpenID 정보를 보여주지 않습니다.',
@@ -3553,6 +3560,16 @@ OpenID 없이 로그인 할 수 없습니다.',
 	'openid-provider-label-yahoo' => '야후 계정을 통해 로그인하기',
 	'openid-provider-label-aol' => 'AOL 사용자 이름을 입력하세요',
 	'openid-provider-label-other-username' => '$1 사용자 이름을 입력하세요',
+	'specialpages-group-openid' => 'OpenID 서비스 문서와 상태 정보',
+	'right-openid-converter-access' => '추가하거나 계정을 OpenID 식별자를 사용하여 변환할 수 있습니다',
+	'right-openid-dashboard-access' => 'OpenID 대시보드에 표준 액세스',
+	'right-openid-dashboard-admin' => 'OpenID 대시보드에 관리자 액세스',
+	'openid-dashboard-title' => 'OpenID 대시보기',
+	'openid-dashboard-title-admin' => 'OpenID 대시보드 (관리자)',
+	'openid-dashboard-introduction' => '현재 OpenID 확장 기능 설정 ([$1 도움말])',
+	'openid-dashboard-number-openid-users' => 'OpenID 사용자 수',
+	'openid-dashboard-number-openids-in-database' => 'OpenID의 수 (총)',
+	'openid-dashboard-number-users-without-openid' => 'OpenID를 사용하지 않는 사용자 수',
 );
 
 /** Komi-Permyak (Перем Коми)
