@@ -901,7 +901,7 @@ $messages['bn'] = array(
 	'openid-provider-label-other-username' => 'আপনার $1 ব্যবহাকারী নাম প্রবেশ করান',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fohanno
  * @author Fulup
  * @author Gwenn-Ael
@@ -994,6 +994,7 @@ Ne c'hallfec'h ket kevreañ hep OpenID.",
 	'openid-pref-update-userinfo-on-login' => "Hizivaat ar roadennoù da heul adalek OpenID bep tro m'en em lugan :",
 	'openid-urls-desc' => 'An OpenIDoù stag ouzh ho kont :',
 	'openid-urls-action' => 'Ober',
+	'openid-urls-registration' => 'Deiziad enskrivañ',
 	'openid-urls-delete' => 'Dilemel',
 	'openid-add-url' => 'Ouzhpennañ un OpenID nevez',
 	'openid-login-or-create-account' => 'Kevreañ pe krouiñ ur gont nevez',
@@ -3141,7 +3142,7 @@ $messages['is'] = array(
 	'openidchoosepassword' => 'Lykilorð:',
 );
 
-/** Italian (Italiano)
+/** Italian (italiano)
  * @author Beta16
  * @author BrokenArrow
  * @author Civvì
@@ -3171,7 +3172,7 @@ Per favore consulta un [[Special:ListUsers/sysop|amministratore]].',
 	'openidsuccess' => 'Verifica effettuata',
 	'openidsuccesstext' => "La verifica dell'URL OpenID è stata effettuata con successo.",
 	'openidusernameprefix' => 'Utente OpenID',
-	'openidserverlogininstructions' => 'Inserisci di seguito la tua password per effettuare il login a $3 come utente $2 (pagina utente $1).',
+	'openidserverlogininstructions' => "$3 richiede di inserire la tua password per l'utente $2 pagina $1 (questo è il tuo URL OpenID).",
 	'openidtrustinstructions' => 'Controlla se desideri condividere i dati con $1.',
 	'openidallowtrust' => 'Permetti a $1 di fidarsi di questo account utente.',
 	'openidnopolicy' => 'Il sito non ha specificato una politica relativa alla privacy.',
@@ -3210,9 +3211,8 @@ puoi sceglierne uno dalle opzioni seguenti.',
 OpenID consente di effettuare la registrazione su molti siti web senza dover utilizzare una password diversa per ciascuno.
 (Leggi la [//it.wikipedia.org/wiki/OpenID voce di Wikipedia su OpenID] per maggiori informazioni.)
 
-Chi possiede già un account su {{SITENAME}} può effettuare il [[Special:UserLogin|login]] con il proprio nome utente e la propria password come al solito. Per utilizzare OpenID in futuro, si può [[Special:OpenIDConvert|convertire il proprio account a OpenID]] dopo aver effettuato normalmente il login.
-
 Esistono molti [//openid.net/get/ Provider OpenID]; è possibile che tu abbia già un account abilitato a OpenID su un altro servizio.',
+	'openidlogininstructions-passwordloginallowed' => "Chi possiede già un account su {{SITENAME}} può effettuare [[Special:UserLogin|l'accesso]] con il proprio nome utente e la propria password come al solito. Per utilizzare OpenID in futuro, si può [[Special:OpenIDConvert|convertire il proprio account a OpenID]] dopo aver effettuato normalmente il login.",
 	'openidupdateuserinfo' => 'Aggiorna i miei dati personali:',
 	'openiddelete' => 'Cancella OpenID',
 	'openiddelete-text' => 'Facendo clic sul pulsante "{{int:openiddelete-button}}" verrà rimosso l\'OpenID $1 dal proprio account.
@@ -3229,6 +3229,7 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Aggiorna le seguenti informazioni dalla persona OpenID a ogni accesso:',
 	'openid-urls-desc' => 'OpenID associati al proprio account:',
 	'openid-urls-action' => 'Azione',
+	'openid-urls-registration' => 'Data di registrazione',
 	'openid-urls-delete' => 'Cancella',
 	'openid-add-url' => 'Aggiungi un nuovo OpenID',
 	'openid-login-or-create-account' => 'Entra o crea un nuovo account',
@@ -3237,7 +3238,16 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openid-provider-label-yahoo' => 'Accedi utilizzando il tuo account Yahoo',
 	'openid-provider-label-aol' => 'Inserisci il tuo screenname AOL',
 	'openid-provider-label-other-username' => 'Inserisci il tuo $1 nome utente',
+	'specialpages-group-openid' => 'Pagine di servizio ed informazioni sullo stato per OpenID',
+	'right-openid-converter-access' => 'Può aggiungere o convertire il suo account per usare identità OpenID',
+	'right-openid-dashboard-access' => 'Accesso standard al cruscotto OpenID',
+	'right-openid-dashboard-admin' => 'Accesso amministrativo al cruscotto OpenID',
+	'openid-dashboard-title' => 'Cruscotto OpenID',
+	'openid-dashboard-title-admin' => 'Cruscotto OpenID per amministratori',
+	'openid-dashboard-introduction' => "Le impostazioni attuali per l'estensione OpenID ([$1 aiuto])",
 	'openid-dashboard-number-openid-users' => 'Numero di utenti con OpenID',
+	'openid-dashboard-number-openids-in-database' => 'Numero di OpenID (totale)',
+	'openid-dashboard-number-users-without-openid' => 'Numero di utenti senza OpenID',
 );
 
 /** Japanese (日本語)
