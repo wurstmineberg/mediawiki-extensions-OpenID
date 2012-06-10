@@ -3170,7 +3170,12 @@ Per favore consulta un [[Special:ListUsers/sysop|amministratore]].',
 	'openidfailure' => 'Verifica fallita',
 	'openidfailuretext' => 'La verifica dell\'URL OpenID è fallita. Messaggio di errore: "$1"',
 	'openidsuccess' => 'Verifica effettuata',
-	'openidsuccesstext' => "La verifica dell'URL OpenID è stata effettuata con successo.",
+	'openidsuccesstext' => "'''La verifica è stata effettuata con successo ed ora sei connesso come utente $1'''.
+
+Il tuo OpenID è $2.
+
+Questo ed altri OpenID opzionali possono essere gestiti dalla [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] nelle tue preferenze.<br />
+È possibile aggiungere una password opzionale dal tuo [[Special:Preferences#mw-prefsection-personal|profilo utente]].",
 	'openidusernameprefix' => 'Utente OpenID',
 	'openidserverlogininstructions' => "$3 richiede di inserire la tua password per l'utente $2 pagina $1 (questo è il tuo URL OpenID).",
 	'openidtrustinstructions' => 'Controlla se desideri condividere i dati con $1.',
@@ -3202,6 +3207,9 @@ puoi sceglierne uno dalle opzioni seguenti.',
 	'openidconvertyourstext' => 'Questo è già il tuo OpenID.',
 	'openidconvertothertext' => "Questo è l'OpenID di qualcun altro.",
 	'openidalreadyloggedin' => "Hai già effettuato l'accesso.",
+	'openidalreadyloggedintext' => "'''Hai già effettuato l'accesso, $1!'''
+
+Puoi gestire (vedere, cancellare, aggiungere altri) OpenID dalla [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] nelle tue preferenze.",
 	'openidnousername' => 'Nessun nome utente specificato.',
 	'openidbadusername' => 'Nome utente specificato errato.',
 	'openidautosubmit' => 'Questa pagina include un modulo che dovrebbe essere inviato automaticamente se hai JavaScript attivato. Se non lo è, prova a premere il pulsante "Continue".',
@@ -3212,6 +3220,7 @@ OpenID consente di effettuare la registrazione su molti siti web senza dover uti
 (Leggi la [//it.wikipedia.org/wiki/OpenID voce di Wikipedia su OpenID] per maggiori informazioni.)
 
 Esistono molti [//openid.net/get/ Provider OpenID]; è possibile che tu abbia già un account abilitato a OpenID su un altro servizio.',
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} consente ''solamente'' l'accesso con OpenID.",
 	'openidlogininstructions-passwordloginallowed' => "Chi possiede già un account su {{SITENAME}} può effettuare [[Special:UserLogin|l'accesso]] con il proprio nome utente e la propria password come al solito. Per utilizzare OpenID in futuro, si può [[Special:OpenIDConvert|convertire il proprio account a OpenID]] dopo aver effettuato normalmente il login.",
 	'openidupdateuserinfo' => 'Aggiorna i miei dati personali:',
 	'openiddelete' => 'Cancella OpenID',
@@ -3224,6 +3233,7 @@ Non saresti in grado di accedere senza un OpenID.',
 Non saresti in grado di accedere senza un OpenID.',
 	'openiddelete-sucess' => "L'OpenID è stato rimosso con successo dall'account.",
 	'openiddelete-error' => "Si è verificato un errore durante la rimozione dell'account OpenID.",
+	'openid-openids-were-not-merged' => 'Gli OpenID non sono uniti quando vengono uniti gli account utenti.',
 	'openid-prefstext' => 'Preferenze [//openid.net/ OpenID]',
 	'openid-pref-hide' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Aggiorna le seguenti informazioni dalla persona OpenID a ogni accesso:',
@@ -3284,7 +3294,7 @@ $messages['ja'] = array(
 これと他の OpenID（省略可能）は個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で管理できます。<br />
 アカウントパスワード（省略可能）は[[Special:Preferences#mw-prefsection-personal|利用者情報]]で追加できます。",
 	'openidusernameprefix' => 'OpenID ユーザー',
-	'openidserverlogininstructions' => '$3 に利用者 $2 (利用者ページ $1) としてログインするには以下にパスワードを入力してください。',
+	'openidserverlogininstructions' => '利用者 $2 のページ $1（これがあなたの OpenID URL です）に対応するパスワードを入力するように、$3 が要求しています',
 	'openidtrustinstructions' => '$1 とデータを共有したいか確認してください。',
 	'openidallowtrust' => '$1 がこの利用者アカウントを信用するのを許可する。',
 	'openidnopolicy' => 'サイトはプライバシーに関する方針を明記していません。',
@@ -3295,7 +3305,7 @@ $messages['ja'] = array(
 	'openidfullname' => 'フルネーム',
 	'openidemail' => 'メールアドレス',
 	'openidlanguage' => '言語',
-	'openidtimezone' => '時間帯',
+	'openidtimezone' => 'タイムゾーン',
 	'openidchooselegend' => '利用者名とアカウントの選択',
 	'openidchooseinstructions' => 'すべての利用者はニックネームが必要です。以下の選択肢から1つを選ぶことができます。',
 	'openidchoosenick' => 'あなたのニックネーム（$1）',
@@ -3321,11 +3331,8 @@ $messages['ja'] = array(
 	'openidautosubmit' => 'このページにあるフォームはあなたが JavaScript を有効にしていれば自動的に送信されるはずです。そうならない場合は、 "Continue" (続ける) ボタンを試してください。',
 	'openidclientonlytext' => 'あなたはこのウィキのアカウントを他のサイトで OpenID として使うことができません。',
 	'openidloginlabel' => 'OpenID URL',
-	'openidlogininstructions' => '{{SITENAME}} はウェブサイト間でのシングルサインオンのための [//openid.net/ OpenID] 規格に対応しています。OpenID によって、個別のパスワードを使うことなく、たくさんの様々なウェブサイトにログインできるようになります(より詳しい情報は[//ja.wikipedia.org/wiki/OpenID ウィキペディアの OpenID についての記事]を参照してください)。
-
-あなたが既に {{SITENAME}} でアカウントをもっている場合は、いつもどおりに利用者名とパスワードで[[Special:UserLogin|ログイン]]できます。将来、OpenID を使うためには、通常のログインをした後で[[Special:OpenIDConvert|あなたのアカウントを OpenID に変換する]]ことができます。
-
-多くの [//openid.net/get/ OpenID プロバイダー]が存在し、あなたは既に別のサービスで OpenID が有効となったアカウントを保持しているかもしれません。',
+	'openidlogininstructions' => '{{SITENAME}} はウェブサイト間でのシングルサインオンのための [//openid.net/ OpenID] 規格に対応しています。OpenID によって、個別のパスワードを使用することなく、たくさんのさまざまなウェブサイトにログインできるようになります(より詳しい情報は[//ja.wikipedia.org/wiki/OpenID ウィキペディアの OpenID についての記事]を参照してください)。
+多くの [//openid.net/get/ OpenID プロバイダー]が存在するため、OpenID が有効なアカウントを別のサービスで既に保持しているかもしれません。',
 	'openidlogininstructions-openidloginonly' => "OpenID で{{SITENAME}}''のみ''にログインできます。",
 	'openidupdateuserinfo' => '自分の個人情報を更新:',
 	'openiddelete' => 'OpenID を削除',
