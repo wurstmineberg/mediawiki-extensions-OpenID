@@ -42,7 +42,14 @@ $specialPageAliases['de'] = array(
 	'OpenIDXRDS' => array( 'OpenID-XRDS' ),
 );
 
-/** Finnish (Suomi) */
+/** Zazaki (Zazaki) */
+$specialPageAliases['diq'] = array(
+	'OpenIDLogin' => array( 'KewtışeOpenID' ),
+	'OpenIDConvert' => array( 'VurnayışOpenID' ),
+	'OpenIDServer' => array( 'WasterêOpenID' ),
+);
+
+/** Finnish (suomi) */
 $specialPageAliases['fi'] = array(
 	'OpenIDLogin' => array( 'OpenID-kirjautuminen' ),
 	'OpenIDConvert' => array( 'OpenID-muunnos' ),
@@ -56,7 +63,7 @@ $specialPageAliases['ht'] = array(
 	'OpenIDServer' => array( 'SèvèOpenID' ),
 );
 
-/** Interlingua (Interlingua) */
+/** Interlingua (interlingua) */
 $specialPageAliases['ia'] = array(
 	'OpenIDLogin' => array( 'Aperir_session_OpenID' ),
 	'OpenIDConvert' => array( 'Converter_a_OpenID' ),
@@ -75,8 +82,9 @@ $specialPageAliases['ja'] = array(
 /** Korean (한국어) */
 $specialPageAliases['ko'] = array(
 	'OpenIDLogin' => array( 'OpenID로그인' ),
-	'OpenIDConvert' => array( 'OpenID번역' ),
+	'OpenIDConvert' => array( 'OpenID변환' ),
 	'OpenIDServer' => array( 'OpenID서버' ),
+	'OpenIDDashboard' => array( 'OpenID대시보드', 'OpenID대쉬보드' ),
 );
 
 /** Colognian (Ripoarisch) */
@@ -99,7 +107,7 @@ $specialPageAliases['lb'] = array(
 	'OpenIDConvert' => array( 'OpenID_ëmwandelen' ),
 );
 
-/** Macedonian (Македонски) */
+/** Macedonian (македонски) */
 $specialPageAliases['mk'] = array(
 	'OpenIDLogin' => array( 'НајаваСоOpenID' ),
 	'OpenIDConvert' => array( 'ПретворањеНаOpenID' ),
@@ -113,7 +121,7 @@ $specialPageAliases['ml'] = array(
 	'OpenIDServer' => array( 'ഓപ്പൺഐ.ഡി.സെർവർ' ),
 );
 
-/** Norwegian Bokmål (‪Norsk (bokmål)‬) */
+/** Norwegian Bokmål (‪norsk (bokmål)‬) */
 $specialPageAliases['nb'] = array(
 	'OpenIDLogin' => array( 'OpenID-innlogging' ),
 	'OpenIDConvert' => array( 'OpenID-konvertering' ),
@@ -136,7 +144,7 @@ $specialPageAliases['nl'] = array(
 	'OpenIDConvert' => array( 'OpenIDConverteren' ),
 );
 
-/** Polish (Polski) */
+/** Polish (polski) */
 $specialPageAliases['pl'] = array(
 	'OpenIDLogin' => array( 'Logowanie_OpenID' ),
 	'OpenIDConvert' => array( 'Konwersja_na_OpenID' ),
@@ -152,7 +160,7 @@ $specialPageAliases['sa'] = array(
 	'OpenIDXRDS' => array( 'उद्घटपरिचयपत्रXRDS' ),
 );
 
-/** Slovak (Slovenčina) */
+/** Slovak (slovenčina) */
 $specialPageAliases['sk'] = array(
 	'OpenIDLogin' => array( 'OpenIDPrihlásenie' ),
 	'OpenIDConvert' => array( 'OpenIDKonverzia' ),
@@ -181,7 +189,7 @@ $specialPageAliases['vi'] = array(
 	'OpenIDServer' => array( 'Máy_chủ_OpenID' ),
 );
 
-/** Simplified Chinese (‪中文(简体)‬) */
+/** Simplified Chinese (‪中文（简体）‬) */
 $specialPageAliases['zh-hans'] = array(
 	'OpenIDLogin' => array( 'OpenID登录' ),
 	'OpenIDConvert' => array( '转换OpenID' ),
