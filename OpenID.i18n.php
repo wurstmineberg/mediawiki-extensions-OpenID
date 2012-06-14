@@ -563,7 +563,7 @@ $messages['arz'] = array(
 	'openid-pref-hide' => 'أخف هويتك هويتك المفتوحة على صفحتك الشخصية، لو سجلت الدخول بالهوية المفتوحة.',
 );
 
-/** Asturian (Asturianu)
+/** Asturian (asturianu)
  * @author Esbardu
  * @author Xuacu
  */
@@ -645,7 +645,7 @@ Pues xestionar (ver, desaniciar, amestar otres) les OpenID na [[Special:Preferen
 	'openid-dashboard-number-users-without-openid' => "Númberu d'usuarios ensin OpenID",
 );
 
-/** Azerbaijani (Azərbaycanca)
+/** Azerbaijani (azərbaycanca)
  * @author Cekli829
  */
 $messages['az'] = array(
@@ -659,7 +659,7 @@ $messages['az'] = array(
 	'openid-urls-delete' => 'Sil',
 );
 
-/** Belarusian (Беларуская)
+/** Belarusian (беларуская)
  * @author Тест
  */
 $messages['be'] = array(
@@ -780,7 +780,7 @@ $messages['be-tarask'] = array(
 	'openid-dashboard-number-users-without-openid' => 'Колькасьць удзельнікаў без OpenID',
 );
 
-/** Bulgarian (Български)
+/** Bulgarian (български)
  * @author DCLXVI
  * @author Spiritia
  * @author Stanqo
@@ -1007,7 +1007,7 @@ Ne c'hallfec'h ket kevreañ hep OpenID.",
 	'openid-dashboard-number-openids-in-database' => 'Niver a OpenIDoù (hollad)',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -1102,7 +1102,7 @@ Bez OpenId nećete moći da se prijavite.',
 	'openid-dashboard-number-openids-in-database' => 'Broj OpenID-eva (ukupno)',
 );
 
-/** Catalan (Català)
+/** Catalan (català)
  * @author Paucabot
  * @author SMP
  * @author Solde
@@ -1134,13 +1134,13 @@ podeu triar-ne un de les opcions a continuació.',
 	'openid-provider-label-other-username' => "Introduïu el vostre $1 nom d'usuari",
 );
 
-/** Sorani (کوردی) */
+/** Sorani Kurdish (کوردی) */
 $messages['ckb'] = array(
 	'openiddelete-button' => 'پشتدار بکەرەوە',
 	'openid-urls-delete' => 'سڕینەوە',
 );
 
-/** Czech (Česky)
+/** Czech (česky)
  * @author Kuvaly
  * @author Matěj Grabovský
  * @author Mormegil
@@ -1250,7 +1250,7 @@ $messages['cy'] = array(
 	'openidoptional' => 'Dewisol',
 );
 
-/** Danish (Dansk)
+/** Danish (dansk)
  * @author Froztbyte
  * @author Jon Harald Søby
  */
@@ -1568,7 +1568,7 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'openid-dashboard-number-users-without-openid' => 'Licba wužywarjow bźez OpenID',
 );
 
-/** Ewe (Eʋegbe) */
+/** Ewe (eʋegbe) */
 $messages['ee'] = array(
 	'openid-urls-delete' => 'Tutui',
 );
@@ -1756,7 +1756,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
 	'openid-provider-label-other-username' => 'Enigi vian salutnomon de $1',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Armando-Martin
  * @author Ascánder
  * @author Crazymadlover
@@ -1877,7 +1877,7 @@ No podrás iniciar sesión sin un OpenID.',
 	'openid-dashboard-number-users-without-openid' => 'Número de usuarios sin OpenID',
 );
 
-/** Estonian (Eesti)
+/** Estonian (eesti)
  * @author Avjoska
  * @author Pikne
  */
@@ -1904,7 +1904,7 @@ $messages['et'] = array(
 	'openid-provider-label-yahoo' => 'Logi sisse oma Yahoo konto kaudu',
 );
 
-/** Basque (Euskara)
+/** Basque (euskara)
  * @author Kobazulo
  * @author Theklan
  */
@@ -1919,7 +1919,7 @@ $messages['eu'] = array(
 	'openidchoosepassword' => 'Pasahitza:',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Centerlink
  * @author Cimon Avaro
  * @author Crt
@@ -2018,7 +2018,7 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
 	'openid-provider-label-other-username' => 'Anna $1-käyttäjätunnuksesi',
 );
 
-/** French (Français)
+/** French (français)
  * @author Crochet.david
  * @author Gomoko
  * @author Grondin
@@ -2138,7 +2138,7 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-dashboard-number-users-without-openid' => "Nombre d'utilisateurs sans OpenID",
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author Cedric31
  * @author ChrisPtDe
  */
@@ -2610,7 +2610,7 @@ $messages['hil'] = array(
 	'openidchoosepassword' => 'Kontra-senyas:',
 );
 
-/** Croatian (Hrvatski)
+/** Croatian (hrvatski)
  * @author Dalibor Bosits
  * @author Ex13
  */
@@ -2811,7 +2811,7 @@ Ty njemóhł so bjez OpenID přizjewić.',
 	'openid-dashboard-number-users-without-openid' => 'Ličba wužiwarjow bjez OpenID',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  * @author Dj
  * @author Glanthor Reviol
@@ -2909,7 +2909,7 @@ Nem tudnál bejelentkezni OpenID nélkül.',
 	'openid-dashboard-number-users-without-openid' => 'OpenID nélküli felhasználók száma',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author Malafaya
  * @author McDutchie
  */
@@ -3135,7 +3135,7 @@ $messages['ig'] = array(
 	'openid-urls-delete' => 'Kàcha',
 );
 
-/** Icelandic (Íslenska)
+/** Icelandic (íslenska)
  * @author S.Örvarr.S
  */
 $messages['is'] = array(
@@ -3411,7 +3411,7 @@ $messages['kiu'] = array(
 	'openidtimezone' => 'Warê sate',
 );
 
-/** Kalaallisut (Kalaallisut)
+/** Kalaallisut (kalaallisut)
  * @author Qaqqalik
  */
 $messages['kl'] = array(
@@ -3809,7 +3809,7 @@ $messages['li'] = array(
 	'openidchoosepassword' => 'Wachwaord:',
 );
 
-/** Lingala (Lingála)
+/** Lingala (lingála)
  * @author Eruedin
  */
 $messages['ln'] = array(
@@ -3821,7 +3821,7 @@ $messages['ln'] = array(
 	'openid-urls-delete' => 'Kolímwisa',
 );
 
-/** Lithuanian (Lietuvių)
+/** Lithuanian (lietuvių)
  * @author Garas
  * @author Hugo.arg
  */
@@ -3834,7 +3834,7 @@ $messages['lt'] = array(
 	'openidchoosepassword' => 'Slaptažodis:',
 );
 
-/** Latvian (Latviešu)
+/** Latvian (latviešu)
  * @author GreenZeb
  */
 $messages['lv'] = array(
@@ -3849,7 +3849,7 @@ $messages['mhr'] = array(
 	'openidchoosepassword' => 'Шолыпмут:',
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -4004,7 +4004,7 @@ $messages['ml'] = array(
 	'openid-urls-delete' => 'മായ്ക്കുക',
 );
 
-/** Mongolian (Монгол)
+/** Mongolian (монгол)
  * @author Chinneeb
  */
 $messages['mn'] = array(
@@ -4472,7 +4472,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-dashboard-number-users-without-openid' => 'Aantal gebruikers zonder OpenID',
 );
 
-/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
  * @author Gunnernett
  * @author Harald Khan
  * @author Jon Harald Søby
@@ -4565,7 +4565,7 @@ Du ville ikkje ha kunna logga inn utan ein OpenID.',
 	'openid-provider-label-other-username' => 'Skriv inn $1-brukarnamnet ditt',
 );
 
-/** Occitan (Occitan)
+/** Occitan (occitan)
  * @author Cedric31
  */
 $messages['oc'] = array(
@@ -4684,7 +4684,7 @@ $messages['pfl'] = array(
 	'openid-urls-delete' => 'Lesche',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author BeginaFelicysym
  * @author Maikking
  * @author Sp5uhe
@@ -4918,7 +4918,7 @@ $messages['ps'] = array(
 	'openid-provider-label-other-username' => 'تاسې خپل $1 کارن-نوم وليکۍ',
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Giro720
  * @author Hamilton Abreu
  * @author Lijealso
@@ -5031,7 +5031,7 @@ Sem um OpenID não se poderia autenticar.',
 	'openid-dashboard-number-users-without-openid' => 'Número de utilizadores sem OpenID',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Danielsouzat
  * @author Eduardo.mps
  * @author Hamilton Abreu
@@ -5129,7 +5129,7 @@ Você não poderia entrar sem um OpenID.',
 	'openid-provider-label-other-username' => 'Introduza o seu nome de utilizador $1',
 );
 
-/** Romanian (Română)
+/** Romanian (română)
  * @author Firilacroco
  * @author KlaudiuMihaila
  * @author Memo18
@@ -5205,7 +5205,7 @@ se poate alege una din opțiunile de mai jos.',
 	'openid-provider-label-other-username' => 'Introduceți numele dumneavoastră de $1 utilizator.',
 );
 
-/** Tarandíne (Tarandíne)
+/** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
@@ -5237,7 +5237,7 @@ $messages['roa-tara'] = array(
 	'openid-dashboard-title-admin' => 'Cruscotte de OpenID (amministratore)',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Adata80
  * @author Aleksandrit
  * @author Ferrer
@@ -5358,7 +5358,7 @@ $messages['rue'] = array(
 	'openidchoosepassword' => 'Гесло:',
 );
 
-/** Sicilian (Sicilianu)
+/** Sicilian (sicilianu)
  * @author Melos
  * @author Santu
  */
@@ -5441,7 +5441,7 @@ $messages['si'] = array(
 	'openidlanguage' => 'භාෂාව',
 );
 
-/** Slovak (Slovenčina)
+/** Slovak (slovenčina)
  * @author Helix84
  */
 $messages['sk'] = array(
@@ -5533,7 +5533,7 @@ Bez OpenID by ste sa nemohli prihlásiť.',
 	'openid-provider-label-other-username' => 'Zadajte svoje prihlasovacie meno na $1',
 );
 
-/** Slovenian (Slovenščina)
+/** Slovenian (slovenščina)
  * @author Dbc334
  */
 $messages['sl'] = array(
@@ -5653,7 +5653,7 @@ $messages['sli'] = array(
 	'openidemail' => 'E-Mail-Atresse:',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
@@ -5715,7 +5715,7 @@ $messages['sr-ec'] = array(
 	'openid-urls-delete' => 'Обриши',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author Ex13
  * @author Michaello
  * @author Rancher
@@ -5871,7 +5871,7 @@ $messages['su'] = array(
 	'openidchoosepassword' => 'Sandi:',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Boivie
  * @author Fluff
  * @author Jon Harald Søby
@@ -6060,7 +6060,7 @@ $messages['te'] = array(
 	'openid-provider-label-other-username' => 'మీ $1 వాడుకరిపేరుని ఇవ్వండి',
 );
 
-/** Tetum (Tetun)
+/** Tetum (tetun)
  * @author MF-Warburg
  */
 $messages['tet'] = array(
@@ -6071,7 +6071,7 @@ $messages['tet'] = array(
 	'openidchooseusername' => "Naran uza-na'in:",
 );
 
-/** Tajik (Cyrillic script) (Тоҷикӣ)
+/** Tajik (Cyrillic script) (тоҷикӣ)
  * @author Ibrahim
  */
 $messages['tg-cyrl'] = array(
@@ -6091,7 +6091,7 @@ $messages['tg-cyrl'] = array(
 	'openidchoosepassword' => 'Калимаи убур:',
 );
 
-/** Tajik (Latin script) (Tojikī)
+/** Tajik (Latin script) (tojikī)
  * @author Liangent
  */
 $messages['tg-latn'] = array(
@@ -6328,7 +6328,7 @@ $messages['ug-latn'] = array(
 	'openidlanguage' => 'Til',
 );
 
-/** Ukrainian (Українська)
+/** Ukrainian (українська)
  * @author A1
  * @author AS
  * @author Aleksandrit
@@ -6428,7 +6428,7 @@ OpenID дозволяє вам заходити на різні веб-сайт�
 	'openid-provider-label-other-username' => "Введіть Ваше ім'я користувача $1",
 );
 
-/** Vèneto (Vèneto)
+/** vèneto (vèneto)
  * @author Candalua
  */
 $messages['vec'] = array(
@@ -6673,7 +6673,7 @@ $messages['yi'] = array(
 	'openid-urls-delete' => 'אויסמעקן',
 );
 
-/** Simplified Chinese (‪中文(简体)‬)
+/** Simplified Chinese (‪中文（简体）‬)
  * @author Anakmalaysia
  * @author Gaoxuewei
  * @author Liangent
@@ -6789,7 +6789,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-dashboard-number-users-without-openid' => '没有 OpenID 的用户数',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Anakmalaysia
  * @author Frankou
  * @author Gzdavidwong
