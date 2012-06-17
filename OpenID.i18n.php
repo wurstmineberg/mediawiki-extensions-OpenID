@@ -3327,7 +3327,7 @@ $messages['ja'] = array(
 
 個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で、あなたの OpenID を管理（表示、削除、追加など）できます。",
 	'openidnousername' => '利用者名が指定されていません。',
-	'openidbadusername' => '利用者名の指定が不正です。',
+	'openidbadusername' => '利用者名の指定が正しくありません。',
 	'openidautosubmit' => 'このページにあるフォームはあなたが JavaScript を有効にしていれば自動的に送信されるはずです。そうならない場合は、 "Continue" (続ける) ボタンを試してください。',
 	'openidclientonlytext' => 'あなたはこのウィキのアカウントを他のサイトで OpenID として使うことができません。',
 	'openidloginlabel' => 'OpenID URL',
