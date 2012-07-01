@@ -364,7 +364,7 @@ $messages['am'] = array(
 	'openidlanguage' => 'ቋንቋ',
 );
 
-/** Aragonese (Aragonés)
+/** Aragonese (aragonés)
  * @author Juanpabl
  */
 $messages['an'] = array(
@@ -666,7 +666,7 @@ $messages['be'] = array(
 	'openiddelete-button' => 'Пацвердзіць',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Wizardist
@@ -1236,7 +1236,7 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
 	'openid-provider-label-other-username' => 'Zadejte svoje uživatelské jméno pro $1',
 );
 
-/** Church Slavic (Словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
 $messages['cu'] = array(
@@ -1467,7 +1467,7 @@ $messages['diq'] = array(
 	'openid-urls-delete' => 'Bıestere',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -2196,7 +2196,7 @@ $messages['ga'] = array(
 	'openidpermission' => 'Earráid ceadúnais OpenID',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -2705,7 +2705,7 @@ Bez OpenId nećete se moći prijaviti.',
 	'openid-provider-label-other-username' => 'Unesite Vaše $1 suradničko ime',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
@@ -3630,7 +3630,7 @@ Dä Fähler wohr: „$1“',
 	'openidnickname' => 'Spetznam',
 	'openidfullname' => 'Der janze Name',
 	'openidemail' => 'De e-mail Address',
-	'openidlanguage' => 'Sproch',
+	'openidlanguage' => 'Schprooch',
 	'openidtimezone' => 'Zickzohn',
 	'openidchooselegend' => 'Ußwahl vum Metmaacher singem Name',
 	'openidchooseinstructions' => 'Jede Metmaacher bruch enne Spetznam,
@@ -3800,6 +3800,7 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'openid-provider-label-yahoo' => 'Loggt Iech mat Ärem Yahoo-Benotzerkont an',
 	'openid-provider-label-aol' => 'Gitt Ären AOL Numm un',
 	'openid-provider-label-other-username' => 'Gitt Äre(n) $1 Benotzernumm un',
+	'openid-dashboard-number-openid-users' => 'Zuel vun de Benotzer mat OpenID',
 );
 
 /** Limburgish (Limburgs)
@@ -5036,6 +5037,7 @@ Sem um OpenID não se poderia autenticar.',
  * @author Eduardo.mps
  * @author Hamilton Abreu
  * @author ZehRique
+ * @author 555
  */
 $messages['pt-br'] = array(
 	'openid-desc' => 'Autentique-se no wiki com um [//openid.net/ OpenID], e autentique-se em outros sítios que usem OpenID com uma conta de utilizador wiki',
@@ -5115,7 +5117,7 @@ Você não poderia entrar sem um OpenID.',
 	'openiddelete-sucess' => 'O OpenID foi removido de sua conta com sucesso.',
 	'openiddelete-error' => 'Ocorreu um erro enquanto removia o OpenID de sua conta.',
 	'openid-prefstext' => 'Preferências do [//openid.net/ OpenID]',
-	'openid-pref-hide' => 'Esconder o seu OpenID na sua página de utilizador, caso se autentique com OpenID.',
+	'openid-pref-hide' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Atualizar a seguinte informação a partir da minha "persona" OpenID cada vez que me autentico',
 	'openid-urls-desc' => 'OpenIDs associadas à sua conta:',
 	'openid-urls-action' => 'Ação',
@@ -5350,7 +5352,7 @@ OpenID позволяет вам заходить на различные веб
 	'openid-dashboard-number-users-without-openid' => 'Чисто пользователей без OpenID',
 );
 
-/** Rusyn (Русиньскый)
+/** Rusyn (русиньскый)
  * @author Gazeb
  */
 $messages['rue'] = array(
