@@ -5033,11 +5033,11 @@ Sem um OpenID não se poderia autenticar.',
 );
 
 /** Brazilian Portuguese (português do Brasil)
+ * @author 555
  * @author Danielsouzat
  * @author Eduardo.mps
  * @author Hamilton Abreu
  * @author ZehRique
- * @author 555
  */
 $messages['pt-br'] = array(
 	'openid-desc' => 'Autentique-se no wiki com um [//openid.net/ OpenID], e autentique-se em outros sítios que usem OpenID com uma conta de utilizador wiki',
