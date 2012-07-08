@@ -1147,7 +1147,7 @@ $messages['ckb'] = array(
  */
 $messages['cs'] = array(
 	'openid-desc' => 'Přihlašování se na wiki pomocí [//openid.net/ OpenID] a přihlašování se na jiné stránky podporující OpenID pomocí uživatelského účtu z wiki',
-	'openidlogin' => 'Přihlášení pomocí OpenID',
+	'openidlogin' => 'Přihlášení / vytvoření účtu pomocí OpenID',
 	'openidserver' => 'OpenID server',
 	'openidxrds' => 'Soubor Yadis',
 	'openidconvert' => 'OpenID konvertor',
@@ -1163,9 +1163,14 @@ Prosím, poraďte se se [[Special:ListUsers/sysop|správcem]].',
 	'openidfailure' => 'Ověřování zrušeno',
 	'openidfailuretext' => 'Ověřování URL OpenID selhalo. Chybová zpráva: „$1“',
 	'openidsuccess' => 'Ověřování bylo úspěšné',
-	'openidsuccesstext' => 'Ověření URL OpenID bylo úspěšné.',
+	'openidsuccesstext' => "'''Úspěšně ověřeno a {{gender:|přihlášen uživatel|přihlášena uživatelka}} $1'''.
+
+Vaše OpenID je $2 .
+
+Toto a případná další OpenID můžete spravovat na [[Special:Preferences#mw-prefsection-openid|záložce OpenID]] v uživatelském nastavení.<br />
+Nepovinné heslo k účtu si můžete přidat v [[Special:Preferences#mw-prefsection-personal|uživatelském profilu]].",
 	'openidusernameprefix' => 'Uživatel OpenID',
-	'openidserverlogininstructions' => 'Do formuláře níže zadejte heslo pro přihlášení na $3 jako uživatel $2 (uživatelská stránka $1).',
+	'openidserverlogininstructions' => '$3 žádá, abyste {{GENDER:$2|zadal|zadala|zadali}} své heslo jako {{GENDER:$2|uživatel|uživatelka}} $2 se stránkou $1 (to je vaše OpenID URL)',
 	'openidtrustinstructions' => 'Zkontrolujte, jestli chcete sdílet data s uživatelem $1.',
 	'openidallowtrust' => 'Povolit $1 důvěřovat tomuto uživatelskému účtu.',
 	'openidnopolicy' => 'Lokalita nespecifikovala pravidla ochrany osobních údajů.',
@@ -1177,7 +1182,7 @@ Prosím, poraďte se se [[Special:ListUsers/sysop|správcem]].',
 	'openidemail' => 'E-mailová adresa',
 	'openidlanguage' => 'Jazyk',
 	'openidtimezone' => 'Časové pásmo',
-	'openidchooselegend' => 'Volba uživatelského jména',
+	'openidchooselegend' => 'Volba uživatelského jména a účtu',
 	'openidchooseinstructions' => 'Kyždý uživatel musí mít přezdívku; můžete si vybrat z níže uvedených možností.',
 	'openidchoosenick' => 'Vaše přezdívka ($1)',
 	'openidchoosefull' => 'Vaše celé jméno ($1)',
@@ -1193,23 +1198,23 @@ Prosím, poraďte se se [[Special:ListUsers/sysop|správcem]].',
 	'openidconvertsuccesstext' => 'Úspěšně jste převedli váš OpenID na $1.',
 	'openidconvertyourstext' => 'To už je váš OpenID.',
 	'openidconvertothertext' => 'To je OpenID někoho jiného.',
-	'openidalreadyloggedin' => "'''Už jste {{GENDER:$1|přihlášen, uživateli|přihlášena, uživatelko|přihlášen, uživateli}} $1!'''
+	'openidalreadyloggedin' => 'Už jste {{GENDER:|přihlášen|přihlášena}}.',
+	'openidalreadyloggedintext' => "'''Už jste {{GENDER:$1|přihlášen, uživateli|přihlášena, uživatelko|přihlášen, uživateli}} $1!'''
 
-Pokud chcete pro přihlašování v budoucnu používat OpenID, můžete [[Special:OpenIDConvert|svůj účet převést na OpenID]].",
+Spravovat svá OpenID (prohlížet, mazat, přidávat další) můžete na [[Special:Preferences#mw-prefsection-openid|záložce OpenID]] uživatelského nastavení.",
 	'openidnousername' => 'Nebylo zadáno uživatelské jméno.',
 	'openidbadusername' => 'Bylo zadáno chybné uživatelské jméno.',
 	'openidautosubmit' => 'Tato stránka obsahuje formulář, který by měl být automaticky odeslán pokud máte zapnutý JavaScript.
 Pokud ne, zkuste tlačátko „Continue“ (Pokračovat).',
 	'openidclientonlytext' => 'Nemůžete používat účty z této wiki jako OpenID na jinýh webech.',
 	'openidloginlabel' => 'OpenID URL',
-	'openidlogininstructions' => '{{SITENAME}} podporuje standard [//openid.net/ OpenID] pro sjednocené přihlašování na webové stránky.
+	'openidlogininstructions' => '{{SITENAME}} podporuje pro sjednocené přihlašování na různé webové stránky standard [//openid.net/ OpenID].
 OpenID vám umožňuje přihlašovat se na množství různých webových stránek bez nutnosti používat pro každou jiné heslo.
-(Více informací se dočtete v [//en.wikipedia.org/wiki/OpenID článku o OpenID na Wikipedii].)
-
-Pokud už máte na {{GRAMMAR:6sg|{{SITENAME}}}} účet, můžete se [[Special:UserLogin|přihlásit]] pomocí uživatelského jména a hesla jako obvykle.
-Pokud chcete v budoucnosti používat OpenID, můžete po normálním přihlášení [[Special:OpenIDConvert|převést svůj účet na OpenID]].
-
+(Více informací se dočtete v [//cs.wikipedia.org/wiki/OpenID článku o OpenID na Wikipedii].)
 Existuje množství [//openid.net/get/ poskytovatelů OpenID], možná už také máte účet s podporou OpenID v rámci jiné služby.',
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} dovoluje přihlášení ''pouze'' pomocí OpenID.",
+	'openidlogininstructions-passwordloginallowed' => 'Pokud už máte na {{grammar:6sg|{{SITENAME}}}} účet, můžete se [[Special:UserLogin|přihlásit]] pomocí uživatelského jména a hesla jako obvykle.
+Pokud chcete v budoucnosti používat OpenID, můžete po normálním přihlášení [[Special:OpenIDConvert|převést svůj účet na OpenID]].',
 	'openidupdateuserinfo' => 'Aktualizovat moje osobní informace:',
 	'openiddelete' => 'Smazat OpenID',
 	'openiddelete-text' => 'Kliknutím na tlačítko „{{int:openiddelete-button}}“ odstraníte OpenID $1 z vašeho účtu.
@@ -1221,11 +1226,13 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
 Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} přihlásit.',
 	'openiddelete-sucess' => 'OpenID bylo úspěšně odstraněno z vašeho účtu.',
 	'openiddelete-error' => 'Během odstraňování OpenID z vašeho účtu se vyskytla chyba.',
+	'openid-openids-were-not-merged' => 'OpenID nebyly při slučování uživatelských účtů sloučeny.',
 	'openid-prefstext' => 'Nastavení [//openid.net/ OpenID]',
 	'openid-pref-hide' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Aktualizovat následující informace z OpenID identity vždy, když se přihlásím:',
 	'openid-urls-desc' => 'OpenID asociovaná s vaším účtem:',
 	'openid-urls-action' => 'Operace',
+	'openid-urls-registration' => 'Čas registrace',
 	'openid-urls-delete' => 'Smazat',
 	'openid-add-url' => 'Přidat nové OpenID',
 	'openid-login-or-create-account' => 'Přihlásit se nebo vytvořit nový účet',
@@ -1234,6 +1241,16 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
 	'openid-provider-label-yahoo' => 'Přihlásit se pomocí Yahoo účtu',
 	'openid-provider-label-aol' => 'Přihlásit se pomocí AOL účtu',
 	'openid-provider-label-other-username' => 'Zadejte svoje uživatelské jméno pro $1',
+	'specialpages-group-openid' => 'Servisní stránky a stavové informace k OpenID',
+	'right-openid-converter-access' => 'Smí přidávat nebo převádět svůj účet na užití identit OpenID',
+	'right-openid-dashboard-access' => 'Standardní přístup k řídicímu panelu OpenID',
+	'right-openid-dashboard-admin' => 'Správcovský přístup k řídicímu panelu OpenID',
+	'openid-dashboard-title' => 'Řídicí panel OpenID',
+	'openid-dashboard-title-admin' => 'Řídicí panel OpenID (správce)',
+	'openid-dashboard-introduction' => 'Aktuální nastavení rozšíření OpenID ([$1 nápověda])',
+	'openid-dashboard-number-openid-users' => 'Počet uživatelů s OpenID',
+	'openid-dashboard-number-openids-in-database' => 'Počet OpenID (celkem)',
+	'openid-dashboard-number-users-without-openid' => 'Počet uživatelů bez OpenID',
 );
 
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
