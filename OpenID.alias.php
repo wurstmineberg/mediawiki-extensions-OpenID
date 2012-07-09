@@ -168,10 +168,10 @@ $specialPageAliases['sk'] = array(
 
 /** Tagalog (Tagalog) */
 $specialPageAliases['tl'] = array(
-	'OpenIDLogin' => array( 'Paglagda sa OpenID' ),
-	'OpenIDConvert' => array( 'Pagpapalit ng OpenID' ),
-	'OpenIDServer' => array( 'Serbidor ng OpenID' ),
-	'OpenIDXRDS' => array( 'XRDS ng OpenID' ),
+	'OpenIDLogin' => array( 'Paglagda_sa_OpenID' ),
+	'OpenIDConvert' => array( 'Pagpapalit_ng_OpenID' ),
+	'OpenIDServer' => array( 'Serbidor_ng_OpenID' ),
+	'OpenIDXRDS' => array( 'XRDS_ng_OpenID' ),
 );
 
 /** Turkish (Türkçe) */
