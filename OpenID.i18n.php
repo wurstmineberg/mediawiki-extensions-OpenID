@@ -3566,7 +3566,7 @@ OpenID는 다른 많은 웹사이트에서 서로 다른 비밀번호나 사용�
 	'openidlogininstructions-openidloginonly' => "{{SITENAME}}(은)는 OpenID''로만'' 로그인을 할 수 있습니다.",
 	'openidlogininstructions-passwordloginallowed' => '{{SITENAME}}에 계정이 이미 있을 경우 사용하는 사용자 이름과 비밀번호로 [[Special:UserLogin|로그인]]할 수 있습니다.
 나중에 OpenID를 사용하려면, 정상적으로 로그인한 후 [[Special:OpenIDConvert|계정을 OpenID로 변환]]할 수 있습니다.',
-	'openidupdateuserinfo' => '내 개인 정보를 갱신:',
+	'openidupdateuserinfo' => '내 개인 정보를 새로 고침:',
 	'openiddelete' => 'OpenID 삭제',
 	'openiddelete-text' => '"{{int:openiddelete-button}}" 버튼을 누르시면, [$1 OpenID 정보]를 당신의 사용자 계정으로부터 삭제할 것입니다.
 이후 OpenID를 통한 현재 사용자 계정으로의 로그인이 불가능하게 될 것입니다.',
