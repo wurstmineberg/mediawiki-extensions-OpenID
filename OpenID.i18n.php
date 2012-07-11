@@ -3860,7 +3860,7 @@ $messages['lv'] = array(
 	'openidchoosepassword' => 'Parole:',
 );
 
-/** Eastern Mari (Олык Марий)
+/** Eastern Mari (олык марий)
  * @author Сай
  */
 $messages['mhr'] = array(
@@ -4245,7 +4245,7 @@ $messages['my'] = array(
 	'openid-provider-label-other-username' => 'သင်၏ $1 မှ အသုံးပြုသူ အမည်အား ရိုက်ပါ',
 );
 
-/** Erzya (Эрзянь)
+/** Erzya (эрзянь)
  * @author Botuzhaleny-sodamo
  */
 $messages['myv'] = array(
@@ -4271,8 +4271,7 @@ $messages['nah'] = array(
 	'openidchoosepassword' => 'Motlahtōlichtacāyo',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Jon Harald Søby
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -6530,7 +6529,7 @@ Ghe xe molti [//openid.net/get/ Provider OpenID], e te podaressi verghe zà un a
 	'openid-provider-label-other-username' => 'Inserissi el to nome utente $1',
 );
 
-/** Veps (Vepsän kel’)
+/** Veps (vepsän kel’)
  * @author Игорь Бродский
  */
 $messages['vep'] = array(
