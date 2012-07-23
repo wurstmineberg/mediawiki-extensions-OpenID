@@ -6148,7 +6148,7 @@ $messages['tk'] = array(
  */
 $messages['tl'] = array(
 	'openid-desc' => 'Lumagda sa wiki na may [//openid.net/ OpenID], at lumagda sa iba pang mga websayt na nakakaalam sa/nakababatid ng OpenID na may kuwenta/akawnt na pang-wiki',
-	'openidlogin' => 'Lumagda na may OpenID',
+	'openidlogin' => 'Lumagda / lumika ng akawnt sa pamamagitan ng OpenID',
 	'openidserver' => 'Serbidor ng OpenID',
 	'openidxrds' => 'Talaksang Yadis',
 	'openidconvert' => 'Tagapagpalit ng OpenID',
@@ -6164,9 +6164,14 @@ Makipagugnayan po lamang sa isang [[Special:ListUsers/sysop|tagapangasiwa]].',
 	'openidfailure' => 'Nabigo ang pagpapatotoo',
 	'openidfailuretext' => 'Nabigo ang pagpapatoo sa URL ng OpenID.  Mensaheng pangkamalian: "$1"',
 	'openidsuccess' => 'Nagtagumpay ang pagpapatotoo',
-	'openidsuccesstext' => 'Nagtagumpay ang pagpapatotoo sa URL ng OpenID.',
+	'openidsuccesstext' => "'''Matagumpay na pagpapatotoo at paglagda bilang ang tagagamit na si $1'''.
+
+Ang OpenID mo ay $2 .
+
+Ito at ang karagdagan ngunit maaaring meron o wala na mga OpenID na maaaring pamahalaan sa loob ng [[Special:Preferences#mw-prefsection-openid|laylayan ng OpenID]] ng mga kanaisan mo.<br />
+Maaaring idagdag o hindi idagdag ang isang hudyat ng akawnt sa loob ng iyong [[Special:Preferences#mw-prefsection-personal|Balangkas ng katangian ng tagagamit]].",
 	'openidusernameprefix' => 'Tagagamit ng OpenID',
-	'openidserverlogininstructions' => 'Ipasok (ilagay) ang iyong hudyat sa ibaba upang makalagda patungo sa $3 bilang si tagagamit na  $2 (pahina ng tagagamit na $1).',
+	'openidserverlogininstructions' => 'Hinihiling ni $3 na ipasok mo ang iyong hudyat para sa iyong pahina $1 ng tagagamit $2 (ito ang iyong URL ng OpenID)',
 	'openidtrustinstructions' => 'Pakisuri kung nais mong isalo ang dato kay $1.',
 	'openidallowtrust' => 'Pahintulutan si $1 na pagkatiwalaan ang kuwenta ng tagagamit na ito.',
 	'openidnopolicy' => 'Hindi tumukoy ang sityo (sayt) ng isang patakaran sa paglilihim na pansarili.',
@@ -6178,7 +6183,7 @@ Makipagugnayan po lamang sa isang [[Special:ListUsers/sysop|tagapangasiwa]].',
 	'openidemail' => 'Adres ng e-liham',
 	'openidlanguage' => 'Wika',
 	'openidtimezone' => 'Sona ng oras',
-	'openidchooselegend' => 'Mapagpipiliang pangalan ng tagagamit',
+	'openidchooselegend' => 'Mapagpipilian ng pangalan ng tagagamit at akawnt',
 	'openidchooseinstructions' => 'Lahat ng mga tagagamit ay kinakailangang may bansag;
 makakapili ka mula sa mga pagpipiliang nasa ibaba.',
 	'openidchoosenick' => 'Ang palayaw mo ($1)',
@@ -6195,23 +6200,22 @@ makakapili ka mula sa mga pagpipiliang nasa ibaba.',
 	'openidconvertsuccesstext' => 'Matagumpay mong napalitan/nabago ang iyong OpenID para maging $1.',
 	'openidconvertyourstext' => 'Iyan na mismo ang iyong OpenID.',
 	'openidconvertothertext' => 'Iyan ay isa nang OpenID ng ibang tao.',
-	'openidalreadyloggedin' => "'''Nakalagda ka na, $1!'''
+	'openidalreadyloggedin' => 'Nakalagda ka na.',
+	'openidalreadyloggedintext' => "'''Nakalagda ka na, $1!'''
 
-Kung nais mong gumamit ng OpenID upang makalagda sa hinaharap, maaari mong [[Special:OpenIDConvert|palitan ang kuwenta mo para magamit ang OpenID]].",
+Mapapamahalaan (matitingnan, mabubura, magdagdag pa) mo ang mga OpenID sa loob ng [[Special:Preferences#mw-prefsection-openid|laylay ng OpenID]] ng mga kanaisan mo.",
 	'openidnousername' => 'Walang tinukoy na pangalan ng tagagamit.',
 	'openidbadusername' => 'Masama ang tinukoy na pangalan ng tagagamit.',
 	'openidautosubmit' => 'Kabilang/kasama sa pahinang ito ang isang pormularyo na dapat na kusang maipasa/maipadala kapag hindi pinaandar (pinagana) ang JavaScript.
 Kung hindi, subukin ang pindutang "Continue" (Magpatuloy).',
 	'openidclientonlytext' => 'Hindi mo magagamit ang mga kuwenta mula sa wiking ito bilang mga OpenID sa iba pang sityo/sayt.',
 	'openidloginlabel' => 'URL ng OpenID',
-	'openidlogininstructions' => "Tinatangkilik ng {{SITENAME}} ang pamantayang [//openid.net/ OpenID] para sa mga isahang paglagda sa pagitan ng mga sayt ng Web.
-Hinahayaan ka ng OpenID na makalagda sa maraming iba't ibang mga sityo ng Web na hindi gumagamit ng isang iba pang hudyat para sa bawat isa.
-(Tingnan ang [//en.wikipedia.org/wiki/OpenID lathalaing OpenID ng Wikipedia] para sa mas marami pang kabatiran.)
-
-Kung mayroon ka nang kuwenta sa {{SITENAME}}, maaari kang [[Special:UserLogin|lumagdang papasok]] sa pamamagitan ng iyong pangalan ng tagagamit at hudyat sa karaniwang paraan.
-Upang makagamit ng OpenID sa hinaharap, maaari mong [[Special:OpenIDConvert|palitan ang iyong akawnt upang maging OpenID]] pagkatapos mong lumagda sa karaniwang paraan.
-
-Maraming mga [http://wiki.openid.net/Public_OpenID_providers tagapagbigay ng OpenID], at maaaring mayroon ka nang isang kuwentang pinagana ng OpenID na nasa iba pang palingkuran.",
+	'openidlogininstructions' => "Tinatangkilik ng {{SITENAME}} ang pamantayang [//openid.net/ OpenID] para sa mga pang-isahang ulit na paglagda sa pagitan ng mga pook sa Sangkasaputan.
+Hinahayaan ka ng OpenID na makalagda sa maraming iba't ibang mga pook sa Sangkasaputan na hindi gumagamit ng isang naiibang hudyat para sa bawat isa.
+(Tingnan ang [//en.wikipedia.org/wiki/OpenID artikulo hinggil sa OpenID ng Wikipedia] para sa mas marami pang kabatiran.)
+Maraming mga [http://wiki.openid.net/Public_OpenID_providers tagapagbigay ng OpenID], at maaaring mayroon ka nang isang akawnt na pinagana ng OpenID na nasa ibang palingkuran.",
+	'openidlogininstructions-openidloginonly' => "Pinapayagan ka ng {{SITENAME}} na lumagdang papasok sa pamamagitan ''lamang'' ng OpenID.",
+	'openidlogininstructions-passwordloginallowed' => 'Kung mayroon ka nang isang akawnt sa {{SITENAME}}, [[Special:UserLogin|Makakalagda]] ka sa pangkaraniwang paraan sa pamamagitan ng iyong pangalan ng tagagamit at hudyat. Upang magamit ang OpenID sa hinaharap, [[Special:OpenIDConvert|mapapalitan mo ang iyong akawnt upang maging isang OpenID]] pagkaraan mong lumagda sa normal na paraan.',
 	'openidupdateuserinfo' => 'Isapanahon ang aking pansariling kabatiran:',
 	'openiddelete' => 'Burahin ang OpenID',
 	'openiddelete-text' => 'Sa pagpaindot ng pindutang "{{int:openiddelete-button}}", aalisin mo ang OpenID na $1 mula sa iyong akawnt.  Hindi ka na makalalagdang papasok sa pamamagitan ng ganitong OpenID.',
@@ -6222,19 +6226,31 @@ Hindi ka makalalagda na walang OpenID.',
 Hindi ka maaaring makalagda na walang OpenID.',
 	'openiddelete-sucess' => 'Matagumpay na natanggal ang OpenID mula sa iyong akawnt.',
 	'openiddelete-error' => 'Naganap ang isang kamalian habang tinatanggal ang OpenID mula sa iyong akawnt.',
+	'openid-openids-were-not-merged' => 'Hindi napagsanib ang (mga) OpenID noong pinagsasanib ang mga akawnt ng tagagamit.',
 	'openid-prefstext' => 'Mga kagustuhang pang-[//openid.net/ OpenID]',
 	'openid-pref-hide' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Isapanahon ang sumusunod na kabatiran mula sa katauhang pang-OpenID sa bawat pagkakataong lalagda akong papasok:',
 	'openid-urls-desc' => 'Mga openID na may kaugnayan sa akawnt mo:',
 	'openid-urls-action' => 'Galaw',
+	'openid-urls-registration' => 'Oras ng pagpaparehistro',
 	'openid-urls-delete' => 'Burahin',
 	'openid-add-url' => 'Magdagdag ng isang bagong OpenID',
-	'openid-login-or-create-account' => 'Lumagda o lumikha ng bagong akawnt',
+	'openid-login-or-create-account' => 'Lumagda o lumikha ng isang bagong akawnt',
 	'openid-provider-label-openid' => 'Ipasok ang iyong URL na pang-OpenID',
 	'openid-provider-label-google' => 'Lumagdang ginagamit ang iyong akawnt na pang-Google',
 	'openid-provider-label-yahoo' => 'Lumagdang ginagamit ang akawnt mong pang-Yahoo',
 	'openid-provider-label-aol' => 'Ipasok ang iyong katawagang pang-AOL',
 	'openid-provider-label-other-username' => 'Ipasok ang iyong pangalang pangtagagamit na pang-$1',
+	'specialpages-group-openid' => 'Mga pahina ng paglilingkod at kabatiran sa katayuan ng OpenID',
+	'right-openid-converter-access' => 'Maidaragdag o mapapalitan ang kanilang akawnt upang makagamit ng mga katauhan ng OpenID',
+	'right-openid-dashboard-access' => 'Pamantayang pagpunta sa tapalodo ng OpenID',
+	'right-openid-dashboard-admin' => 'Pagpunta ng tagapangasiwa sa tapalodo ng OpenID',
+	'openid-dashboard-title' => 'Tapalodo ng OpenID',
+	'openid-dashboard-title-admin' => 'Tapalodo ng OpenID (tagapangasiwa)',
+	'openid-dashboard-introduction' => 'Ang pangkasalukuyang mga katakdaan ng dugtong na OpenID ([$1 tulong])',
+	'openid-dashboard-number-openid-users' => 'Bilang ng mga tagagamit na mayroong OpenID',
+	'openid-dashboard-number-openids-in-database' => 'Bilang ng mga OpenID (kabuuan)',
+	'openid-dashboard-number-users-without-openid' => 'Bilang ng mga tagagamit na walang OpenID',
 );
 
 /** Turkish (Türkçe)
