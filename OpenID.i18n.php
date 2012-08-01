@@ -3658,7 +3658,7 @@ Do kannß Der der Dinge unge druß üßsöke.',
 	'openidchooseauto' => 'Enne automattesch zerääsch jemaate Name ($1)',
 	'openidchoosemanual' => 'Ene Name, dä De Der sellver ußjedaach un jejovve häs:',
 	'openidchooseexisting' => 'Ene Metmaachername, dä et alld jitt heh em Wiki',
-	'openidchooseusername' => 'Metmaachername:',
+	'openidchooseusername' => 'Metmaacher_Naame:',
 	'openidchoosepassword' => 'Paßwoot:',
 	'openidconvertinstructions' => 'He kanns De Ding Aanmeldung als ene Metmaacher esu aanpasse, dat De en <i lang="en">OpenID</i> <i lang="en">URL</i> bruche kanns.
 Do kanns och noch mieh <i lang="en">OpenID</i> <i lang="en">URLs</i> dobei donn.',
@@ -5924,7 +5924,7 @@ Var god konsultera en [[Special:ListUsers/sysop|administratör]].',
 Ditt OpenID är $2.
 
 Du kan hantera detta och andra OpenID:n i [[Special:Preferences#mw-prefsection-openid|OpenID-fliken]] bland dina inställningar.<br />
-Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Preferences#mw-prefsection-personal|Användarprofil]].",
+Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Preferences#mw-prefsection-personal|användarprofil]].",
 	'openidusernameprefix' => 'OpenID-användare',
 	'openidserverlogininstructions' => '$3 begär att du anger ditt lösenord för ditt användare $2s sida $1 (detta är din OpenID-URL)',
 	'openidtrustinstructions' => 'Kolla om du vill dela data med $1.',
