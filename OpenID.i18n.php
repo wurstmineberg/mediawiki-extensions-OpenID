@@ -3526,7 +3526,7 @@ $messages['ko'] = array(
 	'openidnopolicy' => '사이트가 개인 정보 보호 정책을 제시하지 않았습니다.',
 	'openidpolicy' => '자세한 사항은 <a target="_new" href="$1">개인 정보 보호 정책</a>을 참고하세요.',
 	'openidoptional' => '선택 사항',
-	'openidrequired' => '필수 사항',
+	'openidrequired' => '필수',
 	'openidnickname' => '별명',
 	'openidfullname' => '전체 이름',
 	'openidemail' => '메일 주소',
