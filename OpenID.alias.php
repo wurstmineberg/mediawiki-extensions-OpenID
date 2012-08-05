@@ -44,9 +44,9 @@ $specialPageAliases['de'] = array(
 
 /** Zazaki (Zazaki) */
 $specialPageAliases['diq'] = array(
-	'OpenIDLogin' => array( 'KewtışeOpenID' ),
-	'OpenIDConvert' => array( 'VurnayışOpenID' ),
-	'OpenIDServer' => array( 'WasterêOpenID' ),
+	'OpenIDLogin' => array( 'KewtışêOpenID' ),
+	'OpenIDConvert' => array( 'VurnayışêOpenID' ),
+	'OpenIDServer' => array( 'ArdenêOpenID' ),
 );
 
 /** Finnish (suomi) */
