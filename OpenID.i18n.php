@@ -1936,6 +1936,17 @@ $messages['eu'] = array(
 	'openidchoosepassword' => 'Pasahitza:',
 );
 
+/** Persian (فارسی)
+ * @author Mjbmr
+ */
+$messages['fa'] = array(
+	'openidoptional' => 'اختیاری',
+	'openidrequired' => 'اجباری',
+	'openiddelete-button' => 'تأیید',
+	'openid-urls-action' => 'اقدام',
+	'openid-urls-delete' => 'حذف',
+);
+
 /** Finnish (suomi)
  * @author Centerlink
  * @author Cimon Avaro
@@ -5454,9 +5465,17 @@ Ci sunnu assai [http://wiki.openid.net/Public_OpenID_providers Provider OpenID p
 
 /** Sinhala (සිංහල)
  * @author Asiri wiki
+ * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'openidoptional' => 'වෛකල්පිත',
+	'openidemail' => 'විද්‍යුත්-තැපැල් ලිපිනය',
 	'openidlanguage' => 'භාෂාව',
+	'openidchooseusername' => 'පරිශීලක නාමය:',
+	'openidchoosepassword' => 'මුරපදය:',
+	'openiddelete-button' => 'තහවුරු කරන්න',
+	'openid-urls-action' => 'කාර්යය',
+	'openid-urls-delete' => 'මකන්න',
 );
 
 /** Slovak (slovenčina)
@@ -6835,6 +6854,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
  * @author Horacewai2
  * @author Liangent
  * @author Mark85296341
+ * @author Simon Shek
  * @author Waihorace
  * @author Wrightbus
  */
@@ -6918,6 +6938,7 @@ OpenID 可以讓你不必使用不同的密碼登入不同站點。
 	'openid-pref-update-userinfo-on-login' => '每次登入時，都從 OpenID 的使用者資料中更新以下資料。',
 	'openid-urls-desc' => '和你的帳號關聯的 OpenID：',
 	'openid-urls-action' => '動作',
+	'openid-urls-registration' => '註冊時間',
 	'openid-urls-delete' => '刪除',
 	'openid-add-url' => '加入一個新的 OpenID',
 	'openid-login-or-create-account' => '登入或建立新帳號',
