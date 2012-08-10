@@ -1474,6 +1474,7 @@ Ohne OpenID könnten Sie sich nicht mehr anmelden.',
 );
 
 /** Zazaki (Zazaki)
+ * @author Erdemaslancan
  * @author Mirzali
  */
 $messages['diq'] = array(
@@ -1481,6 +1482,7 @@ $messages['diq'] = array(
 	'openidtimezone' => 'Warey saete',
 	'openidchoosepassword' => 'Parola:',
 	'openiddelete-button' => 'Tesdiq',
+	'openid-urls-action' => 'Kerden',
 	'openid-urls-delete' => 'Bıestere',
 );
 
@@ -3425,10 +3427,35 @@ panjenengan bisa milih salah siji saka opsi ing ngisor iki.',
 );
 
 /** Georgian (ქართული)
+ * @author David1010
  * @author Malafaya
  */
 $messages['ka'] = array(
+	'openidserver' => 'OpenID-ის სერვერი',
+	'openidconvert' => 'OpenID-ის კონვერტორი',
+	'openidoptional' => 'არასავალდებულო',
+	'openidrequired' => 'სავალდებულო',
+	'openidnickname' => 'მეტსახელი',
+	'openidfullname' => 'სრული სახელი',
+	'openidemail' => 'ელ. ფოსტის მისამართი',
+	'openidlanguage' => 'ენა',
 	'openidtimezone' => 'სასაათო სარტყელი',
+	'openidchoosenick' => 'თქვენი მეტსახელი ($1)',
+	'openidchoosefull' => 'თქვენი სრული სახელი ($1)',
+	'openidchooseusername' => 'მომხმარებლის სახელი:',
+	'openidchoosepassword' => 'პაროლი:',
+	'openidloginlabel' => 'OpenID-ის URL',
+	'openidupdateuserinfo' => 'ჩემი პირადი ინფორმაციის განახლება:',
+	'openiddelete' => 'OpenID-ის წაშლა',
+	'openiddelete-button' => 'დადასტურება',
+	'openid-prefstext' => '[//openid.net/ OpenID]-ის კონფიგურაცია',
+	'openid-urls-action' => 'მოქმედება',
+	'openid-urls-registration' => 'რეგისტრაციის დრო',
+	'openid-urls-delete' => 'წაშლა',
+	'openid-add-url' => 'ახალი OpenID-ის დამატება',
+	'openid-login-or-create-account' => 'შესვლა ან ახალი ანგარიშის შექმნა',
+	'openid-provider-label-openid' => 'შეიყვანეთ თქვენი OpenID-ის URL',
+	'openid-provider-label-google' => 'შედით თქვენი Google-ის ანგარიშით',
 );
 
 /** Kirmanjki (Kırmancki)
