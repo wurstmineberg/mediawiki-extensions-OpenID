@@ -38,7 +38,7 @@ $messages['en'] = array(
 	'openidxrds' => 'Yadis file',
 	'openidconvert' => 'OpenID converter',
 	'openiderror' => 'Verification error',
-	'openiderrortext' => 'An error occured during verification of the OpenID URL.',
+	'openiderrortext' => 'An error occurred during verification of the OpenID URL.',
 	'openidconfigerror' => 'OpenID configuration error',
 	'openidconfigerrortext' => 'The OpenID storage configuration for this wiki is invalid.
 Please consult an [[Special:ListUsers/sysop|administrator]].',
@@ -112,7 +112,7 @@ You would not able to log in without an OpenID.',
 	'openiddeleteerroropenidonly' => 'You cannot delete all your OpenIDs because your are only allowed to log in with OpenID.
 You would not able to log in without an OpenID.',
 	'openiddelete-sucess' => 'The OpenID has been successfully removed from your account.',
-	'openiddelete-error' => 'An error occured while removing the OpenID from your account.',
+	'openiddelete-error' => 'An error occurred while removing the OpenID from your account.',
         'openid-openids-were-not-merged' => 'OpenID(s) were not merged when merging the user accounts.',
 
 	'prefs-openid' => 'OpenID',
