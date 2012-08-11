@@ -230,7 +230,7 @@ $messages['niu'] = array(
 	'openidchoosepassword' => 'Kupu fufu:',
 );
 
-/** Ṫuroyo (Ṫuroyo)
+/** Turoyo (Ṫuroyo)
  * @author Ariyo
  */
 $messages['tru'] = array(
