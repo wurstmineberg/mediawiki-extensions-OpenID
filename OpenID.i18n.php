@@ -770,6 +770,7 @@ $messages['be-tarask'] = array(
 	'openid-provider-label-aol' => 'Увядзіце назву Вашага рахунку ў AOL',
 	'openid-provider-label-other-username' => 'Увядзіце Вашае імя ўдзельніка $1',
 	'specialpages-group-openid' => 'Старонка сэрвісу OpenID і інфармацыя пра статус',
+	'right-openid-converter-access' => 'Можа дадаць ці прыстасаваць уласны рахунак для выкарыстаньня OpenID',
 	'right-openid-dashboard-access' => 'стандартны доступ да панэлі кіраваньня OpenID',
 	'right-openid-dashboard-admin' => 'доступ адміністратара да панэлі кіраваньня OpenID',
 	'openid-dashboard-title' => 'Дошка OpenID',
@@ -3431,8 +3432,17 @@ panjenengan bisa milih salah siji saka opsi ing ngisor iki.',
  * @author Malafaya
  */
 $messages['ka'] = array(
+	'openidlogin' => 'შესვლა / შექმენით ანგარიში OpenID-ით',
 	'openidserver' => 'OpenID-ის სერვერი',
+	'openidxrds' => 'Yadis ფაილი',
 	'openidconvert' => 'OpenID-ის კონვერტორი',
+	'openiderror' => 'დადასტურების შეცდომა',
+	'openidconfigerror' => 'OpenID-ის კონფიგურაციის შეცდომა',
+	'openidcancel' => 'შემოწმება გაუქმებულია',
+	'openidfailure' => 'შემოწმება ვერ განხორციელდა',
+	'openidsuccess' => 'შემოწმება წარმატებით დასრულდა',
+	'openidusernameprefix' => 'OpenID-ის მოხმარებელი',
+	'openidpolicy' => 'მეტი ინფორმაციისათვის იხილეთ <a target="_new" href="$1">კონფიდენციალურობის პოლიტიკა</a>.',
 	'openidoptional' => 'არასავალდებულო',
 	'openidrequired' => 'სავალდებულო',
 	'openidnickname' => 'მეტსახელი',
@@ -3440,11 +3450,18 @@ $messages['ka'] = array(
 	'openidemail' => 'ელ. ფოსტის მისამართი',
 	'openidlanguage' => 'ენა',
 	'openidtimezone' => 'სასაათო სარტყელი',
+	'openidchooselegend' => 'მომხმარებლის სახელისა და ანგარიშის არჩევა',
+	'openidchooseinstructions' => 'ყველა მომხმარებელს უნდა გქონდეს მეტსახელი;
+თქვენ შეგიძლიათ აირჩიოთ ქვემოთ მოცემულიდან ერთ-ერთი.',
 	'openidchoosenick' => 'თქვენი მეტსახელი ($1)',
 	'openidchoosefull' => 'თქვენი სრული სახელი ($1)',
 	'openidchooseusername' => 'მომხმარებლის სახელი:',
 	'openidchoosepassword' => 'პაროლი:',
+	'openidalreadyloggedin' => 'თქვენ უკვე შესული ხართ.',
+	'openidnousername' => 'მომხმარებლის სახელი არ არის მითითებული.',
+	'openidbadusername' => 'მითითებულია არასწორი მომხმარებლის სახელი.',
 	'openidloginlabel' => 'OpenID-ის URL',
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} უფლებას გაძლევთ შეხვიდეთ ''მხოლოდ'' OpenID-ის გამოყენებით.",
 	'openidupdateuserinfo' => 'ჩემი პირადი ინფორმაციის განახლება:',
 	'openiddelete' => 'OpenID-ის წაშლა',
 	'openiddelete-button' => 'დადასტურება',
@@ -3456,6 +3473,8 @@ $messages['ka'] = array(
 	'openid-login-or-create-account' => 'შესვლა ან ახალი ანგარიშის შექმნა',
 	'openid-provider-label-openid' => 'შეიყვანეთ თქვენი OpenID-ის URL',
 	'openid-provider-label-google' => 'შედით თქვენი Google-ის ანგარიშით',
+	'openid-provider-label-yahoo' => 'შედით თქვენი Yahoo-ს ანგარიშით',
+	'openid-provider-label-aol' => 'შეიყვანეთ თქვენი AOL-ის სახელი',
 );
 
 /** Kirmanjki (Kırmancki)
@@ -4261,10 +4280,13 @@ Anda tidak boleh log masuk tanpa OpenID.',
 );
 
 /** Maltese (Malti)
+ * @author Chrisportelli
  * @author Roderick Mallia
  */
 $messages['mt'] = array(
 	'openidlanguage' => 'Lingwa',
+	'openidchooseusername' => 'Isem tal-utent',
+	'openidchoosepassword' => 'Password:',
 );
 
 /** Burmese (မြန်မာဘာသာ)
@@ -6057,9 +6079,36 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openid-dashboard-number-users-without-openid' => 'Antal användare utan OpenID',
 );
 
-/** Tamil (தமிழ்) */
+/** Tamil (தமிழ்)
+ * @author Karthi.dr
+ */
 $messages['ta'] = array(
+	'openidcancel' => 'சரிபார்ப்பு  இரத்து செய்யப்பட்டது',
+	'openidfailure' => 'சரிபார்ப்பு தோல்வியுற்றது',
+	'openidsuccess' => 'சரிபார்ப்பு  வெற்றியடைந்தது',
+	'openidoptional' => 'விருப்பத்தேர்வு',
 	'openidrequired' => 'தேவைபடுகிறது',
+	'openidnickname' => 'புனைப்பெயர்',
+	'openidfullname' => 'முழுப்பெயர்',
+	'openidemail' => 'மின்னஞ்சல் முகவரி',
+	'openidlanguage' => 'மொழி',
+	'openidtimezone' => 'நேர வலயம்',
+	'openidchooseinstructions' => 'எல்லாப் பயனர்களுக்கும் புனைப்பெயர் தேவை.
+பின்வரும் விருப்பத் தேர்வுகளுள் ஒன்றை நீங்கள் தேர்வு  செய்யலாம்.',
+	'openidchoosenick' => 'உங்கள் புனைப்பெயர் ($1)',
+	'openidchoosefull' => 'உங்கள் முழுப்பெயர் ($1)',
+	'openidchooseusername' => 'பயனர் பெயர்:',
+	'openidchoosepassword' => 'கடவுச்சொல்:',
+	'openidconvertothertext' => 'இது வேறு ஒருவரின் OpenID.',
+	'openidalreadyloggedin' => 'நீங்கள் ஏற்கனவே புகுபதிகை செய்துள்ளீர்கள்.',
+	'openidnousername' => 'ஒரு பயனர் பெயரும் குறிப்பிடப்படவில்லை.',
+	'openidbadusername' => 'மோசமான பயனர் பெயர் குறிப்பிடப்பட்டுள்ளது.',
+	'openiddelete-button' => 'உறுதிசெய்',
+	'openid-urls-registration' => 'பதிவு செய்யும் நேரம்',
+	'openid-urls-delete' => 'நீக்கு',
+	'openid-login-or-create-account' => 'புகுபதிகை செய்க அல்லது  புதிய கணக்கு ஒன்றை உருவாக்கவும்',
+	'openid-provider-label-google' => 'உங்கள் கூகுள் கணக்கைப் பயன்படுத்திப் புகுபதிகை செய்க',
+	'openid-provider-label-other-username' => 'உங்கள் $1 பயனர் பெயரை உள்ளிடவும்',
 );
 
 /** Telugu (తెలుగు)
