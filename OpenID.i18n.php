@@ -2223,9 +2223,16 @@ $messages['frp'] = array(
 
 /** Irish (Gaeilge)
  * @author Alison
+ * @author පසිඳු කාවින්ද
  */
 $messages['ga'] = array(
 	'openidpermission' => 'Earráid ceadúnais OpenID',
+	'openidlanguage' => 'Teanga',
+	'openidchooseusername' => 'Ainm úsáideora:',
+	'openidchoosepassword' => "D'fhocal faire:",
+	'openiddelete-button' => 'Deimhnigh',
+	'openid-urls-action' => 'Gníomh',
+	'openid-urls-delete' => 'Scrios',
 );
 
 /** Galician (galego)
