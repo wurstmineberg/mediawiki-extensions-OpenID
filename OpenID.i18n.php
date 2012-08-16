@@ -1928,6 +1928,7 @@ $messages['et'] = array(
 /** Basque (euskara)
  * @author Kobazulo
  * @author Theklan
+ * @author පසිඳු කාවින්ද
  */
 $messages['eu'] = array(
 	'openidserver' => 'OpenID zerbitzaria',
@@ -1937,7 +1938,11 @@ $messages['eu'] = array(
 	'openidfullname' => 'Izen osoa',
 	'openidemail' => 'E-posta helbidea',
 	'openidlanguage' => 'Hizkuntza',
+	'openidtimezone' => 'Ordu-eremua',
+	'openidchooseusername' => 'Erabiltzaile izena:',
 	'openidchoosepassword' => 'Pasahitza:',
+	'openid-urls-action' => 'Ekintza',
+	'openid-urls-delete' => 'Ezabatu',
 );
 
 /** Persian (فارسی)
@@ -6846,9 +6851,15 @@ kanol välön bali sökölas.',
 
 /** Yiddish (ייִדיש)
  * @author פוילישער
+ * @author පසිඳු කාවින්ද
  */
 $messages['yi'] = array(
+	'openidemail' => 'בליצפּאָסט אַדרעס:',
+	'openidlanguage' => 'שפראך',
+	'openidtimezone' => 'צײַט זאנע',
+	'openidchooseusername' => 'באַניצער נאָמען:',
 	'openidchoosepassword' => 'פאַסווארט:',
+	'openid-urls-action' => 'אַקציע',
 	'openid-urls-delete' => 'אויסמעקן',
 );
 
