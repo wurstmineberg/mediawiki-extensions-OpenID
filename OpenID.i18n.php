@@ -5838,7 +5838,7 @@ $messages['sr-ec'] = array(
 	'openidnousername' => 'Нисте навели корисничко име.',
 	'openidbadusername' => 'Наведено је неисправно корисничко име.',
 	'openidclientonlytext' => 'Не можете користити налоге с овог викија као OpenID за други сајт.',
-	'openidloginlabel' => 'Адреса OpenID-а',
+	'openidloginlabel' => 'Адреса OpenID-ја',
 	'openidupdateuserinfo' => 'Ажурирај моје личне податке:',
 	'openiddelete-button' => 'Потврди',
 	'prefs-openid' => 'OpenID',
@@ -6609,6 +6609,29 @@ OpenID дозволяє вам заходити на різні веб-сайт�
 	'openid-provider-label-yahoo' => 'Представитися, використовуючи обліковий запис Yahoo',
 	'openid-provider-label-aol' => "Введіть ваше ім'я в AOL",
 	'openid-provider-label-other-username' => "Введіть Ваше ім'я користувача $1",
+);
+
+/** Urdu (اردو)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['ur'] = array(
+	'openiderror' => 'تصدیق کی غلطی',
+	'openidcancel' => 'منسوخ کر کے تصدیق',
+	'openidfailure' => 'تصدیق ناکام',
+	'openidnopolicy' => 'ویب سائٹ ایک راز داری کی پالیسی مخصوص نہیں ہے.',
+	'openidoptional' => 'اختیاری',
+	'openidrequired' => 'کی ضرورت',
+	'openidnickname' => 'عرفیت',
+	'openidemail' => 'ای میل پتہ',
+	'openidlanguage' => 'زبان',
+	'openidtimezone' => 'منطقۂ وقت',
+	'openidchoosemanual' => 'آپ کی پسند کا ایک نام:',
+	'openidchooseusername' => 'صارف کا نام:',
+	'openidchoosepassword' => 'پاس ورڈ:',
+	'openiddelete-button' => 'اس بات کی تصدیق',
+	'openid-urls-action' => 'کارروائی',
+	'openid-urls-registration' => 'رجسٹریشن کے وقت',
+	'openid-urls-delete' => 'حذف کریں',
 );
 
 /** vèneto (vèneto)
