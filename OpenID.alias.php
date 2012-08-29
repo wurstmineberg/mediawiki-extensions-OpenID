@@ -40,6 +40,7 @@ $specialPageAliases['de'] = array(
 	'OpenIDConvert' => array( 'OpenID-Umwandlung' ),
 	'OpenIDServer' => array( 'OpenID-Server' ),
 	'OpenIDXRDS' => array( 'OpenID-XRDS' ),
+	'OpenIDDashboard' => array( 'OpenID-Einstellungen' ),
 );
 
 /** Zazaki (Zazaki) */
