@@ -4809,6 +4809,7 @@ $messages['pfl'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Herr Kriss
  * @author Maikking
  * @author Sp5uhe
  */
@@ -4900,7 +4901,7 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Aktualizuj następujące informacje o mnie z OpenID przy każdym logowaniu',
 	'openid-urls-desc' => 'OpenID powiązane z Twoim kontem:',
 	'openid-urls-action' => 'Akcja',
-	'openid-urls-registration' => 'Moment rejestracji',
+	'openid-urls-registration' => 'Data rejestracji',
 	'openid-urls-delete' => 'Usuń',
 	'openid-add-url' => 'Dodaj nowe OpenID',
 	'openid-login-or-create-account' => 'Zaloguj się lub utwórz nowe konto',
