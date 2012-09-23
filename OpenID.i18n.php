@@ -3721,7 +3721,7 @@ $messages['koi'] = array(
  */
 $messages['ksh'] = array(
 	'openid-desc' => 'Heh em Wiki met ener [//openid.net/ OpenID] enlogge, un angerschwoh, woh mer OpenID kennt, met enem Metmaacher-Name fun heh fum Wiki enlogge.',
-	'openidlogin' => 'Met OpenID enlogge',
+	'openidlogin' => 'Met Dinge OpenID enlogge udder ene Zohjang enreeschte',
 	'openidserver' => 'OpenID Server',
 	'openidxrds' => 'Yadis-Dattei',
 	'openidconvert' => 'OpenID Ömsetzer',
@@ -3738,9 +3738,15 @@ Beß esu joot un don enem [[Special:ListUsers/sysop|Wiki-Köbes]] dofun verzäll
 	'openidfailuretext' => 'De Pröfung fun de OpenID URL es donevve jejange.
 Dä Fähler wohr: „$1“',
 	'openidsuccess' => 'De Pröfung hät jeflupp',
-	'openidsuccesstext' => 'De Pröfung fun dä OpenID URL hät jot jejange.',
+	'openidsuccesstext' => "'''Di Pröfung fun dä OpenID URL hät jot jejange. Do be jäz als dä Metmaacher $1 aanjemälldt.'''
+
+Ding OpenID es $2
+
+Di kanns De zosamme met ander OpenIDs, wann et se jitt, op dä Sigg [[Special:Preferences#mw-prefsection-openid|OpenID tab]] en Dinge Enschtällonge verwallde.<br />
+Do kanns och e Paßwood en Dinge [[Special:Preferences#mw-prefsection-personal|Enschtällong]]endraare lohße, wann De wells.",
 	'openidusernameprefix' => 'OpenID Metmaacher',
-	'openidserverlogininstructions' => 'Donn Ding Passwoot onge enjävve, öm als dä Metmaacher $2 op $3 enzelogge — de Metmaacher-Sigg es $1.',
+	'openidserverlogininstructions' => 'Öm op $3 met OpenID enzelogge jif heh et Paßwoot för Dinge Metmaachername $2 en.
+Ding Metmaachersigg hehe un Ding OpenID-URL sinn_er beeds: $1',
 	'openidtrustinstructions' => 'Loor, ov De de Date met $1 deile wells.',
 	'openidallowtrust' => 'Donn däm $1 zojestonn, däm Metmaacher ze verdraue.',
 	'openidnopolicy' => 'Die Websait udder dä Server hät nix aanjejovve övver der Schotz fun private Date.',
@@ -3752,7 +3758,7 @@ Dä Fähler wohr: „$1“',
 	'openidemail' => 'De e-mail Address',
 	'openidlanguage' => 'Schprooch',
 	'openidtimezone' => 'Ziggzohn',
-	'openidchooselegend' => 'Ußwahl vum Metmaacher singem Name',
+	'openidchooselegend' => 'Ußwahl vum Metmaacher un Zohjang singem Name',
 	'openidchooseinstructions' => 'Jede Metmaacher bruch enne Spetznam,
 Do kannß Der der Dinge unge druß üßsöke.',
 	'openidchoosenick' => 'Dinge Spezname ($1)',
@@ -3770,10 +3776,10 @@ Do kanns och noch mieh <i lang="en">OpenID</i> <i lang="en">URLs</i> dobei donn.
 	'openidconvertsuccesstext' => 'Do häß Ding OpenID jez ömjewandelt noh $1.',
 	'openidconvertyourstext' => 'Dat es ald Ding OpenID.',
 	'openidconvertothertext' => 'Dat wämm anders sing OpenID.',
-	'openidalreadyloggedin' => "'''Leeven $1, Do bes all enjelogg.'''
+	'openidalreadyloggedin' => 'Do bes alt enjelogg.',
+	'openidalreadyloggedintext' => "''''''Leeven $1, Do bes all enjelogg.'''
 
-Wann De OpenID zom Enlogge bruche wells, spääder, dann kanns De
-[[Special:OpenIDConvert|Ding Aanmeldung op OpenID ömstelle]] jonn.",
+Do kanns Ding OpenID op dä Sigg [[Special:Preferences#mw-prefsection-openid|met  Dinge Enschtällong, onger OpenID]] verwallde, also beloore, fottschmiiße, un mieh.",
 	'openidnousername' => 'Keine Metmaacher-Name aanjejovve.',
 	'openidbadusername' => 'Ene kapodde Metmaacher-Name aanjejovve.',
 	'openidautosubmit' => 'Di Sigg enthääld_e Fomulaa för Ennjave, wat automattesch afjeschek weed, wann de Javaskrip enjeschalldt häs.
@@ -3794,6 +3800,9 @@ Et jitt en jruuße Zahl [http://wiki.openid.net/Public_OpenID_providers <span la
 ; [//dev.aol.com/aol-and-63-million-openids AOL] : Wann de ene zohjang op [//www.aol.com/ AOL] häß, esu jet wie ennen Zojang zom [//www.aim.com/ AIM], do kanns de Desch hee {{GRAMMAR:em|{{SITENAME}}}} enlogge, indämm dat De de Ding <span lang="en">OpenID</span> bovve enjiß. De <span lang="en">OpenID URLs</span> fun AOL sen opjebout wi \'\'<nowiki>//openid.aol.com/dingemetmaachername</nowiki>\'\'. Dinge Metmaacher-Name sullt uß luuter Kleinbochstave bestonn, kein Zwescheräum.
 ; [//bloggerindraft.blogspot.com/2008/01/new-feature-blogger-as-openid-provider.html Blogger], [//faq.wordpress.com/2007/03/06/what-is-openid/ Wordpress.com], [//www.livejournal.com/openid/about.bml LiveJournal], [//bradfitz.vox.com/library/post/openid-for-vox.html Vox] : Wann de e <span lang="en">Blog</span> op einem fun dä Söövere häß, dann draach der Url fu Dingem <span lang="en">Blog</span> bovve en. Zem Beispöll: \'\'<nowiki>//dingeblogname.blogspot.com/</nowiki>\'\', \'\'<nowiki>//dingeblogname.wordpress.com/</nowiki>\'\', \'\'<nowiki>//dingeblogname.livejournal.com/</nowiki>\'\', udder \'\'<nowiki>//dingeblogname.vox.com/</nowiki>\'\'.
 <!-- -->',
+	'openidlogininstructions-openidloginonly' => 'Op {{GRAMMAY:Dative|{{SITENAME}}}} kam_mer sesch bloß met OpenID enlogge.',
+	'openidlogininstructions-passwordloginallowed' => 'Wann De ald ene Zohjang op {{GRAMMAR:Dative|{{SITENAME}}}}, kann De Desch janz nommaal met Dingem Metmaacher-Naame un Dingem Paßwoot [[Special:UserLogin|enlogge]].
+Öm könftesch Ding OpenID zom Enlogge ze nämme, kanns De [[Special:OpenIDConvert|Dinge Zohang op OpenID ömschtälle]], nohdämm De enjelogg bes.',
 	'openidupdateuserinfo' => 'Donn ming päsöönlijje Enstellunge op der neuste Stand bränge:',
 	'openiddelete' => 'Donn de <i lang="en">OpenID</i> fott schmiiße',
 	'openiddelete-text' => 'Wann De op dä Knopp „{{int:openiddelete-button}}“ klecks, weed de <i lang="en">OpenID</i> „$1“ vun Dinge Aanmeldung heh fott jenumme.
