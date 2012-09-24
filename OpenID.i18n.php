@@ -3777,7 +3777,7 @@ Do kanns och noch mieh <i lang="en">OpenID</i> <i lang="en">URLs</i> dobei donn.
 	'openidconvertyourstext' => 'Dat es ald Ding OpenID.',
 	'openidconvertothertext' => 'Dat wämm anders sing OpenID.',
 	'openidalreadyloggedin' => 'Do bes alt enjelogg.',
-	'openidalreadyloggedintext' => "''''''Leeven $1, Do bes all enjelogg.'''
+	'openidalreadyloggedintext' => "Leeven $1, Do bes alld enjelogg.'''
 
 Do kanns Ding OpenID op dä Sigg [[Special:Preferences#mw-prefsection-openid|met  Dinge Enschtällong, onger OpenID]] verwallde, also beloore, fottschmiiße, un mieh.",
 	'openidnousername' => 'Keine Metmaacher-Name aanjejovve.',
@@ -3819,9 +3819,10 @@ Ohne <i lang="en">OpenID</i> künnts De nit mieh enlogge.',
 	'openid-urls-desc' => 'De <i lang="en">OpenIDs</i>, di jez met Dinge Aanmeldung heh verbonge sin:',
 	'openid-urls-url' => 'de URL',
 	'openid-urls-action' => 'Akßuhn',
+	'openid-urls-registration' => 'Aanjemeldt zick',
 	'openid-urls-delete' => 'Schmiiß fott',
 	'openid-add-url' => 'Donn en neu <i lang="en">OpenID</i> dobei',
-	'openid-login-or-create-account' => 'Donn enlogge udder Desh neu aanmellde',
+	'openid-login-or-create-account' => 'Donn enlogge udder Desch neu aanmellde',
 	'openid-provider-label-openid' => 'Donn Ding <i lang="en">OpenID</i> URL aanjevve',
 	'openid-provider-label-google' => 'Donn met Dingem <i lang="en">Google account</i> enlogge',
 	'openid-provider-label-yahoo' => 'Donn met Dinge <i lang="en">Yahoo</i> Kennung enlogge',
