@@ -122,7 +122,7 @@ $specialPageAliases['ml'] = array(
 	'OpenIDServer' => array( 'ഓപ്പൺഐ.ഡി.സെർവർ' ),
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬) */
+/** Norwegian Bokmål (norsk (bokmål)‎) */
 $specialPageAliases['nb'] = array(
 	'OpenIDLogin' => array( 'OpenID-innlogging' ),
 	'OpenIDConvert' => array( 'OpenID-konvertering' ),
@@ -190,7 +190,7 @@ $specialPageAliases['vi'] = array(
 	'OpenIDServer' => array( 'Máy_chủ_OpenID' ),
 );
 
-/** Simplified Chinese (‪中文（简体）‬) */
+/** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'OpenIDLogin' => array( 'OpenID登录' ),
 	'OpenIDConvert' => array( '转换OpenID' ),
