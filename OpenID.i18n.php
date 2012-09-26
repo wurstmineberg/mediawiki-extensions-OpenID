@@ -7013,7 +7013,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-dashboard-number-users-without-openid' => '没有 OpenID 的用户数',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Anakmalaysia
  * @author Frankou
  * @author Gzdavidwong
@@ -7026,7 +7026,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
  */
 $messages['zh-hant'] = array(
 	'openid-desc' => '使用一個 [//openid.net/ OpenID] 來登入到這個 wiki，以及使用 wiki 用戶帳號登入到其他接受 OpenID 的網站',
-	'openidlogin' => '使用 OpenID 登入',
+	'openidlogin' => '使用OpenID登錄或創建賬號',
 	'openidserver' => 'OpenID 伺服器',
 	'openidxrds' => 'Yadis 檔案',
 	'openidconvert' => 'OpenID 轉換器',
@@ -7042,9 +7042,14 @@ $messages['zh-hant'] = array(
 	'openidfailure' => '驗證失敗',
 	'openidfailuretext' => 'OpenID 地址驗證失敗。錯誤資訊：「$1」',
 	'openidsuccess' => '驗證成功',
-	'openidsuccesstext' => 'OpenID 地址驗證成功。',
+	'openidsuccesstext' => "'''成功驗證並且登錄為用戶 $1'''。
+
+您的OpenID是 $2 。
+
+這個和可能將來的OpenID可以在您的設置里的[[Special:Preferences#mw-prefsection-openid|OpenID選項卡]]中管理。<br />
+可選的賬戶密碼可以在您的[[Special:Preferences#mw-prefsection-personal|用戶設置]]里添加。",
 	'openidusernameprefix' => 'OpenID 使用者',
-	'openidserverlogininstructions' => '請在下面輸入您的密碼以便以使用者 $2 登入 $3 （使用者頁面 $1）。',
+	'openidserverlogininstructions' => '$3請求您為用戶$2的用戶頁面$1輸入密碼（這是您的OpenID URL）',
 	'openidtrustinstructions' => '請確認您是否願與 $1 共用資料。',
 	'openidallowtrust' => '允許 $1 信任這個用使用者的帳號。',
 	'openidnopolicy' => '站點沒有提供隱私權政策。',
@@ -7056,7 +7061,7 @@ $messages['zh-hant'] = array(
 	'openidemail' => '電郵地址',
 	'openidlanguage' => '語言',
 	'openidtimezone' => '時區',
-	'openidchooselegend' => '用戶名的選擇',
+	'openidchooselegend' => '用戶名和賬戶選擇',
 	'openidchooseinstructions' => '所有的用戶都需要提供暱稱；
 您可以從下面任選一個。',
 	'openidchoosenick' => '你的暱稱（$1）',
@@ -7074,21 +7079,22 @@ $messages['zh-hant'] = array(
 	'openidconvertyourstext' => '這已是您的 OpenID 了。',
 	'openidconvertothertext' => '這是別人的 OpenID。',
 	'openidalreadyloggedin' => '您已經登入。',
+	'openidalreadyloggedintext' => "'''您已經登錄，$1！'''
+
+您可以在您的設置的[[Special:Preferences#mw-prefsection-openid|OpenID 選項卡]]中管理（查看、刪除和進一步添加）OpenID。",
 	'openidnousername' => '沒有指定用戶名。',
 	'openidbadusername' => '指定的用戶名是錯誤的。',
 	'openidautosubmit' => '本頁包含的表單在啟用 JavaScript 的情況下可以自動提交。
 如果沒有自動提交，請按「Continue」（繼續）按鈕。',
 	'openidclientonlytext' => '你不能在其他站點上使用這個 wiki 的帳號作為 OpenID。',
 	'openidloginlabel' => 'OpenID 網址',
-	'openidlogininstructions' => '{{SITENAME}} 支援用於網站間單點登入的 [//openid.net/ OpenID] 標準。
-OpenID 可以讓你不必使用不同的密碼登入不同站點。
-（詳情請參見[//zh.wikipedia.org/wiki/OpenID 維基百科關於 OpenID 的條目]。）
-
-如果你已經在 {{SITENAME}} 有一個帳戶，你可以用你的帳號及密碼[[Special:UserLogin|登入]]。
-
-要在未來使用 OpenID，你可以在登入後[[Special:OpenIDConvert|轉換你的帳號]]成為 OpenID
-
-這裡有許多 [//openid.net/get/ OpenID 提供者]，你可能已經有一個 OpenID 了。',
+	'openidlogininstructions' => '{{SITENAME}} 支持用於網站間單點登錄的 [//openid.net/ OpenID] 標準。
+OpenID 可以讓您不必使用不同的密碼登錄不同的站點。
+（詳情請參見 [//en.wikipedia.org/wiki/OpenID 維基百科關於 OpenID 的條目]。）
+[//openid.net/get/ OpenID 的提供者]有很多，您可能在使用其他服務時已經建立了一個可以使用 OpenID 的賬戶了。',
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} ''僅''允許用 OpenID 登錄。",
+	'openidlogininstructions-passwordloginallowed' => '如果您在 {{SITENAME}} 上已經擁有了賬號，可以以通常的方式用用戶名和密碼[[Special:UserLogin|登錄]]。
+將來使用 OpenID，您可以在正常登錄後[[Special:OpenIDConvert|轉換賬號為 OpenID]]。',
 	'openidupdateuserinfo' => '更新我的個人資料',
 	'openiddelete' => '刪除 OpenID',
 	'openiddelete-text' => '當你按下「{{int:openiddelete-button}}」按鈕，你會將 OpenID $1 從你的帳戶中移除。你以後都不可以再使用這個 OpenID 登入。',
@@ -7099,6 +7105,7 @@ OpenID 可以讓你不必使用不同的密碼登入不同站點。
 沒有 OpenID 您將無法登入。',
 	'openiddelete-sucess' => 'OpenID 已被成功刪除。',
 	'openiddelete-error' => '在移除你的 OpenID 的時候出現了一個錯誤。',
+	'openid-openids-were-not-merged' => '合并用戶帳號時，OpenID 沒有被合并。',
 	'openid-prefstext' => '[//openid.net/ OpenID] 偏好設定',
 	'openid-pref-hide' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。',
 	'openid-pref-update-userinfo-on-login' => '每次登入時，都從 OpenID 的使用者資料中更新以下資料。',
@@ -7107,11 +7114,20 @@ OpenID 可以讓你不必使用不同的密碼登入不同站點。
 	'openid-urls-registration' => '註冊時間',
 	'openid-urls-delete' => '刪除',
 	'openid-add-url' => '加入一個新的 OpenID',
-	'openid-login-or-create-account' => '登入或建立新帳號',
+	'openid-login-or-create-account' => '登錄或創建新賬號',
 	'openid-provider-label-openid' => '輸入你的 OpenID URL',
 	'openid-provider-label-google' => '以您的 Google 帳戶登入',
 	'openid-provider-label-yahoo' => '以您的 Yahoo 帳戶登入',
 	'openid-provider-label-aol' => '輸入你的 AOL 螢幕名稱',
 	'openid-provider-label-other-username' => '輸入你的 $1 用戶名',
+	'specialpages-group-openid' => 'OpenID 服務頁和狀態信息',
+	'right-openid-dashboard-access' => '對 OpenID 儀錶板的標準訪問',
+	'right-openid-dashboard-admin' => '對 OpenID 儀錶板的管理員訪問',
+	'openid-dashboard-title' => 'OpenID 儀錶板',
+	'openid-dashboard-title-admin' => 'OpenID 儀錶板（管理員）',
+	'openid-dashboard-introduction' => '當前 OpenID 的擴展設置（[$1 help|$1 幫助]）',
+	'openid-dashboard-number-openid-users' => '擁有 OpenID 的用戶數',
+	'openid-dashboard-number-openids-in-database' => 'OpenID 的數量（總數）',
+	'openid-dashboard-number-users-without-openid' => '沒有 OpenID 的用戶數',
 );
 
