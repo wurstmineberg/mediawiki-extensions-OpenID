@@ -666,7 +666,7 @@ $messages['be'] = array(
 	'openiddelete-button' => 'Пацвердзіць',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Wizardist
@@ -1417,7 +1417,7 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openid-dashboard-number-users-without-openid' => 'Anzahl der Benutzer ohne OpenID',
 );
 
-/** German (formal address) (‪Deutsch (Sie-Form)‬)
+/** German (formal address) (Deutsch (Sie-Form)‎)
  * @author ChrisiPK
  * @author Imre
  * @author Kghbln
@@ -2471,7 +2471,7 @@ $messages['gv'] = array(
 	'openidchoosepassword' => 'fockle yn arrey:',
 );
 
-/** Hausa (هَوُسَ) */
+/** Hausa (Hausa) */
 $messages['ha'] = array(
 	'openid-urls-delete' => 'Soke',
 );
@@ -3830,7 +3830,7 @@ Ohne <i lang="en">OpenID</i> künnts De nit mieh enlogge.',
 	'openid-provider-label-other-username' => 'Donn Dinge Metmaachername vun $1 aanjevve',
 );
 
-/** Kurdish (Latin script) (‪Kurdî (latînî)‬) */
+/** Kurdish (Latin script) (Kurdî (latînî)‎) */
 $messages['ku-latn'] = array(
 	'openidlanguage' => 'Ziman',
 	'openidtimezone' => 'Navçeya demê',
@@ -4387,7 +4387,7 @@ $messages['nah'] = array(
 	'openidchoosepassword' => 'Motlahtōlichtacāyo',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -4605,7 +4605,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-dashboard-number-users-without-openid' => 'Aantal gebruikers zonder OpenID',
 );
 
-/** Norwegian Nynorsk (‪norsk (nynorsk)‬)
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
  * @author Gunnernett
  * @author Harald Khan
  * @author Jon Harald Søby
@@ -5800,7 +5800,7 @@ $messages['sli'] = array(
 	'openidemail' => 'E-Mail-Atresse:',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  * @author Sasa Stefanovic
  * @author Михајло Анђелковић
@@ -5862,7 +5862,7 @@ $messages['sr-ec'] = array(
 	'openid-urls-delete' => 'Обриши',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author Ex13
  * @author Michaello
  * @author Rancher
@@ -6897,7 +6897,7 @@ $messages['yi'] = array(
 	'openid-urls-delete' => 'אויסמעקן',
 );
 
-/** Simplified Chinese (‪中文（简体）‬)
+/** Simplified Chinese (中文（简体）‎)
  * @author Anakmalaysia
  * @author Gaoxuewei
  * @author Liangent
