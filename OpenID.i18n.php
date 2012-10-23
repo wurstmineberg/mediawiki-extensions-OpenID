@@ -216,27 +216,6 @@ the special adminstrator access right for the OpenID dashboard, which is a restr
 * $1 is the url of the help page explaining the parameters',
 );
 
-/** Faeag Rotuma (Faeag Rotuma)
- * @author Jose77
- */
-$messages['rtm'] = array(
-	'openidchoosepassword' => 'Ou password:',
-);
-
-/** Niuean (ko e vagahau Niuē)
- * @author Jose77
- */
-$messages['niu'] = array(
-	'openidchoosepassword' => 'Kupu fufu:',
-);
-
-/** Turoyo (Ṫuroyo)
- * @author Ariyo
- */
-$messages['tru'] = array(
-	'openidlanguage' => 'Leşono:',
-);
-
 /** Afrikaans (Afrikaans)
  * @author Arnobarnard
  * @author Naudefj
@@ -2833,6 +2812,7 @@ Ty njemóhł so bjez OpenID přizjewić.',
 	'openid-pref-hide' => 'Twój OpenID na twojej wužiwarskej stronje schować, jeli so z OpenID přizjewješ.',
 	'openid-pref-update-userinfo-on-login' => 'Kóždy raz, hdyž so přizjawjam, slědowace informacije z identity OpenID aktualizować:',
 	'openid-urls-desc' => 'OpenID, kotrež su z twojim kontom zwjazane:',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Akcija',
 	'openid-urls-registration' => 'Registrowanski čas',
 	'openid-urls-delete' => 'Wušmórnyć',
@@ -4491,6 +4471,13 @@ $messages['ne'] = array(
 	'openidchooseusername' => 'प्रयोगकर्ता नाम:',
 );
 
+/** Niuean (ko e vagahau Niuē)
+ * @author Jose77
+ */
+$messages['niu'] = array(
+	'openidchoosepassword' => 'Kupu fufu:',
+);
+
 /** Dutch (Nederlands)
  * @author McDutchie
  * @author SPQRobin
@@ -5370,6 +5357,13 @@ $messages['roa-tara'] = array(
 	'openid-provider-label-other-username' => "Mitte 'u tue $1 nome utende",
 	'openid-dashboard-title' => 'Cruscotte de OpenID',
 	'openid-dashboard-title-admin' => 'Cruscotte de OpenID (amministratore)',
+);
+
+/** Faeag Rotuma (Faeag Rotuma)
+ * @author Jose77
+ */
+$messages['rtm'] = array(
+	'openidchoosepassword' => 'Ou password:',
 );
 
 /** Russian (русский)
@@ -6508,6 +6502,13 @@ OpenID olmadan giriş yapamazsınız.",
 	'openid-provider-label-other-username' => '$1 kullanıcı adınızı girin',
 );
 
+/** Turoyo (Ṫuroyo)
+ * @author Ariyo
+ */
+$messages['tru'] = array(
+	'openidlanguage' => 'Leşono:',
+);
+
 /** Uyghur (Arabic script) (ئۇيغۇرچە)
  * @author Alfredie
  */
@@ -6835,7 +6836,7 @@ Bạn sẽ không đăng nhập được dùng OpenID này.',
 	'openid-pref-update-userinfo-on-login' => 'Cập nhật thông tin sau từ persona OpenID mỗi khi tôi đăng nhập:',
 	'openid-urls-desc' => 'Các OpenID được gắn vào tài khoản của bạn:',
 	'openid-urls-action' => 'Tác vụ',
-	'openid-urls-registration' => 'Thời điểm đăng ký',
+	'openid-urls-registration' => 'Lúc mở tài khoản',
 	'openid-urls-delete' => 'Xóa',
 	'openid-add-url' => 'Thêm OpenID mới',
 	'openid-login-or-create-account' => 'Đăng nhập hay mở tài khoản mới',
@@ -7130,4 +7131,3 @@ OpenID 可以讓您不必使用不同的密碼登錄不同的站點。
 	'openid-dashboard-number-openids-in-database' => 'OpenID 的數量（總數）',
 	'openid-dashboard-number-users-without-openid' => '沒有 OpenID 的用戶數',
 );
-
