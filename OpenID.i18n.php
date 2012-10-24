@@ -1283,6 +1283,7 @@ du kan vælge et fra nedenstående muligheder.',
  * @author Kghbln
  * @author LWChris
  * @author Leithian
+ * @author Metalhead64
  * @author Tbleher
  * @author The Evil IP address
  * @author Umherirrender
@@ -1374,6 +1375,7 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openid-pref-hide' => 'Verstecke deine OpenID auf deiner Benutzerseite, wenn du dich mit OpenID anmeldest.',
 	'openid-pref-update-userinfo-on-login' => 'Nachfolgende Daten anhand des OpenID-Kontos bei jeder Anmeldung aktualisieren:',
 	'openid-urls-desc' => 'Mit deinem Benutzerkonto verbundene OpenIDs:',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Aktion',
 	'openid-urls-registration' => 'Registrierungszeitpunkt',
 	'openid-urls-delete' => 'Löschen',
