@@ -1464,7 +1464,7 @@ $messages['diq'] = array(
 	'openidtimezone' => 'Warey saete',
 	'openidchoosepassword' => 'Parola:',
 	'openiddelete-button' => 'Tesdiq',
-	'openid-urls-action' => 'Kerden',
+	'openid-urls-action' => 'Kerdış',
 	'openid-urls-delete' => 'Bıestere',
 );
 
@@ -1856,6 +1856,7 @@ No podrás iniciar sesión sin un OpenID.',
 	'openid-pref-hide' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Actualizar la siguiente información desde mi perfil OpenID cada vez que inicie sesión:',
 	'openid-urls-desc' => 'Los OpenID asociados a tu cuenta:',
+	'openid-urls-url' => 'Dirección URL',
 	'openid-urls-action' => 'Acción',
 	'openid-urls-registration' => 'Fecha y hora de registro',
 	'openid-urls-delete' => 'Eliminar',
