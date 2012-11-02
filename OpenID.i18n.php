@@ -3669,7 +3669,7 @@ OpenID 없이 로그인 할 수 없습니다.',
 	'openiddelete-sucess' => '당신의 계정으로부터 OpenID 정보가 삭제되었습니다.',
 	'openiddelete-error' => '사용자 계정으로부터 OpenID 정보를 삭제하는 과정에 오류가 발생하였습니다.',
 	'openid-openids-were-not-merged' => 'OpenID가 사용자 계정을 병합하는 동안 병합하지 못했습니다.',
-	'prefs-openid' => 'OpenID 설정',
+	'prefs-openid' => 'OpenID',
 	'openid-prefstext' => '[//openid.net/ OpenID] 사용자 설정',
 	'openid-pref-hide' => 'OpenID로 로그인한 경우, 사용자 페이지에서 OpenID 정보를 보여주지 않습니다.',
 	'openid-pref-update-userinfo-on-login' => '로그인 시 업데이트 할 OpenID 정보 :',
@@ -6845,6 +6845,7 @@ Bạn sẽ không đăng nhập được dùng OpenID này.',
 	'openid-pref-hide' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Cập nhật thông tin sau từ persona OpenID mỗi khi tôi đăng nhập:',
 	'openid-urls-desc' => 'Các OpenID được gắn vào tài khoản của bạn:',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Tác vụ',
 	'openid-urls-registration' => 'Lúc mở tài khoản',
 	'openid-urls-delete' => 'Xóa',
@@ -6916,6 +6917,7 @@ $messages['yi'] = array(
  * @author Wrightbus
  * @author Xiaomingyan
  * @author Yanmiao liu
+ * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
 	'openid-desc' => '使用一个[//openid.net/ OpenID]来登录到这个wiki，或使用wiki用户帐号登录到其他接受OpenID的网站',
@@ -7003,6 +7005,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-pref-hide' => 'OpenID登录时，在用户页隐藏OpenID。',
 	'openid-pref-update-userinfo-on-login' => '每次登录时，都从OpenID的用户信息中更新以下信息。',
 	'openid-urls-desc' => '和你的账号关联的OpenID：',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => '动作',
 	'openid-urls-registration' => '注册时间',
 	'openid-urls-delete' => '删除',
@@ -7014,6 +7017,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-provider-label-aol' => '输入你的AOL屏幕名称',
 	'openid-provider-label-other-username' => '输入你的$1用户名',
 	'specialpages-group-openid' => 'OpenID 服务页和状态信息',
+	'right-openid-converter-access' => '可以添加或转换他们的帐户为使用 OpenID 验证',
 	'right-openid-dashboard-access' => '对 OpenID 仪表板的标准访问',
 	'right-openid-dashboard-admin' => '对 OpenID 仪表板的管理员访问',
 	'openid-dashboard-title' => 'OpenID 仪表板',
