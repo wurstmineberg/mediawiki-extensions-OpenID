@@ -6024,6 +6024,7 @@ $messages['su'] = array(
 
 /** Swedish (svenska)
  * @author Boivie
+ * @author Cybjit
  * @author Fluff
  * @author Jon Harald Søby
  * @author Lokal Profil
@@ -6120,6 +6121,7 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openid-pref-hide' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Uppdatera följande information från min OpenID-profil varje gång jag loggar in',
 	'openid-urls-desc' => 'OpenID:n som är kopplade till ditt konto:',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Åtgärd',
 	'openid-urls-registration' => 'Registreringstidpunkt',
 	'openid-urls-delete' => 'Ta bort',
