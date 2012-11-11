@@ -3913,6 +3913,7 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'openid-pref-hide' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
 	'openid-pref-update-userinfo-on-login' => "D'Informatioune vu dësem OpenID-Kont all Kéier aktualiséiere wann ech mech aloggen",
 	'openid-urls-desc' => 'OpendIden déi mat Ärem Benotzerkont asoziéiert sinn',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Aktioun',
 	'openid-urls-delete' => 'Läschen',
 	'openid-add-url' => 'Eng nei OpenID derbäisetzen',
@@ -4492,6 +4493,7 @@ $messages['niu'] = array(
 
 /** Dutch (Nederlands)
  * @author McDutchie
+ * @author Rcdeboer
  * @author SPQRobin
  * @author Siebrand
  * @author Tjcool007
@@ -4582,6 +4584,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-pref-hide' => 'Bij aanmelden met OpenID, uw OpenID op uw gebruikerspagina verbergen.',
 	'openid-pref-update-userinfo-on-login' => 'Iedere keer als ik aanmeld de volgende informatie vanuit de OpenID-gebruiker bijwerken:',
 	'openid-urls-desc' => "Aan uw gebruiker gekoppelde OpenID's:",
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Handeling',
 	'openid-urls-registration' => 'Registratietijd',
 	'openid-urls-delete' => 'Verwijderen',
