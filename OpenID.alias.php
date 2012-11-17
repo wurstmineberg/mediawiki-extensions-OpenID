@@ -73,6 +73,11 @@ $specialPageAliases['ia'] = array(
 	'OpenIDDashboard' => array( 'Pannello_de_OpenID' ),
 );
 
+/** Italian (italiano) */
+$specialPageAliases['it'] = array(
+	'OpenIDConvert' => array( 'OpenIDConverti' ),
+);
+
 /** Japanese (日本語) */
 $specialPageAliases['ja'] = array(
 	'OpenIDLogin' => array( 'OpenIDログイン', 'ＯｐｅｎＩＤログイン' ),
