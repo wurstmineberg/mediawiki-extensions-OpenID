@@ -1462,6 +1462,7 @@ Ohne OpenID könnten Sie sich nicht mehr anmelden.',
  * @author Mirzali
  */
 $messages['diq'] = array(
+	'openidrequired' => 'Mecburiyo',
 	'openidlanguage' => 'Zıwan',
 	'openidtimezone' => 'Warey saete',
 	'openidchoosepassword' => 'Parola:',
