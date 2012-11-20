@@ -1462,11 +1462,17 @@ Ohne OpenID könnten Sie sich nicht mehr anmelden.',
  * @author Mirzali
  */
 $messages['diq'] = array(
+	'openidoptional' => 'Opsiyonel',
 	'openidrequired' => 'Mecburiyo',
+	'openidnickname' => 'Nickname',
+	'openidfullname' => 'Fullname',
 	'openidlanguage' => 'Zıwan',
 	'openidtimezone' => 'Warey saete',
+	'openidchooseusername' => 'Namey karberi:',
 	'openidchoosepassword' => 'Parola:',
+	'openidloginlabel' => "URL'ey OpenID",
 	'openiddelete-button' => 'Tesdiq',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Kerdış',
 	'openid-urls-delete' => 'Bıestere',
 );
