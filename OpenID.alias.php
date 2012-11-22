@@ -166,6 +166,11 @@ $specialPageAliases['sa'] = array(
 	'OpenIDXRDS' => array( 'उद्घटपरिचयपत्रXRDS' ),
 );
 
+/** Sicilian (sicilianu) */
+$specialPageAliases['scn'] = array(
+	'OpenIDConvert' => array( 'OpenIDConverti' ),
+);
+
 /** Slovak (slovenčina) */
 $specialPageAliases['sk'] = array(
 	'OpenIDLogin' => array( 'OpenIDPrihlásenie' ),
