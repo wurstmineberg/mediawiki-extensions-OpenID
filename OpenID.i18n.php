@@ -1466,6 +1466,7 @@ $messages['diq'] = array(
 	'openidrequired' => 'Mecburiyo',
 	'openidnickname' => 'Leqebe',
 	'openidfullname' => 'Nameyo tam',
+	'openidemail' => 'Adresa e-postey',
 	'openidlanguage' => 'Zıwan',
 	'openidtimezone' => 'Warey saete',
 	'openidchooseusername' => 'Nameyê karberi:',
