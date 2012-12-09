@@ -6555,6 +6555,7 @@ $messages['ug-latn'] = array(
  * @author AS
  * @author Aleksandrit
  * @author Alex Khimich
+ * @author Base
  * @author NickK
  * @author Prima klasy4na
  * @author Тест
@@ -6639,15 +6640,20 @@ OpenID дозволяє вам заходити на різні веб-сайт�
 	'openid-pref-hide' => 'Приховувати ваш OpenID на вашій сторінці користувача, якщо ви ввійшли з допомогою OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Оновлювати наступну інформацію про мене через OpenID щораз, коли я представляюся системі:',
 	'openid-urls-desc' => "OpenID, пов'язані з Вашим обліковим записом:",
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Дія',
+	'openid-urls-registration' => 'Час реєстрації',
 	'openid-urls-delete' => 'Видалити',
 	'openid-add-url' => 'Додати новий OpenID',
-	'openid-login-or-create-account' => 'Представитися системі або створити новий обліковий запис', # Fuzzy
+	'openid-login-or-create-account' => 'Увійти до системи або створити новий обліковий запис',
 	'openid-provider-label-openid' => 'Введіть URL Вашого OpenID',
 	'openid-provider-label-google' => 'Представитися, використовуючи обліковий запис Google',
 	'openid-provider-label-yahoo' => 'Представитися, використовуючи обліковий запис Yahoo',
 	'openid-provider-label-aol' => "Введіть ваше ім'я в AOL",
 	'openid-provider-label-other-username' => "Введіть Ваше ім'я користувача $1",
+	'openid-dashboard-number-openid-users' => 'Число користувачів без OpenID',
+	'openid-dashboard-number-openids-in-database' => 'Число OpenID (всього)',
+	'openid-dashboard-number-users-without-openid' => 'Число користувачів без OpenID',
 );
 
 /** Urdu (اردو)
