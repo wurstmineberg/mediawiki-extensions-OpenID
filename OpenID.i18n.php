@@ -157,6 +157,7 @@ You would not able to log in without an OpenID.',
  * @author Nike
  * @author Purodha
  * @author Raymond
+ * @author Shirayuki
  * @author Siebrand
  * @author The Evil IP address
  * @author Thomas Gries
@@ -164,7 +165,7 @@ You would not able to log in without an OpenID.',
  * @author Wikinaut
  */
 $messages['qqq'] = array(
-	'openid-desc' => '{{desc}}',
+	'openid-desc' => '{{desc|name=Open ID|url=http://www.mediawiki.org/wiki/Extension:OpenID}}',
 	'openidsuccesstext' => 'Parameters:
 * $1 is a username
 * $2 is an OpenID.',
@@ -4538,7 +4539,7 @@ Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Pr
 	'openidnopolicy' => 'De site heeft geen privacybeleid.',
 	'openidpolicy' => 'Lees het <a target="_new" href="$1">privacybeleid</a> voor meer informatie.',
 	'openidoptional' => 'Optioneel',
-	'openidrequired' => 'Verplicht',
+	'openidrequired' => 'Vereist',
 	'openidnickname' => 'Gebruikersnaam',
 	'openidfullname' => 'Volledige naam',
 	'openidemail' => 'E-mailadres',
