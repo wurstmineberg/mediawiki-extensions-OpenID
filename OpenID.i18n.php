@@ -639,6 +639,19 @@ $messages['az'] = array(
 	'openid-urls-delete' => 'Sil',
 );
 
+/** Bashkir (башҡортса)
+ * @author Haqmar
+ */
+$messages['ba'] = array(
+	'openidoptional' => 'Теләккә күрә',
+	'openidrequired' => 'Мотлаҡ',
+	'openidnickname' => 'Ҡушма исем',
+	'openidfullname' => 'Тулы исем',
+	'openidemail' => 'Электрон почта адресы',
+	'openidlanguage' => 'Тел',
+	'openidtimezone' => 'Ваҡыт бүлкәте',
+);
+
 /** Belarusian (беларуская)
  * @author Тест
  */
@@ -5356,7 +5369,7 @@ se poate alege una din opțiunile de mai jos.',
 	'openidupdateuserinfo' => 'Actualizează informaţiile mele personale:',
 	'openiddelete' => 'Şterge OpenID',
 	'openiddelete-button' => 'Confirmă',
-	'openid-urls-url' => 'Adresă web',
+	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Acțiune',
 	'openid-urls-delete' => 'Şterge',
 	'openid-add-url' => 'Adaugă un nou OpenID',
@@ -5604,14 +5617,17 @@ Ci sunnu assai [http://wiki.openid.net/Public_OpenID_providers Provider OpenID p
 
 /** Sinhala (සිංහල)
  * @author Asiri wiki
+ * @author Singhalawap
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
 	'openidoptional' => 'වෛකල්පිත',
 	'openidrequired' => 'අවශ්‍යයි',
+	'openidfullname' => 'සම්පූර්ණ නම',
 	'openidemail' => 'විද්‍යුත්-තැපැල් ලිපිනය',
 	'openidlanguage' => 'භාෂාව',
 	'openidtimezone' => 'වේලා කලාපය',
+	'openidchoosefull' => 'ඔබේ සම්පූර්ණ නම ($1)',
 	'openidchooseusername' => 'පරිශීලක නාමය:',
 	'openidchoosepassword' => 'මුරපදය:',
 	'openidupdateuserinfo' => 'මගේ පෞද්ගලික තොරතුරු යාවත්කාලීන කරන්න:',
