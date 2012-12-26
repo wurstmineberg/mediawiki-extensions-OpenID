@@ -3839,6 +3839,7 @@ Ohne <i lang="en">OpenID</i> künnts De nit mieh enlogge.',
 	'openiddeleteerroropenidonly' => 'Do kanns nit all Ding <i lang="en">OpenID</i>s fott schmieße, weil De bloß met <i lang="en">OpenID</i>  enlogge darfß, un ohne <span i="en">OpenID</i> künnts De jaa nit mieh enlogge.',
 	'openiddelete-sucess' => 'Di <i lang="en">OpenID</i> es jäz nit mieh met Dinge Aanmeldung verbonge.',
 	'openiddelete-error' => 'Et es ene Fähler opjetrodde, wi mer di <i lang="en">OpenID</i> vun Dinge Aanmeldung fott nämme wullte.',
+	'prefs-openid' => '<i lang="en">OpenID</i>',
 	'openid-prefstext' => '[//openid.net/ OpenID] Enstellunge',
 	'openid-pref-hide' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.',
 	'openid-pref-update-userinfo-on-login' => 'Donn jedesmol wann_esch hee enloggen, di Enfomazjuhne övver mesch heh noh vun <i lang="en">OpenID</i> op der neuste Stand bränge:',
@@ -4978,7 +4979,7 @@ Nie będziesz mógł się zalogować bez OpenID.',
  */
 $messages['pms'] = array(
 	'openid-desc' => "Intra ant la wiki con [//openid.net/ OpenID], e intra ant j'àutri sit dl'aragnà OpenID con un cont utent wiki",
-	'openidlogin' => 'Intré ant ël sistema con OpenID', # Fuzzy
+	'openidlogin' => 'Intré ant ël sistema / creé un cont con OpenID',
 	'openidserver' => 'servent OpenID',
 	'openidxrds' => 'Archivi Yadis',
 	'openidconvert' => 'Convertidor OpenID',
@@ -4994,9 +4995,14 @@ Për piasì ch'a consulta n'[[Special:ListUsers/sysop|aministrator]].",
 	'openidfailure' => 'verìfica falìa',
 	'openidfailuretext' => 'Verìfica ëd l\'adrëssa OpenID falìa. Messagi d\'eror: "$1"',
 	'openidsuccess' => 'Verìfica andàita bin',
-	'openidsuccesstext' => "Verìfica dl'adrëssa OpenID andàita bin.", # Fuzzy
+	'openidsuccesstext' => "'''Verìfica e intà ant ël sistem da bin com utent $1'''.
+
+Tò OpenID a l'é $2 .
+
+Sto OpenID e opsionaj futut a peulo esse gest' ant la [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] dij tò gust.<br />
+Na ciav opsional dël cont a peul esse giontà an tò [[Special:Preferences#mw-prefsection-personal|Profil utent]].",
 	'openidusernameprefix' => 'Utent OpenID',
-	'openidserverlogininstructions' => "Ch'a anserissa soa ciav sì-sota për intré an $3 com utent $2 (pàgina utent $1).", # Fuzzy
+	'openidserverlogininstructions' => "$3 a ciama ch'a anserissa soa ciav për sò utent $2 pagina $1 (sòn a l'é soa anliura OpenID).",
 	'openidtrustinstructions' => "Contròla s'it veule condivide dat con $1.",
 	'openidallowtrust' => 'A përmët a $1 ëd fidesse dë sto cont utent-sì.',
 	'openidnopolicy' => "Ël sit a l'ha pa spessificà dle régole ëd riservatëssa.",
@@ -5008,7 +5014,7 @@ Për piasì ch'a consulta n'[[Special:ListUsers/sysop|aministrator]].",
 	'openidemail' => 'Adrëssa ëd pòsta eletrònica',
 	'openidlanguage' => 'Lenga',
 	'openidtimezone' => 'Fus orari',
-	'openidchooselegend' => 'Sërnùa dël nòm utent', # Fuzzy
+	'openidchooselegend' => 'Sërnùa dël nòm utent e cont',
 	'openidchooseinstructions' => "Tùit j'utent a l'han dabzògn ëd në stranòm,
 a peul sern-ne un da j'opsion sì-sota.",
 	'openidchoosenick' => 'Tò stranòm ($1)',
@@ -5025,9 +5031,10 @@ a peul sern-ne un da j'opsion sì-sota.",
 	'openidconvertsuccesstext' => "A l'ha convertì da bin sò OpenID a $1",
 	'openidconvertyourstext' => "Cost-sì a l'é già sò OpenID.",
 	'openidconvertothertext' => "Cost-sì a l'é l'OpenID ëd cheidun d'àutri.",
-	'openidalreadyloggedin' => "'''A l'é già intrà ant ël sistema, $1!'''
+	'openidalreadyloggedin' => "A l'é già intrà ant ël sistema.",
+	'openidalreadyloggedintext' => "'''A l'é già intrà ant ël sistem, $1!'''
 
-S'a veul dovré OpenID për intré ant l'avnì, a peul [[Special:OpenIDConvert|convertì sò cont për dovré OpenID]].", # Fuzzy
+A peul gestì (vardé, scanselé, e àutr) OpenID ant la [[Special:Preferences#mw-prefsection-openid|Scheda OpenID]] dij sò gust.",
 	'openidnousername' => 'Gnun nòm utent spessificà.',
 	'openidbadusername' => 'Nòm utent spessificà pa bon.',
 	'openidautosubmit' => 'Sta pàgina-sì a conten un formolari che a dovrìa esse spedì automaticament se chiel a l\'ha JavaScript abilità. 
@@ -5036,6 +5043,8 @@ Dësnò, ch\'a preuva ël boton "Continua".',
 	'openidloginlabel' => 'Adrëssa OpenID',
 	'openidlogininstructions' => "{{SITENAME}} a sosten lë stàndard [//openid.net/ OpenID] për na signadura sola antra sit ëd l'aragnà. OpenID a-j përmët ëd rintré an vàire sit diferent an sl'aragnà sensa dovré na ciav diferenta për mincadun. (Ch'a lesa [//en.wikipedia.org/wiki/OpenID Artìcol OpenID ëd Wikipedia] për savèjne ëd pi).
 A-i son già tanti [//openid.net/get/ fornitor d'OpenID], e a podrìa già avèj un cont abilità a OpenID dzora a n'àutr servissi.",
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} at përmëtt ''mach'' d'intré con OpenID.",
+	'openidlogininstructions-passwordloginallowed' => "S'it l'has già un cont dzora {{SITENAME}}, it peule [[Special:UserLogin|intré]] con tò nòm utent e ciav com al sòlit. Per dovré OpenID ant l'avnì, it peule [[Special:OpenIDConvert|converte to cont a OpenID]] d'apress ch'it ses intrà normalment.",
 	'openidupdateuserinfo' => 'Modìfica mie anformassion përsonaj:',
 	'openiddelete' => 'Scancela OpenID',
 	'openiddelete-text' => 'An sgnacand ël boton "{{int:openiddelete-button}}", it gavras l\'OpenID $1 da tò cont.
@@ -5047,19 +5056,32 @@ A podrà pa intré ant ël sistema sensa n'OpenID.",
 A podrà pa intré sensa n'OpenID.",
 	'openiddelete-sucess' => "L'OpenID a l'é stàit gavà da bin da tò cont.",
 	'openiddelete-error' => "A l'é capitaje n'eror an gavand l'OpenID da tò cont.",
+	'openid-openids-were-not-merged' => "OpenID a l'é pa stàit unì qnad a son unisse ij cont utent.",
 	'openid-prefstext' => 'Preferense [//openid.net/ OpenID]',
 	'openid-pref-hide' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.",
 	'openid-pref-update-userinfo-on-login' => "Modifiché j'anformassion përsonaj sì-sota OpenID minca vira ch'i intro:",
 	'openid-urls-desc' => 'OpenID associà con tò cont:',
+	'openid-urls-url' => "Adrëssa an sl'aragnà",
 	'openid-urls-action' => 'Assion',
+	'openid-urls-registration' => 'Data ëd registrassion',
 	'openid-urls-delete' => 'Scancela',
 	'openid-add-url' => 'Gionta un neuv OpenID',
-	'openid-login-or-create-account' => 'Intra o Crea un Neuv Cont', # Fuzzy
+	'openid-login-or-create-account' => 'Intra o crea un cont neuv',
 	'openid-provider-label-openid' => "Ch'a anserissa soa adrëssa OpenID",
 	'openid-provider-label-google' => 'Intra an dovrand tò cont Google',
 	'openid-provider-label-yahoo' => 'Intra an dovrand tò cont Yahoo',
 	'openid-provider-label-aol' => "Ch'a anserissa sò nòm AOL",
 	'openid-provider-label-other-username' => "Ch'a anserissa sò nòm utent $1",
+	'specialpages-group-openid' => 'Pagina ëd sërvissi OpenID e anformassion dë stat',
+	'right-openid-converter-access' => "A peul gionté o converte sò cont për dovré j'identità OpenID",
+	'right-openid-dashboard-access' => 'Acess predefinì al cruscòt OpenID',
+	'right-openid-dashboard-admin' => "Acess dl'Aministrador al cruscòt OpenID",
+	'openid-dashboard-title' => 'Cruscòt OpenID',
+	'openid-dashboard-title-admin' => 'Cruscòt OpenID (aministrador)',
+	'openid-dashboard-introduction' => "J'ampostassion dj'estension corent d'OpenID ([$1 agiut])",
+	'openid-dashboard-number-openid-users' => "Nùmer d'utent con OpenID",
+	'openid-dashboard-number-openids-in-database' => "Nùmer d'OpenID (total)",
+	'openid-dashboard-number-users-without-openid' => "Nùmer d'utent sensa OpenID",
 );
 
 /** Pashto (پښتو)
@@ -5624,6 +5646,8 @@ Ci sunnu assai [http://wiki.openid.net/Public_OpenID_providers Provider OpenID p
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'openidxrds' => 'Yadis ගොනුව',
+	'openidfailure' => 'සත්‍යාපනය අසාර්ථකයි',
 	'openidoptional' => 'වෛකල්පිත',
 	'openidrequired' => 'අවශ්‍යයි',
 	'openidfullname' => 'සම්පූර්ණ නම',
@@ -6196,6 +6220,7 @@ Du skulle inte kunna logga in utan ett OpenID.',
 
 /** Tamil (தமிழ்)
  * @author Karthi.dr
+ * @author Shanmugamp7
  */
 $messages['ta'] = array(
 	'openidcancel' => 'சரிபார்ப்பு  இரத்து செய்யப்பட்டது',
@@ -6219,6 +6244,8 @@ $messages['ta'] = array(
 	'openidnousername' => 'ஒரு பயனர் பெயரும் குறிப்பிடப்படவில்லை.',
 	'openidbadusername' => 'மோசமான பயனர் பெயர் குறிப்பிடப்பட்டுள்ளது.',
 	'openiddelete-button' => 'உறுதிசெய்',
+	'openid-urls-url' => 'உரலி (URL)',
+	'openid-urls-action' => 'செயல்',
 	'openid-urls-registration' => 'பதிவு செய்யும் நேரம்',
 	'openid-urls-delete' => 'நீக்கு',
 	'openid-login-or-create-account' => 'புகுபதிகை செய்க அல்லது  புதிய கணக்கு ஒன்றை உருவாக்கவும்',
