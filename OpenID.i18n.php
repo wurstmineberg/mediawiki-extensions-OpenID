@@ -1688,6 +1688,7 @@ $messages['el'] = array(
 	'openid-pref-hide' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.',
 	'openid-pref-update-userinfo-on-login' => 'Ενημέρωση των ακόλουθων πληροφοριών από το OpenID persona κάθε φορά που συνδέομαι:',
 	'openid-urls-desc' => 'OpenID συνδεδεμένα με τον λογαριασμό σας:',
+	'openid-urls-url' => 'Διεύθυνση URL',
 	'openid-urls-action' => 'Ενέργεια',
 	'openid-urls-delete' => 'Διαγραφή',
 	'openid-add-url' => 'Προσθέστε ένα νέο OpenID',
@@ -5679,6 +5680,15 @@ $messages['si'] = array(
 	'openid-urls-action' => 'කාර්යය',
 	'openid-urls-registration' => 'ලියාපදිංචි වූ වේලාව',
 	'openid-urls-delete' => 'මකන්න',
+	'openid-add-url' => 'නව OpenID එක් කරන්න',
+	'openid-login-or-create-account' => 'පිවිසෙන්න හෝ නව ගිණුමක් තනන්න',
+	'openid-provider-label-openid' => 'ඔබේ OpenID URL යොදන්න',
+	'openid-provider-label-google' => 'ඔබේ ගූගල් ගිණුමෙන් පිවිසෙන්න',
+	'openid-provider-label-yahoo' => 'ඔබේ යාහු ගිණුමෙන් පිවිසෙන්න',
+	'openid-provider-label-aol' => 'ඔබේ AOL තිරනාමය යොදන්න',
+	'openid-provider-label-other-username' => 'ඔබේ $1 පරිශීලකනාමය යොදන්න',
+	'openid-dashboard-title' => 'OpenID උපකරණ පුවරුව',
+	'openid-dashboard-title-admin' => 'OpenID උපකරණ පුවරුව (පරිපාලක)',
 );
 
 /** Slovak (slovenčina)
