@@ -5648,6 +5648,7 @@ Ci sunnu assai [http://wiki.openid.net/Public_OpenID_providers Provider OpenID p
  * @author පසිඳු කාවින්ද
  */
 $messages['si'] = array(
+	'openidlogin' => 'OpenID සමඟ පිවිසෙන්න / ගිණුමක් තනන්න',
 	'openidserver' => 'OpenID සර්වරය',
 	'openidxrds' => 'Yadis ගොනුව',
 	'openidconvert' => 'OpenID පරිවර්තකය',
