@@ -2206,7 +2206,10 @@ $messages['frp'] = array(
 	'openidxrds' => 'Fichiér Yadis',
 	'openidconvert' => 'Convèrtissor OpenID',
 	'openiderror' => 'Èrror de contrôlo',
+	'openiderrortext' => 'Na fôta est arrevâye pendent lo contrôlo de l’URL OpenID.',
 	'openidconfigerror' => 'Èrror de configuracion de OpenID',
+	'openidconfigerrortext' => 'La configuracion de stocâjo OpenID por ceti vouiqui est envalida.
+Vos volyéd veriér vers un [[Special:ListUsers/sysop|administrator]].',
 	'openidpermission' => 'Èrror de pèrmission OpenID',
 	'openidcancel' => 'Contrôlo anulâ',
 	'openidfailure' => 'Falyita du contrôlo',
@@ -2227,7 +2230,7 @@ $messages['frp'] = array(
 	'openidchooseauto' => 'Un nom fêt ôtomaticament ($1)',
 	'openidchoosemanual' => 'Un nom de voutron chouèx :',
 	'openidchooseexisting' => 'Un compto ègzistent sur ceti vouiqui',
-	'openidchooseusername' => 'Nom d’usanciér :',
+	'openidchooseusername' => 'Nom d’utilisator :',
 	'openidchoosepassword' => 'Contresegno :',
 	'openidnousername' => 'Nion nom d’usanciér at étâ spècefiâ.',
 	'openidbadusername' => 'Un crouyo nom d’usanciér at étâ spècefiâ.',
@@ -2624,6 +2627,7 @@ OpenID מאפשר לכם להיכנס לחשבון במגוון אתרים מב�
 );
 
 /** Hindi (हिन्दी)
+ * @author Ansumang
  * @author Kaustubh
  * @author आलोक
  */
@@ -2669,6 +2673,9 @@ $messages['hi'] = array(
 	'openidclientonlytext' => 'इस विकिपर खोले गये खाते आप अन्य साइटपर ओपनID के तौर पर इस्तेमाल नहीं कर सकतें हैं।',
 	'openidloginlabel' => 'ओपनID URL',
 	'openid-pref-hide' => 'अगर आपने ओपनID का इस्तेमाल करके लॉग इन किया हैं, तो आपके सदस्यपन्नेपर आपका ओपनID छुपायें।',
+	'openid-urls-url' => 'यूआरएल',
+	'openid-urls-action' => 'कार्रवाई',
+	'openid-urls-delete' => 'हटाएँ',
 );
 
 /** Hiligaynon (Ilonggo)
@@ -5659,6 +5666,7 @@ $messages['si'] = array(
 	'openidfailure' => 'සත්‍යාපනය අසාර්ථකයි',
 	'openidsuccess' => 'සත්‍යාපනය සාර්ථකයි',
 	'openidusernameprefix' => 'OpenIDපරිශීලක',
+	'openidpolicy' => 'තවත් තොරතුරු සඳහා <a target="_new" href="$1">පුද්ගලිකත්ව ප්‍රතිපත්තිය</a> පරික්ෂා කරන්න.',
 	'openidoptional' => 'වෛකල්පිත',
 	'openidrequired' => 'අවශ්‍යයි',
 	'openidnickname' => 'අපනාමය',
@@ -5666,17 +5674,24 @@ $messages['si'] = array(
 	'openidemail' => 'විද්‍යුත්-තැපැල් ලිපිනය',
 	'openidlanguage' => 'භාෂාව',
 	'openidtimezone' => 'වේලා කලාපය',
+	'openidchooselegend' => 'පරිශීලක නාමය සහ ගිණුම් අභිමතය',
 	'openidchoosenick' => 'ඔබේ අපනාමය ($1)',
 	'openidchoosefull' => 'ඔබේ සම්පූර්ණ නම ($1)',
+	'openidchooseauto' => 'ස්වයං-ජනිත නාමය ($1)',
 	'openidchoosemanual' => 'ඔබේ කැමැත්තට අනුව නම:',
+	'openidchooseexisting' => 'මෙම විකියෙහි පවත්නා ගිණුමක්',
 	'openidchooseusername' => 'පරිශීලක නාමය:',
 	'openidchoosepassword' => 'මුරපදය:',
+	'openidconvertsuccess' => 'OpenID වෙත සාර්ථකව හරවන ලදී',
+	'openidconvertyourstext' => 'එය දැනටමත් ඔබේ OpenID වේ.',
+	'openidconvertothertext' => 'එය වෙන කෙනෙකුගේ OpenID එකකි.',
 	'openidalreadyloggedin' => 'ඔබ දැනටමත් ප්‍රවිෂ්ට වී ඇත.',
 	'openidnousername' => 'පරිශීලක නාමයක් විශේෂණය කර නොමැත.',
 	'openidloginlabel' => 'OpenID URL',
 	'openidupdateuserinfo' => 'මගේ පෞද්ගලික තොරතුරු යාවත්කාලීන කරන්න:',
 	'openiddelete' => 'OpenID මකන්න',
 	'openiddelete-button' => 'තහවුරු කරන්න',
+	'openid-prefstext' => '[//openid.net/ OpenID] අභිරුචීන්',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'කාර්යය',
 	'openid-urls-registration' => 'ලියාපදිංචි වූ වේලාව',
