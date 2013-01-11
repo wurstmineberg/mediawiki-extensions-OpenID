@@ -206,7 +206,8 @@ OpenID preferences tab title',
 Used in the same way as {{msg-mw|prefs-registration-date-time}}.',
 	'openid-urls-delete' => '{{Identical|Delete}}',
 	'specialpages-group-openid' => 'Display group name for OpenID-extension related special pages for Special:SpecialPages',
-	'right-openid-converter-access' => '{{doc-right|openid-converter-access}}',
+	'right-openid-converter-access' => '{{doc-right|openid-converter-access}}
+{{doc-singularthey}}',
 	'right-openid-dashboard-access' => '{{doc-right|openid-dashboard-access}}
 the standard access right for the OpenID dashboard, which is a restricted special page',
 	'right-openid-dashboard-admin' => '{{doc-right|openid-dashboard-admin}}
@@ -5039,14 +5040,14 @@ Për piasì ch'a consulta n'[[Special:ListUsers/sysop|aministrator]].",
 	'openidfailure' => 'verìfica falìa',
 	'openidfailuretext' => 'Verìfica ëd l\'adrëssa OpenID falìa. Messagi d\'eror: "$1"',
 	'openidsuccess' => 'Verìfica andàita bin',
-	'openidsuccesstext' => "'''Verìfica e intà ant ël sistem da bin com utent $1'''.
+	'openidsuccesstext' => "'''Verìfica e intrà ant ël sistem da bin com utent $1'''.
 
-Tò OpenID a l'é $2 .
+Sò OpenID a l'é $2 .
 
-Sto OpenID e opsionaj futut a peulo esse gest' ant la [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] dij tò gust.<br />
-Na ciav opsional dël cont a peul esse giontà an tò [[Special:Preferences#mw-prefsection-personal|Profil utent]].",
+Cost e d'àutri ospionaj OpenID a peulo esse gestì ant la [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] dij sò gust.<br />
+Na ciav opsional dël cont a peul esse giontà an sò [[Special:Preferences#mw-prefsection-personal|Profil utent]].",
 	'openidusernameprefix' => 'Utent OpenID',
-	'openidserverlogininstructions' => "$3 a ciama ch'a anserissa soa ciav për sò utent $2 pagina $1 (sòn a l'é soa anliura OpenID).",
+	'openidserverlogininstructions' => "$3 a ciama ch'a anserissa soa ciav për soa pàgina $1 utent $1 (costa a l'é soa anliura OpenID).", # Fuzzy
 	'openidtrustinstructions' => "Contròla s'it veule condivide dat con $1.",
 	'openidallowtrust' => 'A përmët a $1 ëd fidesse dë sto cont utent-sì.',
 	'openidnopolicy' => "Ël sit a l'ha pa spessificà dle régole ëd riservatëssa.",
@@ -5058,7 +5059,7 @@ Na ciav opsional dël cont a peul esse giontà an tò [[Special:Preferences#mw-p
 	'openidemail' => 'Adrëssa ëd pòsta eletrònica',
 	'openidlanguage' => 'Lenga',
 	'openidtimezone' => 'Fus orari',
-	'openidchooselegend' => 'Sërnùa dël nòm utent e cont',
+	'openidchooselegend' => 'Sèrnia ëd lë stranòm e dël cont',
 	'openidchooseinstructions' => "Tùit j'utent a l'han dabzògn ëd në stranòm,
 a peul sern-ne un da j'opsion sì-sota.",
 	'openidchoosenick' => 'Tò stranòm ($1)',
@@ -5076,9 +5077,9 @@ a peul sern-ne un da j'opsion sì-sota.",
 	'openidconvertyourstext' => "Cost-sì a l'é già sò OpenID.",
 	'openidconvertothertext' => "Cost-sì a l'é l'OpenID ëd cheidun d'àutri.",
 	'openidalreadyloggedin' => "A l'é già intrà ant ël sistema.",
-	'openidalreadyloggedintext' => "'''A l'é già intrà ant ël sistem, $1!'''
+	'openidalreadyloggedintext' => "'''A l'é già intrà ant ël sistema, $1!'''
 
-A peul gestì (vardé, scanselé, e àutr) OpenID ant la [[Special:Preferences#mw-prefsection-openid|Scheda OpenID]] dij sò gust.",
+A peul gestì (vardé, scancelé, e gionté d'àutri) OpenID ant la [[Special:Preferences#mw-prefsection-openid|Scheda OpenID]] dij sò gust.",
 	'openidnousername' => 'Gnun nòm utent spessificà.',
 	'openidbadusername' => 'Nòm utent spessificà pa bon.',
 	'openidautosubmit' => 'Sta pàgina-sì a conten un formolari che a dovrìa esse spedì automaticament se chiel a l\'ha JavaScript abilità. 
@@ -5087,8 +5088,8 @@ Dësnò, ch\'a preuva ël boton "Continua".',
 	'openidloginlabel' => 'Adrëssa OpenID',
 	'openidlogininstructions' => "{{SITENAME}} a sosten lë stàndard [//openid.net/ OpenID] për na signadura sola antra sit ëd l'aragnà. OpenID a-j përmët ëd rintré an vàire sit diferent an sl'aragnà sensa dovré na ciav diferenta për mincadun. (Ch'a lesa [//en.wikipedia.org/wiki/OpenID Artìcol OpenID ëd Wikipedia] për savèjne ëd pi).
 A-i son già tanti [//openid.net/get/ fornitor d'OpenID], e a podrìa già avèj un cont abilità a OpenID dzora a n'àutr servissi.",
-	'openidlogininstructions-openidloginonly' => "{{SITENAME}} at përmëtt ''mach'' d'intré con OpenID.",
-	'openidlogininstructions-passwordloginallowed' => "S'it l'has già un cont dzora {{SITENAME}}, it peule [[Special:UserLogin|intré]] con tò nòm utent e ciav com al sòlit. Per dovré OpenID ant l'avnì, it peule [[Special:OpenIDConvert|converte to cont a OpenID]] d'apress ch'it ses intrà normalment.",
+	'openidlogininstructions-openidloginonly' => "{{SITENAME}} a-j përmët ''mach'' d'intré ant ël sistema con OpenID.",
+	'openidlogininstructions-passwordloginallowed' => "S'a l'has già un cont dzora {{SITENAME}}, a peul [[Special:UserLogin|intré ant ël sistema]] con sò stranòm e soa ciav com al sòlit. Per dovré OpenID ant l'avnì, a peul [[Special:OpenIDConvert|convertì sò cont vers OpenID]] apress esse intrà ant ël sistema normalment.",
 	'openidupdateuserinfo' => 'Modìfica mie anformassion përsonaj:',
 	'openiddelete' => 'Scancela OpenID',
 	'openiddelete-text' => 'An sgnacand ël boton "{{int:openiddelete-button}}", it gavras l\'OpenID $1 da tò cont.
@@ -5100,7 +5101,7 @@ A podrà pa intré ant ël sistema sensa n'OpenID.",
 A podrà pa intré sensa n'OpenID.",
 	'openiddelete-sucess' => "L'OpenID a l'é stàit gavà da bin da tò cont.",
 	'openiddelete-error' => "A l'é capitaje n'eror an gavand l'OpenID da tò cont.",
-	'openid-openids-were-not-merged' => "OpenID a l'é pa stàit unì qnad a son unisse ij cont utent.",
+	'openid-openids-were-not-merged' => "J'OpenID a son pa stàit unì cand a son unisse ij cont d'utent.",
 	'openid-prefstext' => 'Preferense [//openid.net/ OpenID]',
 	'openid-pref-hide' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.",
 	'openid-pref-update-userinfo-on-login' => "Modifiché j'anformassion përsonaj sì-sota OpenID minca vira ch'i intro:",
@@ -5110,7 +5111,7 @@ A podrà pa intré sensa n'OpenID.",
 	'openid-urls-registration' => 'Data ëd registrassion',
 	'openid-urls-delete' => 'Scancela',
 	'openid-add-url' => 'Gionta un neuv OpenID',
-	'openid-login-or-create-account' => 'Intra o crea un cont neuv',
+	'openid-login-or-create-account' => 'Intré ant ël sistema o creé un cont neuv',
 	'openid-provider-label-openid' => "Ch'a anserissa soa adrëssa OpenID",
 	'openid-provider-label-google' => 'Intra an dovrand tò cont Google',
 	'openid-provider-label-yahoo' => 'Intra an dovrand tò cont Yahoo',
