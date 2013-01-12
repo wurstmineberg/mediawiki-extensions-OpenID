@@ -5047,7 +5047,7 @@ Sò OpenID a l'é $2 .
 Cost e d'àutri ospionaj OpenID a peulo esse gestì ant la [[Special:Preferences#mw-prefsection-openid|scheda OpenID]] dij sò gust.<br />
 Na ciav opsional dël cont a peul esse giontà an sò [[Special:Preferences#mw-prefsection-personal|Profil utent]].",
 	'openidusernameprefix' => 'Utent OpenID',
-	'openidserverlogininstructions' => "$3 a ciama ch'a anserissa soa ciav për soa pàgina $1 utent $1 (costa a l'é soa anliura OpenID).", # Fuzzy
+	'openidserverlogininstructions' => "$3 a ciama ch'a anserissa soa ciav për soa pàgina $1 utent $2 (costa a l'é soa anliura OpenID).",
 	'openidtrustinstructions' => "Contròla s'it veule condivide dat con $1.",
 	'openidallowtrust' => 'A përmët a $1 ëd fidesse dë sto cont utent-sì.',
 	'openidnopolicy' => "Ël sit a l'ha pa spessificà dle régole ëd riservatëssa.",
