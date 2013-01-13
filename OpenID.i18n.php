@@ -3689,7 +3689,7 @@ $messages['ko'] = array(
 	'openidsuccess' => '인증 성공',
 	'openidsuccesstext' => "'''성공적으로 인증되었고 $1 사용자로 로그인했습니다.'''
 
-당신의 OpenID는 $2입니다.
+당신의 OpenID는 $2 입니다.
 
 이와 선택적인 추가 OpenID는 사용자 환경 설정의 [[Special:Preferences#mw-prefsection-openid|OpenID 탭]]에서 관리할 수 있습니다.<br />
 선택적인 계정 비밀번호는 [[Special:Preferences#mw-prefsection-personal|기본 정보]]에서 더할 수 있습니다.",
@@ -3709,8 +3709,8 @@ $messages['ko'] = array(
 	'openidchooselegend' => '사용자 이름과 계정 선택',
 	'openidchooseinstructions' => '모든 사용자는 별명을 가져야 합니다.
 아래의 옵션 중 하나를 선택할 수 있습니다.',
-	'openidchoosenick' => '당신의 별명 ($1)',
-	'openidchoosefull' => '전체 이름은 ($1)',
+	'openidchoosenick' => '별명 ($1)',
+	'openidchoosefull' => '전체 이름 ($1)',
 	'openidchooseurl' => 'OpenID로 부터 선택한 이름 ($1)',
 	'openidchooseauto' => '자동 생성된 이름 ($1)',
 	'openidchoosemanual' => '선택한 이름:',
@@ -3742,14 +3742,14 @@ OpenID는 다른 많은 웹사이트에서 서로 다른 비밀번호나 사용�
 나중에 OpenID를 사용하려면, 정상적으로 로그인한 후 [[Special:OpenIDConvert|계정을 OpenID로 변환]]할 수 있습니다.',
 	'openidupdateuserinfo' => '내 개인 정보를 새로 고침:',
 	'openiddelete' => 'OpenID 삭제',
-	'openiddelete-text' => '"{{int:openiddelete-button}}" 버튼을 누르시면, [$1 OpenID 정보]를 당신의 사용자 계정으로부터 삭제할 것입니다.
+	'openiddelete-text' => '"{{int:openiddelete-button}}" 버튼을 누르시면, [$1 OpenID 정보]를 내 계정으로부터 삭제할 것입니다.
 이후 OpenID를 통한 현재 사용자 계정으로의 로그인이 불가능하게 될 것입니다.',
 	'openiddelete-button' => '확인',
 	'openiddeleteerrornopassword' => '계정에 비밀번호를 설정하지 않았기 때문에 모든 OpenID 계정을 삭제할 수 없습니다.
 OpenID 없이 로그인할 수 없습니다.',
 	'openiddeleteerroropenidonly' => 'OpenID를 이용해서만 로그인 할 수 있기 때문에 모든 OpenID 계정을 삭제할 수 없습니다.
 OpenID 없이 로그인 할 수 없습니다.',
-	'openiddelete-sucess' => '당신의 계정으로부터 OpenID 정보가 삭제되었습니다.',
+	'openiddelete-sucess' => '내 계정으로부터 OpenID 정보가 삭제되었습니다.',
 	'openiddelete-error' => '사용자 계정으로부터 OpenID 정보를 삭제하는 과정에 오류가 발생하였습니다.',
 	'openid-openids-were-not-merged' => 'OpenID가 사용자 계정을 병합하는 동안 병합하지 못했습니다.',
 	'prefs-openid' => 'OpenID',
@@ -5117,13 +5117,13 @@ A podrà pa intré sensa n'OpenID.",
 	'openid-provider-label-yahoo' => 'Intra an dovrand tò cont Yahoo',
 	'openid-provider-label-aol' => "Ch'a anserissa sò nòm AOL",
 	'openid-provider-label-other-username' => "Ch'a anserissa sò nòm utent $1",
-	'specialpages-group-openid' => 'Pagina ëd sërvissi OpenID e anformassion dë stat',
-	'right-openid-converter-access' => "A peul gionté o converte sò cont për dovré j'identità OpenID",
+	'specialpages-group-openid' => 'Pàgina ëd sërvissi OpenID e anformassion an slë statù',
+	'right-openid-converter-access' => "A peul gionté o convertì sò cont për dovré j'identità OpenID",
 	'right-openid-dashboard-access' => 'Acess predefinì al cruscòt OpenID',
-	'right-openid-dashboard-admin' => "Acess dl'Aministrador al cruscòt OpenID",
+	'right-openid-dashboard-admin' => "Acess dl'aministrator al cruscòt OpenID",
 	'openid-dashboard-title' => 'Cruscòt OpenID',
-	'openid-dashboard-title-admin' => 'Cruscòt OpenID (aministrador)',
-	'openid-dashboard-introduction' => "J'ampostassion dj'estension corent d'OpenID ([$1 agiut])",
+	'openid-dashboard-title-admin' => 'Cruscòt OpenID (aministrator)',
+	'openid-dashboard-introduction' => "J'ampostassion corente dl'estension d'OpenID ([$1 agiut])",
 	'openid-dashboard-number-openid-users' => "Nùmer d'utent con OpenID",
 	'openid-dashboard-number-openids-in-database' => "Nùmer d'OpenID (total)",
 	'openid-dashboard-number-users-without-openid' => "Nùmer d'utent sensa OpenID",
