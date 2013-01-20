@@ -1490,7 +1490,7 @@ $messages['diq'] = array(
 	'openiddelete-button' => 'Tesdiq',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Kerdış',
-	'openid-urls-delete' => 'Bıestere',
+	'openid-urls-delete' => 'Bestere',
 );
 
 /** Lower Sorbian (dolnoserbski)
