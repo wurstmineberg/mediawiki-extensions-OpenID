@@ -64,7 +64,7 @@ class OpenIDHooks {
 
 		/* pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages */
 
-		if ( $nt 
+		if ( $nt
 			&& ( $nt->getNamespace() == NS_USER )
 			&& ( strpos( $nt->getText(), '/' ) === false ) ) {
 
@@ -119,7 +119,12 @@ class OpenIDHooks {
 
 		# We need to do this *before* PersonalUrls is called
 		if ( !$wgHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
-			$out->addHeadItem( 'openidloginstyle', self::loginStyle() );
+			$out->addHeadItem( 'openid-loginstyle', self::loginStyle() );
+		}
+
+		if  ( $out->getTitle()->equals( SpecialPage::getTitleFor( 'OpenIDConvert' ) )
+			|| $out->getTitle()->equals( SpecialPage::getTitleFor( 'OpenIDLogin' ) ) ) {
+				$out->addHeadItem( 'openid-providerstyle', self::providerStyle() );
 		}
 
 		return true;
@@ -130,7 +135,7 @@ class OpenIDHooks {
 	 * @return string
 	 */
 	private static function getAssociatedOpenIDsTable( $user ) {
-		global $wgLang;
+		global $wgLang, $wgOpenIDForcedProvider;
 
 		$openid_urls_registration = SpecialOpenID::getUserOpenIDInformation( $user );
 		$delTitle = SpecialPage::getTitleFor( 'OpenIDConvert', 'Delete' );
@@ -138,8 +143,8 @@ class OpenIDHooks {
 		$rows = '';
 
 		foreach ( $openid_urls_registration as $url_reg ) {
-		
-			if ( !empty( $url_reg->uoi_user_registration ) ) { 
+
+			if ( !empty( $url_reg->uoi_user_registration ) ) {
 				$registrationTime = wfMessage(
 					'openid-urls-registration-date-time',
 					$wgLang->timeanddate( $url_reg->uoi_user_registration, true ),
@@ -165,30 +170,35 @@ class OpenIDHooks {
 					array(),
 					Linker::link( $delTitle, wfMessage( 'openid-urls-delete' )->text(),
 						array(),
-						array( 'url' => $url_reg->uoi_openid ) 
-					) 
+						array( 'url' => $url_reg->uoi_openid )
+					)
 				)
 			) . "\n";
 		}
 		$info = Xml::tags( 'table', array( 'class' => 'wikitable' ),
 			Xml::tags( 'tr', array(),
 				Xml::element( 'th',
-					array(), 
+					array(),
 					wfMessage( 'openid-urls-url' )->text() ) .
 				Xml::element( 'th',
-					array(), 
+					array(),
 					wfMessage( 'openid-urls-registration' )->text() ) .
-				Xml::element( 'th', 
-					array(), 
+				Xml::element( 'th',
+					array(),
 					wfMessage( 'openid-urls-action' )->text() )
 				) . "\n" .
 			$rows
 		);
-		$info .= Linker::link(
-			SpecialPage::getTitleFor( 'OpenIDConvert' ),
-			wfMessage( 'openid-add-url' )->escaped()
-		);
+
+		if ( !is_string( $wgOpenIDForcedProvider ) ) {
+			$info .= Linker::link(
+				SpecialPage::getTitleFor( 'OpenIDConvert' ),
+				wfMessage( 'openid-add-url' )->escaped()
+			);
+		}
+
 		return $info;
+
 	}
 
 	/**
@@ -513,17 +523,34 @@ class OpenIDHooks {
 	/**
 	 * @return string
 	 */
+	private static function providerStyle() {
+		global $wgExtensionAssetsPath;
+
+		$ret = "\n<style type='text/css'>";
+		foreach ( OpenIDProvider::getProviders() as $provider ) {
+			$providerName = $provider->providerName();
+			$providerSize = $provider->isLargeProvider() ? 'large' : 'small';
+			$ret .= "#openid_provider_{$providerName}_icon { background-image: url({$wgExtensionAssetsPath}/OpenID/skin/icons/{$providerName}_{$providerSize}.png); }
+";
+		}
+		return $ret . "</style>";
+
+	}
+
+	/**
+	 * @return string
+	 */
 	private static function loginStyle() {
 		$openIDLogo = self::getOpenIDSmallLogoUrl();
 		return <<<EOS
-		<style type='text/css'>
-		li#pt-openidlogin {
-		  background: url($openIDLogo) top left no-repeat;
-		  padding-left: 20px;
-		  text-transform: none;
-		}
-		</style>
-
+<style type='text/css'>
+li#pt-openidlogin {
+background: url($openIDLogo) top left no-repeat;
+padding-left: 20px;
+text-transform: none;
+}
+</style>
 EOS;
 	}
+
 }

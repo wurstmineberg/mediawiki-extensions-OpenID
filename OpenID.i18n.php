@@ -51,6 +51,8 @@ The page has no other purpose.',
 
 The server response was: ''$2''",
 	'openid-error-request-forgery' => 'An error occurred: an invalid token was found.',
+	'openid-error-wrong-force-provider-setting' => 'An internal error occured: an incorrect URL value has been found for the forced provider "$1".',
+	'openid-error-openid-convert-not-allowed-forced-provider' => "It is not possible to associate further OpenIDs to your account, because you can only use the ''\"forced\"'' OpenID provider \"$1\" for logins on this Wiki.",
 	'openidconfigerror' => 'OpenID configuration error',
 	'openidconfigerrortext' => 'The OpenID storage configuration for this wiki is invalid.
 Please consult an [[Special:ListUsers/sysop|administrator]].',
@@ -236,20 +238,41 @@ This message is title for the following error messages:
 * {{msg-mw|openiderrortext}}
 * {{msg-mw|openid-error-no-auth}}
 * {{msg-mw|openid-error-server-response}}
-* {{msg-mw|openid-error-request-forgery}}',
+* {{msg-mw|openid-error-request-forgery}}
+* {{msg-mw|openid-error-openid-convert-not-allowed-forced-provider}}',
 	'openiderrortext' => 'Used as error message.
 
 The title for this error message is {{msg-mw|Openiderror}}.',
-	'openid-error-no-auth' => 'The error message when an unspecified authentication response/request error occurred during the verification of an OpenID.
+
+	'openid-error-no-auth' => 'Used as error message in case that an unspecified authentication response/request error occurred during the verification of the OpenID URL.
 
 Parameter:
-* $1 - an OpenID URL',
-	'openid-error-server-response' => 'The error message when a verification error occurred.
+* $1 - a name or fully qualified URL for an internally pre-programmed provider
+
+The title for this error message is {{msg-mw|Openiderror}}.',
+	'openid-error-server-response' => 'Used as error message during the verification of the OpenID.
 
 Parameters:
-* $1 - an OpenID URL
-* $2 - the OpenID Provider server response text',
+* $1 - a name or fully qualified URL for an internally pre-programmed provider
+* $2 - the received server response
+
+The title for this error message is {{msg-mw|Openiderror}}.',
+	'openid-error-request-forgery' => 'Used as error message in case that an invalid Anti-CSRF token was found.',
+	'openid-error-wrong-force-provider-setting' => 'Used as error message in case of an internal error occured, if the URL value for a forced provider (designated by its internal name or a fully qualified URL) is incorrect because it contains a username parameter (it must not).
+
+Parameter:
+* $1 - a name or fully qualified URL for an internally pre-programmed provider
+
+The title for this error message is {{msg-mw|Openiderror}}.',
+	'openid-error-openid-convert-not-allowed-forced-provider' => 'Used as error message if someone tries to directly access the OpenID convert screen
+even when the wiki only allowed a forced provider.
+
+Parameter:
+* $1 - a name or fully qualified URL for an internally pre-programmed provider
+
+The title for this error message is {{msg-mw|Openiderror}}.',
 	'openid-error-request-forgery' => 'The error message when an invalid token was found.',
+
 	'openidconfigerror' => 'Used as error title for the following error message:
 * {{msg-mw|Openidconfigerrortext}}',
 	'openidconfigerrortext' => 'Used as error message.
@@ -283,7 +306,7 @@ Parameters:
 * $1 - a username
 * $2 - an OpenID',
 	'openidusernameprefix' => 'Used as username prefix, if the nickname is not defined or is empty.',
-	'openidserverlogininstructions' => 'The message is shown to users when they want to log in on another site ($3) with their MediaWiki userpage URL (this MediaWiki as OpenID server) acting as OpenID identity. 
+	'openidserverlogininstructions' => 'The message is shown to users when they want to log in on another site ($3) with their MediaWiki userpage URL (this MediaWiki as OpenID server) acting as OpenID identity.
 
 If not logged in by cookie or session, the MediaWiki prompts the user to log in as user $2. After a successful login to the MediaWiki which acts as OpenID server, the process flow is redirected to the other OpenID consumer site, where the user will be logged via their (MediaWiki userpage) OpenID.
 
@@ -1401,7 +1424,7 @@ $messages['bs'] = array(
 	'openiderror' => 'Greška pri provjeri',
 	'openiderrortext' => 'Desila se greška pri provjeri OpenID URL adrese.',
 	'openidconfigerror' => 'Greška OpenID postavki',
-	'openidconfigerrortext' => 'OpenID konfiguracija spremanja za ovaj wiki je nevaljana. 
+	'openidconfigerrortext' => 'OpenID konfiguracija spremanja za ovaj wiki je nevaljana.
 Molimo konsultujte se sa [[Special:ListUsers/sysop|administratorom]].',
 	'openidpermission' => 'Greška kod OpenID dopuštenja',
 	'openidpermissiontext' => 'OpenID koji ste naveli nije dopušteno da se prijavi na ovaj server.',
@@ -2131,9 +2154,9 @@ $messages['el'] = array(
 	'openiddelete-text' => 'Κάνωντας κλικ στο κουμπί "{{int:openiddelete-button}}", θα αφαιρέσετε το OpenID $1 από το λογαριασμό σας.
 Δεν θα είστε πλέον σε θέση να συνδεθείτε με αυτό το OpenID.',
 	'openiddelete-button' => 'Επιβεβαίωση',
-	'openiddeleteerrornopassword' => 'Δεν μπορείτε να διαγράψετε όλα τα OpenIDs σας, διότι ο λογαριασμός σας δεν έχει κωδικό πρόσβασης. 
+	'openiddeleteerrornopassword' => 'Δεν μπορείτε να διαγράψετε όλα τα OpenIDs σας, διότι ο λογαριασμός σας δεν έχει κωδικό πρόσβασης.
  Δεν θα μπορέσετε να συνδεθείτε  χωρίς ένα OpenID.',
-	'openiddeleteerroropenidonly' => 'Δεν μπορείτε να διαγράψετε όλα τα OpenIDs σας, διότι σας επιτρέπεται  να συνδεθείτε μόνο με OpenID. 
+	'openiddeleteerroropenidonly' => 'Δεν μπορείτε να διαγράψετε όλα τα OpenIDs σας, διότι σας επιτρέπεται  να συνδεθείτε μόνο με OpenID.
  Δεν θα μπορέσετε να συνδεθείτε χωρίς ένα OpenID.',
 	'openiddelete-success' => 'Το OpenID αφαιρέθηκε επιτυχώς από τον λογαριασμό σας.',
 	'openiddelete-error' => 'Ένα σφάλμα προέκυψε κατά την αφαίρεση του OpenID από το λογαριασμό σας.',
@@ -3263,7 +3286,7 @@ $messages['hr'] = array(
 	'openiderror' => 'Greška pri provjeri',
 	'openiderrortext' => 'Došlo je do pogreške pri provjeri OpenID URL adrese',
 	'openidconfigerror' => 'Greška OpenID postavki',
-	'openidconfigerrortext' => 'OpenID konfiguracija spremanja za ovaj wiki nije valjana.  
+	'openidconfigerrortext' => 'OpenID konfiguracija spremanja za ovaj wiki nije valjana.
 Molimo savjetujte se s [[Special:ListUsers/sysop|administratorom]].',
 	'openidpermission' => 'Greška kod OpenID prava pristupa',
 	'openidpermissiontext' => 'OpenIDu kojeg ste naveli nije dopušteno prijaviti se na ovaj poslužitelj.',
@@ -3776,7 +3799,7 @@ Anda tidak akan dapat masuk log lagi dengan OpenID ini.',
 	'openiddelete-button' => 'Konfirmasi',
 	'openiddeleteerrornopassword' => 'Anda tidak dapat menghapus semua OpenID Anda karena akun Anda tidak diberi kata sandi.
 Anda tidak akan dapat masuk log tanpa OpenID.',
-	'openiddeleteerroropenidonly' => 'Anda tidak dapat menghapus semua OpenIDs Anda karena Anda hanya diijinkan masuk log dengan OpenID. 
+	'openiddeleteerroropenidonly' => 'Anda tidak dapat menghapus semua OpenIDs Anda karena Anda hanya diijinkan masuk log dengan OpenID.
 Anda tidak akan dapat masuk log tanpa OpenID.',
 	'openiddelete-success' => 'OpenID telah dihapus dari akun Anda.',
 	'openiddelete-error' => 'Terjadi kesalahan saat berusaha menghapus OpenID dari akun Anda.',
@@ -3898,9 +3921,9 @@ Esistono molti [//openid.net/get/ Provider OpenID]; è possibile che tu abbia gi
 	'openiddelete-text' => 'Facendo clic sul pulsante "{{int:openiddelete-button}}" verrà rimosso l\'OpenID $1 dal proprio account.
 Non si potrà più effettuare il login con questo OpenID.',
 	'openiddelete-button' => 'Conferma',
-	'openiddeleteerrornopassword' => 'Non è possibile eliminare tutti i tuoi OpenID perché il tuo account non ha password. 
+	'openiddeleteerrornopassword' => 'Non è possibile eliminare tutti i tuoi OpenID perché il tuo account non ha password.
 Non saresti in grado di accedere senza un OpenID.',
-	'openiddeleteerroropenidonly' => 'Non puoi eliminare tutti i tuoi OpenID perché è permesso collegarsi sono tramite OpenID. 
+	'openiddeleteerroropenidonly' => 'Non puoi eliminare tutti i tuoi OpenID perché è permesso collegarsi sono tramite OpenID.
 Non saresti in grado di accedere senza un OpenID.',
 	'openiddelete-success' => "L'OpenID è stato rimosso con successo dall'account.",
 	'openiddelete-error' => "Si è verificato un errore durante la rimozione dell'account OpenID.",
@@ -5727,7 +5750,7 @@ Jeśli tak się nie stało spróbuj wcisnąć klawisz „Continue” (Kontynuuj)
 	'openidclientonlytext' => 'Nie można korzystać z kont tej wiki jako OpenID w innych witrynach.',
 	'openidloginlabel' => 'Adres URL OpenID',
 	'openidlogininstructions' => '{{SITENAME}} korzysta ze standardu [//openid.net/ OpenID] umożliwiającego równoczesne zalogowanie się do wielu witryn.
-OpenID pozwala na zalogowanie się do wielu różnych witryn sieci Web, bez użycia osobnego hasła dla każdej z nich. 
+OpenID pozwala na zalogowanie się do wielu różnych witryn sieci Web, bez użycia osobnego hasła dla każdej z nich.
 (Zobacz [//pl.wikipedia.org/wiki/OpenID artykuł o OpenID w Wikipedii] jeśli chcesz uzyskać więcej informacji.)
 Jest wielu [//openid.net/get/ operatorów usługi OpenID] – możliwe, że posiadasz już konto OpenID u innego usługodawcy.',
 	'openidlogininstructions-openidloginonly' => "Do {{GRAMMAR:D.lp|{{SITENAME}}}} możesz się zalogować ''wyłącznie'' przy pomocy OpenID.",
@@ -5840,7 +5863,7 @@ a peul sern-ne un da j'opsion sì-sota.",
 A peul gestì (vardé, scancelé, e gionté d'àutri) OpenID ant la [[Special:Preferences#mw-prefsection-openid|Scheda OpenID]] dij sò gust.",
 	'openidnousername' => 'Gnun nòm utent spessificà.',
 	'openidbadusername' => 'Nòm utent spessificà pa bon.',
-	'openidautosubmit' => 'Sta pàgina-sì a conten un formolari che a dovrìa esse spedì automaticament se chiel a l\'ha JavaScript abilità. 
+	'openidautosubmit' => 'Sta pàgina-sì a conten un formolari che a dovrìa esse spedì automaticament se chiel a l\'ha JavaScript abilità.
 Dësnò, ch\'a preuva ël boton "Continua".',
 	'openidclientonlytext' => "A peul pa dovré dij cont da sta wiki-sì com OpenID dzora a n'àutr sit.",
 	'openidloginlabel' => 'Adrëssa OpenID',
@@ -7024,7 +7047,7 @@ Om inte, tryck på "Continue" (Fortsätt).',
 	'openidclientonlytext' => 'Du kan inte använda konton från denna wikin som OpenID på en annan sida.',
 	'openidloginlabel' => 'OpenID-adress',
 	'openidlogininstructions' => '{{SITENAME}} stödjer [//openid.net/ OpenID]-standarden för enhetlig inloggning på många webbsidor.
-OpenID låter dig logga in på många webbsidor utan att använda olika lösenord för varje. 
+OpenID låter dig logga in på många webbsidor utan att använda olika lösenord för varje.
 (Se [//en.wikipedia.org/wiki/OpenID Wikipedia-artikeln om OpenID] för mer information.)
 Det finns många [//openid.net/get/ leverantörer av OpenID], och du kan redan ha ett OpenID-aktiverat konto på en annan plats.',
 	'openidlogininstructions-openidloginonly' => "{{SITENAME}} låter dig ''endast'' logga in med OpenID.",
@@ -7150,7 +7173,7 @@ $messages['te'] = array(
 	'openidemail' => 'ఈ-మెయిల్ చిరునామా',
 	'openidlanguage' => 'భాష',
 	'openidtimezone' => 'కాలమానం',
-	'openidchooseinstructions' => 'సభ్యులందరికీ ముద్దు పేరు ఉండవలెను. 
+	'openidchooseinstructions' => 'సభ్యులందరికీ ముద్దు పేరు ఉండవలెను.
 క్రింద పేర్కొన్న వాటిలో ఒకటి ఎంచుకోండి',
 	'openidchoosefull' => 'మీ పూర్తి పేరు ($1)', # Fuzzy
 	'openidchooseurl' => 'మీ ఓపెన్ఐడీ నుండి తీసుకున్న పేరు ($1)',

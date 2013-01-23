@@ -53,26 +53,3 @@ a.openid_large_btn:focus {
 }
 #openid_small_providers_icons {
 }
-
-#openid_provider_OpenID_icon { /*@embed*/background-image: url(icons/OpenID_large.png); }
-#openid_provider_Google_icon { background-image: url(icons/Google_large.png); }
-#openid_provider_WMFLabs_icon { background-image: url(icons/WMFLabs_large.png); }
-#openid_provider_Yahoo_icon { background-image: url(icons/Yahoo_large.png); }
-#openid_provider_AOL_icon { background-image: url(icons/AOL_large.png); }
-
-#openid_provider_MyOpenID_icon { background-image: url(icons/MyOpenID_small.png); }
-#openid_provider_LiveJournal_icon { background-image: url(icons/LiveJournal_small.png); }
-#openid_provider_VOX_icon { background-image: url(icons/VOX_small.png); }
-#openid_provider_WordPress_icon { background-image: url(icons/WordPress_small.png); }
-#openid_provider_Blogger_icon { background-image: url(icons/Blogger_small.png); }
-#openid_provider_Flickr_icon { background-image: url(icons/Flickr_small.png); }
-#openid_provider_Verisign_icon { background-image: url(icons/Verisign_small.png); }
-#openid_provider_Vidoop_icon { background-image: url(icons/Vidoop_small.png); }
-#openid_provider_ClaimID_icon { background-image: url(icons/ClaimID_small.png); }
-
-#openid_url {
-	background: url(icons/openid-inputicon.png) no-repeat;
-	background-color: #fff;
-	color: #000;
-	padding-left: 18px;
-}

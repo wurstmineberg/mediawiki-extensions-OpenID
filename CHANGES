@@ -1,6 +1,11 @@
 CHANGES
 =======
-3.341 20130821  fix of an i18n problem
+
+3.40  20130821  bug 47151 Special:OpenIDConvert can be used even when forcing an
+                openid provider
+                bug 44819 introduction of array of $wgOpenIDProviders and
+                $wgOpenIDForcedProvider
+                fix of an i18n problem
 3.34  20130810  bug 44821 OpenID Consumer wiki stalls with blank page for
                 certain OpenID Provider verification error cases
                 (consumer fails to show the provider response message)
@@ -47,7 +52,7 @@ CHANGES
 2.05  20130304  fix bug45586 preference tab got now section headers
 2.03  20130227  fix bug45323 preference tab "OpenID" shows list of "trust" records
 2.01  20130209  fix to allow identity selection bug44416
-                fix bug40068, bug40067 $wgOpenIDConsumerForce
+                fix bug40068, bug40067 $wgOpenIDForcedProvider
                 changed default value $wgOpenIDShowProviderIcons = true;
 1.005 20130209  $wgTrustRoot was renamed to $wgOpenIDTrustRoot
                 $wgOpenID being prefix of all extension global variables

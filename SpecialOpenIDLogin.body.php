@@ -41,7 +41,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $par String or null
 	 */
 	function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOpenIDConsumerForce;
+		global $wgRequest, $wgUser, $wgOpenIDForcedProvider, $wgOpenIDProviders;
 
 		$this->setHeaders();
 
@@ -66,17 +66,62 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 				$this->setReturnTo( $wgRequest->getText( 'returnto' ), $wgRequest->getVal( 'returntoquery' ) );
 			}
 
-			$openid_url = $wgRequest->getText( 'openid_url' );
+			// if a forced OpenID provider is specified, bypass
+			// the form and any openid_url in the request.
+
+			$skipTokenTestBecauseForcedProvider = false;
+
+			if ( is_string( $wgOpenIDForcedProvider ) ) {
+
+				if ( array_key_exists( $wgOpenIDForcedProvider, $wgOpenIDProviders ) ) {
+
+					$url = $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-url'];
+					wfDebug( "OpenID: wgOpenIDForcedProvider $wgOpenIDForcedProvider defined => $url\n" );
+
+					// make sure that the associated provider Url does not contain {username} placeholder
+					// and try to use an optional openid-selection-url from the $wgOpenIDProviders array
+					if ( strpos( $url, '{username}' ) === false ) {
+						$skipTokenTestBecauseForcedProvider = true;
+						$openid_url = $url;
+					} else {
+						if ( isset ( $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-selection-url'] ) ) {
+							$skipTokenTestBecauseForcedProvider = true;
+							$openid_url = $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-selection-url'];
+						} else {
+							wfDebug( "OpenID: Error: wgOpenIDForcedProvider $wgOpenIDForcedProvider defined, but wgOpenIDProviders array has an invalid provider Url. Must not contain a username placeholder!\n");
+							$this->showErrorPage( 'openid-error-wrong-force-provider-setting', array( $wgOpenIDForcedProvider ) );
+							return;
+						}
+					}
+
+				} else {
+
+					// a fully qualified URL is given
+					$skipTokenTestBecauseForcedProvider = true;
+					$openid_url = $wgOpenIDForcedProvider;
+
+				}
+
+			} else {
+
+				$openid_url = $wgRequest->getText( 'openid_url' );
+
+			}
 
 			if ( !is_null( $openid_url ) && strlen( $openid_url ) > 0 ) {
-				$this->login( $openid_url, $this->getTitle( 'Finish' ) );
-		 	} elseif ( !is_null ( $wgOpenIDConsumerForce ) ) {
-		 		// if a forced OpenID provider specified, bypass the form
-		 		$this->login( $wgOpenIDConsumerForce, $this->getTitle( 'Finish' ) );
+				$this->login( $openid_url, $this->getTitle( 'Finish' ), $skipTokenTestBecauseForcedProvider );
 			} else {
 				$this->providerSelectionLoginForm();
 			}
 		}
+	}
+
+	/**
+	 * Displays an error message
+	 */
+	function showErrorPage( $msg, $params = array() ) {
+		global $wgUser, $wgOut;
+		$wgOut->showErrorPage( 'openiderror', $msg, $params );
 	}
 
 	/**
@@ -97,70 +142,42 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * Displays the main provider selection login form
 	 */
 	function providerSelectionLoginForm() {
-		global $wgOut, $wgOpenIDShowProviderIcons, $wgOpenIDLoginOnly;
+		global $wgOut, $wgOpenIDShowProviderIcons, $wgOpenIDLoginOnly, $wgOpenIDForcedProvider;
 
-		$wgOut->addModules( $wgOpenIDShowProviderIcons ? 'ext.openid.icons' : 'ext.openid.plain' );
-
-		$formsHTML = '';
-
-		$largeButtonsHTML = '<div id="openid_large_providers">';
-		foreach ( OpenIDProvider::getLargeProviders() as $provider ) {
-			$largeButtonsHTML .= $provider->getButtonHTML( 'large' );
-			$formsHTML .= $provider->getLoginFormHTML();
-		}
-		$largeButtonsHTML .= '</div>';
-
+		$inputFormHTML = '';
+		$largeButtonsHTML = '';
 		$smallButtonsHTML = '';
-		if ( $wgOpenIDShowProviderIcons ) {
-			$smallButtonsHTML .= '<div id="openid_small_providers_icons">';
-			foreach ( OpenIDProvider::getSmallProviders() as $provider ) {
-				$smallButtonsHTML .= $provider->getButtonHTML( 'small' );
-				$formsHTML .= $provider->getLoginFormHTML();
-			}
-			$smallButtonsHTML .= '</div>';
+
+		if ( get_class( $wgOpenIDForcedProvider ) == 'OpenIDProvider' ) {
+			$inputFormHTML .= $wgOpenIDForcedProvider->getLoginFormHTML();
 		} else {
-			$smallButtonsHTML .= '<div id="openid_small_providers_links">';
-			$smallButtonsHTML .= '<ul class="openid_small_providers_block">';
-			$small = OpenIDProvider::getSmallProviders();
-
-			$i = 0;
-			$break = true;
-			foreach ( $small as $provider ) {
-				if ( $break && $i > count( $small ) / 2 ) {
-					$smallButtonsHTML .= '</ul><ul class="openid_small_providers_block">';
-					$break = false;
-				}
-
-				$smallButtonsHTML .= '<li>' . $provider->getButtonHTML( 'small' ) . '</li>';
-
-				$formsHTML .= $provider->getLoginFormHTML();
-				$i++;
-			}
-			$smallButtonsHTML .= '</ul>';
-			$smallButtonsHTML .= '</div>';
+			SpecialOpenIDConvert::renderProviderIcons( $inputFormHTML, $largeButtonsHTML, $smallButtonsHTML );
 		}
 
 		LoginForm::setLoginToken();
+		$wgOut->addModules( $wgOpenIDShowProviderIcons ? 'ext.openid.icons' : 'ext.openid.plain' );
 		$wgOut->addHTML(
-			Xml::openElement( 'form',
+			Html::rawElement( 'form',
 				array(
 					'id' => 'openid_form',
 					'action' => $this->getTitle()->getLocalUrl(),
 					'method' => 'post',
 					'onsubmit' => 'openid.update()'
-				)
-			) .
-			Xml::fieldset( wfMessage( 'openid-login-or-create-account' )->text() ) .
-			$largeButtonsHTML .
-			'<div id="openid_input_area">' .
-			$formsHTML .
-			'</div>' .
-			$smallButtonsHTML .
-			Xml::closeElement( 'fieldset' ) .
-			Html::Hidden( 'openidProviderSelectionLoginToken', LoginForm::getLoginToken() ) . "\n" .
-			Xml::closeElement( 'form' )
+				),
+				Xml::fieldset( wfMessage( 'openid-login-or-create-account' )->text() ) .
+				$largeButtonsHTML .
+				Html::rawElement( 'div',
+					array( 'id' => 'openid_input_area' ),
+					$inputFormHTML
+				) .
+				$smallButtonsHTML .
+				Xml::closeElement( 'fieldset' ) .
+				Html::Hidden( 'openidProviderSelectionLoginToken', LoginForm::getLoginToken() )
+			)
 		);
+
 		$wgOut->addWikiMsg( 'openidlogininstructions' );
+
 		if ( $wgOpenIDLoginOnly ) {
 			$wgOut->addWikiMsg( 'openidlogininstructions-openidloginonly' );
 		} else {
@@ -193,13 +210,13 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 					'action' => $this->getTitle( 'ChooseName' )->getLocalUrl(),
 					'method' => 'POST'
 				)
-			) . "\n" .
+			) .
 			Xml::fieldset( wfMessage( 'openidchooselegend' )->text(),
 				false,
 				array(
 					'id' => 'mw-openid-choosename'
 				)
-			) . "\n" .
+			) .
 			Xml::openElement( 'table' )
 		);
 		$def = false;
@@ -273,25 +290,25 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 							'id' => 'wpNameChoiceExisting'
 						)
 					)
-				) . "\n" .
+				) .
 				Xml::tags( 'td',
 					array(
 						'class' => 'mw-input'
 					),
-					Xml::label( wfMessage( 'openidchooseexisting' )->text(), 'wpNameChoiceExisting' ) . "<br />\n" .
-					wfMessage( 'openidchooseusername' )->text() . "\n" .
+					Xml::label( wfMessage( 'openidchooseexisting' )->text(), 'wpNameChoiceExisting' ) . "<br />" .
+					wfMessage( 'openidchooseusername' )->text() .
 					Xml::input( 'wpExistingName',
 						16,
 						$name,
 						array(
 							'id' => 'wpExistingName'
 						)
-					) . "\n" .
-					wfMessage( 'openidchoosepassword' )->text() . "\n" .
-					Xml::password( 'wpExistingPassword' ) . "\n" .
-					$oidAttributesUpdate . "\n"
-				) . "\n" .
-				Xml::closeElement( 'tr' ) . "\n"
+					) .
+					wfMessage( 'openidchoosepassword' )->text() .
+					Xml::password( 'wpExistingPassword' ) .
+					$oidAttributesUpdate
+				) .
+				Xml::closeElement( 'tr' )
 			);
 			$def = true;
 		} // $wgOpenIDAllowExistingAccountSelection
@@ -323,7 +340,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 							),
 							Xml::label( wfMessage( 'openidchoosenick', $sreg['nickname'] )->escaped(), 'wpNameChoiceNick' )
 						) .
-						Xml::closeElement( 'tr' ) . "\n"
+						Xml::closeElement( 'tr' )
 					);
 				}
 
@@ -359,7 +376,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 							),
 							Xml::label( wfMessage( 'openidchoosefull', $fullname )->escaped(), 'wpNameChoiceFull' )
 						) .
-						Xml::closeElement( 'tr' ) . "\n"
+						Xml::closeElement( 'tr' )
 					);
 					$def = true;
 				}
@@ -386,7 +403,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 							),
 							Xml::label( wfMessage( 'openidchooseurl', $idname )->text(), 'wpNameChoiceUrl' )
 						) .
-						Xml::closeElement( 'tr' ) . "\n"
+						Xml::closeElement( 'tr' )
 					);
 					$def = true;
 				}
@@ -413,7 +430,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 						),
 						Xml::label( wfMessage( 'openidchooseauto', $this->automaticName( $sreg ) )->escaped(), 'wpNameChoiceAuto' )
 					) .
-						Xml::closeElement( 'tr' ) . "\n"
+					Xml::closeElement( 'tr' )
 					);
 			}
 
@@ -446,7 +463,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 						)
 					)
 				) .
-				Xml::closeElement( 'tr' ) . "\n"
+				Xml::closeElement( 'tr' )
 				);
 			}
 
@@ -456,23 +473,22 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 		# These are always available
 		$wgOut->addHTML(
-			Xml::openElement( 'tr' ) . "\n" .
+			Xml::openElement( 'tr' ) .
 			Xml::tags( 'td',
 				array(),
 				''
-			) . "\n" .
+			) .
 			Xml::tags( 'td',
 				array(
 					'class' => 'mw-submit'
 				),
 				Xml::submitButton( wfMessage( 'userlogin' )->text(), array( 'name' => 'wpOK' ) ) .
 				Xml::submitButton( wfMessage( 'cancel' )->text(), array( 'name' => 'wpCancel' ) )
-			) . "\n" .
-			Xml::closeElement( 'tr' ) . "\n" .
-
+			) .
+			Xml::closeElement( 'tr' ) .
 			Xml::closeElement( 'table' ) .
 			Xml::closeElement( 'fieldset' ) .
-			Html::Hidden( 'openidChooseNameBeforeLoginToken', LoginForm::getLoginToken() ) . "\n" .
+			Html::Hidden( 'openidChooseNameBeforeLoginToken', LoginForm::getLoginToken() ) .
 			Xml::closeElement( 'form' )
 		);
 	}

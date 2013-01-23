@@ -214,11 +214,17 @@ class SpecialOpenID extends SpecialPage {
 	 * @param $openid_url string
 	 * @param $finish_page
 	 */
-	function login( $openid_url, $finish_page ) {
-		global $wgOpenIDTrustRoot, $wgOut, $wgUser, $wgRequest;
+	function login( $openid_url, $finish_page, $skipTokenTestBecauseForcedProvider = false ) {
+		global $wgOut, $wgUser, $wgRequest, $wgOpenIDTrustRoot;
 
-		// check whether an login or a convert token is present
-		if ( ( LoginForm::getLoginToken() !== $wgRequest->getVal( 'openidProviderSelectionLoginToken' ) )
+		// Check whether an login or a convert token is present
+
+		// Token test is skipped in the specific case that the wiki is set up to use a forced provider.
+		// This login function is then called internally in the same web request.
+		// In this case, for example when directly coming from the login link on the MainPage, we don't have any pre-login token
+
+		if ( !$skipTokenTestBecauseForcedProvider
+			&& ( LoginForm::getLoginToken() !== $wgRequest->getVal( 'openidProviderSelectionLoginToken' ) )
 			&& !( $wgUser->matchEditToken( $wgRequest->getVal( 'openidConvertToken' ), 'openidConvertToken' ) ) ) {
 
 			$wgOut->showErrorPage( 'openiderror', 'openid-error-request-forgery' );
@@ -226,8 +232,8 @@ class SpecialOpenID extends SpecialPage {
 		}
 
 		# If it's an interwiki link, expand it
-
 		$openid_url = $this->interwikiExpand( $openid_url );
+		wfDebug( "OpenID: Attempting login with url: $openid_url\n" );
 
 		# Check if the URL is allowed
 
@@ -354,6 +360,7 @@ class SpecialOpenID extends SpecialPage {
 			if ( Auth_OpenID::isFailure( $form_html ) ) {
 				displayError( 'Could not redirect to server: ' . $form_html->message );
 			} else {
+
 				$wgOut->addWikiMsg( 'openidautosubmit' );
 				$wgOut->addHTML( $form_html );
 

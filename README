@@ -1,7 +1,7 @@
 MediaWiki OpenID extension README
-version 3.30 20130505
+version 3.40 20130811
 
-Homepage and manual 
+Homepage and manual
 http://www.mediawiki.org/wiki/Extension:OpenID
 
 This is the README file for the OpenID extension for MediaWiki software. The
@@ -91,13 +91,13 @@ won't work.
 In your MediaWiki LocalSettings.php, add the following line some place towards
 the bottom of the file:
 
-	require_once( "$IP/extensions/OpenID/OpenID.php" );
+   require_once( "$IP/extensions/OpenID/OpenID.php" );
 
-Run update.php script in in your MediaWiki maintenance folder to conditionally 
+Run update.php script in in your MediaWiki maintenance folder to conditionally
 create a new table in MediaWiki database as required by the OpenID extension:
 
-	cd $IP/maintenance
-	php update.php
+   cd $IP/maintenance
+   php update.php
 
 Theoretically it should work out of the box, but you'll almost definitely want
 to set the trust root and access controls (see Configuration below).
@@ -114,7 +114,7 @@ To upgrade, you'll need to do at least the following:
 * Install the latest version of the PHP OpenID library
   https://github.com/openid/php-openid
 * Check that your consumer and server stores are correct. The original maintainer
-  got tired of maintaining the MemcStore that nobody seemed to want, so if you 
+  got tired of maintaining the MemcStore that nobody seemed to want, so if you
   used that, you need to use the filestore now. See below for how to configure it.
 * Change your require_once line in LocalSettings.php to use the openid.php file.
 * The extension has been converted to use a clumsy and perverse OOP-like
@@ -226,11 +226,39 @@ LocalSettings.php file. Please read carefully.
   OpenIDs you want to deny access to. This is mostly useful for
   servers that are known to be bad. Example: "#^(http://)?example.com/#".
 
-* $wgOpenIDConsumerForce -- a single provider which will always be used,
-  bypassing the selection dialog and manual entry.  Useful for team wikis
-  using a provider such as Google Apps for Your Domain.
-  
-* $wgOpenIDUseEmailAsNickname -- designed for use with the above, parse 
+* $wgOpenIDForcedProvider -- (null or string) a name of a supported provider,
+  or a fully qualified url of the Id selection page of an arbitrary provider,
+  which will always be used, aka "forced provider".
+
+  Setting this value bypasses the extension's selection dialog and manual entry.
+  It is useful for team wikis using a fixed (hard-coded) provider such as
+  Google, or another MediaWiki as OpenID Provider for logging in to your wiki.
+
+* $wgOpenIDProviders -- (array) names and parameters of OpenID Providers, which
+  are supported by the extension.
+
+  The format is
+
+  array( 'providername' => array( <provider-parameters> ) )
+
+  Respected keys for provider parameters are:
+
+   * 'openid-url': the url of the openid provider may contain '{username}' in
+     order to display a form requesting a username that will be substitutde
+     into the url before attempting authentication.
+
+   * 'large-provider': if true it will be displayed in the large buttons
+     otherwise will be displayed in the small buttons
+
+   * 'label': If set this exact string will be the label when the provider is
+     selected. If not present a localization message with a key of the
+     'openid-provider-label-$providerName' is used.
+
+* $wgOpenIDDefaultProviderName -- (null or string) Defaults to null.
+  The provider name in $wgOpenIDProviders that will be shown preselected
+  as default to new users who never selected an provider before.
+
+* $wgOpenIDUseEmailAsNickname -- designed for use with the above, parse
   the e-mail address provided by your provider and use the user component
   as the MediaWiki username.
 
@@ -249,9 +277,9 @@ LocalSettings.php file. Please read carefully.
 * $wgOpenIDAllowAutomaticUsername
   defaults to true; when first-time logging in with OpenID, show option
   to choose and to allow an automatically generated username
-    
-* $wgOpenIDTrustEmailAddress -- trust the e-mail address sent by the 
-  provider and don't require it to be verified.  If false (the default), 
+
+* $wgOpenIDTrustEmailAddress -- trust the e-mail address sent by the
+  provider and don't require it to be verified.  If false (the default),
   all new users will be required to validate their e-mail address.
 
 * $wgOpenIDServerForceAllowTrust -- an array of regular expressions
@@ -313,7 +341,7 @@ LocalSettings.php file. Please read carefully.
 
   False prevents the serving of User page URLs as OpenID accounts
   on other sites.
-  
+
   Remark:
 
   User page urls can (currently) only act as OpenID if the user page really
@@ -354,6 +382,7 @@ $wgGroupPermissions['*'    ]['read']            = true;
 $wgGroupPermissions['*'    ]['edit']            = false;
 $wgGroupPermissions['*'    ]['createpage']      = false;
 $wgGroupPermissions['*'    ]['createtalk']      = false;
+
 
 Example 2:
 
