@@ -84,7 +84,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			) );
 
 			$rt = SpecialPage::getTitleFor( 'OpenIDXRDS', $wgOpenIDIdentifierSelect );
-			$xrdsUrl = $rt->getFullURL( '', false, PROTO_CURRENT  );
+			$xrdsUrl = $rt->getFullURL( '', false, PROTO_CANONICAL  );
 
 			$out->addMeta( 'http:X-XRDS-Location', $xrdsUrl );
 			$this->getRequest()->response()->header( 'X-XRDS-Location: ' . $xrdsUrl );
@@ -229,7 +229,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	function Url() {
 		$nt = SpecialPage::getTitleFor( 'OpenIDServer' );
 		if ( isset( $nt ) ) {
-			return $nt->getFullURL();
+			return $nt->getFullURL( '', false, PROTO_CANONICAL );
 		} else {
 			return null;
 		}
@@ -270,7 +270,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			$local_identity = str_replace( '{ID}', $user->getID(), $wgOpenIDIdentifiersURL );
 		} else {
 			$local_identity = SpecialPage::getTitleFor( 'OpenIDIdentifier', $user->getID() );
-			$local_identity = $local_identity->getFullURL();
+			$local_identity = $local_identity->getFullURL( '', false, PROTO_CANONICAL );
 		}
 
 		return $local_identity;
@@ -354,7 +354,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 				);
 				$title = SpecialPage::getTitleFor( 'Userlogin' );
 
-				$url = $title->getFullURL( $query, false, PROTO_CURRENT );
+				$url = $title->getFullURL( $query, false, PROTO_CANONICAL );
 				$wgOut->redirect( $url );
 				return null;
 			}
@@ -913,6 +913,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		# it must start with our server, case doesn't matter
 
+		// Remove the protocol if $wgServer is protocol-relative.
+		if ( substr( $wgServer, 0, 2 ) == '//' ) {
+			$url = substr( $url, strpos( $url, ':' ) + 1 );
+		}
+
 		if ( strpos( strtolower( $url ), strtolower( $wgServer ) ) !== 0 ) {
 			return null;
 		}
@@ -955,6 +960,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	 * @return String
 	 */
 	function serverUrl() {
-		return $this->getTitle()->getFullURL( '', false, PROTO_CURRENT );
+		return $this->getTitle()->getFullURL( '', false, PROTO_CANONICAL );
 	}
 }

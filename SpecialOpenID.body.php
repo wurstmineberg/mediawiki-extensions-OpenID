@@ -122,7 +122,7 @@ class SpecialOpenID extends SpecialPage {
 		# If it's got an iw, return that
 		if ( !is_null( $nt ) && !is_null( $nt->getInterwiki() )
 			&& strlen( $nt->getInterwiki() ) > 0 ) {
-			return $nt->getFullUrl();
+			return $nt->getFullUrl( '', false, PROTO_CANONICAL );
 		} else {
 			return $openid_url;
 		}
@@ -201,9 +201,9 @@ class SpecialOpenID extends SpecialPage {
 	 * @return bool
 	 */
 	function isLocalUrl( $url ) {
-		global $wgServer, $wgArticlePath;
+		global $wgCanonicalServer, $wgArticlePath;
 
-		$pattern = $wgServer . $wgArticlePath;
+		$pattern = $wgCanonicalServer . $wgArticlePath;
 		$pattern = str_replace( '$1', '(.*)', $pattern );
 		$pattern = str_replace( '?', '\?', $pattern );
 
@@ -239,8 +239,8 @@ class SpecialOpenID extends SpecialPage {
 		if ( !is_null( $wgOpenIDTrustRoot ) ) {
 			$trust_root = $wgOpenIDTrustRoot;
 		} else {
-			global $wgScriptPath, $wgServer;
-			$trust_root = $wgServer . $wgScriptPath;
+			global $wgScriptPath, $wgCanonicalServer;
+			$trust_root = $wgCanonicalServer . $wgScriptPath;
 		}
 
 		wfSuppressWarnings();
@@ -397,7 +397,6 @@ class SpecialOpenID extends SpecialPage {
 	 * @return string
 	 */
 	function scriptUrl( $par = false ) {
-		global $wgServer, $wgScript;
 
 		if ( !is_object( $par ) ) {
 			$nt = $this->getTitle( $par );
@@ -405,12 +404,13 @@ class SpecialOpenID extends SpecialPage {
 			$nt = $par;
 		}
 
-		if ( !is_null( $nt ) ) {
-			$dbkey = wfUrlencode( $nt->getPrefixedDBkey() );
-			return "{$wgServer}{$wgScript}?title={$dbkey}";
-		} else {
+		if ( $nt === null ) {
 			return '';
 		}
+
+		// adding a dummy parameter forces a canonical url which we need
+		return $nt->getFullURL( array( 'dummy' => 'x'), false, PROTO_CANONICAL );
+
 	}
 
 	protected function setupSession() {
