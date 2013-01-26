@@ -135,9 +135,16 @@ You would not able to log in without an OpenID.',
 	'openid-provider-label-other-username' => 'Enter your $1 username',
 
 	'specialpages-group-openid' => 'OpenID service pages and status information',
+
+	# Rights
 	'right-openid-converter-access' => 'Can add or convert their account to use OpenID identities',
 	'right-openid-dashboard-access' => 'Standard access to the OpenID dashboard',
 	'right-openid-dashboard-admin' => 'Administrator access to the OpenID dashboard',
+
+	# Associated actions - in the sentence "You do not have permission to X"
+	'action-openid-converter-access' => 'add or convert your account to use OpenID identities',
+	'action-openid-dashboard-access' => 'access the OpenID dashboard',
+	'action-openid-dashboard-admin' => 'access the OpenID administrator dashboard',
 
 	'openid-dashboard-title' => 'OpenID dashboard',
 	'openid-dashboard-title-admin' => 'OpenID dashboard (administrator)',
@@ -211,6 +218,12 @@ Used in the same way as {{msg-mw|prefs-registration-date-time}}.',
 	'right-openid-dashboard-access' => '{{doc-right|openid-dashboard-access}}
 the standard access right for the OpenID dashboard, which is a restricted special page',
 	'right-openid-dashboard-admin' => '{{doc-right|openid-dashboard-admin}}
+the special adminstrator access right for the OpenID dashboard, which is a restricted special page',
+	'action-openid-converter-access' => '{{doc-action|openid-converter-access}}
+{{doc-singularthey}}',
+	'action-openid-dashboard-access' => '{{doc-action|openid-dashboard-access}}
+the standard access right for the OpenID dashboard, which is a restricted special page',
+	'action-openid-dashboard-admin' => '{{doc-action|openid-dashboard-admin}}
 the special adminstrator access right for the OpenID dashboard, which is a restricted special page',
 	'openid-dashboard-title' => 'Display name and page title for the OpenID dashboard (non-admin) on Special:SpecialPages',
 	'openid-dashboard-title-admin' => 'Display name and page title for the administrator OpenID dashboard on Special:SpecialPages',
@@ -1407,6 +1420,9 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'right-openid-converter-access' => 'Benutzerkonto zur Nutzung von OpenID erstellen oder konvertieren',
 	'right-openid-dashboard-access' => 'Standardzugang zur OpenID-Übersichts- und Einstellungsseite',
 	'right-openid-dashboard-admin' => 'Administratorzugang zur OpenID-Übersichts- und Einstellungsseite',
+	'action-openid-converter-access' => 'ein Benutzerkonto zur Nutzung von OpenID zu erstellen oder zu konvertieren',
+	'action-openid-dashboard-access' => 'die OpenID-Übersichts- und Einstellungsseite anzusehen',
+	'action-openid-dashboard-admin' => 'die OpenID-Administrator-Übersichts- und -Einstellungsseite anzusehen',
 	'openid-dashboard-title' => 'OpenID – Übersicht',
 	'openid-dashboard-title-admin' => 'OpenID – Übersicht und Einstellungen',
 	'openid-dashboard-introduction' => 'Die aktuellen Einstellungen zu OpenID ([$1 Hilfe])',
