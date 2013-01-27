@@ -731,7 +731,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$parts = parse_url( $url );
 
 		$relative = $parts['path'];
-		if ( !is_null( $parts['query'] ) && strlen( $parts['query'] ) > 0 ) {
+		if ( array_key_exists( 'query', $parts ) && strlen( $parts['query'] ) > 0 ) {
 			$relative .= '?' . $parts['query'];
 		}
 
