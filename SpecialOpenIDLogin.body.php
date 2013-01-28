@@ -454,8 +454,14 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 			$sreg_resp = Auth_OpenID_SRegResponse::fromSuccessResponse( $response );
 			$sreg = $sreg_resp->contents();
+			if ( $sreg === null ) {
+				$sreg = array();
+			}
 			$ax_resp = Auth_OpenID_AX_FetchResponse::fromSuccessResponse( $response );
 			$ax = $ax_resp->data;
+			if ( $ax === null ) {
+				$ax = array();
+			}
 			wfRestoreWarnings();
 
 			if ( is_null( $openid ) ) {
@@ -841,8 +847,8 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 	function fetchValues() {
 		$response = isset( $_SESSION['openid_consumer_response'] ) ? $_SESSION['openid_consumer_response'] : null;
-		$sreg = isset( $_SESSION['openid_consumer_sreg'] ) ? $_SESSION['openid_consumer_sreg'] : null;
-		$ax = isset( $_SESSION['openid_consumer_ax'] ) ? $_SESSION['openid_consumer_ax'] : null;
+		$sreg = isset( $_SESSION['openid_consumer_sreg'] ) ? $_SESSION['openid_consumer_sreg'] : array();
+		$ax = isset( $_SESSION['openid_consumer_ax'] ) ? $_SESSION['openid_consumer_ax'] : array();
 		return array( $response, $sreg, $ax );
 	}
 
