@@ -1,4 +1,4 @@
-Status: 1.000 20120212
+Status: 2.01 20130209
 
 ? more details are needed to understand the "to do"
 * resolved, or partially resolved, wontfix
@@ -13,6 +13,9 @@ Status: 1.000 20120212
 ? Auto-login if you've logged in before with an OpenID,
   and are logged into that account now
 
+- fix blank consumer page during /Continue in case of server errors
+  "Request was for http://.../Special:OpenIDXRDS/id, cannot reply with identity http://.../User:Admin"
+  "This request uses IdP-driven identifier selection. You must supply an identifier in the response."
 - $byEmail parameter of AddNewAccount hook: should this be false, or true ?
 - i18n of OpenIDDashboard.body.php
 - redesign MediaWiki extension and php-openid library paths to avoid
@@ -44,6 +47,9 @@ Status: 1.000 20120212
 * Configure some stuff through Special:Preferences or a dedicated control panel
   (under construction, see Special:OpenIDDashboard)
 
++ change $wgTrustRoot variable name
++ fix bug 44416
+  OpenID: when logging in as "Name" with wiki/Special:OpenIDServer/id , the OpenID should be restamped to wiki/User:Name
 + be aware of user deletions done by extension UserMerge and Delete (and others)
   https://bugzilla.wikimedia.org/show_bug.cgi?id=28993
 + allow user to set or reset a password in case of

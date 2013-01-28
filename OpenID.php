@@ -20,6 +20,8 @@
  *
  * @file
  * @author Evan Prodromou <evan@prodromou.name>
+ * @author Thomas Gries
+ * @author Tyler Romeo
  * @ingroup Extensions
  */
 
@@ -27,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '1.005 20130209' );
+define( 'MEDIAWIKI_OPENID_VERSION', '2.01 20130209' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -193,6 +195,13 @@ $wgOpenIDOnly = false;
  */
 $wgOpenIDClientOnly = false;
 
+/*
+ * The fractional part after /Special:OpenIDServer/
+ * when the server shall show the selection (login) form
+ *
+ */
+$wgOpenIDIdentifierSelect = "id";
+
 /**
  * Allow to use User pages as OpenIDs even if user is using OpenID already
  *
@@ -217,7 +226,7 @@ $wgOpenIDMergeOnAccountMerge = false;
 /**
  * If true, will show provider icons instead of the text.
  */
-$wgOpenIDShowProviderIcons = false;
+$wgOpenIDShowProviderIcons = true;
 
 # New options
 $wgDefaultUserOptions['openid-hide'] = 0;

@@ -53,6 +53,7 @@ a.openid_large_btn:focus {
 
 #openid_provider_openid_icon { /*@embed*/background-image: url(icons/openid_large.png); }
 #openid_provider_google_icon { background-image: url(icons/google_large.png); }
+#openid_provider_wmflabs_icon { background-image: url(icons/wmflabs_openid.png); }
 #openid_provider_yahoo_icon { background-image: url(icons/yahoo_large.png); }
 #openid_provider_aol_icon { background-image: url(icons/aol_large.png); }
 

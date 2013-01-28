@@ -1,5 +1,8 @@
 CHANGES
 =======
 
-1.005 20130209 $wgOpenIDTrustRoot was renamed to $wgOpenIDTrustRoot
-               $wgOpenID being prefix of all extension global variables
+2.01  20130209  fix to allow identity selection bug44416
+                fix bug40068, bug40067 $wgOpenIDConsumerForce
+                changed default value $wgOpenIDShowProviderIcons = true;
+1.005 20130209  $wgTrustRoot was renamed to $wgOpenIDTrustRoot
+                $wgOpenID being prefix of all extension global variables

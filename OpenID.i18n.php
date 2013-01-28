@@ -35,6 +35,7 @@ $messages['en'] = array(
 	'openid-desc' => 'Let users log in to the wiki with an [//openid.net/ OpenID]. If this is enabled on the wiki, they can also use their user account URL of this wiki as OpenID to log in to other OpenID-aware web sites',
 	'openidlogin' => 'Log in / create account with OpenID',
 	'openidserver' => 'OpenID server',
+	'openid-server-identity-page-text' => 'This is a technical OpenID server page for starting the OpenID authentication. The page has no other purpose.',
 	'openidxrds' => 'Yadis file',
 	'openidconvert' => 'OpenID converter',
 	'openiderror' => 'Verification error',
@@ -132,6 +133,7 @@ You would not able to log in without an OpenID.',
 	'openid-provider-label-google' => 'Log in using your Google account',
 	'openid-provider-label-yahoo' => 'Log in using your Yahoo account',
 	'openid-provider-label-aol' => 'Enter your AOL screenname',
+	'openid-provider-label-wmflabs' => 'Log in using your Wmflabs account',
 	'openid-provider-label-other-username' => 'Enter your $1 username',
 
 	'specialpages-group-openid' => 'OpenID service pages and status information',
@@ -173,6 +175,7 @@ You would not able to log in without an OpenID.',
  */
 $messages['qqq'] = array(
 	'openid-desc' => '{{desc|name=Open ID|url=http://www.mediawiki.org/wiki/Extension:OpenID}}',
+	'openid-server-identity-page-text' => 'A short text which describes this technical OpenID server identity page which is only used during OpenID authentication and not used otherwise.',
 	'openidsuccesstext' => 'Parameters:
 * $1 is a username
 * $2 is an OpenID.',
@@ -1323,6 +1326,7 @@ $messages['de'] = array(
 	'openid-desc' => 'Erlaubt die Anmeldung mit einer [//openid.net/ OpenID]. Sofern es für dieses Wiki aktiviert wurde, kann man sich auch mit seinem Benutzerkonto (dieses Wikis) als OpenID bei anderen Websites per OpenID anmelden',
 	'openidlogin' => 'Anmelden / Benutzerkonto erstellen mit OpenID',
 	'openidserver' => 'OpenID-Server',
+	'openid-server-identity-page-text' => 'Dies ist eine technische OpenID-Server-Seite während der OpenID-Authentifizierung, die keine weitere Bedeutung hat.',
 	'openidxrds' => 'Yadis-Datei',
 	'openidconvert' => 'OpenID-Konverter',
 	'openiderror' => 'Überprüfungsfehler',

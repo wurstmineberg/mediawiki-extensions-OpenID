@@ -220,6 +220,38 @@ class SpecialOpenID extends SpecialPage {
 			return;
 		}
 
+/*
+		FIXME
+
+		THIS DOES NOT WORK: THE TWO POST ARGUMENTS ARE NOT CHANGED
+		I DO NOT KNOW WHAT I MADE WRONG HERE
+
+		WORKAROUND: SEE BELOW BEFORE FORM SUBMISSION
+
+		// ask the Server to show identifier selection form
+		// https://developers.google.com/accounts/docs/OpenID#Parameters
+
+		$auth_request->message->setArg(
+			Auth_OpenID_OPENID_NS,
+			"identity",
+			"http://specs.openid.net/auth/2.0/identifier_select"
+		);
+
+		$auth_request->message->setArg(
+			Auth_OpenID_OPENID_NS,
+			"claimed_id",
+			"http://specs.openid.net/auth/2.0/identifier_select"
+		);
+
+		$auth_request->message->updateArgs(
+			Auth_OpenID_OPENID_NS,
+			array(
+				"identity" => "http://specs.openid.net/auth/2.0/identifier_select",
+				"claimed_id" => "http://specs.openid.net/auth/2.0/identifier_select",
+			)
+		);
+*/
+
 		# Check the processed URLs, too
 
 		$endpoint = $auth_request->endpoint;
@@ -270,19 +302,25 @@ class SpecialOpenID extends SpecialPage {
 		$process_url = $this->scriptUrl( $finish_page );
 
 		if ( $auth_request->shouldSendRedirect() ) {
-			$redirect_url = $auth_request->redirectURL( $trust_root,
-													   $process_url );
+
+			$redirect_url = $auth_request->redirectURL( $trust_root, $process_url );
 			if ( Auth_OpenID::isFailure( $redirect_url ) ) {
 				displayError( "Could not redirect to server: " . $redirect_url->message );
 			} else {
 				# OK, now go
 				$wgOut->redirect( $redirect_url );
 			}
+
 		} else {
+
 			// Generate form markup and render it.
 			$form_id = 'openid_message';
-			$form_html = $auth_request->formMarkup( $trust_root, $process_url,
-												   false, array( 'id' => $form_id ) );
+			$form_html = $auth_request->formMarkup(
+				$trust_root,
+				$process_url,
+				false,
+				array( 'id' => $form_id )
+			);
 
 			// Display an error if the form markup couldn't be generated;
 			// otherwise, render the HTML.
@@ -291,10 +329,19 @@ class SpecialOpenID extends SpecialPage {
 			} else {
 				$wgOut->addWikiMsg( 'openidautosubmit' );
 				$wgOut->addHTML( $form_html );
+
+				// WORKAROUND FOR SETTING THE IDENTIFIER SELECTION
+				// OVERWRITE THE TWO HIDDEN FORM VALUES BEFORE AUTO-SUBMITTING THE FORM
+
 				$wgOut->addInlineScript(
-					"jQuery( document ).ready( function(){ jQuery( \"#" . $form_id . "\" ).submit() } );" 
+					"jQuery( document ).ready( function(){ 
+						jQuery( \"input[name*='openid.identity']\").val( \"http://specs.openid.net/auth/2.0/identifier_select\" );
+						jQuery( \"input[name*='openid.claimed_id']\").val( \"http://specs.openid.net/auth/2.0/identifier_select\" );
+						jQuery( \"#" . $form_id . "\" ).submit();
+					});"
 				);
 			}
+
 		}
 
 		wfRestoreWarnings();

@@ -23,8 +23,9 @@
  * @ingroup Extensions
  */
 
-if ( !defined( 'MEDIAWIKI' ) )
-  exit( 1 );
+if ( !defined( 'MEDIAWIKI' ) ) {
+	exit( 1 );
+}
 
 require_once( "Auth/OpenID/Server.php" );
 require_once( "Auth/OpenID/Consumer.php" );
@@ -52,7 +53,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function execute( $par ) {
-		global $wgOut, $wgOpenIDClientOnly;
+		global $wgOut, $wgOpenIDClientOnly, $wgOpenIDIdentifierSelect;
 
 		$this->setHeaders();
 
@@ -69,8 +70,46 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$server = $this->getServer();
 		wfRestoreWarnings();
 
-		switch ( $par ) {
-		 case 'Login':
+		if ( $par === $wgOpenIDIdentifierSelect ) {
+
+			$out = $this->getOutput();
+			$out->addLink( array(
+				'ref' => 'openid.server',
+				'href' => $this->serverUrl(),
+			) );
+			$out->addLink( array(
+				'ref' => 'openid2.provider',
+				'href' => $this->serverUrl(),
+			) );
+
+			$rt = SpecialPage::getTitleFor( 'OpenIDXRDS', $wgOpenIDIdentifierSelect );
+			$xrdsUrl = $rt->getFullURL( '', false, PROTO_CURRENT  );
+
+			$out->addMeta( 'http:X-XRDS-Location', $xrdsUrl );
+			$this->getRequest()->response()->header( 'X-XRDS-Location: ' . $xrdsUrl );
+
+			$out->addWikiMsg( 'openid-server-identity-page-text');
+
+			return;
+		}
+
+		switch ( strtolower( $par ) ) {
+
+		case 'continue':
+
+			# case 'Continue' must stay here
+			# because it is followed by case 'Login' when the user is not logged in on this OpenID server wiki
+
+			if ( $this->getUser()->isLoggedIn() ) {
+				list( $request, $sreg ) = $this->FetchValues();
+				break;
+			}
+
+			# no break here !
+			# continue with the next case 'Login'
+
+		case 'login':
+
 			list( $request, $sreg ) = $this->FetchValues();
 			$result = $this->serverLogin( $request );
 			if ( $result ) {
@@ -83,7 +122,9 @@ class SpecialOpenIDServer extends SpecialOpenID {
 				}
 			}
 			break;
-		case 'Trust':
+
+		case 'trust':
+
 			list( $request, $sreg ) = $this->FetchValues();
 			$result = $this->Trust( $request, $sreg );
 			if ( $result ) {
@@ -96,9 +137,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 				}
 			}
 			break;
+
 		default:
+
 			if ( strlen( $par ) ) {
-				wfDebug( "OpenID: aborting in user validation because the parameter was empty\n" );
+				wfDebug( "OpenID: aborting in user validation because the request was missing. par: '{$par}'\n" );
 				$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
 				return;
 			} else {
@@ -129,17 +172,24 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		global $wgUser;
 
 		switch ( $request->mode ) {
-		 case "checkid_setup":
+
+		case "checkid_setup":
+
 			$response = $this->Check( $server, $request, $sreg, false );
 			break;
-		 case "checkid_immediate":
+
+		case "checkid_immediate":
+
 			$response = $this->Check( $server, $request, $sreg, true );
 			break;
-		 default:
-			# For all the other parts, just let the libs do it
+
+		default:
+		# For all the other parts, just let the libs do it
+
 			wfSuppressWarnings();
 			$response =& $server->handleRequest( $request );
 			wfRestoreWarnings();
+
 		}
 
 		# OpenIDServerCheck returns NULL if some output (like a form)
@@ -191,7 +241,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 	function Check( $server, $request, $sreg, $imm = true ) {
 
-		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts;
+		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifierSelect;
 
 		assert( isset( $wgUser ) && isset( $wgOut ) );
 		assert( isset( $server ) );
@@ -206,6 +256,9 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		assert( isset( $url ) && strlen( $url ) > 0 );
 
 		wfDebug( "OpenID: OpenIDServer received: '$url'.\n" );
+		wfDebug( "OpenID: OpenIDServer received request: " . print_r( $request, true ) . "\n" );
+
+/*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
 
 		$name = $this->UrlToUserName( $url );
 
@@ -215,22 +268,57 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		}
 
 		assert( isset( $name ) && strlen( $name ) > 0 );
+*/
 
-		# Is there a logged in user?
+		# by default, use the $wgUser if s/he is logged-in on this OpenID-Server-Wiki
 
-		if ( $wgUser->getId() == 0 ) {
-			wfDebug( "OpenID: User not logged in.\n" );
+		# check, if there is an expressed request for a distinct OpenID-Server-Username
+		# from the received OpenID Url /User:Name
+
+		$otherName = $this->UrlToUserName( $url );
+		wfDebug( "OpenID: received name '$otherName'\n");
+
+		# if there is a expressed request for /User:Name and
+		# if this is an existing user Name on the OpenID-Server Wiki
+		# then fill in this Name into the login form
+
+		if ( $otherName != "" ) {
+			$otherUser = User::newFromName( $otherName );
+		} else {
+			unset( $otherUser );
+		}
+
+		# If the client is not logged-in in user on the OpenID Server, or
+		# if there is an expressed request for /User:Name and if this is not the current user
+		# then proceed to the login form, fill in the Name
+
+		if ( ( $wgUser->getId() == 0 )
+			|| ( isset( $otherUser ) && ( $otherUser->getId() != $wgUser->getId() ) ) ) {
+
+			wfDebug( "OpenID: User '$otherName' not logged in, prepare login form for '$otherName'\n" );
 			if ( $imm ) {
 				return $request->answer( false, $this->serverUrl() );
 			} else {
 				# Bank these for later
 				$this->SaveValues( $request, $sreg );
-				$this->LoginForm( $request );
+
+				$query = array(
+					'wpName' => $otherName,
+					'returnto' => $this->getTitle( 'Continue' )->getPrefixedURL(),
+				);
+				$title = SpecialPage::getTitleFor( 'Userlogin' );
+
+				$url = $title->getFullURL( $query, false, PROTO_CURRENT );
+				$wgOut->redirect( $url );
 				return null;
 			}
 		}
 
+		wfDebug( "OpenID: User is logged in\n" );
 		assert( $wgUser->getId() != 0 );
+
+
+/*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
 
 		# Is the user page for the logged-in user?
 
@@ -241,12 +329,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			wfDebug( "OpenID: User from url not logged in user.\n" );
 			return $request->answer( false, $this->serverUrl() );
 		}
-
-		assert( isset( $user ) && $user->getId() == $wgUser->getId() && $user->getId() != 0 );
+*/
 
 		# Is the user an OpenID user?
 
-		if ( !$wgOpenIDAllowServingOpenIDUserAccounts && $this->getUserOpenIDInformation( $user ) ) {
+		if ( !$wgOpenIDAllowServingOpenIDUserAccounts && $this->getUserOpenIDInformation( $wgUser ) ) {
 			wfDebug( "OpenID: Not one of our users; logs in with OpenID.\n" );
 			return $request->answer( false, $this->serverUrl() );
 		}
@@ -258,7 +345,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		if ( array_key_exists( 'required', $sreg ) ) {
 			$notFound = false;
 			foreach ( $sreg['required'] as $reqfield ) {
-				if ( is_null( $this->GetUserField( $user, $reqfield ) ) ) {
+				if ( is_null( $this->GetUserField( $wgUser, $reqfield ) ) ) {
 					$notFound = true;
 					break;
 				}
@@ -275,7 +362,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		assert( isset( $trust_root ) && is_string( $trust_root ) && strlen( $trust_root ) > 0 );
 
-		$trust = $this->GetUserTrust( $user, $trust_root );
+		$trust = $this->GetUserTrust( $wgUser, $trust_root );
 
 		# Is there a trust record?
 
@@ -310,7 +397,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			$notFound = false;
 			foreach ( $sreg['required'] as $reqfield ) {
 				if ( !in_array( $reqfield, $trust ) ||
-					is_null( $this->GetUserField( $user, $reqfield ) ) ) {
+					is_null( $this->GetUserField( $wgUser, $reqfield ) ) ) {
 					$notFound = true;
 					break;
 				}
@@ -327,17 +414,24 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		# SUCCESS
 
-		$response_fields = array_intersect( array_unique( array_merge( $sreg['required'], $sreg['optional'] ) ),
-										   $trust );
+		$response_fields = array_intersect(
+			array_unique( array_merge( $sreg['required'], $sreg['optional'] ) ), $trust
+		);
 
 		wfSuppressWarnings();
-		$response = $request->answer( true );
+
+		# respond with the authenticated local identity OpenID Url
+		$local_identity = $wgUser->getUserPage()->getFullURL();
+
+		$response = $request->answer( true, $this->serverUrl(), $local_identity, null );
+		wfDebug( "OpenID: response: " . print_r( $response, true ) . "\n" );
+
 		wfRestoreWarnings();
 
 		assert( isset( $response ) );
 
 		foreach ( $response_fields as $field ) {
-			$value = $this->GetUserField( $user, $field );
+			$value = $this->GetUserField( $wgUser, $field );
 			if ( !is_null( $value ) ) {
 				$response->addField( 'sreg', $field, $value );
 			}
@@ -710,7 +804,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 	}
 
-	# Converts an URL to a user name, if possible
+	# Converts an URL /User:Name to a user name, if possible
 
 	function UrlToUserName( $url ) {
 
@@ -763,6 +857,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function serverUrl() {
-		return $this->getTitle()->getFullUrl();
+		return $this->getTitle()->getFullURL( '', false, PROTO_CURRENT );
 	}
 }

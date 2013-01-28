@@ -93,7 +93,8 @@ class OpenIDProvider {
 			new self( 'openid', 'OpenID', wfMsg( 'openid-provider-label-openid' ), '{URL}' ),
 			new self( 'google', 'Google', wfMsg( 'openid-provider-label-google' ), 'https://www.google.com/accounts/o8/id' ),
 			new self( 'yahoo', 'Yahoo', wfMsg( 'openid-provider-label-yahoo' ), 'http://yahoo.com/' ),
-			new self( 'aol', 'AOL', wfMsg( 'openid-provider-label-aol' ), 'http://openid.aol.com/{username}' )
+			new self( 'aol', 'AOL', wfMsg( 'openid-provider-label-aol' ), 'http://openid.aol.com/{username}' ),
+			new self( 'wmflabs', 'Wmflabs', wfMsg( 'openid-provider-label-wmflabs' ), 'http://openid-wiki.instance-proxy.wmflabs.org/wiki/Special:OpenIDServer/id' ),
 		);
 	}
 
