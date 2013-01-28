@@ -135,7 +135,7 @@ $specialPageAliases['nb'] = array(
 	'OpenIDXRDS' => array( 'OpenID-XRDS' ),
 );
 
-/** Nedersaksies (Nedersaksies) */
+/** Low Saxon (Netherlands) (Nedersaksies) */
 $specialPageAliases['nds-nl'] = array(
 	'OpenIDLogin' => array( 'Open_ID_anmelden' ),
 	'OpenIDConvert' => array( 'Open_ID_ummezetten' ),

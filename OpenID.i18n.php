@@ -3599,6 +3599,7 @@ $messages['ka'] = array(
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'მოქმედება',
 	'openid-urls-registration' => 'რეგისტრაციის დრო',
+	'openid-urls-registration-date-time' => '$1',
 	'openid-urls-delete' => 'წაშლა',
 	'openid-add-url' => 'ახალი OpenID-ის დამატება',
 	'openid-login-or-create-account' => 'შესვლა ან ახალი ანგარიშის შექმნა',
