@@ -2205,6 +2205,9 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'right-openid-converter-access' => 'Peut ajouter ou convertir leur compte pour utiliser les identités OpenID',
 	'right-openid-dashboard-access' => 'Accès standard au tableau de bord OpenID',
 	'right-openid-dashboard-admin' => 'Accès administrateur au tableau de bord OpenID',
+	'action-openid-converter-access' => 'ajouter ou convertir votre compte pour utiliser les identifiants OpenID',
+	'action-openid-dashboard-access' => 'accès au tableau de bord OpenID',
+	'action-openid-dashboard-admin' => 'accéder au tableau de bord de l’administrateur OpenID',
 	'openid-dashboard-title' => 'Tableau de bord OpenID',
 	'openid-dashboard-title-admin' => 'Tableau de bord OpenID (administrateur)',
 	'openid-dashboard-introduction' => "Les paramètres actuels de l'extension OpenID ([$1 aide])",
@@ -3652,7 +3655,7 @@ $messages['km'] = array(
 	'openidemail' => 'អាសយដ្ឋានអ៊ីមែល',
 	'openidlanguage' => 'ភាសា',
 	'openidtimezone' => 'ល្វែងម៉ោង',
-	'openidchooselegend' => 'ជំរើសអត្តនាម', # Fuzzy
+	'openidchooselegend' => 'ជំរើសអត្តនាមនិងគណនី',
 	'openidchooseinstructions' => 'អ្នកប្រើប្រាស់ទាំងត្រូវការឈ្មោះហៅក្រៅ
 
 អ្នកអាចជ្រើសរើសពីក្នុងជម្រើសខាងក្រោម។',
