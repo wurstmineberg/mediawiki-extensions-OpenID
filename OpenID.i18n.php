@@ -1811,6 +1811,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
  * @author McDutchie
  * @author Sanbec
  * @author Translationista
+ * @author Vivaelcelta
  * @author XalD
  */
 $messages['es'] = array(
@@ -1915,6 +1916,9 @@ No podrás iniciar sesión sin un OpenID.',
 	'right-openid-converter-access' => 'Puede agregar o convertir su cuenta para utilizar identidades OpenID',
 	'right-openid-dashboard-access' => 'Acceso estándar al tablero de OpenID',
 	'right-openid-dashboard-admin' => 'Acceso de administrador al tablero de OpenID',
+	'action-openid-converter-access' => 'añadir o convertir tu cuenta para utilizar identidades OpenID',
+	'action-openid-dashboard-access' => 'acceder al tablero del OpenID',
+	'action-openid-dashboard-admin' => 'acceder al tablero de administración del OpenID',
 	'openid-dashboard-title' => 'Tablero de OpenID',
 	'openid-dashboard-title-admin' => 'Tablero de OpenID (administrador)',
 	'openid-dashboard-introduction' => 'La configuración actual de la extensión de OpenID ([$1 ayuda])',
@@ -5489,7 +5493,9 @@ se poate alege una din opțiunile de mai jos.',
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'openidserver' => 'Server OpenID',
 	'openidxrds' => 'File Yadis',
+	'openidconvert' => 'Convertitore OpenID',
 	'openidoptional' => 'Opzionele',
 	'openidrequired' => 'Richieste',
 	'openidnickname' => 'Soprannome',
@@ -5499,6 +5505,7 @@ $messages['roa-tara'] = array(
 	'openidtimezone' => "Orarie d'a zone",
 	'openidchoosefull' => "'U nome comblete tue ($1)",
 	'openidchoosemanual' => "Scacchie 'nu nome:",
+	'openidchooseusername' => "Nome de l'utende:",
 	'openidchoosepassword' => 'Passuord:',
 	'openidnousername' => 'Nisciune nome utende specificate.',
 	'openidbadusername' => "'U nome utende specificate non g'è valide.",
