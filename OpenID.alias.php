@@ -127,7 +127,7 @@ $specialPageAliases['ml'] = array(
 	'OpenIDServer' => array( 'ഓപ്പൺഐ.ഡി.സെർവർ' ),
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎) */
+/** Norwegian Bokmål (norsk bokmål) */
 $specialPageAliases['nb'] = array(
 	'OpenIDLogin' => array( 'OpenID-innlogging' ),
 	'OpenIDConvert' => array( 'OpenID-konvertering' ),
