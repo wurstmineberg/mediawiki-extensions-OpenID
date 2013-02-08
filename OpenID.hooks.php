@@ -17,7 +17,7 @@ class SpecialOpenIDUserLogin extends SpecialRedirectToSpecial {
 
 class OpenIDHooks {
 	public static function onSpecialPage_initList( &$list ) {
-		global $wgOpenIDOnly, $wgOpenIDClientOnly;
+		global $wgOpenIDOnly, $wgOpenIDClientOnly, $wgSpecialPageGroups;
 
 		if ( $wgOpenIDOnly ) {
 			$list['Userlogin'] = 'SpecialOpenIDLogin';
@@ -36,8 +36,9 @@ class OpenIDHooks {
 		}
 
 		foreach ( $addList as $sp ) {
-			$list['OpenID' . $sp] = 'SpecialOpenID' . $sp;
-			SpecialPageFactory::setGroup( 'OpenID' . $sp, 'openid' );
+			$key = 'OpenID' . $sp;
+			$list[$key] = 'SpecialOpenID' . $sp;
+			$wgSpecialPageGroups[$key] = 'openid';
 		}
 
 		return true;
