@@ -178,7 +178,7 @@ class SpecialOpenID extends SpecialPage {
 	}
 
 	function login( $openid_url, $finish_page ) {
-		global $wgTrustRoot, $wgOut;
+		global $wgOpenIDTrustRoot, $wgOut;
 
 		# If it's an interwiki link, expand it
 
@@ -191,8 +191,8 @@ class SpecialOpenID extends SpecialPage {
 			return;
 		}
 
-		if ( !is_null( $wgTrustRoot ) ) {
-			$trust_root = $wgTrustRoot;
+		if ( !is_null( $wgOpenIDTrustRoot ) ) {
+			$trust_root = $wgOpenIDTrustRoot;
 		} else {
 			global $wgScriptPath, $wgServer;
 			$trust_root = $wgServer . $wgScriptPath;

@@ -238,11 +238,11 @@ itself.
 The administrator can configure these variables in the
 LocalSettings.php file. Please read carefully.
 
-* $wgTrustRoot -- This is an URL that identifies your site to OpenID
+* $wgOpenIDTrustRoot -- This is an URL that identifies your site to OpenID
   servers. Typically, it's the "root" url of the site, like
-  "http://en.wikipedia.org/" or "http://wikitravel.org/it/". If this is
-  not set, the software will make a half-hearted guess, but it's not
-  very good and you should probably just set it.
+  "http://en.wikipedia.org/" or with a path like "http://wikitravel.org/it/".
+  If this is not set, the software will make a half-hearted guess,
+  but it's not very good and you should probably just set it.
 
 * $wgOpenIDConsumerDenyByDefault -- The administrator can decide which
   OpenIDs are allowed to login to their server. If this flag is

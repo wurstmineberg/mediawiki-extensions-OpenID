@@ -1,0 +1,5 @@
+CHANGES
+=======
+
+1.005 20130209 $wgOpenIDTrustRoot was renamed to $wgOpenIDTrustRoot
+               $wgOpenID being prefix of all extension global variables

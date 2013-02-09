@@ -27,7 +27,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '1.004 20120427' );
+define( 'MEDIAWIKI_OPENID_VERSION', '1.005 20130209' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -82,7 +82,7 @@ $wgOpenIDServerStorePath = "/tmp/$wgDBname/openidserver/";
  * Defines the trust root for this server
  * If null, we make a guess
  */
-$wgTrustRoot = null;
+$wgOpenIDTrustRoot = null;
 
 /**
  * When using deny and allow arrays, defines how the security works.
