@@ -198,13 +198,13 @@ Parameters:
 	'openidlanguage' => '{{Identical|Language}}',
 	'openidtimezone' => '{{Identical|Time zone}}',
 	'openidchoosepassword' => '{{Identical|Password}}',
-	'openidalreadyloggedin' => '',
-	'openidalreadyloggedintext' => 'Parameters:
-* $1 is a username.',
 	'openid-convert-already-your-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated to their account.
 * $1 is the conflicting, already associated OpenID.',
 	'openid-convert-other-users-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated with an account of another user.
 * $1 is the conflicting, already associated OpenID.',
+	'openidalreadyloggedin' => '',
+	'openidalreadyloggedintext' => 'Parameters:
+* $1 is a username.',
 	'openidautosubmit' => '{{doc-important|"Continue" will never be localised. It is hardcoded in a PHP extension. Translations could be made like ""Continue" (translation)"}}',
 	'openiddelete-button' => '{{Identical|Confirm}}',
 	'openid-openids-were-not-merged' => 'When merging user accounts by UserMerge or similar extensions, OpenID(s) are not merged if $wgOpenIDMergeOnAccountMerge=false (default).',
@@ -1423,6 +1423,7 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openid-provider-label-google' => 'Mit deinem Google-Benutzerkonto anmelden',
 	'openid-provider-label-yahoo' => 'Mit deinem Yahoo-Benutzerkonto anmelden',
 	'openid-provider-label-aol' => 'Gib deinen AOL-Namen an',
+	'openid-provider-label-wmflabs' => 'Mit deinem Wmflabs-Benutzerkonto anmelden',
 	'openid-provider-label-other-username' => 'Gib deinen „$1“-Benutzernamen an',
 	'specialpages-group-openid' => 'Websites von OpenID-Diensten und Statusinformationen',
 	'right-openid-converter-access' => 'Benutzerkonto zur Nutzung von OpenID erstellen oder konvertieren',
@@ -2112,6 +2113,7 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
  * @author McDutchie
  * @author Od1n
  * @author Peter17
+ * @author PiRSquared17
  * @author Sherbrooke
  * @author Zetud
  */
@@ -2166,8 +2168,8 @@ Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Pre
 	'openidconvertoraddmoreids' => 'Convertir vers OpenID ou ajouter une autre adresse OpenID',
 	'openidconvertsuccess' => 'Converti avec succès vers OpenID',
 	'openidconvertsuccesstext' => 'Vous avez converti avec succès votre OpenID vers $1.',
-	'openid-convert-already-your-openid-text' => 'C’est déjà votre OpenID.',
-	'openid-convert-other-users-openid-text' => 'Ceci est l’OpenID de quelqu’un d’autre.',
+	'openid-convert-already-your-openid-text' => 'C’est déjà votre OpenID.', # Fuzzy
+	'openid-convert-other-users-openid-text' => 'Ceci est l’OpenID de quelqu’un d’autre.', # Fuzzy
 	'openidalreadyloggedin' => 'Vous êtes déjà connecté.',
 	'openidalreadyloggedintext' => "'''Vous êtes déjà connecté, $1 !'''
 
@@ -2212,6 +2214,7 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-provider-label-google' => 'Vous connecter en utilisant votre compte Google',
 	'openid-provider-label-yahoo' => 'Vous connecter en utilisant votre compte Yahoo',
 	'openid-provider-label-aol' => 'Entrez votre nom AOL',
+	'openid-provider-label-wmflabs' => 'Vous connecter en utilisant votre compte Wmflabs',
 	'openid-provider-label-other-username' => 'Entrez votre nom d’utilisateur $1',
 	'specialpages-group-openid' => "Pages de service OpenID et d'information sur le statut",
 	'right-openid-converter-access' => 'Peut ajouter ou convertir leur compte pour utiliser les identités OpenID',
@@ -3422,6 +3425,7 @@ $messages['ja'] = array(
 	'openid-desc' => '[//openid.net/ OpenID] でウィキにログインできるようにする。これをウィキで有効にすると、ウィキの利用者アカウントの URL を OpenID として他の OpenID 対応サイトにもログインできる',
 	'openidlogin' => 'OpenID でログイン/アカウントを作成',
 	'openidserver' => 'OpenID サーバー',
+	'openid-server-identity-page-text' => 'このページは、OpenID 認証を開始するための、OpenID サーバーの技術的なページであり、それ以外の目的はありません。',
 	'openidxrds' => 'Yadis ファイル',
 	'openidconvert' => 'OpenID コンバーター',
 	'openiderror' => '検証エラー',
@@ -3468,8 +3472,8 @@ $messages['ja'] = array(
 	'openidconvertoraddmoreids' => 'OpenID に変換、または別の OpenID URL を追加',
 	'openidconvertsuccess' => 'OpenID に変換しました',
 	'openidconvertsuccesstext' => 'あなたの OpenID を $1 に変換しました。',
-	'openid-convert-already-your-openid-text' => 'これは既にあなたの OpenID です。',
-	'openid-convert-other-users-openid-text' => 'これは他の誰かの OpenID です。',
+	'openid-convert-already-your-openid-text' => 'これは既にあなたの OpenID です。', # Fuzzy
+	'openid-convert-other-users-openid-text' => 'これは他の誰かの OpenID です。', # Fuzzy
 	'openidalreadyloggedin' => 'あなたは既にログインしています。',
 	'openidalreadyloggedintext' => "'''$1 さん、あなたは既にログインしています!'''
 
@@ -3503,9 +3507,10 @@ $messages['ja'] = array(
 	'openid-add-url' => '新しい OpenID を追加',
 	'openid-login-or-create-account' => 'ログインまたは新規アカウント作成',
 	'openid-provider-label-openid' => 'あなたの OpenID URL を入力します',
-	'openid-provider-label-google' => 'あなたの Google アカウントを用いてログインする',
-	'openid-provider-label-yahoo' => 'あなたの Yahoo アカウントを用いてログインする',
+	'openid-provider-label-google' => 'あなたの Google アカウントを使用してログインする',
+	'openid-provider-label-yahoo' => 'あなたの Yahoo アカウントを使用してログインする',
 	'openid-provider-label-aol' => 'あなたの AOL スクリーンネームを入力します',
+	'openid-provider-label-wmflabs' => 'あなたの Wmflabs アカウントを使用してログインする',
 	'openid-provider-label-other-username' => 'あなたの $1 での利用者名を入力',
 	'specialpages-group-openid' => 'OpenID のサービスページとステータス情報',
 	'right-openid-converter-access' => 'OpenID を使用するアカウントを追加/変換',
@@ -4629,6 +4634,7 @@ $messages['nl'] = array(
 	'openid-desc' => 'Aanmelden bij de wiki met een [//openid.net/ OpenID] en aanmelden bij andere websites die OpenID ondersteunen met een wikigebruiker',
 	'openidlogin' => 'Aanmelden / registreren met OpenID',
 	'openidserver' => 'OpenID-server',
+	'openid-server-identity-page-text' => 'Dit is een technische pagina voor OpenID-server voor het beginnen van de OpenID-authenticatie. De pagina heeft geen ander doel.',
 	'openidxrds' => 'Yadis-bestand',
 	'openidconvert' => 'OpenID-convertor',
 	'openiderror' => 'Controlefout',
@@ -4676,8 +4682,8 @@ Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Pr
 	'openidconvertoraddmoreids' => 'Converteren naar OpenID of een andere OpenID-URL toevoegen',
 	'openidconvertsuccess' => 'Omzetten naar OpenID is uitgevoerd',
 	'openidconvertsuccesstext' => 'Uw OpenID is omgezet naar $1.',
-	'openid-convert-already-your-openid-text' => 'Dat is al uw OpenID.',
-	'openid-convert-other-users-openid-text' => 'Iemand anders heeft die OpenID al in gebruik.',
+	'openid-convert-already-your-openid-text' => 'Het OpenID $1 is al gekoppeld aan uw gebruiker. Opnieuw toevoegen heeft geen zin.',
+	'openid-convert-other-users-openid-text' => 'Iemand anders heeft het OpenID $1 al in gebruik. U kunt niet het OpenID van een andere gebruiker gebruiken.',
 	'openidalreadyloggedin' => 'U bent al aangemeld.',
 	'openidalreadyloggedintext' => "'''U bent al aangemeld, $1!'''
 
@@ -4721,6 +4727,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-provider-label-google' => 'Aanmelden met uw Google-gebruiker',
 	'openid-provider-label-yahoo' => 'Aanmelden met uw Yahoo-gebruiker',
 	'openid-provider-label-aol' => 'Aanmelden met uw AOL-gebruiker',
+	'openid-provider-label-wmflabs' => 'Aanmelden met uw gebruiker van WMF-labs',
 	'openid-provider-label-other-username' => 'Geef uw gebruikersnaam bij $1 in',
 	'specialpages-group-openid' => "OpenID-servicepagina's en statusinformatie",
 	'right-openid-converter-access' => 'Kan gebruiker toevoegen of converteren om OpenID-identiteiten te gebruiken',
