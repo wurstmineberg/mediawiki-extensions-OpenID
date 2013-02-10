@@ -84,8 +84,8 @@ you can choose one from the options below.',
 	'openidconvertoraddmoreids' => 'Convert to OpenID or add another OpenID URL',
 	'openidconvertsuccess' => 'Successfully converted to OpenID',
 	'openidconvertsuccesstext' => 'You have successfully converted your OpenID to $1.',
-	'openidconvertyourstext' => 'That is already your OpenID.',
-	'openidconvertothertext' => 'That is someone else\'s OpenID.',
+	'openid-convert-already-your-openid-text' => 'The OpenID $1 is already associated to your account. It does not make sense to add it again.',
+	'openid-convert-other-users-openid-text' => '$1 is someone else\'s OpenID. You cannot use the OpenID of another user.',
 	'openidalreadyloggedin' => 'You are already logged in.',
 	'openidalreadyloggedintext' => "'''You are already logged in, $1!'''
 
@@ -201,6 +201,10 @@ Parameters:
 	'openidalreadyloggedin' => '',
 	'openidalreadyloggedintext' => 'Parameters:
 * $1 is a username.',
+	'openid-convert-already-your-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated to their account.
+* $1 is the conflicting, already associated OpenID.',
+	'openid-convert-other-users-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated with an account of another user.
+* $1 is the conflicting, already associated OpenID.',
 	'openidautosubmit' => '{{doc-important|"Continue" will never be localised. It is hardcoded in a PHP extension. Translations could be made like ""Continue" (translation)"}}',
 	'openiddelete-button' => '{{Identical|Confirm}}',
 	'openid-openids-were-not-merged' => 'When merging user accounts by UserMerge or similar extensions, OpenID(s) are not merged if $wgOpenIDMergeOnAccountMerge=false (default).',
@@ -288,8 +292,8 @@ Hierdie en verdere OpenID's, saam met 'n opsionele wagwoord, kan in u [[Special:
 	'openidconvertoraddmoreids' => "Skakel om na OpenID of voeg 'n ander OpenID-URL by",
 	'openidconvertsuccess' => 'Suksesvol omgeskakel na OpenID',
 	'openidconvertsuccesstext' => 'U OpenID is omgeskakel na $1.',
-	'openidconvertyourstext' => 'Dit is al reeds u OpenID.',
-	'openidconvertothertext' => 'Dit is iemand anders se OpenID.',
+	'openid-convert-already-your-openid-text' => 'Dit is al reeds u OpenID.',
+	'openid-convert-other-users-openid-text' => 'Dit is iemand anders se OpenID.',
 	'openidalreadyloggedin' => "'''U is al reeds aangeteken!'''",
 	'openidnousername' => 'Geen gebruikersnaam is verskaf nie.',
 	'openidbadusername' => 'Slegte gebruikersnaam verskaf.',
@@ -423,8 +427,8 @@ $messages['ar'] = array(
 	'openidconvertoraddmoreids' => 'حوّل إلى OpenID أو أضف عنوان OpenID آخر',
 	'openidconvertsuccess' => 'تم التحول بنجاح إلى الهوية المفتوحة',
 	'openidconvertsuccesstext' => 'أنت حولت بنجاح هويتك المفتوحة إلى $1.',
-	'openidconvertyourstext' => 'هذه بالفعل هويتك المفتوحة.',
-	'openidconvertothertext' => 'هذه هي الهوية المفتوحة لشخص آخر.',
+	'openid-convert-already-your-openid-text' => 'هذه بالفعل هويتك المفتوحة.',
+	'openid-convert-other-users-openid-text' => 'هذه هي الهوية المفتوحة لشخص آخر.',
 	'openidalreadyloggedin' => 'أنت مسجل الدخول بالفعل.',
 	'openidnousername' => 'لا اسم مستخدم تم تحديده.',
 	'openidbadusername' => 'اسم المستخدم المحدد سيء.',
@@ -538,8 +542,8 @@ $messages['arz'] = array(
 	'openidconvertinstructions' => 'هذه الاستمارة تتيح لك تغيير حساب المستخدم الخاص بك لكى تستخدم OpenID URL او لاضافة المزيد من OpenID URLs .',
 	'openidconvertsuccess' => 'تم التحول بنجاح إلى الهوية المفتوحة',
 	'openidconvertsuccesstext' => 'أنت حولت بنجاح هويتك المفتوحة إلى $1.',
-	'openidconvertyourstext' => 'هذه بالفعل هويتك المفتوحة.',
-	'openidconvertothertext' => 'هذه هى الهوية المفتوحة لشخص آخر.',
+	'openid-convert-already-your-openid-text' => 'هذه بالفعل هويتك المفتوحة.',
+	'openid-convert-other-users-openid-text' => 'هذه هى الهوية المفتوحة لشخص آخر.',
 	'openidalreadyloggedin' => "'''أنت مسجل الدخول بالفعل، $1!'''
 
 لو كنت تريد استخدام الهوية المفتوحة لتسجيل الدخول فى المستقبل، يمكنك [[Special:OpenIDConvert|تحويل حسابك لاستخدام الهوية المفتوحة]].", # Fuzzy
@@ -616,8 +620,8 @@ pues escoyer unu ente les opciones d'abaxo.",
 	'openidconvertoraddmoreids' => 'Convertir a OpenID o amestar otra URL OpenID',
 	'openidconvertsuccess' => 'Convertida correutamente a OpenID',
 	'openidconvertsuccesstext' => 'Convertisti correutamente la to OpenID a $1.',
-	'openidconvertyourstext' => 'Esa yá ye la to OpenID.',
-	'openidconvertothertext' => "Esa ye la OpenID d'otra persona.",
+	'openid-convert-already-your-openid-text' => 'Esa yá ye la to OpenID.',
+	'openid-convert-other-users-openid-text' => "Esa ye la OpenID d'otra persona.",
 	'openidalreadyloggedin' => 'Yá aniciasti sesión.',
 	'openidalreadyloggedintext' => "'''Yá tas identificáu, $1!'''
 
@@ -734,8 +738,8 @@ $messages['be-tarask'] = array(
 	'openidconvertoraddmoreids' => 'Канвэртаваць у OpenID альбо дадаць іншы адрас OpenID',
 	'openidconvertsuccess' => 'Пасьпяховае пераўтварэньне ў OpenID',
 	'openidconvertsuccesstext' => 'Вы пасьпяхова пераўтварылі Ваш OpenID у $1.',
-	'openidconvertyourstext' => 'Гэта ўжо Ваш OpenID.',
-	'openidconvertothertext' => 'Гэта ня Ваш OpenID.',
+	'openid-convert-already-your-openid-text' => 'Гэта ўжо Ваш OpenID.',
+	'openid-convert-other-users-openid-text' => 'Гэта ня Ваш OpenID.',
 	'openidalreadyloggedin' => 'Вы ўжо ўвайшлі.',
 	'openidalreadyloggedintext' => "'''Вы ўжо ўвайшлі, $1!'''
 
@@ -832,8 +836,8 @@ $messages['bg'] = array(
 	'openidconvertinstructions' => 'Този формуляр позволява да се промени потребителската сметка да използва OpenID URL.', # Fuzzy
 	'openidconvertsuccess' => 'Преобразуването в OpenID беше успешно',
 	'openidconvertsuccesstext' => 'Успешно преобразувахте вашият OpenID в $1.',
-	'openidconvertyourstext' => 'Това вече е вашият OpenID.',
-	'openidconvertothertext' => 'Това е OpenID на някой друг.',
+	'openid-convert-already-your-openid-text' => 'Това вече е вашият OpenID.',
+	'openid-convert-other-users-openid-text' => 'Това е OpenID на някой друг.',
 	'openidalreadyloggedin' => "'''Вече сте влезли в системата, $1!'''
 
 Ако желаете да използвате OpenID за бъдещи влизания, можете да [[Special:OpenIDConvert|преобразувате сметката си да използва OpenID]].", # Fuzzy
@@ -970,8 +974,8 @@ gellout a rit dibab unan eus ar c'hinnigoù a-is.",
 	'openidconvertoraddmoreids' => "Amdreiñ da OpenID pe ouzhpennañ ur chomlec'h OpenID all",
 	'openidconvertsuccess' => 'Amdroet eo bet ervat davet OpenID',
 	'openidconvertsuccesstext' => "Amdroet hoc'h eus ho OpenID davet $1.",
-	'openidconvertyourstext' => "Hoc'h OpenID eo hemañ dija.",
-	'openidconvertothertext' => 'OpenID un implijer all eo hemañ.',
+	'openid-convert-already-your-openid-text' => "Hoc'h OpenID eo hemañ dija.",
+	'openid-convert-other-users-openid-text' => 'OpenID un implijer all eo hemañ.',
 	'openidalreadyloggedin' => "Kevreet oc'h c'hoazh.",
 	'openidalreadyloggedintext' => "'''Kevreet oc'h c'hoazh, $1!'''
 
@@ -1072,8 +1076,8 @@ možete odabrati jedan sa opcijama ispod.',
 	'openidconvertoraddmoreids' => 'Pretvorite u OpenID ili dodajte drugi OpenID URL',
 	'openidconvertsuccess' => 'Uspješno prevedeno u OpenID',
 	'openidconvertsuccesstext' => 'Uspješno ste pretvorili Vaš OpenID u $1.',
-	'openidconvertyourstext' => 'To je već Vaš OpenID.',
-	'openidconvertothertext' => 'To je OpenID koji pripada nekom drugom.',
+	'openid-convert-already-your-openid-text' => 'To je već Vaš OpenID.',
+	'openid-convert-other-users-openid-text' => 'To je OpenID koji pripada nekom drugom.',
 	'openidalreadyloggedin' => 'Već ste prijavljeni.',
 	'openidnousername' => 'Nije navedeno korisničko ime.',
 	'openidbadusername' => 'Navedeno loše korisničko ime.',
@@ -1208,8 +1212,8 @@ Nepovinné heslo k účtu si můžete přidat v [[Special:Preferences#mw-prefsec
 	'openidconvertoraddmoreids' => 'Převést na OpenID nebo přidat jinou OpenID URL',
 	'openidconvertsuccess' => 'Úspěšně převedeno na OpenID',
 	'openidconvertsuccesstext' => 'Úspěšně jste převedli váš OpenID na $1.',
-	'openidconvertyourstext' => 'To už je váš OpenID.',
-	'openidconvertothertext' => 'To je OpenID někoho jiného.',
+	'openid-convert-already-your-openid-text' => 'To už je váš OpenID.',
+	'openid-convert-other-users-openid-text' => 'To je OpenID někoho jiného.',
 	'openidalreadyloggedin' => 'Už jste {{GENDER:|přihlášen|přihlášena}}.',
 	'openidalreadyloggedintext' => "'''Už jste {{GENDER:$1|přihlášen, uživateli|přihlášena, uživatelko|přihlášen, uživateli}} $1!'''
 
@@ -1375,8 +1379,8 @@ du kannst einen aus der untenstehenden Liste auswählen.',
 	'openidconvertoraddmoreids' => 'Zu OpenID konvertieren oder eine andere OpenID-URL hinzufügen',
 	'openidconvertsuccess' => 'Erfolgreich nach OpenID konvertiert',
 	'openidconvertsuccesstext' => 'Du hast die Konvertierung deiner OpenID nach $1 erfolgreich durchgeführt.',
-	'openidconvertyourstext' => 'Dies ist bereits deine OpenID.',
-	'openidconvertothertext' => 'Dies ist die OpenID von jemand anderem.',
+	'openid-convert-already-your-openid-text' => '$1 ist eine deinem Benutzerkonto bereits zugeordnete OpenID. Es macht keinen Sinn, diese OpenID ein weiteres Mal hinzuzufügen.',
+	'openid-convert-other-users-openid-text' => '$1 ist schon die OpenID eines anderen Benutzers. Du kannst diese OpenID nicht verwenden.',
 	'openidalreadyloggedin' => 'Du bist bereits angemeldet.',
 	'openidalreadyloggedintext' => "'''Du bist bereits angemeldet, $1.'''
 
@@ -1462,7 +1466,7 @@ Sie können einen aus der untenstehenden Liste auswählen.',
 	'openidchoosemanual' => 'Ein Name Ihrer Wahl:',
 	'openidconvertinstructions' => 'Mit diesem Formular können Sie Ihr Benutzerkonto zur Benutzung mit Ihrer OpenID-URL freigeben oder eine weitere OpenID-URL hinzufügen.',
 	'openidconvertsuccesstext' => 'Sie haben die Konvertierung Ihrer OpenID nach $1 erfolgreich durchgeführt.',
-	'openidconvertyourstext' => 'Dies ist bereits Ihre OpenID.',
+	'openid-convert-already-your-openid-text' => 'Dies ist bereits Ihre OpenID.',
 	'openidalreadyloggedin' => 'Sie sind bereits angemeldet.',
 	'openidalreadyloggedintext' => "'''Sie sind bereits angemeldet, $1.'''
 
@@ -1568,8 +1572,8 @@ móžoš jadno ze slědujucych opcijow wubraś.',
 	'openidconvertoraddmoreids' => 'Do OpenID konwertěrowaś abo dalšny URL OpenID pśidaś',
 	'openidconvertsuccess' => 'Wuspěšnje do OpenID konwertěrowany',
 	'openidconvertsuccesstext' => 'Sy wuspěšnje konwertěrował twój OpenID do $1.',
-	'openidconvertyourstext' => 'To jo južo twój OpenID.',
-	'openidconvertothertext' => 'Toś ten OpenID słuša někomu drugemu.',
+	'openid-convert-already-your-openid-text' => 'To jo južo twój OpenID.',
+	'openid-convert-other-users-openid-text' => 'Toś ten OpenID słuša někomu drugemu.',
 	'openidalreadyloggedin' => 'Sy južo pśizjawjony.',
 	'openidnousername' => 'Žedno wužywarske mě pódane.',
 	'openidbadusername' => 'Wopacne wužywarske mě pódane.',
@@ -1675,8 +1679,8 @@ $messages['el'] = array(
 	'openidconvertoraddmoreids' => 'Μετατρέψτε το OpenID ή προσθέστε κι άλλο URL OpenID',
 	'openidconvertsuccess' => 'Μετατράπηκε επιτυχώς σε OpenID',
 	'openidconvertsuccesstext' => 'Έχετε επιτυχώς μετατρέψει το OpenID σας σε $1.',
-	'openidconvertyourstext' => 'Αυτό είναι ήδη το OpenID σας.',
-	'openidconvertothertext' => 'Αυτό είναι το OpenID κάποιου άλλου.',
+	'openid-convert-already-your-openid-text' => 'Αυτό είναι ήδη το OpenID σας.',
+	'openid-convert-other-users-openid-text' => 'Αυτό είναι το OpenID κάποιου άλλου.',
 	'openidalreadyloggedin' => "'''Έχεις ήδη συνδεθεί, $1!'''
 
 Αν θέλεις να χρησιμοποιήσεις το OpenID για να συνδεθείς στο μέλλον, μπορείς να [[Special:OpenIDConvert|μετατρέψεις το λογαριασμό σου για να χρησιμοποιήσεις το OpenID]].", # Fuzzy
@@ -1774,8 +1778,8 @@ vi povas selekti el unu la jenaj opcioj.',
 	'openidconvertoraddmoreids' => 'Konverti al OpenID aŭ aldoni alian OpenID-URL-on',
 	'openidconvertsuccess' => 'Sukcese konvertis al OpenID',
 	'openidconvertsuccesstext' => 'Vi sukcese konvertis vian identigon OpenID al $1.',
-	'openidconvertyourstext' => 'Tio jam estas via OpenID.',
-	'openidconvertothertext' => 'Tio estas OpenID de alia persono.',
+	'openid-convert-already-your-openid-text' => 'Tio jam estas via OpenID.',
+	'openid-convert-other-users-openid-text' => 'Tio estas OpenID de alia persono.',
 	'openidalreadyloggedin' => "'''Vi jam ensalutis, $1!'''
 
 Se vi volas utiligi OpenID por ensaluti estontece, vi povas [[Special:OpenIDConvert|konverti vian konton por uzi OpenID]].", # Fuzzy
@@ -1870,8 +1874,8 @@ puedes escoger uno de las opciones debajo.',
 	'openidconvertoraddmoreids' => 'Convertir a OpenID o añadir otra URL OpenID',
 	'openidconvertsuccess' => 'Convertido exitosamente a OpenID',
 	'openidconvertsuccesstext' => 'Has convertido correctamente tu OpenID a $1.',
-	'openidconvertyourstext' => 'Ya es tu OpenID.',
-	'openidconvertothertext' => 'Esto es el OpenID de alguien más.',
+	'openid-convert-already-your-openid-text' => 'Ya es tu OpenID.',
+	'openid-convert-other-users-openid-text' => 'Esto es el OpenID de alguien más.',
 	'openidalreadyloggedin' => 'Ya has iniciado sesión.',
 	'openidalreadyloggedintext' => "'''¡Ya ha iniciado sesión, $1!'''
 
@@ -1949,8 +1953,8 @@ $messages['et'] = array(
 	'openidchooseexisting' => 'Olemasolev konto selles vikis',
 	'openidchooseusername' => 'Kasutajanimi:',
 	'openidchoosepassword' => 'Parool:',
-	'openidconvertyourstext' => 'See on juba sinu OpenID.',
-	'openidconvertothertext' => 'See on kellegi teise OpenID.',
+	'openid-convert-already-your-openid-text' => 'See on juba sinu OpenID.',
+	'openid-convert-other-users-openid-text' => 'See on kellegi teise OpenID.',
 	'openidalreadyloggedin' => 'Oled juba sisse loginud.',
 	'openidnousername' => 'Kasutajanimi määratlemata.',
 	'openidbadusername' => 'Märgitud kasutajanimi on vigane.',
@@ -2061,8 +2065,8 @@ Voit valita omasi alla olevista vaihtoehdoista.',
 	'openidconvertoraddmoreids' => 'Siirry OpenID:hen tai lisää uusi OpenID-osoite.',
 	'openidconvertsuccess' => 'Muutettiin onnistuneesti OpenID:hen.',
 	'openidconvertsuccesstext' => 'OpenID:si on muunnettu muotoon $1.',
-	'openidconvertyourstext' => 'Tämä on jo OpenID:si.',
-	'openidconvertothertext' => 'Tämä on jonkun muun OpenID.',
+	'openid-convert-already-your-openid-text' => 'Tämä on jo OpenID:si.',
+	'openid-convert-other-users-openid-text' => 'Tämä on jonkun muun OpenID.',
 	'openidalreadyloggedin' => 'Olet jo kirjautuneena sisään.',
 	'openidnousername' => 'Käyttäjätunnus puuttuu.',
 	'openidbadusername' => 'Käyttäjätunnus on virheellinen.',
@@ -2162,8 +2166,8 @@ Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Pre
 	'openidconvertoraddmoreids' => 'Convertir vers OpenID ou ajouter une autre adresse OpenID',
 	'openidconvertsuccess' => 'Converti avec succès vers OpenID',
 	'openidconvertsuccesstext' => 'Vous avez converti avec succès votre OpenID vers $1.',
-	'openidconvertyourstext' => 'C’est déjà votre OpenID.',
-	'openidconvertothertext' => 'Ceci est l’OpenID de quelqu’un d’autre.',
+	'openid-convert-already-your-openid-text' => 'C’est déjà votre OpenID.',
+	'openid-convert-other-users-openid-text' => 'Ceci est l’OpenID de quelqu’un d’autre.',
 	'openidalreadyloggedin' => 'Vous êtes déjà connecté.',
 	'openidalreadyloggedintext' => "'''Vous êtes déjà connecté, $1 !'''
 
@@ -2271,8 +2275,8 @@ vos en pouede chouèsir yon dês los chouèx ce-desot.',
 	'openidconvertoraddmoreids' => 'Convèrtir vers OpenID ou ben apondre n’ôtr’URL OpenID',
 	'openidconvertsuccess' => 'Convèrti avouéc reusséta vers OpenID',
 	'openidconvertsuccesstext' => 'Vos éd convèrti avouéc reusséta voutron OpenID vers $1.',
-	'openidconvertyourstext' => 'O est ja voutron OpenID.',
-	'openidconvertothertext' => 'O est l’OpenID de quârqu’un d’ôtro.',
+	'openid-convert-already-your-openid-text' => 'O est ja voutron OpenID.',
+	'openid-convert-other-users-openid-text' => 'O est l’OpenID de quârqu’un d’ôtro.',
 	'openidalreadyloggedin' => 'Vos éte ja branchiê.',
 	'openidalreadyloggedintext' => "'''Vos éte ja branchiê, $1 !'''
 
@@ -2380,8 +2384,8 @@ Pode engadir un contrasinal opcional no seu [[Special:Preferences#mw-prefsection
 	'openidconvertoraddmoreids' => 'Converter a OpenID ou engadir outro enderezo URL de OpenID',
 	'openidconvertsuccess' => 'Convertiuse con éxito a OpenID',
 	'openidconvertsuccesstext' => 'Converteu con éxito o seu OpenID a $1.',
-	'openidconvertyourstext' => 'Ese xa é o seu OpenID.',
-	'openidconvertothertext' => 'Ese é o OpenID de alguén.',
+	'openid-convert-already-your-openid-text' => 'Ese xa é o seu OpenID.',
+	'openid-convert-other-users-openid-text' => 'Ese é o OpenID de alguén.',
 	'openidalreadyloggedin' => 'Xa está identificado.',
 	'openidalreadyloggedintext' => "'''Xa está identificado como $1!'''
 
@@ -2510,8 +2514,8 @@ Du chasch us däre Lischt ein uussueche.',
 	'openidconvertoraddmoreids' => 'Zuen ere OpenId wägsle oder e anderi OpenId zuefiege',
 	'openidconvertsuccess' => 'Erfolgryych no OpenID konvertiert',
 	'openidconvertsuccesstext' => 'Du hesch d Konvertierig vu Dyynere OpenID no $1 erfolgryych durgfiert.',
-	'openidconvertyourstext' => 'Des isch scho Dyyni OpenID.',
-	'openidconvertothertext' => 'Des isch d OpenID vu eber anderem.',
+	'openid-convert-already-your-openid-text' => 'Des isch scho Dyyni OpenID.',
+	'openid-convert-other-users-openid-text' => 'Des isch d OpenID vu eber anderem.',
 	'openidalreadyloggedin' => "'''Du bisch scho aagmäldet, $1!'''
 
 Wänn Du OpenID fir s Aamälde in Zuechumft wit nutze, no chasch [[Special:OpenIDConvert|Dyy Benutzerkonto no OpenID konvertiere]].", # Fuzzy
@@ -2633,8 +2637,8 @@ $messages['he'] = array(
 	'openidconvertoraddmoreids' => 'המרה ל־OpenID או הוספת כתובת OpenID נוספת',
 	'openidconvertsuccess' => 'הומר בהצלחה ל־OpenID',
 	'openidconvertsuccesstext' => 'המרתם בהצלחה את ה־OpenID שלכם ל־$1.',
-	'openidconvertyourstext' => 'זהו כבר ה־OpenID שלכם.',
-	'openidconvertothertext' => 'זהו ה־OpenID של מישהו אחר.',
+	'openid-convert-already-your-openid-text' => 'זהו כבר ה־OpenID שלכם.',
+	'openid-convert-other-users-openid-text' => 'זהו ה־OpenID של מישהו אחר.',
 	'openidalreadyloggedin' => 'אתם כבר מחוברים לחשבון.',
 	'openidalreadyloggedintext' => "'''$1, {{GENDER:$1|אתה כבר מחובר|את כבר מחוברת}} לחשבון!'''
 
@@ -2732,8 +2736,8 @@ $messages['hi'] = array(
 	'openidchoosepassword' => 'कूटशब्द:',
 	'openidconvertsuccess' => 'ओपनID में बदल दिया गया हैं',
 	'openidconvertsuccesstext' => 'आपने आपका ओपनID $1 में बदल दिया हैं।',
-	'openidconvertyourstext' => 'यह आपका ही ओपनID हैं।',
-	'openidconvertothertext' => 'यह किसी औरका ओपनID हैं।',
+	'openid-convert-already-your-openid-text' => 'यह आपका ही ओपनID हैं।',
+	'openid-convert-other-users-openid-text' => 'यह किसी औरका ओपनID हैं।',
 	'openidnousername' => 'सदस्यनाम दिया नहीं हैं।',
 	'openidbadusername' => 'गलत सदस्यनाम दिया हैं।',
 	'openidclientonlytext' => 'इस विकिपर खोले गये खाते आप अन्य साइटपर ओपनID के तौर पर इस्तेमाल नहीं कर सकतें हैं।',
@@ -2802,8 +2806,8 @@ možete odabrati jedan od niže ponuđenih.',
 	'openidconvertoraddmoreids' => 'Pretvorite u OpenID ili dodajte drugi OpenID URL',
 	'openidconvertsuccess' => 'Uspješno pretvoreno u OpenID',
 	'openidconvertsuccesstext' => 'Uspješno ste pretvorili Vaš OpenID u $1.',
-	'openidconvertyourstext' => 'To je već Vaš OpenID.',
-	'openidconvertothertext' => 'To je OpenID koji pripada nekom drugom.',
+	'openid-convert-already-your-openid-text' => 'To je već Vaš OpenID.',
+	'openid-convert-other-users-openid-text' => 'To je OpenID koji pripada nekom drugom.',
 	'openidalreadyloggedin' => "'''Vi ste već prijavljeni, $1!'''
 
 Ako želite rabiti OpenID za buduće prijave, možete [[Special:OpenIDConvert|promijeniti Vaš račun za uporabu OpenID]].", # Fuzzy
@@ -2899,8 +2903,8 @@ Faktulatiwne hesło hodźi so w twojim [[Special:Preferences#mw-prefsection-pers
 	'openidconvertoraddmoreids' => 'OpenID konwertować abo dalši URL OpenID přidać',
 	'openidconvertsuccess' => 'Wuspěšnje do OpenID konwertowany.',
 	'openidconvertsuccesstext' => 'Sy swój OpenID wuspěšnje do $1 konwertował.',
-	'openidconvertyourstext' => 'To je hižo twój OpenID.',
-	'openidconvertothertext' => 'To je OpenID někoho druheho.',
+	'openid-convert-already-your-openid-text' => 'To je hižo twój OpenID.',
+	'openid-convert-other-users-openid-text' => 'To je OpenID někoho druheho.',
 	'openidalreadyloggedin' => 'Sy hižo přizjewjeny.',
 	'openidalreadyloggedintext' => "'''Sy hižo přizjewjeny, $1!'''
 
@@ -3005,8 +3009,8 @@ Lépj kapcsolatba egy [[Special:ListUsers/sysop|adminisztrátorral]].',
 	'openidconvertoraddmoreids' => 'Átalakítás OpenID-ra, vagy másik OpenID URL hozzáadása',
 	'openidconvertsuccess' => 'Sikeres átállás OpenID-re',
 	'openidconvertsuccesstext' => 'Sikeresen átállítottad az OpenID-det erre: $1.',
-	'openidconvertyourstext' => 'Ez az OpenID már a tiéd.',
-	'openidconvertothertext' => 'Ez az OpenID másvalakié.',
+	'openid-convert-already-your-openid-text' => 'Ez az OpenID már a tiéd.',
+	'openid-convert-other-users-openid-text' => 'Ez az OpenID másvalakié.',
 	'openidalreadyloggedin' => "'''Már be vagy jelentkezve, $1!'''
 
 Ha ezentúl az OpenID-del akarsz bejelentkezni, [[Special:OpenIDConvert|konvertálhatod a felhasználói fiókodat OpenID-re]].", # Fuzzy
@@ -3108,8 +3112,8 @@ tu pote seliger un del optiones in basso.',
 	'openidconvertoraddmoreids' => 'Converter in OpenID o adder un altere URL de OpenID',
 	'openidconvertsuccess' => 'Conversion a OpenID succedite',
 	'openidconvertsuccesstext' => 'Tu ha convertite con successo tu OpenID a $1.',
-	'openidconvertyourstext' => 'Isto es ja tu OpenID.',
-	'openidconvertothertext' => 'Isto es le OpenID de alcuno altere.',
+	'openid-convert-already-your-openid-text' => 'Isto es ja tu OpenID.',
+	'openid-convert-other-users-openid-text' => 'Isto es le OpenID de alcuno altere.',
 	'openidalreadyloggedin' => 'Tu es jam authenticate.',
 	'openidalreadyloggedintext' => "'''Tu es jam authenticate, \$1!'''
 
@@ -3225,8 +3229,8 @@ Anda dapat memilih dari salah satu opsi berikut.',
 	'openidconvertoraddmoreids' => 'Konversi ke OpenID atau tambahkan URL OpenID yang lain',
 	'openidconvertsuccess' => 'Berhasil dikonversi menjadi OpenID',
 	'openidconvertsuccesstext' => 'Anda telah berhasil mengkonversi OpenID Anda menjadi $1.',
-	'openidconvertyourstext' => 'Sudah merupakan OpenID Anda.',
-	'openidconvertothertext' => 'Itu adalah OpenID orang lain.',
+	'openid-convert-already-your-openid-text' => 'Sudah merupakan OpenID Anda.',
+	'openid-convert-other-users-openid-text' => 'Itu adalah OpenID orang lain.',
 	'openidalreadyloggedin' => "'''Anda telah masuk log, $1!'''
 
 Jika Anda ingin menggunakan OpenID untuk masuk log di masa yang akan datang, Anda dapat [[Special:OpenIDConvert|mengkonversi akun Anda menjadi OpenID]].", # Fuzzy
@@ -3347,8 +3351,8 @@ puoi sceglierne uno dalle opzioni seguenti.',
 	'openidconvertoraddmoreids' => 'Converti in OpenID o aggiungi un altro URL OpenID',
 	'openidconvertsuccess' => 'Convertito con successo a OpenID',
 	'openidconvertsuccesstext' => 'Il tuo OpenID è stato convertito con successo a $1.',
-	'openidconvertyourstext' => 'Questo è già il tuo OpenID.',
-	'openidconvertothertext' => "Questo è l'OpenID di qualcun altro.",
+	'openid-convert-already-your-openid-text' => 'Questo è già il tuo OpenID.',
+	'openid-convert-other-users-openid-text' => "Questo è l'OpenID di qualcun altro.",
 	'openidalreadyloggedin' => "Hai già effettuato l'accesso.",
 	'openidalreadyloggedintext' => "'''Hai già effettuato l'accesso, $1!'''
 
@@ -3464,8 +3468,8 @@ $messages['ja'] = array(
 	'openidconvertoraddmoreids' => 'OpenID に変換、または別の OpenID URL を追加',
 	'openidconvertsuccess' => 'OpenID に変換しました',
 	'openidconvertsuccesstext' => 'あなたの OpenID を $1 に変換しました。',
-	'openidconvertyourstext' => 'これは既にあなたの OpenID です。',
-	'openidconvertothertext' => 'これは他の誰かの OpenID です。',
+	'openid-convert-already-your-openid-text' => 'これは既にあなたの OpenID です。',
+	'openid-convert-other-users-openid-text' => 'これは他の誰かの OpenID です。',
 	'openidalreadyloggedin' => 'あなたは既にログインしています。',
 	'openidalreadyloggedintext' => "'''$1 さん、あなたは既にログインしています!'''
 
@@ -3590,8 +3594,8 @@ $messages['ka'] = array(
 	'openidconvertoraddmoreids' => 'OpenID-ში კონვერტირება ან სხვა OpenID-ის URL-ის დამატება',
 	'openidconvertsuccess' => 'წარმატებით დაკონვერტირდა OpenID-ში',
 	'openidconvertsuccesstext' => 'თქვენ წარმატებით დააკონვერტირეთ საკუთარი OpenID $1-ში.',
-	'openidconvertyourstext' => 'ეს უკვე არის თქვენი OpenID.',
-	'openidconvertothertext' => 'ეს არის სხვისი OpenID.',
+	'openid-convert-already-your-openid-text' => 'ეს უკვე არის თქვენი OpenID.',
+	'openid-convert-other-users-openid-text' => 'ეს არის სხვისი OpenID.',
 	'openidalreadyloggedin' => 'თქვენ უკვე შესული ხართ.',
 	'openidnousername' => 'მომხმარებლის სახელი არ არის მითითებული.',
 	'openidbadusername' => 'მითითებულია არასწორი მომხმარებლის სახელი.',
@@ -3676,8 +3680,8 @@ $messages['km'] = array(
 	'openidchooseusername' => 'អត្តនាម៖',
 	'openidchoosepassword' => 'ពាក្យសំងាត់៖',
 	'openidconvertsuccess' => 'បានបម្លែងទៅ OpenID ដោយជោគជ័យ',
-	'openidconvertyourstext' => 'វាជាOpenIDរបស់អ្នករួចហើយ។',
-	'openidconvertothertext' => 'វាជាOpenIDរបស់អ្នកដទៃ។',
+	'openid-convert-already-your-openid-text' => 'វាជាOpenIDរបស់អ្នករួចហើយ។',
+	'openid-convert-other-users-openid-text' => 'វាជាOpenIDរបស់អ្នកដទៃ។',
 	'openidalreadyloggedin' => "'''អ្នកបានកត់ឈ្មោះចូលរួចហើយ $1!'''
 ប្រសិនបើអ្នកចង់់ប្រើ OpenID ដើម្បីចុះឈ្មោះចូលនាពេលអនាគត អ្នកអាច[[Special:OpenIDConvert|បម្លែងគណនីរបស់អ្នកដើម្បីប្រើ OpenID]]។", # Fuzzy
 	'openidnousername' => 'មិនមានអត្តនាមបានបញ្ជាក់ទេ។',
@@ -3756,8 +3760,8 @@ $messages['ko'] = array(
 	'openidconvertoraddmoreids' => 'OpenID로 변환하거나 OpenID URL을 추가합니다.',
 	'openidconvertsuccess' => 'OpenID로의 변환이 완료되었습니다',
 	'openidconvertsuccesstext' => '성공적으로 제출하신 [$1 OpenID 정보]를 {{SITENAME}} 계정 정보로 변환하였습니다.',
-	'openidconvertyourstext' => '이미 사용중인 OpenID입니다.',
-	'openidconvertothertext' => '다른 사용자의 OpenID입니다.',
+	'openid-convert-already-your-openid-text' => '이미 사용중인 OpenID입니다.',
+	'openid-convert-other-users-openid-text' => '다른 사용자의 OpenID입니다.',
 	'openidalreadyloggedin' => '이미 로그인했습니다.',
 	'openidalreadyloggedintext' => "'''$1 계정으로 이미 로그인했습니다!'''
 
@@ -3883,8 +3887,8 @@ Do kanns och noch mieh <i lang="en">OpenID</i> <i lang="en">URLs</i> dobei donn.
 	'openidconvertoraddmoreids' => 'Op <i lang="en">OpenID</i> ömshtelle, udder en <i lang="en">OpenID URL</i> dobei donn',
 	'openidconvertsuccess' => 'De Aanpassung aan OpenID hät jeklapp',
 	'openidconvertsuccesstext' => 'Do häß Ding OpenID jez ömjewandelt noh $1.',
-	'openidconvertyourstext' => 'Dat es ald Ding OpenID.',
-	'openidconvertothertext' => 'Dat wämm anders sing OpenID.',
+	'openid-convert-already-your-openid-text' => 'Dat es ald Ding OpenID.',
+	'openid-convert-other-users-openid-text' => 'Dat wämm anders sing OpenID.',
 	'openidalreadyloggedin' => 'Do bes alt enjelogg.',
 	'openidalreadyloggedintext' => "Leeven $1, Do bes alld enjelogg.'''
 
@@ -4002,8 +4006,8 @@ En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#
 	'openidconvertoraddmoreids' => 'An en OpenID ëmwandelen oder eng aner OpenID URL derbäisetzen',
 	'openidconvertsuccess' => 'An en OpenID-Benotzerkont ëmgewandelt',
 	'openidconvertsuccesstext' => 'Dir hutt Är OpenID op $1 ëmgewandelt.',
-	'openidconvertyourstext' => 'Dat ass schon är OpenID.',
-	'openidconvertothertext' => 'Dëst ass engem anere seng OpenID.',
+	'openid-convert-already-your-openid-text' => 'Dat ass schon är OpenID.',
+	'openid-convert-other-users-openid-text' => 'Dëst ass engem anere seng OpenID.',
 	'openidalreadyloggedin' => 'Dir sidd schonn ageloggt.',
 	'openidnousername' => 'Kee Benotzernumm uginn.',
 	'openidbadusername' => 'Falsche Benotzernumm uginn.',
@@ -4147,8 +4151,8 @@ $messages['mk'] = array(
 	'openidconvertoraddmoreids' => 'Претворете во OpenID или додајте друга OpenID URL адреса',
 	'openidconvertsuccess' => 'Претворањето во OpenID е успешно',
 	'openidconvertsuccesstext' => 'Успешно го претворивте вашиот OpenID во $1.',
-	'openidconvertyourstext' => 'Ова веќе е  вашиот OpenID.',
-	'openidconvertothertext' => 'Тоа е туѓ OpenID.',
+	'openid-convert-already-your-openid-text' => 'Ова веќе е  вашиот OpenID.',
+	'openid-convert-other-users-openid-text' => 'Тоа е туѓ OpenID.',
 	'openidalreadyloggedin' => 'Веќе сте најавени.',
 	'openidalreadyloggedintext' => "'''Веќе сте најавени, $1!'''
 
@@ -4241,8 +4245,8 @@ $messages['ml'] = array(
 	'openidchoosepassword' => 'രഹസ്യവാക്ക്:',
 	'openidconvertsuccess' => 'ഓപ്പൺ ഐ.ഡി.യിലേക്ക് വിജയകരമായി പരിവർത്തനം ചെയ്തിരിക്കുന്നു',
 	'openidconvertsuccesstext' => 'താങ്കളുടെ ഓപ്പൺ‌ഐ.ഡി. $1ലേക്കു വിജയകരമായി പരിവർത്തനം ചെയ്തിരിക്കുന്നു.',
-	'openidconvertyourstext' => 'ഇതു ഇപ്പോൾ തന്നെ താങ്കളുടെ ഓപ്പൺ‌ഐ.ഡി.യാണ്‌.',
-	'openidconvertothertext' => 'ഇതു മറ്റാരുടേയോ ഓപ്പൺ‌ഐ.ഡി.യാണ്‌.',
+	'openid-convert-already-your-openid-text' => 'ഇതു ഇപ്പോൾ തന്നെ താങ്കളുടെ ഓപ്പൺ‌ഐ.ഡി.യാണ്‌.',
+	'openid-convert-other-users-openid-text' => 'ഇതു മറ്റാരുടേയോ ഓപ്പൺ‌ഐ.ഡി.യാണ്‌.',
 	'openidnousername' => 'ഉപയോക്തൃനാമം തിരഞ്ഞെടുത്തിട്ടില്ല.',
 	'openidbadusername' => 'അസാധുവായ ഉപയോക്തൃനാമമാണു തിരഞ്ഞെടുത്തിരിക്കുന്നത.',
 	'openidloginlabel' => 'ഓപ്പൺ‌ഐ.ഡി. വിലാസം',
@@ -4307,8 +4311,8 @@ $messages['mr'] = array(
 	'openidconvertinstructions' => 'हा अर्ज तुम्हाला ओपनID URL वापरण्यासाठी तुमचे सदस्यनाव बदलण्याची परवानगी देतो.', # Fuzzy
 	'openidconvertsuccess' => 'ओपनID मध्ये बदल पूर्ण झालेले आहेत',
 	'openidconvertsuccesstext' => 'तुम्ही तुमचा ओपनID $1 मध्ये यशस्वीरित्या बदललेला आहे.',
-	'openidconvertyourstext' => 'हा तुमचाच ओपनID आहे.',
-	'openidconvertothertext' => 'हा दुसर्‍याचा ओपनID आहे.',
+	'openid-convert-already-your-openid-text' => 'हा तुमचाच ओपनID आहे.',
+	'openid-convert-other-users-openid-text' => 'हा दुसर्‍याचा ओपनID आहे.',
 	'openidalreadyloggedin' => "'''$1, तुम्ही अगोदरच प्रवेश केलेला आहे!'''
 
 जर तुम्ही भविष्यात ओपनID वापरून प्रवेश करू इच्छित असाल, तर तुम्ही [[Special:OpenIDConvert|तुमचे खाते ओपनID साठी बदलू शकता]].", # Fuzzy
@@ -4393,8 +4397,8 @@ anda boleh memilih satu daripada pilihan-pilihan berikut.',
 	'openidconvertoraddmoreids' => 'Tukar ke OpenID atau tambahkan satu lagi URL OpenID',
 	'openidconvertsuccess' => 'Berjaya ditukar ke OpenID',
 	'openidconvertsuccesstext' => 'Anda telah berjaya menukar OpenID ke $1.',
-	'openidconvertyourstext' => 'OpenID anda seperti yang tertera.',
-	'openidconvertothertext' => 'OpenID tersebut merupakan milik orang lain.',
+	'openid-convert-already-your-openid-text' => 'OpenID anda seperti yang tertera.',
+	'openid-convert-other-users-openid-text' => 'OpenID tersebut merupakan milik orang lain.',
 	'openidalreadyloggedin' => 'Anda sudah log masuk.',
 	'openidalreadyloggedintext' => "'''Anda sudah log masuk, $1!'''
 
@@ -4552,8 +4556,8 @@ Vennligst kontakt en [[Special:ListUsers/sysop|administrator]].',
 	'openidconvertoraddmoreids' => 'Konverter til OpenID eller legg til en annen OpenID-adresse',
 	'openidconvertsuccess' => 'Konverterte til OpenID',
 	'openidconvertsuccesstext' => 'Du har konvertert din OpenID til $1.',
-	'openidconvertyourstext' => 'Det er allerede din OpenID.',
-	'openidconvertothertext' => 'Den OpenID-en tilhører noen andre.',
+	'openid-convert-already-your-openid-text' => 'Det er allerede din OpenID.',
+	'openid-convert-other-users-openid-text' => 'Den OpenID-en tilhører noen andre.',
 	'openidalreadyloggedin' => "'''$1, du er allerede logget inn.'''
 
 Om du ønsker å bruke OpenID i framtiden, kan du [[Special:OpenIDConvert|konvertere kontoen din til å bruke OpenID]].", # Fuzzy
@@ -4672,8 +4676,8 @@ Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Pr
 	'openidconvertoraddmoreids' => 'Converteren naar OpenID of een andere OpenID-URL toevoegen',
 	'openidconvertsuccess' => 'Omzetten naar OpenID is uitgevoerd',
 	'openidconvertsuccesstext' => 'Uw OpenID is omgezet naar $1.',
-	'openidconvertyourstext' => 'Dat is al uw OpenID.',
-	'openidconvertothertext' => 'Iemand anders heeft die OpenID al in gebruik.',
+	'openid-convert-already-your-openid-text' => 'Dat is al uw OpenID.',
+	'openid-convert-other-users-openid-text' => 'Iemand anders heeft die OpenID al in gebruik.',
 	'openidalreadyloggedin' => 'U bent al aangemeld.',
 	'openidalreadyloggedintext' => "'''U bent al aangemeld, $1!'''
 
@@ -4786,8 +4790,8 @@ Kontakt ein [[Special:ListUsers/sysop|administrator]].',
 	'openidconvertoraddmoreids' => 'Konverter til OpenID eller legg til ei anna OpenID-adresse',
 	'openidconvertsuccess' => 'Konverterte til OpenID',
 	'openidconvertsuccesstext' => 'Du har konvertert OpenID-en din til $1.',
-	'openidconvertyourstext' => 'Det er allereie OpenID-en din.',
-	'openidconvertothertext' => 'Den OpenID-en tilhøyrer einkvan annan.',
+	'openid-convert-already-your-openid-text' => 'Det er allereie OpenID-en din.',
+	'openid-convert-other-users-openid-text' => 'Den OpenID-en tilhøyrer einkvan annan.',
 	'openidalreadyloggedin' => 'Du er alt innlogga.',
 	'openidnousername' => 'Du oppgav ingen brukarnamn.',
 	'openidbadusername' => 'Du oppgav eit ugyldig brukarnamn.',
@@ -4872,8 +4876,8 @@ Metetz-vos en rapòrt amb l’[[Special:ListUsers/sysop|administrator]].",
 	'openidconvertoraddmoreids' => 'Convertir cap a OpenID o apondre una autra adreça OpenID',
 	'openidconvertsuccess' => 'Convertit amb succès cap a OpenID',
 	'openidconvertsuccesstext' => 'Avètz convertit amb succès vòstra OpenID cap a $1.',
-	'openidconvertyourstext' => 'Ja es vòstra OpenID.',
-	'openidconvertothertext' => "Aquò es quicòm d'autre qu'una OpenID.",
+	'openid-convert-already-your-openid-text' => 'Ja es vòstra OpenID.',
+	'openid-convert-other-users-openid-text' => "Aquò es quicòm d'autre qu'una OpenID.",
 	'openidalreadyloggedin' => "'''Ja sètz connectat, $1 !'''
 
 Se desiratz utilizar vòstra OpenID per vos connectar ulteriorament, podètz [[Special:OpenIDConvert|convertir vòstre compte per utilizar OpenID]].", # Fuzzy
@@ -5004,8 +5008,8 @@ Możesz wybrać spośród propozycji podanych poniżej.',
 	'openidconvertoraddmoreids' => 'Konwertuj do OpenID lub dodaj kolejny adres URL OpenID',
 	'openidconvertsuccess' => 'Przełączone na korzystanie z OpenID',
 	'openidconvertsuccesstext' => 'Zmieniłeś swoje OpenID na $1.',
-	'openidconvertyourstext' => 'Już masz swój OpenID.',
-	'openidconvertothertext' => 'To jest OpenID należące do kogoś innego.',
+	'openid-convert-already-your-openid-text' => 'Już masz swój OpenID.',
+	'openid-convert-other-users-openid-text' => 'To jest OpenID należące do kogoś innego.',
 	'openidalreadyloggedin' => 'Jesteś już zalogowany.',
 	'openidalreadyloggedintext' => "'''Już jesteś zalogowany jako $1!'''
 
@@ -5118,8 +5122,8 @@ a peul sern-ne un da j'opsion sì-sota.",
 	'openidconvertoraddmoreids' => "Convertì a OpenID o gionté n'àutra adrëssa OpenID",
 	'openidconvertsuccess' => 'Convertì da bin a OpenID',
 	'openidconvertsuccesstext' => "A l'ha convertì da bin sò OpenID a $1",
-	'openidconvertyourstext' => "Cost-sì a l'é già sò OpenID.",
-	'openidconvertothertext' => "Cost-sì a l'é l'OpenID ëd cheidun d'àutri.",
+	'openid-convert-already-your-openid-text' => "Cost-sì a l'é già sò OpenID.",
+	'openid-convert-other-users-openid-text' => "Cost-sì a l'é l'OpenID ëd cheidun d'àutri.",
 	'openidalreadyloggedin' => "A l'é già intrà ant ël sistema.",
 	'openidalreadyloggedintext' => "'''A l'é già intrà ant ël sistema, $1!'''
 
@@ -5262,8 +5266,8 @@ pode escolher uma das opções abaixo.',
 	'openidconvertoraddmoreids' => 'Converter para OpenID ou adicionar outra URL OpenID',
 	'openidconvertsuccess' => 'Convertido para OpenID com sucesso',
 	'openidconvertsuccesstext' => 'Converteu com sucesso o seu OpenID para $1.',
-	'openidconvertyourstext' => 'Esse já é o seu OpenID.',
-	'openidconvertothertext' => 'Esse é o OpenID de outra pessoa.',
+	'openid-convert-already-your-openid-text' => 'Esse já é o seu OpenID.',
+	'openid-convert-other-users-openid-text' => 'Esse é o OpenID de outra pessoa.',
 	'openidalreadyloggedin' => 'Já está autenticado.',
 	'openidalreadyloggedintext' => "'''Já está autenticado, $1!'''
 
@@ -5370,8 +5374,8 @@ pode escolher uma das opções abaixo.',
 	'openidconvertoraddmoreids' => 'Converter para OpenID ou adicionar outra URL OpenID',
 	'openidconvertsuccess' => 'Convertido para OpenID com sucesso',
 	'openidconvertsuccesstext' => 'Você converteu com sucesso o seu OpenID para $1.',
-	'openidconvertyourstext' => 'Esse já é o seu OpenID.',
-	'openidconvertothertext' => 'Esse é o OpenID de outra pessoa.',
+	'openid-convert-already-your-openid-text' => 'Esse já é o seu OpenID.',
+	'openid-convert-other-users-openid-text' => 'Esse é o OpenID de outra pessoa.',
 	'openidalreadyloggedin' => "'''Você já se encontra autenticado, $1!'''
 
 Se no futuro pretender usar OpenID para se autenticar, pode [[Special:OpenIDConvert|converter a sua conta para usar OpenID]].", # Fuzzy
@@ -5473,8 +5477,8 @@ se poate alege una din opțiunile de mai jos.',
 	'openidchoosepassword' => 'Parolă:',
 	'openidconvertsuccess' => 'Convertit cu succes la OpenID',
 	'openidconvertsuccesstext' => 'V-ați convertit cu succes contul OpenID la $1.',
-	'openidconvertyourstext' => 'Acesta este deja OpenID-ul dumneavoastră.',
-	'openidconvertothertext' => 'Acesta este OpenID-ul altcuiva.',
+	'openid-convert-already-your-openid-text' => 'Acesta este deja OpenID-ul dumneavoastră.',
+	'openid-convert-other-users-openid-text' => 'Acesta este OpenID-ul altcuiva.',
 	'openidalreadyloggedin' => 'Sunteți deja autentificat.',
 	'openidnousername' => 'Nici un nume de utilizator specificat.',
 	'openidbadusername' => 'Nume de utilizator specificat greșit.',
@@ -5601,8 +5605,8 @@ $messages['ru'] = array(
 	'openidconvertoraddmoreids' => 'Преобразовать в OpenID или добавить другой адрес OpenID',
 	'openidconvertsuccess' => 'Успешное преобразование в OpenID',
 	'openidconvertsuccesstext' => 'Вы успешно преобразовали свой OpenID в $1.',
-	'openidconvertyourstext' => 'Это уже ваш OpenID.',
-	'openidconvertothertext' => 'Это чужой OpenID.',
+	'openid-convert-already-your-openid-text' => 'Это уже ваш OpenID.',
+	'openid-convert-other-users-openid-text' => 'Это чужой OpenID.',
 	'openidalreadyloggedin' => 'Вы уже вошли.',
 	'openidalreadyloggedintext' => "''' Вы уже вошли,  $1!'''
 
@@ -5706,8 +5710,8 @@ ni poi pigghiari unu di chisti ccà di sècutu.",
 	'openidconvertinstructions' => 'Stu mòdulu ti duna lu pirmessu di canciari lu tò account pi usari nu URL OpenID.', # Fuzzy
 	'openidconvertsuccess' => 'Canciatu cu successu a OpenID',
 	'openidconvertsuccesstext' => 'Lu tò OpenID canciau cu sucessu a $1.',
-	'openidconvertyourstext' => 'Chistu è ggià lu tò  OpenID.',
-	'openidconvertothertext' => "Chistu è l'OpenID di n'àutru.",
+	'openid-convert-already-your-openid-text' => 'Chistu è ggià lu tò  OpenID.',
+	'openid-convert-other-users-openid-text' => "Chistu è l'OpenID di n'àutru.",
 	'openidalreadyloggedin' => "'''Facisti ggià lu login, $1!'''
 
 Si disìi usari OpenID pi fari lu login ntô futuru, poi [[Special:OpenIDConvert|canciari lu tò account pi utilizzari OpenID]].", # Fuzzy
@@ -5770,8 +5774,8 @@ $messages['si'] = array(
 	'openidchooseusername' => 'පරිශීලක නාමය:',
 	'openidchoosepassword' => 'මුරපදය:',
 	'openidconvertsuccess' => 'OpenID වෙත සාර්ථකව හරවන ලදී',
-	'openidconvertyourstext' => 'එය දැනටමත් ඔබේ OpenID වේ.',
-	'openidconvertothertext' => 'එය වෙන කෙනෙකුගේ OpenID එකකි.',
+	'openid-convert-already-your-openid-text' => 'එය දැනටමත් ඔබේ OpenID වේ.',
+	'openid-convert-other-users-openid-text' => 'එය වෙන කෙනෙකුගේ OpenID එකකි.',
 	'openidalreadyloggedin' => 'ඔබ දැනටමත් ප්‍රවිෂ්ට වී ඇත.',
 	'openidnousername' => 'පරිශීලක නාමයක් විශේෂණය කර නොමැත.',
 	'openidloginlabel' => 'OpenID URL',
@@ -5843,8 +5847,8 @@ Prosím, poraďte sa so [[Special:ListUsers/sysop|správcom]] tejto webovej loka
 	'openidconvertoraddmoreids' => 'Previesť na OpenID alebo pridať iný OpenID URL',
 	'openidconvertsuccess' => 'Úspešne prevedené na OpenID',
 	'openidconvertsuccesstext' => 'Úspešne ste previedli váš OpenID na $1.',
-	'openidconvertyourstext' => 'To už je váš OpenID.',
-	'openidconvertothertext' => 'To je OpenID niekoho iného.',
+	'openid-convert-already-your-openid-text' => 'To už je váš OpenID.',
+	'openid-convert-other-users-openid-text' => 'To je OpenID niekoho iného.',
 	'openidalreadyloggedin' => "'''Už ste prihlásený, $1!'''
 
 Ak chcete na prihlasovanie v budúcnosti využívať OpenID, môžete [[Special:OpenIDConvert|previesť váš účet na OpenID]].", # Fuzzy
@@ -5941,8 +5945,8 @@ svojega si lahko izberete med spodnjimi možnostmi.',
 	'openidconvertoraddmoreids' => 'Pretvorite v OpenID ali dodajte še en URL OpenID',
 	'openidconvertsuccess' => 'Uspešno pretvorjeno v OpenID',
 	'openidconvertsuccesstext' => 'Uspešno ste pretvorili svoj OpenID v $1.',
-	'openidconvertyourstext' => 'To je že vaš OpenID.',
-	'openidconvertothertext' => 'To je OpenID nekoga drugega.',
+	'openid-convert-already-your-openid-text' => 'To je že vaš OpenID.',
+	'openid-convert-other-users-openid-text' => 'To je OpenID nekoga drugega.',
 	'openidalreadyloggedin' => 'Ste že prijavljeni.',
 	'openidalreadyloggedintext' => "'''$1, ste že prijavljeni!'''
 
@@ -6051,8 +6055,8 @@ $messages['sr-ec'] = array(
 	'openidchoosepassword' => 'Лозинка:',
 	'openidconvertsuccess' => 'Претварање у OpenID је успело',
 	'openidconvertsuccesstext' => 'Успешно сте претворили свој OpenID у $1.',
-	'openidconvertyourstext' => 'Ово је већ ваш OpenID.',
-	'openidconvertothertext' => 'Тај OpenID припада неком другом.',
+	'openid-convert-already-your-openid-text' => 'Ово је већ ваш OpenID.',
+	'openid-convert-other-users-openid-text' => 'Тај OpenID припада неком другом.',
 	'openidnousername' => 'Нисте навели корисничко име.',
 	'openidbadusername' => 'Наведено је неисправно корисничко име.',
 	'openidclientonlytext' => 'Не можете користити налоге с овог викија као OpenID за други сајт.',
@@ -6113,8 +6117,8 @@ Možete da izaberete jednu od opcija ispod.',
 	'openidchoosepassword' => 'Lozinka:',
 	'openidconvertsuccess' => 'Konverzija ka OpenID je uspešna',
 	'openidconvertsuccesstext' => 'Uspešno ste prmenili svoj OpenID na $1.',
-	'openidconvertyourstext' => 'Taj OpenID je već vaš.',
-	'openidconvertothertext' => 'To je tuđ OpenID.',
+	'openid-convert-already-your-openid-text' => 'Taj OpenID je već vaš.',
+	'openid-convert-other-users-openid-text' => 'To je tuđ OpenID.',
 	'openidnousername' => 'Nije navedeno korisničko ime.',
 	'openidbadusername' => 'Zadato neispravno korisničko ime.',
 	'openidclientonlytext' => 'Vi ne možete da koristite naloge sa ovog Vikija kao OpenID-ove na drugim sajtovima.',
@@ -6178,8 +6182,8 @@ du koast aan uut ju unnerstoundene Lieste uutwääle.',
 	'openidconvertoraddmoreids' => 'Uumsätte tou OpenID of föich n uur OpenID-URL tou.',
 	'openidconvertsuccess' => 'Mäd Ärfoulch ätter OpenID konvertierd',
 	'openidconvertsuccesstext' => 'Du hääst ju Konvertierenge fon dien OpenID ätter $1 mäd Ärfoulch truchfierd.',
-	'openidconvertyourstext' => 'Dit is al dien OpenID.',
-	'openidconvertothertext' => 'Dit is ju OpenID fon uurswäl.',
+	'openid-convert-already-your-openid-text' => 'Dit is al dien OpenID.',
+	'openid-convert-other-users-openid-text' => 'Dit is ju OpenID fon uurswäl.',
 	'openidalreadyloggedin' => "'''Du bäst al anmälded, $1!'''
 
 Wan du OpenID foar kuumende Anmäldefoargonge nutsje moatest, koast du [[Special:OpenIDConvert|dien Benutserkonto ätter OpenID konvertierje]].", # Fuzzy
@@ -6290,8 +6294,8 @@ Du kan välja ett från alternativen nedan.',
 	'openidconvertoraddmoreids' => 'Konvertera till OpenID eller lägg till en ny OpenID-adress',
 	'openidconvertsuccess' => 'Konverterade till OpenID',
 	'openidconvertsuccesstext' => 'Du har konverterat ditt OpenID till $1.',
-	'openidconvertyourstext' => 'Det är redan ditt OpenID.',
-	'openidconvertothertext' => 'Det OpenID:t tillhör någon annan.',
+	'openid-convert-already-your-openid-text' => 'Det är redan ditt OpenID.',
+	'openid-convert-other-users-openid-text' => 'Det OpenID:t tillhör någon annan.',
 	'openidalreadyloggedin' => 'Du är redan inloggad.',
 	'openidalreadyloggedintext' => "'''Du är redan inloggad, $1!'''
 
@@ -6368,7 +6372,7 @@ $messages['ta'] = array(
 	'openidchoosefull' => 'உங்கள் முழுப்பெயர் ($1)',
 	'openidchooseusername' => 'பயனர் பெயர்:',
 	'openidchoosepassword' => 'கடவுச்சொல்:',
-	'openidconvertothertext' => 'இது வேறு ஒருவரின் OpenID.',
+	'openid-convert-other-users-openid-text' => 'இது வேறு ஒருவரின் OpenID.',
 	'openidalreadyloggedin' => 'நீங்கள் ஏற்கனவே புகுபதிகை செய்துள்ளீர்கள்.',
 	'openidnousername' => 'ஒரு பயனர் பெயரும் குறிப்பிடப்படவில்லை.',
 	'openidbadusername' => 'மோசமான பயனர் பெயர் குறிப்பிடப்பட்டுள்ளது.',
@@ -6422,8 +6426,8 @@ $messages['te'] = array(
 	'openidconvertinstructions' => 'మీ ఖాతాని ఓపెన్ఐడీ చిరునామా ఉపయోగించేలా మార్చడానికి లేదా మరిన్ని ఓపెన్ఐడీ చిరునామాలు చేర్చుకోడానికి ఈ ఫారం వీలుకల్పిస్తుంది',
 	'openidconvertsuccess' => 'విజయవంతంగా ఓపెనిఐడీకి మారారు',
 	'openidconvertsuccesstext' => 'మీ ఓపెన్ఐడీని $1కి విజయవంతంగా మార్చుకున్నారు.',
-	'openidconvertyourstext' => 'అది ఇప్పటికే మీ ఓపెన్ఐడీ.',
-	'openidconvertothertext' => 'ఇది వేరొకరి ఓపెన్ ఐడి',
+	'openid-convert-already-your-openid-text' => 'అది ఇప్పటికే మీ ఓపెన్ఐడీ.',
+	'openid-convert-other-users-openid-text' => 'ఇది వేరొకరి ఓపెన్ ఐడి',
 	'openidnousername' => 'వాడుకరిపేరు ఇవ్వలేదు.',
 	'openidbadusername' => 'తప్పుడు వాడుకరిపేరుని ఇచ్చారు.',
 	'openidclientonlytext' => 'ఈ వికీ లోని ఖాతాలను మీరు వేరే సైట్లలో ఓపెన్ఐడీలుగా ఉపయోగించలేరు.',
@@ -6566,8 +6570,8 @@ makakapili ka mula sa mga pagpipiliang nasa ibaba.',
 	'openidconvertoraddmoreids' => 'Gawing OpenID o magdagdag ng iba pang URL na pang-OpenID',
 	'openidconvertsuccess' => 'Matagumpay na napalitan (nabago) upang maging OpenID',
 	'openidconvertsuccesstext' => 'Matagumpay mong napalitan/nabago ang iyong OpenID para maging $1.',
-	'openidconvertyourstext' => 'Iyan na mismo ang iyong OpenID.',
-	'openidconvertothertext' => 'Iyan ay isa nang OpenID ng ibang tao.',
+	'openid-convert-already-your-openid-text' => 'Iyan na mismo ang iyong OpenID.',
+	'openid-convert-other-users-openid-text' => 'Iyan ay isa nang OpenID ng ibang tao.',
 	'openidalreadyloggedin' => 'Nakalagda ka na.',
 	'openidalreadyloggedintext' => "'''Nakalagda ka na, $1!'''
 
@@ -6675,8 +6679,8 @@ aşağıdaki seçeneklerden birini seçebilirsiniz.',
 	'openidconvertoraddmoreids' => "OpenID'ye dönüştürün ya da başka bir OpenID URLsi ekleyin",
 	'openidconvertsuccess' => 'OpenIDye başarıyla dönüştürüldü',
 	'openidconvertsuccesstext' => "OpenIDnizi başarıyla $1'e dönüştürdünüz.",
-	'openidconvertyourstext' => 'Bu zaten sizin OpenIDniz.',
-	'openidconvertothertext' => 'Bu bir başkasının OpenIDsi.',
+	'openid-convert-already-your-openid-text' => 'Bu zaten sizin OpenIDniz.',
+	'openid-convert-other-users-openid-text' => 'Bu bir başkasının OpenIDsi.',
 	'openidalreadyloggedin' => "'''Zaten oturum açtınız, $1!'''
 
 Eğer gelecekte de oturum açmak için OpenID kullanmak isterseniz, [[Special:OpenIDConvert|hesabınızı OpenID kullanmak için dönüştürebilirsiniz]].", # Fuzzy
@@ -6804,8 +6808,8 @@ $messages['uk'] = array(
 	'openidconvertoraddmoreids' => 'Перетворити на OpenID або додати іншу адресу OpenID',
 	'openidconvertsuccess' => 'Успішне перетворення в OpenID',
 	'openidconvertsuccesstext' => 'Ви успішно перетворили ваш OpenID в $1.',
-	'openidconvertyourstext' => 'Це вже ваш OpenID.',
-	'openidconvertothertext' => 'Це чужий OpenID.',
+	'openid-convert-already-your-openid-text' => 'Це вже ваш OpenID.',
+	'openid-convert-other-users-openid-text' => 'Це чужий OpenID.',
 	'openidalreadyloggedin' => 'Ви вже ввійшли.',
 	'openidalreadyloggedintext' => "'''Ви вже ввійшли, $1!'''
 
@@ -6930,8 +6934,8 @@ te pol tórghene uno da le opzioni seguenti.',
 	'openidconvertinstructions' => 'Sto modulo el te parmete de canbiar la to utensa par doparar un URL OpenID o zontar altri URL OpenID.',
 	'openidconvertsuccess' => 'Convertìo con successo a OpenID',
 	'openidconvertsuccesstext' => 'El to OpenID el xe stà convertìo a $1.',
-	'openidconvertyourstext' => 'Sto chì el xe xà el to OpenID.',
-	'openidconvertothertext' => "Sto chì el xe l'OpenID de calchidun altro.",
+	'openid-convert-already-your-openid-text' => 'Sto chì el xe xà el to OpenID.',
+	'openid-convert-other-users-openid-text' => "Sto chì el xe l'OpenID de calchidun altro.",
 	'openidalreadyloggedin' => "'''Te sì xà entrà, $1!'''
 
 Se ti vol doparar OpenID par entrar in futuro, te pol [[Special:OpenIDConvert|convertir la to utensa par doparar OpenID]].", # Fuzzy
@@ -7040,8 +7044,8 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidconvertoraddmoreids' => 'Chuyển đổi OpenID hay thêm địa chỉ OpenID',
 	'openidconvertsuccess' => 'Đã chuyển đổi sang OpenID thành công',
 	'openidconvertsuccesstext' => 'Bạn đã chuyển đổi OpenID của bạn sang $1 thành công.',
-	'openidconvertyourstext' => 'Đó đã là OpenID của bạn.',
-	'openidconvertothertext' => 'Đó là OpenID của một người nào khác.',
+	'openid-convert-already-your-openid-text' => 'Đó đã là OpenID của bạn.',
+	'openid-convert-other-users-openid-text' => 'Đó là OpenID của một người nào khác.',
 	'openidalreadyloggedin' => 'Bạn đã đăng nhập rồi.',
 	'openidalreadyloggedintext' => "'''Bạn đã đăng nhập rồi, $1!'''
 
@@ -7199,8 +7203,8 @@ $messages['zh-hans'] = array(
 	'openidconvertoraddmoreids' => '转换到OpenID或添加另一个OpenID地址',
 	'openidconvertsuccess' => '成功转换为OpenID',
 	'openidconvertsuccesstext' => '您已经成功的将您的OpenID转化为$1。',
-	'openidconvertyourstext' => '这已经是您的OpenID。',
-	'openidconvertothertext' => '这是别人的OpenID。',
+	'openid-convert-already-your-openid-text' => '这已经是您的OpenID。',
+	'openid-convert-other-users-openid-text' => '这是别人的OpenID。',
 	'openidalreadyloggedin' => '您已经登录了。',
 	'openidalreadyloggedintext' => "'''您已经登录，$1！'''
 
@@ -7322,8 +7326,8 @@ $messages['zh-hant'] = array(
 	'openidconvertoraddmoreids' => '轉換到 OpenID 或加入另一個 OpenID URL',
 	'openidconvertsuccess' => '成功轉換為 OpenID',
 	'openidconvertsuccesstext' => '您已經成功的將您的 OpenID 轉化為 $1。',
-	'openidconvertyourstext' => '這已是您的 OpenID 了。',
-	'openidconvertothertext' => '這是別人的 OpenID。',
+	'openid-convert-already-your-openid-text' => '這已是您的 OpenID 了。',
+	'openid-convert-other-users-openid-text' => '這是別人的 OpenID。',
 	'openidalreadyloggedin' => '您已經登入。',
 	'openidalreadyloggedintext' => "'''您已經登錄，$1！'''
 
