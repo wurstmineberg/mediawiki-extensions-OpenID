@@ -502,7 +502,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $force forces update regardless of user preferences
 	 */
 	function updateUser( $user, $sreg, $ax, $force = false ) {
-		global $wgAllowRealName, $wgEmailAuthentication, $wgOpenIDTrustEmailAddress;
+		global $wgOut, $wgAllowRealName, $wgEmailAuthentication, $wgOpenIDTrustEmailAddress;
 
 		// Nick name
 		if ( $this->updateOption( 'nickname', $user, $force ) ) {
