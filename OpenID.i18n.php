@@ -4115,6 +4115,13 @@ $messages['mhr'] = array(
 	'openidchoosepassword' => 'Шолыпмут:',
 );
 
+/** Minangkabau (Baso Minangkabau)
+ * @author Iwan Novirion
+ */
+$messages['min'] = array(
+	'openid-prefstext' => 'Pangaturan [//openid.net/ OpenID]',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
@@ -4370,6 +4377,7 @@ $messages['ms'] = array(
 	'openid-desc' => 'Membolehkan pengguna untuk log masuk ke dalam wiki dengan [//openid.net/ OpenID]. Jika dihidupkan pada wiki, pengguna juga obleh menggunakan URL akaun penggunanya di wiki ini sebagai OpenID untuk log masuk ke dalam tapak web lain yang sedia OpenID',
 	'openidlogin' => 'Log masuk / buka akaun dengan OpenID',
 	'openidserver' => 'Pelayan OpenID',
+	'openid-server-identity-page-text' => 'Ini ialah halaman pelayan teknikal OpenID untuk memulakan penentusahan OpenID tanpa sebarang tujuan lain.',
 	'openidxrds' => 'Fail Yadis',
 	'openidconvert' => 'Penukar OpenID',
 	'openiderror' => 'Ralat pengesahan',
@@ -4418,8 +4426,8 @@ anda boleh memilih satu daripada pilihan-pilihan berikut.',
 	'openidconvertoraddmoreids' => 'Tukar ke OpenID atau tambahkan satu lagi URL OpenID',
 	'openidconvertsuccess' => 'Berjaya ditukar ke OpenID',
 	'openidconvertsuccesstext' => 'Anda telah berjaya menukar OpenID ke $1.',
-	'openid-convert-already-your-openid-text' => 'OpenID anda seperti yang tertera.',
-	'openid-convert-other-users-openid-text' => 'OpenID tersebut merupakan milik orang lain.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 sudah dikaitkan dengan akaun anda. Tiada perlunya menambahkannya semula.',
+	'openid-convert-other-users-openid-text' => '$1 adalah OpenID orang lain. Anda tidak boleh menggunakan OpenID pengguna lain.',
 	'openidalreadyloggedin' => 'Anda sudah log masuk.',
 	'openidalreadyloggedintext' => "'''Anda sudah log masuk, $1!'''
 
@@ -4460,14 +4468,18 @@ Anda tidak boleh log masuk tanpa OpenID.',
 	'openid-add-url' => 'Tambahkan OpenID baru',
 	'openid-login-or-create-account' => 'Log masuk atau buka akaun baru',
 	'openid-provider-label-openid' => 'Taipkan URL OpenID anda',
-	'openid-provider-label-google' => 'Log masuk dengan menggunakan akaun Google anda',
-	'openid-provider-label-yahoo' => 'Log masuk dengan menggunakan akaun Yahoo anda',
+	'openid-provider-label-google' => 'Log masuk dengan akaun Google anda',
+	'openid-provider-label-yahoo' => 'Log masuk dengan akaun Yahoo anda',
 	'openid-provider-label-aol' => 'Taipkan nama pengguna AOL anda',
+	'openid-provider-label-wmflabs' => 'Log masuk dengan akaun Wmflabs anda',
 	'openid-provider-label-other-username' => 'Taipkan nama pengguna $1 anda',
 	'specialpages-group-openid' => 'Laman-laman perkhidmatan dan maklumat status OpenID',
 	'right-openid-converter-access' => 'Boleh menambahkan atau menukarkan akaun mereka untuk menggunakan identiti OpenID',
 	'right-openid-dashboard-access' => 'Akses piawai ke dalam papan pemuka OpenID',
 	'right-openid-dashboard-admin' => 'Akses pentadbir ke dalam papan pemuka OpenID',
+	'action-openid-converter-access' => 'menambah atau menukar akaun anda untuk menggunakan identiti OpenID',
+	'action-openid-dashboard-access' => 'mengakses papan pemuka OpenID',
+	'action-openid-dashboard-admin' => 'mengakses papan pemuka penyelia OpenID',
 	'openid-dashboard-title' => 'Papan pemuka OpenID',
 	'openid-dashboard-title-admin' => 'Papan Pemuka OpenID (pentadbir)',
 	'openid-dashboard-introduction' => 'Tetapan sambungan OpenID semasa ([$1 bantuan])',
