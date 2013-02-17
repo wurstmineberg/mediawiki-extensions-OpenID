@@ -219,7 +219,7 @@ OpenID preferences tab title',
 	'openid-urls-registration-date-time' => '{{optional}}
 Used in the same way as {{msg-mw|prefs-registration-date-time}}.',
 	'openid-urls-delete' => '{{Identical|Delete}}',
-	'specialpages-group-openid' => 'Display group name for OpenID-extension related special pages for Special:SpecialPages',
+	'specialpages-group-openid' => 'Display group name for OpenID-extension related special pages for [[Special:SpecialPages]].',
 	'right-openid-converter-access' => '{{doc-right|openid-converter-access}}
 {{doc-singularthey}}',
 	'right-openid-dashboard-access' => '{{doc-right|openid-dashboard-access}}
@@ -232,8 +232,8 @@ the special adminstrator access right for the OpenID dashboard, which is a restr
 the standard access right for the OpenID dashboard, which is a restricted special page',
 	'action-openid-dashboard-admin' => '{{doc-action|openid-dashboard-admin}}
 the special adminstrator access right for the OpenID dashboard, which is a restricted special page',
-	'openid-dashboard-title' => 'Display name and page title for the OpenID dashboard (non-admin) on Special:SpecialPages',
-	'openid-dashboard-title-admin' => 'Display name and page title for the administrator OpenID dashboard on Special:SpecialPages',
+	'openid-dashboard-title' => 'Display name and page title for the OpenID dashboard (non-admin) on [[Special:SpecialPages]].',
+	'openid-dashboard-title-admin' => 'Display name and page title for the administrator OpenID dashboard on [[Special:SpecialPages]].',
 	'openid-dashboard-introduction' => 'Intro text for the special OpenID dashboard page: the user gets status information about the current OpenID settings of this wiki.
 * $1 is the url of the help page explaining the parameters',
 );
