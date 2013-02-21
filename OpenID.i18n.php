@@ -2918,8 +2918,8 @@ Faktulatiwne hesło hodźi so w twojim [[Special:Preferences#mw-prefsection-pers
 	'openidconvertoraddmoreids' => 'OpenID konwertować abo dalši URL OpenID přidać',
 	'openidconvertsuccess' => 'Wuspěšnje do OpenID konwertowany.',
 	'openidconvertsuccesstext' => 'Sy swój OpenID wuspěšnje do $1 konwertował.',
-	'openid-convert-already-your-openid-text' => 'To je hižo twój OpenID.',
-	'openid-convert-other-users-openid-text' => 'To je OpenID někoho druheho.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 je hižo z twojim kontom zwjazany. Nima zmysł jón znowa přidać.',
+	'openid-convert-other-users-openid-text' => '$1 je OpenID někoho druheho. Njemóžeš OpenID druheho wužiwarja wužiwać.',
 	'openidalreadyloggedin' => 'Sy hižo přizjewjeny.',
 	'openidalreadyloggedintext' => "'''Sy hižo přizjewjeny, $1!'''
 
