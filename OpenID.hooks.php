@@ -152,13 +152,12 @@ class OpenIDHooks {
 		foreach ( $openid_urls_registration as $url_reg ) {
 		
 			if ( !empty( $url_reg->uoi_user_registration ) ) { 
-				$registrationTime = wfMsgExt(
+				$registrationTime = wfMessage(
 					'openid-urls-registration-date-time',
-					'parsemag',
 					$wgLang->timeanddate( $url_reg->uoi_user_registration, true ),
 					$wgLang->date( $url_reg->uoi_user_registration, true ),
 					$wgLang->time( $url_reg->uoi_user_registration, true )
-				);
+				)->text();
 			} else {
 				$registrationTime = '';
 			}
@@ -174,7 +173,7 @@ class OpenIDHooks {
 				) .
 				Xml::tags( 'td',
 					array(),
-					$sk->link( $delTitle, wfMsgHtml( 'openid-urls-delete' ),
+					$sk->link( $delTitle, wfMessage( 'openid-urls-delete' )->text(),
 						array(),
 						array( 'url' => $url_reg->uoi_openid ) 
 					) 
@@ -195,7 +194,10 @@ class OpenIDHooks {
 				) . "\n" .
 			$rows
 		);
-		$info .= $sk->link( SpecialPage::getTitleFor( 'OpenIDConvert' ), wfMsgHtml( 'openid-add-url' ) );
+		$info .= $sk->link(
+			SpecialPage::getTitleFor( 'OpenIDConvert' ),
+			wfMessage( 'openid-add-url' )->text()
+		);
 		return $info;
 	}
 
@@ -339,7 +341,7 @@ class OpenIDHooks {
   			$dbw = wfGetDB( DB_MASTER );
 
 			$dbw->delete( 'user_openid', array( 'uoi_user' => $userID ) );
-			$wgOut->addHTML( "OpenID " . wfMsgExt( 'usermerge-userdeleted', array( 'escape' ), $username, $userID ) );
+			$wgOut->addHTML( "OpenID " . wfMessage( 'usermerge-userdeleted', $username, $userID )->escaped() );
 
 			wfDebug( "OpenID: deleted OpenID user $username ($userID)\n" );
 
@@ -364,13 +366,13 @@ class OpenIDHooks {
 				$dbw = wfGetDB( DB_MASTER );
 
 				$dbw->update( 'user_openid', array( 'uoi_user' => $toUserID ), array( 'uoi_user' => $fromUserID ) );
-				$wgOut->addHTML( "OpenID " . wfMsgExt( 'usermerge-updating', array( 'escape' ), 'user_openid', $fromUsername, $toUsername ) . "<br />\n" );
+				$wgOut->addHTML( "OpenID " . wfMessage( 'usermerge-updating', 'user_openid', $fromUsername, $toUsername )->escaped() . "<br />\n" );
 
 				wfDebug( "OpenID: transferred OpenID(s) of $fromUsername ($fromUserID) => $toUsername ($toUserID)\n" );
 
 			} else {
 
-				$wgOut->addHTML( wfMsgHtml( 'openid-openids-were-not-merged' ) . "<br />\n" );
+				$wgOut->addHTML( wfMessage( 'openid-openids-were-not-merged' )->text() . "<br />\n" );
 				wfDebug( "OpenID: OpenID(s) were not merged for merged users $fromUsername ($fromUserID) => $toUsername ($toUserID)\n" );
 
 			}

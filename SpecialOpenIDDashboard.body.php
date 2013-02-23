@@ -99,7 +99,7 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		$out .= $this->show( '$wgOpenIDProposeUsernameFromSREG', $wgOpenIDProposeUsernameFromSREG );
 		$out .= $this->show( '$wgOpenIDShowUrlOnUserPage', $wgOpenIDShowUrlOnUserPage );
 		$out .= $this->show( '$wgOpenIDShowProviderIcons', $wgOpenIDShowProviderIcons );
-		$out .= $this->show( wfMsgExt( 'statistics-users', array( 'parseinline' ) ), $totalUsers );
+		$out .= $this->show( wfMessage( 'statistics-users' )->parse(), $totalUsers );
 		$out .= $this->show( wfMessage( 'openid-dashboard-number-openid-users' )->text(), $OpenIDdistinctUsers  );
 		$out .= $this->show( wfMessage( 'openid-dashboard-number-openids-in-database' )->text(), $OpenIDUsers );
 		$out .= $this->show( wfMessage( 'openid-dashboard-number-users-without-openid' )->text(), $totalUsers - $OpenIDdistinctUsers );

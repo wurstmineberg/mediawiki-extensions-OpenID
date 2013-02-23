@@ -103,21 +103,21 @@ class OpenIDProvider {
 	 */
 	public static function getSmallProviders() {
 		return array(
-			new self( 'myopenid', 'MyOpenID', wfMsg( 'openid-provider-label-other-username', 'MyOpenID' ),
+			new self( 'myopenid', 'MyOpenID', wfMessage( 'openid-provider-label-other-username', 'MyOpenID' )->text(),
 						'http://{username}.myopenid.com/' ),
-			new self( 'livejournal', 'LiveJournal', wfMsg( 'openid-provider-label-other-username', 'LiveJournal' ),
+			new self( 'livejournal', 'LiveJournal', wfMessage( 'openid-provider-label-other-username', 'LiveJournal' )->text(),
 						'http://{username}.livejournal.com/' ),
-			new self( 'vox', 'VOX', wfMsg( 'openid-provider-label-other-username', 'VOX' ),
+			new self( 'vox', 'VOX', wfMessage( 'openid-provider-label-other-username', 'VOX' )->text(),
 						'http://{username}.vox.com/' ),
-			new self( 'blogger', 'Blogger', wfMsg( 'openid-provider-label-other-username', 'Blogger' ),
+			new self( 'blogger', 'Blogger', wfMessage( 'openid-provider-label-other-username', 'Blogger' )->text(),
 						'http://{username}.blogspot.com/' ),
-			new self( 'flickr', 'Flickr', wfMsg( 'openid-provider-label-other-username', 'Flickr' ),
+			new self( 'flickr', 'Flickr', wfMessage( 'openid-provider-label-other-username', 'Flickr' )->text(),
 						'http://flickr.com/photos/{username}/' ),
-			new self( 'verisign', 'Verisign', wfMsg( 'openid-provider-label-other-username', 'Verisign' ),
+			new self( 'verisign', 'Verisign', wfMessage( 'openid-provider-label-other-username', 'Verisign' )->text(),
 						'http://{username}.pip.verisignlabs.com/' ),
-			new self( 'vidoop', 'Vidoop', wfMsg( 'openid-provider-label-other-username', 'Vidoop' ),
+			new self( 'vidoop', 'Vidoop', wfMessage( 'openid-provider-label-other-username', 'Vidoop' )->text(),
 						'http://{username}.myvidoop.com/' ),
-			new self( 'claimid', 'ClaimID', wfMsg( 'openid-provider-label-other-username', 'ClaimID' ),
+			new self( 'claimid', 'ClaimID', wfMessage( 'openid-provider-label-other-username', 'ClaimID' )->text(),
 						'http://claimid.com/{username}' )
 		);
 	}

@@ -614,7 +614,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$name = $this->UrlToUserName( $url );
 		$trust_root = $request->trust_root;
 
-		$instructions = wfMsg( 'openidserverlogininstructions', $url, $name, $trust_root );
+		$instructions = wfMessage( 'openidserverlogininstructions', $url, $name, $trust_root )->text();
 
 		$username = wfMessage( 'yourname' )->text();
 		$password = wfMessage( 'yourpassword' )->text();
@@ -711,13 +711,13 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$name = $this->UrlToUserName( $url );
 		$trust_root = $request->trust_root;
 
-		$instructions = wfMsg( 'openidtrustinstructions', $trust_root );
-		$allow = wfMsg( 'openidallowtrust', $trust_root );
+		$instructions = wfMessage( 'openidtrustinstructions', $trust_root )->text();
+		$allow = wfMessage( 'openidallowtrust', $trust_root )->text();
 
 		if ( is_null( $sreg['policy_url'] ) ) {
 			$policy = wfMessage( 'openidnopolicy' )->text();
 		} else {
-			$policy = wfMsg( 'openidpolicy', $sreg['policy_url'] );
+			$policy = wfMessage( 'openidpolicy', $sreg['policy_url'] )->text();
 		}
 
 		if ( isset( $msg ) ) {
