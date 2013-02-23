@@ -203,6 +203,7 @@ $specialPageAliases['vi'] = array(
 /** Simplified Chinese (中文（简体）‎) */
 $specialPageAliases['zh-hans'] = array(
 	'OpenIDLogin' => array( 'OpenID登录' ),
-	'OpenIDConvert' => array( '转换OpenID' ),
+	'OpenIDConvert' => array( 'OpenID转换', '转换OpenID' ),
 	'OpenIDServer' => array( 'OpenID服务器' ),
+	'OpenIDDashboard' => array( 'OpenID状态面板' ),
 );
