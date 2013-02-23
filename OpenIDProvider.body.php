@@ -69,7 +69,7 @@ class OpenIDProvider {
 			global $wgRequest;
 			$url = htmlspecialchars( $wgRequest->getCookie( 'OpenID', null, '' ) );
 			$html .= '<input type="text" name="openid_url" id="openid_url" size="45" value="' . $url . '" />';
-			$html .= Xml::submitButton( wfMsg( 'userlogin' ) );
+			$html .= Xml::submitButton( wfMessage( 'userlogin' )->text() );
 		} else {
 			$html .= '<input type="hidden" id="openid_provider_url_' . $this->id . '" value="' . $this->url . '" />';
 			if ( strpos( $this->url, '{' ) === false ) {
@@ -77,7 +77,7 @@ class OpenIDProvider {
 			} else {
 				$html .= '<input type="text" id="openid_provider_param_' . $this->id . '" size="25" value="" />';
 			}
-			$html .= Xml::submitButton( wfMsg( 'userlogin' ) );
+			$html .= Xml::submitButton( wfMessage( 'userlogin' )->text() );
 		}
 		$html .= '</div>';
 
@@ -90,10 +90,10 @@ class OpenIDProvider {
 	 */
 	public static function getLargeProviders() {
 		return  array(
-			new self( 'openid', 'OpenID', wfMsg( 'openid-provider-label-openid' ), '{URL}' ),
-			new self( 'google', 'Google', wfMsg( 'openid-provider-label-google' ), 'https://www.google.com/accounts/o8/id' ),
-			new self( 'yahoo', 'Yahoo', wfMsg( 'openid-provider-label-yahoo' ), 'http://yahoo.com/' ),
-			new self( 'aol', 'AOL', wfMsg( 'openid-provider-label-aol' ), 'http://openid.aol.com/{username}' ),
+			new self( 'openid', 'OpenID', wfMessage( 'openid-provider-label-openid' )->text(), '{URL}' ),
+			new self( 'google', 'Google', wfMessage( 'openid-provider-label-google' )->text(), 'https://www.google.com/accounts/o8/id' ),
+			new self( 'yahoo', 'Yahoo', wfMessage( 'openid-provider-label-yahoo' )->text(), 'http://yahoo.com/' ),
+			new self( 'aol', 'AOL', wfMessage( 'openid-provider-label-aol' )->text(), 'http://openid.aol.com/{username}' ),
 		);
 	}
 

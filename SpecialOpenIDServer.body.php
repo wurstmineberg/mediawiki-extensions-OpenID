@@ -616,10 +616,10 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		$instructions = wfMsg( 'openidserverlogininstructions', $url, $name, $trust_root );
 
-		$username = wfMsg( 'yourname' );
-		$password = wfMsg( 'yourpassword' );
-		$ok = wfMsg( 'ok' );
-		$cancel = wfMsg( 'cancel' );
+		$username = wfMessage( 'yourname' )->text();
+		$password = wfMessage( 'yourpassword' )->text();
+		$ok = wfMessage( 'ok' )->text();
+		$cancel = wfMessage( 'cancel' )->text();
 
 		if ( !is_null( $msg ) ) {
 			$wgOut->addHTML( "<p class='error'>{$msg}</p>" );
@@ -674,7 +674,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$password = $wgRequest->getText( 'wpPassword' );
 
 		if ( !isset( $password ) || strlen( $password ) == 0 ) {
-			return wfMsg( 'wrongpasswordempty' );
+			return wfMessage( 'wrongpasswordempty' )->text();
 		}
 
 		assert ( isset( $password ) && strlen( $password ) > 0 );
@@ -692,7 +692,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		assert( isset( $user ) );
 
 		if ( !$user->checkPassword( $password ) ) {
-			return wfMsg( 'wrongpassword' );
+			return wfMessage( 'wrongpassword' )->text();
 		} else {
 			$id = $user->getId();
 			$wgUser = $user;
@@ -715,7 +715,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$allow = wfMsg( 'openidallowtrust', $trust_root );
 
 		if ( is_null( $sreg['policy_url'] ) ) {
-			$policy = wfMsg( 'openidnopolicy' );
+			$policy = wfMessage( 'openidnopolicy' )->text();
 		} else {
 			$policy = wfMsg( 'openidpolicy', $sreg['policy_url'] );
 		}
@@ -724,8 +724,8 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			$wgOut->addHTML( "<p class='error'>{$msg}</p>" );
 		}
 
-		$ok = wfMsg( 'ok' );
-		$cancel = wfMsg( 'cancel' );
+		$ok = wfMessage( 'ok' )->text();
+		$cancel = wfMessage( 'cancel' )->text();
 
 		$sk = $wgUser->getSkin();
 
@@ -742,12 +742,12 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			foreach ( $fields as $field ) {
 				$wgOut->addHTML( "<tr>" );
 				$wgOut->addHTML( "<th><label for='wpAllow{$field}'>" );
-				$wgOut->addHTML( wfMsg( "openid$field" ) );
+				$wgOut->addHTML( wfMessage( "openid$field" )->text() );
 				$wgOut->addHTML( "</label></th>" );
 				$value = $this->GetUserField( $wgUser, $field );
 				$wgOut->addHTML( "</td>" );
 				$wgOut->addHTML( "<td> " . ( ( is_null( $value ) ) ? '' : $value ) . "</td>" );
-				$wgOut->addHTML( "<td>" . ( ( in_array( $field, $sreg['required'] ) ) ? wfMsg( 'openidrequired' ) : wfMsg( 'openidoptional' ) ) . "</td>" );
+				$wgOut->addHTML( "<td>" . ( ( in_array( $field, $sreg['required'] ) ) ? wfMessage( 'openidrequired' )->text() : wfMessage( 'openidoptional' )->text() ) . "</td>" );
 				$wgOut->addHTML( "<td><input name='wpAllow{$field}' id='wpAllow{$field}' type='checkbox'" );
 				if ( !is_null( $value ) ) {
 					$wgOut->addHTML( " value='on' checked='checked' />" );

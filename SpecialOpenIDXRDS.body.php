@@ -46,7 +46,7 @@ class SpecialOpenIDXRDS extends SpecialOpenID {
 		# so it'd be unusual to get here.
 
 		if ( $wgOpenIDClientOnly ) {
-			wfHttpError( 404, "Not Found", wfMsg( 'openidclientonlytext' ) );
+			wfHttpError( 404, "Not Found", wfMessage( 'openidclientonlytext' )->text() );
 			return;
 		}
 
@@ -62,7 +62,7 @@ class SpecialOpenIDXRDS extends SpecialOpenID {
 /*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
 
 		if ( !$par ) {
-			wfHttpError( 404, "Not Found", wfMsg( 'openidnousername' ) );
+			wfHttpError( 404, "Not Found", wfMessage( 'openidnousername' )->text() );
 			return;
 		}
 */
@@ -71,7 +71,7 @@ class SpecialOpenIDXRDS extends SpecialOpenID {
 /*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
 
 		if ( !$user || $user->getID() == 0 ) {
-			wfHttpError( 404, "Not Found", wfMsg( 'openidbadusername' ) );
+			wfHttpError( 404, "Not Found", wfMessage( 'openidbadusername' )->text() );
 			return;
 		}
 */

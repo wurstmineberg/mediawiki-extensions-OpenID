@@ -113,7 +113,7 @@ class OpenIDHooks {
 			$returnto = $title->isSpecial( 'Userlogout' ) ? '' : ( 'returnto=' . $title->getPrefixedURL() );
 
 			$personal_urls['openidlogin'] = array(
-				'text' => wfMsg( 'openidlogin' ),
+				'text' => wfMessage( 'openidlogin' )->text(),
 				'href' => $sk->makeSpecialUrl( 'OpenIDLogin', $returnto ),
 				'active' => $title->isSpecial( 'OpenIDLogin' )
 			);
@@ -185,13 +185,13 @@ class OpenIDHooks {
 			Xml::tags( 'tr', array(),
 				Xml::element( 'th',
 					array(), 
-					wfMsg( 'openid-urls-url' ) ) .
+					wfMessage( 'openid-urls-url' )->text() ) .
 				Xml::element( 'th',
 					array(), 
-					wfMsg( 'openid-urls-registration' ) ) .
+					wfMessage( 'openid-urls-registration' )->text() ) .
 				Xml::element( 'th', 
 					array(), 
-					wfMsg( 'openid-urls-action' ) )
+					wfMessage( 'openid-urls-action' )->text() )
 				) . "\n" .
 			$rows
 		);
@@ -213,13 +213,13 @@ class OpenIDHooks {
 		}
 
 		$update = array();
-		$update[wfMsg( 'openidnickname' )] = 'nickname';
-		$update[wfMsg( 'openidemail' )] = 'email';
+		$update[ wfMessage( 'openidnickname' )->text() ] = 'nickname';
+		$update[ wfMessage( 'openidemail' )->text() ] = 'email';
 		if ( $wgAllowRealName ) {
-			$update[wfMsg( 'openidfullname' )] = 'fullname';
+			$update[ wfMessage( 'openidfullname' )->text() ] = 'fullname';
 		}
-		$update[wfMsg( 'openidlanguage' )] = 'language';
-		$update[wfMsg( 'openidtimezone' )] = 'timezone';
+		$update[ wfMessage( 'openidlanguage' )->text() ] = 'language';
+		$update[ wfMessage( 'openidtimezone' )->text() ] = 'timezone';
 
 		$preferences['openid-update-on-login'] =
 			array(

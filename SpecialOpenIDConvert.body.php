@@ -168,8 +168,8 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 					'onsubmit' => 'openid.update()'
 				)
 			) .
-			Xml::fieldset( wfMsg( 'openidconvertoraddmoreids' ) ) .
-			Xml::openElement( 'p' ) . wfMsg( 'openidconvertinstructions' ) . Xml::closeElement( 'p' ) .
+			Xml::fieldset( wfMessage( 'openidconvertoraddmoreids' )->text() ) .
+			Xml::openElement( 'p' ) . wfMessage( 'openidconvertinstructions' )->text() . Xml::closeElement( 'p' ) .
 			$largeButtonsHTML .
 			'<div id="openid_input_area">' .
 			$formsHTML .
@@ -190,7 +190,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			return;
 		}
 
-		$wgOut->setPageTitle( wfMsg( 'openiddelete' ) );
+		$wgOut->setPageTitle( wfMessage( 'openiddelete' )->text() );
 
 		# Check if the user is removing it's last OpenID url
 		$urls = self::getUserOpenIDInformation( $wgUser );
@@ -221,7 +221,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 					'method' => 'post'
 				)
 			) .
-			Xml::submitButton( wfMsg( 'openiddelete-button' ) ) . "\n" .
+			Xml::submitButton( wfMessage( 'openiddelete-button' )->text() ) . "\n" .
 			Html::Hidden( 'url', $openid ) . "\n" .
 			Html::Hidden( 'wpEditToken', $wgUser->editToken( $openid ) ) . "\n" .
 			Xml::closeElement( 'form' )
@@ -298,7 +298,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 
 			$this->loginSetCookie( $openid_url );
 
-			$wgOut->setPageTitle( wfMsg( 'openidconvertsuccess' ) );
+			$wgOut->setPageTitle( wfMessage( 'openidconvertsuccess' )->text() );
 			$wgOut->setRobotPolicy( 'noindex,nofollow' );
 			$wgOut->setArticleRelated( false );
 			$wgOut->addWikiMsg( 'openidconvertsuccesstext', $openid_url );
