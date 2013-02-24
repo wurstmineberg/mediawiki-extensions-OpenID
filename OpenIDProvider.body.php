@@ -91,7 +91,8 @@ class OpenIDProvider {
 			array(
 				'type' => 'hidden',
 				'id' => 'openid_provider_url_' . $this->providerName,
-				'value' => $this->url
+				'value' => $this->url,
+				'class' => 'openid-provider-selection-input'
 			)
 		);
 
@@ -103,8 +104,8 @@ class OpenIDProvider {
 				array(
 					'type' => 'text',
 					'id' => $param_id,
-					'size' => '25',
-					'value' => htmlspecialchars( $wgRequest->getCookie( "_{$param_id}", null, '' ) )
+					'value' => htmlspecialchars( $wgRequest->getCookie( "_{$param_id}", null, '' ) ),
+					'class' => 'openid-provider-selection-input'
 				)
 			);
 		}
@@ -122,7 +123,10 @@ class OpenIDProvider {
 				'data-provider-name' => $this->providerName
 			),
 			Html::rawElement( 'label', null, $this->label . '<br />' . $inputHtml ) .
-			Xml::submitButton( OpenID::loginOrCreateAccountOrConvertButtonLabel()  )
+			Xml::submitButton(
+				OpenID::loginOrCreateAccountOrConvertButtonLabel(),
+				array( 'id' => 'openid-provider-selection-submit-button' )
+			)
 		);
 		return $html;
 	}

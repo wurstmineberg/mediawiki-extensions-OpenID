@@ -1,5 +1,5 @@
 #openid_form {
-	width: 470px;	
+	width: 470px;
 }
 
 #openid_form legend {
@@ -52,4 +52,10 @@
 	background-color: #fff;
 	color: #000;
 	padding-left: 18px;
+}
+
+#openid_provider_selection_error_box {
+	display: none;
+	margin: 3px;
+	padding: 3px;
 }

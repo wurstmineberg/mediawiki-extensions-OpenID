@@ -1,5 +1,5 @@
 #openid_form {
-	width: 500px;
+	width: 550px;
 }
 
 #openid_form legend {
@@ -8,7 +8,7 @@
 
 #openid_input_area {
 	clear: both;
-	padding: 20px;
+	padding: 20px 0px 20px 0px;
 	margin: 5px;
 }
 #openid_btns {
@@ -52,4 +52,15 @@ a.openid_large_btn:focus {
 #openid_large_providers {
 }
 #openid_small_providers_icons {
+}
+.openid-provider-selection-input {
+	width: 20em;
+}
+#openid-provider-selection-submit-button {
+	margin-left: 3px;
+}
+#openid_provider_selection_error_box {
+	display: none;
+	margin: 3px;
+	padding: 3px;
 }

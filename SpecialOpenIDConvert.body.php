@@ -280,6 +280,14 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 				) .
 				$largeButtonsHTML .
 				Html::rawElement( 'div',
+					array(
+						'id' => 'openid_provider_selection_error_box',
+						'class' => 'errorbox',
+						'style' => 'display:none'
+					),
+					wfMessage( 'openid-empty-param-error' )->escaped()
+				) .
+				Html::rawElement( 'div',
 					array( 'id' => 'openid_input_area' ),
 					$inputFormHTML
 				) .

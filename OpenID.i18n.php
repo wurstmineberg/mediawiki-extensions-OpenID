@@ -200,6 +200,8 @@ You would not able to log in without an OpenID.',
 	'openid-dashboard-number-openid-users' => 'Number of users with OpenID',
 	'openid-dashboard-number-openids-in-database' => 'Number of OpenIDs (total)',
 	'openid-dashboard-number-users-without-openid' => 'Number of users without OpenID',
+
+	'openid-empty-param-error' => 'Please fill in your username respectively your OpenID Url.'
 );
 
 /** Message documentation (Message documentation)
@@ -585,6 +587,7 @@ See also
 {{Related|Openid-dashboard-number}}',
 	'openid-dashboard-number-users-without-openid' => 'Used as the label in the information table on Special:OpenIDDashboard.
 {{Related|Openid-dashboard-number}}',
+	'openid-empty-param-error' => 'Message displayed on the provider selection form when a user fails to enter a username for providers that require it'
 );
 
 /** Afrikaans (Afrikaans)
