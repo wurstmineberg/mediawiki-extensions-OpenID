@@ -3455,10 +3455,10 @@ $messages['ja'] = array(
 
 あなたの OpenID は $2 です。
 
-これと他の OpenID（省略可能）は個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で管理できます。<br />
-アカウントパスワード（省略可能）は[[Special:Preferences#mw-prefsection-personal|利用者情報]]で追加できます。",
+これを含むすべての OpenID は個人設定の [[Special:Preferences#mw-prefsection-openid|OpenID タブ]]で管理できます。<br />
+アカウントパスワード (省略可能) は[[Special:Preferences#mw-prefsection-personal|利用者情報]]で追加できます。",
 	'openidusernameprefix' => 'OpenID ユーザー',
-	'openidserverlogininstructions' => '利用者 $2 のページ $1（これがあなたの OpenID URL です）に対応するパスワードを入力するように、$3 が要求しています',
+	'openidserverlogininstructions' => '利用者 $2 のページ $1 (これがあなたの OpenID URL です) に対応するパスワードを入力することを、$3 が要求しています',
 	'openidtrustinstructions' => '$1 とデータを共有したいか確認してください。',
 	'openidallowtrust' => '$1 がこの利用者アカウントを信用するのを許可する。',
 	'openidnopolicy' => 'サイトはプライバシーに関する方針を明記していません。',
