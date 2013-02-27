@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+2.03  20130227  fix bug45323 preference tab "OpenID" shows list of "trust" records
 2.01  20130209  fix to allow identity selection bug44416
                 fix bug40068, bug40067 $wgOpenIDConsumerForce
                 changed default value $wgOpenIDShowProviderIcons = true;

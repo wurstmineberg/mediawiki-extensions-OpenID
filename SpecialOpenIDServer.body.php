@@ -480,7 +480,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$this->SetUserTrustArray( $user, $trust_array );
 	}
 
-	function GetUserTrustArray( $user ) {
+	static function GetUserTrustArray( $user ) {
 		$trust_array = array();
 		$trust_str = $user->getOption( 'openid_trust' );
 		if ( strlen( $trust_str ) > 0 ) {
@@ -492,7 +492,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 					$trust_array[$trust_root] = false;
 				} else {
 					$fields = array_map( 'trim', $fields );
-					$fields = array_filter( $fields, array( $this, 'ValidField' ) );
+					$fields = array_filter( $fields, array( 'SpecialOpenIDServer', 'ValidField' ) );
 					$trust_array[$trust_root] = $fields;
 				}
 			}
@@ -522,7 +522,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$user->setOption( 'openid_trust', $trust_str );
 	}
 
-	function ValidField( $name ) {
+	static function ValidField( $name ) {
 		# FIXME: eventually add timezone
 		static $fields = array( 'nickname', 'email', 'fullname', 'language' );
 		return in_array( $name, $fields );

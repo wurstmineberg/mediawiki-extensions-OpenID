@@ -142,7 +142,7 @@ class OpenIDHooks {
 		return true;
 	}
 
-	private static function getInfoTable( $user ) {
+	private static function getAssociatedOpenIDsTable( $user ) {
 		global $wgLang;
 		$openid_urls_registration = SpecialOpenID::getUserOpenIDInformation( $user );
 		$delTitle = SpecialPage::getTitleFor( 'OpenIDConvert', 'Delete' );
@@ -199,15 +199,46 @@ class OpenIDHooks {
 		return $info;
 	}
 
+	private static function getTrustTable( $user ) {
+
+		$trusted_sites = SpecialOpenIDServer::GetUserTrustArray( $user );
+		$rows = '';
+
+		foreach ( $trusted_sites as $key => $value ) {
+
+			if ( $key !== "" ) {
+
+				$rows .= Xml::tags( 'tr', array(),
+					Xml::tags( 'td',
+						array(),
+						Xml::element( 'a', array( 'href' => $key ), $key )
+					)
+				) . "\n";
+
+			}
+		}
+
+		$trusted_sites_table = Xml::tags( 'table', array( 'class' => 'wikitable' ),
+			Xml::tags( 'tr', array(),
+				Xml::element( 'th',
+					array(),
+					wfMessage( 'openid-trusted-sites-table-header' )->text() )
+			) . "\n" .
+			$rows
+		);
+
+		return $trusted_sites_table;
+	}
+
 	public static function onGetPreferences( $user, &$preferences ) {
 		global $wgOpenIDShowUrlOnUserPage, $wgAllowRealName;
-		global $wgAuth, $wgUser, $wgLang;
+		global $wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient;
 
 		if ( $wgOpenIDShowUrlOnUserPage == 'user' ) {
 			$preferences['openid-hide'] =
 				array(
-					'type' => 'toggle',
 					'section' => 'openid',
+					'type' => 'toggle',
 					'label-message' => 'openid-pref-hide',
 				);
 		}
@@ -223,8 +254,8 @@ class OpenIDHooks {
 
 		$preferences['openid-update-on-login'] =
 			array(
-				'type' => 'multiselect',
 				'section' => 'openid',
+				'type' => 'multiselect',
 				'label-message' => 'openid-pref-update-userinfo-on-login',
 				'options' => $update,
 				'prefix' => 'openid-update-on-login-',
@@ -232,34 +263,50 @@ class OpenIDHooks {
 
 		$preferences['openid-urls'] =
 			array(
+				'section' => 'openid',
 				'type' => 'info',
 				'label-message' => 'openid-urls-desc',
-				'default' => self::getInfoTable( $user ),
+				'default' => self::getAssociatedOpenIDsTable( $user ),
 				'raw' => true,
-				'section' => 'openid',
 			);
+
+		if ( !$wgOpenIDOnlyClient ) {
+
+			$preferences['openid-trusted-sites'] =
+				array(
+					'section' => 'openid',
+					'type' => 'info',
+					'label-message' => 'openid-trusted-sites',
+					'default' => self::getTrustTable( $user ),
+					'raw' => true,
+				);
+
+		}
 
 		if ( $wgAuth->allowPasswordChange() ) {
 
-			$resetlink = $wgUser->getSkin()->link( SpecialPage::getTitleFor( 'PasswordReset' ),
-				wfMsgHtml( 'passwordreset' ), array(),
-				array( 'returnto' => SpecialPage::getTitleFor( 'Preferences' ) ) );
+			$resetlink = $wgUser->getSkin()->link(
+				SpecialPage::getTitleFor( 'PasswordReset' ),
+				wfMessage( 'passwordreset' )->text(),
+				array(),
+				array( 'returnto' => SpecialPage::getTitleFor( 'Preferences' ) )
+			);
 
 			if ( empty( $wgUser->mPassword ) && empty( $wgUser->mNewpassword ) ) {
  				$preferences['password'] = array(
+					'section' => 'personal/info',
 					'type' => 'info',
 					'raw' => true,
 					'default' => $resetlink,
 					'label-message' => 'yourpassword',
-					'section' => 'personal/info',
 				);
 			} else {
 				$preferences['resetpassword'] = array(
+					'section' => 'personal/info',
 					'type' => 'info',
 					'raw' => true,
 					'default' => $resetlink,
 					'label-message' => null,
-					'section' => 'personal/info',
 				);
 			}
 
@@ -267,13 +314,12 @@ class OpenIDHooks {
 			if ( $wgCookieExpiration > 0 ) {
 				unset( $preferences['rememberpassword'] );
 				$preferences['rememberpassword'] = array(
-					'type' => 'toggle',
-					'label' => wfMsgExt(
-						'tog-rememberpassword',
-						array( 'parsemag' ),
-						$wgLang->formatNum( ceil( $wgCookieExpiration / ( 3600 * 24 ) ) )
-						),
 					'section' => 'personal/info',
+					'type' => 'toggle',
+					'label' => wfMessage(
+						'tog-rememberpassword',
+						$wgLang->formatNum( ceil( $wgCookieExpiration / ( 3600 * 24 ) ) )
+						)->escaped(),
 				);
 			}
 
