@@ -237,11 +237,11 @@ class OpenIDHooks {
 		global $wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient;
 
 		if ( $wgOpenIDShowUrlOnUserPage == 'user' ) {
-			$preferences['openid-hide'] =
+			$preferences['openid-hide-openid'] =
 				array(
-					'section' => 'openid',
+					'section' => 'openid/openid-hide-openid',
 					'type' => 'toggle',
-					'label-message' => 'openid-pref-hide',
+					'label-message' => 'openid-hide-openid-label',
 				);
 		}
 
@@ -254,20 +254,19 @@ class OpenIDHooks {
 		$update[ wfMessage( 'openidlanguage' )->text() ] = 'language';
 		$update[ wfMessage( 'openidtimezone' )->text() ] = 'timezone';
 
-		$preferences['openid-update-on-login'] =
+		$preferences['openid-userinfo-update-on-login'] =
 			array(
-				'section' => 'openid',
+				'section' => 'openid/openid-userinfo-update-on-login',
 				'type' => 'multiselect',
-				'label-message' => 'openid-pref-update-userinfo-on-login',
+				'label-message' => 'openid-userinfo-update-on-login-label',
 				'options' => $update,
-				'prefix' => 'openid-update-on-login-',
 			);
 
-		$preferences['openid-urls'] =
+		$preferences['openid-associated-openids'] =
 			array(
-				'section' => 'openid',
+				'section' => 'openid/openid-associated-openids',
 				'type' => 'info',
-				'label-message' => 'openid-urls-desc',
+				'label-message' => 'openid-associated-openids-label',
 				'default' => self::getAssociatedOpenIDsTable( $user ),
 				'raw' => true,
 			);
@@ -276,9 +275,9 @@ class OpenIDHooks {
 
 			$preferences['openid-trusted-sites'] =
 				array(
-					'section' => 'openid',
+					'section' => 'openid/openid-trusted-sites',
 					'type' => 'info',
-					'label-message' => 'openid-trusted-sites',
+					'label-message' => 'openid-trusted-sites-label',
 					'default' => self::getTrustTable( $user ),
 					'raw' => true,
 				);
