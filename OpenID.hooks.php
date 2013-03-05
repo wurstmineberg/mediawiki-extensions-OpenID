@@ -271,6 +271,11 @@ class OpenIDHooks {
 				'raw' => true,
 			);
 
+		$preferences['openid_trust'] =
+			array(
+				'type' => 'hidden',
+			);
+
 		if ( !$wgOpenIDOnlyClient ) {
 
 			$preferences['openid-trusted-sites'] =
