@@ -198,6 +198,8 @@ $specialPageAliases['vi'] = array(
 	'OpenIDLogin' => array( 'Đăng_nhập_OpenID' ),
 	'OpenIDConvert' => array( 'Đổi_OpenID' ),
 	'OpenIDServer' => array( 'Máy_chủ_OpenID' ),
+	'OpenIDXRDS' => array( 'XRDS_OpenID' ),
+	'OpenIDDashboard' => array( 'Bảng_điều_khiển_OpenID' ),
 );
 
 /** Simplified Chinese (中文（简体）‎) */
