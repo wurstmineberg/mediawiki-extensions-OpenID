@@ -37,25 +37,27 @@ class SpecialOpenID extends SpecialPage {
 	 * @param $user User
 	 * @param $delegate bool
 	 */
-	public static function outputIdentifier( $user, $delegate = false ) {
-		global $wgOut, $wgOpenIDClientOnly, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
+	public static function showOpenIDIdentifier( $user, $delegate = false ) {
+		global $wgOut, $wgUser, $wgOpenIDClientOnly, $wgOpenIDShowUrlOnUserPage,
+			$wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
+
+		// show the own OpenID Url as a subtitle on the user page
+		// but only for the user when visiting their own page
+		// and when the options say so
+
+		if ( ( $user->getID() === $wgUser->getID() )
+			&& ( $user->getID() != 0 )
+			&& ( $wgOpenIDShowUrlOnUserPage === 'always'
+				|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && !$wgUser->getOption( 'openid-hide-openid' ) ) ) ) {
+
+			global $wgOpenIDLoginLogoUrl;
+			$wgOut->setSubtitle( "<span class='subpages'>" .
+				"<img src='$wgOpenIDLoginLogoUrl' alt='OpenID' />" .
+				SpecialOpenIDServer::getLocalIdentityLink( $wgUser ) .
+				"</span>" );
+		}
 
 		$openid = SpecialOpenID::getUserOpenIDInformation( $user );
-		if ( count( $openid ) && strlen( $openid[0]->uoi_openid ) != 0 ) {
-			global $wgOpenIDShowUrlOnUserPage;
-
-			if ( $wgOpenIDShowUrlOnUserPage == 'always'
-				|| ( ( $wgOpenIDShowUrlOnUserPage == 'user' ) && !$user->getOption( 'openid-hide' ) ) ) {
-				global $wgOpenIDLoginLogoUrl;
-
-				$url = SpecialOpenID::OpenIDToUrl( $openid[0]->uoi_openid );
-				$disp = htmlspecialchars( $openid[0]->uoi_openid );
-				$wgOut->setSubtitle( "<span class='subpages'>" .
-					"<img src='$wgOpenIDLoginLogoUrl' alt='OpenID' />" .
-					"<a href='$url'>$disp</a>" .
-					"</span>" );
-			}
-		}
 
 		# Add OpenID data if its allowed
 		if ( !$wgOpenIDClientOnly
@@ -66,12 +68,7 @@ class SpecialOpenID extends SpecialPage {
 			$wgOut->addLink( array( 'rel' => 'openid.server', 'href' => $serverUrl ) );
 			$wgOut->addLink( array( 'rel' => 'openid2.provider', 'href' => $serverUrl ) );
 			if ( $delegate ) {
-				if ( $wgOpenIDIdentifiersURL ) {
-					$local_identity = str_replace( '{ID}', $user->getID(), $wgOpenIDIdentifiersURL );
-				} else {
-					$local_identity = SpecialPage::getTitleFor( 'OpenIDIdentifier', $user->getID() );
-					$local_identity = $local_identity->getFullURL();
-				}
+				$local_identity = SpecialOpenIDServer::getLocalIdentity( $user );
 				$wgOut->addLink( array( 'rel' => 'openid.delegate', 'href' => $local_identity ) );
 				$wgOut->addLink( array( 'rel' => 'openid2.local_id', 'href' => $local_identity ) );
 			}
@@ -81,6 +78,7 @@ class SpecialOpenID extends SpecialPage {
 			header( 'X-XRDS-Location: ' . $xrdsUrl );
 		}
 		$wgOut->addWikiMsg( 'openid-identifier-page-text', $user->getName() );
+
 	}
 
 	function getOpenIDStore( $storeType, $prefix, $options ) {

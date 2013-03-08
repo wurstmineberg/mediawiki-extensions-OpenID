@@ -32,7 +32,7 @@ class SpecialOpenIDIdentifier extends SpecialPage {
 		$this->setHeaders();
 		$user = User::newFromId( $par );
 		if ( $user ) {
-			SpecialOpenID::outputIdentifier( $user );
+			SpecialOpenID::showOpenIDIdentifier( $user );
 		}
 	}
 }

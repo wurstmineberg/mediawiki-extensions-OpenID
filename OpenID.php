@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.02 20130309' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.03 20130310' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -40,7 +40,7 @@ set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . g
  * Whether to hide the "Login with OpenID link" link; set to true if you already
  * have this link in your skin.
  */
-$wgHideOpenIDLoginLink = false;
+$wgOpenIDHideOpenIDLoginLink = false;
 
 /**
  * Location of the OpenID login logo. You can copy this to your server if you
@@ -53,7 +53,7 @@ $wgOpenIDLoginLogoUrl = $wgScriptPath . '/extensions/OpenID/skin/icons/openid-in
  * values are 'always', 'never' (default), or 'user'.
  * 'user' lets the user decide in their preferences.
  */
-$wgOpenIDShowUrlOnUserPage = 'never';
+$wgOpenIDShowUrlOnUserPage = 'user';
 
 /**
  * These are trust roots that we don't bother asking users whether the trust

@@ -69,7 +69,7 @@ class OpenIDHooks {
 			$user = User::newFromName( $nt->getText() );
 
 			if ( $user && ( $user->getID() != 0 ) ) {
-				SpecialOpenID::outputIdentifier( $user, true );
+				SpecialOpenID::showOpenIDIdentifier( $user, true );
 			}
 		}
 
@@ -181,7 +181,7 @@ class OpenIDHooks {
 		);
 		$info .= Linker::link(
 			SpecialPage::getTitleFor( 'OpenIDConvert' ),
-			wfMessage( 'openid-add-url' )->text()
+			wfMessage( 'openid-add-url' )->escaped()
 		);
 		return $info;
 	}
@@ -221,16 +221,40 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
-		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs;
-		global $wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient;
+		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs,
+			$wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient, $wgOpenIDLoginLogoUrl;
 
-		if ( $wgOpenIDShowUrlOnUserPage == 'user' ) {
+		switch ( $wgOpenIDShowUrlOnUserPage ) {
+
+		case 'user':
 			$preferences['openid-hide-openid'] =
 				array(
 					'section' => 'openid/openid-hide-openid',
 					'type' => 'toggle',
 					'label-message' => 'openid-hide-openid-label',
 				);
+			break;
+
+		case 'always':
+			$preferences['openid-hide-openid'] =
+				array(
+					'section' => 'openid/openid-hide-openid',
+					'type' => 'info',
+					'label-message' => 'openid-hide-openid-label',
+					'default' => wfMessage( 'openid-show-openid-url-on-userpage-always' )->text(),
+				);
+			break;
+
+		case 'never':
+			$preferences['openid-hide-openid'] =
+				array(
+					'section' => 'openid/openid-hide-openid',
+					'type' => 'info',
+					'label-message' => 'openid-hide-openid-label',
+					'default' => wfMessage( 'openid-show-openid-url-on-userpage-never' )->text(),
+				);
+			break;
+
 		}
 
 		// setting up user_properties up_property database key names
@@ -270,6 +294,17 @@ class OpenIDHooks {
 
 		if ( !$wgOpenIDOnlyClient ) {
 
+			$openIDLogo = Xml::element( 'img', array( 'src' => $wgOpenIDLoginLogoUrl, 'alt' => 'OpenID' ), '' );
+
+			$preferences['openid-your-openid'] =
+				array(
+					'section' => 'openid/openid-local-identity',
+					'type' => 'info',
+					'label-message' => 'openid-local-identity',
+					'default' => $openIDLogo . "&nbsp;" . SpecialOpenIDServer::getLocalIdentityLink( $user ),
+					'raw' => true,
+				);
+
 			$preferences['openid-trusted-sites'] =
 				array(
 					'section' => 'openid/openid-trusted-sites',
@@ -284,7 +319,7 @@ class OpenIDHooks {
 		if ( $wgAuth->allowPasswordChange() ) {
 			$resetlink = Linker::link(
 				SpecialPage::getTitleFor( 'PasswordReset' ),
-				wfMessage( 'passwordreset' )->text(),
+				wfMessage( 'passwordreset' )->escaped(),
 				array(),
 				array( 'returnto' => SpecialPage::getTitleFor( 'Preferences' ) )
 			);
@@ -373,7 +408,7 @@ class OpenIDHooks {
 				wfDebug( "OpenID: transferred OpenID(s) of $fromUsername ($fromUserID) => $toUsername ($toUserID)\n" );
 
 			} else {
-				$wgOut->addHTML( wfMessage( 'openid-openids-were-not-merged' )->text() . "<br />\n" );
+				$wgOut->addHTML( wfMessage( 'openid-openids-were-not-merged' )->escaped() . "<br />\n" );
 				wfDebug( "OpenID: OpenID(s) were not merged for merged users $fromUsername ($fromUserID) => $toUsername ($toUserID)\n" );
 			}
 		}

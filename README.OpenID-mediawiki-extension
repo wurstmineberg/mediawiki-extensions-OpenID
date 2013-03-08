@@ -313,7 +313,7 @@ LocalSettings.php file. Please read carefully.
   respectively. The path will be automatically created if it doesn't
   exist at runtime.
 
-* $wgHideOpenIDLoginLink -- boolean that says whether or not to hide
+* $wgOpenIDHideOpenIDLoginLink -- boolean that says whether or not to hide
   the OpenID login link in the personal URLs. Typically you'd use this
   if you've already got some other method for showing the OpenID login
   link, like in your skin. Note that it will *not* prevent login if

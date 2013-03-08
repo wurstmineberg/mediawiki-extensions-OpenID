@@ -233,6 +233,39 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		return new Auth_OpenID_Server( $store, $this->serverUrl() );
 	}
 
+
+	# respond with the authenticated local identity OpenID Url. Utility
+
+	/**
+	 * @return getLocalIdentity
+	 */
+	static function getLocalIdentity( $user ) {
+		global $wgOpenIDIdentifiersURL;
+
+		if ( $wgOpenIDIdentifiersURL ) {
+			$local_identity = str_replace( '{ID}', $user->getID(), $wgOpenIDIdentifiersURL );
+		} else {
+			$local_identity = SpecialPage::getTitleFor( 'OpenIDIdentifier', $user->getID() );
+			$local_identity = $local_identity->getFullURL();
+		}
+
+		return $local_identity;
+
+	}
+
+	/**
+	 * @return getLocalIdentityLink
+	 */
+	static function getLocalIdentityLink( $user ) {
+
+		return Xml::element( 'a',
+				array( 'href' => ( SpecialOpenIDServer::getLocalIdentity( $user ) ) ),
+				SpecialOpenIDServer::getLocalIdentity( $user )
+			);
+
+	}
+
+
 	# Checks a validation request. $imm means don't run any UI.
 	# Fairly meticulous and step-by step, and uses assertions
 	# to point out assumptions at each step.
@@ -420,14 +453,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		wfSuppressWarnings();
 
-		# respond with the authenticated local identity OpenID Url
-		if ( $wgOpenIDIdentifiersURL ) {
-			$local_identity = str_replace( '{ID}', $wgUser->getID(), $wgOpenIDIdentifiersURL );
-		} else {
-			$local_identity = SpecialPage::getTitleFor( 'OpenIDIdentifier', $wgUser->getID() );
-			$local_identity = $local_identity->getFullURL();
-		}
-		$response = $request->answer( true, $this->serverUrl(), $local_identity, null );
+		$response = $request->answer( true, $this->serverUrl(), $this->getLocalIdentity( $wgUser ), null );
 		wfDebug( "OpenID: response: " . print_r( $response, true ) . "\n" );
 
 		wfRestoreWarnings();
