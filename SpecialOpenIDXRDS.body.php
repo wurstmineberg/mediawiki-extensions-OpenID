@@ -53,7 +53,7 @@ class SpecialOpenIDXRDS extends SpecialOpenID {
 		// XRDS preamble XML.
 		$xml_template = array(
 			'<?xml version="1.0" encoding="UTF-8"?' . '>',
-			'<xrds:XRDS xmlns:xrds="xri://\$xrds" xmlns:openid="http://openid.net/xmlns/1.0" xmlns="xri://$xrd*($v*2.0)">',
+			'<xrds:XRDS xmlns:xrds="xri://$xrds" xmlns:openid="http://openid.net/xmlns/1.0" xmlns="xri://$xrd*($v*2.0)">',
 			'<XRD>',
 		);
 
