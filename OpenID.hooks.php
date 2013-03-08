@@ -47,8 +47,6 @@ class OpenIDHooks {
 
 	# Hook is called whenever an article is being viewed
 	public static function onArticleViewHeader( &$article, &$outputDone, &$pcache ) {
-		global $wgOut, $wgOpenIDClientOnly, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
-
 		$nt = $article->getTitle();
 
 		// If the page being viewed is a user page,
@@ -74,7 +72,7 @@ class OpenIDHooks {
 	}
 
 	public static function onPersonalUrls( &$personal_urls, &$title ) {
-		global $wgHideOpenIDLoginLink, $wgUser, $wgLang, $wgOpenIDOnly;
+		global $wgHideOpenIDLoginLink, $wgUser, $wgOpenIDOnly;
 
 		if ( !$wgHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
 			$sk = $wgUser->getSkin();

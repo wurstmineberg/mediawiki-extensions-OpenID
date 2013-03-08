@@ -39,7 +39,7 @@ class OpenIDProvider {
 	 * @return string
 	 */
 	private function getButtonHTML( $classSize ) {
-		global $wgOpenIDShowProviderIcons, $wgOpenIDIconPath;
+		global $wgOpenIDShowProviderIcons;
 
 		if ( $wgOpenIDShowProviderIcons )
 		{

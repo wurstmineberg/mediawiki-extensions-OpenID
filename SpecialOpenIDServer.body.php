@@ -169,8 +169,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			return;
 		}
 
-		global $wgUser;
-
 		switch ( $request->mode ) {
 
 		case "checkid_setup":
@@ -241,7 +239,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 	function Check( $server, $request, $sreg, $imm = true ) {
 
-		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifierSelect, $wgOpenIDIdentifiersURL;
+		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifierSelect;
 
 		assert( isset( $wgUser ) && isset( $wgOut ) );
 		assert( isset( $server ) );

@@ -40,7 +40,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $par String or null
 	 */
 	function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgOpenIDConsumerForce;
+		global $wgRequest, $wgUser, $wgOpenIDConsumerForce;
 
 		$this->setHeaders();
 

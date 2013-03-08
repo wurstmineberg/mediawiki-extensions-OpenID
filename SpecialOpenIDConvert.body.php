@@ -34,7 +34,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 	}
 
 	function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut;
+		global $wgRequest, $wgUser;
 
 		if ( !$this->userCanExecute( $wgUser ) ) {
                 	$this->displayRestrictionError();
@@ -104,7 +104,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 	}
 
 	function form() {
-		global $wgOut, $wgUser, $wgOpenIDShowProviderIcons;
+		global $wgOut, $wgOpenIDShowProviderIcons;
 
 		$wgOut->addModules( $wgOpenIDShowProviderIcons ? 'ext.openid.icons' : 'ext.openid.plain' );
 
