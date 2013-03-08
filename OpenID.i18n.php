@@ -182,7 +182,10 @@ You would not able to log in without an OpenID.',
  */
 $messages['qqq'] = array(
 	'openid-desc' => '{{desc|name=Open ID|url=http://www.mediawiki.org/wiki/Extension:OpenID}}',
-	'openid-identifier-page-text' => 'A short text which describes this technical OpenID identifier page for a user. The page is used only during OpenID authentication and is generally not visited otherwise. $1 is a user name.',
+	'openid-identifier-page-text' => 'A short text which describes this technical OpenID identifier page for a user. The page is used only during OpenID authentication and is generally not visited otherwise.
+
+Parameters:
+* $1 - a user name',
 	'openid-server-identity-page-text' => 'A short text which describes this technical OpenID server identity page which is only used during OpenID authentication and not used otherwise.',
 	'openidsuccesstext' => 'Parameters:
 * $1 is a username
@@ -1062,6 +1065,7 @@ Ne c'hallfec'h ket kevreañ hep OpenID.",
 	'openiddelete-sucess' => 'Tennet eo bet ervat an OpenID eus ho kont.',
 	'openiddelete-error' => "Ur fazi a zo bet pa oac'h o klask tennañ an OpenID eus ho kont.",
 	'prefs-openid-hide-openid' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.",
+	'prefs-openid-trusted-sites' => "Lec'hiennoù a fiziañs",
 	'openid-hide-openid-label' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.",
 	'openid-userinfo-update-on-login-label' => "Hizivaat ar roadennoù da heul adalek OpenID bep tro m'en em lugan :",
 	'openid-associated-openids-label' => 'An OpenIDoù stag ouzh ho kont :',
@@ -1386,8 +1390,10 @@ du kan vælge et fra nedenstående muligheder.',
  */
 $messages['de'] = array(
 	'openid-desc' => 'Erlaubt die Anmeldung mit einer [//openid.net/ OpenID]. Sofern es für dieses Wiki aktiviert wurde, kann man sich auch mit seinem Benutzerkonto (dieses Wikis) als OpenID bei anderen Websites per OpenID anmelden',
+	'openididentifier' => 'OpenID-Kennung',
 	'openidlogin' => 'Anmelden / Benutzerkonto erstellen mit OpenID',
 	'openidserver' => 'OpenID-Server',
+	'openid-identifier-page-text' => 'Diese Seite ist die Kennung für den Benutzer „$1“.',
 	'openid-server-identity-page-text' => 'Dies ist eine technische OpenID-Server-Seite während der OpenID-Authentifizierung, die keine weitere Bedeutung hat.',
 	'openidxrds' => 'Yadis-Datei',
 	'openidconvert' => 'OpenID-Konverter',
@@ -2198,8 +2204,10 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
  */
 $messages['fr'] = array(
 	'openid-desc' => 'Se connecter au wiki avec [//openid.net/ OpenID] et se connecter à d’autres sites internet OpenID avec un compte utilisateur du wiki.',
+	'openididentifier' => 'Identifiant OpenID',
 	'openidlogin' => 'Se connecter ou créer un compte avec OpenID',
 	'openidserver' => 'Serveur OpenID',
+	'openid-identifier-page-text' => 'Cette page est l’identifiant de l’utilisateur "$1".',
 	'openid-server-identity-page-text' => 'Ceci est une page du serveur technique OpenID pour démarrer l’authentification OpenID. La page n’a pas d’autre but.',
 	'openidxrds' => 'Fichier Yadis',
 	'openidconvert' => 'Convertisseur OpenID',
@@ -3526,8 +3534,10 @@ Non saresti in grado di accedere senza un OpenID.',
  */
 $messages['ja'] = array(
 	'openid-desc' => '[//openid.net/ OpenID] でウィキにログインできるようにする。これをウィキで有効にすると、ウィキの利用者アカウントの URL を OpenID として他の OpenID 対応サイトにもログインできる',
+	'openididentifier' => 'OpenID 識別子',
 	'openidlogin' => 'OpenID でログイン/アカウントを作成',
 	'openidserver' => 'OpenID サーバー',
+	'openid-identifier-page-text' => 'このページは利用者「$1」の識別子です。',
 	'openid-server-identity-page-text' => 'このページは、OpenID 認証を開始するための、OpenID サーバーの技術的なページであり、それ以外の目的はありません。',
 	'openidxrds' => 'Yadis ファイル',
 	'openidconvert' => 'OpenID コンバーター',
@@ -4148,13 +4158,15 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'openiddelete-sucess' => "D'OpenID gouf vun Ärem Benotzerkont ewechgeholl",
 	'openiddelete-error' => 'Beim Ewehhuele vun der OpenID vun Ärem Benotzerkont ass e Feeler geschitt.',
 	'prefs-openid-hide-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
+	'prefs-openid-trusted-sites' => 'Siten, deenen Dir traut',
 	'openid-hide-openid-label' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
 	'openid-userinfo-update-on-login-label' => "D'Informatioune vu dësem OpenID-Kont all Kéier aktualiséiere wann ech mech aloggen",
 	'openid-associated-openids-label' => 'OpendIden déi mat Ärem Benotzerkont asoziéiert sinn',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Aktioun',
 	'openid-urls-delete' => 'Läschen',
-	'openid-add-url' => 'Eng nei OpenID derbäisetzen', # Fuzzy
+	'openid-add-url' => 'Eng nei OpenID bäi Äre Benotzerkont derbäisetzen',
+	'openid-trusted-sites-table-header' => 'Siten, deenen Dir traut',
 	'openid-login-or-create-account' => 'Loggt Iech an oder maacht en neie Benotzerkont op',
 	'openid-provider-label-openid' => 'Gitt Är OpenID URL un',
 	'openid-provider-label-google' => 'Loggt Iech mat Ärem Goggle-Benotzerkont an',
@@ -4222,8 +4234,10 @@ $messages['min'] = array(
  */
 $messages['mk'] = array(
 	'openid-desc' => 'Најавувајте се на викито со [//openid.net/ OpenID], и најавувајте се со други OpenID-поддржни страници со вики-корисничка сметка',
+	'openididentifier' => 'OpenID-назнака',
 	'openidlogin' => 'Најава / создај сметка со OpenID',
 	'openidserver' => 'OpenID опслужувач',
+	'openid-identifier-page-text' => 'Оваа страница е назнака на корисникот „$1“',
 	'openid-server-identity-page-text' => 'Ова е техничка страница на опслужувачот на OpenID што се однесува на започнувањето на заверката. Страницата нема друга цел.',
 	'openidxrds' => 'Yadis податотека',
 	'openidconvert' => 'OpenID претворач',
