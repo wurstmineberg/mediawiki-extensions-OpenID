@@ -241,7 +241,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 	function Check( $server, $request, $sreg, $imm = true ) {
 
-		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifierSelect;
+		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifierSelect, $wgOpenIDIdentifiersURL;
 
 		assert( isset( $wgUser ) && isset( $wgOut ) );
 		assert( isset( $server ) );
@@ -421,8 +421,12 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		wfSuppressWarnings();
 
 		# respond with the authenticated local identity OpenID Url
-		$local_identity = $wgUser->getUserPage()->getFullURL();
-
+		if ( $wgOpenIDIdentifiersURL ) {
+			$local_identity = str_replace( '{ID}', $wgUser->getID(), $wgOpenIDIdentifiersURL );
+		} else {
+			$local_identity = SpecialPage::getTitleFor( 'OpenIDIdentifier', $wgUser->getID() );
+			$local_identity = $local_identity->getFullURL();
+		}
 		$response = $request->answer( true, $this->serverUrl(), $local_identity, null );
 		wfDebug( "OpenID: response: " . print_r( $response, true ) . "\n" );
 

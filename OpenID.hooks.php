@@ -47,7 +47,7 @@ class OpenIDHooks {
 
 	# Hook is called whenever an article is being viewed
 	public static function onArticleViewHeader( &$article, &$outputDone, &$pcache ) {
-		global $wgOut, $wgOpenIDClientOnly, $wgOpenIDAllowServingOpenIDUserAccounts;
+		global $wgOut, $wgOpenIDClientOnly, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
 
 		$nt = $article->getTitle();
 
@@ -66,40 +66,8 @@ class OpenIDHooks {
 			$user = User::newFromName( $nt->getText() );
 
 			if ( $user && ( $user->getID() != 0 ) ) {
-
-				$openid = SpecialOpenID::getUserOpenIDInformation( $user );
-				if ( count( $openid ) && strlen( $openid[0]->uoi_openid ) != 0 ) {
-					global $wgOpenIDShowUrlOnUserPage;
-
-					if ( $wgOpenIDShowUrlOnUserPage == 'always'
-						|| ( ( $wgOpenIDShowUrlOnUserPage == 'user' ) && !$user->getOption( 'openid-hide' ) ) ) {
-						global $wgOpenIDLoginLogoUrl;
-
-						$url = SpecialOpenID::OpenIDToUrl( $openid[0]->uoi_openid );
-						$disp = htmlspecialchars( $openid[0]->uoi_openid );
-						$wgOut->setSubtitle( "<span class='subpages'>" .
-							"<img src='$wgOpenIDLoginLogoUrl' alt='OpenID' />" .
-							"<a href='$url'>$disp</a>" .
-							"</span>" );
-					}
-				}
-
-				# Add OpenID data if its allowed
-				if ( !$wgOpenIDClientOnly 
-					&& !( count( $openid ) && ( strlen( $openid[0]->uoi_openid ) != 0 ) && !$wgOpenIDAllowServingOpenIDUserAccounts ) ) {
-
-					$serverTitle = SpecialPage::getTitleFor( 'OpenIDServer' );
-					$serverUrl = $serverTitle->getFullURL();
-					$wgOut->addLink( array( 'rel' => 'openid.server', 'href' => $serverUrl ) );
-					$wgOut->addLink( array( 'rel' => 'openid2.provider', 'href' => $serverUrl ) );
-					$rt = SpecialPage::getTitleFor( 'OpenIDXRDS', $user->getName() );
-					$xrdsUrl = $rt->getFullURL();
-					$wgOut->addMeta( 'http:X-XRDS-Location', $xrdsUrl );
-					header( 'X-XRDS-Location: ' . $xrdsUrl );
-				}
-
+				SpecialOpenID::outputIdentifier( $user, True );
 			}
-
 		}
 
 		return true;

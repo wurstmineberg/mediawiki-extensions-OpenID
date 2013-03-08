@@ -33,8 +33,10 @@ $messages = array();
  */
 $messages['en'] = array(
 	'openid-desc' => 'Let users log in to the wiki with an [//openid.net/ OpenID]. If this is enabled on the wiki, they can also use their user account URL of this wiki as OpenID to log in to other OpenID-aware web sites',
+	'openididentifier' => 'OpenID Identifier',
 	'openidlogin' => 'Log in / create account with OpenID',
 	'openidserver' => 'OpenID server',
+	'openid-identifier-page-text' => 'This page is the identifier for user "$1".',
 	'openid-server-identity-page-text' => 'This is a technical OpenID server page for starting the OpenID authentication. The page has no other purpose.',
 	'openidxrds' => 'Yadis file',
 	'openidconvert' => 'OpenID converter',
@@ -180,6 +182,7 @@ You would not able to log in without an OpenID.',
  */
 $messages['qqq'] = array(
 	'openid-desc' => '{{desc|name=Open ID|url=http://www.mediawiki.org/wiki/Extension:OpenID}}',
+	'openid-identifier-page-text' => 'A short text which describes this technical OpenID identifier page for a user. The page is used only during OpenID authentication and is generally not visited otherwise. $1 is a user name.',
 	'openid-server-identity-page-text' => 'A short text which describes this technical OpenID server identity page which is only used during OpenID authentication and not used otherwise.',
 	'openidsuccesstext' => 'Parameters:
 * $1 is a username

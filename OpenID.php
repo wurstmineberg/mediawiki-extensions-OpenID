@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '2.06 20130305' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.00 20130308' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -228,6 +228,29 @@ $wgOpenIDMergeOnAccountMerge = false;
  */
 $wgOpenIDShowProviderIcons = true;
 
+/**
+ * When used as OpenID provider, you can optionally define a template for a
+ * customized fully specified url (CFSU) as identity url for delegation.
+ * This allows differently looking "nice OpenID urls" in addition to the
+ * generic urls /User:Username and /Special:OpenIDIdentifier/<id> .
+ *
+ * The CFSU template must contain a placeholder string "{ID}".
+ *
+ * The placeholder is substituted with the authenticated user's internal ID
+ * during the OpenID authentication process.
+ *
+ * To make this working you need also to set up a suited rewrite rule
+ * in your web server which redirects the CFSU with the replaced user id
+ * to Special:OpenIDIdentifier/<id>.
+ *
+ * The default value is computed internally as
+ *
+ * $wgOpenIDIdentifiersURL =
+ * str_replace( "$1", "Special:OpenIDIdentifier/{ID}", $wgServer . $wgArticlePath );
+ *
+ */
+$wgOpenIDIdentifiersURL = "";
+
 # New options
 $wgDefaultUserOptions['openid-hide'] = 0;
 $wgDefaultUserOptions['openid-update-on-login-nickname'] = false;
@@ -268,6 +291,7 @@ $wgAutoloadClasses['OpenIDHooks'] = $dir . 'OpenID.hooks.php';
 
 # Autoload common parent with utility methods
 $wgAutoloadClasses['SpecialOpenID'] = $dir . 'SpecialOpenID.body.php';
+$wgAutoloadClasses['SpecialOpenIDIdentifier'] = $dir . 'SpecialOpenIDIdentifier.body.php';
 
 $wgAutoloadClasses['SpecialOpenIDLogin'] = $dir . 'SpecialOpenIDLogin.body.php';
 $wgAutoloadClasses['SpecialOpenIDConvert'] = $dir . 'SpecialOpenIDConvert.body.php';
@@ -283,6 +307,8 @@ $wgAutoloadClasses['Auth_OpenID_CheckIDRequest'] = OpenIDGetServerPath();
 
 $wgAutoloadClasses['MediaWikiOpenIDDatabaseConnection'] = $dir . 'DatabaseConnection.php';
 $wgAutoloadClasses['MediaWikiOpenIDMemcachedStore'] = $dir . 'MemcachedStore.php';
+
+$wgSpecialPages['OpenIDIdentifier'] = 'SpecialOpenIDIdentifier';
 
 $wgHooks['PersonalUrls'][] = 'OpenIDHooks::onPersonalUrls';
 $wgHooks['BeforePageDisplay'][] = 'OpenIDHooks::onBeforePageDisplay';

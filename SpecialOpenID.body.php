@@ -33,6 +33,52 @@ require_once( "Auth/OpenID/FileStore.php" );
 
 class SpecialOpenID extends SpecialPage {
 
+	static function outputIdentifier( $user, $delegate=False ) {
+		global $wgOut, $wgOpenIDClientOnly, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
+
+		$openid = SpecialOpenID::getUserOpenIDInformation( $user );
+		if ( count( $openid ) && strlen( $openid[0]->uoi_openid ) != 0 ) {
+			global $wgOpenIDShowUrlOnUserPage;
+
+			if ( $wgOpenIDShowUrlOnUserPage == 'always'
+				|| ( ( $wgOpenIDShowUrlOnUserPage == 'user' ) && !$user->getOption( 'openid-hide' ) ) ) {
+				global $wgOpenIDLoginLogoUrl;
+
+				$url = SpecialOpenID::OpenIDToUrl( $openid[0]->uoi_openid );
+				$disp = htmlspecialchars( $openid[0]->uoi_openid );
+				$wgOut->setSubtitle( "<span class='subpages'>" .
+					"<img src='$wgOpenIDLoginLogoUrl' alt='OpenID' />" .
+					"<a href='$url'>$disp</a>" .
+					"</span>" );
+			}
+		}
+
+		# Add OpenID data if its allowed
+		if ( !$wgOpenIDClientOnly
+			&& !( count( $openid ) && ( strlen( $openid[0]->uoi_openid ) != 0 ) && !$wgOpenIDAllowServingOpenIDUserAccounts ) ) {
+
+			$serverTitle = SpecialPage::getTitleFor( 'OpenIDServer' );
+			$serverUrl = $serverTitle->getFullURL();
+			$wgOut->addLink( array( 'rel' => 'openid.server', 'href' => $serverUrl ) );
+			$wgOut->addLink( array( 'rel' => 'openid2.provider', 'href' => $serverUrl ) );
+			if ( $delegate ) {
+				if ( $wgOpenIDIdentifiersURL ) {
+					$local_identity = str_replace( '{ID}', $user->getID(), $wgOpenIDIdentifiersURL );
+				} else {
+					$local_identity = SpecialPage::getTitleFor( 'OpenIDIdentifier', $user->getID() );
+					$local_identity = $local_identity->getFullURL();
+				}
+				$wgOut->addLink( array( 'rel' => 'openid.delegate', 'href' => $local_identity ) );
+				$wgOut->addLink( array( 'rel' => 'openid2.local_id', 'href' => $local_identity ) );
+			}
+			$rt = SpecialPage::getTitleFor( 'OpenIDXRDS', $user->getName() );
+			$xrdsUrl = $rt->getFullURL();
+			$wgOut->addMeta( 'http:X-XRDS-Location', $xrdsUrl );
+			header( 'X-XRDS-Location: ' . $xrdsUrl );
+		}
+		$wgOut->addWikiMsg( 'openid-identifier-page-text', $user->getName() );
+	}
+
 	function getOpenIDStore( $storeType, $prefix, $options ) {
 		global $wgOut, $wgMemc, $wgDBtype;
 
