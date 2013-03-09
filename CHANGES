@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+3.02  20130309  fix bug45928 change deprecated wgAllowRealName to wgHiddenPrefs checks
 3.01  20130309  fixed a regression which stopped optional userinfo updating from OpenID
 3.00  20130308  delegate /User:Username to /Special:OpenIDIdentifier/<userid>
 2.06  20130305  fix bug45515 OpenID server lost trust information when Preferences were saved

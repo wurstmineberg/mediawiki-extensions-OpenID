@@ -166,7 +166,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $messagekey String or null: message name to display at the top
 	 */
 	function chooseNameForm( $openid, $sreg, $ax, $messagekey = null ) {
-		global $wgOut, $wgOpenIDAllowExistingAccountSelection, $wgAllowRealName, $wgUser;
+		global $wgOut, $wgOpenIDAllowExistingAccountSelection, $wgHiddenPrefs, $wgUser;
 		global $wgOpenIDProposeUsernameFromSREG, $wgOpenIDAllowAutomaticUsername, $wgOpenIDAllowNewAccountname;
 
 		if ( $messagekey ) {
@@ -198,7 +198,9 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			$oidAttributes = array();
 
 			foreach ( $oidAttributesToAccept as $oidAttr ) {
-				if ( $oidAttr == 'fullname' && !$wgAllowRealName ) {
+
+				if ( ( $oidAttr == 'fullname' )
+					&& ( in_array( 'realname', $wgHiddenPrefs ) ) ) {
 					continue;
 				}
 
@@ -503,7 +505,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $force bool forces update regardless of user preferences
 	 */
 	function updateUser( $user, $sreg, $ax, $force = false ) {
-		global $wgOut, $wgAllowRealName, $wgEmailAuthentication, $wgOpenIDTrustEmailAddress;
+		global $wgOut, $wgHiddenPrefs, $wgEmailAuthentication, $wgOpenIDTrustEmailAddress;
 
 		// Nick name
 		if ( $this->updateOption( 'nickname', $user, $force ) ) {
@@ -541,14 +543,19 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		}
 
 		// Full name
-		if ( $wgAllowRealName && ( $this->updateOption( 'fullname', $user, $force ) ) ) {
+		if ( !in_array( 'realname', $wgHiddenPrefs )
+			&& ( $this->updateOption( 'fullname', $user, $force ) ) ) {
+
 			if ( array_key_exists( 'fullname', $sreg ) ) {
 				$user->setRealName( $sreg['fullname'] );
 			}
 
-			if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
+			if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax )
+				|| array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
+
 				$user->setRealName( $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0] );
 			}
+
 		}
 
 		// Language

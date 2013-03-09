@@ -221,7 +221,7 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
-		global $wgOpenIDShowUrlOnUserPage, $wgAllowRealName;
+		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs;
 		global $wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient;
 
 		if ( $wgOpenIDShowUrlOnUserPage == 'user' ) {
@@ -240,7 +240,7 @@ class OpenIDHooks {
 		$update = array();
 		$update[ wfMessage( 'openidnickname' )->text() ] = '-nickname';
 		$update[ wfMessage( 'openidemail' )->text() ] = '-email';
-		if ( $wgAllowRealName ) {
+		if ( !in_array( 'realname', $wgHiddenPrefs ) ) {
 			$update[ wfMessage( 'openidfullname' )->text() ] = '-fullname';
 		}
 		$update[ wfMessage( 'openidlanguage' )->text() ] = '-language';
