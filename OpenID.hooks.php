@@ -211,14 +211,18 @@ class OpenIDHooks {
 				);
 		}
 
+		// setting up user_properties up_property database key names
+		// example 'openid-userinfo-update-on-login-nickname'
+		// FIXME: this could better be saved as a JSON encoded array in a single key
+
 		$update = array();
-		$update[ wfMessage( 'openidnickname' )->text() ] = 'nickname';
-		$update[ wfMessage( 'openidemail' )->text() ] = 'email';
+		$update[ wfMessage( 'openidnickname' )->text() ] = '-nickname';
+		$update[ wfMessage( 'openidemail' )->text() ] = '-email';
 		if ( $wgAllowRealName ) {
-			$update[ wfMessage( 'openidfullname' )->text() ] = 'fullname';
+			$update[ wfMessage( 'openidfullname' )->text() ] = '-fullname';
 		}
-		$update[ wfMessage( 'openidlanguage' )->text() ] = 'language';
-		$update[ wfMessage( 'openidtimezone' )->text() ] = 'timezone';
+		$update[ wfMessage( 'openidlanguage' )->text() ] = '-language';
+		$update[ wfMessage( 'openidtimezone' )->text() ] = '-timezone';
 
 		$preferences['openid-userinfo-update-on-login'] =
 			array(

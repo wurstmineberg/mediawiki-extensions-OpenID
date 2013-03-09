@@ -571,11 +571,23 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 	/**
 	 * Helper function for updateUser()
+	 *
+	 * reading option from database table user_properties up_property
+	 * keys look like 'openid-userinfo-update-on-login-nickname'
+	 *
+	 * FIXME: options could better be saved as a JSON encoded array in a single key
+	 *
 	 */
 	private function updateOption( $option, User $user, $force ) {
-		return $force === true || ( is_array( $force ) && in_array( $option, $force ) ) ||
-			$user->getOption( 'openid-update-on-login-' . $option ) ||
-			$user->getOption( 'openid-update-on-login' ); // Back compat with old option
+		$ret = ( $force === true
+			|| ( is_array( $force ) && in_array( $option, $force ) )
+			|| $user->getOption( 'openid-userinfo-update-on-login-' . $option ) );
+
+			// the trailing "-" is important
+			// it separates the key prefix and the value
+			// keys look like 'openid-userinfo-update-on-login-nickname'
+
+		return $ret;
 	}
 
 	/**
