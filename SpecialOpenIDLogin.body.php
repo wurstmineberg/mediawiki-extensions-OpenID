@@ -499,7 +499,8 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 *
 	 * @param $user User object
 	 * @param $sreg Array of options get from OpenID
-	 * @param $force forces update regardless of user preferences
+	 * @param $ax
+	 * @param $force bool forces update regardless of user preferences
 	 */
 	function updateUser( $user, $sreg, $ax, $force = false ) {
 		global $wgOut, $wgAllowRealName, $wgEmailAuthentication, $wgOpenIDTrustEmailAddress;
@@ -624,7 +625,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 		$user = User::newFromName( $name );
 
-          	# Check permissions
+		# Check permissions
 		if ( !$user->isAllowed( 'createaccount' ) ) {
 			wfDebug( "OpenID: User is not allowed to create an account.\n" );
 			return null;
@@ -663,6 +664,13 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		}
 	}
 
+	/**
+	 * @param $openid
+	 * @param $sreg
+	 * @param $name
+	 * @param $password
+	 * @return bool|null|User
+	 */
 	function attachUser( $openid, $sreg, $name, $password ) {
 		$user = User::newFromName( $name );
 
@@ -679,44 +687,62 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		return $user;
 	}
 
-	# Methods to get the user name
-	# ----------------------------
-
+	/**
+	 * @param $openid
+	 * @param $sreg
+	 * @param $ax
+	 * @param $choice
+	 * @param $nameValue
+	 * @return mixed|null|string
+	 */
 	function getUserName( $openid, $sreg, $ax, $choice, $nameValue ) {
-	global $wgOpenIDAllowAutomaticUsername, $wgOpenIDAllowNewAccountname, $wgOpenIDProposeUsernameFromSREG;
+		global $wgOpenIDAllowAutomaticUsername, $wgOpenIDAllowNewAccountname, $wgOpenIDProposeUsernameFromSREG;
 
 		switch ( $choice ) {
-		 case 'nick':
-		 	if ( $wgOpenIDProposeUsernameFromSREG ) return ( ( array_key_exists( 'nickname', $sreg ) ) ? $sreg['nickname'] : null );
-		 	break;
-		 case 'full':
-		        if ( !$wgOpenIDProposeUsernameFromSREG ) return;
+		case 'nick':
+		 	if ( $wgOpenIDProposeUsernameFromSREG ) {
+				return ( ( array_key_exists( 'nickname', $sreg ) ) ? $sreg['nickname'] : null );
+			}
+			break;
+		case 'full':
+			if ( !$wgOpenIDProposeUsernameFromSREG ) {
+				return;
+			}
 		 	# check the SREG first; only return a value if non-null
-		 	$fullname = ( ( array_key_exists( 'fullname', $sreg ) ) ? $sreg['fullname'] : null );
-		 	if ( !is_null( $fullname ) ) {
+			$fullname = ( ( array_key_exists( 'fullname', $sreg ) ) ? $sreg['fullname'] : null );
+			if ( !is_null( $fullname ) ) {
 			 	return $fullname;
 			}
 
-		 	# try AX
-		 	$fullname = ( ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) ? $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0] : null );
+			# try AX
+			$fullname = ( ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) ? $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0] : null );
 
-		 	return $fullname;
+			return $fullname;
+		case 'url':
+			if ( $wgOpenIDProposeUsernameFromSREG ) {
+				return $this->toUserName( $openid );
+			}
 			break;
-		 case 'url':
-			if ( $wgOpenIDProposeUsernameFromSREG ) return $this->toUserName( $openid );
+		case 'auto':
+			if ( $wgOpenIDAllowAutomaticUsername ) {
+				return $this->automaticName( $sreg );
+			}
 			break;
-		 case 'auto':
-		        if ( $wgOpenIDAllowAutomaticUsername ) return $this->automaticName( $sreg );
-			break;
-		 case 'manual':
-		        if ( $wgOpenIDAllowNewAccountname ) return $nameValue;
+		case 'manual':
+			if ( $wgOpenIDAllowNewAccountname ) {
+				return $nameValue;
+			}
 		 default:
 			return null;
 		}
 	}
 
+	/**
+	 * @param $openid string
+	 * @return mixed|null
+	 */
 	function toUserName( $openid ) {
-        if ( Auth_Yadis_identifierScheme( $openid ) == 'XRI' ) {
+		if ( Auth_Yadis_identifierScheme( $openid ) == 'XRI' ) {
 			return $this->toUserNameXri( $openid );
 		} else {
 			return $this->toUserNameUrl( $openid );

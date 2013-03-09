@@ -47,9 +47,7 @@ class OpenIDProvider {
 			' href="javascript: openid.show(\'' . $this->id . '\');"' .
 			' class="openid_' . $classSize . '_btn' .
 			( $this->id == 'openid' ? ' openid_selected' : '' ) . '"></a>';
-		}
-		else
-		{
+		} else {
 			return '<a id="openid_provider_' . $this->id . '_link" title="' . $this->name . '"' .
 			' href="javascript: openid.show(\'' . $this->id . '\');"' .
 			' class="openid_' . $classSize . '_link' .
@@ -57,9 +55,23 @@ class OpenIDProvider {
 		}
 	}
 
-	public function getLargeButtonHTML() { return $this->getButtonHTML( 'large' ); }
-	public function getSmallButtonHTML() { return $this->getButtonHTML( 'small' ); }
+	/**
+	 * @return string
+	 */
+	public function getLargeButtonHTML() {
+		return $this->getButtonHTML( 'large' );
+	}
 
+	/**
+	 * @return string
+	 */
+	public function getSmallButtonHTML() {
+		return $this->getButtonHTML( 'small' );
+	}
+
+	/**
+	 * @return string
+	 */
 	public function getLoginFormHTML() {
 		$html = '<div id="provider_form_' . $this->id . '"' .
 			( $this->id == 'openid' ? '' : ' style="display:none"' ) . '>' .

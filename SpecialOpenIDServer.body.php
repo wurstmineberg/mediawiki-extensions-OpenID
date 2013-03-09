@@ -200,9 +200,12 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		}
 	}
 
-	# Returns the full URL of the special page; we need to pass it around
-	# for some requests
 
+	/**
+	 * Returns the full URL of the special page; we need to pass it around
+	 * for some requests
+	 * @return null|String
+	 */
 	function Url() {
 		$nt = SpecialPage::getTitleFor( 'OpenIDServer' );
 		if ( isset( $nt ) ) {
@@ -239,7 +242,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 	function Check( $server, $request, $sreg, $imm = true ) {
 
-		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifierSelect;
+		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
 
 		assert( isset( $wgUser ) && isset( $wgOut ) );
 		assert( isset( $server ) );
@@ -314,7 +317,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		wfDebug( "OpenID: User is logged in\n" );
 		assert( $wgUser->getId() != 0 );
-
 
 /*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
 
@@ -545,41 +547,45 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		return $sreg;
 	}
 
+	/**
+	 * @param $user User
+	 * @param $field string
+	 * @param $value string
+	 * @return bool
+	 */
 	function SetUserField( &$user, $field, $value ) {
 		switch ( $field ) {
-		 case 'fullname':
+		case 'fullname':
 			$user->setRealName( $value );
 			return true;
-			break;
-		 case 'email':
+		case 'email':
 			# FIXME: deal with validation
 			$user->setEmail( $value );
 			return true;
-			break;
 		 case 'language':
 			$user->setOption( 'language', $value );
 			return true;
-			break;
-		 default:
+		default:
 			return false;
 		}
 	}
 
+	/**
+	 * @param $user User
+	 * @param $field string
+	 * @return null
+	 */
 	function GetUserField( $user, $field ) {
 		switch ( $field ) {
-		 case 'nickname':
+		case 'nickname':
 			return $user->getName();
-			break;
-		 case 'fullname':
+		case 'fullname':
 			return $user->getRealName();
-			break;
-		 case 'email':
+		case 'email':
 			return $user->getEmail();
-			break;
-		 case 'language':
+		case 'language':
 			return $user->getOption( 'language' );
-			break;
-		 default:
+		default:
 			return null;
 		}
 	}
@@ -709,18 +715,10 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		global $wgOut, $wgUser;
 
-		$url = $request->identity;
-		$name = $this->UrlToUserName( $url );
 		$trust_root = $request->trust_root;
 
 		$instructions = wfMessage( 'openidtrustinstructions', $trust_root )->text();
 		$allow = wfMessage( 'openidallowtrust', $trust_root )->text();
-
-		if ( is_null( $sreg['policy_url'] ) ) {
-			$policy = wfMessage( 'openidnopolicy' )->text();
-		} else {
-			$policy = wfMessage( 'openidpolicy', $sreg['policy_url'] )->text();
-		}
 
 		if ( isset( $msg ) ) {
 			$wgOut->addHTML( "<p class='error'>{$msg}</p>" );
@@ -782,14 +780,12 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		# If they don't want us to allow trust, save that.
 
 		if ( !$wgRequest->getCheck( 'wpAllowTrust' ) ) {
-
 			$this->SetUserTrust( $wgUser, $trust_root, false );
 			# Set'em and sav'em
 			$wgUser->saveSettings();
 		} else {
-
 			$fields = array_filter( array_unique( array_merge( $sreg['optional'], $sreg['required'] ) ),
-								   array( $this, 'ValidField' ) );
+				array( $this, 'ValidField' ) );
 
 			$allow = array();
 
@@ -803,11 +799,14 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			# Set'em and sav'em
 			$wgUser->saveSettings();
 		}
-
 	}
 
-	# Converts an URL /User:Name to a user name, if possible
-
+	/**
+	 * Converts an URL /User:Name to a user name, if possible
+	 *
+	 * @param $url string
+	 * @return null|String
+	 */
 	function UrlToUserName( $url ) {
 
 		global $wgArticlePath, $wgServer;
@@ -858,6 +857,9 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		}
 	}
 
+	/**
+	 * @return String
+	 */
 	function serverUrl() {
 		return $this->getTitle()->getFullURL( '', false, PROTO_CURRENT );
 	}

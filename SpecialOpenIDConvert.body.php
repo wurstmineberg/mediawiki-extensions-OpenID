@@ -37,9 +37,9 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 		global $wgRequest, $wgUser;
 
 		if ( !$this->userCanExecute( $wgUser ) ) {
-                	$this->displayRestrictionError();
-        	        return;
-	        }
+			$this->displayRestrictionError();
+			return;
+		}
 
 		$this->setHeaders();
 
@@ -303,8 +303,6 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			$wgOut->setArticleRelated( false );
 			$wgOut->addWikiMsg( 'openidconvertsuccesstext', $openid_url );
 			$wgOut->returnToMain();
-
 		}
-
 	}
 }

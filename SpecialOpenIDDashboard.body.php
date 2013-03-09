@@ -33,6 +33,11 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		}
 	}
 
+	/**
+	 * @param $string string
+	 * @param $value string
+	 * @return string
+	 */
 	function show( $string, $value ) {
 		if  ( $value === null ) {
 			$value = 'null';
