@@ -1,5 +1,8 @@
 MediaWiki OpenID extension README.OpenID-mediawiki-extension file
 version 1.004 20120427
+
+### FIXME: UPDATE TO VERSION 3.x REQUIRED TG 20130310
+
 Homepage and manual http://www.mediawiki.org/wiki/Extension:OpenID
 
 Please check OpenID.setup.php for the current program version number

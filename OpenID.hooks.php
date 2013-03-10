@@ -195,21 +195,57 @@ class OpenIDHooks {
 		$rows = '';
 
 		foreach ( $trusted_sites as $key => $value ) {
+
+			$deleteTrustedSiteTitle = SpecialPage::getTitleFor( 'OpenIDServer', 'DeleteTrustedSite' );
+
 			if ( $key !== "" ) {
+
 				$rows .= Xml::tags( 'tr', array(),
 					Xml::tags( 'td',
 						array(),
 						Xml::element( 'a', array( 'href' => $key ), $key )
+					) .
+					Xml::tags( 'td',
+						array(),
+						Linker::link( $deleteTrustedSiteTitle,
+							wfMessage( 'openid-trusted-sites-delete-link-action-text' )->text(),
+							array(),
+							array( 'url' => $key )
+						)
 					)
 				) . "\n";
+
 			}
+
+		}
+
+		if ( $rows !== "" ) {
+
+			$rows .= Xml::tags( 'tr', array(),
+				Xml::tags( 'td',
+					array(),
+					"&nbsp;"
+				) .
+				Xml::tags( 'td',
+					array(),
+					Linker::link( $deleteTrustedSiteTitle,
+						wfMessage( 'openid-trusted-sites-delete-all-link-action-text' )->text(),
+						array(),
+						array( 'url' => "*" )
+					)
+				)
+			) . "\n";
+
 		}
 
 		return Xml::tags( 'table', array( 'class' => 'wikitable' ),
 			Xml::tags( 'tr', array(),
 				Xml::element( 'th',
 					array(),
-					wfMessage( 'openid-trusted-sites-table-header' )->text() )
+					wfMessage( 'openid-trusted-sites-table-header-column-url' )->text() ) .
+				Xml::element( 'th',
+					array(),
+					wfMessage( 'openid-trusted-sites-table-header-column-action' )->text() )
 			) . "\n" .
 			$rows
 		);

@@ -138,6 +138,16 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			}
 			break;
 
+		// request comes from OpenID preference page
+		// when user deletes a trusted site
+
+		case 'deletetrustedsite':
+
+			$this->deleteTrustedSite();
+			return;
+
+			break;
+
 		default:
 
 			if ( strlen( $par ) ) {
@@ -495,10 +505,9 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		}
 	}
 
-	function SetUserTrust( &$user, $trust_root, $value ) {
+	function SetUserTrust( &$user, $trust_root, $value = NULL ) {
 
 		$trust_array = $this->GetUserTrustArray( $user );
-
 		if ( is_null( $value ) ) {
 			if ( array_key_exists( $trust_root, $trust_array ) ) {
 				unset( $trust_array[$trust_root] );
@@ -508,6 +517,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		}
 
 		$this->SetUserTrustArray( $user, $trust_array );
+
 	}
 
 	static function GetUserTrustArray( $user ) {
@@ -556,6 +566,54 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		# FIXME: eventually add timezone
 		static $fields = array( 'nickname', 'email', 'fullname', 'language' );
 		return in_array( $name, $fields );
+	}
+
+
+	function deleteTrustedSite() {
+		global $wgUser, $wgOut, $wgRequest;
+
+		$trustedSiteToBeDeleted = $wgRequest->getVal( 'url' );
+		$wgOut->setPageTitle( wfMessage( 'openid-trusted-sites-delete-confirmation-page-title' )->text() );
+
+		if ( $wgRequest->wasPosted()
+			&& $wgUser->matchEditToken( $wgRequest->getVal( 'wpEditToken' ), $trustedSiteToBeDeleted ) ) {
+
+			if ( $trustedSiteToBeDeleted === "*" ) {
+
+				// NULL sets the default value: it removes this key
+				$wgUser->setOption( 'openid_trust', NULL );
+				$wgUser->saveSettings();
+				$wgOut->addWikiMsg( 'openid-trusted-sites-delete-all-confirmation-success-text' );
+
+			} else {
+
+				$this->SetUserTrust( $wgUser, $trustedSiteToBeDeleted, NULL );
+				$wgUser->saveSettings();
+				$wgOut->addWikiMsg( 'openid-trusted-sites-delete-confirmation-success-text', $trustedSiteToBeDeleted );
+
+			}
+
+			return;
+		}
+
+		if ( $trustedSiteToBeDeleted === "*" ) {
+			$wgOut->addWikiMsg( 'openid-trusted-sites-delete-all-confirmation-question' );
+		} else {
+			$wgOut->addWikiMsg( 'openid-trusted-sites-delete-confirmation-question', $trustedSiteToBeDeleted );
+		}
+
+		$wgOut->addHtml(
+			Xml::openElement( 'form',
+				array(
+					'action' => $this->getTitle( 'DeleteTrustedSite' )->getLocalUrl(),
+					'method' => 'post'
+				)
+			) .
+			Xml::submitButton( wfMessage( 'openid-trusted-sites-delete-confirmation-button-text' )->text() ) . "\n" .
+			Html::Hidden( 'url', $trustedSiteToBeDeleted ) . "\n" .
+			Html::Hidden( 'wpEditToken', $wgUser->editToken( $trustedSiteToBeDeleted ) ) . "\n" .
+			Xml::closeElement( 'form' )
+		);
 	}
 
 	function SregFromQuery( $query ) {
