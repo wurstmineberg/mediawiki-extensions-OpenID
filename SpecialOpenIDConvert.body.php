@@ -208,7 +208,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			&& $wgUser->matchEditToken( $wgRequest->getVal( 'wpEditToken' ), $openid ) ) {
 
 			$ret = self::removeUserUrl( $wgUser, $openid );
-			$wgOut->addWikiMsg( $ret ? 'openiddelete-sucess' : 'openiddelete-error' );
+			$wgOut->addWikiMsg( $ret ? 'openiddelete-success' : 'openiddelete-error' );
 			return;
 		}
 
