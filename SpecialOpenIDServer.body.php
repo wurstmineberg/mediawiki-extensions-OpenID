@@ -611,7 +611,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			) .
 			Xml::submitButton( wfMessage( 'openid-trusted-sites-delete-confirmation-button-text' )->text() ) . "\n" .
 			Html::Hidden( 'url', $trustedSiteToBeDeleted ) . "\n" .
-			Html::Hidden( 'wpEditToken', $wgUser->editToken( $trustedSiteToBeDeleted ) ) . "\n" .
+			Html::Hidden( 'wpEditToken', $wgUser->getEditToken( $trustedSiteToBeDeleted ) ) . "\n" .
 			Xml::closeElement( 'form' )
 		);
 	}

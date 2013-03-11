@@ -223,7 +223,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			) .
 			Xml::submitButton( wfMessage( 'openiddelete-button' )->text() ) . "\n" .
 			Html::Hidden( 'url', $openid ) . "\n" .
-			Html::Hidden( 'wpEditToken', $wgUser->editToken( $openid ) ) . "\n" .
+			Html::Hidden( 'wpEditToken', $wgUser->getEditToken( $openid ) ) . "\n" .
 			Xml::closeElement( 'form' )
 		);
 	}
