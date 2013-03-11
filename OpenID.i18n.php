@@ -196,44 +196,188 @@ You would not able to log in without an OpenID.',
  */
 $messages['qqq'] = array(
 	'openid-desc' => '{{desc|name=Open ID|url=http://www.mediawiki.org/wiki/Extension:OpenID}}',
+	'openididentifier' => 'Used as page title of Special:OpenIDIdentifier.',
+	'openidlogin' => 'Used as page title in Special:OpenIDLogin.',
+	'openidserver' => 'Used as page title of Special:OpenIDServer.',
 	'openid-identifier-page-text' => 'A short text which describes this technical OpenID identifier page for a user. The page is used only during OpenID authentication and is generally not visited otherwise.
 
 Parameters:
 * $1 - a user name',
 	'openid-server-identity-page-text' => 'A short text which describes this technical OpenID server identity page which is only used during OpenID authentication and not used otherwise.',
-	'openidsuccesstext' => 'Parameters:
-* $1 is a username
-* $2 is an OpenID.',
-	'openidserverlogininstructions' => 'The message is shown to users when they want to log in on another site ($3) with their MediaWiki userpage url (this MediaWiki as OpenID server) acting as OpenID identity. 
+	'openidxrds' => 'Used as page title in Special:OpenIDXRDS.
+
+[[w:Yadis|Yadis]] is a communications protocol for discovery of services such as OpenID, OAuth, and XDI connected to a Yadis ID.',
+	'openidconvert' => 'Used as page title in Special:OpenIDConvert.',
+	'openiderror' => 'Used as error page title.
+
+This message is title for the following error messages:
+* {{msg-mw|openid-convert-already-your-openid-text}}
+* {{msg-mw|openid-convert-other-users-openid-text}}
+* {{msg-mw|openidclientonlytext}}
+* {{msg-mw|openiddeleteerrornopassword}}
+* {{msg-mw|openiddeleteerroropenidonly}}
+* {{msg-mw|openiderrortext}}',
+	'openiderrortext' => 'Used as error message.
+
+The title for this error message is {{msg-mw|Openiderror}}.',
+	'openidconfigerror' => 'Used as error title for the following error message:
+* {{msg-mw|Openidconfigerrortext}}',
+	'openidconfigerrortext' => 'Used as error message.
+
+The title for this error message is {{msg-mw|Openidconfigerror}}.',
+	'openidpermission' => 'Used as error title for the following error message:
+* {{msg-mw|Openidpermissiontext}}',
+	'openidpermissiontext' => 'Used as error message.
+
+The title for this error message is {{msg-mw|Openidpermission}}.',
+	'openidcancel' => 'Used as error title for the following error message:
+* {{msg-mw|Openidcanceltext}}',
+	'openidcanceltext' => 'Used as error message.
+
+The title for this error message is {{msg-mw|Openidcancel}}.',
+	'openidfailure' => 'Used as error title for the following error message:
+* {{msg-mw|Openidfailuretext}}',
+	'openidfailuretext' => 'Used as error message.
+
+The title for this error message is {{msg-mw|Openidfailure}}.',
+	'openidsuccess' => 'Used as page title.
+
+The page body for this title is:
+* {{msg-mw|Openidsuccesstext}}',
+	'openidsuccesstext' => 'Used as page body. The page title for this message is {{msg-mw|Openidsuccess}}.
+
+Parameters:
+* $1 - a username
+* $2 - an OpenID',
+	'openidusernameprefix' => 'Used as username prefix, if the nickname is not defined or is empty.',
+	'openidserverlogininstructions' => 'The message is shown to users when they want to log in on another site ($3) with their MediaWiki userpage URL (this MediaWiki as OpenID server) acting as OpenID identity. 
 
 If not logged in by cookie or session, the MediaWiki prompts the user to log in as user $2. After a successful login to the MediaWiki which acts as OpenID server, the process flow is redirected to the other OpenID consumer site, where the user will be logged via their (MediaWiki userpage) OpenID.
 
 System message output example after parameter substitution:
 
-"http://www.consumer.org/foo requests that you enter your password for your user MeMyself page http://www.server.org/mediawiki/index.php/User:MeMyself (this is your OpenID url)"
+"http://www.consumer.org/foo requests that you enter your password for your user MeMyself page http://www.server.org/mediawiki/index.php/User:MeMyself (this is your OpenID URL)"
 
 Parameters:
-* $1 is the fully specified user page url which acts as OpenID identity. This is the OpenID identity for log-ins on the other, requesting site $3 (the OpenID consumer site $3)
-* $2 MediaWiki account username (on this wiki, which acts as OpenID server). Remark: a password must be associated to that MediaWiki account, OpenID alone is not sufficient.
-* $3 OpenID consumer site url',
-	'openidtrustinstructions' => '* $1 is a trust root. A trust root looks much like a normal URL, but is used to describe a set of URLs. Trust roots are used by OpenID to verify that a user has approved the OpenID enabled website.',
+* $1 - the fully specified user page URL which acts as OpenID identity. This is the OpenID identity for log-ins on the other, requesting site $3 (the OpenID consumer site $3)
+* $2 - MediaWiki account username (on this wiki, which acts as OpenID server). Remark: a password must be associated to that MediaWiki account, OpenID alone is not sufficient.
+* $3 - OpenID consumer site URL',
+	'openidtrustinstructions' => 'Parameters:
+* $1 - a trust root. A trust root looks much like a normal URL, but is used to describe a set of URLs. Trust roots are used by OpenID to verify that a user has approved the OpenID enabled website.',
+	'openidallowtrust' => 'Used as label for the checkbox in Special:OpenIDServer. Parameters:
+* $1 - a trust root. A trust root looks much like a normal URL, but is used to describe a set of URLs. Trust roots are used by OpenID to verify that a user has approved the OpenID enabled website.',
+	'openidnopolicy' => 'unused at this time',
+	'openidpolicy' => 'unused at this time. Parameters:
+* $1 - the URL',
 	'openidoptional' => '{{Identical|Optional}}',
 	'openidrequired' => '{{Identical|Required}}',
-	'openidfullname' => '{{Identical|yourrealname}}',
-	'openidchoosefull' => 'The localized version of "Your real name ($1)"',
+	'openidnickname' => '{{Identical|Nickname}}',
+	'openidfullname' => '{{Identical|Real name}}',
 	'openidemail' => '{{Identical|E-mail address}}',
 	'openidlanguage' => '{{Identical|Language}}',
 	'openidtimezone' => '{{Identical|Time zone}}',
-	'openidchoosepassword' => '{{Identical|Password}}',
+	'openidchooselegend' => 'Used as fieldset label for the "Choose an account" form.
+
+The instruction for the form is:
+* {{msg-mw|openidchooseinstructions}}',
+	'openidchooseinstructions' => 'Used as instruction for the "Choose an account" form.
+
+See also:
+* {{msg-mw|Openidchooselegend|fieldset label}}',
+	'openidchoosenick' => 'Used as label for the radio button in Special:OpenIDLogin. Parameters:
+* $1 - nickname',
+	'openidchoosefull' => 'Used as label for the radio button in Special:OpenIDLogin. Parameters:
+* $1 - fullname',
+	'openidchooseurl' => 'Used as label for the radio button in Special:OpenIDLogin. Parameters:
+* $1 - OpenID URL',
+	'openidchooseauto' => "Used as label for the radio button in Special:OpenIDLogin. Parameters:
+* $1 - nickname. If nickname doesn't exist or is empty, $1 is {{msg-mw|openidusernameprefix}}.",
+	'openidchoosemanual' => 'Used as label for the radio button in Special:OpenIDLogin.
+
+This message is followed by the "Account name" input box.',
+	'openidchooseexisting' => 'Used as label for the radio button in Special:OpenIDLogin.
+
+This message is followed by the following messages:
+* {{msg-mw|openidchooseusername}} (an input box follows)
+* {{msg-mw|openidchoosepassword}} (an input box follows)',
+	'openidchooseusername' => 'Used as label for input box in Special:OpenIDLogin.
+{{Identical|Username}}',
+	'openidchoosepassword' => 'Used as label for the "Password" input box in Special:OpenIDLogin.
+{{Identical|Password}}',
+	'openidconvertinstructions' => 'Used as instruction text for the form in Special:OpenIDConvert.
+
+The fieldset label for the form is:
+* {{msg-mw|openidconvertoraddmoreids}}',
+	'openidconvertoraddmoreids' => 'Used as the legend of the form in Special:OpenIDConvert',
+	'openidconvertsuccess' => 'Used as page title in Special:OpenIDConvert.
+
+The page body for this title is:
+* {{msg-mw|Openidconvertsuccesstext}}',
+	'openidconvertsuccesstext' => 'Used as page body. The page title for this message is {{msg-mw|Openidconvertsuccess}}.',
 	'openid-convert-already-your-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated to their account.
-* $1 is the conflicting, already associated OpenID.',
+
+Parameters:
+* $1 - the conflicting, already associated OpenID',
 	'openid-convert-other-users-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated with an account of another user.
-* $1 is the conflicting, already associated OpenID.',
+
+Parameters:
+* $1 - the conflicting, already associated OpenID',
 	'openidalreadyloggedin' => '',
 	'openidalreadyloggedintext' => 'Parameters:
-* $1 is a username.',
+* $1 - a username',
+	'openidnousername' => 'Used as error message. (Commented out at this time.)',
+	'openidbadusername' => 'Used as error message. (Commented out at this time.)',
 	'openidautosubmit' => '{{doc-important|"Continue" will never be localised. It is hardcoded in a PHP extension. Translations could be made like ""Continue" (translation)"}}',
+	'openidclientonlytext' => 'Used as error message. Its title is {{msg-mw|Openiderror}}.
+
+This is also used as "404 Not Found" page body in Special:OpenIDXRDS.',
+	'openidloginlabel' => 'unused at this time',
+	'openidlogininstructions' => 'Used as instruction text for the Login form in Special:OpenIDLogin.
+
+This message is followed by any one of the following messages:
+* {{msg-mw|openidlogininstructions-openidloginonly|if <code>$wgOpenIDOnly</code> is TRUE}}
+* {{msg-mw|openidlogininstructions-passwordloginallowed|if <code>$wgOpenIDOnly</code> is FALSE}}',
+	'openidlogininstructions-openidloginonly' => 'Used as instruction text for the Login form in Special:OpenIDLogin, if <code>$wgOpenIDOnly</code> is TRUE.
+
+This message follows the message:
+* {{msg-mw|Openidlogininstructions}}
+
+See also:
+* {{msg-mw|Openidlogininstructions-passwordloginallowed}}',
+	'openidlogininstructions-passwordloginallowed' => 'Used as instruction text for the Login form in Special:OpenIDLogin, if <code>$wgOpenIDOnly</code> is FALSE.
+
+This message follows the message:
+* {{msg-mw|Openidlogininstructions}}
+
+See also:
+* {{msg-mw|Openidlogininstructions-openidloginonly}}',
+	'openidupdateuserinfo' => 'Used in Special:OpenIDLogin.
+
+This message is followed by list of OpenID attributes (nickname, email and/or language).',
+	'openiddelete' => 'Used as page title',
+	'openiddelete-text' => 'Parameters:
+* $1 - the URL of the removed site',
 	'openiddelete-button' => '{{Identical|Confirm}}',
+	'openiddeleteerrornopassword' => 'Used as error message in Special:OpenIDConvert.
+
+The title for this error message is {{msg-mw|openiderror}}.
+
+See also:
+* {{msg-mw|Openiddeleteerroropenidonly}}',
+	'openiddeleteerroropenidonly' => 'Used as error message in Special:OpenIDConvert.
+
+The title for this error message is {{msg-mw|openiderror}}.
+
+See also:
+* {{msg-mw|Openiddeleteerrornopassword}}',
+	'openiddelete-success' => 'Used in Special:OpenIDConvert.
+
+See also:
+* {{msg-mw|Openiddelete-error}}',
+	'openiddelete-error' => 'Used as error message in Special:OpenIDConvert.
+
+See also:
+* {{msg-mw|Openiddelete-success}}',
 	'openid-openids-were-not-merged' => 'When merging user accounts by UserMerge or similar extensions, OpenID(s) are not merged if $wgOpenIDMergeOnAccountMerge=false (default).',
 	'prefs-openid' => '{{optional}}
 OpenID preferences tab title',
@@ -243,7 +387,23 @@ OpenID preferences tab title',
 	'prefs-openid-trusted-sites' => 'Trusted sites (section header).
 {{Identical|Trusted site}}',
 	'prefs-openid-local-identity' => 'Your OpenID for login to other sites (section header)',
-	'openid-hide-openid-label' => 'Hide your OpenID URL on your user page (preference label)',
+	'openid-hide-openid-label' => 'Hide your OpenID URL on your user page (preference label)
+
+If <code>$wgOpenIDShowUrlOnUserPage</code> is not defined, this message is used as the label for checkbox.
+
+If <code>$wgOpenIDShowUrlOnUserPage</code>\'s value is "always", this message is used as the label for:
+* {{msg-mw|Openid-show-openid-url-on-userpage-always}}
+
+If <code>$wgOpenIDShowUrlOnUserPage</code>\'s value is "never", this message is used as the label for:
+* {{msg-mw|Openid-show-openid-url-on-userpage-never}}',
+	'openid-show-openid-url-on-userpage-always' => 'Used in [[Special:Preferences]], when <code>$wgOpenIDShowUrlOnUserPage</code>\'s value is "always".
+
+See also:
+* {{msg-mw|Openid-show-openid-url-on-userpage-never}}',
+	'openid-show-openid-url-on-userpage-never' => 'Used in [[Special:Preferences]], when <code>$wgOpenIDShowUrlOnUserPage</code>\'s value is "never".
+
+See also:
+* {{msg-mw|Openid-show-openid-url-on-userpage-always}}',
 	'openid-userinfo-update-on-login-label' => 'Update the following information from OpenID persona every time the user logs in: (preference label)',
 	'openid-associated-openids-label' => 'OpenIDs associated with your account: (preference label)',
 	'openid-urls-url' => '{{optional}}',
@@ -252,23 +412,49 @@ OpenID preferences tab title',
 	'openid-urls-registration-date-time' => '{{optional}}
 Used in the same way as {{msg-mw|prefs-registration-date-time}}.',
 	'openid-urls-delete' => '{{Identical|Delete}}',
+	'openid-add-url' => 'Used as link text. It is a link to Special:OpenIDConvert.',
 	'openid-trusted-sites-label' => 'Sites you trust and where you have used your OpenID for logging in: (preference label)',
-	'openid-trusted-sites-table-header-column-url' => 'Trusted sites (table header, url column).
+	'openid-trusted-sites-table-header-column-url' => 'Trusted sites (table header, URL column).
 {{Identical|Trusted site}}',
 	'openid-trusted-sites-table-header-column-action' => 'Trusted sites (table header, action column).
 {{Identical|Action}}',
 	'openid-trusted-sites-delete-link-action-text' => '{{Identical|Delete}}',
 	'openid-trusted-sites-delete-all-link-action-text' => 'A text for the link in the table to click to delete all trusted sites, e.g. "Delete all trusted sites"',
 	'openid-trusted-sites-delete-confirmation-page-title' => 'The page title for "Site trust deletion"',
-	'openid-trusted-sites-delete-confirmation-question' => 'The question of By clicking the "{{int:openid-trusted-sites-delete-confirmation-button-text}}" button, you will remove $1 from the list of sites you trust.
-* $1 is the url of the removed site',
-	'openid-trusted-sites-delete-all-confirmation-question' => 'The question of By clicking the "{{int:openid-trusted-sites-delete-confirmation-button-text}}" button, you will remove all trusted sites from the list.',
+	'openid-trusted-sites-delete-confirmation-question' => 'The question of By clicking the {{msg-mw|openid-trusted-sites-delete-confirmation-button-text}} button, you will remove $1 from the list of sites you trust.
+
+Parameters:
+* $1 - the URL of the removed site',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'The question of By clicking the {{msg-mw|openid-trusted-sites-delete-confirmation-button-text}} button, you will remove all trusted sites from the list.',
 	'openid-trusted-sites-delete-confirmation-button-text' => '{{Identical|Confirm}}',
 	'openid-trusted-sites-delete-confirmation-success-text' => 'A confirmation text which is shown, when the user has successfully removed a site from the list of trusted site.
-* $1 is the url of the removed site',
-	'openid-trusted-sites-delete-all-confirmation-success-text' => 'A confirmation text which is shown, when the user has successfully removed all sites from the list of trusted site.',
 
+Parameters:
+* $1 - the URL of the removed site
+See also:
+* {{msg-mw|Openid-trusted-sites-delete-all-confirmation-success-text}}',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'A confirmation text which is shown, when the user has successfully removed all sites from the list of trusted site.
+
+See also:
+* {{msg-mw|Openid-trusted-sites-delete-confirmation-success-text}}',
 	'openid-local-identity' => 'Your OpenID when used a identity to other sites (preference label)',
+	'openid-login-or-create-account' => 'Used as fieldset label for the login form.',
+	'openid-provider-label-openid' => '{{Related|Openid-provider-label}}',
+	'openid-provider-label-google' => '{{Related|Openid-provider-label}}',
+	'openid-provider-label-yahoo' => '{{Related|Openid-provider-label}}',
+	'openid-provider-label-aol' => '{{Related|Openid-provider-label}}',
+	'openid-provider-label-wmflabs' => '{{Related|Openid-provider-label}}',
+	'openid-provider-label-other-username' => 'Parameters:
+* $1 - other site name; any one of the following site name (hard-coded and not localized):
+** MyOpenID
+** LiveJournal
+** VOX
+** Blogger
+** Flickr
+** Verisign
+** Vidoop
+** ClaimID
+{{Related|Openid-provider-label}}',
 	'specialpages-group-openid' => 'Display group name for OpenID-extension related special pages for [[Special:SpecialPages]].',
 	'right-openid-converter-access' => '{{doc-right|openid-converter-access}}
 {{doc-singularthey}}',
@@ -285,7 +471,13 @@ the special adminstrator access right for the OpenID dashboard, which is a restr
 	'openid-dashboard-title' => 'Display name and page title for the OpenID dashboard (non-admin) on [[Special:SpecialPages]].',
 	'openid-dashboard-title-admin' => 'Display name and page title for the administrator OpenID dashboard on [[Special:SpecialPages]].',
 	'openid-dashboard-introduction' => 'Intro text for the special OpenID dashboard page: the user gets status information about the current OpenID settings of this wiki.
-* $1 is the url of the help page explaining the parameters',
+* $1 - the URL of the help page explaining the parameters',
+	'openid-dashboard-number-openid-users' => 'Used as the label in the information table on Special:OpenIDDashboard.
+{{Related|Openid-dashboard-number}}',
+	'openid-dashboard-number-openids-in-database' => 'Used as the label in the information table on Special:OpenIDDashboard.
+{{Related|Openid-dashboard-number}}',
+	'openid-dashboard-number-users-without-openid' => 'Used as the label in the information table on Special:OpenIDDashboard.
+{{Related|Openid-dashboard-number}}',
 );
 
 /** Afrikaans (Afrikaans)
@@ -324,14 +516,14 @@ Hierdie en verdere OpenID's, saam met 'n opsionele wagwoord, kan in u [[Special:
 	'openidoptional' => 'Opsioneel',
 	'openidrequired' => 'Verpligtend',
 	'openidnickname' => 'Noemnaam',
-	'openidfullname' => 'Volledige naam',
+	'openidfullname' => 'Volledige naam', # Fuzzy
 	'openidemail' => 'E-posadres',
 	'openidlanguage' => 'Taal',
 	'openidtimezone' => 'Tydsone',
 	'openidchooselegend' => 'Gebruikersnaamkeuse', # Fuzzy
 	'openidchooseinstructions' => "Alle gebruikers moet 'n gebruikersnaam kies. U kan een kies uit die opsies hieronder.",
 	'openidchoosenick' => 'U bynaam ($1)',
-	'openidchoosefull' => 'U volledige naam ($1)',
+	'openidchoosefull' => 'U volledige naam ($1)', # Fuzzy
 	'openidchooseurl' => "'n Naam vanuit u OpenID ($1)",
 	'openidchooseauto' => "'n Outomaties gegenereerde naam ($1)",
 	'openidchoosemanual' => "'n Naam van u keuse:",
@@ -371,7 +563,7 @@ Sonder 'n OpenID sou u glad nie meer kon aanteken nie.",
 	'openiddelete-error' => "'n Fout het voorgekom tydens die verwydering van die OpenID uit u gebruiker.",
 	'prefs-openid-hide-openid' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.',
 	'openid-hide-openid-label' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.',
-	'openid-userinfo-update-on-login-label' => 'Opdateer die volgende inligting vanuit die OpenID-gebruiker elke keer as ek inteken:',
+	'openid-userinfo-update-on-login-label' => 'Opdateer die volgende inligting vanuit die OpenID-gebruiker elke keer as ek inteken:', # Fuzzy
 	'openid-associated-openids-label' => "OpenID's aan u gebruiker gekoppel:",
 	'openid-urls-action' => 'Aksie',
 	'openid-urls-delete' => 'Skrap',
@@ -394,7 +586,7 @@ $messages['aln'] = array(
 	'openiddelete-error' => 'Gabim gjatë heqjes OpenID nga llogaria juaj.',
 	'prefs-openid-hide-openid' => 'Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.',
 	'openid-hide-openid-label' => 'Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Update informacionin e mëposhtëm nga persona OpenID çdo herë që në hyrje:',
+	'openid-userinfo-update-on-login-label' => 'Update informacionin e mëposhtëm nga persona OpenID çdo herë që në hyrje:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs lidhur me llogarinë tuaj:',
 	'openid-urls-action' => 'Veprim',
 	'openid-urls-delete' => 'Fshij',
@@ -458,7 +650,7 @@ $messages['ar'] = array(
 	'openidoptional' => 'اختياري',
 	'openidrequired' => 'مطلوب',
 	'openidnickname' => 'اللقب',
-	'openidfullname' => 'الاسم الكامل',
+	'openidfullname' => 'الاسم الكامل', # Fuzzy
 	'openidemail' => 'عنوان البريد الإلكتروني',
 	'openidlanguage' => 'اللغة',
 	'openidtimezone' => 'المنطقة الزمنية',
@@ -466,7 +658,7 @@ $messages['ar'] = array(
 	'openidchooseinstructions' => 'كل المستخدمين يحتاجون إلى لقب؛
 يمكنك أن تختار واحدا من الخيارات بالأسفل.',
 	'openidchoosenick' => 'اسمك المستعار ($1)',
-	'openidchoosefull' => 'اسمك الكامل ($1)',
+	'openidchoosefull' => 'اسمك الكامل ($1)', # Fuzzy
 	'openidchooseurl' => 'اسم مختار من هويتك المفتوحة ($1)',
 	'openidchooseauto' => 'اسم مولد تلقائيا ($1)',
 	'openidchoosemanual' => 'اسم من اختيارك:',
@@ -508,7 +700,7 @@ $messages['ar'] = array(
 	'prefs-openid' => 'هوية مفتوحة',
 	'prefs-openid-hide-openid' => 'أخفِ مسار هويتك المفتوحة من صفحتك الشخصية، إذا سجلت الدخول بالهوية المفتوحة.',
 	'openid-hide-openid-label' => 'أخفِ مسار هويتك المفتوحة من صفحتك الشخصية، إذا سجلت الدخول بالهوية المفتوحة.',
-	'openid-userinfo-update-on-login-label' => 'حدث المعلومات التالية من شخصية الهوية المفتوحة كل مرة أسجل الدخول:',
+	'openid-userinfo-update-on-login-label' => 'حدث المعلومات التالية من شخصية الهوية المفتوحة كل مرة أسجل الدخول:', # Fuzzy
 	'openid-associated-openids-label' => 'الهويات المفتوحة المربوطة بحسابك:',
 	'openid-urls-url' => 'مسار',
 	'openid-urls-action' => 'إجراء',
@@ -578,12 +770,12 @@ $messages['arz'] = array(
 	'openidoptional' => 'اختياري',
 	'openidrequired' => 'مطلوب',
 	'openidnickname' => 'اللقب',
-	'openidfullname' => 'الاسم الكامل',
+	'openidfullname' => 'الاسم الكامل', # Fuzzy
 	'openidemail' => 'عنوان البريد الإلكتروني',
 	'openidlanguage' => 'اللغة',
 	'openidchooseinstructions' => 'كل المستخدمين يحتاجون إلى لقب؛
 يمكنك أن تختار واحدا من الخيارات بالأسفل.',
-	'openidchoosefull' => 'اسمك الكامل ($1)',
+	'openidchoosefull' => 'اسمك الكامل ($1)', # Fuzzy
 	'openidchooseurl' => 'اسم مختار من هويتك المفتوحة ($1)',
 	'openidchooseauto' => 'اسم مولد تلقائيا ($1)',
 	'openidchoosemanual' => 'اسم من اختيارك:',
@@ -621,8 +813,10 @@ $messages['arz'] = array(
  */
 $messages['ast'] = array(
 	'openid-desc' => "Permite a los usuarios l'accesu a la wiki con una [//openid.net/ OpenID]. Si esto ta activao na wiki, tamién puen utilizar la URL de la so cuenta d'usuariu d'esta wiki como OpenID p'aniciar sesión n'otros sitios web qu'utilicen OpenID",
+	'openididentifier' => 'Identificador OpenID',
 	'openidlogin' => 'Aniciar sesión / crear cuenta con OpenID',
 	'openidserver' => 'Sirvidor OpenID',
+	'openid-identifier-page-text' => 'Esta páxina ye l\'identificador del usuariu "$1".',
 	'openid-server-identity-page-text' => "Esta ye una páxina téunica del sirvidor OpenID p'aniciar la identificación OpenID. La páxina nun tien otru propósitu.",
 	'openidxrds' => 'Ficheru Yadis',
 	'openidconvert' => 'Convertidor OpenID',
@@ -653,7 +847,7 @@ Se pue amestar una conseña de cuenta opcional nel [[Special:Preferences#mw-pref
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Requeríu',
 	'openidnickname' => 'Alcuñu',
-	'openidfullname' => 'Nome completu',
+	'openidfullname' => 'Nome completu', # Fuzzy
 	'openidemail' => 'Direición de corréu electrónicu',
 	'openidlanguage' => 'Llingua',
 	'openidtimezone' => 'Estaya horaria',
@@ -661,7 +855,7 @@ Se pue amestar una conseña de cuenta opcional nel [[Special:Preferences#mw-pref
 	'openidchooseinstructions' => "Tolos usuarios necesiten un alcuñu;
 pues escoyer unu ente les opciones d'abaxo.",
 	'openidchoosenick' => 'El to alcuñu ($1)',
-	'openidchoosefull' => 'El to nome completu ($1)',
+	'openidchoosefull' => 'El to nome completu ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nome sacáu de la to OpenID ($1)',
 	'openidchooseauto' => 'Un nome xeneráu automáticamente ($1)',
 	'openidchoosemanual' => 'Un nome escoyíu por ti:',
@@ -704,8 +898,11 @@ Nun podría aniciar sesión ensin una OpenID.',
 	'openiddelete-error' => 'Hebo un error al desaniciar la OpenID de la so cuenta.',
 	'openid-openids-were-not-merged' => "Les OpenID nun s'amestaron cuando s'amestaron les cuentas d'usuariu.",
 	'prefs-openid-hide-openid' => "Anubrir la URL de la so OpenID na páxina d'usuariu, si anicia sesión con OpenID.",
+	'prefs-openid-userinfo-update-on-login' => "Anovamientu de la información d'usuariu d'OpenID",
+	'prefs-openid-associated-openids' => "Los sos OpenID p'aniciar sesión en {{SITENAME}}",
+	'prefs-openid-trusted-sites' => 'Sitios enfotaos',
 	'openid-hide-openid-label' => "Anubrir la URL de la so OpenID na páxina d'usuariu, si anicia sesión con OpenID.",
-	'openid-userinfo-update-on-login-label' => "Anovar la siguiente información de la persona OpenID cada vez qu'anicie sesión:",
+	'openid-userinfo-update-on-login-label' => "Anovar la siguiente información de la persona OpenID cada vez qu'anicie sesión:", # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs asociaes cola to cuenta:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Aición',
@@ -809,7 +1006,7 @@ $messages['be-tarask'] = array(
 	'openidoptional' => 'Неабавязковае',
 	'openidrequired' => 'Абавязковае',
 	'openidnickname' => 'Мянушка',
-	'openidfullname' => 'Поўнае імя',
+	'openidfullname' => 'Поўнае імя', # Fuzzy
 	'openidemail' => 'Адрас электроннай пошты',
 	'openidlanguage' => 'Мова',
 	'openidtimezone' => 'Часавы пояс',
@@ -817,7 +1014,7 @@ $messages['be-tarask'] = array(
 	'openidchooseinstructions' => 'Кожны ўдзельнік павінен мець мянушку;
 Вы можаце выбраць адну з пададзеных ніжэй.',
 	'openidchoosenick' => 'Ваша мянушка ($1)',
-	'openidchoosefull' => 'Ваша поўнае імя ($1)',
+	'openidchoosefull' => 'Ваша поўнае імя ($1)', # Fuzzy
 	'openidchooseurl' => 'Імя атрыманае ад Вашага сэрвэра OpenID ($1)',
 	'openidchooseauto' => 'Аўтаматычна створанае імя ($1)',
 	'openidchoosemanual' => 'Імя на Ваш выбар:',
@@ -861,7 +1058,7 @@ $messages['be-tarask'] = array(
 	'openid-openids-were-not-merged' => 'Рахункі OpenID ня былі аб’яднаныя падчас аб’яднаныя рахункаў.',
 	'prefs-openid-hide-openid' => 'Хаваць Ваш адрас OpenID на Вашай старонцы ўдзельніка, калі Вы ўвайшлі з дапамогай OpenID.',
 	'openid-hide-openid-label' => 'Хаваць Ваш адрас OpenID на Вашай старонцы ўдзельніка, калі Вы ўвайшлі з дапамогай OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Абнаўляць наступную інфармацыю з OpenID кожны раз, калі я уваходжу ў сыстэму:',
+	'openid-userinfo-update-on-login-label' => 'Абнаўляць наступную інфармацыю з OpenID кожны раз, калі я уваходжу ў сыстэму:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID зьвязаныя з Вашым рахункам:',
 	'openid-urls-action' => 'Дзеяньне',
 	'openid-urls-registration' => 'Час рэгістрацыі',
@@ -910,14 +1107,14 @@ $messages['bg'] = array(
 	'openidoptional' => 'Незадължително',
 	'openidrequired' => 'Изисква се',
 	'openidnickname' => 'Псевдоним',
-	'openidfullname' => 'Име',
+	'openidfullname' => 'Име', # Fuzzy
 	'openidemail' => 'Електронна поща',
 	'openidlanguage' => 'Език',
 	'openidtimezone' => 'Часова зона',
 	'openidchooselegend' => 'Избиране на потребителско име и сметка',
 	'openidchooseinstructions' => 'Всички потребители трябва да имат потребителско име;
 можете да изберете своето от предложенията по-долу.',
-	'openidchoosefull' => 'Вашето пълно име ($1)',
+	'openidchoosefull' => 'Вашето пълно име ($1)', # Fuzzy
 	'openidchooseauto' => 'Автоматично генерирано име ($1)',
 	'openidchoosemanual' => 'Име по избор:',
 	'openidchooseexisting' => 'Съществуваща сметка в това уики',
@@ -1046,7 +1243,7 @@ Gallout a rit ouzhpennañ ur ger-tremen kont diret en ho [[Special:Preferences#m
 	'openidoptional' => 'Diret',
 	'openidrequired' => 'Rekis',
 	'openidnickname' => 'Lesanv',
-	'openidfullname' => 'Anv klok',
+	'openidfullname' => 'Anv klok', # Fuzzy
 	'openidemail' => "Chomlec'h postel",
 	'openidlanguage' => 'Yezh',
 	'openidtimezone' => 'Takad eur :',
@@ -1054,7 +1251,7 @@ Gallout a rit ouzhpennañ ur ger-tremen kont diret en ho [[Special:Preferences#m
 	'openidchooseinstructions' => "An holl implijerien o deus ezhomm ul lesanv ;
 gellout a rit dibab unan eus ar c'hinnigoù a-is.",
 	'openidchoosenick' => 'Ho lesanv ($1)',
-	'openidchoosefull' => "Hoc'h anv klok ($1)",
+	'openidchoosefull' => "Hoc'h anv klok ($1)", # Fuzzy
 	'openidchooseurl' => "Un anv tapet eus hoc'h OpenID ($1)",
 	'openidchooseauto' => 'Un anv krouet emgefre ($1)',
 	'openidchoosemanual' => "Un anv dibabet ganeoc'h :",
@@ -1098,13 +1295,14 @@ Ne c'hallfec'h ket kevreañ hep OpenID.",
 	'prefs-openid-hide-openid' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.",
 	'prefs-openid-trusted-sites' => "Lec'hiennoù a fiziañs",
 	'openid-hide-openid-label' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.",
-	'openid-userinfo-update-on-login-label' => "Hizivaat ar roadennoù da heul adalek OpenID bep tro m'en em lugan :",
+	'openid-userinfo-update-on-login-label' => "Hizivaat ar roadennoù da heul adalek OpenID bep tro m'en em lugan :", # Fuzzy
 	'openid-associated-openids-label' => 'An OpenIDoù stag ouzh ho kont :',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Ober',
 	'openid-urls-registration' => 'Deiziad enskrivañ',
 	'openid-urls-delete' => 'Dilemel',
 	'openid-add-url' => 'Ouzhpennañ un OpenID nevez', # Fuzzy
+	'openid-trusted-sites-delete-link-action-text' => 'Dilemel',
 	'openid-login-or-create-account' => 'Kevreañ pe krouiñ ur gont nevez',
 	'openid-provider-label-openid' => "Ebarzhit hoc'h URL OpenID",
 	'openid-provider-label-google' => 'Kevreañ dre ho kont Google',
@@ -1150,7 +1348,7 @@ Ovaj i daljnji OpenIDevi, te neobavezna šifra računa, može biti postavljena u
 	'openidoptional' => 'opcionalno',
 	'openidrequired' => 'obavezno',
 	'openidnickname' => 'Nadimak',
-	'openidfullname' => 'Puno ime',
+	'openidfullname' => 'Puno ime', # Fuzzy
 	'openidemail' => 'E-mail adresa',
 	'openidlanguage' => 'Jezik',
 	'openidtimezone' => 'Vremenska zona',
@@ -1158,7 +1356,7 @@ Ovaj i daljnji OpenIDevi, te neobavezna šifra računa, može biti postavljena u
 	'openidchooseinstructions' => 'Svi korisnici trebaju imati nadimak;
 možete odabrati jedan sa opcijama ispod.',
 	'openidchoosenick' => 'Vaš nadimak ($1)',
-	'openidchoosefull' => 'Vaše puno ime ($1)',
+	'openidchoosefull' => 'Vaše puno ime ($1)', # Fuzzy
 	'openidchooseurl' => 'Ime uzeto sa Vašeg OpenID ($1)',
 	'openidchooseauto' => 'Automatski generisano ime ($1)',
 	'openidchoosemanual' => 'Naziv po Vašem izboru:',
@@ -1195,7 +1393,7 @@ Bez OpenId nećete moći da se prijavite.',
 	'openiddelete-error' => 'Desila se greška pri uklanjanju OpenID sa vašeg računa.',
 	'prefs-openid-hide-openid' => 'Sakrij Vaš OpenID na Vašoj korisničkoj stranici, ako ste prijavljeni sa OpenID.',
 	'openid-hide-openid-label' => 'Sakrij Vaš OpenID na Vašoj korisničkoj stranici, ako ste prijavljeni sa OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Ažuriraj slijedeće informacije sa OpenID identiteta svaki put kad se prijavim:',
+	'openid-userinfo-update-on-login-label' => 'Ažuriraj slijedeće informacije sa OpenID identiteta svaki put kad se prijavim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDovi pridruženi vašem računu:',
 	'openid-urls-action' => 'Akcija',
 	'openid-urls-delete' => 'Obriši',
@@ -1287,14 +1485,14 @@ Nepovinné heslo k účtu si můžete přidat v [[Special:Preferences#mw-prefsec
 	'openidoptional' => 'Volitelné',
 	'openidrequired' => 'Požadované',
 	'openidnickname' => 'Přezdívka',
-	'openidfullname' => 'Celé jméno',
+	'openidfullname' => 'Celé jméno', # Fuzzy
 	'openidemail' => 'E-mailová adresa',
 	'openidlanguage' => 'Jazyk',
 	'openidtimezone' => 'Časové pásmo',
 	'openidchooselegend' => 'Volba uživatelského jména a účtu',
 	'openidchooseinstructions' => 'Kyždý uživatel musí mít přezdívku; můžete si vybrat z níže uvedených možností.',
 	'openidchoosenick' => 'Vaše přezdívka ($1)',
-	'openidchoosefull' => 'Vaše celé jméno ($1)',
+	'openidchoosefull' => 'Vaše celé jméno ($1)', # Fuzzy
 	'openidchooseurl' => 'Jméno na základě vašeho OpenID ($1)',
 	'openidchooseauto' => 'Automaticky vytvořené jméno ($1)',
 	'openidchoosemanual' => 'Jméno, které si vyberete:',
@@ -1338,7 +1536,7 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
 	'openid-openids-were-not-merged' => 'OpenID nebyly při slučování uživatelských účtů sloučeny.',
 	'prefs-openid-hide-openid' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.',
 	'openid-hide-openid-label' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Aktualizovat následující informace z OpenID identity vždy, když se přihlásím:',
+	'openid-userinfo-update-on-login-label' => 'Aktualizovat následující informace z OpenID identity vždy, když se přihlásím:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID asociovaná s vaším účtem:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Operace',
@@ -1508,8 +1706,11 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'prefs-openid-userinfo-update-on-login' => 'Daten, die vom OpenID-Konto bei jeder Anmeldung aktualisiert werden',
 	'prefs-openid-associated-openids' => 'Mit deinem {{SITENAME}} Benutzerkonto verbundene OpenIDs:',
 	'prefs-openid-trusted-sites' => 'Websites, denen du vertraust',
+	'prefs-openid-local-identity' => 'Deine OpenID zur Anmeldung auf anderen Websites',
 	'openid-hide-openid-label' => 'Anzeige deiner OpenID auf deiner Benutzerseite, wenn du dich mit OpenID anmeldest',
-	'openid-userinfo-update-on-login-label' => 'Diese Daten werden vom OpenID-Konto bei jeder Anmeldung aktualisiert:',
+	'openid-show-openid-url-on-userpage-always' => 'Deine OpenID wird immer auf deiner Benutzerseite angezeigt, wenn du sie besuchst.',
+	'openid-show-openid-url-on-userpage-never' => 'Deine OpenID wird niemals auf deiner Benutzerseite angezeigt.',
+	'openid-userinfo-update-on-login-label' => 'Die Benutzerprofilinformationsfelder werden vom OpenID-Konto jedes Mal automatisch aktualisiert, wenn du dich anmeldest:',
 	'openid-associated-openids-label' => 'Mit dem Konto verbundene OpenIDs:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Aktion',
@@ -1518,6 +1719,16 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openid-add-url' => 'Eine neue OpenID deinem Benutzerkonto hinzufügen',
 	'openid-trusted-sites-label' => 'Websites, denen du vertraust, und bei denen du mit deiner OpenID bekannt bist:',
 	'openid-trusted-sites-table-header-column-url' => 'Websites, denen du vertraust',
+	'openid-trusted-sites-table-header-column-action' => 'Aktion',
+	'openid-trusted-sites-delete-link-action-text' => 'Löschen',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Alle vertrauenswürdigen Websites löschen',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Löschen vertrauenswürdiger Websites',
+	'openid-trusted-sites-delete-confirmation-question' => 'Durch Klicken auf „{{int:openid-trusted-sites-delete-confirmation-button-text}}“ entfernst du „$1“ aus der Liste der vertrauenswürdigen Websites.',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'Durch Klicken auf „{{int:openid-trusted-sites-delete-confirmation-button-text}}“ entfernst du alle vertrauenswürdigen Websites aus deinem Benutzerprofil.',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Bestätigen',
+	'openid-trusted-sites-delete-confirmation-success-text' => '„$1“ wurde erfolgreich aus der Liste der vertrauenswürdigen Websites entfernt.',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Alle Websites, denen du zuvor vertrautest, wurden aus deinem Benutzerprofil erfolgreich entfernt.',
+	'openid-local-identity' => 'Deine OpenID:',
 	'openid-login-or-create-account' => 'Anmelden oder ein neues Benutzerkonto erstellen',
 	'openid-provider-label-openid' => 'Gib deine OpenID-URL an',
 	'openid-provider-label-google' => 'Mit deinem Google-Benutzerkonto anmelden',
@@ -1562,7 +1773,7 @@ Ein fakultatives Benutzerkontopasswort kann hingegen unter dem Reiter [[Special:
 	'openidchooseinstructions' => 'Alle Benutzer benötigen einen Benutzernamen;
 Sie können einen aus der untenstehenden Liste auswählen.',
 	'openidchoosenick' => 'Ihr Spitzname ($1)',
-	'openidchoosefull' => 'Ihr bürgerlicher Name ($1)',
+	'openidchoosefull' => 'Ihr bürgerlicher Name ($1)', # Fuzzy
 	'openidchooseurl' => 'Ein Name aus Ihrer OpenID ($1)',
 	'openidchoosemanual' => 'Ein Name Ihrer Wahl:',
 	'openidconvertinstructions' => 'Mit diesem Formular können Sie Ihr Benutzerkonto zur Benutzung mit Ihrer OpenID-URL freigeben oder eine weitere OpenID-URL hinzufügen.',
@@ -1655,7 +1866,7 @@ Faktulatiwne gronidło dajo se w twójom [[Special:Preferences#mw-prefsection-pe
 	'openidoptional' => 'Opcionalny',
 	'openidrequired' => 'Trěbny',
 	'openidnickname' => 'Pśimě',
-	'openidfullname' => 'Dopołne mě',
+	'openidfullname' => 'Dopołne mě', # Fuzzy
 	'openidemail' => 'E-mailowa adresa:',
 	'openidlanguage' => 'Rěc',
 	'openidtimezone' => 'Casowa cona',
@@ -1663,7 +1874,7 @@ Faktulatiwne gronidło dajo se w twójom [[Special:Preferences#mw-prefsection-pe
 	'openidchooseinstructions' => 'Wše wužywarje trjebaju pśimě;
 móžoš jadno ze slědujucych opcijow wubraś.',
 	'openidchoosenick' => 'Twójo pśimě ($1)',
-	'openidchoosefull' => 'Twójo dopołne mě ($1)',
+	'openidchoosefull' => 'Twójo dopołne mě ($1)', # Fuzzy
 	'openidchooseurl' => 'Mě z twójogo OpenID ($1)',
 	'openidchooseauto' => 'Awtomatiski napórane mě ($1)',
 	'openidchoosemanual' => 'Mě twójogo wuzwólenja:',
@@ -1704,7 +1915,7 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'prefs-openid-associated-openids' => 'Twóje OpenID za pśizjawjenje k {{GRAMMAR:datiw|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Dowěry gódne sedła',
 	'openid-hide-openid-label' => 'Schowaj swój OpenID na swójom wužywarskem boku, jolic se pśizjawjaś z OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Kuždy raz, gaž se pízjawjam, slědujuce informacije z identity OpenID aktualizěrowaś:',
+	'openid-userinfo-update-on-login-label' => 'Kuždy raz, gaž se pízjawjam, slědujuce informacije z identity OpenID aktualizěrowaś:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID, kótarež su z twójim kontom zwězane:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Akcija',
@@ -1776,7 +1987,7 @@ $messages['el'] = array(
 	'openidoptional' => 'Προαιρετικός',
 	'openidrequired' => 'Απαιτημένος',
 	'openidnickname' => 'Παρωνύμιο',
-	'openidfullname' => 'ονοματεπώνυμο',
+	'openidfullname' => 'ονοματεπώνυμο', # Fuzzy
 	'openidemail' => 'Διεύθυνση ηλεκτρονικού ταχυδρομείου',
 	'openidlanguage' => 'Γλώσσα',
 	'openidtimezone' => 'Ζώνη ώρας:',
@@ -1784,7 +1995,7 @@ $messages['el'] = array(
 	'openidchooseinstructions' => 'Όλοι οι χρήστες χρειάζονται ένα nickname,
 για να επιλέξετε μια από τις παρακάτω επιλογές.',
 	'openidchoosenick' => 'Το ψευδώνυμό σας ($1)',
-	'openidchoosefull' => 'Το πλήρες όνομά σας ($1)',
+	'openidchoosefull' => 'Το πλήρες όνομά σας ($1)', # Fuzzy
 	'openidchooseurl' => 'Ένα όνομα διαλεγμένο από το OpenID σας ($1)',
 	'openidchooseauto' => 'Ένα αυτο-δημιουργημένο όνομα ($1)',
 	'openidchoosemanual' => 'Ένα όνομα της επιλογής σας:',
@@ -1827,7 +2038,7 @@ $messages['el'] = array(
 	'openiddelete-error' => 'Ένα σφάλμα προέκυψε κατά την αφαίρεση του OpenID από το λογαριασμό σας.',
 	'prefs-openid-hide-openid' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.',
 	'openid-hide-openid-label' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Ενημέρωση των ακόλουθων πληροφοριών από το OpenID persona κάθε φορά που συνδέομαι:',
+	'openid-userinfo-update-on-login-label' => 'Ενημέρωση των ακόλουθων πληροφοριών από το OpenID persona κάθε φορά που συνδέομαι:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID συνδεδεμένα με τον λογαριασμό σας:',
 	'openid-urls-url' => 'Διεύθυνση URL',
 	'openid-urls-action' => 'Ενέργεια',
@@ -1875,7 +2086,7 @@ Bonvolu konsulti [[Special:ListUsers/sysop|administranton]].',
 	'openidoptional' => 'Nedeviga',
 	'openidrequired' => 'Deviga',
 	'openidnickname' => 'Kaŝnomo',
-	'openidfullname' => 'Plena nomo',
+	'openidfullname' => 'Plena nomo', # Fuzzy
 	'openidemail' => 'Retadreso',
 	'openidlanguage' => 'Lingvo',
 	'openidtimezone' => 'Horzono',
@@ -1883,7 +2094,7 @@ Bonvolu konsulti [[Special:ListUsers/sysop|administranton]].',
 	'openidchooseinstructions' => 'Ĉiuj uzantoj bezonas kromnomo;
 vi povas selekti el unu la jenaj opcioj.',
 	'openidchoosenick' => 'Via kromnomo ($1)',
-	'openidchoosefull' => 'Via plena nomo ($1)',
+	'openidchoosefull' => 'Via plena nomo ($1)', # Fuzzy
 	'openidchooseurl' => 'Nomo eltenita de via OpenID ($1)',
 	'openidchooseauto' => 'Automate generita nomo ($1)',
 	'openidchoosemanual' => 'Nomo de via elekto:',
@@ -1912,7 +2123,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
 	'openiddelete-error' => 'Eraro okazis dum forigado de la OpenID de via konto.',
 	'prefs-openid-hide-openid' => 'Kaŝi viajn identigon OpenID en via uzantopaĝo, se vi ensalutas kun OpenID.',
 	'openid-hide-openid-label' => 'Kaŝi viajn identigon OpenID en via uzantopaĝo, se vi ensalutas kun OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Ĝisdatigi mian informon de OpenID-konto ĉiam, kiam mi ensalutos:',
+	'openid-userinfo-update-on-login-label' => 'Ĝisdatigi mian informon de OpenID-konto ĉiam, kiam mi ensalutos:', # Fuzzy
 	'openid-associated-openids-label' => 'Indentigoj OpenID asociigita kun via konto:',
 	'openid-urls-action' => 'Ago',
 	'openid-urls-delete' => 'Forigi',
@@ -1971,7 +2182,7 @@ Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preference
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Obligatorio',
 	'openidnickname' => 'Apodo',
-	'openidfullname' => 'Nombre completo',
+	'openidfullname' => 'Nombre completo', # Fuzzy
 	'openidemail' => 'Dirección de correo electrónico',
 	'openidlanguage' => 'Idioma',
 	'openidtimezone' => 'Huso horario',
@@ -1979,7 +2190,7 @@ Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preference
 	'openidchooseinstructions' => 'Todos los usuarios necesitan un sobrenombre;
 puedes escoger uno de las opciones debajo.',
 	'openidchoosenick' => 'Tu apodo ($1)',
-	'openidchoosefull' => 'Su nombre completo ($1)',
+	'openidchoosefull' => 'Su nombre completo ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nombre escogido a partir de tu OpenID ($1)',
 	'openidchooseauto' => 'Un nombre autogenerado ($1)',
 	'openidchoosemanual' => 'Un nombre de su preferencia:',
@@ -2023,7 +2234,7 @@ No podrás iniciar sesión sin un OpenID.',
 	'openid-openids-were-not-merged' => 'El(los) OpenID(s) no se fusionaron cuando se fusionaban las cuentas de usuario.',
 	'prefs-openid-hide-openid' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.',
 	'openid-hide-openid-label' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Actualizar la siguiente información desde mi perfil OpenID cada vez que inicie sesión:',
+	'openid-userinfo-update-on-login-label' => 'Actualizar la siguiente información desde mi perfil OpenID cada vez que inicie sesión:', # Fuzzy
 	'openid-associated-openids-label' => 'Los OpenID asociados a tu cuenta:',
 	'openid-urls-url' => 'Dirección URL',
 	'openid-urls-action' => 'Acción',
@@ -2162,7 +2373,7 @@ Ota yhteyttä [[Special:ListUsers/sysop|ylläpitäjään]].',
 	'openidoptional' => 'Valinnainen',
 	'openidrequired' => 'Vaadittu',
 	'openidnickname' => 'Nimimerkki',
-	'openidfullname' => 'Koko nimi',
+	'openidfullname' => 'Koko nimi', # Fuzzy
 	'openidemail' => 'Sähköpostiosoite',
 	'openidlanguage' => 'Kieli',
 	'openidtimezone' => 'Aikavyöhyke',
@@ -2170,7 +2381,7 @@ Ota yhteyttä [[Special:ListUsers/sysop|ylläpitäjään]].',
 	'openidchooseinstructions' => 'Kaikki käyttäjät tarvitsevat nimimerkin.
 Voit valita omasi alla olevista vaihtoehdoista.',
 	'openidchoosenick' => 'Nimimerkkisi ($1)',
-	'openidchoosefull' => 'Koko nimesi ($1)',
+	'openidchoosefull' => 'Koko nimesi ($1)', # Fuzzy
 	'openidchooseurl' => 'OpenID:stäsi poimittu nimi ($1)',
 	'openidchooseauto' => 'Automaattisesti luotu nimi ($1)',
 	'openidchoosemanual' => 'Omavalintainen nimi',
@@ -2208,7 +2419,7 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
 	'prefs-openid-hide-openid' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.',
 	'prefs-openid-trusted-sites' => 'Luotetut sivustot',
 	'openid-hide-openid-label' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.',
-	'openid-userinfo-update-on-login-label' => 'Päivitä seuraavat tiedot OpenID-tiedoista jokaisella kirjautumisella:',
+	'openid-userinfo-update-on-login-label' => 'Päivitä seuraavat tiedot OpenID-tiedoista jokaisella kirjautumisella:', # Fuzzy
 	'openid-associated-openids-label' => 'Tiliisi liitetyt OpenID:eet:',
 	'openid-urls-action' => 'Toiminto',
 	'openid-urls-delete' => 'Poista',
@@ -2269,14 +2480,14 @@ Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Pre
 	'openidoptional' => 'Facultatif',
 	'openidrequired' => 'Exigé',
 	'openidnickname' => 'Surnom',
-	'openidfullname' => 'Nom complet',
+	'openidfullname' => 'Nom réel',
 	'openidemail' => 'Adresse électronique',
 	'openidlanguage' => 'Langue',
 	'openidtimezone' => 'Zone horaire',
 	'openidchooselegend' => "Choix du nom d'utilisateur et du compte",
 	'openidchooseinstructions' => 'Tous les utilisateurs ont besoin d’un surnom ; vous pouvez en choisir un à partir des choix ci-dessous.',
 	'openidchoosenick' => 'Votre surnom ($1)',
-	'openidchoosefull' => 'Votre nom entier ($1)',
+	'openidchoosefull' => 'Votre vrai nom ($1)',
 	'openidchooseurl' => 'Un nom choisi depuis votre OpenID ($1)',
 	'openidchooseauto' => 'Un nom créé automatiquement ($1)',
 	'openidchoosemanual' => 'Un nom de votre choix :',
@@ -2323,8 +2534,11 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'prefs-openid-userinfo-update-on-login' => 'Mise à jour des informations utilisateur de OpenID',
 	'prefs-openid-associated-openids' => 'Vos OpenIDs pour vous connecter à {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Sites de confiance',
+	'prefs-openid-local-identity' => 'Votre OpenID pour vous connecter à d’autres sites',
 	'openid-hide-openid-label' => 'Cacher votre OpenID sur votre page utilisateur, si vous vous connectez avec OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Mettre à jour les données suivantes depuis OpenID à chaque fois que je me connecte :',
+	'openid-show-openid-url-on-userpage-always' => 'Votre OpenID est toujours affiché sur votre page utilisateur quand vous la visitez.',
+	'openid-show-openid-url-on-userpage-never' => 'Votre OpenID n’est jamais affiché sur votre page utilisateur.',
+	'openid-userinfo-update-on-login-label' => 'Champs d’information du profil utilisateur qui seront mis à jour automatiquement depuis votre personne OpenID chaque fois que vous vous connecterez:',
 	'openid-associated-openids-label' => 'OpenID associées avec votre compte :',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Action',
@@ -2333,6 +2547,16 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-add-url' => 'Ajouter un nouvel OpenID à  votre compte',
 	'openid-trusted-sites-label' => 'Sites en qui vous avez confiance et où vous avez utilisé votre OpenID pour vous connecter:',
 	'openid-trusted-sites-table-header-column-url' => 'Sites de confiance',
+	'openid-trusted-sites-table-header-column-action' => 'Action',
+	'openid-trusted-sites-delete-link-action-text' => 'Supprimer',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Supprimer tous les sites de confiance',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Suppression d’un site de confiance',
+	'openid-trusted-sites-delete-confirmation-question' => 'En cliquant sur le bouton "{{int:openid-trusted-sites-delete-confirmation-button-text}}", vous supprimerez "$1" de la liste de vos sites de confiance.',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'En cliquant sur le bouton "{{int:openid-trusted-sites-delete-confirmation-button-text}}", vous supprimerez tous les sites de confiance de votre profil utilisateur.',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Confirmer',
+	'openid-trusted-sites-delete-confirmation-success-text' => '"$1" a bien été supprimé de la liste de vos sites de confiance.',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Tous les sites auxquels vous faisiez auparavant confiance ont bien été supprimés de votre profil utilisateur.',
+	'openid-local-identity' => 'Votre OpenID:',
 	'openid-login-or-create-account' => 'Se connecter ou créer un nouveau compte',
 	'openid-provider-label-openid' => 'Entrez votre URL OpenID',
 	'openid-provider-label-google' => 'Vous connecter en utilisant votre compte Google',
@@ -2384,7 +2608,7 @@ Vos volyéd veriér vers un [[Special:ListUsers/sysop|administrator]].',
 	'openidoptional' => 'U chouèx',
 	'openidrequired' => 'Oblegatouèro',
 	'openidnickname' => 'Surnom',
-	'openidfullname' => 'Nom complèt',
+	'openidfullname' => 'Nom complèt', # Fuzzy
 	'openidemail' => 'Adrèce èlèctronica',
 	'openidlanguage' => 'Lengoua',
 	'openidtimezone' => 'Fus horèro',
@@ -2392,7 +2616,7 @@ Vos volyéd veriér vers un [[Special:ListUsers/sysop|administrator]].',
 	'openidchooseinstructions' => 'Tôs los utilisators ont fôta d’un surnom ;
 vos en pouede chouèsir yon dês los chouèx ce-desot.',
 	'openidchoosenick' => 'Voutron surnom ($1)',
-	'openidchoosefull' => 'Voutron nom complèt ($1)',
+	'openidchoosefull' => 'Voutron nom complèt ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nom chouèsi dês voutron OpenID ($1)',
 	'openidchooseauto' => 'Un nom fêt ôtomaticament ($1)',
 	'openidchoosemanual' => 'Un nom de voutron chouèx :',
@@ -2418,7 +2642,7 @@ Vos pouede administrar (vêre, suprimar et pués nen apondre d’ôtres) OpenIDs
 	'openiddelete-button' => 'Confirmar',
 	'prefs-openid-hide-openid' => 'Cachiér voutron OpenID sur voutra pâge utilisator, se vos vos branchiéd avouéc OpenID.',
 	'openid-hide-openid-label' => 'Cachiér voutron OpenID sur voutra pâge utilisator, se vos vos branchiéd avouéc OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Betar a jorn cetes enformacions dês OpenID a tôs los côps que mè brancho :',
+	'openid-userinfo-update-on-login-label' => 'Betar a jorn cetes enformacions dês OpenID a tôs los côps que mè brancho :', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associyêyes avouéc voutron compto :',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Accion',
@@ -2462,8 +2686,10 @@ $messages['ga'] = array(
  */
 $messages['gl'] = array(
 	'openid-desc' => 'Acceder ao sistema do wiki cun [//openid.net/ OpenID] e acceder a outras páxinas web OpenID cunha conta de usuario dun wiki',
+	'openididentifier' => 'Identificador OpenID',
 	'openidlogin' => 'Acceder ao sistema ou crear unha conta co OpenID',
 	'openidserver' => 'Servidor do OpenID',
+	'openid-identifier-page-text' => 'Esta páxina é o identificador do usuario "$1".',
 	'openid-server-identity-page-text' => 'Esta é unha páxina do servidor técnico do OpenID para comezar a autenticación do OpenID. A páxina non ten outro propósito.',
 	'openidxrds' => 'Ficheiro Yadis',
 	'openidconvert' => 'Transformador OpenID',
@@ -2494,14 +2720,14 @@ Pode engadir un contrasinal opcional no seu [[Special:Preferences#mw-prefsection
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Obrigatorio',
 	'openidnickname' => 'Alcume',
-	'openidfullname' => 'Nome completo',
+	'openidfullname' => 'Nome real',
 	'openidemail' => 'Enderezo de correo electrónico',
 	'openidlanguage' => 'Lingua',
 	'openidtimezone' => 'Zona horaria',
 	'openidchooselegend' => 'Elección do nome de usuario e da conta',
 	'openidchooseinstructions' => 'Todos os usuarios precisan un alcume; pode escoller un de entre as opcións de embaixo.',
 	'openidchoosenick' => 'O seu alcume ($1)',
-	'openidchoosefull' => 'O seu nome completo ($1)',
+	'openidchoosefull' => 'O seu nome real ($1)',
 	'openidchooseurl' => 'Un nome tomado do seu OpenID ($1)',
 	'openidchooseauto' => 'Un nome xerado automaticamente ($1)',
 	'openidchoosemanual' => 'Un nome da súa escolla:',
@@ -2547,8 +2773,11 @@ Non podería conectarse sen un OpenID.',
 	'prefs-openid-userinfo-update-on-login' => 'Actualización da información de usuario do OpenID',
 	'prefs-openid-associated-openids' => 'Os seus OpenID para acceder a {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Sitios de confianza',
+	'prefs-openid-local-identity' => 'O seu OpenID para acceder a outros sitios',
 	'openid-hide-openid-label' => 'Agoche o enderezo URL do seu OpenID na súa páxina de usuario, se accede ao sistema con OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Actualizar a seguinte información do OpenID cada vez que acceda ao sistema:',
+	'openid-show-openid-url-on-userpage-always' => 'O seu OpenID móstrase sempre na súa páxina de usuario cando a visita.',
+	'openid-show-openid-url-on-userpage-never' => 'O seu OpenID non se mostra nunca na súa páxina de usuario.',
+	'openid-userinfo-update-on-login-label' => 'Os campos de información do perfil que se actualizarán desde o OpenID cada vez que acceda ao sistema:',
 	'openid-associated-openids-label' => 'OpenIDs asociados á súa conta:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Acción',
@@ -2557,6 +2786,16 @@ Non podería conectarse sen un OpenID.',
 	'openid-add-url' => 'Engadir un novo OpenID á súa conta',
 	'openid-trusted-sites-label' => 'Sitios nos que confía e nos que utilizou o seu OpenID para identificarse:',
 	'openid-trusted-sites-table-header-column-url' => 'Sitios de confianza',
+	'openid-trusted-sites-table-header-column-action' => 'Acción',
+	'openid-trusted-sites-delete-link-action-text' => 'Borrar',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Borrar todos os sitios de confianza',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Borrado dun sitio de confianza',
+	'openid-trusted-sites-delete-confirmation-question' => 'Ao premer no botón "{{int:openid-trusted-sites-delete-confirmation-button-text}}" eliminará "$1" da lista de sitios de confianza.',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'Ao premer no botón "{{int:openid-trusted-sites-delete-confirmation-button-text}}" eliminará todos os sitios de confianza do seu perfil de usuario.',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Confirmar',
+	'openid-trusted-sites-delete-confirmation-success-text' => '"$1" eliminouse correctamente da lista de sitios de confianza.',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Elimináronse correctamente do seu perfil de usuario todos os sitios nos que confiaba anteriormente.',
+	'openid-local-identity' => 'O seu OpenID:',
 	'openid-login-or-create-account' => 'Acceder ou crear unha conta nova',
 	'openid-provider-label-openid' => 'Insira o enderezo URL do seu OpenID',
 	'openid-provider-label-google' => 'Acceder usando a súa conta do Google',
@@ -2629,7 +2868,7 @@ Bitte gib eme [[Special:ListUsers/sysop|Ammann]] e Nochricht.',
 	'openidoptional' => 'Optional',
 	'openidrequired' => 'Pflicht',
 	'openidnickname' => 'Benutzername',
-	'openidfullname' => 'Vollständiger Name',
+	'openidfullname' => 'Vollständiger Name', # Fuzzy
 	'openidemail' => 'E-Mail-Adräss:',
 	'openidlanguage' => 'Sproch',
 	'openidtimezone' => 'Zytzone',
@@ -2637,7 +2876,7 @@ Bitte gib eme [[Special:ListUsers/sysop|Ammann]] e Nochricht.',
 	'openidchooseinstructions' => 'Alli Benutzer bruuche ne Benutzername;
 Du chasch us däre Lischt ein uussueche.',
 	'openidchoosenick' => 'Dyy Spitzname ($1)',
-	'openidchoosefull' => 'Dyy vollständige Name ($1)',
+	'openidchoosefull' => 'Dyy vollständige Name ($1)', # Fuzzy
 	'openidchooseurl' => 'E Name us Dyynere OpenID ($1)',
 	'openidchooseauto' => 'E automatisch aagleite Name ($1)',
 	'openidchoosemanual' => 'E vu Dir gwehlte Name:',
@@ -2677,7 +2916,7 @@ Derno wärsch nimmi imstand, di ohni OpenID aazmälde.',
 	'openiddelete-error' => 'E Fähler isch ufträtte, derwylscht d OpenID us Dyym Benutzerkonto uusegnuu woren isch.',
 	'prefs-openid-hide-openid' => 'Versteck Dyyni OpenID uf Dyynere Benutzersyte, wänn Di mit OpenID aamäldsch.',
 	'openid-hide-openid-label' => 'Versteck Dyyni OpenID uf Dyynere Benutzersyte, wänn Di mit OpenID aamäldsch.',
-	'openid-userinfo-update-on-login-label' => 'Die Informatione mit em OpenID-Konto bi jedere Aamäldig aktualisiere',
+	'openid-userinfo-update-on-login-label' => 'Die Informatione mit em OpenID-Konto bi jedere Aamäldig aktualisiere', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs´, wu mit Dyym Benutzerkonto verbunde sin:',
 	'openid-urls-action' => 'Aktion',
 	'openid-urls-delete' => 'Lesche',
@@ -2752,7 +2991,7 @@ $messages['he'] = array(
 	'openidoptional' => 'אופציונאלי',
 	'openidrequired' => 'נדרש',
 	'openidnickname' => 'כינוי',
-	'openidfullname' => 'שם מלא',
+	'openidfullname' => 'שם מלא', # Fuzzy
 	'openidemail' => 'כתובת דוא"ל',
 	'openidlanguage' => 'שפה',
 	'openidtimezone' => 'אזור זמן',
@@ -2760,7 +2999,7 @@ $messages['he'] = array(
 	'openidchooseinstructions' => 'כל המשתמשים זקוקים לכינוי;
 תוכלו לבחור אחת מהאפשרויות שלהלן.',
 	'openidchoosenick' => 'הכינוי שלך ($1)',
-	'openidchoosefull' => 'שמכם המלא ($1)',
+	'openidchoosefull' => 'שמכם המלא ($1)', # Fuzzy
 	'openidchooseurl' => 'שם שנבחר מה־OpenID שלכם ($1)',
 	'openidchooseauto' => 'שם שנוצר אוטומטית ($1)',
 	'openidchoosemanual' => 'השם הנבחר:',
@@ -2804,7 +3043,7 @@ OpenID מאפשר לכם להיכנס לחשבון במגוון אתרים מב�
 	'openid-openids-were-not-merged' => 'חשבונות OpenID לא מוזגו כאשר מוזג החשבון.',
 	'prefs-openid-hide-openid' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.',
 	'openid-hide-openid-label' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.',
-	'openid-userinfo-update-on-login-label' => 'עדכון המידע הבא מכרטיס ה־OpenID עם כל כניסה לחשבון:',
+	'openid-userinfo-update-on-login-label' => 'עדכון המידע הבא מכרטיס ה־OpenID עם כל כניסה לחשבון:', # Fuzzy
 	'openid-associated-openids-label' => 'כתובות OpenID המשויכות לחשבונכם:',
 	'openid-urls-url' => 'כתובת URL',
 	'openid-urls-action' => 'פעולה',
@@ -2859,10 +3098,10 @@ $messages['hi'] = array(
 	'openidoptional' => 'वैकल्पिक',
 	'openidrequired' => 'आवश्यक',
 	'openidnickname' => 'उपनाम',
-	'openidfullname' => 'पूरानाम',
+	'openidfullname' => 'पूरानाम', # Fuzzy
 	'openidemail' => 'इ-मेल एड्रेस',
 	'openidlanguage' => 'भाषा',
-	'openidchoosefull' => 'आपका पूरा नाम ($1)',
+	'openidchoosefull' => 'आपका पूरा नाम ($1)', # Fuzzy
 	'openidchooseurl' => 'आपके OpenID से लिया एक नाम ($1)',
 	'openidchooseauto' => 'एक अपनेआप बनाया नाम ($1)',
 	'openidchoosemanual' => 'आपके पसंद का नाम:',
@@ -2922,7 +3161,7 @@ Molimo savjetujte se s [[Special:ListUsers/sysop|administratorom]].',
 	'openidoptional' => 'Neobavezno',
 	'openidrequired' => 'Obavezno',
 	'openidnickname' => 'Nadimak',
-	'openidfullname' => 'Puno ime',
+	'openidfullname' => 'Puno ime', # Fuzzy
 	'openidemail' => 'E-pošta',
 	'openidlanguage' => 'Jezik',
 	'openidtimezone' => 'Vremenska zona',
@@ -2930,7 +3169,7 @@ Molimo savjetujte se s [[Special:ListUsers/sysop|administratorom]].',
 	'openidchooseinstructions' => 'Svi suradnici trebaju imati nadimak;
 možete odabrati jedan od niže ponuđenih.',
 	'openidchoosenick' => 'Vaš nadimak ($1)',
-	'openidchoosefull' => 'Vaše puno ime ($1)',
+	'openidchoosefull' => 'Vaše puno ime ($1)', # Fuzzy
 	'openidchooseurl' => 'Ime uzeto s Vašeg OpenID ($1)',
 	'openidchooseauto' => 'Automatski generirano ime ($1)',
 	'openidchoosemanual' => 'Ime po Vašem izboru:',
@@ -2972,7 +3211,7 @@ Bez OpenId nećete se moći prijaviti.',
 	'openiddelete-error' => 'Došlo je do pogreška pri uklanjanju OpenID iz Vašeg računa.',
 	'prefs-openid-hide-openid' => 'Sakrij Vaš OpenID na Vašoj suradničkoj stranici, ako ste prijavljeni s OpenID.',
 	'openid-hide-openid-label' => 'Sakrij Vaš OpenID na Vašoj suradničkoj stranici, ako ste prijavljeni s OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Ažuriraj sljedeće informacije iz OpenID identiteta svaki put kad se prijavim:',
+	'openid-userinfo-update-on-login-label' => 'Ažuriraj sljedeće informacije iz OpenID identiteta svaki put kad se prijavim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-ovi povezani s Vašim računom:',
 	'openid-urls-action' => 'Radnja',
 	'openid-urls-delete' => 'Izbriši',
@@ -3021,14 +3260,14 @@ Faktulatiwne hesło hodźi so w twojim [[Special:Preferences#mw-prefsection-pers
 	'openidoptional' => 'Opcionalny',
 	'openidrequired' => 'Trěbny',
 	'openidnickname' => 'Přimjeno',
-	'openidfullname' => 'Dospołne mjeno',
+	'openidfullname' => 'Dospołne mjeno', # Fuzzy
 	'openidemail' => 'E-mejlowa adresa',
 	'openidlanguage' => 'Rěč',
 	'openidtimezone' => 'Časowe pasmo',
 	'openidchooselegend' => 'Wuběranje wužiwarskeho mjena a wužiwarskeho konta',
 	'openidchooseinstructions' => 'Wšitcy wužiwarjo trjebaja přimjeno; móžěs jedne z opcijow deleka wuzwolić.',
 	'openidchoosenick' => 'Twoje přimjeno ($1)',
-	'openidchoosefull' => 'Twoje dospołne mjeno ($1)',
+	'openidchoosefull' => 'Twoje dospołne mjeno ($1)', # Fuzzy
 	'openidchooseurl' => 'Mjeno wzate z twojeho OpenID ($1)',
 	'openidchooseauto' => 'Awtomatisce wutworjene mjeno ($1)',
 	'openidchoosemanual' => 'Mjeno twojeje wólby:',
@@ -3071,7 +3310,7 @@ Ty njemóhł so bjez OpenID přizjewić.',
 	'prefs-openid-associated-openids' => 'Twoje OpenID za přizjewjenje k {{GRAMMAR:datiw|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Dowěryhódne sydła',
 	'openid-hide-openid-label' => 'Twój OpenID na twojej wužiwarskej stronje schować, jeli so z OpenID přizjewješ.',
-	'openid-userinfo-update-on-login-label' => 'Kóždy raz, hdyž so přizjawjam, slědowace informacije z identity OpenID aktualizować:',
+	'openid-userinfo-update-on-login-label' => 'Kóždy raz, hdyž so přizjawjam, slědowace informacije z identity OpenID aktualizować:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID, kotrež su z twojim kontom zwjazane:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Akcija',
@@ -3136,14 +3375,14 @@ Lépj kapcsolatba egy [[Special:ListUsers/sysop|adminisztrátorral]].',
 	'openidoptional' => 'Nem kötelező',
 	'openidrequired' => 'Kötelező',
 	'openidnickname' => 'Felhasználónév',
-	'openidfullname' => 'Teljes név',
+	'openidfullname' => 'Teljes név', # Fuzzy
 	'openidemail' => 'E-mail cím:',
 	'openidlanguage' => 'Nyelv',
 	'openidtimezone' => 'Időzóna',
 	'openidchooselegend' => 'Felhasználónév és fiók választás',
 	'openidchooseinstructions' => 'Mindenkinek választania kell egy felhasználónevet; választhatsz egyet az alábbi opciókból.',
 	'openidchoosenick' => 'A nickneved ($1)',
-	'openidchoosefull' => 'A teljes neved ($1)',
+	'openidchoosefull' => 'A teljes neved ($1)', # Fuzzy
 	'openidchooseurl' => 'Az OpenID-dből vett név ($1)',
 	'openidchooseauto' => 'Egy automatikusan generált név ($1)',
 	'openidchoosemanual' => 'Egy általad megadott név:',
@@ -3184,7 +3423,7 @@ Nem tudnál bejelentkezni OpenID nélkül.',
 	'openiddelete-error' => 'Hiba történt az OpenID felhasználói fiókodból való eltávolításakor.',
 	'prefs-openid-hide-openid' => 'Az OpenID-d elrejtése a felhasználói lapodon, amikor OpenID-vel jelentkezel be.',
 	'openid-hide-openid-label' => 'Az OpenID-d elrejtése a felhasználói lapodon, amikor OpenID-vel jelentkezel be.',
-	'openid-userinfo-update-on-login-label' => 'A következő információ frissítése az OpenID fiókom alapján minden bejelentkezéskor:',
+	'openid-userinfo-update-on-login-label' => 'A következő információ frissítése az OpenID fiókom alapján minden bejelentkezéskor:', # Fuzzy
 	'openid-associated-openids-label' => 'A felhasználói fiókodhoz kapcsolt OpenID-k:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Művelet',
@@ -3238,7 +3477,7 @@ Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#
 	'openidoptional' => 'Optional',
 	'openidrequired' => 'Requirite',
 	'openidnickname' => 'Pseudonymo',
-	'openidfullname' => 'Nomine complete',
+	'openidfullname' => 'Nomine complete', # Fuzzy
 	'openidemail' => 'Adresse de e-mail',
 	'openidlanguage' => 'Lingua',
 	'openidtimezone' => 'Fuso horari',
@@ -3246,7 +3485,7 @@ Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#
 	'openidchooseinstructions' => 'Tote le usatores require un pseudonymo;
 tu pote seliger un del optiones in basso.',
 	'openidchoosenick' => 'Tu pseudonymo ($1)',
-	'openidchoosefull' => 'Tu nomine complete ($1)',
+	'openidchoosefull' => 'Tu nomine complete ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nomine seligite de tu OpenID ($1)',
 	'openidchooseauto' => 'Un nomine automaticamente generate ($1)',
 	'openidchoosemanual' => 'Un nomine de tu preferentia:',
@@ -3290,7 +3529,7 @@ Il esserea impossibile aperir un session sin OpenID.',
 	'openid-openids-were-not-merged' => 'Solmente le contos de usator, non le OpenID(s), ha essite fusionate.',
 	'prefs-openid-hide-openid' => 'Celar tu OpenID in tu pagina de usator, si tu aperi un session con OpenID.',
 	'openid-hide-openid-label' => 'Celar tu OpenID in tu pagina de usator, si tu aperi un session con OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Actualisar le sequente informationes ab mi personage OpenID cata vice que io aperi un session:',
+	'openid-userinfo-update-on-login-label' => 'Actualisar le sequente informationes ab mi personage OpenID cata vice que io aperi un session:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associate con tu conto:',
 	'openid-urls-action' => 'Action',
 	'openid-urls-registration' => 'Hora de registration',
@@ -3355,7 +3594,7 @@ Ini dan OpenID selanjutnya, dan sebuah kata sandi akun opsional, dapat dikelola 
 	'openidoptional' => 'Opsional',
 	'openidrequired' => 'Diperlukan',
 	'openidnickname' => 'Nama panggilan',
-	'openidfullname' => 'Nama lengkap',
+	'openidfullname' => 'Nama lengkap', # Fuzzy
 	'openidemail' => 'Alamat surel',
 	'openidlanguage' => 'Bahasa',
 	'openidtimezone' => 'Zona waktu',
@@ -3363,7 +3602,7 @@ Ini dan OpenID selanjutnya, dan sebuah kata sandi akun opsional, dapat dikelola 
 	'openidchooseinstructions' => 'Semua pengguna memerlukan sebuah nama panggilan;
 Anda dapat memilih dari salah satu opsi berikut.',
 	'openidchoosenick' => 'Nama panggilan anda ($1)',
-	'openidchoosefull' => 'Nama lengkap Anda ($1)',
+	'openidchoosefull' => 'Nama lengkap Anda ($1)', # Fuzzy
 	'openidchooseurl' => 'Sebuah nama diambil dari OpenID Anda ($1)',
 	'openidchooseauto' => 'Nama yang dibuat secara otomatis ($1)',
 	'openidchoosemanual' => 'Nama pilihan Anda:',
@@ -3405,7 +3644,7 @@ Anda tidak akan dapat masuk log tanpa OpenID.',
 	'openiddelete-error' => 'Terjadi kesalahan saat berusaha menghapus OpenID dari akun Anda.',
 	'prefs-openid-hide-openid' => 'Sembunyikan URL OpenID Anda di halaman pengguna Anda, jika Anda masuk log dengan OpenID.',
 	'openid-hide-openid-label' => 'Sembunyikan URL OpenID Anda di halaman pengguna Anda, jika Anda masuk log dengan OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Mutakhirkan informasi dari persona OpenID berikut setiap kali saya masuk log:',
+	'openid-userinfo-update-on-login-label' => 'Mutakhirkan informasi dari persona OpenID berikut setiap kali saya masuk log:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID yang dihubungkan dengan akun Anda:',
 	'openid-urls-action' => 'Tindakan',
 	'openid-urls-delete' => 'Hapus',
@@ -3477,7 +3716,7 @@ Questo ed altri OpenID opzionali possono essere gestiti dalla [[Special:Preferen
 	'openidoptional' => 'Opzionale',
 	'openidrequired' => 'Obbligatorio',
 	'openidnickname' => 'Nickname',
-	'openidfullname' => 'Nome completo',
+	'openidfullname' => 'Nome completo', # Fuzzy
 	'openidemail' => 'Indirizzo e-mail',
 	'openidlanguage' => 'Lingua',
 	'openidtimezone' => 'Fuso orario',
@@ -3485,7 +3724,7 @@ Questo ed altri OpenID opzionali possono essere gestiti dalla [[Special:Preferen
 	'openidchooseinstructions' => 'Tutti gli utenti hanno bisogno di un nickname;
 puoi sceglierne uno dalle opzioni seguenti.',
 	'openidchoosenick' => 'Il tuo nickname ($1)',
-	'openidchoosefull' => 'Il tuo nome completo ($1)',
+	'openidchoosefull' => 'Il tuo nome completo ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nome scelto dal tuo OpenID ($1)',
 	'openidchooseauto' => 'Un nome auto-generato ($1)',
 	'openidchoosemanual' => 'Un nome di tua scelta:',
@@ -3528,7 +3767,7 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openid-openids-were-not-merged' => 'Gli OpenID non sono uniti quando vengono uniti gli account utenti.',
 	'prefs-openid-hide-openid' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
 	'openid-hide-openid-label' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Aggiorna le seguenti informazioni dalla persona OpenID a ogni accesso:',
+	'openid-userinfo-update-on-login-label' => 'Aggiorna le seguenti informazioni dalla persona OpenID a ogni accesso:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associati al proprio account:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Azione',
@@ -3566,18 +3805,19 @@ Non saresti in grado di accedere senza un OpenID.',
 $messages['ja'] = array(
 	'openid-desc' => '[//openid.net/ OpenID] でウィキにログインできるようにする。これをウィキで有効にすると、ウィキの利用者アカウントの URL を OpenID として他の OpenID 対応サイトにもログインできる',
 	'openididentifier' => 'OpenID 識別子',
-	'openidlogin' => 'OpenID でログイン/アカウントを作成',
+	'openidlogin' => 'OpenID によるログイン/アカウント作成',
 	'openidserver' => 'OpenID サーバー',
 	'openid-identifier-page-text' => 'このページは利用者「$1」の識別子です。',
 	'openid-server-identity-page-text' => 'このページは、OpenID 認証を開始するための、OpenID サーバーの技術的なページであり、それ以外の目的はありません。',
 	'openidxrds' => 'Yadis ファイル',
 	'openidconvert' => 'OpenID コンバーター',
 	'openiderror' => '検証エラー',
-	'openiderrortext' => 'OpenID URLの検証中にエラーが発生しました。',
+	'openiderrortext' => 'OpenID URL の検証中にエラーが発生しました。',
 	'openidconfigerror' => 'OpenID 設定エラー',
-	'openidconfigerrortext' => 'このウィキの OpenID 格納設定は無効です。[[Special:ListUsers/sysop|管理者]]に相談してください。',
+	'openidconfigerrortext' => 'このウィキの OpenID 格納設定は無効です。
+[[Special:ListUsers/sysop|管理者]]にお問い合わせください。',
 	'openidpermission' => 'OpenID パーミッションエラー',
-	'openidpermissiontext' => 'あなたが与えた OpenID はこのサーバーにログインすることを許可されていません。',
+	'openidpermissiontext' => '指定した OpenID では、このサーバーへのログインが許可されていません。',
 	'openidcancel' => '検証中止',
 	'openidcanceltext' => 'OpenID URL の検証は中止されました。',
 	'openidfailure' => '検証失敗',
@@ -3598,22 +3838,23 @@ $messages['ja'] = array(
 	'openidoptional' => '省略可能',
 	'openidrequired' => '必須',
 	'openidnickname' => 'ニックネーム',
-	'openidfullname' => 'フルネーム',
+	'openidfullname' => '本名',
 	'openidemail' => 'メールアドレス',
 	'openidlanguage' => '言語',
 	'openidtimezone' => 'タイムゾーン',
 	'openidchooselegend' => '利用者名とアカウントの選択',
-	'openidchooseinstructions' => 'すべての利用者はニックネームが必要です。以下の選択肢から1つを選ぶことができます。',
+	'openidchooseinstructions' => 'すべての利用者にはニックネームが必要です。
+以下の選択肢から 1 つ選択できます。',
 	'openidchoosenick' => 'あなたのニックネーム ($1)',
-	'openidchoosefull' => 'あなたのフルネーム ($1)',
-	'openidchooseurl' => 'あなたの OpenID から選んだ名前 ($1)',
+	'openidchoosefull' => 'あなたの本名 ($1)',
+	'openidchooseurl' => 'あなたの OpenID から取得した名前 ($1)',
 	'openidchooseauto' => '自動生成された名前 ($1)',
 	'openidchoosemanual' => '名前を別に設定する:',
-	'openidchooseexisting' => 'このウィキに存在するアカウント',
+	'openidchooseexisting' => 'このウィキの既存のアカウント',
 	'openidchooseusername' => '利用者名:',
 	'openidchoosepassword' => 'パスワード:',
-	'openidconvertinstructions' => 'このフォームを使うと、あなたの利用者アカウントで OpenID URL を使うように変更するか、OpenID URL をさらに追加できます。',
-	'openidconvertoraddmoreids' => 'OpenID に変換、または別の OpenID URL を追加',
+	'openidconvertinstructions' => 'このフォームでは、あなたの利用者アカウントで OpenID URL を使用するように変更したり、OpenID URL をさらに追加できます。',
+	'openidconvertoraddmoreids' => 'OpenID への変換、または別の OpenID URL の追加',
 	'openidconvertsuccess' => 'OpenID に変換しました',
 	'openidconvertsuccesstext' => 'あなたの OpenID を $1 に変換しました。',
 	'openid-convert-already-your-openid-text' => 'OpenID $1 はあなたのアカウントに既に関連付けられています。再度追加する必要はありません。',
@@ -3625,41 +3866,56 @@ $messages['ja'] = array(
 	'openidnousername' => '利用者名が指定されていません。',
 	'openidbadusername' => '利用者名の指定が正しくありません。',
 	'openidautosubmit' => 'このページにあるフォームはあなたが JavaScript を有効にしていれば自動的に送信されるはずです。そうならない場合は、「Continue」(続行) ボタンを試してください。',
-	'openidclientonlytext' => 'あなたはこのウィキのアカウントを他のサイトで OpenID として使うことができません。',
+	'openidclientonlytext' => 'このウィキのアカウントは、別のサイトで OpenID として使用できません。',
 	'openidloginlabel' => 'OpenID URL',
 	'openidlogininstructions' => '{{SITENAME}} はウェブサイト間でのシングルサインオンのための [//openid.net/ OpenID] 規格に対応しています。OpenID によって、個別のパスワードを使用することなく、たくさんのさまざまなウェブサイトにログインできるようになります(より詳しい情報は[//ja.wikipedia.org/wiki/OpenID ウィキペディアの OpenID についての記事]を参照してください)。
 多くの [//openid.net/get/ OpenID プロバイダー]が存在するため、OpenID が有効なアカウントを別のサービスで既に保持しているかもしれません。',
 	'openidlogininstructions-openidloginonly' => "OpenID で{{SITENAME}}''のみ''にログインできます。",
 	'openidupdateuserinfo' => '自分の個人情報を更新:',
-	'openiddelete' => 'OpenID を削除',
-	'openiddelete-text' => '「{{int:openiddelete-button}}」ボタンをクリックすると、あなたのアカウントから OpenID $1 を除去します。以降、あなたはこの OpenID を使ってログインすることができなくなります。',
+	'openiddelete' => 'OpenID の削除',
+	'openiddelete-text' => '「{{int:openiddelete-button}}」ボタンをクリックすると、アカウントから OpenID「$1」を除去します。
+以降、この OpenID を使用してのログインができなくなります。',
 	'openiddelete-button' => '確定',
-	'openiddeleteerrornopassword' => 'アカウントにパスワードが設定されていないため、あなたのOpenIDを削除できません。
-あなたは、OpenIDを使用せずにログインできません。',
-	'openiddeleteerroropenidonly' => 'OpenIDを使用してのログインのみが許可されているため、あなたのOpenIDを削除できません。
-あなたは、OpenIDを使用せずにログインできません。',
+	'openiddeleteerrornopassword' => 'アカウントにパスワードが設定されていないため、OpenID を削除できません。
+ログインに OpenID が必要です。',
+	'openiddeleteerroropenidonly' => 'OpenID を使用してのログインのみが許可されているため、OpenID を削除できません。
+ログインに OpenID が必要です。',
 	'openiddelete-success' => 'あなたのアカウントから OpenID を除去しました。',
 	'openiddelete-error' => 'あなたのアカウントから OpenID を除去する際にエラーが発生しました。',
-	'openid-openids-were-not-merged' => 'ユーザーアカウントをマージする際の OpenID はマージされませんでした。',
+	'openid-openids-were-not-merged' => '利用者アカウントを統合する際に、OpenID は統合されませんでした。',
 	'prefs-openid-hide-openid' => '自分の利用者ページに OpenID URL を表示',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID 利用者情報の更新',
 	'prefs-openid-associated-openids' => '{{SITENAME}}へのログインに使用する OpenID',
 	'prefs-openid-trusted-sites' => '信頼済みサイト',
-	'openid-hide-openid-label' => 'OpenID でログインしている場合に、あなたの OpenID をあなたの利用者ページで表示しない。',
-	'openid-userinfo-update-on-login-label' => 'ログインするたびに、次の情報を OpenID のペルソナから更新する:',
+	'prefs-openid-local-identity' => '他のサイトへのログインに使用する OpenID',
+	'openid-hide-openid-label' => 'OpenID でログインしている場合に、OpenID を利用者ページに表示しない',
+	'openid-show-openid-url-on-userpage-always' => 'あなたの OpenID が利用者ページに常に表示されます。',
+	'openid-show-openid-url-on-userpage-never' => 'あなたの OpenID が利用者ページに表示されることはありません。',
+	'openid-userinfo-update-on-login-label' => 'ログインするたびに OpenID ペルソナの内容をもとに自動的に更新するプロフィール情報:',
 	'openid-associated-openids-label' => 'あなたのアカウントに関連付けられた OpenID:',
 	'openid-urls-action' => '操作',
 	'openid-urls-registration' => '登録日時',
 	'openid-urls-delete' => '削除',
 	'openid-add-url' => '自分のアカウントに新しい OpenID を追加',
+	'openid-trusted-sites-label' => 'OpenID を使用してログインした信頼済みサイト:',
 	'openid-trusted-sites-table-header-column-url' => '信頼済みサイト',
+	'openid-trusted-sites-table-header-column-action' => '操作',
+	'openid-trusted-sites-delete-link-action-text' => '削除',
+	'openid-trusted-sites-delete-all-link-action-text' => '信頼済みサイトをすべて削除',
+	'openid-trusted-sites-delete-confirmation-page-title' => '信頼済みサイトの削除',
+	'openid-trusted-sites-delete-confirmation-question' => '「{{int:openid-trusted-sites-delete-confirmation-button-text}}」ボタンをクリックすると、信頼済みサイト一覧から「$1」を除去します。',
+	'openid-trusted-sites-delete-all-confirmation-question' => '「{{int:openid-trusted-sites-delete-confirmation-button-text}}」ボタンをクリックすると、利用者プロフィールから信頼済みサイトをすべて除去します。',
+	'openid-trusted-sites-delete-confirmation-button-text' => '確認',
+	'openid-trusted-sites-delete-confirmation-success-text' => '信頼済みサイト一覧から「$1」を除去しました。',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => '利用者プロフィールから、以前登録した信頼済みサイトをすべて除去しました。',
+	'openid-local-identity' => 'あなたの OpenID:',
 	'openid-login-or-create-account' => 'ログインまたは新規アカウント作成',
-	'openid-provider-label-openid' => 'あなたの OpenID URL を入力します',
-	'openid-provider-label-google' => 'あなたの Google アカウントを使用してログインする',
-	'openid-provider-label-yahoo' => 'あなたの Yahoo アカウントを使用してログインする',
-	'openid-provider-label-aol' => 'あなたの AOL スクリーンネームを入力します',
-	'openid-provider-label-wmflabs' => 'あなたの Wmflabs アカウントを使用してログインする',
-	'openid-provider-label-other-username' => 'あなたの $1 での利用者名を入力',
+	'openid-provider-label-openid' => 'あなたの OpenID URL を入力してください',
+	'openid-provider-label-google' => 'あなたの Google アカウントを使用してログインしてください',
+	'openid-provider-label-yahoo' => 'あなたの Yahoo アカウントを使用してログインしてください',
+	'openid-provider-label-aol' => 'あなたの AOL スクリーンネームを入力してください',
+	'openid-provider-label-wmflabs' => 'あなたの Wmflabs アカウントを使用してログインしてください',
+	'openid-provider-label-other-username' => 'あなたの $1 でのユーザー名を入力してください',
 	'specialpages-group-openid' => 'OpenID のサービスページとステータス情報',
 	'right-openid-converter-access' => 'OpenID を使用するアカウントを追加/変換',
 	'right-openid-dashboard-access' => 'OpenID ダッシュボードに標準アクセス',
@@ -3729,7 +3985,7 @@ $messages['ka'] = array(
 	'openidoptional' => 'არასავალდებულო',
 	'openidrequired' => 'სავალდებულო',
 	'openidnickname' => 'მეტსახელი',
-	'openidfullname' => 'სრული სახელი',
+	'openidfullname' => 'სრული სახელი', # Fuzzy
 	'openidemail' => 'ელ. ფოსტის მისამართი',
 	'openidlanguage' => 'ენა',
 	'openidtimezone' => 'სასაათო სარტყელი',
@@ -3737,7 +3993,7 @@ $messages['ka'] = array(
 	'openidchooseinstructions' => 'ყველა მომხმარებელს უნდა გქონდეს მეტსახელი;
 თქვენ შეგიძლიათ აირჩიოთ ქვემოთ მოცემულიდან ერთ-ერთი.',
 	'openidchoosenick' => 'თქვენი მეტსახელი ($1)',
-	'openidchoosefull' => 'თქვენი სრული სახელი ($1)',
+	'openidchoosefull' => 'თქვენი სრული სახელი ($1)', # Fuzzy
 	'openidchooseurl' => 'სახელი, მიღებული თქვენი OpenID-დან ($1)',
 	'openidchooseauto' => 'ავტომატურად შექმნილი სახელი ($1)',
 	'openidchoosemanual' => 'სახელი თქვენი არჩევანით:',
@@ -3762,7 +4018,7 @@ $messages['ka'] = array(
 	'openid-openids-were-not-merged' => 'OpenID(-ები) არ გაერთიანდა ანგარიშების შერწყმისას.',
 	'prefs-openid-hide-openid' => 'თქვენი მომხმარებლის გვერდზე OpenID-ის URL-ის დამალვა, თუ თქვენ შეხვედით OpenID-ის საშუალებით.',
 	'openid-hide-openid-label' => 'თქვენი მომხმარებლის გვერდზე OpenID-ის URL-ის დამალვა, თუ თქვენ შეხვედით OpenID-ის საშუალებით.',
-	'openid-userinfo-update-on-login-label' => 'შემდეგი ინფორმაციის განახლება ჩემ შესახებ OpenID-ით ყოველ ჯერზე, როდესაც შევალ სისტემაში:',
+	'openid-userinfo-update-on-login-label' => 'შემდეგი ინფორმაციის განახლება ჩემ შესახებ OpenID-ით ყოველ ჯერზე, როდესაც შევალ სისტემაში:', # Fuzzy
 	'openid-associated-openids-label' => 'თქვენ ანგარიშთან დაკავშირებული OpenID-ები:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'მოქმედება',
@@ -3816,7 +4072,7 @@ $messages['km'] = array(
 	'openidoptional' => 'ជាជម្រើស',
 	'openidrequired' => 'ត្រូវការជាចាំបាច់',
 	'openidnickname' => 'ឈ្មោះហៅក្រៅ',
-	'openidfullname' => 'ឈ្មោះពេញ',
+	'openidfullname' => 'ឈ្មោះពេញ', # Fuzzy
 	'openidemail' => 'អាសយដ្ឋានអ៊ីមែល',
 	'openidlanguage' => 'ភាសា',
 	'openidtimezone' => 'ល្វែងម៉ោង',
@@ -3825,7 +4081,7 @@ $messages['km'] = array(
 
 អ្នកអាចជ្រើសរើសពីក្នុងជម្រើសខាងក្រោម។',
 	'openidchoosenick' => 'ឈ្មោះហៅក្រៅរបស់អ្នក ($1)',
-	'openidchoosefull' => 'ឈ្មោះពេញ​របស់អ្នក ($1)',
+	'openidchoosefull' => 'ឈ្មោះពេញ​របស់អ្នក ($1)', # Fuzzy
 	'openidchooseurl' => 'ឈ្មោះដែលយកពី OpenID របស់អ្នក ($1)',
 	'openidchooseauto' => 'ឈ្មោះបង្កើតស្វ័យប្រវត្តិ ($1)',
 	'openidchoosemanual' => 'ឈ្មោះសំរាប់អោយអ្នកជ្រើយយក៖',
@@ -3896,7 +4152,7 @@ $messages['ko'] = array(
 	'openidoptional' => '선택 사항',
 	'openidrequired' => '필수',
 	'openidnickname' => '별명',
-	'openidfullname' => '전체 이름',
+	'openidfullname' => '전체 이름', # Fuzzy
 	'openidemail' => '메일 주소',
 	'openidlanguage' => '언어',
 	'openidtimezone' => '시간대',
@@ -3904,7 +4160,7 @@ $messages['ko'] = array(
 	'openidchooseinstructions' => '모든 사용자는 별명을 가져야 합니다.
 아래의 옵션 중 하나를 선택할 수 있습니다.',
 	'openidchoosenick' => '별명 ($1)',
-	'openidchoosefull' => '전체 이름 ($1)',
+	'openidchoosefull' => '전체 이름 ($1)', # Fuzzy
 	'openidchooseurl' => 'OpenID로 부터 선택한 이름 ($1)',
 	'openidchooseauto' => '자동 생성된 이름 ($1)',
 	'openidchoosemanual' => '선택한 이름:',
@@ -3949,7 +4205,7 @@ OpenID 없이 로그인 할 수 없습니다.',
 	'prefs-openid' => 'OpenID',
 	'prefs-openid-hide-openid' => 'OpenID로 로그인한 경우, 사용자 페이지에서 OpenID 정보를 보여주지 않습니다.',
 	'openid-hide-openid-label' => 'OpenID로 로그인한 경우, 사용자 페이지에서 OpenID 정보를 보여주지 않습니다.',
-	'openid-userinfo-update-on-login-label' => '로그인 시 업데이트 할 OpenID 정보:',
+	'openid-userinfo-update-on-login-label' => '로그인 시 업데이트 할 OpenID 정보:', # Fuzzy
 	'openid-associated-openids-label' => '현재 연결된 OpenID 계정 목록:',
 	'openid-urls-url' => 'URL 주소',
 	'openid-urls-action' => '동작',
@@ -4023,7 +4279,7 @@ Ding Metmaachersigg hehe un Ding OpenID-URL sinn_er beeds: $1',
 	'openidoptional' => 'Nit nüdesch',
 	'openidrequired' => 'Nüdesch',
 	'openidnickname' => 'Spetznam',
-	'openidfullname' => 'Der janze Name',
+	'openidfullname' => 'Der janze Name', # Fuzzy
 	'openidemail' => 'De e-mail Address',
 	'openidlanguage' => 'Schprooch',
 	'openidtimezone' => 'Ziggzohn',
@@ -4031,7 +4287,7 @@ Ding Metmaachersigg hehe un Ding OpenID-URL sinn_er beeds: $1',
 	'openidchooseinstructions' => 'Jede Metmaacher bruch enne Spetznam,
 Do kannß Der der Dinge unge druß üßsöke.',
 	'openidchoosenick' => 'Dinge Spezname ($1)',
-	'openidchoosefull' => 'Dinge komplätte Name ($1)',
+	'openidchoosefull' => 'Dinge komplätte Name ($1)', # Fuzzy
 	'openidchooseurl' => 'Enne Name uß Dinge OpenID eruß jejreffe ($1)',
 	'openidchooseauto' => 'Enne automattesch zerääsch jemaate Name ($1)',
 	'openidchoosemanual' => 'Ene Name, dä De Der sellver ußjedaach un jejovve häs:',
@@ -4085,7 +4341,7 @@ Ohne <i lang="en">OpenID</i> künnts De nit mieh enlogge.',
 	'prefs-openid' => '<i lang="en">OpenID</i>',
 	'prefs-openid-hide-openid' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.',
 	'openid-hide-openid-label' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.',
-	'openid-userinfo-update-on-login-label' => 'Donn jedesmol wann_esch hee enloggen, di Enfomazjuhne övver mesch heh noh vun <i lang="en">OpenID</i> op der neuste Stand bränge:',
+	'openid-userinfo-update-on-login-label' => 'Donn jedesmol wann_esch hee enloggen, di Enfomazjuhne övver mesch heh noh vun <i lang="en">OpenID</i> op der neuste Stand bränge:', # Fuzzy
 	'openid-associated-openids-label' => 'De <i lang="en">OpenIDs</i>, di jez met Dinge Aanmeldung heh verbonge sin:',
 	'openid-urls-url' => 'de URL',
 	'openid-urls-action' => 'Akßuhn',
@@ -4144,14 +4400,14 @@ En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#
 	'openidoptional' => 'Facultatif',
 	'openidrequired' => 'Obligatoresch',
 	'openidnickname' => 'Spëtznumm',
-	'openidfullname' => 'Ganzen Numm',
+	'openidfullname' => 'Richtegen Numm',
 	'openidemail' => 'E-Mailadress',
 	'openidlanguage' => 'Sprooch',
 	'openidtimezone' => 'Zäitzone',
 	'openidchooselegend' => 'Eraussiche vum Benotzernumm a vum Benotzerkont',
 	'openidchooseinstructions' => 'All Benotzer brauchen e Spëtznumm; Dir kënnt iech ee vun de Méiglechkeeten ënnendrënner auswielen.',
 	'openidchoosenick' => 'Äre Spëtznumm ($1)',
-	'openidchoosefull' => 'Äre ganzen Numm ($1)',
+	'openidchoosefull' => 'Äre richtegen Numm ($1)',
 	'openidchooseurl' => 'En Numm gouf vun ärer OpenID ($1) geholl',
 	'openidchooseauto' => 'En Numm deen automatesch generéiert gouf ($1)',
 	'openidchoosemanual' => 'En Numm vun Ärer Wiel:',
@@ -4191,13 +4447,14 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'prefs-openid-hide-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
 	'prefs-openid-trusted-sites' => 'Siten, deenen Dir traut',
 	'openid-hide-openid-label' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
-	'openid-userinfo-update-on-login-label' => "D'Informatioune vu dësem OpenID-Kont all Kéier aktualiséiere wann ech mech aloggen",
+	'openid-userinfo-update-on-login-label' => "D'Informatioune vu dësem OpenID-Kont all Kéier aktualiséiere wann ech mech aloggen", # Fuzzy
 	'openid-associated-openids-label' => 'OpendIden déi mat Ärem Benotzerkont asoziéiert sinn',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Aktioun',
 	'openid-urls-delete' => 'Läschen',
 	'openid-add-url' => 'Eng nei OpenID bäi Äre Benotzerkont derbäisetzen',
 	'openid-trusted-sites-table-header-column-url' => 'Siten, deenen Dir traut',
+	'openid-local-identity' => 'Är OpenID:',
 	'openid-login-or-create-account' => 'Loggt Iech an oder maacht en neie Benotzerkont op',
 	'openid-provider-label-openid' => 'Gitt Är OpenID URL un',
 	'openid-provider-label-google' => 'Loggt Iech mat Ärem Goggle-Benotzerkont an',
@@ -4205,6 +4462,7 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'openid-provider-label-aol' => 'Gitt Ären AOL Numm un',
 	'openid-provider-label-other-username' => 'Gitt Äre(n) $1 Benotzernumm un',
 	'openid-dashboard-number-openid-users' => 'Zuel vun de Benotzer mat OpenID',
+	'openid-dashboard-number-users-without-openid' => 'Zuel vun de Benotzer ouni OpenID',
 );
 
 /** Limburgish (Limburgs)
@@ -4299,7 +4557,7 @@ $messages['mk'] = array(
 	'openidoptional' => 'Незадолжително',
 	'openidrequired' => 'Задолжително',
 	'openidnickname' => 'Прекар',
-	'openidfullname' => 'Полно име',
+	'openidfullname' => 'Вистинско име',
 	'openidemail' => 'Е-пошта',
 	'openidlanguage' => 'Јазик',
 	'openidtimezone' => 'Часовен појас',
@@ -4307,7 +4565,7 @@ $messages['mk'] = array(
 	'openidchooseinstructions' => 'Сите корисници треба да имаат прекар;
 можете да изберете едно од долунаведените предлози:',
 	'openidchoosenick' => 'Вашиот прекар ($1)',
-	'openidchoosefull' => 'Вашето полно име ($1)',
+	'openidchoosefull' => 'Вашето вистинско име ($1)',
 	'openidchooseurl' => 'Име преземено од вашиот OpenID ($1)',
 	'openidchooseauto' => 'Автоматски создадено име ($1)',
 	'openidchoosemanual' => 'Име по избор:',
@@ -4353,8 +4611,11 @@ OpenID ви овозможува да се најавувате на многу 
 	'prefs-openid-userinfo-update-on-login' => 'Поднова на информациите на корисник на OpenID',
 	'prefs-openid-associated-openids' => 'Вашите OpenID-сметки за најавување на {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Мрежни места од доверба',
+	'prefs-openid-local-identity' => 'Вашиот OpenID за најава на други мрежни места',
 	'openid-hide-openid-label' => 'Скријте ја вашата OpenID URL адреса на вашата корисничката страница, ако се најавувате со OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Ажурирајте ги следниве информации од OpenID секојпат кога ќе се најавам:',
+	'openid-show-openid-url-on-userpage-always' => 'Вашиот OpenID секогаш стои на корисничката страница кога ќе ја посетите.',
+	'openid-show-openid-url-on-userpage-never' => 'Вашиот OpenID никогаш не се прикажува на корисничката страница.',
+	'openid-userinfo-update-on-login-label' => 'Полињата за профилни информации што автоматски се подновуваат од OpenID-сметката секојпат кога ќе се најавите:',
 	'openid-associated-openids-label' => 'OpenID поврзани со вашата сметка:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Дејство',
@@ -4363,6 +4624,16 @@ OpenID ви овозможува да се најавувате на многу 
 	'openid-add-url' => 'Додај нов OpenID кон сметката',
 	'openid-trusted-sites-label' => 'Мрежните места на коишто им верувате и кајшто го имате користено вашиот OpenID за најава:',
 	'openid-trusted-sites-table-header-column-url' => 'Мрежни места од доверба',
+	'openid-trusted-sites-table-header-column-action' => 'Дејство',
+	'openid-trusted-sites-delete-link-action-text' => 'Избриши',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Избриши ги сите доверливи мреж. места',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Бришење на доверливи мреж. места',
+	'openid-trusted-sites-delete-confirmation-question' => 'Стискајќи на копчето „{{int:openid-trusted-sites-delete-confirmation-button-text}}“ ќе го отстраните „$1“ од списокот на мрежни места од доверба.',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'Стискајќи на копчето „{{int:openid-trusted-sites-delete-confirmation-button-text}}“ ќе ги сите мрежни места од доверба што се наведени на профилот.',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Потврди',
+	'openid-trusted-sites-delete-confirmation-success-text' => '„$1“ е успешно отстрането од списокот на доверливи мрежни места.',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Сите мрежни места од доверба се успешно отстранети од списокот на профилот.',
+	'openid-local-identity' => 'Вашиот OpenID:',
 	'openid-login-or-create-account' => 'Најавете се или создајте нова сметка',
 	'openid-provider-label-openid' => 'Внесете ја вашата OpenID URL адреса',
 	'openid-provider-label-google' => 'Најавете се со вашата сметка на Google',
@@ -4468,13 +4739,13 @@ $messages['mr'] = array(
 	'openidoptional' => 'वैकल्पिक',
 	'openidrequired' => 'आवश्यक',
 	'openidnickname' => 'टोपणनाव',
-	'openidfullname' => 'पूर्णनाव',
+	'openidfullname' => 'पूर्णनाव', # Fuzzy
 	'openidemail' => 'इमेल पत्ता',
 	'openidlanguage' => 'भाषा',
 	'openidtimezone' => 'वेळक्षेत्र',
 	'openidchooseinstructions' => 'सर्व सदस्यांना टोपणनाव असणे आवश्यक आहे;
 तुम्ही खाली दिलेल्या नावांमधून एक निवडू शकता.',
-	'openidchoosefull' => 'तुमचे पूर्ण नाव ($1)',
+	'openidchoosefull' => 'तुमचे पूर्ण नाव ($1)', # Fuzzy
 	'openidchooseurl' => 'तुमच्या ओपनID मधून घेतलेले नाव ($1)',
 	'openidchooseauto' => 'एक आपोआप तयार झालेले नाव ($1)',
 	'openidchoosemanual' => 'तुमच्या आवडीचे नाव:',
@@ -4553,7 +4824,7 @@ Kata laluan akaun pilihan boleh ditambahkan ke dalam [[Special:Preferences#mw-pr
 	'openidoptional' => 'Pilihan',
 	'openidrequired' => 'Wajib',
 	'openidnickname' => 'Nama timangan',
-	'openidfullname' => 'Nama penuh',
+	'openidfullname' => 'Nama penuh', # Fuzzy
 	'openidemail' => 'Alamat e-mel',
 	'openidlanguage' => 'Bahasa',
 	'openidtimezone' => 'Zon waktu',
@@ -4561,7 +4832,7 @@ Kata laluan akaun pilihan boleh ditambahkan ke dalam [[Special:Preferences#mw-pr
 	'openidchooseinstructions' => 'Semua pengguna memerlukan nama timangan;
 anda boleh memilih satu daripada pilihan-pilihan berikut.',
 	'openidchoosenick' => 'Nama timangan anda ($1)',
-	'openidchoosefull' => 'Nama penuh anda ($1)',
+	'openidchoosefull' => 'Nama penuh anda ($1)', # Fuzzy
 	'openidchooseurl' => 'Nama yang dipilih daripada OpenID anda ($1)',
 	'openidchooseauto' => 'Nama janaan automatik ($1)',
 	'openidchoosemanual' => 'Nama pilihan anda:',
@@ -4605,7 +4876,7 @@ Anda tidak boleh log masuk tanpa OpenID.',
 	'openid-openids-were-not-merged' => 'OpenID tidak digabungkan sekali ketika akaun-akaun pengguna digabungkan.',
 	'prefs-openid-hide-openid' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.',
 	'openid-hide-openid-label' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Kemaskinikan maklumat berikut dari persona OpenID setiap kali saya log masuk:',
+	'openid-userinfo-update-on-login-label' => 'Kemaskinikan maklumat berikut dari persona OpenID setiap kali saya log masuk:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID yang dikaitkan dengan akaun anda:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Tindakan',
@@ -4717,14 +4988,14 @@ Vennligst kontakt en [[Special:ListUsers/sysop|administrator]].',
 	'openidoptional' => 'Valgfri',
 	'openidrequired' => 'Påkrevd',
 	'openidnickname' => 'Kallenavn',
-	'openidfullname' => 'Fullt navn',
+	'openidfullname' => 'Fullt navn', # Fuzzy
 	'openidemail' => 'E-postadresse',
 	'openidlanguage' => 'Språk',
 	'openidtimezone' => 'Tidssone',
 	'openidchooselegend' => 'Velg brukernavn', # Fuzzy
 	'openidchooseinstructions' => 'Alle brukere må ha et kallenavn; du kan velge blant valgene nedenfor.',
 	'openidchoosenick' => 'Ditt kallenavn ($1)',
-	'openidchoosefull' => 'Fullt navn ($1)',
+	'openidchoosefull' => 'Fullt navn ($1)', # Fuzzy
 	'openidchooseurl' => 'Et navn tatt fra din OpenID ($1)',
 	'openidchooseauto' => 'Et automatisk opprettet navn ($1)',
 	'openidchoosemanual' => 'Et valgfritt navn:',
@@ -4767,7 +5038,7 @@ Du ville ikke kunne logge inn uten en OpenID.',
 	'openiddelete-error' => 'En feil oppsto i prosessen med å fjerne OpenID-en fra din konto.',
 	'prefs-openid-hide-openid' => 'Skjul OpenID på brukersiden din om du logger inn med en.',
 	'openid-hide-openid-label' => 'Skjul OpenID på brukersiden din om du logger inn med en.',
-	'openid-userinfo-update-on-login-label' => 'Oppdater den følgende informasjonen fra OpenID-persona hver gang jeg logger inn:',
+	'openid-userinfo-update-on-login-label' => 'Oppdater den følgende informasjonen fra OpenID-persona hver gang jeg logger inn:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-er knyttet til din brukerkonto:',
 	'openid-urls-action' => 'Handling',
 	'openid-urls-delete' => 'Slett',
@@ -4838,14 +5109,14 @@ Optioneel kunt u een wachtwoord instellen voor deze gebruiker in uw [[Special:Pr
 	'openidoptional' => 'Optioneel',
 	'openidrequired' => 'Vereist',
 	'openidnickname' => 'Gebruikersnaam',
-	'openidfullname' => 'Volledige naam',
+	'openidfullname' => 'Volledige naam', # Fuzzy
 	'openidemail' => 'E-mailadres',
 	'openidlanguage' => 'Taal',
 	'openidtimezone' => 'Tijdzone',
 	'openidchooselegend' => 'Gebruikersnaamkeuze',
 	'openidchooseinstructions' => 'Alle gebruikers moeten een gebruikersnaam kiezen. U kunt er een kiezen uit de onderstaande opties.',
 	'openidchoosenick' => 'Uw bijnaam ($1)',
-	'openidchoosefull' => 'Uw volledige naam ($1)',
+	'openidchoosefull' => 'Uw volledige naam ($1)', # Fuzzy
 	'openidchooseurl' => 'Een naam uit uw OpenID ($1)',
 	'openidchooseauto' => 'Een automatisch samengestelde naam ($1)',
 	'openidchoosemanual' => 'Een te kiezen naam:',
@@ -4889,7 +5160,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-openids-were-not-merged' => "Bij het samenvoegen van de gebruikers zijn een of meer OpenID's niet samengevoegd.",
 	'prefs-openid-hide-openid' => 'Bij aanmelden met OpenID, uw OpenID op uw gebruikerspagina verbergen.',
 	'openid-hide-openid-label' => 'Bij aanmelden met OpenID, uw OpenID op uw gebruikerspagina verbergen.',
-	'openid-userinfo-update-on-login-label' => 'Iedere keer als ik aanmeld de volgende informatie vanuit de OpenID-gebruiker bijwerken:',
+	'openid-userinfo-update-on-login-label' => 'Iedere keer als ik aanmeld de volgende informatie vanuit de OpenID-gebruiker bijwerken:', # Fuzzy
 	'openid-associated-openids-label' => "Aan uw gebruiker gekoppelde OpenID's:",
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Handeling',
@@ -4953,14 +5224,14 @@ Kontakt ein [[Special:ListUsers/sysop|administrator]].',
 	'openidoptional' => 'Valfri',
 	'openidrequired' => 'Påkravd',
 	'openidnickname' => 'Kallenamn',
-	'openidfullname' => 'Fullt namn',
+	'openidfullname' => 'Fullt namn', # Fuzzy
 	'openidemail' => 'E-postadressa',
 	'openidlanguage' => 'Språk',
 	'openidtimezone' => 'Tidssone',
 	'openidchooselegend' => 'Val av brukarnamn', # Fuzzy
 	'openidchooseinstructions' => 'All brukarar må ha eit kallenamn; du kan velja mellom vala nedanfor.',
 	'openidchoosenick' => 'Kallenamnet ditt ($1)',
-	'openidchoosefull' => 'Fullt namn ($1)',
+	'openidchoosefull' => 'Fullt namn ($1)', # Fuzzy
 	'openidchooseurl' => 'Eit namn teke frå OpenID-en din ($1)',
 	'openidchooseauto' => 'Eit automatisk oppretta namn ($1)',
 	'openidchoosemanual' => 'Eit valfritt namn:',
@@ -4998,7 +5269,7 @@ Du ville ikkje ha kunna logga inn utan ein OpenID.',
 	'openiddelete-error' => 'Ein feil oppstod i prosessen med å fjerna OpenID frå kontoen din.',
 	'prefs-openid-hide-openid' => 'Gøym OpenID på brukarsida di om du loggar inn med ein.',
 	'openid-hide-openid-label' => 'Gøym OpenID på brukarsida di om du loggar inn med ein.',
-	'openid-userinfo-update-on-login-label' => 'Oppdatér den fylgjande informasjonen frå OpenID-persona kvar gong eg loggar inn',
+	'openid-userinfo-update-on-login-label' => 'Oppdatér den fylgjande informasjonen frå OpenID-persona kvar gong eg loggar inn', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-ar knytte til brukarkontoen din:',
 	'openid-urls-action' => 'Handling',
 	'openid-urls-delete' => 'Slett',
@@ -5042,12 +5313,12 @@ Metetz-vos en rapòrt amb l’[[Special:ListUsers/sysop|administrator]].",
 	'openidoptional' => 'Facultatiu',
 	'openidrequired' => 'Exigit',
 	'openidnickname' => 'Escais',
-	'openidfullname' => 'Nom complet',
+	'openidfullname' => 'Nom complet', # Fuzzy
 	'openidemail' => 'Adreça de corrièr electronic',
 	'openidlanguage' => 'Lenga',
 	'openidtimezone' => 'Zòna orària',
 	'openidchooseinstructions' => "Totes los utilizaires an besonh d'un escais ; ne podètz causir un a partir de la causida çaijós.",
-	'openidchoosefull' => 'Vòstre nom complet ($1)',
+	'openidchoosefull' => 'Vòstre nom complet ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nom es estat causit dempuèi vòstra OpenID ($1)',
 	'openidchooseauto' => 'Un nom creat automaticament ($1)',
 	'openidchoosemanual' => "Un nom qu'avètz causit :",
@@ -5084,7 +5355,7 @@ Vos poiretz pas pus connectar amb aquesta OpenID.",
 	'openiddelete-error' => "Una error es arribada pendent la supression de l'OpenID de vòstre compte.",
 	'prefs-openid-hide-openid' => "Amaga vòstra OpenID sus vòstra pagina d'utilizaire, se vos connectaz amb OpenID.",
 	'openid-hide-openid-label' => "Amaga vòstra OpenID sus vòstra pagina d'utilizaire, se vos connectaz amb OpenID.",
-	'openid-userinfo-update-on-login-label' => 'Metre a jorn las donadas seguentas dempuèi OpenID a cada còp que me connecti :',
+	'openid-userinfo-update-on-login-label' => 'Metre a jorn las donadas seguentas dempuèi OpenID a cada còp que me connecti :', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associadas amb vòstre compte :',
 	'openid-urls-action' => 'Accion',
 	'openid-urls-delete' => 'Suprimir',
@@ -5170,7 +5441,7 @@ Opcjonalne hasło do konta możesz dodać w swoim [[Special:Preferences#mw-prefs
 	'openidoptional' => 'Opcjonalnie',
 	'openidrequired' => 'Wymagane',
 	'openidnickname' => 'Nazwa użytkownika',
-	'openidfullname' => 'Imię i nazwisko',
+	'openidfullname' => 'Imię i nazwisko', # Fuzzy
 	'openidemail' => 'Adres e‐mail',
 	'openidlanguage' => 'Język',
 	'openidtimezone' => 'Strefa czasowa',
@@ -5178,7 +5449,7 @@ Opcjonalne hasło do konta możesz dodać w swoim [[Special:Preferences#mw-prefs
 	'openidchooseinstructions' => 'Wszyscy użytkownicy muszą mieć pseudonim.
 Możesz wybrać spośród propozycji podanych poniżej.',
 	'openidchoosenick' => 'Twoja nazwa konta użytkownika ($1)',
-	'openidchoosefull' => 'Twoje imię i nazwisko ($1)',
+	'openidchoosefull' => 'Twoje imię i nazwisko ($1)', # Fuzzy
 	'openidchooseurl' => 'Nazwa wybrana spośród OpenID ($1)',
 	'openidchooseauto' => 'Automatycznie utworzono nazwę użytkownika ($1)',
 	'openidchoosemanual' => 'Nazwa użytkownika wybrana przez Ciebie',
@@ -5222,7 +5493,7 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openid-openids-were-not-merged' => 'OpenID nie zostały połączone w trakcie scalania kont użytkownika.',
 	'prefs-openid-hide-openid' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.',
 	'openid-hide-openid-label' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Aktualizuj następujące informacje o mnie z OpenID przy każdym logowaniu',
+	'openid-userinfo-update-on-login-label' => 'Aktualizuj następujące informacje o mnie z OpenID przy każdym logowaniu', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID powiązane z Twoim kontem:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Akcja',
@@ -5284,7 +5555,7 @@ Na ciav opsional dël cont a peul esse giontà an sò [[Special:Preferences#mw-p
 	'openidoptional' => 'Opsional',
 	'openidrequired' => 'Obligatòri',
 	'openidnickname' => 'Stranòm',
-	'openidfullname' => 'Nòm complet',
+	'openidfullname' => 'Nòm complet', # Fuzzy
 	'openidemail' => 'Adrëssa ëd pòsta eletrònica',
 	'openidlanguage' => 'Lenga',
 	'openidtimezone' => 'Fus orari',
@@ -5292,7 +5563,7 @@ Na ciav opsional dël cont a peul esse giontà an sò [[Special:Preferences#mw-p
 	'openidchooseinstructions' => "Tùit j'utent a l'han dabzògn ëd në stranòm,
 a peul sern-ne un da j'opsion sì-sota.",
 	'openidchoosenick' => 'Tò stranòm ($1)',
-	'openidchoosefull' => 'Tò nòm complet ($1)',
+	'openidchoosefull' => 'Tò nòm complet ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nòm sërnù da tò OpenID ($1)',
 	'openidchooseauto' => 'Un nòm generà da sol ($1)',
 	'openidchoosemanual' => 'Un nòm sërnù da ti:',
@@ -5333,7 +5604,7 @@ A podrà pa intré sensa n'OpenID.",
 	'openid-openids-were-not-merged' => "J'OpenID a son pa stàit unì cand a son unisse ij cont d'utent.",
 	'prefs-openid-hide-openid' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.",
 	'openid-hide-openid-label' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.",
-	'openid-userinfo-update-on-login-label' => "Modifiché j'anformassion përsonaj sì-sota OpenID minca vira ch'i intro:",
+	'openid-userinfo-update-on-login-label' => "Modifiché j'anformassion përsonaj sì-sota OpenID minca vira ch'i intro:", # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associà con tò cont:',
 	'openid-urls-url' => "Adrëssa an sl'aragnà",
 	'openid-urls-action' => 'Assion',
@@ -5428,7 +5699,7 @@ Este OpenID pode ser gerido no separador do [[Special:Preferences#mw-prefsection
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Requerido',
 	'openidnickname' => 'Alcunha',
-	'openidfullname' => 'Nome completo',
+	'openidfullname' => 'Nome completo', # Fuzzy
 	'openidemail' => 'Correio electrónico',
 	'openidlanguage' => 'Língua',
 	'openidtimezone' => 'Fuso horário',
@@ -5436,7 +5707,7 @@ Este OpenID pode ser gerido no separador do [[Special:Preferences#mw-prefsection
 	'openidchooseinstructions' => 'Todos os utilizadores precisam de uma alcunha;
 pode escolher uma das opções abaixo.',
 	'openidchoosenick' => 'A sua alcunha ($1)',
-	'openidchoosefull' => 'O seu nome completo ($1)',
+	'openidchoosefull' => 'O seu nome completo ($1)', # Fuzzy
 	'openidchooseurl' => 'Um nome escolhido a partir do seu OpenID ($1)',
 	'openidchooseauto' => 'Um nome gerado automaticamente ($1)',
 	'openidchoosemanual' => 'Um nome à sua escolha:',
@@ -5479,7 +5750,7 @@ Sem um OpenID não se poderia autenticar.',
 	'openid-openids-were-not-merged' => 'Os OpenIDs não foram fundidos ao fundir as contas.',
 	'prefs-openid-hide-openid' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.',
 	'openid-hide-openid-label' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Actualizar a seguinte informação a partir do meu OpenID de cada vez que me autentico:',
+	'openid-userinfo-update-on-login-label' => 'Actualizar a seguinte informação a partir do meu OpenID de cada vez que me autentico:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associados à sua conta:',
 	'openid-urls-action' => 'Acção',
 	'openid-urls-delete' => 'Apagar',
@@ -5536,7 +5807,7 @@ Por favor, consulte um [[Special:ListUsers/sysop|administrator]].',
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Requerido',
 	'openidnickname' => 'Apelido',
-	'openidfullname' => 'Nome completo',
+	'openidfullname' => 'Nome completo', # Fuzzy
 	'openidemail' => 'Endereço de e-mail',
 	'openidlanguage' => 'Língua',
 	'openidtimezone' => 'Fuso horário',
@@ -5544,7 +5815,7 @@ Por favor, consulte um [[Special:ListUsers/sysop|administrator]].',
 	'openidchooseinstructions' => 'Todos os utilizadores precisam de um apelido;
 pode escolher uma das opções abaixo.',
 	'openidchoosenick' => 'Seu apelido ($1)',
-	'openidchoosefull' => 'O seu nome completo ($1)',
+	'openidchoosefull' => 'O seu nome completo ($1)', # Fuzzy
 	'openidchooseurl' => 'Um nome escolhido a partir do seu OpenID ($1)',
 	'openidchooseauto' => 'Um nome gerado automaticamente ($1)',
 	'openidchoosemanual' => 'Um nome à sua escolha:',
@@ -5587,7 +5858,7 @@ Você não poderia entrar sem um OpenID.',
 	'openiddelete-error' => 'Ocorreu um erro enquanto removia o OpenID de sua conta.',
 	'prefs-openid-hide-openid' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
 	'openid-hide-openid-label' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Atualizar a seguinte informação a partir da minha "persona" OpenID cada vez que me autentico',
+	'openid-userinfo-update-on-login-label' => 'Atualizar a seguinte informação a partir da minha "persona" OpenID cada vez que me autentico', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associadas à sua conta:',
 	'openid-urls-action' => 'Ação',
 	'openid-urls-delete' => 'Excluir',
@@ -5688,11 +5959,11 @@ $messages['roa-tara'] = array(
 	'openidoptional' => 'Opzionele',
 	'openidrequired' => 'Richieste',
 	'openidnickname' => 'Soprannome',
-	'openidfullname' => 'Nome comblete',
+	'openidfullname' => 'Nome comblete', # Fuzzy
 	'openidemail' => 'Indirizze e-mail',
 	'openidlanguage' => 'Lènghe',
 	'openidtimezone' => "Orarie d'a zone",
-	'openidchoosefull' => "'U nome comblete tue ($1)",
+	'openidchoosefull' => "'U nome comblete tue ($1)", # Fuzzy
 	'openidchoosemanual' => "Scacchie 'nu nome:",
 	'openidchooseusername' => "Nome de l'utende:",
 	'openidchoosepassword' => 'Passuord:',
@@ -5769,7 +6040,7 @@ $messages['ru'] = array(
 	'openidoptional' => 'необязательное',
 	'openidrequired' => 'обязательное',
 	'openidnickname' => 'Псевдоним',
-	'openidfullname' => 'Полное имя',
+	'openidfullname' => 'Полное имя', # Fuzzy
 	'openidemail' => 'Адрес эл. почты',
 	'openidlanguage' => 'Язык',
 	'openidtimezone' => 'Часовой пояс',
@@ -5777,7 +6048,7 @@ $messages['ru'] = array(
 	'openidchooseinstructions' => 'Каждый участник должен иметь псевдоним;
 вы можете выбрать один из представленных ниже.',
 	'openidchoosenick' => 'Ваш ник ($1)',
-	'openidchoosefull' => 'Ваше полное имя ($1)',
+	'openidchoosefull' => 'Ваше полное имя ($1)', # Fuzzy
 	'openidchooseurl' => 'Имя, полученное из вашего OpenID ($1)',
 	'openidchooseauto' => 'Автоматически созданное имя ($1)',
 	'openidchoosemanual' => 'Имя на ваш выбор:',
@@ -5820,7 +6091,7 @@ OpenID позволяет вам заходить на различные веб
 	'openid-openids-were-not-merged' => 'OpenID(s) не были объединены при слиянии учетных записей.',
 	'prefs-openid-hide-openid' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
 	'openid-hide-openid-label' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Обновлять следующую информацию обо мне через OpenID каждый раз, когда я представляюсь системе:',
+	'openid-userinfo-update-on-login-label' => 'Обновлять следующую информацию обо мне через OpenID каждый раз, когда я представляюсь системе:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID, связанные с Вашей учётной записью:',
 	'openid-urls-action' => 'Действие',
 	'openid-urls-registration' => 'Время регистрации',
@@ -5879,12 +6150,12 @@ Pi favuri addumanna cunzigghiu a nu [[Special:ListUsers/sysop|amministraturi]].'
 	'openidoptional' => 'Facultativu',
 	'openidrequired' => 'Addumannatu',
 	'openidnickname' => 'Nickname',
-	'openidfullname' => 'Nomu cumpretu',
+	'openidfullname' => 'Nomu cumpretu', # Fuzzy
 	'openidemail' => 'Nnirizzu e-mail',
 	'openidlanguage' => 'Lingua',
 	'openidchooseinstructions' => "Tutti l'utenti hannu di bisognu di nu nickname;
 ni poi pigghiari unu di chisti ccà di sècutu.",
-	'openidchoosefull' => 'Lu tò nomu cumpretu ($1)',
+	'openidchoosefull' => 'Lu tò nomu cumpretu ($1)', # Fuzzy
 	'openidchooseurl' => 'Nu nomu scigghiutu dû tò OpenID ($1)',
 	'openidchooseauto' => 'Nu nomu giniràtusi sulu ($1)',
 	'openidchoosemanual' => 'Nu nomu scigghiutu di tia:',
@@ -6012,14 +6283,14 @@ Prosím, poraďte sa so [[Special:ListUsers/sysop|správcom]] tejto webovej loka
 	'openidoptional' => 'Voliteľné',
 	'openidrequired' => 'Požadované',
 	'openidnickname' => 'Prezývka',
-	'openidfullname' => 'Plné meno',
+	'openidfullname' => 'Plné meno', # Fuzzy
 	'openidemail' => 'Emailová adresa',
 	'openidlanguage' => 'Jazyk',
 	'openidtimezone' => 'Časové pásmo',
 	'openidchooselegend' => 'Výber používateľského mena', # Fuzzy
 	'openidchooseinstructions' => 'Každý používateľ musí mať prezývku; môžete si vybrať z dolu uvedených možností.',
 	'openidchoosenick' => 'Vaša prezývka ($1)',
-	'openidchoosefull' => 'Vaše plné meno ($1)',
+	'openidchoosefull' => 'Vaše plné meno ($1)', # Fuzzy
 	'openidchooseurl' => 'Meno na základe vášho OpenID ($1)',
 	'openidchooseauto' => 'Automaticky vytvorené meno ($1)',
 	'openidchoosemanual' => 'Meno, ktoré si vyberiete:',
@@ -6060,7 +6331,7 @@ Bez OpenID by ste sa nemohli prihlásiť.',
 	'openiddelete-error' => 'Počas odstraňovania OpenIOD z vášho účtu sa vyskytla chyba.',
 	'prefs-openid-hide-openid' => 'Nezobrazovať váš OpenID na vašej používateľskej stránke ak sa prihlasujete pomocou OpenID.',
 	'openid-hide-openid-label' => 'Nezobrazovať váš OpenID na vašej používateľskej stránke ak sa prihlasujete pomocou OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Aktualizovať nasledovné informácie z OpenID identity vždy, keď sa prihlásim:',
+	'openid-userinfo-update-on-login-label' => 'Aktualizovať nasledovné informácie z OpenID identity vždy, keď sa prihlásim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID asociované s vašim účtom:',
 	'openid-urls-action' => 'Operácia',
 	'openid-urls-delete' => 'Zmazať',
@@ -6109,7 +6380,7 @@ Izbirno geslo računa lahko dodate v svojih [[Special:Preferences#mw-prefsection
 	'openidoptional' => 'Izbirno',
 	'openidrequired' => 'Zahtevano',
 	'openidnickname' => 'Vzdevek',
-	'openidfullname' => 'Polno ime',
+	'openidfullname' => 'Polno ime', # Fuzzy
 	'openidemail' => 'E-poštni naslov',
 	'openidlanguage' => 'Jezik',
 	'openidtimezone' => 'Časovni pas',
@@ -6117,7 +6388,7 @@ Izbirno geslo računa lahko dodate v svojih [[Special:Preferences#mw-prefsection
 	'openidchooseinstructions' => 'Vsi uporabniki potrebujejo vzdevek;
 svojega si lahko izberete med spodnjimi možnostmi.',
 	'openidchoosenick' => 'Vaš vzdevek ($1)',
-	'openidchoosefull' => 'Vaše polno ime ($1)',
+	'openidchoosefull' => 'Vaše polno ime ($1)', # Fuzzy
 	'openidchooseurl' => 'Ime vzeto iz vašega OpenID ($1)',
 	'openidchooseauto' => 'Samodejno ustvarjeno ime ($1)',
 	'openidchoosemanual' => 'Ime po vaši izbiri:',
@@ -6161,7 +6432,7 @@ Brez OpenID se ne boste mogli prijaviti.',
 	'openid-openids-were-not-merged' => 'OpenID(-ji) med združevanjem uporabniških računov niso bili združeni.',
 	'prefs-openid-hide-openid' => 'Skrijte svoj URL OpenID na svoji uporabniški strani, če se prijavite z OpenID.',
 	'openid-hide-openid-label' => 'Skrijte svoj URL OpenID na svoji uporabniški strani, če se prijavite z OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Posodobi naslednje informacije iz osebe Open ID vsakič, ko se prijavim:',
+	'openid-userinfo-update-on-login-label' => 'Posodobi naslednje informacije iz osebe Open ID vsakič, ko se prijavim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-ji, povezani z vašim računom:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Dejanje',
@@ -6222,7 +6493,7 @@ $messages['sr-ec'] = array(
 	'openidoptional' => 'Необавезно',
 	'openidrequired' => 'Обавезно',
 	'openidnickname' => 'Надимак',
-	'openidfullname' => 'Пуно име',
+	'openidfullname' => 'Пуно име', # Fuzzy
 	'openidemail' => 'Е-адреса',
 	'openidlanguage' => 'Језик',
 	'openidtimezone' => 'Временска зона',
@@ -6230,7 +6501,7 @@ $messages['sr-ec'] = array(
 	'openidchooseinstructions' => 'Сваки корисник треба да има надимак.
 Можете да изаберете једну од доленаведених могућности.',
 	'openidchoosenick' => 'Ваш надимак ($1)',
-	'openidchoosefull' => 'Ваше пуно име ($1)',
+	'openidchoosefull' => 'Ваше пуно име ($1)', # Fuzzy
 	'openidchooseurl' => 'Име преузето од вашег OpenID-ја ($1)',
 	'openidchooseauto' => 'Самостворено корисничко име ($1)',
 	'openidchoosemanual' => 'Изаберите корисничко име:',
@@ -6250,7 +6521,7 @@ $messages['sr-ec'] = array(
 	'prefs-openid' => 'OpenID',
 	'prefs-openid-hide-openid' => 'Сакријте своју адресу OpenID-а са корисничке странице ако се с њим пријављујете.',
 	'openid-hide-openid-label' => 'Сакријте своју адресу OpenID-а са корисничке странице ако се с њим пријављујете.',
-	'openid-userinfo-update-on-login-label' => 'Ажурирај следеће податке OpenID-а сваки пут када се пријавим:',
+	'openid-userinfo-update-on-login-label' => 'Ажурирај следеће податке OpenID-а сваки пут када се пријавим:', # Fuzzy
 	'openid-urls-url' => 'Адреса',
 	'openid-urls-action' => 'Радња',
 	'openid-urls-registration-date-time' => '$1',
@@ -6284,7 +6555,7 @@ Možete dodati i lozinku naloga u vašem [[Special:Preferences#mw-prefsection-pe
 	'openidoptional' => 'Neobavezno',
 	'openidrequired' => 'Obavezno',
 	'openidnickname' => 'Nadimak',
-	'openidfullname' => 'Puno ime',
+	'openidfullname' => 'Puno ime', # Fuzzy
 	'openidemail' => 'E-pošta',
 	'openidlanguage' => 'Jezik',
 	'openidtimezone' => 'Vremenska zona',
@@ -6292,7 +6563,7 @@ Možete dodati i lozinku naloga u vašem [[Special:Preferences#mw-prefsection-pe
 	'openidchooseinstructions' => 'Svaki korisnik treba da ima nadimak;
 Možete da izaberete jednu od opcija ispod.',
 	'openidchoosenick' => 'Vaš nadimak ($1)',
-	'openidchoosefull' => 'Vaše puno ime ($1)',
+	'openidchoosefull' => 'Vaše puno ime ($1)', # Fuzzy
 	'openidchooseurl' => 'Ime preuzeto od vašeg OpenID ($1)',
 	'openidchooseauto' => 'Automatski generisano korisničko ime ($1)',
 	'openidchoosemanual' => 'Izaberite korisničko ime:',
@@ -6312,7 +6583,7 @@ Možete da izaberete jednu od opcija ispod.',
 	'prefs-openid' => 'OpenID',
 	'prefs-openid-hide-openid' => 'Sakrijte svoj OpenID URL sa korisničke strane, ako se sa njim logujete.',
 	'openid-hide-openid-label' => 'Sakrijte svoj OpenID URL sa korisničke strane, ako se sa njim logujete.',
-	'openid-userinfo-update-on-login-label' => 'Aktualizuj sledeće informacije OpenID identiteta svaki put kad se ulogujem:',
+	'openid-userinfo-update-on-login-label' => 'Aktualizuj sledeće informacije OpenID identiteta svaki put kad se ulogujem:', # Fuzzy
 	'openid-urls-url' => 'Adresa',
 	'openid-urls-action' => 'Radnja',
 	'openid-urls-registration-date-time' => '$1',
@@ -6350,13 +6621,13 @@ Täl n [[Special:ListUsers/sysop|Administrator]] Beskeed.',
 	'openidoptional' => 'Optionoal',
 	'openidrequired' => 'Plicht',
 	'openidnickname' => 'Benutsernoome',
-	'openidfullname' => 'Fulboodigen Noome',
+	'openidfullname' => 'Fulboodigen Noome', # Fuzzy
 	'openidemail' => 'E-Mail-Adresse:',
 	'openidlanguage' => 'Sproake',
 	'openidtimezone' => 'Tiedzone',
 	'openidchooseinstructions' => 'Aal Benutsere benöödigje n Benutsernoome;
 du koast aan uut ju unnerstoundene Lieste uutwääle.',
-	'openidchoosefull' => 'Din fulboodigen Noome ($1)',
+	'openidchoosefull' => 'Din fulboodigen Noome ($1)', # Fuzzy
 	'openidchooseurl' => 'N Noome uut dien OpenID ($1)',
 	'openidchooseauto' => 'N automatisk moakeden Noome ($1)',
 	'openidchoosemanual' => 'N Noome fon dien Woal:',
@@ -6392,7 +6663,7 @@ Dät rakt fuul [http://wiki.openid.net/Public_OpenID_providers eepentelke OpenID
 	'openiddelete-error' => 'Bie dät Wächhoaljen fon ju OpenID fon din Benutserkonto is n Failer aptreeden.',
 	'prefs-openid-hide-openid' => 'Fersteet dien OpenID ap dien Benutsersiede, wan du die mäd OpenID anmäldest.',
 	'openid-hide-openid-label' => 'Fersteet dien OpenID ap dien Benutsersiede, wan du die mäd OpenID anmäldest.',
-	'openid-userinfo-update-on-login-label' => 'Ju foulgjende Information fon dät OpenID-Konto bie älke Login aktualisierje',
+	'openid-userinfo-update-on-login-label' => 'Ju foulgjende Information fon dät OpenID-Konto bie älke Login aktualisierje', # Fuzzy
 	'openid-urls-action' => 'Aktion',
 	'openid-urls-delete' => 'Läskje',
 	'openid-add-url' => 'Näien OpenID bietouföigje', # Fuzzy
@@ -6459,7 +6730,7 @@ Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Pr
 	'openidoptional' => 'Frivilligt',
 	'openidrequired' => 'Obligatoriskt',
 	'openidnickname' => 'Smeknamn',
-	'openidfullname' => 'Fullt namn',
+	'openidfullname' => 'Fullt namn', # Fuzzy
 	'openidemail' => 'E-postadress',
 	'openidlanguage' => 'Språk',
 	'openidtimezone' => 'Tidszon',
@@ -6467,7 +6738,7 @@ Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Pr
 	'openidchooseinstructions' => 'Alla användare måste ha ett användarnamn.
 Du kan välja ett från alternativen nedan.',
 	'openidchoosenick' => 'Smeknamn ($1)',
-	'openidchoosefull' => 'Fullständigt namn ($1)',
+	'openidchoosefull' => 'Fullständigt namn ($1)', # Fuzzy
 	'openidchooseurl' => 'Ett namn taget från din OpenID ($1)',
 	'openidchooseauto' => 'Ett automatiskt genererat namn ($1)',
 	'openidchoosemanual' => 'Valfritt namn:',
@@ -6510,7 +6781,7 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openid-openids-were-not-merged' => "Eventuella OpenID:n som varit kopplade till de sammanslagna kontona har ''inte'' slagits samman.",
 	'prefs-openid-hide-openid' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
 	'openid-hide-openid-label' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Uppdatera följande information från min OpenID-profil varje gång jag loggar in',
+	'openid-userinfo-update-on-login-label' => 'Uppdatera följande information från min OpenID-profil varje gång jag loggar in', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID:n som är kopplade till ditt konto:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Åtgärd',
@@ -6595,13 +6866,13 @@ $messages['te'] = array(
 	'openidoptional' => 'ఐచ్చికం',
 	'openidrequired' => 'తప్పనిసరి',
 	'openidnickname' => 'ముద్దుపేరు',
-	'openidfullname' => 'పూర్తిపేరు',
+	'openidfullname' => 'పూర్తిపేరు', # Fuzzy
 	'openidemail' => 'ఈ-మెయిల్ చిరునామా',
 	'openidlanguage' => 'భాష',
 	'openidtimezone' => 'కాలమానం',
 	'openidchooseinstructions' => 'సభ్యులందరికీ ముద్దు పేరు ఉండవలెను. 
 క్రింద పేర్కొన్న వాటిలో ఒకటి ఎంచుకోండి',
-	'openidchoosefull' => 'మీ పూర్తి పేరు ($1)',
+	'openidchoosefull' => 'మీ పూర్తి పేరు ($1)', # Fuzzy
 	'openidchooseurl' => 'మీ ఓపెన్ఐడీ నుండి తీసుకున్న పేరు ($1)',
 	'openidchoosemanual' => 'మీరు ఎన్నుకున్న పేరు:',
 	'openidchooseexisting' => 'ఈ వికీలో ఇప్పటికే ఉన్న ఖాతా',
@@ -6735,7 +7006,7 @@ Maaaring idagdag o hindi idagdag ang isang hudyat ng akawnt sa loob ng iyong [[S
 	'openidoptional' => 'Opsyonal (hindi talaga kailangan/maaaring wala nito)',
 	'openidrequired' => 'Kinakailangan',
 	'openidnickname' => 'Bansag',
-	'openidfullname' => 'Buong pangalan',
+	'openidfullname' => 'Buong pangalan', # Fuzzy
 	'openidemail' => 'Adres ng e-liham',
 	'openidlanguage' => 'Wika',
 	'openidtimezone' => 'Sona ng oras',
@@ -6743,7 +7014,7 @@ Maaaring idagdag o hindi idagdag ang isang hudyat ng akawnt sa loob ng iyong [[S
 	'openidchooseinstructions' => 'Lahat ng mga tagagamit ay kinakailangang may bansag;
 makakapili ka mula sa mga pagpipiliang nasa ibaba.',
 	'openidchoosenick' => 'Ang palayaw mo ($1)',
-	'openidchoosefull' => 'Ang buong pangalan mo ($1)',
+	'openidchoosefull' => 'Ang buong pangalan mo ($1)', # Fuzzy
 	'openidchooseurl' => 'Isang pangalang napulot (napili/nakuha) mula sa iyong OpenID ($1)',
 	'openidchooseauto' => 'Isang pangalang kusang nalikha ($1)',
 	'openidchoosemanual' => 'Isang pangalang ikaw ang pumili:',
@@ -6786,7 +7057,7 @@ Hindi ka maaaring makalagda na walang OpenID.',
 	'prefs-openid' => 'OpenID',
 	'prefs-openid-hide-openid' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.',
 	'openid-hide-openid-label' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Isapanahon ang sumusunod na kabatiran mula sa katauhang pang-OpenID sa bawat pagkakataong lalagda akong papasok:',
+	'openid-userinfo-update-on-login-label' => 'Isapanahon ang sumusunod na kabatiran mula sa katauhang pang-OpenID sa bawat pagkakataong lalagda akong papasok:', # Fuzzy
 	'openid-associated-openids-label' => 'Mga openID na may kaugnayan sa akawnt mo:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Galaw',
@@ -6844,7 +7115,7 @@ Lütfen bir [[Special:ListUsers/sysop|yöneticiye]] danışın.',
 	'openidoptional' => 'İsteğe Bağlı',
 	'openidrequired' => 'Gerekli',
 	'openidnickname' => 'Kullanıcı adı',
-	'openidfullname' => 'Tam ad',
+	'openidfullname' => 'Tam ad', # Fuzzy
 	'openidemail' => 'E-posta adresi',
 	'openidlanguage' => 'Dil',
 	'openidtimezone' => 'Saat dilimi',
@@ -6852,7 +7123,7 @@ Lütfen bir [[Special:ListUsers/sysop|yöneticiye]] danışın.',
 	'openidchooseinstructions' => 'Tüm kullanıcılar için bir kullanıcı adı gereklidir;
 aşağıdaki seçeneklerden birini seçebilirsiniz.',
 	'openidchoosenick' => 'Rumuzunuz ($1)',
-	'openidchoosefull' => 'Tam adınız ($1)',
+	'openidchoosefull' => 'Tam adınız ($1)', # Fuzzy
 	'openidchooseurl' => "OpenID'nizden bir isim alındı ($1)",
 	'openidchooseauto' => 'Otomatik oluşturulan bir isim ($1)',
 	'openidchoosemanual' => 'Tercihinizden bir isim:',
@@ -6895,7 +7166,7 @@ OpenID olmadan giriş yapamazsınız.",
 	'openiddelete-error' => 'OpenID hesabınızdan çıkarılırken bir hata oluştu.',
 	'prefs-openid-hide-openid' => 'Eğer OpenID ile giriş yaparsanız, kullanıcı sayfanızda OpenID URLnizi gizle.',
 	'openid-hide-openid-label' => 'Eğer OpenID ile giriş yaparsanız, kullanıcı sayfanızda OpenID URLnizi gizle.',
-	'openid-userinfo-update-on-login-label' => 'Her oturum açışımda OpenID karakterinden aşağıdaki bilgileri güncelle:',
+	'openid-userinfo-update-on-login-label' => 'Her oturum açışımda OpenID karakterinden aşağıdaki bilgileri güncelle:', # Fuzzy
 	'openid-associated-openids-label' => "Hesabınızla ilişkili OpenID'ler:",
 	'openid-urls-action' => 'Eylem',
 	'openid-urls-delete' => 'Sil',
@@ -6974,7 +7245,7 @@ $messages['uk'] = array(
 	'openidoptional' => "необов'язкове",
 	'openidrequired' => "обов'язкове",
 	'openidnickname' => 'Псевдонім',
-	'openidfullname' => "Повне ім'я",
+	'openidfullname' => "Повне ім'я", # Fuzzy
 	'openidemail' => 'Адреса ел. пошти',
 	'openidlanguage' => 'Мова',
 	'openidtimezone' => 'Часовий пояс',
@@ -6982,7 +7253,7 @@ $messages['uk'] = array(
 	'openidchooseinstructions' => 'Кожен користувач повинен мати псевдонім;
 ви можете вибрати один з представлених нижче.',
 	'openidchoosenick' => 'Ваш нік ($1)',
-	'openidchoosefull' => "Ваше повне ім'я ($1)",
+	'openidchoosefull' => "Ваше повне ім'я ($1)", # Fuzzy
 	'openidchooseurl' => 'Ім`я, отримане з вашого OpenID ($1)',
 	'openidchooseauto' => "Автоматично створене ім'я ($1)",
 	'openidchoosemanual' => "Ім'я на ваш вибір:",
@@ -7025,7 +7296,7 @@ OpenID дозволяє Вам заходити на різні сайти, не
 	'openid-openids-were-not-merged' => "OpenID не були об'єднані при об'єднанні облікових записів.",
 	'prefs-openid-hide-openid' => 'Приховувати ваш OpenID на вашій сторінці користувача, якщо ви ввійшли з допомогою OpenID.',
 	'openid-hide-openid-label' => 'Приховувати ваш OpenID на вашій сторінці користувача, якщо ви ввійшли з допомогою OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Оновлювати наступну інформацію про мене через OpenID щораз, коли я представляюся системі:',
+	'openid-userinfo-update-on-login-label' => 'Оновлювати наступну інформацію про мене через OpenID щораз, коли я представляюся системі:', # Fuzzy
 	'openid-associated-openids-label' => "OpenID, пов'язані з Вашим обліковим записом:",
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Дія',
@@ -7108,13 +7379,13 @@ Par piaser consulta un [[Special:ListUsers/sysop|aministrador]].',
 	'openidoptional' => 'Opzional',
 	'openidrequired' => 'Obligatorio',
 	'openidnickname' => 'Soranòme',
-	'openidfullname' => 'Nome par intiero',
+	'openidfullname' => 'Nome par intiero', # Fuzzy
 	'openidemail' => 'Indirisso de posta eletronica',
 	'openidlanguage' => 'Lengoa',
 	'openidtimezone' => 'Fuso orario',
 	'openidchooseinstructions' => 'Tuti i utenti i gà da verghe un soranòme;
 te pol tórghene uno da le opzioni seguenti.',
-	'openidchoosefull' => 'El to nome par intiero ($1)',
+	'openidchoosefull' => 'El to nome par intiero ($1)', # Fuzzy
 	'openidchooseurl' => 'Un nome sielto dal to OpenID ($1)',
 	'openidchooseauto' => 'Un nome generà automaticamente ($1)',
 	'openidchoosemanual' => 'Un nome a sielta tua:',
@@ -7147,7 +7418,7 @@ Ghe xe molti [//openid.net/get/ Provider OpenID], e te podaressi verghe zà un a
 	'openiddelete-button' => 'Va ben',
 	'prefs-openid-hide-openid' => 'Scondi el to OpenID su la to pàxena utente, se te fè el login con OpenID.',
 	'openid-hide-openid-label' => 'Scondi el to OpenID su la to pàxena utente, se te fè el login con OpenID.',
-	'openid-userinfo-update-on-login-label' => "Ajorna le seguenti informassion da l'utensa de OpenID ogni olta che me conéto:",
+	'openid-userinfo-update-on-login-label' => "Ajorna le seguenti informassion da l'utensa de OpenID ogni olta che me conéto:", # Fuzzy
 	'openid-urls-action' => 'Azion',
 	'openid-urls-delete' => 'Scancela',
 	'openid-add-url' => 'Zonta un OpenID novo', # Fuzzy
@@ -7215,14 +7486,14 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidoptional' => 'Tùy ý',
 	'openidrequired' => 'Bắt buộc',
 	'openidnickname' => 'Tên hiệu',
-	'openidfullname' => 'Tên đầy đủ',
+	'openidfullname' => 'Tên đầy đủ', # Fuzzy
 	'openidemail' => 'Địa chỉ thư điện tử',
 	'openidlanguage' => 'Ngôn ngữ',
 	'openidtimezone' => 'Múi giờ',
 	'openidchooselegend' => 'Lựa chọn tên người dùng và tài khoản',
 	'openidchooseinstructions' => 'Mọi người dùng cần có tên hiệu; bạn có thể chọn tên hiệu ở dưới.',
 	'openidchoosenick' => 'Tên hiệu của bạn ($1)',
-	'openidchoosefull' => 'Tên đầy đủ của bạn ($1)',
+	'openidchoosefull' => 'Tên đầy đủ của bạn ($1)', # Fuzzy
 	'openidchooseurl' => 'Tên bắt nguồn từ OpenID của bạn ($1)',
 	'openidchooseauto' => 'Tên tự động ($1)',
 	'openidchoosemanual' => 'Tên khác:',
@@ -7264,7 +7535,7 @@ Bạn sẽ không đăng nhập được dùng OpenID này.',
 	'openid-openids-were-not-merged' => 'Các OpenID không được hợp nhất lúc khi hợp nhất các tài khoản người dùng.',
 	'prefs-openid-hide-openid' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
 	'openid-hide-openid-label' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Cập nhật thông tin sau từ persona OpenID mỗi khi tôi đăng nhập:',
+	'openid-userinfo-update-on-login-label' => 'Cập nhật thông tin sau từ persona OpenID mỗi khi tôi đăng nhập:', # Fuzzy
 	'openid-associated-openids-label' => 'Các OpenID được gắn vào tài khoản của bạn:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Tác vụ',
@@ -7373,7 +7644,7 @@ $messages['zh-hans'] = array(
 	'openidoptional' => '可选',
 	'openidrequired' => '必选',
 	'openidnickname' => '昵称',
-	'openidfullname' => '全称',
+	'openidfullname' => '全称', # Fuzzy
 	'openidemail' => '电邮地址',
 	'openidlanguage' => '语言',
 	'openidtimezone' => '时区',
@@ -7381,7 +7652,7 @@ $messages['zh-hans'] = array(
 	'openidchooseinstructions' => '所有的用户都需要提供昵称；
 您可以从下面任选一个。',
 	'openidchoosenick' => '你的昵称 ($1)',
-	'openidchoosefull' => '你的全名（$1）',
+	'openidchoosefull' => '你的全名（$1）', # Fuzzy
 	'openidchooseurl' => '从你的OpenID获取的名称（$1）',
 	'openidchooseauto' => '自动生成的名称（$1）',
 	'openidchoosemanual' => '您选择的名称：',
@@ -7424,7 +7695,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-openids-were-not-merged' => '合并用户帐号时，OpenID 没有被合并。',
 	'prefs-openid-hide-openid' => 'OpenID登录时，在用户页隐藏OpenID。',
 	'openid-hide-openid-label' => 'OpenID登录时，在用户页隐藏OpenID。',
-	'openid-userinfo-update-on-login-label' => '每次登录时，都从OpenID的用户信息中更新以下信息。',
+	'openid-userinfo-update-on-login-label' => '每次登录时，都从OpenID的用户信息中更新以下信息。', # Fuzzy
 	'openid-associated-openids-label' => '和你的账号关联的OpenID：',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => '动作',
@@ -7496,7 +7767,7 @@ $messages['zh-hant'] = array(
 	'openidoptional' => '可選',
 	'openidrequired' => '必選',
 	'openidnickname' => '暱稱',
-	'openidfullname' => '全名',
+	'openidfullname' => '全名', # Fuzzy
 	'openidemail' => '電郵地址',
 	'openidlanguage' => '語言',
 	'openidtimezone' => '時區',
@@ -7504,7 +7775,7 @@ $messages['zh-hant'] = array(
 	'openidchooseinstructions' => '所有的用戶都需要提供暱稱；
 您可以從下面任選一個。',
 	'openidchoosenick' => '你的暱稱（$1）',
-	'openidchoosefull' => '您的全名（$1）',
+	'openidchoosefull' => '您的全名（$1）', # Fuzzy
 	'openidchooseurl' => '從您的 OpenID 得到的名稱（$1）',
 	'openidchooseauto' => '自動生成的名稱（$1）',
 	'openidchoosemanual' => '您選擇的名稱：',
@@ -7547,7 +7818,7 @@ OpenID 可以讓您不必使用不同的密碼登錄不同的站點。
 	'openid-openids-were-not-merged' => '合并用戶帳號時，OpenID 沒有被合并。',
 	'prefs-openid-hide-openid' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。',
 	'openid-hide-openid-label' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。',
-	'openid-userinfo-update-on-login-label' => '每次登入時，都從 OpenID 的使用者資料中更新以下資料。',
+	'openid-userinfo-update-on-login-label' => '每次登入時，都從 OpenID 的使用者資料中更新以下資料。', # Fuzzy
 	'openid-associated-openids-label' => '和你的帳號關聯的 OpenID：',
 	'openid-urls-action' => '動作',
 	'openid-urls-registration' => '註冊時間',
