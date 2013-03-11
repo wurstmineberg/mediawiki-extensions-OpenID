@@ -128,7 +128,10 @@ class OpenIDHooks {
 	 * @return string
 	 */
 	private static function getAssociatedOpenIDsTable( $user ) {
-		global $wgLang;
+		global $wgLang, $wgOpenIDLoginLogoUrl;
+
+		$openIDLogo = Xml::element( 'img', array( 'src' => $wgOpenIDLoginLogoUrl, 'alt' => 'OpenID' ), '' );
+
 		$openid_urls_registration = SpecialOpenID::getUserOpenIDInformation( $user );
 		$delTitle = SpecialPage::getTitleFor( 'OpenIDConvert', 'Delete' );
 
@@ -150,7 +153,7 @@ class OpenIDHooks {
 			$rows .= Xml::tags( 'tr', array(),
 				Xml::tags( 'td',
 					array(),
-					Xml::element( 'a', array( 'href' => $url_reg->uoi_openid ), $url_reg->uoi_openid )
+					$openIDLogo . "&nbsp;" . Xml::element( 'a', array( 'href' => $url_reg->uoi_openid ), $url_reg->uoi_openid )
 				) .
 				Xml::tags( 'td',
 					array(),

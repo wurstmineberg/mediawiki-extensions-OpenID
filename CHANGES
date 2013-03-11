@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+3.05  20130311  show OpenID icons also in the table of associated OpenIDs in OpenID preferences
 3.04  20130310  fix bug45323 add deletion of trusted sites to OpenID Preferences
 3.03  20130310  fix bug45928 change deprecated wgAllowRealName to wgHiddenPrefs checks
 3.02  20130309  when used as Provider, show the own OpenID in OpenID preference tab
