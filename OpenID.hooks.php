@@ -18,7 +18,9 @@ class SpecialOpenIDUserLogin extends SpecialRedirectToSpecial {
 
 class OpenIDHooks {
 	public static function onSpecialPage_initList( &$list ) {
-		global $wgOpenIDOnly, $wgOpenIDClientOnly, $wgSpecialPageGroups;
+		global $wgOpenIDOnly, $wgOpenIDClientOnly, $wgSpecialPageGroups, $wgOpenIDSmallLogoUrl;
+
+		$wgOpenIDSmallLogoUrl = self::getOpenIDSmallLogoUrl();
 
 		if ( $wgOpenIDOnly ) {
 			$list['Userlogin'] = 'SpecialOpenIDLogin';
@@ -128,9 +130,7 @@ class OpenIDHooks {
 	 * @return string
 	 */
 	private static function getAssociatedOpenIDsTable( $user ) {
-		global $wgLang, $wgOpenIDLoginLogoUrl;
-
-		$openIDLogo = Xml::element( 'img', array( 'src' => $wgOpenIDLoginLogoUrl, 'alt' => 'OpenID' ), '' );
+		global $wgLang;
 
 		$openid_urls_registration = SpecialOpenID::getUserOpenIDInformation( $user );
 		$delTitle = SpecialPage::getTitleFor( 'OpenIDConvert', 'Delete' );
@@ -153,7 +153,9 @@ class OpenIDHooks {
 			$rows .= Xml::tags( 'tr', array(),
 				Xml::tags( 'td',
 					array(),
-					$openIDLogo . "&nbsp;" . Xml::element( 'a', array( 'href' => $url_reg->uoi_openid ), $url_reg->uoi_openid )
+					self::getOpenIDSmallLogoUrlImageTag() .
+						"&nbsp;" .
+						Xml::element( 'a', array( 'href' => $url_reg->uoi_openid ), $url_reg->uoi_openid )
 				) .
 				Xml::tags( 'td',
 					array(),
@@ -261,7 +263,7 @@ class OpenIDHooks {
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
 		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs,
-			$wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient, $wgOpenIDLoginLogoUrl;
+			$wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient;
 
 		switch ( $wgOpenIDShowUrlOnUserPage ) {
 
@@ -333,14 +335,12 @@ class OpenIDHooks {
 
 		if ( !$wgOpenIDOnlyClient ) {
 
-			$openIDLogo = Xml::element( 'img', array( 'src' => $wgOpenIDLoginLogoUrl, 'alt' => 'OpenID' ), '' );
-
 			$preferences['openid-your-openid'] =
 				array(
 					'section' => 'openid/openid-local-identity',
 					'type' => 'info',
 					'label-message' => 'openid-local-identity',
-					'default' => $openIDLogo . "&nbsp;" . SpecialOpenIDServer::getLocalIdentityLink( $user ),
+					'default' => self::getOpenIDSmallLogoUrlImageTag() . "&nbsp;" . SpecialOpenIDServer::getLocalIdentityLink( $user ),
 					'raw' => true,
 				);
 
@@ -485,12 +485,36 @@ class OpenIDHooks {
 	/**
 	 * @return string
 	 */
+	private static function getOpenIDSmallLogoUrl() {
+		global $wgOpenIDSmallLogoUrl, $wgExtensionAssetsPath;
+
+		if ( !$wgOpenIDSmallLogoUrl ) {
+			return $wgExtensionAssetsPath . '/OpenID/skin/icons/openid-inputicon.png';
+		} else {
+			return $wgOpenIDSmallLogoUrl;
+		}
+
+	}
+
+	/**
+	 * @return string
+	 */
+	private static function getOpenIDSmallLogoUrlImageTag() {
+		return Xml::element( 'img',
+			array( 'src' => self::getOpenIDSmallLogoUrl(), 'alt' => 'OpenID' ),
+			''
+		);
+	}
+
+	/**
+	 * @return string
+	 */
 	private static function loginStyle() {
-		global $wgOpenIDLoginLogoUrl;
+		$openIDLogo = self::getOpenIDSmallLogoUrl();
 		return <<<EOS
 		<style type='text/css'>
 		li#pt-openidlogin {
-		  background: url($wgOpenIDLoginLogoUrl) top left no-repeat;
+		  background: url($openIDLogo) top left no-repeat;
 		  padding-left: 20px;
 		  text-transform: none;
 		}

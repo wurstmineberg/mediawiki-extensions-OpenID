@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.05 20130311' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.06 20130312' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -43,10 +43,10 @@ set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . g
 $wgOpenIDHideOpenIDLoginLink = false;
 
 /**
- * Location of the OpenID login logo. You can copy this to your server if you
- * want.
+ * Location (fully specified Url) of a small OpenID logo.
+ * When set to false (default), the built-in standard logo is used.
  */
-$wgOpenIDLoginLogoUrl = $wgExtensionAssetsPath . '/OpenID/skin/icons/openid-inputicon.png';
+$wgOpenIDSmallLogoUrl = false;
 
 /**
  * Whether to show the OpenID identity URL on a user's home page. Possible

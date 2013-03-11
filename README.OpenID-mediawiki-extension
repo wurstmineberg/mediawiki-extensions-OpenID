@@ -323,7 +323,7 @@ LocalSettings.php file. Please read carefully.
   the user navigates to Special:OpenIDLogin directly; it's simply
   cosmetic. This is mostly a backwards-compatibility option.
 
-* $wgOpenIDLoginLogoUrl -- Url of the OpenID login logo. Defaults to
+* $wgOpenIDSmallLogoUrl -- Url of the OpenID login logo. Defaults to
   'http://www.openid.net/login-bg.gif', but you may want to move it to
   a local URL, or an URL on a CDN, if that kind of thing floats your
   boat.

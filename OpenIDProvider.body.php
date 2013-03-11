@@ -41,8 +41,7 @@ class OpenIDProvider {
 	private function getButtonHTML( $classSize ) {
 		global $wgOpenIDShowProviderIcons;
 
-		if ( $wgOpenIDShowProviderIcons )
-		{
+		if ( $wgOpenIDShowProviderIcons ) {
 			return '<a id="openid_provider_' . $this->id . '_icon" title="' . $this->name . '"' .
 			' href="javascript: openid.show(\'' . $this->id . '\');"' .
 			' class="openid_' . $classSize . '_btn' .
@@ -102,10 +101,14 @@ class OpenIDProvider {
 	 */
 	public static function getLargeProviders() {
 		return  array(
-			new self( 'openid', 'OpenID', wfMessage( 'openid-provider-label-openid' )->text(), '{URL}' ),
-			new self( 'google', 'Google', wfMessage( 'openid-provider-label-google' )->text(), 'https://www.google.com/accounts/o8/id' ),
-			new self( 'yahoo', 'Yahoo', wfMessage( 'openid-provider-label-yahoo' )->text(), 'http://yahoo.com/' ),
-			new self( 'aol', 'AOL', wfMessage( 'openid-provider-label-aol' )->text(), 'http://openid.aol.com/{username}' ),
+			new self( 'openid', 'OpenID', wfMessage( 'openid-provider-label-openid' )->text(),
+				'{URL}' ),
+			new self( 'google', 'Google', wfMessage( 'openid-provider-label-google' )->text(),
+				'https://www.google.com/accounts/o8/id' ),
+			new self( 'yahoo', 'Yahoo', wfMessage( 'openid-provider-label-yahoo' )->text(),
+				'http://yahoo.com/' ),
+			new self( 'aol', 'AOL', wfMessage( 'openid-provider-label-aol' )->text(),
+				'http://openid.aol.com/{username}' ),
 		);
 	}
 
@@ -116,21 +119,21 @@ class OpenIDProvider {
 	public static function getSmallProviders() {
 		return array(
 			new self( 'myopenid', 'MyOpenID', wfMessage( 'openid-provider-label-other-username', 'MyOpenID' )->text(),
-						'http://{username}.myopenid.com/' ),
+				'http://{username}.myopenid.com/' ),
 			new self( 'livejournal', 'LiveJournal', wfMessage( 'openid-provider-label-other-username', 'LiveJournal' )->text(),
-						'http://{username}.livejournal.com/' ),
+				'http://{username}.livejournal.com/' ),
 			new self( 'vox', 'VOX', wfMessage( 'openid-provider-label-other-username', 'VOX' )->text(),
-						'http://{username}.vox.com/' ),
+				'http://{username}.vox.com/' ),
 			new self( 'blogger', 'Blogger', wfMessage( 'openid-provider-label-other-username', 'Blogger' )->text(),
-						'http://{username}.blogspot.com/' ),
+				'http://{username}.blogspot.com/' ),
 			new self( 'flickr', 'Flickr', wfMessage( 'openid-provider-label-other-username', 'Flickr' )->text(),
-						'http://flickr.com/photos/{username}/' ),
+				'http://flickr.com/photos/{username}/' ),
 			new self( 'verisign', 'Verisign', wfMessage( 'openid-provider-label-other-username', 'Verisign' )->text(),
-						'http://{username}.pip.verisignlabs.com/' ),
+				'http://{username}.pip.verisignlabs.com/' ),
 			new self( 'vidoop', 'Vidoop', wfMessage( 'openid-provider-label-other-username', 'Vidoop' )->text(),
-						'http://{username}.myvidoop.com/' ),
+				'http://{username}.myvidoop.com/' ),
 			new self( 'claimid', 'ClaimID', wfMessage( 'openid-provider-label-other-username', 'ClaimID' )->text(),
-						'http://claimid.com/{username}' )
+				'http://claimid.com/{username}' )
 		);
 	}
 }
