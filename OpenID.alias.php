@@ -83,6 +83,7 @@ $specialPageAliases['ja'] = array(
 	'OpenIDLogin' => array( 'OpenIDログイン', 'ＯｐｅｎＩＤログイン' ),
 	'OpenIDConvert' => array( 'OpenID変換', 'ＯｐｅｎＩＤ変換' ),
 	'OpenIDServer' => array( 'OpenIDサーバー', 'ＯｐｅｎＩＤサーバー' ),
+	'OpenIDDashboard' => array( 'OpenIDダッシュボード' ),
 );
 
 /** Korean (한국어) */
