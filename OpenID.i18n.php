@@ -3709,8 +3709,10 @@ $messages['is'] = array(
  */
 $messages['it'] = array(
 	'openid-desc' => 'Effettua il login alla wiki con [//openid.net/ OpenID] e agli altri siti web che utilizzano OpenID con un account wiki',
+	'openididentifier' => 'Identificatore OpenID',
 	'openidlogin' => 'Entra / crea account con OpenID',
 	'openidserver' => 'server OpenID',
+	'openid-identifier-page-text' => 'Questa pagina è l\'identificatore per utente "$1".',
 	'openidxrds' => 'file Yadis',
 	'openidconvert' => 'convertitore OpenID',
 	'openiderror' => 'Errore di verifica',
@@ -3740,7 +3742,7 @@ Questo ed altri OpenID opzionali possono essere gestiti dalla [[Special:Preferen
 	'openidoptional' => 'Opzionale',
 	'openidrequired' => 'Obbligatorio',
 	'openidnickname' => 'Nickname',
-	'openidfullname' => 'Nome completo', # Fuzzy
+	'openidfullname' => 'Nome vero',
 	'openidemail' => 'Indirizzo e-mail',
 	'openidlanguage' => 'Lingua',
 	'openidtimezone' => 'Fuso orario',
@@ -3748,7 +3750,7 @@ Questo ed altri OpenID opzionali possono essere gestiti dalla [[Special:Preferen
 	'openidchooseinstructions' => 'Tutti gli utenti hanno bisogno di un nickname;
 puoi sceglierne uno dalle opzioni seguenti.',
 	'openidchoosenick' => 'Il tuo nickname ($1)',
-	'openidchoosefull' => 'Il tuo nome completo ($1)', # Fuzzy
+	'openidchoosefull' => 'Il tuo vero nome ($1)',
 	'openidchooseurl' => 'Un nome scelto dal tuo OpenID ($1)',
 	'openidchooseauto' => 'Un nome auto-generato ($1)',
 	'openidchoosemanual' => 'Un nome di tua scelta:',
@@ -3790,6 +3792,7 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openiddelete-error' => "Si è verificato un errore durante la rimozione dell'account OpenID.",
 	'openid-openids-were-not-merged' => 'Gli OpenID non sono uniti quando vengono uniti gli account utenti.',
 	'prefs-openid-hide-openid' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
+	'prefs-openid-trusted-sites' => 'Siti attendibili',
 	'openid-hide-openid-label' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
 	'openid-userinfo-update-on-login-label' => 'Aggiorna le seguenti informazioni dalla persona OpenID a ogni accesso:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associati al proprio account:',
@@ -3797,7 +3800,7 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openid-urls-action' => 'Azione',
 	'openid-urls-registration' => 'Data di registrazione',
 	'openid-urls-delete' => 'Cancella',
-	'openid-add-url' => 'Aggiungi un nuovo OpenID', # Fuzzy
+	'openid-add-url' => 'Aggiungi un nuovo OpenID alla tua utenza',
 	'openid-login-or-create-account' => 'Entra o crea un nuovo account',
 	'openid-provider-label-openid' => "Inserisci l'URL del tuo OpenID",
 	'openid-provider-label-google' => 'Accedi utilizzando il tuo account Google',

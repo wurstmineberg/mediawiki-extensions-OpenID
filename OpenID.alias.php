@@ -208,6 +208,7 @@ $specialPageAliases['zh-hans'] = array(
 	'OpenIDLogin' => array( 'OpenID登录' ),
 	'OpenIDConvert' => array( 'OpenID转换', '转换OpenID' ),
 	'OpenIDServer' => array( 'OpenID服务器' ),
+	'OpenIDXRDS' => array( 'OpenIDXRDS' ),
 	'OpenIDDashboard' => array( 'OpenID状态面板' ),
 );
 
