@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.06 20130312' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.07 20130316' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -77,8 +77,10 @@ $wgOpenIDServerStoreType = 'file';
 /**
  * If the store type is set to 'file', this is is the name of a directory to
  * store the data in.
+ *
+ * false defaults to "$wgTmpDirectory/$wgDBname/openid-server-store"
  */
-$wgOpenIDServerStorePath = "/tmp/$wgDBname/openidserver/";
+$wgOpenIDServerStorePath = false;
 
 /**
  * Defines the trust root for this server
@@ -174,8 +176,10 @@ $wgOpenIDConsumerStoreType = 'file';
 /**
  * If the store type is set to 'file', this is is the name of a
  * directory to store the data in.
+ *
+ * false defaults to "$wgTmpDirectory/$wgDBname/openid-consumer-store"
  */
-$wgOpenIDConsumerStorePath = "/tmp/$wgDBname/openidconsumer/";
+$wgOpenIDConsumerStorePath = false;
 
 /**
  * Expiration time for the OpenID cookie. Lets the user re-authenticate

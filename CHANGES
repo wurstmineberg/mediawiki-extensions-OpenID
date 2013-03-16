@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+3.07  20130316  (bug 46052) make storage methods obeying and using $wgTmpDirectory
 3.06  20130312  fix bug46006 correct use of $wgExtensionAssetsPath after setup
                 changed $wgOpenIDLoginLogoUrl to $wgOpenIDSmallLogoUrl
 3.05  20130311  show OpenID icons also in the table of associated OpenIDs in OpenID preferences

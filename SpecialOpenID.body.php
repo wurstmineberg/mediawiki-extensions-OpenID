@@ -181,7 +181,11 @@ class SpecialOpenID extends SpecialPage {
 	 * @return Auth_OpenID_Consumer
 	 */
 	function getConsumer() {
-		global $wgOpenIDConsumerStoreType, $wgOpenIDConsumerStorePath;
+		global $wgOpenIDConsumerStoreType, $wgOpenIDConsumerStorePath, $wgTmpDirectory, $wgDBname;
+
+		if ( !$wgOpenIDConsumerStorePath ) {
+			$wgOpenIDConsumerStorePath = $wgTmpDirectory . DIRECTORY_SEPARATOR . $wgDBname . DIRECTORY_SEPARATOR . "openid-consumer-store/";
+		}
 
 		$store = $this->getOpenIDStore(
 			$wgOpenIDConsumerStoreType,

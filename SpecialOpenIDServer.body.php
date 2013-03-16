@@ -231,8 +231,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	 * @return Auth_OpenID_Server
 	 */
 	function getServer() {
-		global $wgOpenIDServerStorePath,
-		  $wgOpenIDServerStoreType;
+		global $wgOpenIDServerStorePath, $wgOpenIDServerStoreType, $wgTmpDirectory, $wgDBname;
+
+		if ( !$wgOpenIDServerStorePath ) {
+			$wgOpenIDServerStorePath = $wgTmpDirectory . DIRECTORY_SEPARATOR . $wgDBname . DIRECTORY_SEPARATOR . "openid-server-store/";
+		}
 
 		$store = $this->getOpenIDStore(
 			$wgOpenIDServerStoreType,
