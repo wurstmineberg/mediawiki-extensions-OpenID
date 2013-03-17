@@ -244,89 +244,89 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		# These are only available if all visitors are allowed to create accounts
 		if ( $wgUser->isAllowed( 'createaccount' ) && !$wgUser->isBlockedFromCreateAccount() ) {
 
-		if ( $wgOpenIDProposeUsernameFromSREG ) {
+			if ( $wgOpenIDProposeUsernameFromSREG ) {
 
-			# These options won't exist if we can't get them.
-			if ( array_key_exists( 'nickname', $sreg ) && $this->userNameOK( $sreg['nickname'] ) ) {
+				# These options won't exist if we can't get them.
+				if ( array_key_exists( 'nickname', $sreg ) && $this->userNameOK( $sreg['nickname'] ) ) {
+					$wgOut->addHTML(
+						Xml::openElement( 'tr' ) .
+						Xml::tags( 'td', array( 'class' => 'mw-label' ),
+							Xml::radio( 'wpNameChoice', 'nick', !$def, array( 'id' => 'wpNameChoiceNick' ) )
+						) .
+						Xml::tags( 'td', array( 'class' => 'mw-input' ),
+							Xml::label( wfMessage( 'openidchoosenick', $sreg['nickname'] )->escaped(), 'wpNameChoiceNick' )
+						) .
+						Xml::closeElement( 'tr' ) . "\n"
+					);
+				}
+
+				# These options won't exist if we can't get them.
+				$fullname = null;
+				if ( array_key_exists( 'fullname', $sreg ) ) {
+					$fullname = $sreg['fullname'];
+				}
+
+				if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
+					$fullname = $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0];
+				}
+
+				if ( $fullname && $this->userNameOK( $fullname ) ) {
+					$wgOut->addHTML(
+						Xml::openElement( 'tr' ) .
+						Xml::tags( 'td', array( 'class' => 'mw-label' ),
+							Xml::radio( 'wpNameChoice', 'full', !$def, array( 'id' => 'wpNameChoiceFull' ) )
+						) .
+						Xml::tags( 'td', array( 'class' => 'mw-input' ),
+							Xml::label( wfMessage( 'openidchoosefull', $fullname )->escaped(), 'wpNameChoiceFull' )
+						) .
+						Xml::closeElement( 'tr' ) . "\n"
+					);
+					$def = true;
+				}
+
+				$idname = $this->toUserName( $openid );
+				if ( $idname && $this->userNameOK( $idname ) ) {
+					$wgOut->addHTML(
+						Xml::openElement( 'tr' ) .
+						Xml::tags( 'td', array( 'class' => 'mw-label' ),
+							Xml::radio( 'wpNameChoice', 'url', !$def, array( 'id' => 'wpNameChoiceUrl' ) )
+						) .
+						Xml::tags( 'td', array( 'class' => 'mw-input' ),
+							Xml::label( wfMessage( 'openidchooseurl', $idname )->text(), 'wpNameChoiceUrl' )
+						) .
+						Xml::closeElement( 'tr' ) . "\n"
+					);
+					$def = true;
+				}
+			} // if $wgOpenIDProposeUsernameFromSREG
+
+			if ( $wgOpenIDAllowAutomaticUsername ) {
 				$wgOut->addHTML(
 					Xml::openElement( 'tr' ) .
 					Xml::tags( 'td', array( 'class' => 'mw-label' ),
-						Xml::radio( 'wpNameChoice', 'nick', !$def, array( 'id' => 'wpNameChoiceNick' ) )
+						Xml::radio( 'wpNameChoice', 'auto', !$def, array( 'id' => 'wpNameChoiceAuto' ) )
 					) .
 					Xml::tags( 'td', array( 'class' => 'mw-input' ),
-						Xml::label( wfMessage( 'openidchoosenick', $sreg['nickname'] )->escaped(), 'wpNameChoiceNick' )
+						Xml::label( wfMessage( 'openidchooseauto', $this->automaticName( $sreg ) )->escaped(), 'wpNameChoiceAuto' )
 					) .
-					Xml::closeElement( 'tr' ) . "\n"
-				);
+						Xml::closeElement( 'tr' ) . "\n"
+					);
 			}
 
-			# These options won't exist if we can't get them.
-			$fullname = null;
-			if ( array_key_exists( 'fullname', $sreg ) ) {
-				$fullname = $sreg['fullname'];
-			}
-
-			if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
-				$fullname = $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0];
-			}
-
-			if ( $fullname && $this->userNameOK( $fullname ) ) {
+			if ( $wgOpenIDAllowNewAccountname ) {
 				$wgOut->addHTML(
-					Xml::openElement( 'tr' ) .
-					Xml::tags( 'td', array( 'class' => 'mw-label' ),
-						Xml::radio( 'wpNameChoice', 'full', !$def, array( 'id' => 'wpNameChoiceFull' ) )
-					) .
-					Xml::tags( 'td', array( 'class' => 'mw-input' ),
-						Xml::label( wfMessage( 'openidchoosefull', $fullname )->escaped(), 'wpNameChoiceFull' )
-					) .
-					Xml::closeElement( 'tr' ) . "\n"
-				);
-				$def = true;
-			}
 
-			$idname = $this->toUserName( $openid );
-			if ( $idname && $this->userNameOK( $idname ) ) {
-				$wgOut->addHTML(
-					Xml::openElement( 'tr' ) .
-					Xml::tags( 'td', array( 'class' => 'mw-label' ),
-						Xml::radio( 'wpNameChoice', 'url', !$def, array( 'id' => 'wpNameChoiceUrl' ) )
-					) .
-					Xml::tags( 'td', array( 'class' => 'mw-input' ),
-						Xml::label( wfMessage( 'openidchooseurl', $idname )->text(), 'wpNameChoiceUrl' )
-					) .
-					Xml::closeElement( 'tr' ) . "\n"
-				);
-				$def = true;
-			}
-		} // if $wgOpenIDProposeUsernameFromSREG
-
-		if ( $wgOpenIDAllowAutomaticUsername ) {
-			$wgOut->addHTML(
 				Xml::openElement( 'tr' ) .
 				Xml::tags( 'td', array( 'class' => 'mw-label' ),
-					Xml::radio( 'wpNameChoice', 'auto', !$def, array( 'id' => 'wpNameChoiceAuto' ) )
+					Xml::radio( 'wpNameChoice', 'manual', !$def, array( 'id' => 'wpNameChoiceManual' ) )
 				) .
 				Xml::tags( 'td', array( 'class' => 'mw-input' ),
-					Xml::label( wfMessage( 'openidchooseauto', $this->automaticName( $sreg ) )->escaped(), 'wpNameChoiceAuto' )
+					Xml::label( wfMessage( 'openidchoosemanual' )->text(), 'wpNameChoiceManual' ) . '&#160;' .
+					Xml::input( 'wpNameValue', 16, false, array( 'id' => 'wpNameValue' ) )
 				) .
-					Xml::closeElement( 'tr' ) . "\n"
+				Xml::closeElement( 'tr' ) . "\n"
 				);
-		}
-
-		if ( $wgOpenIDAllowNewAccountname ) {
-			$wgOut->addHTML(
-
-			Xml::openElement( 'tr' ) .
-			Xml::tags( 'td', array( 'class' => 'mw-label' ),
-				Xml::radio( 'wpNameChoice', 'manual', !$def, array( 'id' => 'wpNameChoiceManual' ) )
-			) .
-			Xml::tags( 'td', array( 'class' => 'mw-input' ),
-				Xml::label( wfMessage( 'openidchoosemanual' )->text(), 'wpNameChoiceManual' ) . '&#160;' .
-				Xml::input( 'wpNameValue', 16, false, array( 'id' => 'wpNameValue' ) )
-			) .
-			Xml::closeElement( 'tr' ) . "\n"
-			);
-		}
+			}
 
 		} // These are only available if all visitors are allowed to create accounts
 
