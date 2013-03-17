@@ -331,8 +331,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		} // These are only available if all visitors are allowed to create accounts
 
 		# These are always available
-                $wgOut->addHTML(
-
+		$wgOut->addHTML(
 			Xml::openElement( 'tr' ) . "\n" .
 			Xml::element( 'td', array(), '' ) . "\n" .
 			Xml::tags( 'td', array( 'class' => 'mw-submit' ),
