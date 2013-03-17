@@ -32,7 +32,7 @@ class OpenIDHooks {
 
 		# Special pages are added at global scope;
 		# remove server-related ones if client-only flag is set
-		$addList = array( 'Login', 'Convert', 'Dashboard' );
+		$addList = array( 'Login', 'Convert', 'Dashboard', 'Identifier' );
 		if ( !$wgOpenIDClientOnly ) {
 			$addList[] = 'Server';
 			$addList[] = 'XRDS';
