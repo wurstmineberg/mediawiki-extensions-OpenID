@@ -499,7 +499,7 @@ class OpenIDHooks {
 	/**
 	 * @return string
 	 */
-	private static function getOpenIDSmallLogoUrlImageTag() {
+	public static function getOpenIDSmallLogoUrlImageTag() {
 		return Xml::element( 'img',
 			array( 'src' => self::getOpenIDSmallLogoUrl(), 'alt' => 'OpenID' ),
 			''

@@ -50,9 +50,8 @@ class SpecialOpenID extends SpecialPage {
 			&& ( $wgOpenIDShowUrlOnUserPage === 'always'
 				|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && !$wgUser->getOption( 'openid-hide-openid' ) ) ) ) {
 
-			global $wgOpenIDSmallLogoUrl;
 			$wgOut->setSubtitle( "<span class='subpages'>" .
-				"<img src='$wgOpenIDSmallLogoUrl' alt='OpenID' />" .
+				OpenIDHooks::getOpenIDSmallLogoUrlImageTag() .
 				SpecialOpenIDServer::getLocalIdentityLink( $wgUser ) .
 				"</span>" );
 		}
