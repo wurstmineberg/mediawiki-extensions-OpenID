@@ -71,7 +71,7 @@ class OpenIDHooks {
 			$user = User::newFromName( $nt->getText() );
 
 			if ( $user && ( $user->getID() != 0 ) ) {
-				SpecialOpenID::showOpenIDIdentifier( $user, true );
+				SpecialOpenIDIdentifier::showOpenIDIdentifier( $user, true );
 			}
 		}
 

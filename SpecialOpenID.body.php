@@ -33,53 +33,6 @@ require_once( "Auth/OpenID/FileStore.php" );
 
 class SpecialOpenID extends SpecialPage {
 
-	/**
-	 * @param $user User
-	 * @param $delegate bool
-	 */
-	public static function showOpenIDIdentifier( $user, $delegate = false ) {
-		global $wgOut, $wgUser, $wgOpenIDClientOnly, $wgOpenIDShowUrlOnUserPage,
-			$wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
-
-		// show the own OpenID Url as a subtitle on the user page
-		// but only for the user when visiting their own page
-		// and when the options say so
-
-		if ( ( $user->getID() === $wgUser->getID() )
-			&& ( $user->getID() != 0 )
-			&& ( $wgOpenIDShowUrlOnUserPage === 'always'
-				|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && !$wgUser->getOption( 'openid-hide-openid' ) ) ) ) {
-
-			$wgOut->setSubtitle( "<span class='subpages'>" .
-				OpenIDHooks::getOpenIDSmallLogoUrlImageTag() .
-				SpecialOpenIDServer::getLocalIdentityLink( $wgUser ) .
-				"</span>" );
-		}
-
-		$openid = SpecialOpenID::getUserOpenIDInformation( $user );
-
-		# Add OpenID data if its allowed
-		if ( !$wgOpenIDClientOnly
-			&& !( count( $openid ) && ( strlen( $openid[0]->uoi_openid ) != 0 ) && !$wgOpenIDAllowServingOpenIDUserAccounts ) ) {
-
-			$serverTitle = SpecialPage::getTitleFor( 'OpenIDServer' );
-			$serverUrl = $serverTitle->getFullURL();
-			$wgOut->addLink( array( 'rel' => 'openid.server', 'href' => $serverUrl ) );
-			$wgOut->addLink( array( 'rel' => 'openid2.provider', 'href' => $serverUrl ) );
-			if ( $delegate ) {
-				$local_identity = SpecialOpenIDServer::getLocalIdentity( $user );
-				$wgOut->addLink( array( 'rel' => 'openid.delegate', 'href' => $local_identity ) );
-				$wgOut->addLink( array( 'rel' => 'openid2.local_id', 'href' => $local_identity ) );
-			}
-			$rt = SpecialPage::getTitleFor( 'OpenIDXRDS', $user->getName() );
-			$xrdsUrl = $rt->getFullURL();
-			$wgOut->addMeta( 'http:X-XRDS-Location', $xrdsUrl );
-			header( 'X-XRDS-Location: ' . $xrdsUrl );
-		}
-		$wgOut->addWikiMsg( 'openid-identifier-page-text', $user->getName() );
-
-	}
-
 	function getOpenIDStore( $storeType, $prefix, $options ) {
 		global $wgOut, $wgMemc, $wgDBtype;
 
