@@ -98,7 +98,7 @@ class OpenIDHooks {
 
 			if ( $wgOpenIDOnly ) {
 				# remove other login links
-				foreach ( array( 'login', 'anonlogin' ) as $k ) {
+				foreach ( array( 'createaccount', 'login', 'anonlogin' ) as $k ) {
 					if ( array_key_exists( $k, $personal_urls ) ) {
 						unset( $personal_urls[$k] );
 					}
