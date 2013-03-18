@@ -38,7 +38,7 @@ $messages['en'] = array(
 	'openidserver' => 'OpenID server',
 	'openid-identifier-page-text-user' => 'This page is the identifier for user "$1".',
 	'openid-identifier-page-text-different-user' => 'This page is the identifier for user User ID $1.',
-	'openid-identifier-page-text-no-such-local-openid' => 'This is an invalid local OpenID identifier (no user with that User ID $1).',
+	'openid-identifier-page-text-no-such-local-openid' => 'This is an invalid local OpenID identifier.',
 	'openid-server-identity-page-text' => 'This is a technical OpenID server page for starting the OpenID authentication. The page has no other purpose.',
 	'openidxrds' => 'Yadis file',
 	'openidconvert' => 'OpenID converter',
@@ -209,10 +209,7 @@ Parameters:
 
 Parameters:
 * $1 - a User ID',
-	'openid-identifier-page-text-no-such-local-openid' => 'A short text which describes this technical OpenID identifier page when the id (subpage) is not valid in that wiki, because no user has that User ID. The page is used only during OpenID authentication and is generally not visited otherwise.
-
-Parameters:
-* $1 - a User ID',
+	'openid-identifier-page-text-no-such-local-openid' => 'A short text which describes this technical OpenID identifier page when the id (subpage) is not valid in that wiki, because no user has that User ID. The page is used only during OpenID authentication and is generally not visited otherwise.',
 	'openid-server-identity-page-text' => 'A short text which describes this technical OpenID server identity page which is only used during OpenID authentication and not used otherwise.',
 	'openidxrds' => 'Used as page title in Special:OpenIDXRDS.
 

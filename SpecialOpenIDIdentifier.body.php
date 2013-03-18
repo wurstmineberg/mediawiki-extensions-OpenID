@@ -95,7 +95,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 
 		} else {
 
-			$wgOut->addWikiMsg( 'openid-identifier-page-text-no-such-local-openid', $user->getID() );
+			$wgOut->addWikiMsg( 'openid-identifier-page-text-no-such-local-openid' );
 
 		}
 
