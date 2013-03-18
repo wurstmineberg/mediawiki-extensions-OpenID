@@ -750,8 +750,10 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function ClearValues() {
-		unset( $_SESSION['openid_server_request'] );
-		unset( $_SESSION['openid_server_sreg'] );
+		if ( isset( $_SESSION ) ) {
+			unset( $_SESSION['openid_server_request'] );
+			unset( $_SESSION['openid_server_sreg'] );
+		}
 		return true;
 	}
 
