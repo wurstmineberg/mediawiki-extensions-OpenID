@@ -305,18 +305,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		wfDebug( "OpenID: OpenIDServer received: '$url'.\n" );
 		wfDebug( "OpenID: OpenIDServer received request: " . print_r( $request, true ) . "\n" );
 
-/*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
-
-		$name = $this->UrlToUserName( $url );
-
-		if ( !isset( $name ) || strlen( $name ) == 0 ) {
-			wfDebug( "OpenID: '$url' not a user page.\n" );
-			return $request->answer( false, $this->serverUrl() );
-		}
-
-		assert( isset( $name ) && strlen( $name ) > 0 );
-*/
-
 		# by default, use the $wgUser if s/he is logged-in on this OpenID-Server-Wiki
 
 		# check, if there is an expressed request for a distinct OpenID-Server-Username
@@ -363,19 +351,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		wfDebug( "OpenID: User is logged in\n" );
 		assert( $wgUser->getId() != 0 );
-
-/*		pre-version-2.00 behaviour: OpenID Server was only supported for existing userpages
-
-		# Is the user page for the logged-in user?
-
-		$user = User::newFromName( $name );
-
-		if ( !isset( $user ) ||
-			$user->getId() != $wgUser->getId() ) {
-			wfDebug( "OpenID: User from url not logged in user.\n" );
-			return $request->answer( false, $this->serverUrl() );
-		}
-*/
 
 		# Is the user an OpenID user?
 
