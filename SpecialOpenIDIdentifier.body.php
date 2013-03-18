@@ -30,8 +30,16 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	}
 
 	function execute( $par ) {
+		global $wgOpenIDClientOnly, $wgOut;
 		$this->setHeaders();
-		self::showOpenIDIdentifier( User::newFromId( $par ) );
+
+		if ( $wgOpenIDClientOnly ) {
+			$wgOut->showErrorPage( 'openiderror', 'openidclientonlytext' );
+			return;
+		}
+
+		self::showOpenIDIdentifier( User::newFromId( $par ), false, true );
+
 	}
 
 	private static function isUser( $user ) {
@@ -42,7 +50,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	 * @param $user User
 	 * @param $delegate bool
 	 */
-	public static function showOpenIDIdentifier( $user, $delegate = false ) {
+	public static function showOpenIDIdentifier( $user, $delegate = false, $showSpecialPageText = false ) {
 		global $wgOut, $wgUser, $wgOpenIDClientOnly, $wgOpenIDShowUrlOnUserPage,
 			$wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
 
@@ -50,15 +58,21 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 		// but only for the user when visiting their own page
 		// and when the options say so
 
-		if ( self::isUser( $user ) ) {
+		if ( !self::isUser( $user ) ) {
+			if ( $showSpecialPageText ) {
+				$wgOut->addWikiMsg( 'openid-identifier-page-text-no-such-local-openid' );
+			}
+			return;
+		}
 
-			$openid = SpecialOpenID::getUserOpenIDInformation( $user );
+		$openid = SpecialOpenID::getUserOpenIDInformation( $user );
 
-			# Add OpenID data if its allowed
-			if ( !$wgOpenIDClientOnly
-				&& !( count( $openid )
-					&& ( strlen( $openid[0]->uoi_openid ) != 0 )
-					&& !$wgOpenIDAllowServingOpenIDUserAccounts ) ) {
+		# Add OpenID data if its allowed
+		if ( !$wgOpenIDClientOnly ) {
+
+			if ( !( count( $openid )
+				&& ( strlen( $openid[0]->uoi_openid ) != 0 )
+				&& !$wgOpenIDAllowServingOpenIDUserAccounts ) ) {
 
 				$serverTitle = SpecialPage::getTitleFor( 'OpenIDServer' );
 				$serverUrl = $serverTitle->getFullURL();
@@ -73,6 +87,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 				$xrdsUrl = $rt->getFullURL();
 				$wgOut->addMeta( 'http:X-XRDS-Location', $xrdsUrl );
 				header( 'X-XRDS-Location: ' . $xrdsUrl );
+
 			}
 
 			if ( ( $user->getID() === $wgUser->getID() )
@@ -85,17 +100,17 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 					SpecialOpenIDServer::getLocalIdentityLink( $wgUser ) .
 					"</span>" );
 
-				$wgOut->addWikiMsg( 'openid-identifier-page-text-user', $wgUser->getName() );
+				if ( $showSpecialPageText ) {
+					$wgOut->addWikiMsg( 'openid-identifier-page-text-user', $wgUser->getName() );
+				}
 
 			} else {
 
-				$wgOut->addWikiMsg( 'openid-identifier-page-text-different-user', $user->getID() );
+				if ( $showSpecialPageText ) {
+					$wgOut->addWikiMsg( 'openid-identifier-page-text-different-user', $user->getID() );
+				}
 
 			}
-
-		} else {
-
-			$wgOut->addWikiMsg( 'openid-identifier-page-text-no-such-local-openid' );
 
 		}
 

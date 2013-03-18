@@ -71,7 +71,7 @@ class OpenIDHooks {
 			$user = User::newFromName( $nt->getText() );
 
 			if ( $user && ( $user->getID() != 0 ) ) {
-				SpecialOpenIDIdentifier::showOpenIDIdentifier( $user, true );
+				SpecialOpenIDIdentifier::showOpenIDIdentifier( $user, true, false );
 			}
 		}
 
@@ -265,36 +265,40 @@ class OpenIDHooks {
 		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs,
 			$wgAuth, $wgUser, $wgLang, $wgOpenIDClientOnly;
 
-		switch ( $wgOpenIDShowUrlOnUserPage ) {
+		if ( !$wgOpenIDClientOnly ) {
 
-		case 'user':
-			$preferences['openid-hide-openid'] =
-				array(
-					'section' => 'openid/openid-hide-openid',
-					'type' => 'toggle',
-					'label-message' => 'openid-hide-openid-label',
-				);
-			break;
+			switch ( $wgOpenIDShowUrlOnUserPage ) {
 
-		case 'always':
-			$preferences['openid-hide-openid'] =
-				array(
-					'section' => 'openid/openid-hide-openid',
-					'type' => 'info',
-					'label-message' => 'openid-hide-openid-label',
-					'default' => wfMessage( 'openid-show-openid-url-on-userpage-always' )->text(),
-				);
-			break;
+			case 'user':
+				$preferences['openid-hide-openid'] =
+					array(
+						'section' => 'openid/openid-hide-openid',
+						'type' => 'toggle',
+						'label-message' => 'openid-hide-openid-label',
+					);
+				break;
 
-		case 'never':
-			$preferences['openid-hide-openid'] =
-				array(
-					'section' => 'openid/openid-hide-openid',
-					'type' => 'info',
-					'label-message' => 'openid-hide-openid-label',
-					'default' => wfMessage( 'openid-show-openid-url-on-userpage-never' )->text(),
-				);
-			break;
+			case 'always':
+				$preferences['openid-hide-openid'] =
+					array(
+						'section' => 'openid/openid-hide-openid',
+						'type' => 'info',
+						'label-message' => 'openid-hide-openid-label',
+						'default' => wfMessage( 'openid-show-openid-url-on-userpage-always' )->text(),
+					);
+				break;
+
+			case 'never':
+				$preferences['openid-hide-openid'] =
+					array(
+						'section' => 'openid/openid-hide-openid',
+						'type' => 'info',
+						'label-message' => 'openid-hide-openid-label',
+						'default' => wfMessage( 'openid-show-openid-url-on-userpage-never' )->text(),
+					);
+				break;
+
+			}
 
 		}
 
