@@ -18,11 +18,11 @@ class SpecialOpenIDUserLogin extends SpecialRedirectToSpecial {
 
 class OpenIDHooks {
 	public static function onSpecialPage_initList( &$list ) {
-		global $wgOpenIDOnly, $wgOpenIDClientOnly, $wgSpecialPageGroups, $wgOpenIDSmallLogoUrl;
+		global $wgOpenIDLoginOnly, $wgOpenIDClientOnly, $wgSpecialPageGroups, $wgOpenIDSmallLogoUrl;
 
 		$wgOpenIDSmallLogoUrl = self::getOpenIDSmallLogoUrl();
 
-		if ( $wgOpenIDOnly ) {
+		if ( $wgOpenIDLoginOnly ) {
 			$list['Userlogin'] = 'SpecialOpenIDLogin';
 
 			# as Special:CreateAccount is an alias for Special:UserLogin/signup
@@ -84,7 +84,7 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onPersonalUrls( &$personal_urls, &$title ) {
-		global $wgHideOpenIDLoginLink, $wgUser, $wgOpenIDOnly;
+		global $wgHideOpenIDLoginLink, $wgUser, $wgOpenIDLoginOnly;
 
 		if ( !$wgHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
 			$sk = $wgUser->getSkin();
@@ -96,7 +96,7 @@ class OpenIDHooks {
 				'active' => $title->isSpecial( 'OpenIDLogin' )
 			);
 
-			if ( $wgOpenIDOnly ) {
+			if ( $wgOpenIDLoginOnly ) {
 				# remove other login links
 				foreach ( array( 'createaccount', 'login', 'anonlogin' ) as $k ) {
 					if ( array_key_exists( $k, $personal_urls ) ) {

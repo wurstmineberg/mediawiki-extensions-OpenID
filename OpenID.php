@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.09 20130318' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.10 20130318' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -189,9 +189,10 @@ $wgOpenIDConsumerStorePath = false;
 $wgOpenIDCookieExpiration = 365 * 24 * 60 * 60;
 
 /**
- * Only allow login with OpenID. Careful -- this means everybody!
+ * Only allow login with OpenID.
+ * Default: true
  */
-$wgOpenIDOnly = false;
+$wgOpenIDLoginOnly = true;
 
 /**
  * If true, user accounts on this wiki *cannot* be used as OpenIDs on other

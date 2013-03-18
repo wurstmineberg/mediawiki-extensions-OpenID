@@ -332,7 +332,7 @@ LocalSettings.php file. Please read carefully.
   on a user's home page. Possible values are 'always', 'never', or 'user'
   (lets the user decide). Default is 'user'.
 
-* $wgOpenIDOnly -- defaults to false. With this enabled, users can
+* $wgOpenIDLoginOnly -- defaults to false. With this enabled, users can
   ''only'' log in with OpenID.
 
 * $wgOpenIDClientOnly -- defaults to false. With this enabled, users
@@ -381,7 +381,7 @@ The other setting allows user pages of this MediaWiki to serve as OpenID
 identities on another OpenID-aware site:
 
 require( "$IP/extensions/OpenID/OpenID.php" );
-$wgOpenIDOnly = true;
+$wgOpenIDLoginOnly = true;
 $wgOpenIDAllowServingOpenIDUserAccounts = true;
 
 // Implicit group for all visitors

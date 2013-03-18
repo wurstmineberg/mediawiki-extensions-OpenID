@@ -180,7 +180,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 	}
 
 	function delete() {
-		global $wgUser, $wgOut, $wgRequest, $wgOpenIDOnly;
+		global $wgUser, $wgOut, $wgRequest, $wgOpenIDLoginOnly;
 
 		$openid = $wgRequest->getVal( 'url' );
 		$user = self::getUserFromUrl( $openid );
@@ -198,7 +198,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			if ( $wgUser->mPassword == '' ) {
 				$wgOut->showErrorPage( 'openiderror', 'openiddeleteerrornopassword' );
 				return;
-			} elseif ( $wgOpenIDOnly ) {
+			} elseif ( $wgOpenIDLoginOnly ) {
 				$wgOut->showErrorPage( 'openiderror', 'openiddeleteerroropenidonly' );
 				return;
 			}

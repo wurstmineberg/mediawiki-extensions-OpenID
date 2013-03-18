@@ -67,7 +67,7 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		global $wgOpenIDUseEmailAsNickname;
 		global $wgOpenIDProposeUsernameFromSREG;
 		global $wgOpenIDAllowAutomaticUsername;
-		global $wgOpenIDOnly;
+		global $wgOpenIDLoginOnly;
 		global $wgOpenIDClientOnly;
 		global $wgOpenIDAllowServingOpenIDUserAccounts;
 		global $wgOpenIDShowProviderIcons;
@@ -93,7 +93,7 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		# Here we show some basic version infos. Retrieval of SVN revision number of OpenID appears to be too difficult
 		$out  = $this->show( 'OpenID ' . wfMessage( 'version-software-version' )->text(), MEDIAWIKI_OPENID_VERSION );
 		$out .= $this->show( 'MediaWiki ' . wfMessage( 'version-software-version' )->text(), SpecialVersion::getVersion() );
-		$out .= $this->show( '$wgOpenIDOnly', $wgOpenIDOnly );
+		$out .= $this->show( '$wgOpenIDLoginOnly', $wgOpenIDLoginOnly );
 		$out .= $this->show( '$wgOpenIDClientOnly', $wgOpenIDClientOnly );
 		$out .= $this->show( '$wgOpenIDAllowServingOpenIDUserAccounts', $wgOpenIDAllowServingOpenIDUserAccounts );
 		$out .= $this->show( '$wgOpenIDTrustEmailAddress', $wgOpenIDTrustEmailAddress );

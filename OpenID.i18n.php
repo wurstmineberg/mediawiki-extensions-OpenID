@@ -342,16 +342,16 @@ This is also used as "404 Not Found" page body in Special:OpenIDXRDS.',
 	'openidlogininstructions' => 'Used as instruction text for the Login form in Special:OpenIDLogin.
 
 This message is followed by any one of the following messages:
-* {{msg-mw|openidlogininstructions-openidloginonly|if <code>$wgOpenIDOnly</code> is TRUE}}
-* {{msg-mw|openidlogininstructions-passwordloginallowed|if <code>$wgOpenIDOnly</code> is FALSE}}',
-	'openidlogininstructions-openidloginonly' => 'Used as instruction text for the Login form in Special:OpenIDLogin, if <code>$wgOpenIDOnly</code> is TRUE.
+* {{msg-mw|openidlogininstructions-openidloginonly|if <code>$wgOpenIDLoginOnly</code> is TRUE}}
+* {{msg-mw|openidlogininstructions-passwordloginallowed|if <code>$wgOpenIDLoginOnly</code> is FALSE}}',
+	'openidlogininstructions-openidloginonly' => 'Used as instruction text for the Login form in Special:OpenIDLogin, if <code>$wgOpenIDLoginOnly</code> is TRUE.
 
 This message follows the message:
 * {{msg-mw|Openidlogininstructions}}
 
 See also:
 * {{msg-mw|Openidlogininstructions-passwordloginallowed}}',
-	'openidlogininstructions-passwordloginallowed' => 'Used as instruction text for the Login form in Special:OpenIDLogin, if <code>$wgOpenIDOnly</code> is FALSE.
+	'openidlogininstructions-passwordloginallowed' => 'Used as instruction text for the Login form in Special:OpenIDLogin, if <code>$wgOpenIDLoginOnly</code> is FALSE.
 
 This message follows the message:
 * {{msg-mw|Openidlogininstructions}}

@@ -96,7 +96,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * Displays the main login form
 	 */
 	function loginForm() {
-		global $wgOut, $wgOpenIDShowProviderIcons, $wgOpenIDOnly;
+		global $wgOut, $wgOpenIDShowProviderIcons, $wgOpenIDLoginOnly;
 
 		$wgOut->addModules( $wgOpenIDShowProviderIcons ? 'ext.openid.icons' : 'ext.openid.plain' );
 
@@ -150,7 +150,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			Xml::closeElement( 'fieldset' ) . Xml::closeElement( 'form' )
 		);
 		$wgOut->addWikiMsg( 'openidlogininstructions' );
-		if ( $wgOpenIDOnly ) {
+		if ( $wgOpenIDLoginOnly ) {
 			$wgOut->addWikiMsg( 'openidlogininstructions-openidloginonly' );
 		} else {
 			$wgOut->addWikiMsg( 'openidlogininstructions-passwordloginallowed' );
