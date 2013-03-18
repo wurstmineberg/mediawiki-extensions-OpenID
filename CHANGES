@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+3.09  20130318  hotfix typo $wgOpenIDOnlyClient vs. $wgOpenIDClientOnly
 3.08  20130318  SpecialOpenIDIdentifier only shows the name for visiting user
                 otherwise only the User ID, or an error if invalid User ID
 3.07  20130316  (bug 46052) make storage methods obeying and using $wgTmpDirectory

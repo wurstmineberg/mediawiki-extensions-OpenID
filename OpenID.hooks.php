@@ -263,7 +263,7 @@ class OpenIDHooks {
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
 		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs,
-			$wgAuth, $wgUser, $wgLang, $wgOpenIDOnlyClient;
+			$wgAuth, $wgUser, $wgLang, $wgOpenIDClientOnly;
 
 		switch ( $wgOpenIDShowUrlOnUserPage ) {
 
@@ -333,7 +333,7 @@ class OpenIDHooks {
 				'type' => 'hidden',
 			);
 
-		if ( !$wgOpenIDOnlyClient ) {
+		if ( !$wgOpenIDClientOnly ) {
 
 			$preferences['openid-your-openid'] =
 				array(
