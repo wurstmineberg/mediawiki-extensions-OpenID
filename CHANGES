@@ -1,6 +1,8 @@
 CHANGES
 =======
 
+3.08  20130318  SpecialOpenIDIdentifier only shows the name for visiting user
+                otherwise only the User ID, or an error if invalid User ID
 3.07  20130316  (bug 46052) make storage methods obeying and using $wgTmpDirectory
 3.06  20130312  fix bug46006 correct use of $wgExtensionAssetsPath after setup
                 changed $wgOpenIDLoginLogoUrl to $wgOpenIDSmallLogoUrl
