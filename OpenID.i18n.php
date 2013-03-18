@@ -205,6 +205,14 @@ $messages['qqq'] = array(
 
 Parameters:
 * $1 - a user name',
+	'openid-identifier-page-text-different-user' => 'A short text which describes this technical OpenID identifier page for a user other than then the visiting logged-in user. The page is used only during OpenID authentication and is generally not visited otherwise.
+
+Parameters:
+* $1 - a User ID',
+	'openid-identifier-page-text-no-such-local-openid' => 'A short text which describes this technical OpenID identifier page when the id (subpage) is not valid in that wiki, because no user has that User ID. The page is used only during OpenID authentication and is generally not visited otherwise.
+
+Parameters:
+* $1 - a User ID',
 	'openid-server-identity-page-text' => 'A short text which describes this technical OpenID server identity page which is only used during OpenID authentication and not used otherwise.',
 	'openidxrds' => 'Used as page title in Special:OpenIDXRDS.
 
