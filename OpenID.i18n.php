@@ -824,6 +824,8 @@ $messages['ast'] = array(
 	'openidlogin' => 'Aniciar sesión / crear cuenta con OpenID',
 	'openidserver' => 'Sirvidor OpenID',
 	'openid-identifier-page-text-user' => 'Esta páxina ye l\'identificador del usuariu "$1".',
+	'openid-identifier-page-text-different-user' => 'Esta páxina ye l\'identificador de la User ID "$1" del usuariu.',
+	'openid-identifier-page-text-no-such-local-openid' => 'Esti ye un identificador llocal OpenID inválidu.',
 	'openid-server-identity-page-text' => "Esta ye una páxina téunica del sirvidor OpenID p'aniciar la identificación OpenID. La páxina nun tien otru propósitu.",
 	'openidxrds' => 'Ficheru Yadis',
 	'openidconvert' => 'Convertidor OpenID',
@@ -904,12 +906,12 @@ Nun podría aniciar sesión ensin una OpenID.',
 	'openiddelete-success' => 'La OpenID desaniciose correutamente de la to cuenta.',
 	'openiddelete-error' => 'Hebo un error al desaniciar la OpenID de la so cuenta.',
 	'openid-openids-were-not-merged' => "Les OpenID nun s'amestaron cuando s'amestaron les cuentas d'usuariu.",
-	'prefs-openid-hide-openid' => "Anubrir la URL de la so OpenID na páxina d'usuariu, si anicia sesión con OpenID.",
+	'prefs-openid-hide-openid' => "URL de la so OpenID na páxina d'usuariu.",
 	'prefs-openid-userinfo-update-on-login' => "Anovamientu de la información d'usuariu d'OpenID",
 	'prefs-openid-associated-openids' => "Los sos OpenID p'aniciar sesión en {{SITENAME}}",
 	'prefs-openid-trusted-sites' => 'Sitios enfotaos',
 	'prefs-openid-local-identity' => "La so OpenID p'aniciar sesión n'otros sitios",
-	'openid-hide-openid-label' => "Anubrir la URL de la so OpenID na páxina d'usuariu, si anicia sesión con OpenID.", # Fuzzy
+	'openid-hide-openid-label' => "Anubrir la URL de la so OpenID na páxina d'usuariu.",
 	'openid-show-openid-url-on-userpage-always' => "La so OpenID amuesase siempres na so páxina d'usuariu cuando la visita.",
 	'openid-show-openid-url-on-userpage-never' => "La OpenID nun s'amuesa nunca na so páxina d'usuariu.",
 	'openid-userinfo-update-on-login-label' => "Campos d'información del perfil d'usuariu que s'anovarán automáticamente dende la persona OpenID cada vez qu'anicie sesión:",
@@ -2464,6 +2466,7 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
  * @author Peter17
  * @author PiRSquared17
  * @author Sherbrooke
+ * @author Verdy p
  * @author Zetud
  */
 $messages['fr'] = array(
@@ -2505,7 +2508,7 @@ Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Pre
 	'openidrequired' => 'Exigé',
 	'openidnickname' => 'Surnom',
 	'openidfullname' => 'Nom réel',
-	'openidemail' => 'Adresse électronique',
+	'openidemail' => 'Adresse de courriel',
 	'openidlanguage' => 'Langue',
 	'openidtimezone' => 'Zone horaire',
 	'openidchooselegend' => "Choix du nom d'utilisateur et du compte",
@@ -4107,6 +4110,7 @@ $messages['kl'] = array(
  * @author T-Rithy
  * @author Thearith
  * @author គីមស៊្រុន
+ * @author វ័ណថារិទ្ធ
  */
 $messages['km'] = array(
 	'openidconvert' => 'កម្មវិធីបម្លែងOpenID',
@@ -4141,8 +4145,8 @@ $messages['km'] = array(
 ប្រសិនបើអ្នកចង់់ប្រើ OpenID ដើម្បីចុះឈ្មោះចូលនាពេលអនាគត អ្នកអាច[[Special:OpenIDConvert|បម្លែងគណនីរបស់អ្នកដើម្បីប្រើ OpenID]]។", # Fuzzy
 	'openidnousername' => 'មិនមានអត្តនាមបានបញ្ជាក់ទេ។',
 	'openidbadusername' => 'ឈ្មោះមិនត្រឹមត្រូវត្រូវបានបញ្ជាក់',
-	'prefs-openid-hide-openid' => 'លាក់OpenIDរបស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក ប្រសិនបើអ្នកកត់ឈ្មោះចូលដោយប្រើOpenID។',
-	'openid-hide-openid-label' => 'លាក់OpenIDរបស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក ប្រសិនបើអ្នកកត់ឈ្មោះចូលដោយប្រើOpenID។',
+	'prefs-openid-hide-openid' => 'អាសយដ្ឋាន URL នៃ OpenID របស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក',
+	'openid-hide-openid-label' => 'លាក់OpenIDរបស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក ប្រសិនបើអ្នកកត់ឈ្មោះចូលដោយប្រើOpenID។', # Fuzzy
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -5143,6 +5147,7 @@ $messages['niu'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Konovalov
  * @author McDutchie
  * @author Rcdeboer
  * @author SPQRobin
@@ -5155,6 +5160,8 @@ $messages['nl'] = array(
 	'openidlogin' => 'Aanmelden / registreren met OpenID',
 	'openidserver' => 'OpenID-server',
 	'openid-identifier-page-text-user' => 'Deze pagina is de ID van gebruiker "$1".',
+	'openid-identifier-page-text-different-user' => 'Deze pagina is de identifier van de gebruiker gebruikersnaam  $1 .',
+	'openid-identifier-page-text-no-such-local-openid' => 'Dit is een ongeldige lokale OpenID identifier.',
 	'openid-server-identity-page-text' => 'Dit is een technische pagina voor OpenID-server voor het beginnen van de OpenID-authenticatie. De pagina heeft geen ander doel.',
 	'openidxrds' => 'Yadis-bestand',
 	'openidconvert' => 'OpenID-convertor',
@@ -5239,7 +5246,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'prefs-openid-associated-openids' => "Uw OpenID's om aan te melden bij {{SITENAME}}",
 	'prefs-openid-trusted-sites' => 'Vertrouwde sites',
 	'prefs-openid-local-identity' => 'Uw OpenID voor aanmelden bij andere sites',
-	'openid-hide-openid-label' => 'Bij aanmelden met OpenID, uw OpenID op uw gebruikerspagina verbergen.', # Fuzzy
+	'openid-hide-openid-label' => 'Uw OpenID URL verbergen op uw gebruikerspagina.',
 	'openid-show-openid-url-on-userpage-always' => 'Uw OpenID wordt altijd weergegeven op uw gebruikerspagina als u die bezoekt.',
 	'openid-show-openid-url-on-userpage-never' => 'Uw OpenID wordt nooit weergegeven op uw gebruikerspagina.',
 	'openid-userinfo-update-on-login-label' => 'Velden van uw gebruikersprofiel die iedere keer dat u aanmeldt worden bijgewerkt vanuit uw OpenID-persona:',
