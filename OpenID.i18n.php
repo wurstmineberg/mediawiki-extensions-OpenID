@@ -462,7 +462,7 @@ See also:
 ** Vidoop
 ** ClaimID
 {{Related|Openid-provider-label}}',
-	'specialpages-group-openid' => 'Display group name for OpenID-extension related special pages for [[Special:SpecialPages]].',
+	'specialpages-group-openid' => '{{doc-special-group|that=are related to the OpenID extension|like=[[Special:OpenIDLogin]], [[Special:OpenIDConvert]], [[Special:OpenIDDashboard]], [[Special:OpenIDIdentifier]], [[Special:OpenIDServer]], [[Special:OpenIDXRDS]]}}',
 	'right-openid-converter-access' => '{{doc-right|openid-converter-access}}
 {{doc-singularthey}}',
 	'right-openid-dashboard-access' => '{{doc-right|openid-dashboard-access}}
@@ -475,8 +475,16 @@ the special adminstrator access right for the OpenID dashboard, which is a restr
 the standard access right for the OpenID dashboard, which is a restricted special page',
 	'action-openid-dashboard-admin' => '{{doc-action|openid-dashboard-admin}}
 the special adminstrator access right for the OpenID dashboard, which is a restricted special page',
-	'openid-dashboard-title' => 'Display name and page title for the OpenID dashboard (non-admin) on [[Special:SpecialPages]].',
-	'openid-dashboard-title-admin' => 'Display name and page title for the administrator OpenID dashboard on [[Special:SpecialPages]].',
+	'openid-dashboard-title' => '{{doc-special|OpenIDDashboard}}
+This title is for non-admins.
+
+See also:
+* {{msg-mw|Openid-dashboard-title-admin}}',
+	'openid-dashboard-title-admin' => '{{doc-special|OpenIDDashboard}}
+This title is for administrator.
+
+See also
+* {{msg-mw|Openid-dashboard-title}}',
 	'openid-dashboard-introduction' => 'Intro text for the special OpenID dashboard page: the user gets status information about the current OpenID settings of this wiki.
 * $1 - the URL of the help page explaining the parameters',
 	'openid-dashboard-number-openid-users' => 'Used as the label in the information table on Special:OpenIDDashboard.
@@ -1839,9 +1847,9 @@ Ohne OpenID könnten Sie sich nicht mehr anmelden.',
  */
 $messages['diq'] = array(
 	'openidoptional' => 'Opsiyonel',
-	'openidrequired' => 'Mecburiyo',
+	'openidrequired' => 'Lazım',
 	'openidnickname' => 'Leqebe',
-	'openidfullname' => 'Nameyo tam',
+	'openidfullname' => 'Nameyo tam', # Fuzzy
 	'openidemail' => 'Adresa e-postey',
 	'openidlanguage' => 'Zıwan',
 	'openidtimezone' => 'Warey saete',
@@ -1938,7 +1946,7 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'prefs-openid-userinfo-update-on-login' => 'Aktualizacija informacijow OpenID-wužywarja',
 	'prefs-openid-associated-openids' => 'Twóje OpenID za pśizjawjenje k {{GRAMMAR:datiw|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Dowěry gódne sedła',
-	'openid-hide-openid-label' => 'Schowaj swój OpenID na swójom wužywarskem boku, jolic se pśizjawjaś z OpenID.', # Fuzzy
+	'openid-hide-openid-label' => 'Twój OpenID-URL na twójom wužywarskem boku schowaś',
 	'openid-userinfo-update-on-login-label' => 'Póla informacijow wužywarskego profila, kótarež aktualizěruju se kuždy raz, gaž se pśizjawjaš:',
 	'openid-associated-openids-label' => 'OpenID, kótarež su z twójim kontom zwězane:',
 	'openid-urls-url' => 'URL',
@@ -2371,6 +2379,7 @@ $messages['fa'] = array(
  */
 $messages['fi'] = array(
 	'openid-desc' => 'Kirjaudu wikiin [//openid.net/ OpenID:llä] ja muille OpenID-tuetuille sivustoille wiki-käyttäjätilillä.',
+	'openididentifier' => 'OpenID-tunnus',
 	'openidlogin' => 'Kirjaudu sisään tai luo tunnus OpenID:llä',
 	'openidserver' => 'OpenID-palvelin',
 	'openidxrds' => 'Yadis-tiedosto',
@@ -2442,7 +2451,7 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
 	'openiddelete-error' => 'Virhe poistettaessa OpenID:tä tilistäsi.',
 	'prefs-openid-hide-openid' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.',
 	'prefs-openid-trusted-sites' => 'Luotetut sivustot',
-	'openid-hide-openid-label' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.',
+	'openid-hide-openid-label' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Päivitä seuraavat tiedot OpenID-tiedoista jokaisella kirjautumisella:', # Fuzzy
 	'openid-associated-openids-label' => 'Tiliisi liitetyt OpenID:eet:',
 	'openid-urls-action' => 'Toiminto',
@@ -5164,8 +5173,8 @@ $messages['nl'] = array(
 	'openidlogin' => 'Aanmelden / registreren met OpenID',
 	'openidserver' => 'OpenID-server',
 	'openid-identifier-page-text-user' => 'Deze pagina is de ID van gebruiker "$1".',
-	'openid-identifier-page-text-different-user' => 'Deze pagina is de identifier van de gebruiker gebruikersnaam  $1 .',
-	'openid-identifier-page-text-no-such-local-openid' => 'Dit is een ongeldige lokale OpenID identifier.',
+	'openid-identifier-page-text-different-user' => 'Deze pagina is de identificatie van de gebruiker $1.',
+	'openid-identifier-page-text-no-such-local-openid' => 'Dit is een ongeldige lokale OpenID-identificatie.',
 	'openid-server-identity-page-text' => 'Dit is een technische pagina voor OpenID-server voor het beginnen van de OpenID-authenticatie. De pagina heeft geen ander doel.',
 	'openidxrds' => 'Yadis-bestand',
 	'openidconvert' => 'OpenID-convertor',
@@ -5250,7 +5259,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'prefs-openid-associated-openids' => "Uw OpenID's om aan te melden bij {{SITENAME}}",
 	'prefs-openid-trusted-sites' => 'Vertrouwde sites',
 	'prefs-openid-local-identity' => 'Uw OpenID voor aanmelden bij andere sites',
-	'openid-hide-openid-label' => 'Uw OpenID URL verbergen op uw gebruikerspagina.',
+	'openid-hide-openid-label' => 'Uw OpenID-URL verbergen op uw gebruikerspagina.',
 	'openid-show-openid-url-on-userpage-always' => 'Uw OpenID wordt altijd weergegeven op uw gebruikerspagina als u die bezoekt.',
 	'openid-show-openid-url-on-userpage-never' => 'Uw OpenID wordt nooit weergegeven op uw gebruikerspagina.',
 	'openid-userinfo-update-on-login-label' => 'Velden van uw gebruikersprofiel die iedere keer dat u aanmeldt worden bijgewerkt vanuit uw OpenID-persona:',
@@ -7722,6 +7731,7 @@ $messages['zh-hans'] = array(
 	'openid-desc' => '让用户可使用一个[//openid.net/ OpenID]来登录到这个wiki。如果启用相关设置，还可以使用他们在此wiki上用户帐号URL作为OpenID来登录到其他接受OpenID的网站。',
 	'openidlogin' => '使用OpenID登录或创建账号',
 	'openidserver' => 'OpenID服务器',
+	'openid-identifier-page-text-no-such-local-openid' => '这是一个无效的本地OpenID标识符。',
 	'openidxrds' => 'Yadis文件',
 	'openidconvert' => 'OpenID转换',
 	'openiderror' => '验证错误',
@@ -7801,7 +7811,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openiddelete-error' => '在移除你的OpenID的时候出现了一个错误。',
 	'openid-openids-were-not-merged' => '合并用户帐号时，OpenID 没有被合并。',
 	'prefs-openid-hide-openid' => 'OpenID登录时，在用户页隐藏OpenID。',
-	'openid-hide-openid-label' => 'OpenID登录时，在用户页隐藏OpenID。',
+	'openid-hide-openid-label' => '如果您用OpenID登录时，在用户页隐藏您的OpenID。',
 	'openid-userinfo-update-on-login-label' => '每次登录时，都从OpenID的用户信息中更新以下信息。', # Fuzzy
 	'openid-associated-openids-label' => '和你的账号关联的OpenID：',
 	'openid-urls-url' => 'URL',
