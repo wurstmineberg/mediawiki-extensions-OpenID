@@ -198,7 +198,7 @@ You would not able to log in without an OpenID.',
  */
 $messages['qqq'] = array(
 	'openid-desc' => '{{desc|name=Open ID|url=http://www.mediawiki.org/wiki/Extension:OpenID}}',
-	'openididentifier' => 'Used as page title of Special:OpenIDIdentifier.',
+	'openididentifier' => '{{doc-special|OpenIDIdentifier|unlisted=1}}',
 	'openidlogin' => 'Used as page title in Special:OpenIDLogin.',
 	'openidserver' => 'Used as page title of Special:OpenIDServer.',
 	'openid-identifier-page-text-user' => 'A short text which describes this technical OpenID identifier page for a user. The page is used only during OpenID authentication and is generally not visited otherwise.
