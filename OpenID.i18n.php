@@ -2587,12 +2587,12 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-trusted-sites-delete-link-action-text' => 'Supprimer',
 	'openid-trusted-sites-delete-all-link-action-text' => 'Supprimer tous les sites de confiance',
 	'openid-trusted-sites-delete-confirmation-page-title' => 'Suppression d’un site de confiance',
-	'openid-trusted-sites-delete-confirmation-question' => 'En cliquant sur le bouton "{{int:openid-trusted-sites-delete-confirmation-button-text}}", vous supprimerez "$1" de la liste de vos sites de confiance.',
-	'openid-trusted-sites-delete-all-confirmation-question' => 'En cliquant sur le bouton "{{int:openid-trusted-sites-delete-confirmation-button-text}}", vous supprimerez tous les sites de confiance de votre profil utilisateur.',
+	'openid-trusted-sites-delete-confirmation-question' => 'En cliquant sur le bouton « {{int:openid-trusted-sites-delete-confirmation-button-text}} », vous supprimerez « $1 » de la liste de vos sites de confiance.',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'En cliquant sur le bouton « {{int:openid-trusted-sites-delete-confirmation-button-text}} », vous supprimerez tous les sites de confiance de votre profil utilisateur.',
 	'openid-trusted-sites-delete-confirmation-button-text' => 'Confirmer',
-	'openid-trusted-sites-delete-confirmation-success-text' => '"$1" a bien été supprimé de la liste de vos sites de confiance.',
+	'openid-trusted-sites-delete-confirmation-success-text' => '« $1 » a bien été supprimé de la liste de vos sites de confiance.',
 	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Tous les sites auxquels vous faisiez auparavant confiance ont bien été supprimés de votre profil utilisateur.',
-	'openid-local-identity' => 'Votre OpenID:',
+	'openid-local-identity' => 'Votre OpenID :',
 	'openid-login-or-create-account' => 'Se connecter ou créer un nouveau compte',
 	'openid-provider-label-openid' => 'Entrez votre URL OpenID',
 	'openid-provider-label-google' => 'Vous connecter en utilisant votre compte Google',
@@ -5140,6 +5140,16 @@ Du ville ikke kunne logge inn uten en OpenID.',
 	'openid-provider-label-yahoo' => 'Logg inn med din Yahoo-konto',
 	'openid-provider-label-aol' => 'Skriv inn ditt AOL-skjermnavn',
 	'openid-provider-label-other-username' => 'Skriv inn ditt $1-brukernavn',
+);
+
+/** Low German (Plattdüütsch)
+ * @author Joachim Mos
+ */
+$messages['nds'] = array(
+	'openid-urls-action' => 'Akschoon',
+	'openid-urls-delete' => 'Wegdoon',
+	'openid-trusted-sites-table-header-column-action' => 'Akschoon',
+	'openid-trusted-sites-delete-link-action-text' => 'Wegdoon',
 );
 
 /** Nepali (नेपाली)
