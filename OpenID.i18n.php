@@ -186,6 +186,7 @@ You would not able to log in without an OpenID.',
  * @author Hamilton Abreu
  * @author IAlex
  * @author Jon Harald Søby
+ * @author Nemo bis
  * @author Nike
  * @author Purodha
  * @author Raymond
@@ -388,7 +389,7 @@ See also:
 	'openid-openids-were-not-merged' => 'When merging user accounts by UserMerge or similar extensions, OpenID(s) are not merged if $wgOpenIDMergeOnAccountMerge=false (default).',
 	'prefs-openid' => '{{optional}}
 OpenID preferences tab title',
-	'prefs-openid-hide-openid' => 'OpenID preference label (Hide your OpenID URL on your user page, if you log in with OpenID)',
+	'prefs-openid-hide-openid' => 'Label of a Special:Preference section about OpenID: if you log in with OpenID, you can hide your OpenID URL on your user page.',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID user information update (section header)',
 	'prefs-openid-associated-openids' => 'Your OpenIDs for login to this wiki (section header)',
 	'prefs-openid-trusted-sites' => 'Trusted sites (section header).
@@ -3943,7 +3944,7 @@ $messages['ja'] = array(
 	'openiddelete-success' => 'あなたのアカウントから OpenID を除去しました。',
 	'openiddelete-error' => 'あなたのアカウントから OpenID を除去する際にエラーが発生しました。',
 	'openid-openids-were-not-merged' => '利用者アカウントを統合する際に、OpenID は統合されませんでした。',
-	'prefs-openid-hide-openid' => '自分の利用者ページに OpenID URL を表示',
+	'prefs-openid-hide-openid' => '利用者ページでの OpenID URL の表示',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID 利用者情報の更新',
 	'prefs-openid-associated-openids' => '{{SITENAME}}へのログインに使用する OpenID',
 	'prefs-openid-trusted-sites' => '信頼済みサイト',
