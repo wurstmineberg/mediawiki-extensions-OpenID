@@ -4533,7 +4533,7 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'openiddelete-error' => 'Beim Ewehhuele vun der OpenID vun Ärem Benotzerkont ass e Feeler geschitt.',
 	'prefs-openid-hide-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
 	'prefs-openid-trusted-sites' => 'Siten, deenen Dir traut',
-	'openid-hide-openid-label' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.', # Fuzzy
+	'openid-hide-openid-label' => 'Verstoppt Är OpenID URL op ärer Benotzersäit.',
 	'openid-userinfo-update-on-login-label' => "D'Informatioune vum Benotzerprofil vun dësem OpenID-Kont ginn all Kéier aktualiséiert wann Dir Iech aloggt:",
 	'openid-associated-openids-label' => 'OpendIden déi mat Ärem Benotzerkont asoziéiert sinn',
 	'openid-urls-url' => 'URL',
@@ -5528,6 +5528,7 @@ $messages['pfl'] = array(
 
 /** Polish (polski)
  * @author BeginaFelicysym
+ * @author Chrumps
  * @author Herr Kriss
  * @author Maikking
  * @author Matma Rex
@@ -5617,7 +5618,7 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openiddelete-error' => 'Wystąpił błąd podczas usuwania powiązania Twojego konta z OpenID.',
 	'openid-openids-were-not-merged' => 'OpenID nie zostały połączone w trakcie scalania kont użytkownika.',
 	'prefs-openid-hide-openid' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.',
-	'openid-hide-openid-label' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.',
+	'openid-hide-openid-label' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Aktualizuj następujące informacje o mnie z OpenID przy każdym logowaniu', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID powiązane z Twoim kontem:',
 	'openid-urls-url' => 'URL',
@@ -5625,11 +5626,15 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openid-urls-registration' => 'Data rejestracji',
 	'openid-urls-delete' => 'Usuń',
 	'openid-add-url' => 'Dodaj nowe OpenID', # Fuzzy
+	'openid-trusted-sites-delete-link-action-text' => 'Usuń',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Potwierdź',
+	'openid-local-identity' => 'Twój OpenID:',
 	'openid-login-or-create-account' => 'Zaloguj się lub utwórz nowe konto',
 	'openid-provider-label-openid' => 'Wprowadź adres OpenID',
 	'openid-provider-label-google' => 'Zaloguj się korzystając z konta Google',
 	'openid-provider-label-yahoo' => 'Zaloguj się korzystając z konta Yahoo',
 	'openid-provider-label-aol' => 'Wprowadź nazwę wyświetlaną AOL',
+	'openid-provider-label-wmflabs' => 'Zaloguj się korzystając z konta Wmflabs',
 	'openid-provider-label-other-username' => 'Wprowadź swoją nazwę użytkownika $1',
 	'specialpages-group-openid' => 'OpenID – strony diagnostyczne i statusu',
 	'right-openid-converter-access' => 'Można dodać lub przystosować ich konto do używania tożsamości OpenID',
