@@ -24,7 +24,6 @@
  */
 
 class SpecialOpenIDIdentifier extends unlistedSpecialPage {
-
 	function __construct() {
 		parent::__construct( 'OpenIDIdentifier' );
 	}
@@ -39,7 +38,6 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 		}
 
 		self::showOpenIDIdentifier( User::newFromId( $par ), false, true );
-
 	}
 
 	private static function isUser( $user ) {
@@ -47,21 +45,20 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	}
 
 	/**
-	 * @param $user User
-	 * @param $delegate bool
+	 * @param User $user
+	 * @param bool $delegate
+	 * @param bool $showSpecialPageText
 	 */
 	public static function showOpenIDIdentifier( $user, $delegate = false, $showSpecialPageText = false ) {
 		global $wgOut, $wgUser, $wgOpenIDClientOnly, $wgOpenIDShowUrlOnUserPage,
-			$wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
+			$wgOpenIDAllowServingOpenIDUserAccounts;
 
 		// show the own OpenID Url as a subtitle on the user page
 		// but only for the user when visiting their own page
 		// and when the options say so
 
-		if ( !self::isUser( $user ) ) {
-			if ( $showSpecialPageText ) {
-				$wgOut->addWikiMsg( 'openid-identifier-page-text-no-such-local-openid' );
-			}
+		if ( !self::isUser( $user ) && $showSpecialPageText ) {
+			$wgOut->addWikiMsg( 'openid-identifier-page-text-no-such-local-openid' );
 			return;
 		}
 
@@ -69,11 +66,10 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 
 		# Add OpenID data if its allowed
 		if ( !$wgOpenIDClientOnly ) {
-
 			if ( !( count( $openid )
 				&& ( strlen( $openid[0]->uoi_openid ) != 0 )
-				&& !$wgOpenIDAllowServingOpenIDUserAccounts ) ) {
-
+				&& !$wgOpenIDAllowServingOpenIDUserAccounts )
+			) {
 				$serverTitle = SpecialPage::getTitleFor( 'OpenIDServer' );
 				$serverUrl = $serverTitle->getFullURL();
 				$wgOut->addLink( array( 'rel' => 'openid.server', 'href' => $serverUrl ) );
@@ -93,8 +89,8 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 			if ( ( $user->getID() === $wgUser->getID() )
 				&& ( $user->getID() != 0 )
 				&& ( $wgOpenIDShowUrlOnUserPage === 'always'
-					|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && !$wgUser->getOption( 'openid-hide-openid' ) ) ) ) {
-
+					|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && !$wgUser->getOption( 'openid-hide-openid' ) ) )
+			) {
 				$wgOut->setSubtitle( "<span class='subpages'>" .
 					OpenIDHooks::getOpenIDSmallLogoUrlImageTag() .
 					SpecialOpenIDServer::getLocalIdentityLink( $wgUser ) .
@@ -103,17 +99,9 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 				if ( $showSpecialPageText ) {
 					$wgOut->addWikiMsg( 'openid-identifier-page-text-user', $wgUser->getName() );
 				}
-
-			} else {
-
-				if ( $showSpecialPageText ) {
-					$wgOut->addWikiMsg( 'openid-identifier-page-text-different-user', $user->getID() );
-				}
-
+			} elseif ( $showSpecialPageText ) {
+				$wgOut->addWikiMsg( 'openid-identifier-page-text-different-user', $user->getID() );
 			}
-
 		}
-
 	}
-
 }

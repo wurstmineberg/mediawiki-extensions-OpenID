@@ -20,6 +20,7 @@
  *
  * @file
  * @author Evan Prodromou <evan@prodromou.name>
+ * @author Thomas Gries
  * @ingroup Extensions
  */
 
@@ -250,6 +251,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	# respond with the authenticated local identity OpenID Url. Utility
 
 	/**
+	 * @param $user
 	 * @return getLocalIdentity
 	 */
 	static function getLocalIdentity( $user ) {
@@ -267,6 +269,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	/**
+	 * @param $user
 	 * @return getLocalIdentityLink
 	 */
 	static function getLocalIdentityLink( $user ) {
@@ -287,8 +290,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	# clarity.
 
 	function Check( $server, $request, $sreg, $imm = true ) {
-
-		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDIdentifiersURL;
+		global $wgUser, $wgOut, $wgOpenIDAllowServingOpenIDUserAccounts;
 
 		assert( isset( $wgUser ) && isset( $wgOut ) );
 		assert( isset( $server ) );
@@ -766,7 +768,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		if ( !$user->checkPassword( $password ) ) {
 			return wfMessage( 'wrongpassword' )->text();
 		} else {
-			$id = $user->getId();
 			$wgUser = $user;
 			wfSetupSession();
 			$wgUser->SetCookies();

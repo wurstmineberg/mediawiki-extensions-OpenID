@@ -20,6 +20,7 @@
  *
  * @file
  * @author Evan Prodromou <evan@prodromou.name>
+ * @author Thomas Gries
  * @ingroup Extensions
  */
 
@@ -163,6 +164,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 *
 	 * @param $openid String: OpenID url
 	 * @param $sreg Array: options get from OpenID
+	 * @param $ax Array: options get from OpenID
 	 * @param $messagekey String or null: message name to display at the top
 	 */
 	function chooseNameForm( $openid, $sreg, $ax, $messagekey = null ) {

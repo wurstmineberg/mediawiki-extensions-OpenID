@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+3.11  20130401  code cosmetics
 3.10  20130318  renamed $wgOpenIDOnly to $wgOpenIDLoginOnly
 3.09  20130318  hotfix typo $wgOpenIDOnlyClient vs. $wgOpenIDClientOnly
 3.08  20130318  SpecialOpenIDIdentifier only shows the name for visiting user
