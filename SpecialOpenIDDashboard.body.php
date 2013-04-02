@@ -68,7 +68,7 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		global $wgOpenIDProposeUsernameFromSREG;
 		global $wgOpenIDAllowAutomaticUsername;
 		global $wgOpenIDLoginOnly;
-		global $wgOpenIDClientOnly;
+		global $wgOpenIDClientAndAlsoProvider;
 		global $wgOpenIDAllowServingOpenIDUserAccounts;
 		global $wgOpenIDShowProviderIcons;
 
@@ -94,7 +94,7 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		$out  = $this->show( 'OpenID ' . wfMessage( 'version-software-version' )->text(), MEDIAWIKI_OPENID_VERSION );
 		$out .= $this->show( 'MediaWiki ' . wfMessage( 'version-software-version' )->text(), SpecialVersion::getVersion() );
 		$out .= $this->show( '$wgOpenIDLoginOnly', $wgOpenIDLoginOnly );
-		$out .= $this->show( '$wgOpenIDClientOnly', $wgOpenIDClientOnly );
+		$out .= $this->show( '$wgOpenIDClientAndAlsoProvider', $wgOpenIDClientAndProviderMode );
 		$out .= $this->show( '$wgOpenIDAllowServingOpenIDUserAccounts', $wgOpenIDAllowServingOpenIDUserAccounts );
 		$out .= $this->show( '$wgOpenIDTrustEmailAddress', $wgOpenIDTrustEmailAddress );
 		$out .= $this->show( '$wgOpenIDAllowExistingAccountSelection', $wgOpenIDAllowExistingAccountSelection );

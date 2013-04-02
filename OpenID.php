@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.11 20130401' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.12 20130402' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -37,8 +37,31 @@ set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . g
 # CONFIGURATION VARIABLES
 
 /**
- * Whether to hide the "Login with OpenID link" link; set to true if you already
- * have this link in your skin.
+ * Only allow login with OpenID.
+ * Default: true
+ */
+$wgOpenIDLoginOnly = true;
+
+/**
+ * If true, user accounts on this wiki can be used as OpenIDs on other
+ * sites. This is called "OpenID Provider" (or "OpenID Server") mode.
+ *
+ * @deprecated $wgOpenIDClientOnly since E:OpenID v3.12. Use $wgOpenIDClientAndAlsoProvider with inverted logic instead
+ */
+$wgOpenIDClientAndAlsoProvider = true;
+
+/**
+ * If true, users can use their OpenID identity provided by this site A
+ * as OpenID for logins to other sites B
+ * even when users logged in on site A with OpenID.
+ *
+ * Some users might want to do that for vanity purposes or whatever.
+ */
+$wgOpenIDAllowServingOpenIDUserAccounts = true;
+
+/**
+ * Whether to hide the "Login with OpenID link" link:
+ * set to true if you already have this link in your skin.
  */
 $wgOpenIDHideOpenIDLoginLink = false;
 
@@ -49,8 +72,8 @@ $wgOpenIDHideOpenIDLoginLink = false;
 $wgOpenIDSmallLogoUrl = false;
 
 /**
- * Whether to show the OpenID identity URL on a user's home page. Possible
- * values are 'always', 'never' (default), or 'user'.
+ * Whether to show the OpenID identity URL on a user's home page.
+ * Possible values are 'always', 'never' (default), or 'user'.
  * 'user' lets the user decide in their preferences.
  */
 $wgOpenIDShowUrlOnUserPage = 'user';
@@ -188,38 +211,12 @@ $wgOpenIDConsumerStorePath = false;
  */
 $wgOpenIDCookieExpiration = 365 * 24 * 60 * 60;
 
-/**
- * Only allow login with OpenID.
- * Default: true
- */
-$wgOpenIDLoginOnly = true;
-
-/**
- * If true, user accounts on this wiki *cannot* be used as OpenIDs on other
- * sites.
- */
-$wgOpenIDClientOnly = false;
-
 /*
  * The fractional part after /Special:OpenIDServer/
  * when the server shall show the selection (login) form
  *
  */
 $wgOpenIDIdentifierSelect = "id";
-
-/**
- * Allow to use User pages as OpenIDs even if user is using OpenID already
- *
- * If true, users can use their user page URLs of this site A as OpenID
- * on another site B even if user is using OpenID on A already.
- *
- * Some users might want to do that for vanity purposes or whatever.
- *
- * https://bugzilla.wikimedia.org/show_bug.cgi?id=18635
- * If false, prevent serving OpenID accounts (TODO list item; done)
- *
- */
-$wgOpenIDAllowServingOpenIDUserAccounts = true;
 
 /**
  * When merging accounts with the UserMerge and Delete extension,

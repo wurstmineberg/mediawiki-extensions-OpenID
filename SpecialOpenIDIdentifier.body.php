@@ -29,10 +29,10 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	}
 
 	function execute( $par ) {
-		global $wgOpenIDClientOnly, $wgOut;
+		global $wgOpenIDClientAndAlsoProvider, $wgOut;
 		$this->setHeaders();
 
-		if ( $wgOpenIDClientOnly ) {
+		if ( !$wgOpenIDClientAndAlsoProvider ) {
 			$wgOut->showErrorPage( 'openiderror', 'openidclientonlytext' );
 			return;
 		}
@@ -50,7 +50,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	 * @param bool $showSpecialPageText
 	 */
 	public static function showOpenIDIdentifier( $user, $delegate = false, $showSpecialPageText = false ) {
-		global $wgOut, $wgUser, $wgOpenIDClientOnly, $wgOpenIDShowUrlOnUserPage,
+		global $wgOut, $wgUser, $wgOpenIDClientAndAlsoProvider, $wgOpenIDShowUrlOnUserPage,
 			$wgOpenIDAllowServingOpenIDUserAccounts;
 
 		// show the own OpenID Url as a subtitle on the user page
@@ -65,7 +65,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 		$openid = SpecialOpenID::getUserOpenIDInformation( $user );
 
 		# Add OpenID data if its allowed
-		if ( !$wgOpenIDClientOnly ) {
+		if ( $wgOpenIDClientAndAlsoProvider ) {
 			if ( !( count( $openid )
 				&& ( strlen( $openid[0]->uoi_openid ) != 0 )
 				&& !$wgOpenIDAllowServingOpenIDUserAccounts )
