@@ -40,13 +40,13 @@ class SpecialOpenIDXRDS extends SpecialOpenID {
 	# $par is a user name
 
 	function execute( $par ) {
-		global $wgOut, $wgOpenIDClientAndAlsoProvider;
+		global $wgOut, $wgOpenIDConsumerAndAlsoProvider;
 
 		# No server functionality if this site is only a client
 		# Note: special page is un-registered if this flag is set,
 		# so it'd be unusual to get here.
 
-		if ( !$wgOpenIDClientAndAlsoProvider ) {
+		if ( !$wgOpenIDConsumerAndAlsoProvider ) {
 			wfHttpError( 404, "Not Found", wfMessage( 'openidclientonlytext' )->text() );
 			return;
 		}

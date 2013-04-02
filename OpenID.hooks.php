@@ -18,7 +18,7 @@ class SpecialOpenIDUserLogin extends SpecialRedirectToSpecial {
 
 class OpenIDHooks {
 	public static function onSpecialPage_initList( &$list ) {
-		global $wgOpenIDLoginOnly, $wgOpenIDClientAndAlsoProvider, $wgSpecialPageGroups, $wgOpenIDSmallLogoUrl;
+		global $wgOpenIDLoginOnly, $wgOpenIDConsumerAndAlsoProvider, $wgSpecialPageGroups, $wgOpenIDSmallLogoUrl;
 
 		$wgOpenIDSmallLogoUrl = self::getOpenIDSmallLogoUrl();
 
@@ -33,7 +33,7 @@ class OpenIDHooks {
 		# Special pages are added at global scope;
 		# remove server-related ones if client-only flag is set
 		$addList = array( 'Login', 'Convert', 'Dashboard', 'Identifier' );
-		if ( $wgOpenIDClientAndAlsoProvider ) {
+		if ( $wgOpenIDConsumerAndAlsoProvider ) {
 			$addList[] = 'Server';
 			$addList[] = 'XRDS';
 		}
@@ -263,9 +263,9 @@ class OpenIDHooks {
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
 		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs,
-			$wgAuth, $wgUser, $wgLang, $wgOpenIDClientAndAlsoProvider;
+			$wgAuth, $wgUser, $wgLang, $wgOpenIDConsumerAndAlsoProvider;
 
-		if ( $wgOpenIDClientAndAlsoProvider ) {
+		if ( $wgOpenIDConsumerAndAlsoProvider ) {
 
 			switch ( $wgOpenIDShowUrlOnUserPage ) {
 
@@ -337,7 +337,7 @@ class OpenIDHooks {
 				'type' => 'hidden',
 			);
 
-		if ( $wgOpenIDClientAndAlsoProvider ) {
+		if ( $wgOpenIDConsumerAndAlsoProvider ) {
 
 			$preferences['openid-your-openid'] =
 				array(

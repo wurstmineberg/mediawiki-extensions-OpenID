@@ -1,7 +1,7 @@
 CHANGES
 =======
 
-3.12  20130402  breaking change renamed $wgOpenIDClientOnly to $wgOpenIDClientAndAlsoProvider
+3.12  20130402  breaking change renamed $wgOpenIDClientOnly to $wgOpenIDConsumerAndAlsoProvider
                 and inverting its logic accordingly
 3.11  20130401  code cosmetics
 3.10  20130318  renamed $wgOpenIDOnly to $wgOpenIDLoginOnly

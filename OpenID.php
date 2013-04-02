@@ -46,9 +46,9 @@ $wgOpenIDLoginOnly = true;
  * If true, user accounts on this wiki can be used as OpenIDs on other
  * sites. This is called "OpenID Provider" (or "OpenID Server") mode.
  *
- * @deprecated $wgOpenIDClientOnly since E:OpenID v3.12. Use $wgOpenIDClientAndAlsoProvider with inverted logic instead
+ * @deprecated $wgOpenIDClientOnly since E:OpenID v3.12. Use $wgOpenIDConsumerAndAlsoProvider with inverted logic instead
  */
-$wgOpenIDClientAndAlsoProvider = true;
+$wgOpenIDConsumerAndAlsoProvider = true;
 
 /**
  * If true, users can use their OpenID identity provided by this site A
