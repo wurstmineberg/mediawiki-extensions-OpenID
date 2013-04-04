@@ -179,7 +179,10 @@ You would not able to log in without an OpenID.',
 	'openid-dashboard-number-users-without-openid' => 'Number of users without OpenID',
 );
 
-/** Message documentation (Message documentation)
+/** Message documentation (This is the name of the message documentation language code (qqq). Follow the rules of your languages and use small first letter if it doesn't capitalize language names always.
+
+It might be easier to translate it as "translation guidelines" or "translation help".
+{{Identical|Message documentation}})
  * @author Dbc334
  * @author EugeneZelenko
  * @author Fryed-peach
@@ -3825,14 +3828,16 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openid-openids-were-not-merged' => 'Gli OpenID non sono uniti quando vengono uniti gli account utenti.',
 	'prefs-openid-hide-openid' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
 	'prefs-openid-trusted-sites' => 'Siti attendibili',
-	'openid-hide-openid-label' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.', # Fuzzy
-	'openid-userinfo-update-on-login-label' => 'Aggiorna le seguenti informazioni dalla persona OpenID a ogni accesso:', # Fuzzy
+	'openid-hide-openid-label' => 'Nascondi il tuo OpenID sulla tua pagina utente.',
+	'openid-show-openid-url-on-userpage-never' => 'Il tuo OpenID non è mai mostrato nella tua pagina utente.',
+	'openid-userinfo-update-on-login-label' => 'Informazioni del profilo utente che sono automaticamente aggiornate dalla persona OpenID a ogni accesso:',
 	'openid-associated-openids-label' => 'OpenID associati al proprio account:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Azione',
 	'openid-urls-registration' => 'Data di registrazione',
 	'openid-urls-delete' => 'Cancella',
 	'openid-add-url' => 'Aggiungi un nuovo OpenID alla tua utenza',
+	'openid-local-identity' => 'Il tuo OpenID:',
 	'openid-login-or-create-account' => 'Entra o crea un nuovo account',
 	'openid-provider-label-openid' => "Inserisci l'URL del tuo OpenID",
 	'openid-provider-label-google' => 'Accedi utilizzando il tuo account Google',
