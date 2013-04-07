@@ -6867,7 +6867,7 @@ Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Pr
 	'openidoptional' => 'Frivilligt',
 	'openidrequired' => 'Obligatoriskt',
 	'openidnickname' => 'Smeknamn',
-	'openidfullname' => 'Fullt namn', # Fuzzy
+	'openidfullname' => 'Riktigt namn',
 	'openidemail' => 'E-postadress',
 	'openidlanguage' => 'Språk',
 	'openidtimezone' => 'Tidszon',
@@ -6875,7 +6875,7 @@ Vill du kan du också ange ett lösenord för det här kontot i din [[Special:Pr
 	'openidchooseinstructions' => 'Alla användare måste ha ett användarnamn.
 Du kan välja ett från alternativen nedan.',
 	'openidchoosenick' => 'Smeknamn ($1)',
-	'openidchoosefull' => 'Fullständigt namn ($1)', # Fuzzy
+	'openidchoosefull' => 'Ditt riktiga namn ($1)',
 	'openidchooseurl' => 'Ett namn taget från din OpenID ($1)',
 	'openidchooseauto' => 'Ett automatiskt genererat namn ($1)',
 	'openidchoosemanual' => 'Valfritt namn:',
@@ -6886,8 +6886,8 @@ Du kan välja ett från alternativen nedan.',
 	'openidconvertoraddmoreids' => 'Konvertera till OpenID eller lägg till en ny OpenID-adress',
 	'openidconvertsuccess' => 'Konverterade till OpenID',
 	'openidconvertsuccesstext' => 'Du har konverterat ditt OpenID till $1.',
-	'openid-convert-already-your-openid-text' => 'Det är redan ditt OpenID.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'Det OpenID:t tillhör någon annan.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 är redan associerad med ditt konto. Det finns ingen anledning till att göra det igen.',
+	'openid-convert-other-users-openid-text' => '$1 är någon annans OpenID. Du kan inte använda ett OpenID som tillhör någon annan.',
 	'openidalreadyloggedin' => 'Du är redan inloggad.',
 	'openidalreadyloggedintext' => "'''Du är redan inloggad, $1!'''
 
@@ -6917,14 +6917,14 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openiddelete-error' => 'Ett fel uppstod när OpenID-kopplingen skulle tas bort från ditt konto.',
 	'openid-openids-were-not-merged' => "Eventuella OpenID:n som varit kopplade till de sammanslagna kontona har ''inte'' slagits samman.",
 	'prefs-openid-hide-openid' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
-	'openid-hide-openid-label' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
+	'openid-hide-openid-label' => 'Dölj din OpenID-URL på din användarsida.',
 	'openid-userinfo-update-on-login-label' => 'Uppdatera följande information från min OpenID-profil varje gång jag loggar in', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID:n som är kopplade till ditt konto:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Åtgärd',
 	'openid-urls-registration' => 'Registreringstidpunkt',
 	'openid-urls-delete' => 'Ta bort',
-	'openid-add-url' => 'Lägg till ett nytt OpenID', # Fuzzy
+	'openid-add-url' => 'Lägg till ett nytt OpenID till ditt konto',
 	'openid-login-or-create-account' => 'Logga in eller skapa ett nytt konto',
 	'openid-provider-label-openid' => 'Skriv in din OpenID-URL',
 	'openid-provider-label-google' => 'Logga in med ditt Google-konto',
