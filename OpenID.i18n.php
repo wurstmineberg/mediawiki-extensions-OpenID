@@ -7741,6 +7741,7 @@ $messages['yi'] = array(
 /** Simplified Chinese (中文（简体）‎)
  * @author Anakmalaysia
  * @author Gaoxuewei
+ * @author Kuailong
  * @author Liangent
  * @author Onecountry
  * @author Wrightbus
@@ -7782,7 +7783,7 @@ $messages['zh-hans'] = array(
 	'openidoptional' => '可选',
 	'openidrequired' => '必选',
 	'openidnickname' => '昵称',
-	'openidfullname' => '全称', # Fuzzy
+	'openidfullname' => '真实姓名',
 	'openidemail' => '电邮地址',
 	'openidlanguage' => '语言',
 	'openidtimezone' => '时区',
@@ -7790,7 +7791,7 @@ $messages['zh-hans'] = array(
 	'openidchooseinstructions' => '所有的用户都需要提供昵称；
 您可以从下面任选一个。',
 	'openidchoosenick' => '你的昵称 ($1)',
-	'openidchoosefull' => '你的全名（$1）', # Fuzzy
+	'openidchoosefull' => '您的真实姓名（$1）',
 	'openidchooseurl' => '从你的OpenID获取的名称（$1）',
 	'openidchooseauto' => '自动生成的名称（$1）',
 	'openidchoosemanual' => '您选择的名称：',
@@ -7832,6 +7833,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openiddelete-error' => '在移除你的OpenID的时候出现了一个错误。',
 	'openid-openids-were-not-merged' => '合并用户帐号时，OpenID 没有被合并。',
 	'prefs-openid-hide-openid' => 'OpenID登录时，在用户页隐藏OpenID。',
+	'prefs-openid-trusted-sites' => '受信任的站点',
 	'openid-hide-openid-label' => '如果您用OpenID登录时，在用户页隐藏您的OpenID。',
 	'openid-userinfo-update-on-login-label' => '每次登录时，都从OpenID的用户信息中更新以下信息。', # Fuzzy
 	'openid-associated-openids-label' => '和你的账号关联的OpenID：',
@@ -7840,6 +7842,9 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-urls-registration' => '注册时间',
 	'openid-urls-delete' => '删除',
 	'openid-add-url' => '添加一个新的OpenID', # Fuzzy
+	'openid-trusted-sites-delete-link-action-text' => '删除',
+	'openid-trusted-sites-delete-all-link-action-text' => '删除所有受信任的站点',
+	'openid-trusted-sites-delete-confirmation-button-text' => '确认',
 	'openid-login-or-create-account' => '登录或创建新账号',
 	'openid-provider-label-openid' => '输入你的OpenID URL',
 	'openid-provider-label-google' => '使用你的Google账号登录',
