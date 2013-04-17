@@ -597,8 +597,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function SregFromQuery( $query ) {
-		$sreg = array( 'required' => array(), 'optional' => array(),
-					  'policy_url' => null );
+		$sreg = array( 
+			'required' => array(),
+			'optional' => array(),
+			'policy_url' => null
+		);
 		if ( array_key_exists( 'openid.sreg.required', $query ) ) {
 			$sreg['required'] = explode( ',', $query['openid.sreg.required'] );
 		}
@@ -700,15 +703,16 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$sk = $wgUser->getSkin();
 
 		$wgOut->addHTML( "<p>{$instructions}</p>" .
-						'<form action="' . $sk->makeSpecialUrl( 'OpenIDServer/Login' ) . '" method="POST">' .
-						'<table>' .
-						"<tr><td><label for='username'>{$username}</label></td>" .
-						'    <td><span id="username">' . htmlspecialchars( $name ) . '</span></td></tr>' .
-						"<tr><td><label for='password'>{$password}</label></td>" .
-						'    <td><input type="password" name="wpPassword" size="32" value="" /></td></tr>' .
-						"<tr><td colspan='2'><input type='submit' name='wpOK' value='{$ok}' /> <input type='submit' name='wpCancel' value='{$cancel}' /></td></tr>" .
-						'</table>' .
-						'</form>' );
+			'<form action="' . $sk->makeSpecialUrl( 'OpenIDServer/Login' ) . '" method="POST">' .
+			'<table>' .
+			"<tr><td><label for='username'>{$username}</label></td>" .
+			'    <td><span id="username">' . htmlspecialchars( $name ) . '</span></td></tr>' .
+			"<tr><td><label for='password'>{$password}</label></td>" .
+			'    <td><input type="password" name="wpPassword" size="32" value="" /></td></tr>' .
+			"<tr><td colspan='2'><input type='submit' name='wpOK' value='{$ok}' /> <input type='submit' name='wpCancel' value='{$cancel}' /></td></tr>" .
+			'</table>' .
+			'</form>'
+		);
 	}
 
 	function SaveValues( $request, $sreg ) {
@@ -803,8 +807,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 							   array( $this, 'ValidField' ) );
 
 		if ( count( $fields ) > 0 ) {
+
 			$wgOut->addHTML( '<table>' );
+
 			foreach ( $fields as $field ) {
+
 				$wgOut->addHTML( "<tr>" );
 				$wgOut->addHTML( "<th><label for='wpAllow{$field}'>" );
 				$wgOut->addHTML( wfMessage( "openid$field" )->text() );
@@ -814,15 +821,20 @@ class SpecialOpenIDServer extends SpecialOpenID {
 				$wgOut->addHTML( "<td> " . ( ( is_null( $value ) ) ? '' : $value ) . "</td>" );
 				$wgOut->addHTML( "<td>" . ( ( in_array( $field, $sreg['required'] ) ) ? wfMessage( 'openidrequired' )->text() : wfMessage( 'openidoptional' )->text() ) . "</td>" );
 				$wgOut->addHTML( "<td><input name='wpAllow{$field}' id='wpAllow{$field}' type='checkbox'" );
+
 				if ( !is_null( $value ) ) {
 					$wgOut->addHTML( " value='on' checked='checked' />" );
 				} else {
 					$wgOut->addHTML( " disabled='disabled' />" );
 				}
+
 				$wgOut->addHTML( "</tr>" );
+
 			}
+
 			$wgOut->addHTML( '</table>' );
 		}
+
 		$wgOut->addHTML( "<input type='submit' name='wpOK' value='{$ok}' /> <input type='submit' name='wpCancel' value='{$cancel}' /></form>" );
 		return null;
 	}
