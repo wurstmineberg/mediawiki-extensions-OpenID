@@ -141,7 +141,14 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		}
 
 		$wgOut->addHTML(
-			Xml::openElement( 'form', array( 'id' => 'openid_form', 'action' => $this->getTitle()->getLocalUrl(), 'method' => 'post', 'onsubmit' => 'openid.update()' ) ) .
+			Xml::openElement( 'form',
+				array(
+					'id' => 'openid_form',
+					'action' => $this->getTitle()->getLocalUrl(),
+					'method' => 'post',
+					'onsubmit' => 'openid.update()'
+				)
+			) .
 			Xml::fieldset( wfMessage( 'openid-login-or-create-account' )->text() ) .
 			$largeButtonsHTML .
 			'<div id="openid_input_area">' .
@@ -225,10 +232,10 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 								'for' => $checkName
 							),
 							wfMessage( "openid$oidAttr" )->text() . wfMessage( 'colon-separator' )->escaped() .
-								Xml::tags( 'i',
-									array(),
-									$sreg[$oidAttr]
-								)
+							Xml::tags( 'i',
+								array(),
+								$sreg[$oidAttr]
+							)
 						)
 					);
 				}
@@ -243,10 +250,16 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 			$wgOut->addHTML(
 				Xml::openElement( 'tr' ) .
-				Xml::tags( 'td', array( 'class' => 'mw-label' ),
+				Xml::tags( 'td',
+					array(
+						'class' => 'mw-label'
+					),
 					Xml::radio( 'wpNameChoice', 'existing', !$def, array( 'id' => 'wpNameChoiceExisting' ) )
 				) . "\n" .
-				Xml::tags( 'td', array( 'class' => 'mw-input' ),
+				Xml::tags( 'td',
+					array(
+						'class' => 'mw-input'
+					),
 					Xml::label( wfMessage( 'openidchooseexisting' )->text(), 'wpNameChoiceExisting' ) . "<br />\n" .
 					wfMessage( 'openidchooseusername' )->text() . "\n" .
 					Xml::input( 'wpExistingName', 16, $name, array( 'id' => 'wpExistingName' ) ) . "\n" .
