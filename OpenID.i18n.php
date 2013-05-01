@@ -5800,6 +5800,7 @@ $messages['ps'] = array(
  * @author Giro720
  * @author Hamilton Abreu
  * @author Lijealso
+ * @author Luckas
  * @author Malafaya
  * @author SandroHc
  * @author Waldir
@@ -5873,7 +5874,7 @@ O OpenID permite-lhe autenticar-se em vários sites sem usar uma palavra-chave d
 	'openidlogininstructions-openidloginonly' => "A {{SITENAME}} ''só'' permite que se autentique com um OpenID.",
 	'openidlogininstructions-passwordloginallowed' => 'Se já tem uma conta na {{SITENAME}}, pode [[Special:UserLogin|entrar]] com o seu nome de utilizador e palavra-chave, como normalmente.
 Para usar o OpenID no futuro, pode [[Special:OpenIDConvert|converter a sua conta para OpenID]] depois de ter entrado normalmente.',
-	'openidupdateuserinfo' => 'Actualizar a minha informação pessoal:',
+	'openidupdateuserinfo' => 'Atualizar minha informação pessoal:',
 	'openiddelete' => 'Eliminar OpenID',
 	'openiddelete-text' => 'Ao clicar o botão "{{int:openiddelete-button}}", irá eliminar o OpenID $1 da sua conta.
 Não poderá voltar a autenticar-se com este OpenID.',
@@ -5886,7 +5887,7 @@ Sem um OpenID não se poderia autenticar.',
 	'openiddelete-error' => 'Ocorreu um erro ao remover o OpenID da sua conta.',
 	'openid-openids-were-not-merged' => 'Os OpenIDs não foram fundidos ao fundir as contas.',
 	'prefs-openid-hide-openid' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.',
-	'openid-hide-openid-label' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.',
+	'openid-hide-openid-label' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Actualizar a seguinte informação a partir do meu OpenID de cada vez que me autentico:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associados à sua conta:',
 	'openid-urls-action' => 'Acção',
@@ -5913,6 +5914,7 @@ Sem um OpenID não se poderia autenticar.',
  * @author Danielsouzat
  * @author Eduardo.mps
  * @author Hamilton Abreu
+ * @author Luckas
  * @author ZehRique
  * @author 555
  */
@@ -5938,7 +5940,7 @@ Por favor, consulte um [[Special:ListUsers/sysop|administrator]].',
 	'openidusernameprefix' => 'UtilizadorOpenID',
 	'openidserverlogininstructions' => 'Introduza a sua palavra-chave abaixo para se autenticar em $3 como utilizador $2 (página de utilizador $1).', # Fuzzy
 	'openidtrustinstructions' => 'Verifique se pretende compartilhar dados com $1.',
-	'openidallowtrust' => 'Permitir que $1 confie nesta conta de utilizador.',
+	'openidallowtrust' => 'Permitir que $1 confie nesta conta de usuário.',
 	'openidnopolicy' => 'O sítio não especificou uma política de privacidade.',
 	'openidpolicy' => 'Consulte a <a target="_new" href="$1">política de privacidade</a> para mais informações.',
 	'openidoptional' => 'Opcional',
@@ -5968,8 +5970,8 @@ pode escolher uma das opções abaixo.',
 	'openidalreadyloggedin' => "'''Você já se encontra autenticado, $1!'''
 
 Se no futuro pretender usar OpenID para se autenticar, pode [[Special:OpenIDConvert|converter a sua conta para usar OpenID]].", # Fuzzy
-	'openidnousername' => 'Nenhum nome de utilizador especificado.',
-	'openidbadusername' => 'Nome de utilizador especificado inválido.',
+	'openidnousername' => 'Nenhum nome de usuário especificado.',
+	'openidbadusername' => 'Nome de usuário especificado inválido.',
 	'openidautosubmit' => 'Esta página inclui um formulário que deverá ser automaticamente submetido se tiver JavaScript ativado.
 Caso contrário, utilize o botão "Continue" (Continuar).',
 	'openidclientonlytext' => 'Você pode usar contas deste wiki como OpenIDs em outro sítio.',
@@ -5994,7 +5996,7 @@ Você não poderia entrar sem um OpenID.',
 	'openiddelete-success' => 'O OpenID foi removido de sua conta com sucesso.',
 	'openiddelete-error' => 'Ocorreu um erro enquanto removia o OpenID de sua conta.',
 	'prefs-openid-hide-openid' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
-	'openid-hide-openid-label' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
+	'openid-hide-openid-label' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Atualizar a seguinte informação a partir da minha "persona" OpenID cada vez que me autentico', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associadas à sua conta:',
 	'openid-urls-action' => 'Ação',
@@ -6004,7 +6006,7 @@ Você não poderia entrar sem um OpenID.',
 	'openid-provider-label-openid' => 'Introduza a sua URL OpenID',
 	'openid-provider-label-google' => 'Entrar usando a sua conta do Google',
 	'openid-provider-label-yahoo' => 'Entrar usando a sua conta do Yahoo',
-	'openid-provider-label-aol' => 'Digite seu nome de utilizador AOL',
+	'openid-provider-label-aol' => 'Digite seu nome de usuário AOL',
 	'openid-provider-label-other-username' => 'Introduza o seu nome de utilizador $1',
 );
 
