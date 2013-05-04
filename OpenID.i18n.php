@@ -562,13 +562,10 @@ Hierdie en verdere OpenID's, saam met 'n opsionele wagwoord, kan in u [[Special:
 As dit nie werk nie, kliek op die "Continue"-knoppie om voort te gaan.',
 	'openidclientonlytext' => "U kan nie gebruikers van die wiki as OpenID op 'n ander webwerf gebruik nie.",
 	'openidloginlabel' => 'OpenID URL',
-	'openidlogininstructions' => "{{SITENAME}} ondersteun die [//openid.net/ OpenID]-standaard wat u toelaat om verskeie webtuistes te besoek sonder om telkens weer aan te teken.
-Met OpenID kan u by verskeie webwerwe aanmeld sonder om elke keer opnuut 'n wagwoord te moet verskaf.
+	'openidlogininstructions' => "{{SITENAME}} ondersteun die [//openid.net/ OpenID]-standaard wat u toelaat om verskeie webtuistes te besoek sonder om telkens aan te meld.
+Met OpenID kan u by verskeie webwerwe aanmeld sonder om elke keer opnuut 'n wagwoord te verskaf.
 Sien die [//af.wikipedia.org/wiki/OpenID Wikipedia-artikel oor OpenID] vir meer inligting.
-
-As u reeds 'n gebruiker op {{SITENAME}} het, kan u [[Special:UserLogin|aanmeld]] met u gebruikersnaam en wagwoord soos u normaalweg doen. Om in die toekoms OpenID te gebruik, kan u u [[Special:OpenIDConvert|gebruiker na OpenID omskakel]] nadat u aangeteken het.
-
-Daar is verskeie [http://wiki.openid.net/Public_OpenID_providers publieke OpenID-verskaffers], en waarskynlik het u reeds 'n OpenID-gebruiker by 'n ander diens.", # Fuzzy
+Daar is verskeie [http://wiki.openid.net/Public_OpenID_providers publieke OpenID-verskaffers] en u het waarskynlik reeds 'n OpenID-gebruiker by 'n ander diensverskaffer.",
 	'openidupdateuserinfo' => 'Opdateer my persoonlike inligting:',
 	'openiddelete' => 'Skrap OpenID',
 	'openiddelete-text' => 'Deur op die "{{int:openiddelete-button}}"-knoppie te kliek, verwyder u die OpenID $1 vanuit u gebruiker.
@@ -576,13 +573,13 @@ Dit sal dan nie langer moontlik wees om met hierdie OpenID aan te teken nie.',
 	'openiddelete-button' => 'Bevestig',
 	'openiddeleteerrornopassword' => "U kan nie al u OpenID's verwyder nie omdat u rekening nie 'n wagwoord het nie.
 Sonder 'n OpenID sou u glad nie meer kon aanteken nie.",
-	'openiddeleteerroropenidonly' => "U kan nie al u OpenID's verwyder nie omdat u slegs toegelaat word om met OpenID aan te teken.
-Sonder 'n OpenID sou u glad nie meer kon aanteken nie.",
+	'openiddeleteerroropenidonly' => "U kan nie al u OpenID's verwyder nie omdat u slegs toegelaat word om met OpenID aan te meld.
+Sonder 'n OpenID sou u glad nie meer kon aanmeld nie.",
 	'openiddelete-success' => 'Die OpenID is suksesvol van u gebruiker verwyder.',
 	'openiddelete-error' => "'n Fout het voorgekom tydens die verwydering van die OpenID uit u gebruiker.",
 	'prefs-openid-hide-openid' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.',
-	'openid-hide-openid-label' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.',
-	'openid-userinfo-update-on-login-label' => 'Opdateer die volgende inligting vanuit die OpenID-gebruiker elke keer as ek inteken:', # Fuzzy
+	'openid-hide-openid-label' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.', # Fuzzy
+	'openid-userinfo-update-on-login-label' => 'Opdateer die volgende inligting vanaf die OpenID-gebruiker elke keer as ek aanmeld:',
 	'openid-associated-openids-label' => "OpenID's aan u gebruiker gekoppel:",
 	'openid-urls-action' => 'Aksie',
 	'openid-urls-delete' => 'Skrap',
