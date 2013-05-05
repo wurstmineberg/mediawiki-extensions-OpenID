@@ -571,14 +571,14 @@ Daar is verskeie [http://wiki.openid.net/Public_OpenID_providers publieke OpenID
 	'openiddelete-text' => 'Deur op die "{{int:openiddelete-button}}"-knoppie te kliek, verwyder u die OpenID $1 vanuit u gebruiker.
 Dit sal dan nie langer moontlik wees om met hierdie OpenID aan te teken nie.',
 	'openiddelete-button' => 'Bevestig',
-	'openiddeleteerrornopassword' => "U kan nie al u OpenID's verwyder nie omdat u rekening nie 'n wagwoord het nie.
-Sonder 'n OpenID sou u glad nie meer kon aanteken nie.",
+	'openiddeleteerrornopassword' => "U kan nie al u OpenID's verwyder nie omdat u gebruiker nie 'n wagwoord het nie.
+Sonder 'n OpenID sal u glad nie meer kan aanmeld nie.",
 	'openiddeleteerroropenidonly' => "U kan nie al u OpenID's verwyder nie omdat u slegs toegelaat word om met OpenID aan te meld.
 Sonder 'n OpenID sou u glad nie meer kon aanmeld nie.",
 	'openiddelete-success' => 'Die OpenID is suksesvol van u gebruiker verwyder.',
 	'openiddelete-error' => "'n Fout het voorgekom tydens die verwydering van die OpenID uit u gebruiker.",
-	'prefs-openid-hide-openid' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.',
-	'openid-hide-openid-label' => 'Versteek u OpenID op u gebruikersbladsy as u met OpenID aanteken.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Wys OpenID-URL op u gebruikersblad',
+	'openid-hide-openid-label' => 'Versteek u OpenID-URL op u gebruikersblad.',
 	'openid-userinfo-update-on-login-label' => 'Opdateer die volgende inligting vanaf die OpenID-gebruiker elke keer as ek aanmeld:',
 	'openid-associated-openids-label' => "OpenID's aan u gebruiker gekoppel:",
 	'openid-urls-action' => 'Aksie',
