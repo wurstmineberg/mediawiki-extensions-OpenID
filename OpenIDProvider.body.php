@@ -24,11 +24,10 @@ class OpenIDProvider {
 	 * Properties about this provider
 	 * @var string
 	 */
-	protected $id, $name, $label, $url;
+	protected $providerName, $label, $url;
 
-	public function __construct( $id, $name, $label, $url ) {
-		$this->id = $id;
-		$this->name = $name;
+	public function __construct( $providerName, $label, $url ) {
+		$this->providerName = $providerName;
 		$this->label = $label;
 		$this->url = $url;
 	}
@@ -42,16 +41,26 @@ class OpenIDProvider {
 		global $wgOpenIDShowProviderIcons;
 
 		if ( $wgOpenIDShowProviderIcons ) {
-			return '<a id="openid_provider_' . $this->id . '_icon" title="' . $this->name . '"' .
-			' href="javascript: openid.show(\'' . $this->id . '\');"' .
-			' class="openid_' . $classSize . '_btn' .
-			( $this->id == 'openid' ? ' openid_selected' : '' ) . '"></a>';
+			return Html::element( 'a',
+				array(
+					'id' => 'openid_provider_' . $this->providerName . '_icon',
+					'title' => $this->providerName,
+					'href' => 'javascript:openid.show(\'' . $this->providerName . '\');',
+					'class' => 'openid_' . $classSize . '_btn' . ( $this->providerName == 'openid' ? ' openid_selected' : '' )
+				)
+			);
 		} else {
-			return '<a id="openid_provider_' . $this->id . '_link" title="' . $this->name . '"' .
-			' href="javascript: openid.show(\'' . $this->id . '\');"' .
-			' class="openid_' . $classSize . '_link' .
-			( $this->id == 'openid' ? ' openid_selected' : '' ) . '">' . $this->name . '</a>';
+			return Html::element( 'a',
+				array(
+					'id' => 'openid_provider_' . $this->providerName . '_link',
+					'title' => $this->providerName,
+					'href' => 'javascript:openid.show(\'' . $this->providerName . '\');',
+					'class' => 'openid_' . $classSize . '_link' . ( $this->providerName == 'openid' ? ' openid_selected' : '' )
+				),
+				$this->providerName
+			);
 		}
+
 	}
 
 	/**
@@ -72,25 +81,68 @@ class OpenIDProvider {
 	 * @return string
 	 */
 	public function getLoginFormHTML() {
-		$html = '<div id="provider_form_' . $this->id . '"' .
-			( $this->id == 'openid' ? '' : ' style="display:none"' ) . '>' .
-			'<div><label for="openid_url">' . $this->label . '</label></div>';
 
-		if ( $this->id == 'openid' ) {
+		if ( $this->providerName == 'OpenID' ) {
+
 			global $wgRequest;
-			$url = htmlspecialchars( $wgRequest->getCookie( 'OpenID', null, '' ) );
-			$html .= '<input type="text" name="openid_url" id="openid_url" size="45" value="' . $url . '" />';
-			$html .= Xml::submitButton( wfMessage( 'userlogin' )->text() );
+			$inputHtml = Html::element( 'input',
+				array(
+					'type' => 'text',
+					'name' => 'openid_url',
+					'id' => 'openid_url',
+					'size' => '45',
+					'value' => htmlspecialchars( $wgRequest->getCookie( 'OpenID', null, '' ) )
+				)
+			);
+
 		} else {
-			$html .= '<input type="hidden" id="openid_provider_url_' . $this->id . '" value="' . $this->url . '" />';
+
+			$inputHtml = Html::element( 'input',
+				array(
+					'type' => 'hidden',
+					'id' => 'openid_provider_url_' . $this->providerName,
+					'value' => $this->url
+				)
+			);
+
 			if ( strpos( $this->url, '{' ) === false ) {
-				$html .= '<input type="hidden" id="openid_provider_param_' . $this->id . '" size="25" value="" />';
+
+				$inputHtml .= Html::element( 'input',
+					array(
+						'type' => 'hidden',
+						'id' => 'openid_provider_param_' . $this->providerName,
+						'size' => '25',
+						'value' => ''
+					)
+				);
+
 			} else {
-				$html .= '<input type="text" id="openid_provider_param_' . $this->id . '" size="25" value="" />';
+
+				$inputHtml .= Html::element( 'input',
+					array(
+						'type' => 'text',
+						'id' => 'openid_provider_param_' . $this->providerName,
+						'size' => '25',
+						'value' => ''
+					)
+				);
+
 			}
-			$html .= Xml::submitButton( wfMessage( 'userlogin' )->text() );
+
 		}
-		$html .= '</div>';
+
+		$html = Html::rawElement( 'div',
+			array(
+				'id' => 'provider_form_' . $this->providerName,
+				'style' => ( $this->providerName == 'openid' ? 'display=inline-block' : 'display:none' ),
+			),
+			Html::rawElement( 'div',
+				array(),
+				$label = Html::element( 'label', array( 'for' => 'openid_url' ), $this->label )
+			) .
+			$inputHtml .
+			Xml::submitButton( wfMessage( 'userlogin' )->text() )
+		);
 
 		return $html;
 	}
@@ -101,14 +153,22 @@ class OpenIDProvider {
 	 */
 	public static function getLargeProviders() {
 		return  array(
-			new self( 'openid', 'OpenID', wfMessage( 'openid-provider-label-openid' )->text(),
-				'{URL}' ),
-			new self( 'google', 'Google', wfMessage( 'openid-provider-label-google' )->text(),
-				'https://www.google.com/accounts/o8/id' ),
-			new self( 'yahoo', 'Yahoo', wfMessage( 'openid-provider-label-yahoo' )->text(),
-				'http://yahoo.com/' ),
-			new self( 'aol', 'AOL', wfMessage( 'openid-provider-label-aol' )->text(),
-				'http://openid.aol.com/{username}' ),
+			new self( 'OpenID',
+				wfMessage( 'openid-provider-label-openid' )->text(),
+				'{URL}'
+			),
+			new self( 'Google',
+				wfMessage( 'openid-provider-label-google' )->text(),
+				'https://www.google.com/accounts/o8/id'
+			),
+			new self( 'Yahoo',
+				wfMessage( 'openid-provider-label-yahoo' )->text(),
+				'http://yahoo.com/'
+			),
+			new self( 'AOL',
+				wfMessage( 'openid-provider-label-aol' )->text(),
+				'http://openid.aol.com/{username}'
+			),
 		);
 	}
 
@@ -118,22 +178,38 @@ class OpenIDProvider {
 	 */
 	public static function getSmallProviders() {
 		return array(
-			new self( 'myopenid', 'MyOpenID', wfMessage( 'openid-provider-label-other-username', 'MyOpenID' )->text(),
-				'http://{username}.myopenid.com/' ),
-			new self( 'livejournal', 'LiveJournal', wfMessage( 'openid-provider-label-other-username', 'LiveJournal' )->text(),
-				'http://{username}.livejournal.com/' ),
-			new self( 'vox', 'VOX', wfMessage( 'openid-provider-label-other-username', 'VOX' )->text(),
-				'http://{username}.vox.com/' ),
-			new self( 'blogger', 'Blogger', wfMessage( 'openid-provider-label-other-username', 'Blogger' )->text(),
-				'http://{username}.blogspot.com/' ),
-			new self( 'flickr', 'Flickr', wfMessage( 'openid-provider-label-other-username', 'Flickr' )->text(),
-				'http://flickr.com/photos/{username}/' ),
-			new self( 'verisign', 'Verisign', wfMessage( 'openid-provider-label-other-username', 'Verisign' )->text(),
-				'http://{username}.pip.verisignlabs.com/' ),
-			new self( 'vidoop', 'Vidoop', wfMessage( 'openid-provider-label-other-username', 'Vidoop' )->text(),
-				'http://{username}.myvidoop.com/' ),
-			new self( 'claimid', 'ClaimID', wfMessage( 'openid-provider-label-other-username', 'ClaimID' )->text(),
-				'http://claimid.com/{username}' )
+			new self( 'MyOpenID',
+				wfMessage( 'openid-provider-label-other-username', 'MyOpenID' )->text(),
+				'http://{username}.myopenid.com/'
+			),
+			new self( 'LiveJournal',
+				wfMessage( 'openid-provider-label-other-username', 'LiveJournal' )->text(),
+				'http://{username}.livejournal.com/'
+			),
+			new self( 'VOX',
+				wfMessage( 'openid-provider-label-other-username', 'VOX' )->text(),
+				'http://{username}.vox.com/'
+			),
+			new self( 'Blogger',
+				wfMessage( 'openid-provider-label-other-username', 'Blogger' )->text(),
+				'http://{username}.blogspot.com/'
+			),
+			new self( 'Flickr',
+				wfMessage( 'openid-provider-label-other-username', 'Flickr' )->text(),
+				'http://flickr.com/photos/{username}/'
+			),
+			new self( 'Verisign',
+				wfMessage( 'openid-provider-label-other-username', 'Verisign' )->text(),
+				'http://{username}.pip.verisignlabs.com/'
+			),
+			new self( 'Vidoop',
+				wfMessage( 'openid-provider-label-other-username', 'Vidoop' )->text(),
+				'http://{username}.myvidoop.com/'
+			),
+			new self( 'ClaimID',
+				wfMessage( 'openid-provider-label-other-username', 'ClaimID' )->text(),
+				'http://claimid.com/{username}'
+			)
 		);
 	}
 }

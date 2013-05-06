@@ -44,6 +44,7 @@ $messages['en'] = array(
 	'openidconvert' => 'OpenID converter',
 	'openiderror' => 'Verification error',
 	'openiderrortext' => 'An error occurred during verification of the OpenID URL.',
+	'openid-error-request-forgery' => 'An error occurred: an invalid token was found.',
 	'openidconfigerror' => 'OpenID configuration error',
 	'openidconfigerrortext' => 'The OpenID storage configuration for this wiki is invalid.
 Please consult an [[Special:ListUsers/sysop|administrator]].',

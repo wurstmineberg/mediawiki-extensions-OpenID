@@ -418,7 +418,7 @@ class OpenIDHooks {
   			$dbw = wfGetDB( DB_MASTER );
 
 			$dbw->delete( 'user_openid', array( 'uoi_user' => $userID ) );
-			$wgOut->addHTML( "OpenID " . wfMessage( 'usermerge-userdeleted', $username, $userID )->escaped() );
+			$wgOut->addHTML( "OpenID " . wfMessage( 'usermerge-userdeleted', $username, $userID )->escaped() . "<br />\n" );
 
 			wfDebug( "OpenID: deleted OpenID user $username ($userID)\n" );
 

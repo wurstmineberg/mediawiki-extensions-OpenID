@@ -215,7 +215,15 @@ class SpecialOpenID extends SpecialPage {
 	 * @param $finish_page
 	 */
 	function login( $openid_url, $finish_page ) {
-		global $wgOpenIDTrustRoot, $wgOut;
+		global $wgOpenIDTrustRoot, $wgOut, $wgUser, $wgRequest;
+
+		// check whether an login or a convert token is present
+		if ( ( LoginForm::getLoginToken() !== $wgRequest->getVal( 'openidProviderSelectionLoginToken' ) )
+			&& !( $wgUser->matchEditToken( $wgRequest->getVal( 'openidConvertToken' ), 'openidConvertToken' ) ) ) {
+
+			$wgOut->showErrorPage( 'openiderror', 'openid-error-request-forgery' );
+			return;
+		}
 
 		# If it's an interwiki link, expand it
 

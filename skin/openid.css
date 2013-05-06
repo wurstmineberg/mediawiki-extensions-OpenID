@@ -51,21 +51,21 @@ a.openid_large_btn:focus {
 #openid_small_providers_icons {
 }
 
-#openid_provider_openid_icon { /*@embed*/background-image: url(icons/openid_large.png); }
-#openid_provider_google_icon { background-image: url(icons/google_large.png); }
-#openid_provider_wmflabs_icon { background-image: url(icons/wmflabs_openid.png); }
-#openid_provider_yahoo_icon { background-image: url(icons/yahoo_large.png); }
-#openid_provider_aol_icon { background-image: url(icons/aol_large.png); }
+#openid_provider_OpenID_icon { /*@embed*/background-image: url(icons/OpenID_large.png); }
+#openid_provider_Google_icon { background-image: url(icons/Google_large.png); }
+#openid_provider_WMFLabs_icon { background-image: url(icons/WMFLabs_large.png); }
+#openid_provider_Yahoo_icon { background-image: url(icons/Yahoo_large.png); }
+#openid_provider_AOL_icon { background-image: url(icons/AOL_large.png); }
 
-#openid_provider_myopenid_icon { background-image: url(icons/myopenid_small.png); }
-#openid_provider_livejournal_icon { background-image: url(icons/livejournal_small.png); }
-#openid_provider_vox_icon { background-image: url(icons/vox_small.png); }
-#openid_provider_wordpress_icon { background-image: url(icons/wordpress_small.png); }
-#openid_provider_blogger_icon { background-image: url(icons/blogger_small.png); }
-#openid_provider_flickr_icon { background-image: url(icons/flickr_small.png); }
-#openid_provider_verisign_icon { background-image: url(icons/verisign_small.png); }
-#openid_provider_vidoop_icon { background-image: url(icons/vidoop_small.png); }
-#openid_provider_claimid_icon { background-image: url(icons/claimid_small.png); }
+#openid_provider_MyOpenID_icon { background-image: url(icons/MyOpenID_small.png); }
+#openid_provider_LiveJournal_icon { background-image: url(icons/LiveJournal_small.png); }
+#openid_provider_VOX_icon { background-image: url(icons/VOX_small.png); }
+#openid_provider_WordPress_icon { background-image: url(icons/WordPress_small.png); }
+#openid_provider_Blogger_icon { background-image: url(icons/Blogger_small.png); }
+#openid_provider_Flickr_icon { background-image: url(icons/Flickr_small.png); }
+#openid_provider_Verisign_icon { background-image: url(icons/Verisign_small.png); }
+#openid_provider_Vidoop_icon { background-image: url(icons/Vidoop_small.png); }
+#openid_provider_ClaimID_icon { background-image: url(icons/ClaimID_small.png); }
 
 #openid_url {
 	background: url(icons/openid-inputicon.png) no-repeat;

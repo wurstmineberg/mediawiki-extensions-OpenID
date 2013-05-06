@@ -68,7 +68,12 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 	}
 
 	function convert( $openid_url ) {
-		global $wgUser, $wgOut;
+		global $wgUser, $wgOut, $wgRequest;
+
+		if ( !$wgUser->matchEditToken( $wgRequest->getVal( 'openidConvertToken' ), 'openidConvertToken' ) ) {
+			$wgOut->showErrorPage( 'openiderror', 'openid-error-request-forgery' );
+			return;
+		}
 
 		# Expand Interwiki
 		$openid_url = $this->interwikiExpand( $openid_url );
@@ -105,7 +110,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 	}
 
 	function form() {
-		global $wgOut, $wgOpenIDShowProviderIcons;
+		global $wgOut, $wgUser, $wgOpenIDShowProviderIcons;
 
 		$wgOut->addModules( $wgOpenIDShowProviderIcons ? 'ext.openid.icons' : 'ext.openid.plain' );
 
@@ -176,7 +181,9 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			$formsHTML .
 			'</div>' .
 			$smallButtonsHTML .
-			Xml::closeElement( 'fieldset' ) . Xml::closeElement( 'form' )
+			Xml::closeElement( 'fieldset' ) .
+			Html::Hidden( 'openidConvertToken' , $wgUser->getEditToken( 'openidConvertToken' ) ) . "\n" .
+			Xml::closeElement( 'form' )
 		);
 	}
 
@@ -206,7 +213,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 		}
 
 		if ( $wgRequest->wasPosted()
-			&& $wgUser->matchEditToken( $wgRequest->getVal( 'wpEditToken' ), $openid ) ) {
+			&& $wgUser->matchEditToken( $wgRequest->getVal( 'openidDeleteToken' ), $openid ) ) {
 
 			$ret = self::removeUserUrl( $wgUser, $openid );
 			$wgOut->addWikiMsg( $ret ? 'openiddelete-success' : 'openiddelete-error' );
@@ -224,7 +231,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			) .
 			Xml::submitButton( wfMessage( 'openiddelete-button' )->text() ) . "\n" .
 			Html::Hidden( 'url', $openid ) . "\n" .
-			Html::Hidden( 'wpEditToken', $wgUser->getEditToken( $openid ) ) . "\n" .
+			Html::Hidden( 'openidDeleteToken', $wgUser->getEditToken( $openid ) ) . "\n" .
 			Xml::closeElement( 'form' )
 		);
 	}

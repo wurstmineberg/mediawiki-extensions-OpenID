@@ -54,7 +54,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function execute( $par ) {
-		global $wgOut, $wgOpenIDConsumerAndAlsoProvider, $wgOpenIDIdentifierSelect;
+		global $wgOut, $wgOpenIDConsumerAndAlsoProvider, $wgOpenIDIdentifierSelect, $wgRequest, $wgUser;
 
 		$this->setHeaders();
 
@@ -111,6 +111,10 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		case 'login':
 
+			wfDebug( "OpenID: SpecialOpenIDServer/Login. You should not pass this point.\n" );
+			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
+			return;
+
 			list( $request, $sreg ) = $this->FetchValues();
 			$result = $this->serverLogin( $request );
 			if ( $result ) {
@@ -125,6 +129,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			break;
 
 		case 'trust':
+
+			if ( !$wgUser->matchEditToken( $wgRequest->getVal( 'openidTrustFormToken' ), 'openidTrustFormToken' ) ) {
+				$wgOut->showErrorPage( 'openiderror', 'openid-error-request-forgery' );
+				return;
+			}
 
 			list( $request, $sreg ) = $this->FetchValues();
 			$result = $this->Trust( $request, $sreg );
@@ -556,7 +565,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$wgOut->setPageTitle( wfMessage( 'openid-trusted-sites-delete-confirmation-page-title' )->text() );
 
 		if ( $wgRequest->wasPosted()
-			&& $wgUser->matchEditToken( $wgRequest->getVal( 'wpEditToken' ), $trustedSiteToBeDeleted ) ) {
+			&& $wgUser->matchEditToken( $wgRequest->getVal( 'openidDeleteTrustedSiteToken' ), $trustedSiteToBeDeleted ) ) {
 
 			if ( $trustedSiteToBeDeleted === "*" ) {
 
@@ -591,7 +600,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			) .
 			Xml::submitButton( wfMessage( 'openid-trusted-sites-delete-confirmation-button-text' )->text() ) . "\n" .
 			Html::Hidden( 'url', $trustedSiteToBeDeleted ) . "\n" .
-			Html::Hidden( 'wpEditToken', $wgUser->getEditToken( $trustedSiteToBeDeleted ) ) . "\n" .
+			Html::Hidden( 'openidDeleteTrustedSiteToken', $wgUser->getEditToken( $trustedSiteToBeDeleted ) ) . "\n" .
 			Xml::closeElement( 'form' )
 		);
 	}
@@ -683,7 +692,12 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function LoginForm( $request, $msg = null ) {
+	// is this really used by someone ?
 		global $wgOut, $wgUser;
+
+		wfDebug( "OpenID: SpecialOpenIDServer.body::LoginForm. You should not pass this point.\n" );
+		$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
+		return;
 
 		$url = $request->identity;
 		$name = $this->UrlToUserName( $url );
@@ -799,9 +813,10 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$sk = $wgUser->getSkin();
 
 		$wgOut->addHTML( "<p>{$instructions}</p>" .
-						'<form action="' . $sk->makeSpecialUrl( 'OpenIDServer/Trust' ) . '" method="POST">' .
-						'<input name="wpAllowTrust" type="checkbox" value="on" checked="checked" id="wpAllowTrust">' .
-						'<label for="wpAllowTrust">' . $allow . '</label><br />' );
+			'<form action="' . $sk->makeSpecialUrl( 'OpenIDServer/Trust' ) . '" method="POST">' .
+			'<input name="wpAllowTrust" type="checkbox" value="on" checked="checked" id="wpAllowTrust">' .
+			'<label for="wpAllowTrust">' . $allow . '</label><br />'
+		);
 
 		$fields = array_filter( array_unique( array_merge( $sreg['optional'], $sreg['required'] ) ),
 							   array( $this, 'ValidField' ) );
@@ -834,8 +849,10 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 			$wgOut->addHTML( '</table>' );
 		}
-
-		$wgOut->addHTML( "<input type='submit' name='wpOK' value='{$ok}' /> <input type='submit' name='wpCancel' value='{$cancel}' /></form>" );
+		$wgOut->addHTML( "<input type='submit' name='wpOK' value='{$ok}' /> <input type='submit' name='wpCancel' value='{$cancel}' />" .
+			Html::Hidden( 'openidTrustFormToken', $wgUser->getEditToken( 'openidTrustFormToken' ) ) . "\n" .
+			"</form>"
+		);
 		return null;
 	}
 

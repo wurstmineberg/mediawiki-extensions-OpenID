@@ -140,6 +140,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			$smallButtonsHTML .= '</div>';
 		}
 
+		LoginForm::setLoginToken();
 		$wgOut->addHTML(
 			Xml::openElement( 'form',
 				array(
@@ -155,7 +156,9 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			$formsHTML .
 			'</div>' .
 			$smallButtonsHTML .
-			Xml::closeElement( 'fieldset' ) . Xml::closeElement( 'form' )
+			Xml::closeElement( 'fieldset' ) .
+			Html::Hidden( 'openidProviderSelectionLoginToken', LoginForm::getLoginToken() ) . "\n" .
+			Xml::closeElement( 'form' )
 		);
 		$wgOut->addWikiMsg( 'openidlogininstructions' );
 		if ( $wgOpenIDLoginOnly ) {
@@ -225,14 +228,20 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 				if ( array_key_exists( $oidAttr, $sreg ) ) {
 					$checkName = 'wpUpdateUserInfo' . $oidAttr;
-					$oidAttributes[] = Xml::tags( 'li', array(),
-						Xml::check( $checkName, false, array( 'id' => $checkName ) ) .
+					$oidAttributes[] = Xml::tags( 'li',
+						array(),
+						Xml::check( $checkName,
+							false,
+							array(
+								'id' => $checkName
+							)
+						) .
 						Xml::tags( 'label',
 							array(
 								'for' => $checkName
 							),
 							wfMessage( "openid$oidAttr" )->text() . wfMessage( 'colon-separator' )->escaped() .
-							Xml::tags( 'i',
+							Xml::element( 'i',
 								array(),
 								$sreg[$oidAttr]
 							)
@@ -245,7 +254,10 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			if ( count( $oidAttributes ) > 0 ) {
 				$oidAttributesUpdate = "<br />\n" .
 					wfMessage( 'openidupdateuserinfo' )->text() . "\n" .
-					Xml::tags( 'ul', array(), implode( "\n", $oidAttributes ) );
+					Xml::tags( 'ul',
+						array(),
+						implode( "\n", $oidAttributes )
+					);
 			}
 
 			$wgOut->addHTML(
@@ -254,7 +266,13 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 					array(
 						'class' => 'mw-label'
 					),
-					Xml::radio( 'wpNameChoice', 'existing', !$def, array( 'id' => 'wpNameChoiceExisting' ) )
+					Xml::radio( 'wpNameChoice',
+						'existing',
+						!$def,
+						array(
+							'id' => 'wpNameChoiceExisting'
+						)
+					)
 				) . "\n" .
 				Xml::tags( 'td',
 					array(
@@ -262,7 +280,13 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 					),
 					Xml::label( wfMessage( 'openidchooseexisting' )->text(), 'wpNameChoiceExisting' ) . "<br />\n" .
 					wfMessage( 'openidchooseusername' )->text() . "\n" .
-					Xml::input( 'wpExistingName', 16, $name, array( 'id' => 'wpExistingName' ) ) . "\n" .
+					Xml::input( 'wpExistingName',
+						16,
+						$name,
+						array(
+							'id' => 'wpExistingName'
+						)
+					) . "\n" .
 					wfMessage( 'openidchoosepassword' )->text() . "\n" .
 					Xml::password( 'wpExistingPassword' ) . "\n" .
 					$oidAttributesUpdate . "\n"
@@ -309,7 +333,8 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 					$fullname = $sreg['fullname'];
 				}
 
-				if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
+				if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax )
+					|| array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
 					$fullname = $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0];
 				}
 
@@ -427,10 +452,12 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 		} // These are only available if all visitors are allowed to create accounts
 
+		LoginForm::setLoginToken();
+
 		# These are always available
 		$wgOut->addHTML(
 			Xml::openElement( 'tr' ) . "\n" .
-			Xml::element( 'td',
+			Xml::tags( 'td',
 				array(),
 				''
 			) . "\n" .
@@ -445,6 +472,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 			Xml::closeElement( 'table' ) .
 			Xml::closeElement( 'fieldset' ) .
+			Html::Hidden( 'openidChooseNameBeforeLoginToken', LoginForm::getLoginToken() ) . "\n" .
 			Xml::closeElement( 'form' )
 		);
 	}
@@ -454,6 +482,11 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 */
 	function chooseName() {
 		global $wgRequest, $wgUser, $wgOut;
+
+		if ( LoginForm::getLoginToken() != $wgRequest->getVal( 'openidChooseNameBeforeLoginToken' ) ) {
+			$wgOut->showErrorPage( 'openiderror', 'openid-error-request-forgery' );
+			return;
+		}
 
 		list( $openid, $sreg, $ax ) = $this->fetchValues();
 		if ( is_null( $openid ) ) {
@@ -619,6 +652,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		// E-mail
 		if ( $this->updateOption( 'email', $user, $force ) ) {
 			// first check SREG, then AX; if both, AX takes higher priority
+			$email = false;
 			if ( array_key_exists( 'email', $sreg ) ) {
 				$email = $sreg['email'];
 			}
