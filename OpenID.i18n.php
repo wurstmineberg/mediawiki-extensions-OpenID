@@ -1662,6 +1662,7 @@ $messages['de'] = array(
 	'openidconvert' => 'OpenID-Konverter',
 	'openiderror' => 'Überprüfungsfehler',
 	'openiderrortext' => 'Ein Fehler ist während der Überprüfung der OpenID-URL aufgetreten.',
+	'openid-error-request-forgery' => 'Ein Fehler ist aufgetreten: Es wurde ein ungültiger Token gefunden.',
 	'openidconfigerror' => 'OpenID-Konfigurationsfehler',
 	'openidconfigerrortext' => 'Die OpenID-Speicherkonfiguarion für dieses Wiki ist fehlerhaft.
 Bitte benachrichtige einen [[Special:ListUsers/sysop|Administrator]].',
@@ -2476,6 +2477,7 @@ Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
  * @author Grondin
  * @author IAlex
  * @author McDutchie
+ * @author Metroitendo
  * @author Od1n
  * @author Peter17
  * @author PiRSquared17
@@ -2496,6 +2498,7 @@ $messages['fr'] = array(
 	'openidconvert' => 'Convertisseur OpenID',
 	'openiderror' => 'Erreur de vérification',
 	'openiderrortext' => 'Une erreur est intervenue pendant la vérification de l’adresse OpenID.',
+	'openid-error-request-forgery' => "Une erreur s'est produite : un jeton non valide a été trouvé.",
 	'openidconfigerror' => 'Erreur de configuration de OpenID',
 	'openidconfigerrortext' => 'Le stockage de la configuration OpenID pour ce wiki est incorrecte.
 Veuillez vous mettre en rapport avec un [[Special:ListUsers/sysop|administrateur]] de ce site.',
@@ -7781,7 +7784,7 @@ $messages['zh-hans'] = array(
 	'openidtrustinstructions' => '请确认您是否愿与$1分享数据。',
 	'openidallowtrust' => '允许$1信任这个用户的账户。',
 	'openidnopolicy' => '站点没有提供隐私政策。',
-	'openidpolicy' => '如要获得更多信息，请参见<a target="_new" href="$1">隐私政策</a>。',
+	'openidpolicy' => '更多信息请见<a target="_new" href="$1">隐私权政策</a>。',
 	'openidoptional' => '可选',
 	'openidrequired' => '必选',
 	'openidnickname' => '昵称',
