@@ -180,10 +180,7 @@ You would not able to log in without an OpenID.',
 	'openid-dashboard-number-users-without-openid' => 'Number of users without OpenID',
 );
 
-/** Message documentation (This is the name of the message documentation language code (qqq). Follow the rules of your languages and use small first letter if it doesn't capitalize language names always.
-
-It might be easier to translate it as "translation guidelines" or "translation help".
-{{Identical|Message documentation}})
+/** Message documentation (Message documentation)
  * @author Dbc334
  * @author EugeneZelenko
  * @author Fryed-peach
@@ -432,7 +429,13 @@ Used in the same way as {{msg-mw|prefs-registration-date-time}}.',
 {{Identical|Action}}',
 	'openid-trusted-sites-delete-link-action-text' => '{{Identical|Delete}}',
 	'openid-trusted-sites-delete-all-link-action-text' => 'A text for the link in the table to click to delete all trusted sites, e.g. "Delete all trusted sites"',
-	'openid-trusted-sites-delete-confirmation-page-title' => 'The page title for "Site trust deletion"',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'The page title for "Trusted site deletion" in [[Special:OpenIDServer]].
+
+Used as title for any one of the following messages:
+* {{msg-mw|Openid-trusted-sites-delete-all-confirmation-success-text}}
+* {{msg-mw|Openid-trusted-sites-delete-confirmation-success-text}}
+* {{msg-mw|Openid-trusted-sites-delete-all-confirmation-question}}
+* {{msg-mw|Openid-trusted-sites-delete-confirmation-question}}',
 	'openid-trusted-sites-delete-confirmation-question' => 'The question of By clicking the {{msg-mw|openid-trusted-sites-delete-confirmation-button-text}} button, you will remove $1 from the list of sites you trust.
 
 Parameters:
@@ -2594,7 +2597,7 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-trusted-sites-table-header-column-action' => 'Action',
 	'openid-trusted-sites-delete-link-action-text' => 'Supprimer',
 	'openid-trusted-sites-delete-all-link-action-text' => 'Supprimer tous les sites de confiance',
-	'openid-trusted-sites-delete-confirmation-page-title' => 'Suppression d’un site de confiance',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Suppression d’un site de confiance', # Fuzzy
 	'openid-trusted-sites-delete-confirmation-question' => 'En cliquant sur le bouton « {{int:openid-trusted-sites-delete-confirmation-button-text}} », vous supprimerez « $1 » de la liste de vos sites de confiance.',
 	'openid-trusted-sites-delete-all-confirmation-question' => 'En cliquant sur le bouton « {{int:openid-trusted-sites-delete-confirmation-button-text}} », vous supprimerez tous les sites de confiance de votre profil utilisateur.',
 	'openid-trusted-sites-delete-confirmation-button-text' => 'Confirmer',
@@ -2741,6 +2744,7 @@ $messages['gl'] = array(
 	'openidconvert' => 'Transformador OpenID',
 	'openiderror' => 'Erro de verificación',
 	'openiderrortext' => 'Ocorreu un erro durante a verificación do URL do OpenID.',
+	'openid-error-request-forgery' => 'Ocorreu un erro: Atopouse un pase inválido.',
 	'openidconfigerror' => 'Erro na configuración do OpenID',
 	'openidconfigerrortext' => 'A configuración do almacenamento no OpenID deste wiki é inválido.
 Por favor, consúlteo cun [[Special:ListUsers/sysop|administrador]] do sitio.',
@@ -4632,6 +4636,7 @@ $messages['mk'] = array(
 	'openidconvert' => 'OpenID претворач',
 	'openiderror' => 'Грешка при потврдувањето',
 	'openiderrortext' => 'Настана грешка при потврдувањето на URL адресата на OpenID.',
+	'openid-error-request-forgery' => 'Се појави грешка: пронајден е неважечки жетон.',
 	'openidconfigerror' => 'Грешка со конфигурацијата на OpenID',
 	'openidconfigerrortext' => 'Складишните посатвки на OpenID за ова вики се погрешни.
 Консултирајте [[Special:ListUsers/sysop|администратор]].',
@@ -5199,6 +5204,7 @@ $messages['nl'] = array(
 	'openidconvert' => 'OpenID-convertor',
 	'openiderror' => 'Controlefout',
 	'openiderrortext' => 'Er is een fout opgetreden tijdens de verificatie van de OpenID URL.',
+	'openid-error-request-forgery' => 'Er is een fout opgetreden: er is een ongeldig token aangetroffen.',
 	'openidconfigerror' => 'Fout in de installatie van OpenID',
 	'openidconfigerrortext' => "De instellingen van de opslag van OpenID's voor deze wiki kloppen niet.
 Raadpleeg een  [[Special:ListUsers/sysop|beheerder]].",
@@ -5293,7 +5299,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-trusted-sites-table-header-column-action' => 'Handeling',
 	'openid-trusted-sites-delete-link-action-text' => 'Verwijderen',
 	'openid-trusted-sites-delete-all-link-action-text' => 'Alle vertrouwde sites verwijderen',
-	'openid-trusted-sites-delete-confirmation-page-title' => 'Vertrouwde site verwijderen',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Vertrouwde site verwijderen', # Fuzzy
 	'openid-trusted-sites-delete-confirmation-question' => 'Door te klikken op de know "{{int:openid-trusted-sites-delete-confirmation-button-text}}" wordt "$1" verwijderd uit de lijst met sites die u vertrouwt.',
 	'openid-trusted-sites-delete-all-confirmation-question' => 'Door te klikken op de knop "{{int:openid-trusted-sites-delete-confirmation-button-text}}" verwijderd u alle vertrouwde sites uit uw gebruikersprofiel.',
 	'openid-trusted-sites-delete-confirmation-button-text' => 'Bevestigen',
