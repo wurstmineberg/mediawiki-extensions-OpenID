@@ -1,6 +1,8 @@
 CHANGES
 =======
 
+3.31  20130508  removal of dead openid provider logos (Vox, Vidoop)
+                bug 44849 retina icons
 3.30  20130505  giving up backward compatibility
                 removed outdated Makefile and patch for openid-php library
                 renamed README.OpenID-mediawiki-extension to README

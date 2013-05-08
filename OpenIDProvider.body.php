@@ -186,10 +186,6 @@ class OpenIDProvider {
 				wfMessage( 'openid-provider-label-other-username', 'LiveJournal' )->text(),
 				'http://{username}.livejournal.com/'
 			),
-			new self( 'VOX',
-				wfMessage( 'openid-provider-label-other-username', 'VOX' )->text(),
-				'http://{username}.vox.com/'
-			),
 			new self( 'Blogger',
 				wfMessage( 'openid-provider-label-other-username', 'Blogger' )->text(),
 				'http://{username}.blogspot.com/'
@@ -201,10 +197,6 @@ class OpenIDProvider {
 			new self( 'Verisign',
 				wfMessage( 'openid-provider-label-other-username', 'Verisign' )->text(),
 				'http://{username}.pip.verisignlabs.com/'
-			),
-			new self( 'Vidoop',
-				wfMessage( 'openid-provider-label-other-username', 'Vidoop' )->text(),
-				'http://{username}.myvidoop.com/'
 			),
 			new self( 'ClaimID',
 				wfMessage( 'openid-provider-label-other-username', 'ClaimID' )->text(),
