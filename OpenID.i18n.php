@@ -1475,6 +1475,14 @@ podeu triar-ne un de les opcions a continuació.',
 	'openid-provider-label-other-username' => "Introduïu el vostre $1 nom d'usuari",
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'openiddelete' => 'ДӀаяккха OpenID',
+	'openid-urls-delete' => 'ДӀаяккха',
+);
+
 /** Sorani Kurdish (کوردی)
  */
 $messages['ckb'] = array(
