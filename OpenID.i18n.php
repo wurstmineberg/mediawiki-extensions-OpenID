@@ -5905,7 +5905,7 @@ Sem um OpenID não se poderia autenticar.',
 	'openid-hide-openid-label' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Actualizar a seguinte informação a partir do meu OpenID de cada vez que me autentico:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associados à sua conta:',
-	'openid-urls-action' => 'Acção',
+	'openid-urls-action' => 'Ação',
 	'openid-urls-delete' => 'Apagar',
 	'openid-add-url' => 'Adicionar novo OpenID', # Fuzzy
 	'openid-login-or-create-account' => 'Entrar ou criar uma conta nova',
@@ -5961,7 +5961,7 @@ Por favor, consulte um [[Special:ListUsers/sysop|administrator]].',
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Requerido',
 	'openidnickname' => 'Apelido',
-	'openidfullname' => 'Nome completo', # Fuzzy
+	'openidfullname' => 'Nome real',
 	'openidemail' => 'Endereço de e-mail',
 	'openidlanguage' => 'Língua',
 	'openidtimezone' => 'Fuso horário',
