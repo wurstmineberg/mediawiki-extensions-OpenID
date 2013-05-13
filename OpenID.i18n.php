@@ -741,19 +741,19 @@ $messages['ar'] = array(
 $messages['arc'] = array(
 	'openidusernameprefix' => 'ܡܦܠܚܢܐ ܕܗܝܝܘܬܐ ܦܬܝܚܬܐ',
 	'openidoptional' => 'ܓܒܝܝܐ',
-	'openidfullname' => 'ܫܡܐ ܓܡܝܪܐ',
+	'openidfullname' => 'ܫܡܐ ܫܪܝܪܐ',
 	'openidemail' => 'ܡܘܢܥܐ ܕܒܝܠܕܪܐ ܐܠܩܛܪܘܢܝܐ',
 	'openidlanguage' => 'ܠܫܢܐ',
 	'openidtimezone' => 'ܙܘܢܐ ܙܒܢܝܐ:',
 	'openidchooselegend' => 'ܓܒܝܐ ܕܚܘܫܒܢܐ ܘܫܡܐ ܕܡܦܠܚܢܐ',
-	'openidchoosefull' => 'ܫܡܐ ܓܡܝܪܐ ܕܝܠܟ($1)',
+	'openidchoosefull' => 'ܫܡܐ ܫܪܝܪܐ ܕܝܠܟ($1)',
 	'openidchoosepassword' => 'ܡܠܬܐ ܕܥܠܠܐ:',
 	'openidloginlabel' => 'URL ܕܗܝܝܘܬܐ ܦܬܝܚܬܐ',
 	'openiddelete' => 'ܫܘܦ ܗܝܝܘܬܐ ܦܬܝܚܬܐ',
 	'openiddelete-button' => 'ܫܪܪ',
 	'openid-urls-action' => 'ܥܒܕܐ',
 	'openid-urls-delete' => 'ܫܘܦ',
-	'openid-add-url' => 'ܐܘܣܦ ܗܝܝܘܬܐ ܦܬܝܚܬܐ ܚܕܬܐ',
+	'openid-add-url' => 'ܐܘܣܦ ܗܝܝܘܬܐ ܦܬܝܚܬܐ ܚܕܬܐ ܠܚܘܫܒܢܟ',
 	'openid-provider-label-other-username' => 'ܐܥܠ ܫܡܐ ܕܡܦܠܚܢܐ ܕܝܠܟ ܒ $1',
 );
 
@@ -5558,6 +5558,7 @@ $messages['pfl'] = array(
  */
 $messages['pl'] = array(
 	'openid-desc' => 'Logowanie się do wiki z użyciem [//openid.net/ OpenID], oraz logowanie się do innych witryn używających OpenID z użyciem konta użytkownika z wiki',
+	'openididentifier' => 'Identyfikator OpenID',
 	'openidlogin' => 'Zaloguj lub utwórz konto korzystając z OpenID',
 	'openidserver' => 'Serwer OpenID',
 	'openidxrds' => 'Plik Yadis',
