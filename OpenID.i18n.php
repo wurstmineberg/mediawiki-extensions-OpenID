@@ -844,6 +844,7 @@ $messages['ast'] = array(
 	'openidconvert' => 'Convertidor OpenID',
 	'openiderror' => 'Error de verificación',
 	'openiderrortext' => 'Hebo un error mentanto se comprobaba la URL de la OpenID.',
+	'openid-error-request-forgery' => 'Hebo un error: alcontróse un pase inválidu.',
 	'openidconfigerror' => "Error de configuración d'OpenID",
 	'openidconfigerrortext' => "La configuración del almacenamientu OpenID d'esta wiki ye inválida.
 Consulta con un [[Special:ListUsers/sysop|alministrador]].",
