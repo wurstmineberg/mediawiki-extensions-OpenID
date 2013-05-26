@@ -6938,7 +6938,7 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openiddelete-error' => 'Ett fel uppstod när OpenID-kopplingen skulle tas bort från ditt konto.',
 	'openid-openids-were-not-merged' => "Eventuella OpenID:n som varit kopplade till de sammanslagna kontona har ''inte'' slagits samman.",
 	'prefs-openid-hide-openid' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
-	'openid-hide-openid-label' => 'Dölj din OpenID-URL på din användarsida.',
+	'openid-hide-openid-label' => 'Dölj OpenID-adressen på din användarsida.',
 	'openid-userinfo-update-on-login-label' => 'Uppdatera följande information från min OpenID-profil varje gång jag loggar in', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID:n som är kopplade till ditt konto:',
 	'openid-urls-url' => 'URL',
