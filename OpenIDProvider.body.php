@@ -37,7 +37,7 @@ class OpenIDProvider {
 	 * @param $classSize String Size for the openid_ class, either large or small
 	 * @return string
 	 */
-	private function getButtonHTML( $classSize ) {
+	public function getButtonHTML( $classSize ) {
 		global $wgOpenIDShowProviderIcons;
 
 		if ( $wgOpenIDShowProviderIcons ) {
@@ -61,20 +61,6 @@ class OpenIDProvider {
 			);
 		}
 
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getLargeButtonHTML() {
-		return $this->getButtonHTML( 'large' );
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getSmallButtonHTML() {
-		return $this->getButtonHTML( 'small' );
 	}
 
 	/**
@@ -105,36 +91,21 @@ class OpenIDProvider {
 				)
 			);
 
-			if ( strpos( $this->url, '{' ) === false ) {
-
-				$inputHtml .= Html::element( 'input',
-					array(
-						'type' => 'hidden',
-						'id' => 'openid_provider_param_' . $this->providerName,
-						'size' => '25',
-						'value' => ''
-					)
-				);
-
-			} else {
-
-				$inputHtml .= Html::element( 'input',
-					array(
-						'type' => 'text',
-						'id' => 'openid_provider_param_' . $this->providerName,
-						'size' => '25',
-						'value' => ''
-					)
-				);
-
-			}
+			$inputHtml .= Html::element( 'input',
+				array(
+					'type' => ( strpos( $this->url, '{' ) === false ) ? 'hidden' : 'text',
+					'id' => 'openid_provider_param_' . $this->providerName,
+					'size' => '25',
+					'value' => ''
+				)
+			);
 
 		}
 
 		$html = Html::rawElement( 'div',
 			array(
 				'id' => 'provider_form_' . $this->providerName,
-				'style' => ( $this->providerName == 'openid' ? 'display=inline-block' : 'display:none' ),
+				'style' => ( $this->providerName == 'openid' ) ? 'display=inline-block' : 'display:none',
 			),
 			Html::rawElement( 'div',
 				array(),

@@ -105,7 +105,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 		$largeButtonsHTML = '<div id="openid_large_providers">';
 		foreach ( OpenIDProvider::getLargeProviders() as $provider ) {
-			$largeButtonsHTML .= $provider->getLargeButtonHTML();
+			$largeButtonsHTML .= $provider->getButtonHTML( 'large' );
 			$formsHTML .= $provider->getLoginFormHTML();
 		}
 		$largeButtonsHTML .= '</div>';
@@ -114,7 +114,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		if ( $wgOpenIDShowProviderIcons ) {
 			$smallButtonsHTML .= '<div id="openid_small_providers_icons">';
 			foreach ( OpenIDProvider::getSmallProviders() as $provider ) {
-				$smallButtonsHTML .= $provider->getSmallButtonHTML();
+				$smallButtonsHTML .= $provider->getButtonHTML( 'small' );
 				$formsHTML .= $provider->getLoginFormHTML();
 			}
 			$smallButtonsHTML .= '</div>';
@@ -131,7 +131,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 					$break = false;
 				}
 
-				$smallButtonsHTML .= '<li>' . $provider->getSmallButtonHTML() . '</li>';
+				$smallButtonsHTML .= '<li>' . $provider->getButtonHTML( 'small' ) . '</li>';
 
 				$formsHTML .= $provider->getLoginFormHTML();
 				$i++;
