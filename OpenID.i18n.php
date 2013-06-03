@@ -1480,7 +1480,9 @@ podeu triar-ne un de les opcions a continuació.',
  * @author Умар
  */
 $messages['ce'] = array(
+	'openidlanguage' => 'Мотт',
 	'openiddelete' => 'ДӀаяккха OpenID',
+	'openiddelete-button' => 'Бакъдан',
 	'openid-urls-delete' => 'ДӀаяккха',
 );
 
