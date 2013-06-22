@@ -1654,6 +1654,7 @@ du kan vælge et fra nedenstående muligheder.',
  * @author ChrisiPK
  * @author Church of emacs
  * @author DaSch
+ * @author Geitost
  * @author Kghbln
  * @author LWChris
  * @author Leithian
@@ -1698,7 +1699,7 @@ Ein fakultatives Benutzerkontopasswort kann hingegen unter dem Reiter [[Special:
 	'openidtrustinstructions' => 'Prüfe, ob du Daten mit $1 teilen möchtest.',
 	'openidallowtrust' => 'Erlaube $1, diesem Benutzerkonto zu vertrauen.',
 	'openidnopolicy' => 'Die Seite hat keine Datenschutzrichtlinie angegeben.',
-	'openidpolicy' => 'Prüfe die <a target="_new" href="$1">Datenschutzrichtlinie</a> für weitere Informationen.',
+	'openidpolicy' => 'Weitere Informationen sind in der <a target="_new" href="$1">Datenschutzrichtlinie</a> zu finden.',
 	'openidoptional' => 'Optional',
 	'openidrequired' => 'Erforderlich',
 	'openidnickname' => 'Benutzername',
