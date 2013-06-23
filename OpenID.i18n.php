@@ -4942,7 +4942,7 @@ Kata laluan akaun pilihan boleh ditambahkan ke dalam [[Special:Preferences#mw-pr
 	'openidoptional' => 'Pilihan',
 	'openidrequired' => 'Wajib',
 	'openidnickname' => 'Nama timangan',
-	'openidfullname' => 'Nama penuh', # Fuzzy
+	'openidfullname' => 'Nama sebenar',
 	'openidemail' => 'Alamat e-mel',
 	'openidlanguage' => 'Bahasa',
 	'openidtimezone' => 'Zon waktu',
@@ -4950,7 +4950,7 @@ Kata laluan akaun pilihan boleh ditambahkan ke dalam [[Special:Preferences#mw-pr
 	'openidchooseinstructions' => 'Semua pengguna memerlukan nama timangan;
 anda boleh memilih satu daripada pilihan-pilihan berikut.',
 	'openidchoosenick' => 'Nama timangan anda ($1)',
-	'openidchoosefull' => 'Nama penuh anda ($1)', # Fuzzy
+	'openidchoosefull' => 'Nama sebenar anda ($1)',
 	'openidchooseurl' => 'Nama yang dipilih daripada OpenID anda ($1)',
 	'openidchooseauto' => 'Nama janaan automatik ($1)',
 	'openidchoosemanual' => 'Nama pilihan anda:',
@@ -4993,14 +4993,14 @@ Anda tidak boleh log masuk tanpa OpenID.',
 	'openiddelete-error' => 'Ralat berlaku ketika membuang OpenID ini dari akaun anda.',
 	'openid-openids-were-not-merged' => 'OpenID tidak digabungkan sekali ketika akaun-akaun pengguna digabungkan.',
 	'prefs-openid-hide-openid' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.',
-	'openid-hide-openid-label' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.', # Fuzzy
+	'openid-hide-openid-label' => 'Sorokkan URL OpenID anda pada laman pengguna anda.',
 	'openid-userinfo-update-on-login-label' => 'Kemaskinikan maklumat berikut dari persona OpenID setiap kali saya log masuk:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID yang dikaitkan dengan akaun anda:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Tindakan',
 	'openid-urls-registration' => 'Waktu pendaftaran',
 	'openid-urls-delete' => 'Hapuskan',
-	'openid-add-url' => 'Tambahkan OpenID baru', # Fuzzy
+	'openid-add-url' => 'Tambahkan OpenID baru pada akaun anda',
 	'openid-login-or-create-account' => 'Log masuk atau buka akaun baru',
 	'openid-provider-label-openid' => 'Taipkan URL OpenID anda',
 	'openid-provider-label-google' => 'Log masuk dengan akaun Google anda',
