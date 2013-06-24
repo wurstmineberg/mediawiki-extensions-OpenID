@@ -4994,7 +4994,7 @@ Anda tidak boleh log masuk tanpa OpenID.',
 	'openid-openids-were-not-merged' => 'OpenID tidak digabungkan sekali ketika akaun-akaun pengguna digabungkan.',
 	'prefs-openid-hide-openid' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.',
 	'openid-hide-openid-label' => 'Sorokkan URL OpenID anda pada laman pengguna anda.',
-	'openid-userinfo-update-on-login-label' => 'Kemaskinikan maklumat berikut dari persona OpenID setiap kali saya log masuk:', # Fuzzy
+	'openid-userinfo-update-on-login-label' => 'Medan-medan maklumat profil pengguna yang akan dikemaskinikan secara automatik dari persona OpenID setia kali anda log masuk:',
 	'openid-associated-openids-label' => 'OpenID yang dikaitkan dengan akaun anda:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Tindakan',
