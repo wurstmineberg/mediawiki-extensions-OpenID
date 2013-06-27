@@ -1531,14 +1531,14 @@ Nepovinné heslo k účtu si můžete přidat v [[Special:Preferences#mw-prefsec
 	'openidoptional' => 'Volitelné',
 	'openidrequired' => 'Požadované',
 	'openidnickname' => 'Přezdívka',
-	'openidfullname' => 'Celé jméno', # Fuzzy
+	'openidfullname' => 'Skutečné jméno',
 	'openidemail' => 'E-mailová adresa',
 	'openidlanguage' => 'Jazyk',
 	'openidtimezone' => 'Časové pásmo',
 	'openidchooselegend' => 'Volba uživatelského jména a účtu',
 	'openidchooseinstructions' => 'Kyždý uživatel musí mít přezdívku; můžete si vybrat z níže uvedených možností.',
 	'openidchoosenick' => 'Vaše přezdívka ($1)',
-	'openidchoosefull' => 'Vaše celé jméno ($1)', # Fuzzy
+	'openidchoosefull' => 'Vaše skutečné jméno ($1)',
 	'openidchooseurl' => 'Jméno na základě vašeho OpenID ($1)',
 	'openidchooseauto' => 'Automaticky vytvořené jméno ($1)',
 	'openidchoosemanual' => 'Jméno, které si vyberete:',
@@ -1549,8 +1549,8 @@ Nepovinné heslo k účtu si můžete přidat v [[Special:Preferences#mw-prefsec
 	'openidconvertoraddmoreids' => 'Převést na OpenID nebo přidat jinou OpenID URL',
 	'openidconvertsuccess' => 'Úspěšně převedeno na OpenID',
 	'openidconvertsuccesstext' => 'Úspěšně jste převedli váš OpenID na $1.',
-	'openid-convert-already-your-openid-text' => 'To už je váš OpenID.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'To je OpenID někoho jiného.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 je již k vašemu účtu přiřazeno. Nemá smysl přidávat ho ještě jednou.',
+	'openid-convert-other-users-openid-text' => '$1 je OpenID někoho jiného. Nemůžete používat OpenID jiného uživatele.',
 	'openidalreadyloggedin' => 'Už jste {{GENDER:|přihlášen|přihlášena}}.',
 	'openidalreadyloggedintext' => "'''Už jste {{GENDER:$1|přihlášen, uživateli|přihlášena, uživatelko|přihlášen, uživateli}} $1!'''
 
@@ -1589,11 +1589,13 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
 	'openid-urls-registration' => 'Čas registrace',
 	'openid-urls-delete' => 'Smazat',
 	'openid-add-url' => 'Přidat nové OpenID', # Fuzzy
+	'openid-local-identity' => 'Vaše OpenID:',
 	'openid-login-or-create-account' => 'Přihlásit se nebo vytvořit nový účet',
 	'openid-provider-label-openid' => 'Zadejte URL svého OpenID',
 	'openid-provider-label-google' => 'Přihlásit se pomocí Google účtu',
 	'openid-provider-label-yahoo' => 'Přihlásit se pomocí Yahoo účtu',
 	'openid-provider-label-aol' => 'Přihlásit se pomocí AOL účtu',
+	'openid-provider-label-wmflabs' => 'Přihlásit se pomocí účtu na Wmflabs',
 	'openid-provider-label-other-username' => 'Zadejte svoje uživatelské jméno pro $1',
 	'specialpages-group-openid' => 'Servisní stránky a stavové informace k OpenID',
 	'right-openid-converter-access' => 'Smí přidávat nebo převádět svůj účet na užití identit OpenID',
