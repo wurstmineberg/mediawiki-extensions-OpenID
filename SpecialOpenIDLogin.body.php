@@ -333,9 +333,9 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 					$fullname = $sreg['fullname'];
 				}
 
-				if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax )
-					|| array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
-					$fullname = $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0];
+				$axName = $this->getAXUserName( $ax );
+				if ( $axName !== null ) {
+					$fullname = $axName;
 				}
 
 				if ( $fullname && $this->userNameOK( $fullname ) ) {
@@ -656,7 +656,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			if ( array_key_exists( 'email', $sreg ) ) {
 				$email = $sreg['email'];
 			}
-			if ( array_key_exists ( 'http://axschema.org/contact/email', $ax ) ) {
+			if ( isset ( $ax['http://axschema.org/contact/email'][0] ) ) {
 				$email = $ax['http://axschema.org/contact/email'][0];
 			}
 			if ( $email ) {
@@ -686,10 +686,9 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 				$user->setRealName( $sreg['fullname'] );
 			}
 
-			if ( array_key_exists( 'http://axschema.org/namePerson/first', $ax )
-				|| array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) {
-
-				$user->setRealName( $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0] );
+			$axName = $this->getAXUserName( $ax );
+			if ( $axName !== null ) {
+				$user->setRealName( $axName );
 			}
 
 		}
@@ -895,13 +894,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	function getNameFromEmail( $openid, $sreg, $ax ) {
 
 		# return the part before the @ in the e-mail address;
-		# look at AX, then SREG.
-		if ( array_key_exists ( 'http://axschema.org/contact/email', $ax ) ) {
-			$addr = explode( "@", $ax['http://axschema.org/contact/email'][0] );
-			if ( $addr ) {
-				return $addr[0];
-			}
-		}
+		# look first at SREG, then AX
 
 		if ( array_key_exists( 'email', $sreg ) ) {
 			$addr = explode( "@", $sreg['email'] );
@@ -909,6 +902,14 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 				return $addr[0];
 			}
 		}
+
+		if ( isset( $ax['http://axschema.org/contact/email'][0] ) ) {
+			$addr = explode( "@", $ax['http://axschema.org/contact/email'][0] );
+			if ( $addr ) {
+				return $addr[0];
+			}
+		}
+
 	}
 
 	/**
@@ -1004,6 +1005,27 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		global $wgReservedUsernames;
 		return ( 0 == User::idFromName( $name ) &&
 				!in_array( $name, $wgReservedUsernames ) );
+	}
+
+	/**
+	 * Get the full user name (first and last name) or only last or first name
+	 * whatever is available from the ax array (if exists)
+	 * @param $ax
+	 * @return mixed|null|string
+	 */
+	function getAXUserName( $ax ) {
+		$axName = '';
+		if ( isset( $ax['http://axschema.org/namePerson/first'][0] ) ) {
+			$axName = $ax['http://axschema.org/namePerson/first'][0];
+		}
+		if ( isset( $ax['http://axschema.org/namePerson/last'][0] ) ) {
+			if ( strlen( $axName ) ) {
+				$axName = $axName . ' ' . $ax['http://axschema.org/namePerson/last'][0];
+			} else {
+				$axName = $ax['http://axschema.org/namePerson/last'][0];
+			}
+		}
+		return ( strlen( $axName ) ? $axName : null );
 	}
 
 	# Session stuff
