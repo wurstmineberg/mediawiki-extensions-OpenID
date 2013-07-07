@@ -115,7 +115,7 @@ You will no longer be able to log in with this OpenID.',
 	'openiddelete-button' => 'Confirm',
 	'openiddeleteerrornopassword' => 'You cannot delete all your OpenIDs because your account has no password.
 You would not able to log in without an OpenID.',
-	'openiddeleteerroropenidonly' => 'You cannot delete all your OpenIDs because your are only allowed to log in with OpenID.
+	'openiddeleteerroropenidonly' => 'You cannot delete all your OpenIDs because you are only allowed to log in with OpenID.
 You would not able to log in without an OpenID.',
 	'openiddelete-success' => 'The OpenID has been successfully removed from your account.',
 	'openiddelete-error' => 'An error occurred while removing the OpenID from your account.',
