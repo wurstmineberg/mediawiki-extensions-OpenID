@@ -1481,6 +1481,7 @@ podeu triar-ne un de les opcions a continuació.',
  */
 $messages['ce'] = array(
 	'openidlanguage' => 'Мотт',
+	'openidchoosepassword' => 'Пароль:',
 	'openiddelete' => 'ДӀаяккха OpenID',
 	'openiddelete-button' => 'Бакъдан',
 	'openid-urls-delete' => 'ДӀаяккха',
@@ -6402,13 +6403,13 @@ $messages['si'] = array(
 	'openidoptional' => 'වෛකල්පිත',
 	'openidrequired' => 'අවශ්‍යයි',
 	'openidnickname' => 'අපනාමය',
-	'openidfullname' => 'සම්පූර්ණ නම', # Fuzzy
+	'openidfullname' => 'සැබෑ නාමය',
 	'openidemail' => 'විද්‍යුත්-තැපැල් ලිපිනය',
 	'openidlanguage' => 'භාෂාව',
 	'openidtimezone' => 'වේලා කලාපය',
 	'openidchooselegend' => 'පරිශීලක නාමය සහ ගිණුම් අභිමතය',
 	'openidchoosenick' => 'ඔබේ අපනාමය ($1)',
-	'openidchoosefull' => 'ඔබේ සම්පූර්ණ නම ($1)', # Fuzzy
+	'openidchoosefull' => 'ඔබේ සැබෑ නාමය ($1)',
 	'openidchooseauto' => 'ස්වයං-ජනිත නාමය ($1)',
 	'openidchoosemanual' => 'ඔබේ කැමැත්තට අනුව නම:',
 	'openidchooseexisting' => 'මෙම විකියෙහි පවත්නා ගිණුමක්',
