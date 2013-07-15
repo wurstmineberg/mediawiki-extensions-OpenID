@@ -1481,6 +1481,7 @@ podeu triar-ne un de les opcions a continuació.',
  */
 $messages['ce'] = array(
 	'openidlanguage' => 'Мотт',
+	'openidchooseusername' => 'декъашхон цӀе:',
 	'openidchoosepassword' => 'Пароль:',
 	'openiddelete' => 'ДӀаяккха OpenID',
 	'openiddelete-button' => 'Бакъдан',
