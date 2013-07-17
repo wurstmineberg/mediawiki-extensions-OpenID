@@ -1486,6 +1486,7 @@ $messages['ce'] = array(
 	'openiddelete' => 'ДӀаяккха OpenID',
 	'openiddelete-button' => 'Бакъдан',
 	'openid-urls-delete' => 'ДӀаяккха',
+	'openid-add-url' => 'ТӀетоха керла OpenID',
 );
 
 /** Sorani Kurdish (کوردی)
@@ -6877,6 +6878,7 @@ $messages['su'] = array(
  * @author Cybjit
  * @author Fluff
  * @author Jon Harald Søby
+ * @author Jopparn
  * @author Lokal Profil
  * @author M.M.S.
  * @author Najami
@@ -6992,7 +6994,7 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openid-trusted-sites-delete-all-confirmation-question' => 'Genom att klicka på knappen "{{int:openid-trusted-sites-delete-confirmation-button-text}}" kommer du ta bort alla betrodda sidor från din användarprofil.',
 	'openid-trusted-sites-delete-confirmation-button-text' => 'Bekräfta',
 	'openid-trusted-sites-delete-confirmation-success-text' => '"$1" togs bort från listan över sidor du litar på.',
-	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Alla sidor du litade på tidigare togs bort från din användarprofil.',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Alla sidor du tidigare litade på togs framgångsrikt bort från din användarprofil.',
 	'openid-local-identity' => 'Ditt OpenID:',
 	'openid-login-or-create-account' => 'Logga in eller skapa ett nytt konto',
 	'openid-provider-label-openid' => 'Skriv in din OpenID-URL',
