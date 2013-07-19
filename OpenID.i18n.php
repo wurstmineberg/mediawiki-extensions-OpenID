@@ -415,7 +415,8 @@ See also:
 * {{msg-mw|Openid-show-openid-url-on-userpage-always}}',
 	'openid-userinfo-update-on-login-label' => 'Update the following information from OpenID persona every time the user logs in: (preference label)',
 	'openid-associated-openids-label' => 'OpenIDs associated with your account: (preference label)',
-	'openid-urls-url' => '{{optional}}',
+	'openid-urls-url' => '{{optional}}
+{{Identical|URL}}',
 	'openid-urls-action' => '{{Identical|Action}}',
 	'openid-urls-registration' => 'Used in the same way as {{msg-mw|prefs-registration}}',
 	'openid-urls-registration-date-time' => '{{optional}}
