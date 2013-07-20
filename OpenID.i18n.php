@@ -1617,7 +1617,7 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
  * @author ОйЛ
  */
 $messages['cu'] = array(
-	'openidlanguage' => 'ѩꙁꙑ́къ',
+	'openidlanguage' => 'ѩꙁꙑкъ',
 );
 
 /** Welsh (Cymraeg)
