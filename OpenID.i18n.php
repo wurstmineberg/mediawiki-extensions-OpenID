@@ -1482,7 +1482,7 @@ podeu triar-ne un de les opcions a continuació.',
  */
 $messages['ce'] = array(
 	'openidlanguage' => 'Мотт',
-	'openidchooseusername' => 'декъашхон цӀе:',
+	'openidchooseusername' => 'декъашхочун цӀе:',
 	'openidchoosepassword' => 'Пароль:',
 	'openiddelete' => 'ДӀаяккха OpenID',
 	'openiddelete-button' => 'Бакъдан',
@@ -5914,7 +5914,7 @@ pode escolher uma das opções abaixo.',
 Pode gerir (ver, eliminar, etc.) OpenIDs no separador [[Special:Preferences#mw-prefsection-openid|OpenID]] das suas preferências.",
 	'openidnousername' => 'Nenhum nome de utilizador especificado.',
 	'openidbadusername' => 'Nome de utilizador especificado inválido.',
-	'openidautosubmit' => 'Esta página inclui um formulário que deverá ser automaticamente submetido se tiver JavaScript activado.
+	'openidautosubmit' => 'Esta página inclui um formulário que deverá ser automaticamente submetido se tiver JavaScript ativado.
 Caso contrário, utilize o botão "Continue" (Continuar).',
 	'openidclientonlytext' => 'Pode usar contas desta wiki como OpenIDs noutro site.',
 	'openidloginlabel' => 'URL do OpenID',
@@ -6004,7 +6004,7 @@ Por favor, consulte um [[Special:ListUsers/sysop|administrator]].',
 	'openidchooseinstructions' => 'Todos os utilizadores precisam de um apelido;
 pode escolher uma das opções abaixo.',
 	'openidchoosenick' => 'Seu apelido ($1)',
-	'openidchoosefull' => 'O seu nome completo ($1)', # Fuzzy
+	'openidchoosefull' => 'O seu nome real ($1)',
 	'openidchooseurl' => 'Um nome escolhido a partir do seu OpenID ($1)',
 	'openidchooseauto' => 'Um nome gerado automaticamente ($1)',
 	'openidchoosemanual' => 'Um nome à sua escolha:',
