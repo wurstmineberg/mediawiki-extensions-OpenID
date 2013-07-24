@@ -1486,6 +1486,7 @@ $messages['ce'] = array(
 	'openidchoosepassword' => 'Пароль:',
 	'openiddelete' => 'ДӀаяккха OpenID',
 	'openiddelete-button' => 'Бакъдан',
+	'openid-urls-action' => 'Дийраш',
 	'openid-urls-delete' => 'ДӀаяккха',
 	'openid-add-url' => 'ТӀетоха керла OpenID',
 );
