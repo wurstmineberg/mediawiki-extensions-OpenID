@@ -4657,7 +4657,7 @@ $messages['mk'] = array(
 	'openidconvert' => 'OpenID претворач',
 	'openiderror' => 'Грешка при потврдувањето',
 	'openiderrortext' => 'Настана грешка при потврдувањето на URL адресата на OpenID.',
-	'openid-error-request-forgery' => 'Се појави грешка: пронајден е неважечки жетон.',
+	'openid-error-request-forgery' => 'Се појави грешка: пронајдена е неважечка шифра.',
 	'openidconfigerror' => 'Грешка со конфигурацијата на OpenID',
 	'openidconfigerrortext' => 'Складишните посатвки на OpenID за ова вики се погрешни.
 Консултирајте [[Special:ListUsers/sysop|администратор]].',
