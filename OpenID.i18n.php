@@ -4240,7 +4240,7 @@ $messages['ko'] = array(
 당신의 OpenID는 $2 입니다.
 
 이와 선택적인 추가 OpenID는 사용자 환경 설정의 [[Special:Preferences#mw-prefsection-openid|OpenID 탭]]에서 관리할 수 있습니다.<br />
-선택적인 계정 비밀번호는 [[Special:Preferences#mw-prefsection-personal|기본 정보]]에서 더할 수 있습니다.",
+선택적인 계정 비밀번호는 [[Special:Preferences#mw-prefsection-personal|기본 정보]]에서 추가할 수 있습니다.",
 	'openidusernameprefix' => 'OpenID 사용자',
 	'openidserverlogininstructions' => '$2 사용자로서 $1 문서에 비밀번호를 입력하여 $3에 요청하세요. (사용자의 OpenID URL)',
 	'openidtrustinstructions' => '$1과 데이터를 공유하려면 체크하세요.',
@@ -6029,19 +6029,16 @@ Caso contrário, utilize o botão "Continue" (Continuar).',
 	'openidclientonlytext' => 'Você pode usar contas deste wiki como OpenIDs em outro sítio.',
 	'openidloginlabel' => 'URL do OpenID',
 	'openidlogininstructions' => '{{SITENAME}} suporta o padrão [//openid.net/ OpenID] para autenticação única entre sítios Web.
-O OpenID lhe permite autenticar-se em diversos sítios Web sem usar uma palavra-chave diferente em cada um.
+O OpenID lhe permite autenticar-se em diversos sítios Web sem usar uma senha diferente em cada um.
 (Veja [//pt.wikipedia.org/wiki/OpenID o artigo OpenID na Wikipédia] para mais informação.)
 
-Se já possui uma conta em {{SITENAME}}, pode [[Special:UserLogin|autenticar-se]] com o seu nome de utilizador e palavra-chave como habitualmente.
-Para utilizar o OpenID no futuro, pode [[Special:OpenIDConvert|converter a sua conta em OpenID]] após autenticar-se normalmente.
-
-Existem vários [http://wiki.openid.net/Public_OpenID_providers fornecederes de OpenID], e você poderá já ter uma conta ativada para OpenID em outro serviço.', # Fuzzy
+Existem muitos [http://wiki.openid.net/Public_OpenID_providers fornecedores de OpenID], e você poderá já ter uma conta ativada para OpenID em outro serviço.',
 	'openidupdateuserinfo' => 'Atualizar minhas informações pessoais:',
 	'openiddelete' => 'Excluir OpenID',
 	'openiddelete-text' => 'Ao clicar no botão "{{int:openiddelete-button}}", você removerá o OpenID $1 de sua conta.
 Você não poderá mais efetuar autenticação com este OpenID.',
 	'openiddelete-button' => 'Confirmar',
-	'openiddeleteerrornopassword' => 'Você não pode apagar todos os seus OpenID porque a sua conta não tem uma palavra-chave.
+	'openiddeleteerrornopassword' => 'Você não pode apagar todos os seus OpenID porque a sua conta não tem uma senha.
 Você ficaria impossibilitado de entrar na sua conta sem um OpenID.',
 	'openiddeleteerroropenidonly' => 'Você não pode apagar todos os seus OpenID porque só pode entrar com OpenID.
 Você não poderia entrar sem um OpenID.',
