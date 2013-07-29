@@ -7682,6 +7682,7 @@ $messages['vep'] = array(
 );
 
 /** Vietnamese (Tiếng Việt)
+ * @author Baonguyen21022003
  * @author Minh Nguyen
  * @author Vinhtantran
  */
@@ -7718,14 +7719,14 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidoptional' => 'Tùy ý',
 	'openidrequired' => 'Bắt buộc',
 	'openidnickname' => 'Tên hiệu',
-	'openidfullname' => 'Tên đầy đủ', # Fuzzy
+	'openidfullname' => 'Tên đầy đủ',
 	'openidemail' => 'Địa chỉ thư điện tử',
 	'openidlanguage' => 'Ngôn ngữ',
 	'openidtimezone' => 'Múi giờ',
 	'openidchooselegend' => 'Lựa chọn tên người dùng và tài khoản',
 	'openidchooseinstructions' => 'Mọi người dùng cần có tên hiệu; bạn có thể chọn tên hiệu ở dưới.',
 	'openidchoosenick' => 'Tên hiệu của bạn ($1)',
-	'openidchoosefull' => 'Tên đầy đủ của bạn ($1)', # Fuzzy
+	'openidchoosefull' => 'Tên đầy đủ của bạn ($1)',
 	'openidchooseurl' => 'Tên bắt nguồn từ OpenID của bạn ($1)',
 	'openidchooseauto' => 'Tên tự động ($1)',
 	'openidchoosemanual' => 'Tên khác:',
@@ -7736,8 +7737,8 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidconvertoraddmoreids' => 'Chuyển đổi OpenID hay thêm địa chỉ OpenID',
 	'openidconvertsuccess' => 'Đã chuyển đổi sang OpenID thành công',
 	'openidconvertsuccesstext' => 'Bạn đã chuyển đổi OpenID của bạn sang $1 thành công.',
-	'openid-convert-already-your-openid-text' => 'Đó đã là OpenID của bạn.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'Đó là OpenID của một người nào khác.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID  $1  đang được liên kết với tài khoản của bạn. Nó không có ý nghĩa để thêm một lần nữa.',
+	'openid-convert-other-users-openid-text' => '$1là một người nào khác của OpenID. Bạn không thể sử dụng OpenID người dùng khác.',
 	'openidalreadyloggedin' => 'Bạn đã đăng nhập rồi.',
 	'openidalreadyloggedintext' => "'''Bạn đã đăng nhập rồi, $1!'''
 
@@ -7766,7 +7767,7 @@ Bạn sẽ không đăng nhập được dùng OpenID này.',
 	'openiddelete-error' => 'Đã gặp lỗi khi dời OpenID khỏi tài khoản của bạn.',
 	'openid-openids-were-not-merged' => 'Các OpenID không được hợp nhất lúc khi hợp nhất các tài khoản người dùng.',
 	'prefs-openid-hide-openid' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
-	'openid-hide-openid-label' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.', # Fuzzy
+	'openid-hide-openid-label' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
 	'openid-userinfo-update-on-login-label' => 'Cập nhật thông tin sau từ persona OpenID mỗi khi tôi đăng nhập:', # Fuzzy
 	'openid-associated-openids-label' => 'Các OpenID được gắn vào tài khoản của bạn:',
 	'openid-urls-url' => 'URL',
