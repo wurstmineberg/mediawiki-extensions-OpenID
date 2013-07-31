@@ -7737,8 +7737,8 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidconvertoraddmoreids' => 'Chuyển đổi OpenID hay thêm địa chỉ OpenID',
 	'openidconvertsuccess' => 'Đã chuyển đổi sang OpenID thành công',
 	'openidconvertsuccesstext' => 'Bạn đã chuyển đổi OpenID của bạn sang $1 thành công.',
-	'openid-convert-already-your-openid-text' => 'OpenID  $1  đang được liên kết với tài khoản của bạn. Nó không có ý nghĩa để thêm một lần nữa.',
-	'openid-convert-other-users-openid-text' => '$1là một người nào khác của OpenID. Bạn không thể sử dụng OpenID người dùng khác.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 đang được liên kết với tài khoản của bạn và không cần được thêm vào nó lần nữa.',
+	'openid-convert-other-users-openid-text' => '$1 là OpenID của một người khác. Bạn không thể sử dụng OpenID của người dùng khác.',
 	'openidalreadyloggedin' => 'Bạn đã đăng nhập rồi.',
 	'openidalreadyloggedintext' => "'''Bạn đã đăng nhập rồi, $1!'''
 
