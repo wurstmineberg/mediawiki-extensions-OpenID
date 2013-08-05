@@ -326,7 +326,7 @@ The page body for this title is:
 	'openid-convert-already-your-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated to their account.
 
 Parameters:
-* $1 - the conflicting, already associated OpenID',
+* $1 – the conflicting (already associated) OpenID',
 	'openid-convert-other-users-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated with an account of another user.
 
 Parameters:
@@ -3563,7 +3563,7 @@ Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#
 	'openidoptional' => 'Optional',
 	'openidrequired' => 'Requirite',
 	'openidnickname' => 'Pseudonymo',
-	'openidfullname' => 'Nomine complete', # Fuzzy
+	'openidfullname' => 'Nomine real',
 	'openidemail' => 'Adresse de e-mail',
 	'openidlanguage' => 'Lingua',
 	'openidtimezone' => 'Fuso horari',
@@ -3571,7 +3571,7 @@ Es possibile specificar un contrasigno pro le conto in tu [[Special:Preferences#
 	'openidchooseinstructions' => 'Tote le usatores require un pseudonymo;
 tu pote seliger un del optiones in basso.',
 	'openidchoosenick' => 'Tu pseudonymo ($1)',
-	'openidchoosefull' => 'Tu nomine complete ($1)', # Fuzzy
+	'openidchoosefull' => 'Tu nomine real ($1)',
 	'openidchooseurl' => 'Un nomine seligite de tu OpenID ($1)',
 	'openidchooseauto' => 'Un nomine automaticamente generate ($1)',
 	'openidchoosemanual' => 'Un nomine de tu preferentia:',
@@ -3582,8 +3582,8 @@ tu pote seliger un del optiones in basso.',
 	'openidconvertoraddmoreids' => 'Converter in OpenID o adder un altere URL de OpenID',
 	'openidconvertsuccess' => 'Conversion a OpenID succedite',
 	'openidconvertsuccesstext' => 'Tu ha convertite con successo tu OpenID a $1.',
-	'openid-convert-already-your-openid-text' => 'Isto es ja tu OpenID.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'Isto es le OpenID de alcuno altere.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'Le OpenID $1 es jam associate a tu conto.',
+	'openid-convert-other-users-openid-text' => '$1 es le OpenID de alcuno altere. Non es possibile usar le OpenID de un altere usator.',
 	'openidalreadyloggedin' => 'Tu es jam authenticate.',
 	'openidalreadyloggedintext' => "'''Tu es jam authenticate, \$1!'''
 
@@ -3614,13 +3614,13 @@ Il esserea impossibile aperir un session sin OpenID.',
 	'openiddelete-error' => 'Un error occurreva durante le remotion del OpenID de tu conto.',
 	'openid-openids-were-not-merged' => 'Solmente le contos de usator, non le OpenID(s), ha essite fusionate.',
 	'prefs-openid-hide-openid' => 'Celar tu OpenID in tu pagina de usator, si tu aperi un session con OpenID.',
-	'openid-hide-openid-label' => 'Celar tu OpenID in tu pagina de usator, si tu aperi un session con OpenID.', # Fuzzy
-	'openid-userinfo-update-on-login-label' => 'Actualisar le sequente informationes ab mi personage OpenID cata vice que io aperi un session:', # Fuzzy
+	'openid-hide-openid-label' => 'Celar tu OpenID in tu pagina de usator.',
+	'openid-userinfo-update-on-login-label' => 'Ecce le informationes de profilo que essera actualisate automaticamente ab le personage OpenID cata vice que tu aperi un session:',
 	'openid-associated-openids-label' => 'OpenIDs associate con tu conto:',
 	'openid-urls-action' => 'Action',
 	'openid-urls-registration' => 'Hora de registration',
 	'openid-urls-delete' => 'Deler',
-	'openid-add-url' => 'Adder un nove OpenID', # Fuzzy
+	'openid-add-url' => 'Adder un nove OpenID a tu conto',
 	'openid-login-or-create-account' => 'Aperir session o crear nove conto',
 	'openid-provider-label-openid' => 'Entra le URL de tu OpenID',
 	'openid-provider-label-google' => 'Aperir session con tu conto de Google',
@@ -7840,6 +7840,7 @@ $messages['yi'] = array(
  * @author Kuailong
  * @author Liangent
  * @author Onecountry
+ * @author Qiyue2001
  * @author Wrightbus
  * @author Xiaomingyan
  * @author Yanmiao liu
@@ -7898,8 +7899,8 @@ $messages['zh-hans'] = array(
 	'openidconvertoraddmoreids' => '转换到OpenID或添加另一个OpenID地址',
 	'openidconvertsuccess' => '成功转换为OpenID',
 	'openidconvertsuccesstext' => '您已经成功的将您的OpenID转化为$1。',
-	'openid-convert-already-your-openid-text' => '这已经是您的OpenID。', # Fuzzy
-	'openid-convert-other-users-openid-text' => '这是别人的OpenID。', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 已关联到您的帐户，将不会再次提醒您添加。',
+	'openid-convert-other-users-openid-text' => '$1是别人的OpenID。您不能使用他人的OpenID。',
 	'openidalreadyloggedin' => '您已经登录了。',
 	'openidalreadyloggedintext' => "'''您已经登录，$1！'''
 
@@ -7937,7 +7938,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openid-urls-action' => '动作',
 	'openid-urls-registration' => '注册时间',
 	'openid-urls-delete' => '删除',
-	'openid-add-url' => '添加一个新的OpenID', # Fuzzy
+	'openid-add-url' => '向您的账户添加一个新的OpenID',
 	'openid-trusted-sites-delete-link-action-text' => '删除',
 	'openid-trusted-sites-delete-all-link-action-text' => '删除所有受信任的站点',
 	'openid-trusted-sites-delete-confirmation-button-text' => '确认',
