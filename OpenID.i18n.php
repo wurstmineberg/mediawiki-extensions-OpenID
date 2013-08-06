@@ -32,14 +32,16 @@ $messages = array();
  * @author Thomas Gries
  */
 $messages['en'] = array(
-	'openid-desc' => 'Let users log in to the wiki with an [//openid.net/ OpenID]. If this is enabled on the wiki, they can also use their user account URL of this wiki as OpenID to log in to other OpenID-aware web sites',
+	'openid-desc' => 'Let users log in to the wiki with an [//openid.net/ OpenID].
+If this is enabled on the wiki, they can also use their user account URL of this wiki as OpenID to log in to other OpenID-aware web sites',
 	'openididentifier' => 'OpenID Identifier',
 	'openidlogin' => 'Log in / create account with OpenID',
 	'openidserver' => 'OpenID server',
 	'openid-identifier-page-text-user' => 'This page is the identifier for user "$1".',
 	'openid-identifier-page-text-different-user' => 'This page is the identifier for user ID $1.',
 	'openid-identifier-page-text-no-such-local-openid' => 'This is an invalid local OpenID identifier.',
-	'openid-server-identity-page-text' => 'This is a technical OpenID server page for starting the OpenID authentication. The page has no other purpose.',
+	'openid-server-identity-page-text' => 'This is a technical OpenID server page for starting the OpenID authentication.
+The page has no other purpose.',
 	'openidxrds' => 'Yadis file',
 	'openidconvert' => 'OpenID converter',
 	'openiderror' => 'Verification error',
@@ -53,7 +55,8 @@ Please consult an [[Special:ListUsers/sysop|administrator]].',
 	'openidcancel' => 'Verification cancelled',
 	'openidcanceltext' => 'Verification of the OpenID URL was cancelled.',
 	'openidfailure' => 'Verification failed',
-	'openidfailuretext' => 'Verification of the OpenID URL failed. Error message: "$1"',
+	'openidfailuretext' => 'Verification of the OpenID URL failed.
+Error message: "$1"',
 	'openidsuccess' => 'Verification succeeded',
 	'openidsuccesstext' => "'''Successful verification and log in as user $1'''.
 
@@ -90,7 +93,8 @@ you can choose one from the options below.',
 	'openidconvertsuccess' => 'Successfully converted to OpenID',
 	'openidconvertsuccesstext' => 'You have successfully converted your OpenID to $1.',
 	'openid-convert-already-your-openid-text' => 'The OpenID $1 is already associated to your account.',
-	'openid-convert-other-users-openid-text' => '$1 is someone else\'s OpenID. You cannot use the OpenID of another user.',
+	'openid-convert-other-users-openid-text' => '$1 is someone else\'s OpenID.
+You cannot use the OpenID of another user.',
 	'openidalreadyloggedin' => 'You are already logged in.',
 	'openidalreadyloggedintext' => "'''You are already logged in, $1!'''
 
