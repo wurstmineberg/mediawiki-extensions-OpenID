@@ -89,7 +89,7 @@ you can choose one from the options below.',
 	'openidconvertoraddmoreids' => 'Convert to OpenID or add another OpenID URL',
 	'openidconvertsuccess' => 'Successfully converted to OpenID',
 	'openidconvertsuccesstext' => 'You have successfully converted your OpenID to $1.',
-	'openid-convert-already-your-openid-text' => 'The OpenID $1 is already associated to your account. It does not make sense to add it again.',
+	'openid-convert-already-your-openid-text' => 'The OpenID $1 is already associated to your account.',
 	'openid-convert-other-users-openid-text' => '$1 is someone else\'s OpenID. You cannot use the OpenID of another user.',
 	'openidalreadyloggedin' => 'You are already logged in.',
 	'openidalreadyloggedintext' => "'''You are already logged in, $1!'''
