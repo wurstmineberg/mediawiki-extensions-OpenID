@@ -1733,7 +1733,7 @@ du kannst einen aus der untenstehenden Liste auswählen.',
 	'openidconvertoraddmoreids' => 'Zu OpenID konvertieren oder eine andere OpenID-URL hinzufügen',
 	'openidconvertsuccess' => 'Erfolgreich nach OpenID konvertiert',
 	'openidconvertsuccesstext' => 'Du hast die Konvertierung deiner OpenID nach $1 erfolgreich durchgeführt.',
-	'openid-convert-already-your-openid-text' => '$1 ist eine deinem Benutzerkonto bereits zugeordnete OpenID. Es macht keinen Sinn, diese OpenID ein weiteres Mal hinzuzufügen.',
+	'openid-convert-already-your-openid-text' => '$1 ist eine deinem Benutzerkonto bereits zugeordnete OpenID.',
 	'openid-convert-other-users-openid-text' => '$1 ist schon die OpenID eines anderen Benutzers. Du kannst diese OpenID nicht verwenden.',
 	'openidalreadyloggedin' => 'Du bist bereits angemeldet.',
 	'openidalreadyloggedintext' => "'''Du bist bereits angemeldet, $1.'''
@@ -2568,7 +2568,7 @@ Un mot de passe facultatif de compte peut être ajouté dans votre [[Special:Pre
 	'openidconvertoraddmoreids' => 'Convertir vers OpenID ou ajouter une autre adresse OpenID',
 	'openidconvertsuccess' => 'Converti avec succès vers OpenID',
 	'openidconvertsuccesstext' => 'Vous avez converti avec succès votre OpenID vers $1.',
-	'openid-convert-already-your-openid-text' => 'L’OpenID $1 est déjà associé à votre compte. Il est inutile de l’ajouter de nouveau.',
+	'openid-convert-already-your-openid-text' => 'L’OpenID $1 est déjà associé à votre compte.',
 	'openid-convert-other-users-openid-text' => '$1 est l’OpenID de quelqu’un d’autre. Vous ne pouvez pas utiliser l’OpenID d’un autre utilisateur.',
 	'openidalreadyloggedin' => 'Vous êtes déjà connecté.',
 	'openidalreadyloggedintext' => "'''Vous êtes déjà connecté, $1 !'''
@@ -2811,7 +2811,7 @@ Pode engadir un contrasinal opcional no seu [[Special:Preferences#mw-prefsection
 	'openidconvertoraddmoreids' => 'Converter a OpenID ou engadir outro enderezo URL de OpenID',
 	'openidconvertsuccess' => 'Convertiuse con éxito a OpenID',
 	'openidconvertsuccesstext' => 'Converteu con éxito o seu OpenID a $1.',
-	'openid-convert-already-your-openid-text' => 'O OpenID $1 xa está asociado á súa conta. Non ten sentido engadilo outra vez.',
+	'openid-convert-already-your-openid-text' => 'O OpenID $1 xa está asociado á súa conta.',
 	'openid-convert-other-users-openid-text' => '$1 é o OpenID doutra persoa. Non pode usar o OpenID doutro usuario.',
 	'openidalreadyloggedin' => 'Xa está identificado.',
 	'openidalreadyloggedintext' => "'''Xa está identificado como $1!'''
@@ -3586,7 +3586,7 @@ tu pote seliger un del optiones in basso.',
 	'openidconvertoraddmoreids' => 'Converter in OpenID o adder un altere URL de OpenID',
 	'openidconvertsuccess' => 'Conversion a OpenID succedite',
 	'openidconvertsuccesstext' => 'Tu ha convertite con successo tu OpenID a $1.',
-	'openid-convert-already-your-openid-text' => 'Le OpenID $1 es jam associate a tu conto.',
+	'openid-convert-already-your-openid-text' => 'Le OpenID $1 es jam associate a tu conto.', # Fuzzy
 	'openid-convert-other-users-openid-text' => '$1 es le OpenID de alcuno altere. Non es possibile usar le OpenID de un altere usator.',
 	'openidalreadyloggedin' => 'Tu es jam authenticate.',
 	'openidalreadyloggedintext' => "'''Tu es jam authenticate, \$1!'''
@@ -3897,14 +3897,16 @@ Non saresti in grado di accedere senza un OpenID.',
  * @author 青子守歌
  */
 $messages['ja'] = array(
-	'openid-desc' => '[//openid.net/ OpenID] でウィキにログインできるようにする。これをウィキで有効にすると、ウィキの利用者アカウントの URL を OpenID として他の OpenID 対応サイトにもログインできる',
+	'openid-desc' => '[//openid.net/ OpenID] でウィキにログインできるようにする。
+これをウィキで有効にすると、ウィキの利用者アカウントの URL を OpenID として他の OpenID 対応サイトにもログインできる',
 	'openididentifier' => 'OpenID 識別子',
 	'openidlogin' => 'OpenID によるログイン/アカウント作成',
 	'openidserver' => 'OpenID サーバー',
 	'openid-identifier-page-text-user' => 'このページは利用者「$1」の識別子です。',
 	'openid-identifier-page-text-different-user' => 'このページは利用者 ID $1 の識別子です。',
 	'openid-identifier-page-text-no-such-local-openid' => '無効なローカル OpenID 識別子です。',
-	'openid-server-identity-page-text' => 'このページは、OpenID 認証を開始するための、OpenID サーバーの技術的なページであり、それ以外の目的はありません。',
+	'openid-server-identity-page-text' => 'このページは、OpenID 認証を開始するための、OpenID サーバーの技術的なページです。
+それ以外の目的はありません。',
 	'openidxrds' => 'Yadis ファイル',
 	'openidconvert' => 'OpenID コンバーター',
 	'openiderror' => '検証エラー',
@@ -3917,7 +3919,8 @@ $messages['ja'] = array(
 	'openidcancel' => '検証中止',
 	'openidcanceltext' => 'OpenID URL の検証は中止されました。',
 	'openidfailure' => '検証失敗',
-	'openidfailuretext' => 'OpenID URL の検証は失敗しました。エラーメッセージ:「$1」',
+	'openidfailuretext' => 'OpenID URL の検証は失敗しました。
+エラーメッセージ:「$1」',
 	'openidsuccess' => '検証成功',
 	'openidsuccesstext' => "'''利用者 $1 の検証とログインに成功しました'''。
 
@@ -3953,8 +3956,9 @@ $messages['ja'] = array(
 	'openidconvertoraddmoreids' => 'OpenID への変換、または別の OpenID URL の追加',
 	'openidconvertsuccess' => 'OpenID に変換しました',
 	'openidconvertsuccesstext' => 'あなたの OpenID を $1 に変換しました。',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 はあなたのアカウントに既に関連付けられています。再度追加する必要はありません。',
-	'openid-convert-other-users-openid-text' => '$1 は他の誰かの OpenID です。他の利用者の OpenID は使用できません。',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 はあなたのアカウントに既に関連付けられています。',
+	'openid-convert-other-users-openid-text' => '$1 は他の誰かの OpenID です。
+他の利用者の OpenID は使用できません。',
 	'openidalreadyloggedin' => 'あなたは既にログインしています。',
 	'openidalreadyloggedintext' => "'''$1 さん、あなたは既にログインしています!'''
 
@@ -4840,11 +4844,13 @@ $messages['mn'] = array(
 /** Marathi (मराठी)
  * @author Htt
  * @author Kaustubh
+ * @author V.narsikar
  */
 $messages['mr'] = array(
 	'openid-desc' => 'विकिवर [//openid.net/ ओपनID] वापरून प्रवेश करा, तसेच कुठल्याही इतर ओपनID संकेतस्थळावर विकि सदस्य नाम वापरून प्रवेश करा',
 	'openidlogin' => 'ओपनID वापरून प्रवेश करा', # Fuzzy
 	'openidserver' => 'ओपनID सर्व्हर',
+	'openid-server-identity-page-text' => 'हे तांत्रीक ओपनआयडी विदागाराचे, ओपनआयडीस अधिकृत करणे सुरू करण्याचे पान आहे.या पानाचा ईतर काहीच उद्देश नाही.',
 	'openidxrds' => 'Yadis संचिका',
 	'openidconvert' => 'ओपनID कन्व्हर्टर',
 	'openiderror' => 'तपासणी त्रुटी',
@@ -4885,8 +4891,8 @@ $messages['mr'] = array(
 	'openidconvertinstructions' => 'हा अर्ज तुम्हाला ओपनID URL वापरण्यासाठी तुमचे सदस्यनाव बदलण्याची परवानगी देतो.', # Fuzzy
 	'openidconvertsuccess' => 'ओपनID मध्ये बदल पूर्ण झालेले आहेत',
 	'openidconvertsuccesstext' => 'तुम्ही तुमचा ओपनID $1 मध्ये यशस्वीरित्या बदललेला आहे.',
-	'openid-convert-already-your-openid-text' => 'हा तुमचाच ओपनID आहे.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'हा दुसर्‍याचा ओपनID आहे.', # Fuzzy
+	'openid-convert-already-your-openid-text' => '$1 हा ओपनआयडी तुमच्याच खात्याशी संलग्न आहे.',
+	'openid-convert-other-users-openid-text' => '$1 हा दुसर्‍या कोणाचा ओपनआयडी आहे.आपण दुसऱ्या सदस्याचा ओपनआयडी वापरू शकत नाही.',
 	'openidalreadyloggedin' => "'''$1, तुम्ही अगोदरच प्रवेश केलेला आहे!'''
 
 जर तुम्ही भविष्यात ओपनID वापरून प्रवेश करू इच्छित असाल, तर तुम्ही [[Special:OpenIDConvert|तुमचे खाते ओपनID साठी बदलू शकता]].", # Fuzzy
@@ -7741,7 +7747,7 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidconvertoraddmoreids' => 'Chuyển đổi OpenID hay thêm địa chỉ OpenID',
 	'openidconvertsuccess' => 'Đã chuyển đổi sang OpenID thành công',
 	'openidconvertsuccesstext' => 'Bạn đã chuyển đổi OpenID của bạn sang $1 thành công.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 đang được liên kết với tài khoản của bạn và không cần được thêm vào nó lần nữa.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 đang được liên kết với tài khoản của bạn và không cần được thêm vào nó lần nữa.', # Fuzzy
 	'openid-convert-other-users-openid-text' => '$1 là OpenID của một người khác. Bạn không thể sử dụng OpenID của người dùng khác.',
 	'openidalreadyloggedin' => 'Bạn đã đăng nhập rồi.',
 	'openidalreadyloggedintext' => "'''Bạn đã đăng nhập rồi, $1!'''
@@ -7903,7 +7909,7 @@ $messages['zh-hans'] = array(
 	'openidconvertoraddmoreids' => '转换到OpenID或添加另一个OpenID地址',
 	'openidconvertsuccess' => '成功转换为OpenID',
 	'openidconvertsuccesstext' => '您已经成功的将您的OpenID转化为$1。',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 已关联到您的帐户，将不会再次提醒您添加。',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 已关联到您的帐户，将不会再次提醒您添加。', # Fuzzy
 	'openid-convert-other-users-openid-text' => '$1是别人的OpenID。您不能使用他人的OpenID。',
 	'openidalreadyloggedin' => '您已经登录了。',
 	'openidalreadyloggedintext' => "'''您已经登录，$1！'''
