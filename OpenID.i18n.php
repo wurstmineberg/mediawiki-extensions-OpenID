@@ -4493,6 +4493,7 @@ $messages['ku-latn'] = array(
 /** Luxembourgish (Lëtzebuergesch)
  * @author Les Meloures
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
 	'openid-desc' => "Sech an d'Wiki matt enger [//openid.net/ OpenID] aloggen, a sech op aneren Internetsiten, déi OpenID ënerstetzen, matt engem Wiki-Benotzerkont aloggen.",
@@ -4528,7 +4529,7 @@ En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#
 	'openidrequired' => 'Obligatoresch',
 	'openidnickname' => 'Spëtznumm',
 	'openidfullname' => 'Richtegen Numm',
-	'openidemail' => 'E-Mailadress',
+	'openidemail' => 'E-Mail-Adress',
 	'openidlanguage' => 'Sprooch',
 	'openidtimezone' => 'Zäitzone',
 	'openidchooselegend' => 'Eraussiche vum Benotzernumm a vum Benotzerkont',
@@ -4545,7 +4546,7 @@ En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#
 	'openidconvertoraddmoreids' => 'An en OpenID ëmwandelen oder eng aner OpenID URL derbäisetzen',
 	'openidconvertsuccess' => 'An en OpenID-Benotzerkont ëmgewandelt',
 	'openidconvertsuccesstext' => 'Dir hutt Är OpenID op $1 ëmgewandelt.',
-	'openid-convert-already-your-openid-text' => "D'OpenID $1 ass scho mat Ärem Benotzerkont verbonn. Et mécht kee Sënn fir se nach eng Kéier derbäizesetzen.",
+	'openid-convert-already-your-openid-text' => "D'OpenID $1 ass scho mat Ärem Benotzerkont verbonn. Et mécht kee Sënn fir se nach eng Kéier derbäizesetzen.", # Fuzzy
 	'openid-convert-other-users-openid-text' => "$1 ass engem anere seng OpenID. Dir kënnt d'OpenID vun engem anere Benotzer benotzen.",
 	'openidalreadyloggedin' => 'Dir sidd schonn ageloggt.',
 	'openidnousername' => 'Kee Benotzernumm uginn.',
@@ -4710,7 +4711,7 @@ $messages['mk'] = array(
 	'openidconvertoraddmoreids' => 'Претворете во OpenID или додајте друга OpenID URL адреса',
 	'openidconvertsuccess' => 'Претворањето во OpenID е успешно',
 	'openidconvertsuccesstext' => 'Успешно го претворивте вашиот OpenID во $1.',
-	'openid-convert-already-your-openid-text' => 'Назнаката $1 на OpenID е веќе здружена со вашата сметка. Нема зошто да се додава пак.',
+	'openid-convert-already-your-openid-text' => 'Назнаката $1 на OpenID е веќе здружена со вашата сметка.',
 	'openid-convert-other-users-openid-text' => '$1 е туѓа назнака од OpenID. Не можете да користите назнаки на други корисници.',
 	'openidalreadyloggedin' => 'Веќе сте најавени.',
 	'openidalreadyloggedintext' => "'''Веќе сте најавени, $1!'''
