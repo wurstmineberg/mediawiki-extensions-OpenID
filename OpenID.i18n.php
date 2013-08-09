@@ -7981,12 +7981,13 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
  * @author Horacewai2
  * @author Liangent
  * @author Mark85296341
+ * @author Shangkuanlc
  * @author Simon Shek
  * @author Waihorace
  * @author Wrightbus
  */
 $messages['zh-hant'] = array(
-	'openid-desc' => '使用一個 [//openid.net/ OpenID] 來登入到這個 wiki，以及使用 wiki 用戶帳號登入到其他接受 OpenID 的網站',
+	'openid-desc' => '使用者請以 [//openid.net/ OpenID] 登入此 wiki網站，以及使用 wiki 用戶帳號登入到其他接受 OpenID 的網站',
 	'openidlogin' => '使用OpenID登錄或創建賬號',
 	'openidserver' => 'OpenID 伺服器',
 	'openidxrds' => 'Yadis 檔案',
