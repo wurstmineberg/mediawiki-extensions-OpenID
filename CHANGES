@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+3.34  20130810  bug 44821 OpenID Consumer wiki stalls with blank page for
+                certain OpenID Provider verification error cases
+                (consumer fails to show the provider response message)
 3.33  20130703  bug 50430 fixed null array error for fullname/email in AX array
 3.32  20130525  bug 44293 fix URL generation when $wgServer is protocol-relative
 3.311 20130514  bug 44849 retina icons: renewed OpenID logo; rescaled the other

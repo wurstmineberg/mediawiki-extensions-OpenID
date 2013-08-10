@@ -260,42 +260,24 @@ class SpecialOpenID extends SpecialPage {
 
 		// Handle failure status return values.
 		if ( !$auth_request ) {
-			wfDebug( "OpenID: no auth_request\n" );
-			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
+			wfDebug( "OpenID: no auth_request for {$openid_url}\n" );
+			$wgOut->showErrorPage(
+				'openiderror',
+				'openid-error-no-auth',
+				array( $openid_url )
+			);
 			return;
 		}
 
-/*
-		FIXME
-
-		THIS DOES NOT WORK: THE TWO POST ARGUMENTS ARE NOT CHANGED
-		I DO NOT KNOW WHAT I MADE WRONG HERE
-
-		WORKAROUND: SEE BELOW BEFORE FORM SUBMISSION
-
-		// ask the Server to show identifier selection form
-		// https://developers.google.com/accounts/docs/OpenID#Parameters
-
-		$auth_request->message->setArg(
-			Auth_OpenID_OPENID_NS,
-			"identity",
-			"http://specs.openid.net/auth/2.0/identifier_select"
-		);
-
-		$auth_request->message->setArg(
-			Auth_OpenID_OPENID_NS,
-			"claimed_id",
-			"http://specs.openid.net/auth/2.0/identifier_select"
-		);
-
-		$auth_request->message->updateArgs(
-			Auth_OpenID_OPENID_NS,
-			array(
-				"identity" => "http://specs.openid.net/auth/2.0/identifier_select",
-				"claimed_id" => "http://specs.openid.net/auth/2.0/identifier_select",
-			)
-		);
-*/
+		if ( Auth_OpenID::isFailure( $auth_request ) ) {
+			wfDebug( "OpenID: auth_request failure for {$openid_url}:\n" . print_r( $auth_request, true ) ."\n" );
+			$wgOut->showErrorPage(
+				'openiderror',
+				'openid-error-server-response',
+				array( $openid_url, "{$auth_request->message} (status: {$auth_request->status})." )
+			);
+			return;
+		}
 
 		# Check the processed URLs, too
 
