@@ -4546,7 +4546,7 @@ En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#
 	'openidconvertoraddmoreids' => 'An en OpenID ëmwandelen oder eng aner OpenID URL derbäisetzen',
 	'openidconvertsuccess' => 'An en OpenID-Benotzerkont ëmgewandelt',
 	'openidconvertsuccesstext' => 'Dir hutt Är OpenID op $1 ëmgewandelt.',
-	'openid-convert-already-your-openid-text' => "D'OpenID $1 ass scho mat Ärem Benotzerkont verbonn. Et mécht kee Sënn fir se nach eng Kéier derbäizesetzen.", # Fuzzy
+	'openid-convert-already-your-openid-text' => "D'OpenID $1 ass scho mat Ärem Benotzerkont verbonn.",
 	'openid-convert-other-users-openid-text' => "$1 ass engem anere seng OpenID. Dir kënnt d'OpenID vun engem anere Benotzer benotzen.",
 	'openidalreadyloggedin' => 'Dir sidd schonn ageloggt.',
 	'openidnousername' => 'Kee Benotzernumm uginn.',
