@@ -5481,7 +5481,7 @@ Du ville ikkje ha kunna logga inn utan ein OpenID.',
  */
 $messages['oc'] = array(
 	'openid-desc' => "Se connècta al wiki amb [//openid.net/ OpenID] e se connècta a d'autres sites internet OpenID amb un wiki qu'utiliza un compte d'utilizaire.",
-	'openidlogin' => 'Se connectar amb OpenID', # Fuzzy
+	'openidlogin' => 'Se connectar o crear un compte amb OpenID',
 	'openidserver' => 'Servidor OpenID',
 	'openidxrds' => 'Fichièr Yadis',
 	'openidconvert' => 'Convertisseire OpenID',
@@ -5507,22 +5507,22 @@ Metetz-vos en rapòrt amb l’[[Special:ListUsers/sysop|administrator]].",
 	'openidoptional' => 'Facultatiu',
 	'openidrequired' => 'Exigit',
 	'openidnickname' => 'Escais',
-	'openidfullname' => 'Nom complet', # Fuzzy
+	'openidfullname' => 'Nom vertadièr',
 	'openidemail' => 'Adreça de corrièr electronic',
 	'openidlanguage' => 'Lenga',
 	'openidtimezone' => 'Zòna orària',
 	'openidchooseinstructions' => "Totes los utilizaires an besonh d'un escais ; ne podètz causir un a partir de la causida çaijós.",
-	'openidchoosefull' => 'Vòstre nom complet ($1)', # Fuzzy
+	'openidchoosefull' => 'Vòstre nom vertadièr ($1)',
 	'openidchooseurl' => 'Un nom es estat causit dempuèi vòstra OpenID ($1)',
 	'openidchooseauto' => 'Un nom creat automaticament ($1)',
 	'openidchoosemanual' => "Un nom qu'avètz causit :",
-	'openidchooseexisting' => 'Un compte existent sus aqueste wiki :', # Fuzzy
+	'openidchooseexisting' => 'Un compte existent sus aqueste wiki',
 	'openidchoosepassword' => 'Senhal :',
 	'openidconvertinstructions' => "Aqueste formulari vos permet de cambiar vòstre compte d'utilizaire per utilizar una adreça OpenID o apondre d'adreças OpenID suplementàrias.",
 	'openidconvertoraddmoreids' => 'Convertir cap a OpenID o apondre una autra adreça OpenID',
 	'openidconvertsuccess' => 'Convertit amb succès cap a OpenID',
 	'openidconvertsuccesstext' => 'Avètz convertit amb succès vòstra OpenID cap a $1.',
-	'openid-convert-already-your-openid-text' => 'Ja es vòstra OpenID.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'L’OpenID $1 es ja associat a vòstre compte.',
 	'openid-convert-other-users-openid-text' => "Aquò es quicòm d'autre qu'una OpenID.", # Fuzzy
 	'openidalreadyloggedin' => "'''Ja sètz connectat, $1 !'''
 
@@ -5553,8 +5553,8 @@ Vos poiretz pas pus connectar amb aquesta OpenID.",
 	'openid-associated-openids-label' => 'OpenID associadas amb vòstre compte :',
 	'openid-urls-action' => 'Accion',
 	'openid-urls-delete' => 'Suprimir',
-	'openid-add-url' => 'Apondre un OpenID novèla', # Fuzzy
-	'openid-login-or-create-account' => 'Se connectar o crear un compte novèl', # Fuzzy
+	'openid-add-url' => 'Apondre un OpenID novèla a vòstre compte',
+	'openid-login-or-create-account' => 'Se connectar o crear un compte novèl',
 	'openid-provider-label-openid' => 'Picatz vòstra URL OpenID',
 	'openid-provider-label-google' => 'Vos connectar en utilizant vòstre compte Google',
 	'openid-provider-label-yahoo' => 'Vos connectar en utilizant vòstre compte Yahoo',
