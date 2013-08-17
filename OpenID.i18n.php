@@ -4220,7 +4220,8 @@ $messages['kn'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'openid-desc' => '사용자가 [//openid.net/ OpenID]를 통한 로그인을 할 수 있습니다. 또한 위키의 사용자 계정을 통해 OpenID를 지원하는 다른 사이트에도 로그인이 가능합니다.',
+	'openid-desc' => '사용자가 [//openid.net/ OpenID]를 통한 로그인을 할 수 있습니다.
+또한 위키의 사용자 계정을 통해 OpenID를 지원하는 다른 사이트에도 로그인할 수 있습니다',
 	'openididentifier' => 'OpenID 식별자',
 	'openidlogin' => 'OpenID로 로그인 / 계정 만들기',
 	'openidserver' => 'OpenID 서버',
@@ -4277,7 +4278,7 @@ $messages['ko'] = array(
 	'openidconvertoraddmoreids' => 'OpenID로 변환하거나 OpenID URL을 추가합니다',
 	'openidconvertsuccess' => 'OpenID로의 변환이 완료되었습니다',
 	'openidconvertsuccesstext' => 'OpenID를 $1(으)로 성공적으로 변환했습니다.',
-	'openid-convert-already-your-openid-text' => '$1 OpenID는 이미 계정에 연결되어 있습니다. 다시 추가할 필요가 없습니다.',
+	'openid-convert-already-your-openid-text' => '$1 OpenID는 이미 계정에 연결되어 있습니다.',
 	'openid-convert-other-users-openid-text' => '$1(은)는 다른 사용자의 OpenID입니다. 다른 사용자의 OpenID를 사용할 수 없습니다.',
 	'openidalreadyloggedin' => '이미 로그인했습니다.',
 	'openidalreadyloggedintext' => "'''$1 계정으로 이미 로그인했습니다!'''
@@ -7425,6 +7426,7 @@ $messages['ug-latn'] = array(
  * @author AS
  * @author Aleksandrit
  * @author Alex Khimich
+ * @author Andriykopanytsia
  * @author Base
  * @author NickK
  * @author Prima klasy4na
@@ -7489,7 +7491,7 @@ $messages['uk'] = array(
 	'openidconvertoraddmoreids' => 'Перетворити на OpenID або додати іншу адресу OpenID',
 	'openidconvertsuccess' => 'Успішне перетворення в OpenID',
 	'openidconvertsuccesstext' => 'Ви успішно перетворили ваш OpenID в $1.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 уже асоційовано із Вашим обліковим записом. Немає сенсу додавати його ще раз.',
+	'openid-convert-already-your-openid-text' => "OpenID $1 уже пов'язано із Вашим обліковим записом.",
 	'openid-convert-other-users-openid-text' => '$1 — чужий OpenID. Ви не можете використовувати OpenID іншого користувача.',
 	'openidalreadyloggedin' => 'Ви вже ввійшли.',
 	'openidalreadyloggedintext' => "'''Ви вже ввійшли, $1!'''
