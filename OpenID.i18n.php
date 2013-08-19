@@ -1505,6 +1505,7 @@ $messages['ckb'] = array(
 /** Czech (česky)
  * @author Kuvaly
  * @author Matěj Grabovský
+ * @author Michaelbrabec
  * @author Mormegil
  */
 $messages['cs'] = array(
@@ -1558,7 +1559,7 @@ Nepovinné heslo k účtu si můžete přidat v [[Special:Preferences#mw-prefsec
 	'openidconvertoraddmoreids' => 'Převést na OpenID nebo přidat jinou OpenID URL',
 	'openidconvertsuccess' => 'Úspěšně převedeno na OpenID',
 	'openidconvertsuccesstext' => 'Úspěšně jste převedli váš OpenID na $1.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 je již k vašemu účtu přiřazeno. Nemá smysl přidávat ho ještě jednou.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 je již k vašemu účtu přiřazeno.',
 	'openid-convert-other-users-openid-text' => '$1 je OpenID někoho jiného. Nemůžete používat OpenID jiného uživatele.',
 	'openidalreadyloggedin' => 'Už jste {{GENDER:|přihlášen|přihlášena}}.',
 	'openidalreadyloggedintext' => "'''Už jste {{GENDER:$1|přihlášen, uživateli|přihlášena, uživatelko|přihlášen, uživateli}} $1!'''
