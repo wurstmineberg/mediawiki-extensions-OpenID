@@ -46,6 +46,10 @@ The page has no other purpose.',
 	'openidconvert' => 'OpenID converter',
 	'openiderror' => 'Verification error',
 	'openiderrortext' => 'An error occurred during verification of the OpenID URL.',
+	'openid-error-no-auth' => 'An unspecified authentication response/request error occurred during the verification of the OpenID URL $1.',
+	'openid-error-server-response' => "An error occurred during the verification of the OpenID URL $1.
+
+The server response was: ''$2''",
 	'openid-error-request-forgery' => 'An error occurred: an invalid token was found.',
 	'openidconfigerror' => 'OpenID configuration error',
 	'openidconfigerrortext' => 'The OpenID storage configuration for this wiki is invalid.
@@ -229,10 +233,23 @@ This message is title for the following error messages:
 * {{msg-mw|openidclientonlytext}}
 * {{msg-mw|openiddeleteerrornopassword}}
 * {{msg-mw|openiddeleteerroropenidonly}}
-* {{msg-mw|openiderrortext}}',
+* {{msg-mw|openiderrortext}}
+* {{msg-mw|openid-error-no-auth}}
+* {{msg-mw|openid-error-server-response}}
+* {{msg-mw|openid-error-request-forgery}}',
 	'openiderrortext' => 'Used as error message.
 
 The title for this error message is {{msg-mw|Openiderror}}.',
+	'openid-error-no-auth' => 'The error message when an unspecified authentication response/request error occurred during the verification of an OpenID.
+
+Parameter:
+* $1 - an OpenID URL',
+	'openid-error-server-response' => 'The error message when a verification error occurred.
+
+Parameters:
+* $1 - an OpenID URL
+* $2 - the OpenID Provider server response text',
+	'openid-error-request-forgery' => 'The error message when an invalid token was found.',
 	'openidconfigerror' => 'Used as error title for the following error message:
 * {{msg-mw|Openidconfigerrortext}}',
 	'openidconfigerrortext' => 'Used as error message.

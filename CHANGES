@@ -1,6 +1,6 @@
 CHANGES
 =======
-
+3.341 20130821  fix of an i18n problem
 3.34  20130810  bug 44821 OpenID Consumer wiki stalls with blank page for
                 certain OpenID Provider verification error cases
                 (consumer fails to show the provider response message)
