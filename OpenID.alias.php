@@ -119,6 +119,7 @@ $specialPageAliases['mk'] = array(
 	'OpenIDLogin' => array( 'НајаваСоOpenID' ),
 	'OpenIDConvert' => array( 'ПретворањеНаOpenID' ),
 	'OpenIDServer' => array( 'ОпслужувачНаOpenID' ),
+	'OpenIDXRDS' => array( 'OpenIDXRDS' ),
 	'OpenIDDashboard' => array( 'КонтролнаТаблаНаOpenID' ),
 );
 

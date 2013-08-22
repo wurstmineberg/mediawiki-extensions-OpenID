@@ -1706,6 +1706,10 @@ $messages['de'] = array(
 	'openidconvert' => 'OpenID-Konverter',
 	'openiderror' => 'Überprüfungsfehler',
 	'openiderrortext' => 'Ein Fehler ist während der Überprüfung der OpenID-URL aufgetreten.',
+	'openid-error-no-auth' => 'Bei der Verifizierung der OpenID-URL $1 ist ein unspezifizierter Authentifikations-Antwort/Anfragen-Fehler aufgetreten.',
+	'openid-error-server-response' => "Während der Verifizierung der OpenID-URL $1 ist ein Fehler aufgetreten.
+
+Die Antwort des Servers lautete: ''$2''",
 	'openid-error-request-forgery' => 'Ein Fehler ist aufgetreten: Es wurde ein ungültiger Token gefunden.',
 	'openidconfigerror' => 'OpenID-Konfigurationsfehler',
 	'openidconfigerrortext' => 'Die OpenID-Speicherkonfiguarion für dieses Wiki ist fehlerhaft.
@@ -2542,6 +2546,10 @@ $messages['fr'] = array(
 	'openidconvert' => 'Convertisseur OpenID',
 	'openiderror' => 'Erreur de vérification',
 	'openiderrortext' => 'Une erreur est intervenue pendant la vérification de l’adresse OpenID.',
+	'openid-error-no-auth' => 'Une erreur de question/réponse d’authentification non spécifiée s’est produite pendant la vérification de l’URL d’OpenID $1.',
+	'openid-error-server-response' => 'Une erreur s’est produite durant la vérification de l’URL d’OpenID $1.
+
+La réponse du serveur a été : « $2 »',
 	'openid-error-request-forgery' => "Une erreur s'est produite : un jeton non valide a été trouvé.",
 	'openidconfigerror' => 'Erreur de configuration de OpenID',
 	'openidconfigerrortext' => 'Le stockage de la configuration OpenID pour ce wiki est incorrecte.
@@ -3929,6 +3937,11 @@ $messages['ja'] = array(
 	'openidconvert' => 'OpenID コンバーター',
 	'openiderror' => '検証エラー',
 	'openiderrortext' => 'OpenID URL の検証中にエラーが発生しました。',
+	'openid-error-no-auth' => 'OpenID URL $1 を検証する際に、不明な認証レスポンス/リクエスト エラーが発生しました。',
+	'openid-error-server-response' => "OpenID URL $1 を検証する際にエラーが発生しました。
+
+サーバーの応答: ''$2''",
+	'openid-error-request-forgery' => 'エラーが発生しました: 無効なトークンが見つかりました。',
 	'openidconfigerror' => 'OpenID 設定エラー',
 	'openidconfigerrortext' => 'このウィキの OpenID 格納設定は無効です。
 [[Special:ListUsers/sysop|管理者]]にお問い合わせください。',
@@ -4685,6 +4698,10 @@ $messages['mk'] = array(
 	'openidconvert' => 'OpenID претворач',
 	'openiderror' => 'Грешка при потврдувањето',
 	'openiderrortext' => 'Настана грешка при потврдувањето на URL адресата на OpenID.',
+	'openid-error-no-auth' => 'Се појави неукажана грешка во одговорот на/барањето за заверка при проверката на URL-адресата $1 за OpenID.',
+	'openid-error-server-response' => "Се појави грешка при заверката на URL-адресата $1 за OpenID.
+
+Опслужувачот одговори: ''$2''",
 	'openid-error-request-forgery' => 'Се појави грешка: пронајдена е неважечка шифра.',
 	'openidconfigerror' => 'Грешка со конфигурацијата на OpenID',
 	'openidconfigerrortext' => 'Складишните посатвки на OpenID за ова вики се погрешни.
@@ -7464,6 +7481,10 @@ $messages['uk'] = array(
 	'openidconvert' => 'Перетворювач OpenID',
 	'openiderror' => 'Помилка перевірки повноважень',
 	'openiderrortext' => 'Під час перевірки адреси OpenID сталася помилка.',
+	'openid-error-no-auth' => 'При перевірці OpenID URL $1 трапилася помилка відповіді/запиту невизначеної автентифікації.',
+	'openid-error-server-response' => 'Сталася помилка при перевірці OpenID URL $1.
+
+Відповідь сервера: "$2"',
 	'openid-error-request-forgery' => 'Сталася помилка: виявлено неприпустимий маркер.',
 	'openidconfigerror' => 'Помилка налаштування OpenID',
 	'openidconfigerrortext' => 'Налаштування сховища OpenID для цієї вікі помилкова.
