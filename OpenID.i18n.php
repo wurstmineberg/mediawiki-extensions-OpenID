@@ -866,6 +866,10 @@ $messages['ast'] = array(
 	'openidconvert' => 'Convertidor OpenID',
 	'openiderror' => 'Error de verificación',
 	'openiderrortext' => 'Hebo un error mentanto se comprobaba la URL de la OpenID.',
+	'openid-error-no-auth' => "Asocedió un error nun especificáu de respuesta/solicitú d'autenticación demientres la comprobación de la URL d'OpenID $1.",
+	'openid-error-server-response' => "Asocedió un error demientres la comprobación de la URL d'OpenID $1.
+
+La respuesta del sirvidor foi: ''$2''",
 	'openid-error-request-forgery' => 'Hebo un error: alcontróse un pase inválidu.',
 	'openidconfigerror' => "Error de configuración d'OpenID",
 	'openidconfigerrortext' => "La configuración del almacenamientu OpenID d'esta wiki ye inválida.
@@ -911,7 +915,7 @@ pues escoyer unu ente les opciones d'abaxo.",
 	'openidconvertoraddmoreids' => 'Convertir a OpenID o amestar otra URL OpenID',
 	'openidconvertsuccess' => 'Convertida correutamente a OpenID',
 	'openidconvertsuccesstext' => 'Convertisti correutamente la to OpenID a $1.',
-	'openid-convert-already-your-openid-text' => 'La OpenID $1 yá ta asociada cola to cuenta. Nun tien xaciu amestala otra vuelta.',
+	'openid-convert-already-your-openid-text' => 'La OpenID $1 yá ta asociada cola to cuenta.',
 	'openid-convert-other-users-openid-text' => "$1 ye la OpenID d'otra persona. Nun pues usar la OpenID d'otru usuariu.",
 	'openidalreadyloggedin' => 'Yá aniciasti sesión.',
 	'openidalreadyloggedintext' => "'''Yá tas identificáu, $1!'''
