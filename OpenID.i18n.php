@@ -1237,6 +1237,7 @@ OpenID позволява влизането в много различни са
 );
 
 /** Bengali (বাংলা)
+ * @author Aftab1995
  * @author Bellayet
  * @author Ehsanulhb
  * @author Wikitanvir
@@ -1257,7 +1258,7 @@ $messages['bn'] = array(
 	'openidoptional' => 'ঐচ্ছিক',
 	'openidrequired' => 'বাধ্যতামূলক',
 	'openidnickname' => 'ডাকনাম',
-	'openidfullname' => 'পূর্ণ নাম', # Fuzzy
+	'openidfullname' => 'প্রকৃত নাম',
 	'openidemail' => 'ই-মেইল ঠিকানা',
 	'openidlanguage' => 'ভাষা',
 	'openidtimezone' => 'সময় স্থান',
