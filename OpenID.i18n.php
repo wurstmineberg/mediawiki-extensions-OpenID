@@ -269,7 +269,10 @@ The title for this error message is {{msg-mw|Openidcancel}}.',
 * {{msg-mw|Openidfailuretext}}',
 	'openidfailuretext' => 'Used as error message.
 
-The title for this error message is {{msg-mw|Openidfailure}}.',
+The title for this error message is {{msg-mw|Openidfailure}}.
+
+Parameters:
+* $1 - error message, or empty string',
 	'openidsuccess' => 'Used as page title.
 
 The page body for this title is:
@@ -343,7 +346,12 @@ The fieldset label for the form is:
 
 The page body for this title is:
 * {{msg-mw|Openidconvertsuccesstext}}',
-	'openidconvertsuccesstext' => 'Used as page body. The page title for this message is {{msg-mw|Openidconvertsuccess}}.',
+	'openidconvertsuccesstext' => 'Used as page body.
+
+The page title for this message is {{msg-mw|Openidconvertsuccess}}.
+
+Parameters:
+* $1 - OpenID URL',
 	'openid-convert-already-your-openid-text' => 'Warning text in case a user tried to add an OpenID which is already associated to their account.
 
 Parameters:
@@ -441,7 +449,12 @@ See also:
 	'openid-urls-action' => '{{Identical|Action}}',
 	'openid-urls-registration' => 'Used in the same way as {{msg-mw|prefs-registration}}',
 	'openid-urls-registration-date-time' => '{{optional}}
-Used in the same way as {{msg-mw|prefs-registration-date-time}}.',
+Used in the same way as {{msg-mw|Prefs-registration-date-time}}.
+
+Parameters:
+* $1 - timestamp (time and date)
+* $2 - (Optional) date
+* $3 - (Optional) time',
 	'openid-urls-delete' => '{{Identical|Delete}}',
 	'openid-add-url' => 'Used as link text. It is a link to Special:OpenIDConvert.',
 	'openid-trusted-sites-label' => 'Sites you trust and where you have used your OpenID for logging in: (preference label)',
@@ -6102,6 +6115,8 @@ Você não poderia entrar sem um OpenID.',
 	'openid-urls-action' => 'Ação',
 	'openid-urls-delete' => 'Excluir',
 	'openid-add-url' => 'Adicionar novo OpenID', # Fuzzy
+	'openid-trusted-sites-table-header-column-action' => 'Ação',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Confirmar',
 	'openid-login-or-create-account' => 'Entrar ou Criar Nova Conta', # Fuzzy
 	'openid-provider-label-openid' => 'Introduza a sua URL OpenID',
 	'openid-provider-label-google' => 'Entrar usando a sua conta do Google',
