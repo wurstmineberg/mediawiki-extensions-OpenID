@@ -2811,6 +2811,10 @@ $messages['gl'] = array(
 	'openidconvert' => 'Transformador OpenID',
 	'openiderror' => 'Erro de verificación',
 	'openiderrortext' => 'Ocorreu un erro durante a verificación do URL do OpenID.',
+	'openid-error-no-auth' => 'Ocorreu un erro de resposta/solicitude de autenticación durante a verificación do URL do OpenID $1.',
+	'openid-error-server-response' => "Ocorreu un erro durante a verificación do URL do OpenID $1.
+
+A resposta do servidor foi: ''$2''",
 	'openid-error-request-forgery' => 'Ocorreu un erro: Atopouse un pase inválido.',
 	'openidconfigerror' => 'Erro na configuración do OpenID',
 	'openidconfigerrortext' => 'A configuración do almacenamento no OpenID deste wiki é inválido.
