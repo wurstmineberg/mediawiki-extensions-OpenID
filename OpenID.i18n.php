@@ -80,7 +80,7 @@ An optional account password can be added in your [[Special:Preferences#mw-prefs
 	'openidrequired' => 'Required',
 	'openidnickname' => 'Nickname',
 	'openidfullname' => 'Real name',
-	'openidemail' => 'E-mail address',
+	'openidemail' => 'Email address',
 	'openidlanguage' => 'Language',
 	'openidtimezone' => 'Time zone',
 	'openidchooselegend' => 'Username and account choice',
