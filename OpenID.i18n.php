@@ -243,7 +243,6 @@ This message is title for the following error messages:
 	'openiderrortext' => 'Used as error message.
 
 The title for this error message is {{msg-mw|Openiderror}}.',
-
 	'openid-error-no-auth' => 'Used as error message in case that an unspecified authentication response/request error occurred during the verification of the OpenID URL.
 
 Parameter:
@@ -257,7 +256,7 @@ Parameters:
 * $2 - the received server response
 
 The title for this error message is {{msg-mw|Openiderror}}.',
-	'openid-error-request-forgery' => 'Used as error message in case that an invalid Anti-CSRF token was found.',
+	'openid-error-request-forgery' => 'The error message when an invalid token was found.',
 	'openid-error-wrong-force-provider-setting' => 'Used as error message in case of an internal error occured, if the URL value for a forced provider (designated by its internal name or a fully qualified URL) is incorrect because it contains a username parameter (it must not).
 
 Parameter:
@@ -271,8 +270,6 @@ Parameter:
 * $1 - a name or fully qualified URL for an internally pre-programmed provider
 
 The title for this error message is {{msg-mw|Openiderror}}.',
-	'openid-error-request-forgery' => 'The error message when an invalid token was found.',
-
 	'openidconfigerror' => 'Used as error title for the following error message:
 * {{msg-mw|Openidconfigerrortext}}',
 	'openidconfigerrortext' => 'Used as error message.
@@ -1752,6 +1749,8 @@ $messages['de'] = array(
 
 Die Antwort des Servers lautete: ''$2''",
 	'openid-error-request-forgery' => 'Ein Fehler ist aufgetreten: Es wurde ein ungültiger Token gefunden.',
+	'openid-error-wrong-force-provider-setting' => 'Es ist ein interner Fehler aufgetreten: Ein falscher URL-Wert wurde für den erzwungenen Provider „$1“ gefunden.',
+	'openid-error-openid-convert-not-allowed-forced-provider' => "Es ist nicht möglich, weitere OpenIDs mit deinem Benutzerkonto zu verknüpfen, da du nur den '''erzwungenen''' OpenID-Provider „$1“ zur Wikianmeldung verwenden kannst.",
 	'openidconfigerror' => 'OpenID-Konfigurationsfehler',
 	'openidconfigerrortext' => 'Die OpenID-Speicherkonfiguarion für dieses Wiki ist fehlerhaft.
 Bitte benachrichtige einen [[Special:ListUsers/sysop|Administrator]].',
@@ -2592,6 +2591,8 @@ $messages['fr'] = array(
 
 La réponse du serveur a été : « $2 »',
 	'openid-error-request-forgery' => "Une erreur s'est produite : un jeton non valide a été trouvé.",
+	'openid-error-wrong-force-provider-setting' => 'Une erreur interne s’est produite : une mauvaise valeur d’URL a été trouvée pour le fournisseur forcé « $1 ».',
+	'openid-error-openid-convert-not-allowed-forced-provider' => "Il n’est pas possible d’associer plus d’OpenIDs à votre compte, car vous ne pouvez utiliser que le fournisseur d’OpenID '''forcé''' « $1 » pour les connexions sur ce Wiki.",
 	'openidconfigerror' => 'Erreur de configuration de OpenID',
 	'openidconfigerrortext' => 'Le stockage de la configuration OpenID pour ce wiki est incorrecte.
 Veuillez vous mettre en rapport avec un [[Special:ListUsers/sysop|administrateur]] de ce site.',
@@ -2839,6 +2840,8 @@ $messages['gl'] = array(
 
 A resposta do servidor foi: ''$2''",
 	'openid-error-request-forgery' => 'Ocorreu un erro: Atopouse un pase inválido.',
+	'openid-error-wrong-force-provider-setting' => 'Ocorreu un erro interno: Atopouse un valor incorrecto do enderezo URL para o provedor forzado "$1".',
+	'openid-error-openid-convert-not-allowed-forced-provider' => 'Non é posible asociar máis identificadores OpenID á súa conta porque só pode utilizar o provedor de OpenID \'\'"forzado"\'\' "$1" para os accesos ao sistema neste wiki.',
 	'openidconfigerror' => 'Erro na configuración do OpenID',
 	'openidconfigerrortext' => 'A configuración do almacenamento no OpenID deste wiki é inválido.
 Por favor, consúlteo cun [[Special:ListUsers/sysop|administrador]] do sitio.',
@@ -3898,7 +3901,7 @@ puoi sceglierne uno dalle opzioni seguenti.',
 	'openidconvertoraddmoreids' => 'Converti in OpenID o aggiungi un altro URL OpenID',
 	'openidconvertsuccess' => 'Convertito con successo a OpenID',
 	'openidconvertsuccesstext' => 'Il tuo OpenID è stato convertito con successo a $1.',
-	'openid-convert-already-your-openid-text' => "L'OpenID $1 è già associato alla tua utenza. Non ha senso aggiungerlo di nuovo.",
+	'openid-convert-already-your-openid-text' => "L'OpenID $1 è già associato alla tua utenza. Non ha senso aggiungerlo di nuovo.", # Fuzzy
 	'openid-convert-other-users-openid-text' => "$1 è l'OpenID di qualcun altro. Non puoi utilizzare l'OpenID di un altro utente.",
 	'openidalreadyloggedin' => "Hai già effettuato l'accesso.",
 	'openidalreadyloggedintext' => "'''Hai già effettuato l'accesso, $1!'''
@@ -4748,6 +4751,8 @@ $messages['mk'] = array(
 
 Опслужувачот одговори: ''$2''",
 	'openid-error-request-forgery' => 'Се појави грешка: пронајдена е неважечка шифра.',
+	'openid-error-wrong-force-provider-setting' => 'Се појави внатрешна грешка: пронајдена е неисправна вердност на URL за наметнатиот услужник „$1“.',
+	'openid-error-openid-convert-not-allowed-forced-provider' => "Не можете да поврзувате повеќе OpenID-ја со сметката бидејќи можете да го користите само ''„наметнатиот“'' услужник за OpenID „$1“ за најавите на ова вики.",
 	'openidconfigerror' => 'Грешка со конфигурацијата на OpenID',
 	'openidconfigerrortext' => 'Складишните посатвки на OpenID за ова вики се погрешни.
 Консултирајте [[Special:ListUsers/sysop|администратор]].',
@@ -6682,7 +6687,7 @@ svojega si lahko izberete med spodnjimi možnostmi.',
 	'openidconvertoraddmoreids' => 'Pretvorite v OpenID ali dodajte še en URL OpenID',
 	'openidconvertsuccess' => 'Uspešno pretvorjeno v OpenID',
 	'openidconvertsuccesstext' => 'Uspešno ste pretvorili svoj OpenID v $1.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 je že povezan z vašim računom. Ponovno dodajanje ni smiselno.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 je že povezan z vašim računom.',
 	'openid-convert-other-users-openid-text' => '$1 je OpenID nekoga drugega. Ne morete uporabiti OpenID drugega uporabnika.',
 	'openidalreadyloggedin' => 'Ste že prijavljeni.',
 	'openidalreadyloggedintext' => "'''$1, ste že prijavljeni!'''
@@ -7034,7 +7039,7 @@ Du kan välja ett från alternativen nedan.',
 	'openidconvertoraddmoreids' => 'Konvertera till OpenID eller lägg till en ny OpenID-adress',
 	'openidconvertsuccess' => 'Konverterade till OpenID',
 	'openidconvertsuccesstext' => 'Du har konverterat ditt OpenID till $1.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 är redan associerad med ditt konto. Det finns ingen anledning till att göra det igen.',
+	'openid-convert-already-your-openid-text' => 'OpenID $1 är redan associerad med ditt konto. Det finns ingen anledning till att göra det igen.', # Fuzzy
 	'openid-convert-other-users-openid-text' => '$1 är någon annans OpenID. Du kan inte använda ett OpenID som tillhör någon annan.',
 	'openidalreadyloggedin' => 'Du är redan inloggad.',
 	'openidalreadyloggedintext' => "'''Du är redan inloggad, $1!'''
@@ -7533,6 +7538,8 @@ $messages['uk'] = array(
 
 Відповідь сервера: "$2"',
 	'openid-error-request-forgery' => 'Сталася помилка: виявлено неприпустимий маркер.',
+	'openid-error-wrong-force-provider-setting' => 'Сталася внутрішня помилка: неправильне значення URL було знайдене для примусового провайдера "$1".',
+	'openid-error-openid-convert-not-allowed-forced-provider' => 'Неможливо зв\'язати подальший OpenIDs з вашим обліковим записом, тому що ви можете використовувати тільки \'\'"примусового"\'\' провайдера OpenID "$1" для входу в систему на цій вікі.',
 	'openidconfigerror' => 'Помилка налаштування OpenID',
 	'openidconfigerrortext' => 'Налаштування сховища OpenID для цієї вікі помилкова.
 Будь-ласка, зверніться до [[Special:ListUsers/sysop|адміністратору сайту]].',
