@@ -904,6 +904,8 @@ $messages['ast'] = array(
 
 La respuesta del sirvidor foi: ''$2''",
 	'openid-error-request-forgery' => 'Hebo un error: alcontróse un pase inválidu.',
+	'openid-error-wrong-force-provider-setting' => "Hebo un error internu: Atopóse un valor d'URL incorreutu pal fornidor forzáu «$1».",
+	'openid-error-openid-convert-not-allowed-forced-provider' => "Nun ye posible asociar más OpenID cola so cuenta porque sólo pue utilizar el fornidor d'OpenID ''\"forzáu\"'' \"\$1\" p'aniciar sesión nesta wiki.",
 	'openidconfigerror' => "Error de configuración d'OpenID",
 	'openidconfigerrortext' => "La configuración del almacenamientu OpenID d'esta wiki ye inválida.
 Consulta con un [[Special:ListUsers/sysop|alministrador]].",
