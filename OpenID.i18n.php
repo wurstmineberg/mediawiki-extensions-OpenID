@@ -257,9 +257,9 @@ Parameters:
 
 The title for this error message is {{msg-mw|Openiderror}}.',
 	'openid-error-request-forgery' => 'The error message when an invalid token was found.',
-	'openid-error-wrong-force-provider-setting' => 'Used as error message in case of an internal error occured, if the URL value for a forced provider (designated by its internal name or a fully qualified URL) is incorrect because it contains a username parameter (it must not).
+	'openid-error-wrong-force-provider-setting' => 'Used as error message in case of an internal error occurred, if the URL value for a forced provider (designated by its internal name or a fully qualified URL) is incorrect because it contains a username parameter (it must not).
 
-Parameter:
+Parameters:
 * $1 - a name or fully qualified URL for an internally pre-programmed provider
 
 The title for this error message is {{msg-mw|Openiderror}}.',
@@ -5628,7 +5628,7 @@ OpenID vos permet de vos connectar sus mantun site diferent sens aver d'utilizar
 S'avètz ja un compte sus {{SITENAME}}, vos podètz [[Special:UserLogin|connectar]] amb vòstre nom d'utilizaire e son senhal coma de costuma. Per utilizar OpenID, a l’avenidor, podètz [[Special:OpenIDConvert|convertir vòstre compte en OpenID]] aprèp vos èsser connectat normalament.
 
 Existís mantun [http://wiki.openid.net/Public_OpenID_providers provesidor d'OpenID publicas], e podètz ja obténer un compte OpenID activat sus un autre servici.", # Fuzzy
-	'openidupdateuserinfo' => 'Metre a jorn mas donadas personalas', # Fuzzy
+	'openidupdateuserinfo' => 'Metre a jorn mas donadas personalas :',
 	'openiddelete' => "Suprimir l'OpenID",
 	'openiddelete-text' => "En clicant sul boton « {{int:openiddelete-button}} », suprimtz l'OpenID $1 de vòstre compte.
 Vos poiretz pas pus connectar amb aquesta OpenID.",
@@ -6350,7 +6350,8 @@ $messages['ru'] = array(
 	'openidconvertsuccess' => 'Успешное преобразование в OpenID',
 	'openidconvertsuccesstext' => 'Вы успешно преобразовали свой OpenID в $1.',
 	'openid-convert-already-your-openid-text' => 'Это уже ваш OpenID.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'Это чужой OpenID.', # Fuzzy
+	'openid-convert-other-users-openid-text' => '$1 — это чей-то чужой OpenID.
+Вы не можете использовать OpenID другого участника.',
 	'openidalreadyloggedin' => 'Вы уже вошли.',
 	'openidalreadyloggedintext' => "''' Вы уже вошли,  $1!'''
 
