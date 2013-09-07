@@ -4643,6 +4643,7 @@ OpenID mellt Iech bäi ville verschiddene Websäiten un, ouni datt Dir fir jiddw
 
 
 Et gëtt vill [//openid.net/get/ OpenID-Provider] a méiglecherweis hutt Dir schonn e Benotzerkont mat aktivéierter OpenID bäi engem aneren Ubidder.',
+	'openidlogininstructions-openidloginonly' => 'Op {{SITENAME}} kann ee sech "nëmme" mat OpenID aloggen.',
 	'openidupdateuserinfo' => 'Meng perséinlech Informatiounen aktualiséieren:',
 	'openiddelete' => 'OpenID läschen',
 	'openiddelete-text' => 'Wann dir op de Knäppchen "{{int:openiddelete-button}}" klickt, dann huelt Dir d\'OpenID $1 vun Ärem Benotzerkont ewech.
