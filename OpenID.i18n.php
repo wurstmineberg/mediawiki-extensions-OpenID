@@ -2464,6 +2464,7 @@ $messages['fa'] = array(
  * @author Mobe
  * @author Nike
  * @author Olli
+ * @author Samoasambia
  * @author Silvonen
  * @author Str4nd
  * @author Varusmies
@@ -2499,15 +2500,15 @@ Ota yhteyttä [[Special:ListUsers/sysop|ylläpitäjään]].',
 	'openidoptional' => 'Valinnainen',
 	'openidrequired' => 'Vaadittu',
 	'openidnickname' => 'Nimimerkki',
-	'openidfullname' => 'Koko nimi', # Fuzzy
+	'openidfullname' => 'Oikea nimi',
 	'openidemail' => 'Sähköpostiosoite',
 	'openidlanguage' => 'Kieli',
 	'openidtimezone' => 'Aikavyöhyke',
-	'openidchooselegend' => 'Käyttäjätunnuksen valinta', # Fuzzy
+	'openidchooselegend' => 'Käyttäjänimen ja käyttäjän valinta',
 	'openidchooseinstructions' => 'Kaikki käyttäjät tarvitsevat nimimerkin.
 Voit valita omasi alla olevista vaihtoehdoista.',
 	'openidchoosenick' => 'Nimimerkkisi ($1)',
-	'openidchoosefull' => 'Koko nimesi ($1)', # Fuzzy
+	'openidchoosefull' => 'Oikea nimesi ($1)',
 	'openidchooseurl' => 'OpenID:stäsi poimittu nimi ($1)',
 	'openidchooseauto' => 'Automaattisesti luotu nimi ($1)',
 	'openidchoosemanual' => 'Omavalintainen nimi',
