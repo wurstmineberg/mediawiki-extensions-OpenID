@@ -413,9 +413,16 @@ See also:
 
 This message is followed by list of OpenID attributes (nickname, email and/or language).',
 	'openiddelete' => 'Used as page title',
-	'openiddelete-text' => 'Parameters:
+	'openiddelete-text' => 'Refers to {{msg-mw|Openiddelete-button}}.
+
+Followed by the "Delete" form.
+
+Parameters:
 * $1 - the URL of the removed site',
-	'openiddelete-button' => '{{Identical|Confirm}}',
+	'openiddelete-button' => 'Used as label for the Submit button in the "Delete" form.
+
+The form is preceded by (and used in) {{msg-mw|Openiddelete-text}}.
+{{Identical|Confirm}}',
 	'openiddeleteerrornopassword' => 'Used as error message in Special:OpenIDConvert.
 
 The title for this error message is {{msg-mw|openiderror}}.
@@ -491,12 +498,17 @@ Used as title for any one of the following messages:
 * {{msg-mw|Openid-trusted-sites-delete-confirmation-success-text}}
 * {{msg-mw|Openid-trusted-sites-delete-all-confirmation-question}}
 * {{msg-mw|Openid-trusted-sites-delete-confirmation-question}}',
-	'openid-trusted-sites-delete-confirmation-question' => 'The question of By clicking the {{msg-mw|openid-trusted-sites-delete-confirmation-button-text}} button, you will remove $1 from the list of sites you trust.
+	'openid-trusted-sites-delete-confirmation-question' => 'The question of by clicking the {{msg-mw|openid-trusted-sites-delete-confirmation-button-text}} button, you will remove $1 from the list of sites you trust.
 
 Parameters:
 * $1 - the URL of the removed site',
-	'openid-trusted-sites-delete-all-confirmation-question' => 'The question of By clicking the {{msg-mw|openid-trusted-sites-delete-confirmation-button-text}} button, you will remove all trusted sites from the list.',
-	'openid-trusted-sites-delete-confirmation-button-text' => '{{Identical|Confirm}}',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'The question of by clicking the {{msg-mw|Openid-trusted-sites-delete-confirmation-button-text}} button, you will remove all trusted sites from the list.',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Used as label for the Submit button in the "Delete trusted site" form.
+
+The form is preceded by any one of the following messages:
+* {{msg-mw|Openid-trusted-sites-delete-all-confirmation-question}}
+* {{msg-mw|Openid-trusted-sites-delete-confirmation-question}}
+{{Identical|Confirm}}',
 	'openid-trusted-sites-delete-confirmation-success-text' => 'A confirmation text which is shown, when the user has successfully removed a site from the list of trusted site.
 
 Parameters:
