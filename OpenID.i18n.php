@@ -4659,7 +4659,7 @@ Et gëtt vill [//openid.net/get/ OpenID-Provider] a méiglecherweis hutt Dir sch
 	'openidlogininstructions-openidloginonly' => 'Op {{SITENAME}} kann ee sech "nëmme" mat OpenID aloggen.',
 	'openidupdateuserinfo' => 'Meng perséinlech Informatiounen aktualiséieren:',
 	'openiddelete' => 'OpenID läschen',
-	'openiddelete-text' => 'Wann dir op de Knäppchen "{{int:openiddelete-button}}" klickt, dann huelt Dir d\'OpenID $1 vun Ärem Benotzerkont ewech.
+	'openiddelete-text' => 'Wann Dir op de Knäppchen "{{int:openiddelete-button}}" klickt, dann huelt Dir d\'OpenID $1 vun Ärem Benotzerkont ewech.
 Da kënnt Dir Iech net méi mat dëser OpenID aloggen.',
 	'openiddelete-button' => 'Confirméieren',
 	'openiddeleteerrornopassword' => 'Dir kënnt net all Är OpenIDe läschen well Äre Benotzerkont kee Paswuert huet.
@@ -4668,7 +4668,7 @@ Dir kéint Iech net ouni eng OpenID aloggen.',
 Dir kéint Iech ouni OpenID net aloggen.',
 	'openiddelete-success' => "D'OpenID gouf vun Ärem Benotzerkont ewechgeholl",
 	'openiddelete-error' => 'Beim Ewehhuele vun der OpenID vun Ärem Benotzerkont ass e Feeler geschitt.',
-	'prefs-openid-hide-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann dir Iech mat OpenID aloggt.',
+	'prefs-openid-hide-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann Dir Iech mat OpenID aloggt.',
 	'prefs-openid-trusted-sites' => 'Siten, deenen Dir traut',
 	'openid-hide-openid-label' => 'Verstoppt Är OpenID URL op ärer Benotzersäit.',
 	'openid-userinfo-update-on-login-label' => "D'Informatioune vum Benotzerprofil vun dësem OpenID-Kont ginn all Kéier aktualiséiert wann Dir Iech aloggt:",
