@@ -6310,6 +6310,7 @@ $messages['rtm'] = array(
  * @author Ignatus
  * @author Kaganer
  * @author Lockal
+ * @author Okras
  * @author Putnik
  * @author Александр Сигачёв
  */
@@ -6346,7 +6347,7 @@ $messages['ru'] = array(
 	'openidoptional' => 'необязательное',
 	'openidrequired' => 'обязательное',
 	'openidnickname' => 'Псевдоним',
-	'openidfullname' => 'Полное имя', # Fuzzy
+	'openidfullname' => 'Настоящее имя',
 	'openidemail' => 'Адрес эл. почты',
 	'openidlanguage' => 'Язык',
 	'openidtimezone' => 'Часовой пояс',
@@ -6354,7 +6355,7 @@ $messages['ru'] = array(
 	'openidchooseinstructions' => 'Каждый участник должен иметь псевдоним;
 вы можете выбрать один из представленных ниже.',
 	'openidchoosenick' => 'Ваш ник ($1)',
-	'openidchoosefull' => 'Ваше полное имя ($1)', # Fuzzy
+	'openidchoosefull' => 'Ваше настоящее имя ($1)',
 	'openidchooseurl' => 'Имя, полученное из вашего OpenID ($1)',
 	'openidchooseauto' => 'Автоматически созданное имя ($1)',
 	'openidchoosemanual' => 'Имя на ваш выбор:',
@@ -6365,7 +6366,7 @@ $messages['ru'] = array(
 	'openidconvertoraddmoreids' => 'Преобразовать в OpenID или добавить другой адрес OpenID',
 	'openidconvertsuccess' => 'Успешное преобразование в OpenID',
 	'openidconvertsuccesstext' => 'Вы успешно преобразовали свой OpenID в $1.',
-	'openid-convert-already-your-openid-text' => 'Это уже ваш OpenID.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 уже связан с вашей учётной записью.',
 	'openid-convert-other-users-openid-text' => '$1 — это чей-то чужой OpenID.
 Вы не можете использовать OpenID другого участника.',
 	'openidalreadyloggedin' => 'Вы уже вошли.',
@@ -6397,13 +6398,13 @@ OpenID позволяет вам заходить на различные веб
 	'openiddelete-error' => 'Произошла ошибка при удалении OpenID из Вашей учётной записи.',
 	'openid-openids-were-not-merged' => 'OpenID(s) не были объединены при слиянии учетных записей.',
 	'prefs-openid-hide-openid' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
-	'openid-hide-openid-label' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.', # Fuzzy
+	'openid-hide-openid-label' => 'Скрывать ваш OpenID URL на вашей странице участника.',
 	'openid-userinfo-update-on-login-label' => 'Обновлять следующую информацию обо мне через OpenID каждый раз, когда я представляюсь системе:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID, связанные с Вашей учётной записью:',
 	'openid-urls-action' => 'Действие',
 	'openid-urls-registration' => 'Время регистрации',
 	'openid-urls-delete' => 'Удалить',
-	'openid-add-url' => 'Добавить новый OpenID', # Fuzzy
+	'openid-add-url' => 'Добавить новый OpenID к вашей учётной записи',
 	'openid-login-or-create-account' => 'Представиться системе или создать новую учётную запись',
 	'openid-provider-label-openid' => 'Введите URL вашего OpenID',
 	'openid-provider-label-google' => 'Представиться, используя учётную запись Google',
@@ -7058,7 +7059,7 @@ Du kan välja ett från alternativen nedan.',
 	'openidconvertoraddmoreids' => 'Konvertera till OpenID eller lägg till en ny OpenID-adress',
 	'openidconvertsuccess' => 'Konverterade till OpenID',
 	'openidconvertsuccesstext' => 'Du har konverterat ditt OpenID till $1.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 är redan associerad med ditt konto. Det finns ingen anledning till att göra det igen.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 är redan associerad med ditt konto.',
 	'openid-convert-other-users-openid-text' => '$1 är någon annans OpenID. Du kan inte använda ett OpenID som tillhör någon annan.',
 	'openidalreadyloggedin' => 'Du är redan inloggad.',
 	'openidalreadyloggedintext' => "'''Du är redan inloggad, $1!'''
