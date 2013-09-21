@@ -445,7 +445,8 @@ See also:
 * {{msg-mw|Openiddelete-success}}',
 	'openid-openids-were-not-merged' => 'When merging user accounts by UserMerge or similar extensions, OpenID(s) are not merged if $wgOpenIDMergeOnAccountMerge=false (default).',
 	'prefs-openid' => '{{optional}}
-OpenID preferences tab title',
+OpenID preferences tab title.
+{{Identical|OpenID}}',
 	'prefs-openid-hide-openid' => 'Label of a Special:Preference section about OpenID: if you log in with OpenID, you can hide your OpenID URL on your user page.',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID user information update (section header)',
 	'prefs-openid-associated-openids' => 'Your OpenIDs for login to this wiki (section header)',
