@@ -6400,7 +6400,7 @@ OpenID позволяет вам заходить на различные веб
 	'openid-openids-were-not-merged' => 'OpenID(s) не были объединены при слиянии учетных записей.',
 	'prefs-openid-hide-openid' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
 	'openid-hide-openid-label' => 'Скрывать ваш OpenID URL на вашей странице участника.',
-	'openid-userinfo-update-on-login-label' => 'Обновлять следующую информацию обо мне через OpenID каждый раз, когда я представляюсь системе:', # Fuzzy
+	'openid-userinfo-update-on-login-label' => 'Поля пользовательского профиля, которые будут автоматически обновляться через OpenID каждый раз, когда я представляюсь системе:',
 	'openid-associated-openids-label' => 'OpenID, связанные с Вашей учётной записью:',
 	'openid-urls-action' => 'Действие',
 	'openid-urls-registration' => 'Время регистрации',
