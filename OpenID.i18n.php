@@ -3917,7 +3917,7 @@ puoi sceglierne uno dalle opzioni seguenti.',
 	'openidconvertoraddmoreids' => 'Converti in OpenID o aggiungi un altro URL OpenID',
 	'openidconvertsuccess' => 'Convertito con successo a OpenID',
 	'openidconvertsuccesstext' => 'Il tuo OpenID è stato convertito con successo a $1.',
-	'openid-convert-already-your-openid-text' => "L'OpenID $1 è già associato alla tua utenza. Non ha senso aggiungerlo di nuovo.", # Fuzzy
+	'openid-convert-already-your-openid-text' => "L'OpenID $1 è già associato alla tua utenza.",
 	'openid-convert-other-users-openid-text' => "$1 è l'OpenID di qualcun altro. Non puoi utilizzare l'OpenID di un altro utente.",
 	'openidalreadyloggedin' => "Hai già effettuato l'accesso.",
 	'openidalreadyloggedintext' => "'''Hai già effettuato l'accesso, $1!'''
@@ -3957,6 +3957,12 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openid-urls-registration' => 'Data di registrazione',
 	'openid-urls-delete' => 'Cancella',
 	'openid-add-url' => 'Aggiungi un nuovo OpenID alla tua utenza',
+	'openid-trusted-sites-table-header-column-url' => 'Siti attendibili',
+	'openid-trusted-sites-table-header-column-action' => 'Azione',
+	'openid-trusted-sites-delete-link-action-text' => 'Cancella',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Cancella tutti i siti attendibili',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Cancellazione siti attendibili',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Conferma',
 	'openid-local-identity' => 'Il tuo OpenID:',
 	'openid-login-or-create-account' => 'Entra o crea una nuova utenza',
 	'openid-provider-label-openid' => "Inserisci l'URL del tuo OpenID",
@@ -5945,7 +5951,7 @@ $messages['ps'] = array(
 	'openidemail' => 'برېښليک پته',
 	'openidlanguage' => 'ژبه',
 	'openidtimezone' => 'د وخت سيمه',
-	'openidchooselegend' => 'د کارن نوم او ګڼون خوښه',
+	'openidchooselegend' => 'د کارن نوم او گڼون خوښه',
 	'openidchooseinstructions' => 'ټولو کارنانو ته د يوه کورني نوم اړتيا شته؛
 تاسې يو نوم د لاندينيو خوښنو نه ځانته ټاکلی شی.',
 	'openidchoosenick' => 'ستاسې کورنی نوم ($1)',
@@ -5953,14 +5959,14 @@ $messages['ps'] = array(
 	'openidchoosemanual' => 'ستاسې د خوښې يو نوم:',
 	'openidchooseusername' => 'کارن-نوم:',
 	'openidchoosepassword' => 'پټنوم:',
-	'openidnousername' => 'هېڅ يو کارن-نوم نه دی ځانګړی شوی.',
-	'openidbadusername' => 'يو ناسم کارن-نوم مو ځانګړی کړی.',
+	'openidnousername' => 'هېڅ يو کارن-نوم نه دی ځانگړی شوی.',
+	'openidbadusername' => 'يو ناسم کارن-نوم مو ځانگړی کړی.',
 	'openiddelete-button' => 'تاييد',
 	'openid-urls-action' => 'چاره',
-	'openid-urls-delete' => 'ړنګول',
-	'openid-login-or-create-account' => 'ننوتل او يا يو نوی ګڼون جوړول',
-	'openid-provider-label-google' => 'د ګووګل د ګڼون په مرسته ننوتل',
-	'openid-provider-label-yahoo' => 'د ياهو د ګڼون په مرسته ننوتل',
+	'openid-urls-delete' => 'ړنگول',
+	'openid-login-or-create-account' => 'ننوتل او يا يو نوی گڼون جوړول',
+	'openid-provider-label-google' => 'د گووگل د گڼون په مرسته ننوتل',
+	'openid-provider-label-yahoo' => 'د ياهو د گڼون په مرسته ننوتل',
 	'openid-provider-label-other-username' => 'تاسې خپل $1 کارن-نوم وليکۍ',
 );
 
@@ -6317,6 +6323,7 @@ $messages['rtm'] = array(
  */
 $messages['ru'] = array(
 	'openid-desc' => 'Вход в вики с помощью [//openid.net/ OpenID], а также вход на другие сайты поддерживающие OpenID с помощью учётной записи в вики',
+	'openididentifier' => 'Идентификатор OpenID',
 	'openidlogin' => 'Войти / создать учетную запись с OpenID',
 	'openidserver' => 'Сервер OpenID',
 	'openidxrds' => 'Файл Yadis',
@@ -6399,18 +6406,31 @@ OpenID позволяет вам заходить на различные веб
 	'openiddelete-error' => 'Произошла ошибка при удалении OpenID из Вашей учётной записи.',
 	'openid-openids-were-not-merged' => 'OpenID(s) не были объединены при слиянии учетных записей.',
 	'prefs-openid-hide-openid' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
+	'prefs-openid-trusted-sites' => 'Доверенные сайты',
+	'prefs-openid-local-identity' => 'Ваш OpenID для входа на другие сайты',
 	'openid-hide-openid-label' => 'Скрывать ваш OpenID URL на вашей странице участника.',
+	'openid-show-openid-url-on-userpage-always' => 'Ваш OpenID всегда отображается на вашей странице пользователя, когда вы посещаете её.',
 	'openid-userinfo-update-on-login-label' => 'Поля пользовательского профиля, которые будут автоматически обновляться через OpenID каждый раз, когда я представляюсь системе:',
 	'openid-associated-openids-label' => 'OpenID, связанные с Вашей учётной записью:',
 	'openid-urls-action' => 'Действие',
 	'openid-urls-registration' => 'Время регистрации',
 	'openid-urls-delete' => 'Удалить',
 	'openid-add-url' => 'Добавить новый OpenID к вашей учётной записи',
+	'openid-trusted-sites-table-header-column-url' => 'Доверенные сайты',
+	'openid-trusted-sites-table-header-column-action' => 'Действие',
+	'openid-trusted-sites-delete-link-action-text' => 'Удалить',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Удалить все доверенные сайты',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Удаление доверенных сайтов',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Подтвердить',
+	'openid-trusted-sites-delete-confirmation-success-text' => '«$1» был успешно удален из списка сайтов, которым вы доверяете.',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Все сайты, которым вы ранее доверяли, были успешно удалены из вашего пользовательского профиля.',
+	'openid-local-identity' => 'Ваш OpenID:',
 	'openid-login-or-create-account' => 'Представиться системе или создать новую учётную запись',
 	'openid-provider-label-openid' => 'Введите URL вашего OpenID',
 	'openid-provider-label-google' => 'Представиться, используя учётную запись Google',
 	'openid-provider-label-yahoo' => 'Представиться, используя учётную запись Yahoo',
 	'openid-provider-label-aol' => 'Введите ваше имя в AOL',
+	'openid-provider-label-wmflabs' => 'Представиться, используя учётную запись Wmflabs',
 	'openid-provider-label-other-username' => 'Введите ваше имя участника $1',
 	'openid-dashboard-title' => 'панель OpenID',
 	'openid-dashboard-title-admin' => 'Панель OpenID (администратор)',
@@ -8092,6 +8112,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Anakmalaysia
+ * @author Ch.Andrew
  * @author Frankou
  * @author Gzdavidwong
  * @author Horacewai2
@@ -8135,7 +8156,7 @@ $messages['zh-hant'] = array(
 	'openidoptional' => '可選',
 	'openidrequired' => '必選',
 	'openidnickname' => '暱稱',
-	'openidfullname' => '全名', # Fuzzy
+	'openidfullname' => '真實姓名',
 	'openidemail' => '電郵地址',
 	'openidlanguage' => '語言',
 	'openidtimezone' => '時區',
@@ -8143,7 +8164,7 @@ $messages['zh-hant'] = array(
 	'openidchooseinstructions' => '所有的用戶都需要提供暱稱；
 您可以從下面任選一個。',
 	'openidchoosenick' => '你的暱稱（$1）',
-	'openidchoosefull' => '您的全名（$1）', # Fuzzy
+	'openidchoosefull' => '您的真實姓名（$1）',
 	'openidchooseurl' => '從您的 OpenID 得到的名稱（$1）',
 	'openidchooseauto' => '自動生成的名稱（$1）',
 	'openidchoosemanual' => '您選擇的名稱：',
