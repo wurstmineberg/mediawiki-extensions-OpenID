@@ -4613,7 +4613,7 @@ Kontaktéiert w.e.g. een [[Special:ListUsers/sysop|Administrateur]].",
 	'openidcancel' => 'Iwwerpréifung ofgebrach',
 	'openidcanceltext' => "D'Iwwerpréifung vun der OpenID-URL gouf ofgebrach",
 	'openidfailure' => 'Feeler bei der Iwwerpréifung',
-	'openidfailuretext' => 'D\'iwwerpréifung vun der OpeniD URL huet net fonctionnéiert. Feeler Message: "$1"',
+	'openidfailuretext' => 'D\'Iwwerpréifung vun der OpeniD URL huet net funktionéiert. Feelermessage: "$1"',
 	'openidsuccess' => 'Iwwerpréifung huet geklappt',
 	'openidsuccesstext' => "'''D'Iwwerpréifung an d'Aloggen als Benotzer $1 huet geklappt'''.
 
@@ -7884,7 +7884,7 @@ Có thể đặt một mật khẩu tùy chọn cho tài khoản trong [[Special
 	'openidconvertoraddmoreids' => 'Chuyển đổi OpenID hay thêm địa chỉ OpenID',
 	'openidconvertsuccess' => 'Đã chuyển đổi sang OpenID thành công',
 	'openidconvertsuccesstext' => 'Bạn đã chuyển đổi OpenID của bạn sang $1 thành công.',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 đang được liên kết với tài khoản của bạn và không cần được thêm vào nó lần nữa.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 đang được liên kết với tài khoản của bạn.',
 	'openid-convert-other-users-openid-text' => '$1 là OpenID của một người khác. Bạn không thể sử dụng OpenID của người dùng khác.',
 	'openidalreadyloggedin' => 'Bạn đã đăng nhập rồi.',
 	'openidalreadyloggedintext' => "'''Bạn đã đăng nhập rồi, $1!'''
@@ -7915,13 +7915,13 @@ Bạn sẽ không đăng nhập được dùng OpenID này.',
 	'openid-openids-were-not-merged' => 'Các OpenID không được hợp nhất lúc khi hợp nhất các tài khoản người dùng.',
 	'prefs-openid-hide-openid' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
 	'openid-hide-openid-label' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
-	'openid-userinfo-update-on-login-label' => 'Cập nhật thông tin sau từ persona OpenID mỗi khi tôi đăng nhập:', # Fuzzy
+	'openid-userinfo-update-on-login-label' => 'Cập nhật thông tin cá nhân sau từ persona OpenID mỗi khi tôi đăng nhập:',
 	'openid-associated-openids-label' => 'Các OpenID được gắn vào tài khoản của bạn:',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Tác vụ',
 	'openid-urls-registration' => 'Lúc mở tài khoản',
 	'openid-urls-delete' => 'Xóa',
-	'openid-add-url' => 'Thêm OpenID mới', # Fuzzy
+	'openid-add-url' => 'Thêm OpenID mới vào tài khoản của bạn',
 	'openid-login-or-create-account' => 'Đăng nhập hay mở tài khoản mới',
 	'openid-provider-label-openid' => 'Ghi vào URL OpenID của bạn',
 	'openid-provider-label-google' => 'Đăng nhập dùng tài khoản Google',
@@ -7984,6 +7984,7 @@ $messages['yi'] = array(
 /** Simplified Chinese (中文（简体）‎)
  * @author Anakmalaysia
  * @author Gaoxuewei
+ * @author Hzy980512
  * @author Kuailong
  * @author Liangent
  * @author Onecountry
@@ -8002,6 +8003,7 @@ $messages['zh-hans'] = array(
 	'openidconvert' => 'OpenID转换',
 	'openiderror' => '验证错误',
 	'openiderrortext' => '在验证OpenID地址时出现了一个错误。',
+	'openid-error-request-forgery' => '发生错误：发现无效权标。',
 	'openidconfigerror' => 'OpenID配置出错',
 	'openidconfigerrortext' => 'OpenID存储配置对此wiki是无效的。
 请联系[[Special:ListUsers/sysop|管理员]]。',
@@ -8046,7 +8048,7 @@ $messages['zh-hans'] = array(
 	'openidconvertoraddmoreids' => '转换到OpenID或添加另一个OpenID地址',
 	'openidconvertsuccess' => '成功转换为OpenID',
 	'openidconvertsuccesstext' => '您已经成功的将您的OpenID转化为$1。',
-	'openid-convert-already-your-openid-text' => 'OpenID $1 已关联到您的帐户，将不会再次提醒您添加。', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1 已关联到您的帐户。',
 	'openid-convert-other-users-openid-text' => '$1是别人的OpenID。您不能使用他人的OpenID。',
 	'openidalreadyloggedin' => '您已经登录了。',
 	'openidalreadyloggedintext' => "'''您已经登录，$1！'''
@@ -8077,23 +8079,37 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openiddelete-error' => '在移除你的OpenID的时候出现了一个错误。',
 	'openid-openids-were-not-merged' => '合并用户帐号时，OpenID 没有被合并。',
 	'prefs-openid-hide-openid' => 'OpenID登录时，在用户页隐藏OpenID。',
+	'prefs-openid-userinfo-update-on-login' => 'OpenID 用户信息更新',
+	'prefs-openid-associated-openids' => '您登陆至{{SITENAME}}的OpenID',
 	'prefs-openid-trusted-sites' => '受信任的站点',
+	'prefs-openid-local-identity' => '您登陆至其他网站的OpenID',
 	'openid-hide-openid-label' => '如果您用OpenID登录时，在用户页隐藏您的OpenID。',
-	'openid-userinfo-update-on-login-label' => '每次登录时，都从OpenID的用户信息中更新以下信息。', # Fuzzy
+	'openid-show-openid-url-on-userpage-always' => '您访问您的用户页时将会一直显示您的OpenID。',
+	'openid-show-openid-url-on-userpage-never' => '您的OpenID永远不会显示在您的用户页上。',
+	'openid-userinfo-update-on-login-label' => '每次登陆时都会从OpenID个人信息系统更新的用户信息栏：',
 	'openid-associated-openids-label' => '和你的账号关联的OpenID：',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => '动作',
 	'openid-urls-registration' => '注册时间',
 	'openid-urls-delete' => '删除',
 	'openid-add-url' => '向您的账户添加一个新的OpenID',
+	'openid-trusted-sites-label' => '您信任且用OpenID登陆过的网站：',
+	'openid-trusted-sites-table-header-column-url' => '信任的网站',
+	'openid-trusted-sites-table-header-column-action' => '操作',
 	'openid-trusted-sites-delete-link-action-text' => '删除',
 	'openid-trusted-sites-delete-all-link-action-text' => '删除所有受信任的站点',
+	'openid-trusted-sites-delete-confirmation-page-title' => '删除信任网站',
+	'openid-trusted-sites-delete-confirmation-question' => '点击“{{int:openid-trusted-sites-delete-confirmation-button-text}}”按钮后，您将从您的信任网站列表中移除“$1”。',
 	'openid-trusted-sites-delete-confirmation-button-text' => '确认',
+	'openid-trusted-sites-delete-confirmation-success-text' => '“$1”已成功地从您的信任站点列表中移除。',
+	'openid-trusted-sites-delete-all-confirmation-success-text' => '您之前信任的所有站点都已成功地从您的用户档案中移除。',
+	'openid-local-identity' => '您的OpenID：',
 	'openid-login-or-create-account' => '登录或创建新账号',
 	'openid-provider-label-openid' => '输入你的OpenID URL',
 	'openid-provider-label-google' => '使用你的Google账号登录',
 	'openid-provider-label-yahoo' => '使用你的Yahoo账号登录',
 	'openid-provider-label-aol' => '输入你的AOL屏幕名称',
+	'openid-provider-label-wmflabs' => '使用您的Wmflabs账号登录',
 	'openid-provider-label-other-username' => '输入你的$1用户名',
 	'specialpages-group-openid' => 'OpenID 服务页和状态信息',
 	'right-openid-converter-access' => '可以添加或转换他们的帐户为使用 OpenID 验证',
