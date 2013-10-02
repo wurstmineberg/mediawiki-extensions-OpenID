@@ -4613,7 +4613,7 @@ Kontaktéiert w.e.g. een [[Special:ListUsers/sysop|Administrateur]].",
 	'openidcancel' => 'Iwwerpréifung ofgebrach',
 	'openidcanceltext' => "D'Iwwerpréifung vun der OpenID-URL gouf ofgebrach",
 	'openidfailure' => 'Feeler bei der Iwwerpréifung',
-	'openidfailuretext' => 'D\'Iwwerpréifung vun der OpeniD URL huet net funktionéiert. Feelermessage: "$1"',
+	'openidfailuretext' => 'D\'Iwwerpréifung vun der OpenID URL huet net funktionéiert. Feelermessage: "$1"',
 	'openidsuccess' => 'Iwwerpréifung huet geklappt',
 	'openidsuccesstext' => "'''D'Iwwerpréifung an d'Aloggen als Benotzer $1 huet geklappt'''.
 
