@@ -84,9 +84,9 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onPersonalUrls( &$personal_urls, &$title ) {
-		global $wgHideOpenIDLoginLink, $wgUser, $wgOpenIDLoginOnly;
+		global $wgOpenIDHideOpenIDLoginLink, $wgUser, $wgOpenIDLoginOnly;
 
-		if ( !$wgHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
+		if ( !$wgOpenIDHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
 			$sk = $wgUser->getSkin();
 			$returnto = $title->isSpecial( 'Userlogout' ) ? '' : ( 'returnto=' . $title->getPrefixedURL() );
 
@@ -115,10 +115,10 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onBeforePageDisplay( $out, &$sk ) {
-		global $wgHideOpenIDLoginLink, $wgUser;
+		global $wgOpenIDHideOpenIDLoginLink, $wgUser;
 
 		# We need to do this *before* PersonalUrls is called
-		if ( !$wgHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
+		if ( !$wgOpenIDHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
 			$out->addHeadItem( 'openid-loginstyle', self::loginStyle() );
 		}
 
