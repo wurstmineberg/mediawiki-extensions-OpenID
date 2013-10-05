@@ -280,30 +280,28 @@ class OpenIDHooks {
 			switch ( $wgOpenIDShowUrlOnUserPage ) {
 
 			case 'user':
-				$preferences['openid-hide-openid'] =
+				$preferences['openid-show-openid'] =
 					array(
-						'section' => 'openid/openid-hide-openid',
+						'section' => 'openid/openid-show-openid',
 						'type' => 'toggle',
-						'label-message' => 'openid-hide-openid-label',
+						'label-message' => 'openid-show-openid-url-on-userpage-user',
 					);
 				break;
 
 			case 'always':
-				$preferences['openid-hide-openid'] =
+				$preferences['openid-show-openid'] =
 					array(
-						'section' => 'openid/openid-hide-openid',
+						'section' => 'openid/openid-show-openid',
 						'type' => 'info',
-						'label-message' => 'openid-hide-openid-label',
 						'default' => wfMessage( 'openid-show-openid-url-on-userpage-always' )->text(),
 					);
 				break;
 
 			case 'never':
-				$preferences['openid-hide-openid'] =
+				$preferences['openid-show-openid'] =
 					array(
-						'section' => 'openid/openid-hide-openid',
+						'section' => 'openid/openid-show-openid',
 						'type' => 'info',
-						'label-message' => 'openid-hide-openid-label',
 						'default' => wfMessage( 'openid-show-openid-url-on-userpage-never' )->text(),
 					);
 				break;

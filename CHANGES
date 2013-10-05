@@ -1,6 +1,9 @@
 CHANGES
 =======
 
+3.42  20131004  fixed a problem with label text on the preferences tab.
+                inverted internal hide/show OpenID property name,
+                but kept the default meaning "show OpenID on user pages"
 3.41  20131003  bug 54506: $wgHideOpenIDLoginLink was not completely renamed to
                 $wgOpenIDHideOpenIDLoginLink
 3.40  20130821  bug 47151 Special:OpenIDConvert can be used even when forcing an

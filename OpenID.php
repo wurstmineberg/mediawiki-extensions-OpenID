@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.41 20131003' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.42 20131004' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -352,12 +352,12 @@ $wgOpenIDShowProviderIcons = true;
 $wgOpenIDIdentifiersURL = "";
 
 # New options
-$wgDefaultUserOptions['openid-hide'] = 0;
-$wgDefaultUserOptions['openid-update-on-login-nickname'] = false;
-$wgDefaultUserOptions['openid-update-on-login-email'] = false;
-$wgDefaultUserOptions['openid-update-on-login-fullname'] = false;
-$wgDefaultUserOptions['openid-update-on-login-language'] = false;
-$wgDefaultUserOptions['openid-update-on-login-timezone'] = false;
+$wgDefaultUserOptions['openid-show-openid'] = true;
+$wgDefaultUserOptions['openid-userinfo-update-on-login-nickname'] = false;
+$wgDefaultUserOptions['openid-userinfo-update-on-login-email'] = false;
+$wgDefaultUserOptions['openid-userinfo-update-on-login-fullname'] = false;
+$wgDefaultUserOptions['openid-userinfo-update-on-login-language'] = false;
+$wgDefaultUserOptions['openid-userinfo-update-on-login-timezone'] = false;
 
 # END CONFIGURATION VARIABLES
 

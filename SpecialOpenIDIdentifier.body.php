@@ -89,7 +89,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 			if ( ( $user->getID() === $wgUser->getID() )
 				&& ( $user->getID() != 0 )
 				&& ( $wgOpenIDShowUrlOnUserPage === 'always'
-					|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && !$wgUser->getOption( 'openid-hide-openid' ) ) )
+					|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && $wgUser->getOption( 'openid-show-openid' ) ) )
 			) {
 				$wgOut->setSubtitle( "<span class='subpages'>" .
 					OpenIDHooks::getOpenIDSmallLogoUrlImageTag() .
