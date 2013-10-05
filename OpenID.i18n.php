@@ -51,7 +51,7 @@ The page has no other purpose.',
 
 The server response was: ''$2''",
 	'openid-error-request-forgery' => 'An error occurred: an invalid token was found.',
-	'openid-error-wrong-force-provider-setting' => 'An internal error occured: an incorrect URL value has been found for the forced provider "$1".',
+	'openid-error-wrong-force-provider-setting' => 'An internal error occurred: an incorrect URL value has been found for the forced provider "$1".',
 	'openid-error-openid-convert-not-allowed-forced-provider' => "It is not possible to associate further OpenIDs to your account, because you can only use the ''\"forced\"'' OpenID provider \"$1\" for logins on this Wiki.",
 	'openidconfigerror' => 'OpenID configuration error',
 	'openidconfigerrortext' => 'The OpenID storage configuration for this wiki is invalid.
