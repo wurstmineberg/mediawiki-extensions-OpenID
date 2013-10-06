@@ -132,12 +132,12 @@ You would not able to log in without an OpenID.',
 	'openid-openids-were-not-merged' => 'OpenID(s) were not merged when merging the user accounts.',
 
 	'prefs-openid' => 'OpenID',
-	'prefs-openid-show-openid' => 'OpenID URL on your user page',
+	'prefs-openid-hide-openid' => 'OpenID URL on your user page',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID user information update',
 	'prefs-openid-associated-openids' => 'Your OpenIDs for login to {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Trusted sites',
 	'prefs-openid-local-identity' => 'Your OpenID for login to other sites',
-	'openid-show-openid-url-on-userpage-user' => 'Show your OpenID URL on your user page.',
+	'openid-hide-openid-label' => 'Hide your OpenID URL on your user page.',
 	'openid-show-openid-url-on-userpage-always' => 'Your OpenID is always shown on your user page when you visit it.',
 	'openid-show-openid-url-on-userpage-never' => 'Your OpenID is never shown on your user page.',
 	'openid-userinfo-update-on-login-label' => 'User profile information fields which will be automatically updated from OpenID persona every time when you log in:',
@@ -447,13 +447,13 @@ See also:
 	'prefs-openid' => '{{optional}}
 OpenID preferences tab title.
 {{Identical|OpenID}}',
-	'prefs-openid-show-openid' => 'Label of a Special:Preference section about OpenID: if you log in with OpenID, you can hide your OpenID URL on your user page.',
+	'prefs-openid-hide-openid' => 'Label of a Special:Preference section about OpenID: if you log in with OpenID, you can hide your OpenID URL on your user page.',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID user information update (section header)',
 	'prefs-openid-associated-openids' => 'Your OpenIDs for login to this wiki (section header)',
 	'prefs-openid-trusted-sites' => 'Trusted sites (section header).
 {{Identical|Trusted site}}',
 	'prefs-openid-local-identity' => 'Your OpenID for login to other sites (section header)',
-	'openid-show-openid-label' => 'Hide your OpenID URL on your user page (preference label)
+	'openid-hide-openid-label' => 'Hide your OpenID URL on your user page (preference label)
 
 If <code>$wgOpenIDShowUrlOnUserPage</code> is not defined, this message is used as the label for checkbox.
 
@@ -649,8 +649,8 @@ Sonder 'n OpenID sal u glad nie meer kan aanmeld nie.",
 Sonder 'n OpenID sou u glad nie meer kon aanmeld nie.",
 	'openiddelete-success' => 'Die OpenID is suksesvol van u gebruiker verwyder.',
 	'openiddelete-error' => "'n Fout het voorgekom tydens die verwydering van die OpenID uit u gebruiker.",
-	'prefs-openid-show-openid' => 'Wys OpenID-URL op u gebruikersblad',
-	'openid-show-openid-label' => 'Versteek u OpenID-URL op u gebruikersblad.',
+	'prefs-openid-hide-openid' => 'Wys OpenID-URL op u gebruikersblad',
+	'openid-hide-openid-label' => 'Versteek u OpenID-URL op u gebruikersblad.',
 	'openid-userinfo-update-on-login-label' => 'Opdateer die volgende inligting vanaf die OpenID-gebruiker elke keer as ek aanmeld:',
 	'openid-associated-openids-label' => "OpenID's aan u gebruiker gekoppel:",
 	'openid-urls-action' => 'Aksie',
@@ -672,8 +672,8 @@ Sonder 'n OpenID sou u glad nie meer kon aanmeld nie.",
 $messages['aln'] = array(
 	'openiddelete-success' => 'OpenID u hoq me sukses nga llogaria juaj.',
 	'openiddelete-error' => 'Gabim gjatë heqjes OpenID nga llogaria juaj.',
-	'prefs-openid-show-openid' => 'Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.',
-	'openid-show-openid-label' => 'Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.',
+	'openid-hide-openid-label' => 'Fshih URL OpenID tuaj në faqen tuaj të përdoruesit, nëse ju hyni në me OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Update informacionin e mëposhtëm nga persona OpenID çdo herë që në hyrje:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs lidhur me llogarinë tuaj:',
 	'openid-urls-action' => 'Veprim',
@@ -786,8 +786,8 @@ $messages['ar'] = array(
 	'openiddelete-success' => 'أزيلت الهوية المفتوحة بنجاح من حسابك.',
 	'openiddelete-error' => 'صودف خطأ أثناء إزالة الهوية المفتوحة من حسابك.',
 	'prefs-openid' => 'هوية مفتوحة',
-	'prefs-openid-show-openid' => 'أخفِ مسار هويتك المفتوحة من صفحتك الشخصية، إذا سجلت الدخول بالهوية المفتوحة.',
-	'openid-show-openid-label' => 'أخفِ مسار هويتك المفتوحة من صفحتك الشخصية، إذا سجلت الدخول بالهوية المفتوحة.', # Fuzzy
+	'prefs-openid-hide-openid' => 'أخفِ مسار هويتك المفتوحة من صفحتك الشخصية، إذا سجلت الدخول بالهوية المفتوحة.',
+	'openid-hide-openid-label' => 'أخفِ مسار هويتك المفتوحة من صفحتك الشخصية، إذا سجلت الدخول بالهوية المفتوحة.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'حدث المعلومات التالية من شخصية الهوية المفتوحة كل مرة أسجل الدخول:', # Fuzzy
 	'openid-associated-openids-label' => 'الهويات المفتوحة المربوطة بحسابك:',
 	'openid-urls-url' => 'مسار',
@@ -891,8 +891,8 @@ $messages['arz'] = array(
 لاستخدام الهوية المفتوحة فى المستقبل، يمكنك [[Special:OpenIDConvert|تحويل حسابك إلى الهوية المفتوحة]] بعد تسجيل دخولك بشكل عادى.
 
 يوجد العديد من [http://wiki.openid.net/Public_OpenID_providers موفرى الهوية المفتوحة العلنيين]، وربما يكون لديك حسابك بهوية مفتوحة على خدمة أخرى.', # Fuzzy
-	'prefs-openid-show-openid' => 'أخف هويتك هويتك المفتوحة على صفحتك الشخصية، لو سجلت الدخول بالهوية المفتوحة.',
-	'openid-show-openid-label' => 'أخف هويتك هويتك المفتوحة على صفحتك الشخصية، لو سجلت الدخول بالهوية المفتوحة.', # Fuzzy
+	'prefs-openid-hide-openid' => 'أخف هويتك هويتك المفتوحة على صفحتك الشخصية، لو سجلت الدخول بالهوية المفتوحة.',
+	'openid-hide-openid-label' => 'أخف هويتك هويتك المفتوحة على صفحتك الشخصية، لو سجلت الدخول بالهوية المفتوحة.', # Fuzzy
 );
 
 /** Asturian (asturianu)
@@ -994,12 +994,12 @@ Nun podría aniciar sesión ensin una OpenID.',
 	'openiddelete-success' => 'La OpenID desaniciose correutamente de la to cuenta.',
 	'openiddelete-error' => 'Hebo un error al desaniciar la OpenID de la so cuenta.',
 	'openid-openids-were-not-merged' => "Les OpenID nun s'amestaron cuando s'amestaron les cuentas d'usuariu.",
-	'prefs-openid-show-openid' => "URL de la so OpenID na páxina d'usuariu.",
+	'prefs-openid-hide-openid' => "URL de la so OpenID na páxina d'usuariu.",
 	'prefs-openid-userinfo-update-on-login' => "Anovamientu de la información d'usuariu d'OpenID",
 	'prefs-openid-associated-openids' => "Los sos OpenID p'aniciar sesión en {{SITENAME}}",
 	'prefs-openid-trusted-sites' => 'Sitios enfotaos',
 	'prefs-openid-local-identity' => "La so OpenID p'aniciar sesión n'otros sitios",
-	'openid-show-openid-label' => "Anubrir la URL de la so OpenID na páxina d'usuariu.",
+	'openid-hide-openid-label' => "Anubrir la URL de la so OpenID na páxina d'usuariu.",
 	'openid-show-openid-url-on-userpage-always' => "La so OpenID amuesase siempres na so páxina d'usuariu cuando la visita.",
 	'openid-show-openid-url-on-userpage-never' => "La OpenID nun s'amuesa nunca na so páxina d'usuariu.",
 	'openid-userinfo-update-on-login-label' => "Campos d'información del perfil d'usuariu que s'anovarán automáticamente dende la persona OpenID cada vez qu'anicie sesión:",
@@ -1166,8 +1166,8 @@ $messages['be-tarask'] = array(
 	'openiddelete-success' => 'OpenID быў пасьпяхова выдалены з Вашага рахунку.',
 	'openiddelete-error' => 'Адбылася памылка пад час выдаленьня OpenID з Вашага рахунку.',
 	'openid-openids-were-not-merged' => 'Рахункі OpenID ня былі аб’яднаныя падчас аб’яднаныя рахункаў.',
-	'prefs-openid-show-openid' => 'Хаваць Ваш адрас OpenID на Вашай старонцы ўдзельніка, калі Вы ўвайшлі з дапамогай OpenID.',
-	'openid-show-openid-label' => 'Хаваць Ваш адрас OpenID на Вашай старонцы ўдзельніка, калі Вы ўвайшлі з дапамогай OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Хаваць Ваш адрас OpenID на Вашай старонцы ўдзельніка, калі Вы ўвайшлі з дапамогай OpenID.',
+	'openid-hide-openid-label' => 'Хаваць Ваш адрас OpenID на Вашай старонцы ўдзельніка, калі Вы ўвайшлі з дапамогай OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Абнаўляць наступную інфармацыю з OpenID кожны раз, калі я уваходжу ў сыстэму:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID зьвязаныя з Вашым рахункам:',
 	'openid-urls-action' => 'Дзеяньне',
@@ -1260,8 +1260,8 @@ OpenID позволява влизането в много различни са
 	'openidupdateuserinfo' => 'Актуализиране на моите лични данни:',
 	'openiddelete' => 'Изтриване на OpenID',
 	'openiddelete-button' => 'Потвърждаване',
-	'prefs-openid-show-openid' => 'Скриване на OpenID от потребителската страница ако влезете чрез OpenID.',
-	'openid-show-openid-label' => 'Скриване на OpenID от потребителската страница ако влезете чрез OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Скриване на OpenID от потребителската страница ако влезете чрез OpenID.',
+	'openid-hide-openid-label' => 'Скриване на OpenID от потребителската страница ако влезете чрез OpenID.', # Fuzzy
 	'openid-urls-action' => 'Действие',
 	'openid-urls-delete' => 'Изтриване',
 	'openid-add-url' => 'Добавяне на нов OpenID', # Fuzzy
@@ -1403,9 +1403,9 @@ Ne c'hallfec'h ket kevreañ hep OpenID.",
 Ne c'hallfec'h ket kevreañ hep OpenID.",
 	'openiddelete-success' => 'Tennet eo bet ervat an OpenID eus ho kont.',
 	'openiddelete-error' => "Ur fazi a zo bet pa oac'h o klask tennañ an OpenID eus ho kont.",
-	'prefs-openid-show-openid' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.",
+	'prefs-openid-hide-openid' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.",
 	'prefs-openid-trusted-sites' => "Lec'hiennoù a fiziañs",
-	'openid-show-openid-label' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.", # Fuzzy
+	'openid-hide-openid-label' => "Kuzhit hoc'h OpenID war ho pajenn implijer, ma kevreit gant OpenID.", # Fuzzy
 	'openid-userinfo-update-on-login-label' => "Hizivaat ar roadennoù da heul adalek OpenID bep tro m'en em lugan :", # Fuzzy
 	'openid-associated-openids-label' => 'An OpenIDoù stag ouzh ho kont :',
 	'openid-urls-url' => 'URL',
@@ -1502,8 +1502,8 @@ Neće se moći prijaviti bez OpenID.',
 Bez OpenId nećete moći da se prijavite.',
 	'openiddelete-success' => 'OpenID je uspješno uklonjen sa vašeg računa.',
 	'openiddelete-error' => 'Desila se greška pri uklanjanju OpenID sa vašeg računa.',
-	'prefs-openid-show-openid' => 'Sakrij Vaš OpenID na Vašoj korisničkoj stranici, ako ste prijavljeni sa OpenID.',
-	'openid-show-openid-label' => 'Sakrij Vaš OpenID na Vašoj korisničkoj stranici, ako ste prijavljeni sa OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Sakrij Vaš OpenID na Vašoj korisničkoj stranici, ako ste prijavljeni sa OpenID.',
+	'openid-hide-openid-label' => 'Sakrij Vaš OpenID na Vašoj korisničkoj stranici, ako ste prijavljeni sa OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Ažuriraj slijedeće informacije sa OpenID identiteta svaki put kad se prijavim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDovi pridruženi vašem računu:',
 	'openid-urls-action' => 'Akcija',
@@ -1660,8 +1660,8 @@ Bez OpenID byste se {{GENDER:|nebyl schopen|nebyla schopna|nebyli schopni}} při
 	'openiddelete-success' => 'OpenID bylo úspěšně odstraněno z vašeho účtu.',
 	'openiddelete-error' => 'Během odstraňování OpenID z vašeho účtu se vyskytla chyba.',
 	'openid-openids-were-not-merged' => 'OpenID nebyly při slučování uživatelských účtů sloučeny.',
-	'prefs-openid-show-openid' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.',
-	'openid-show-openid-label' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.',
+	'openid-hide-openid-label' => 'Nezobrazovat OpenID na vaší uživatelské stránce, pokud se přihlašujete pomocí OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Aktualizovat následující informace z OpenID identity vždy, když se přihlásím:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID asociovaná s vaším účtem:',
 	'openid-urls-url' => 'URL',
@@ -1840,12 +1840,12 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openiddelete-success' => 'Die OpenID wurde erfolgreich von deinem Benutzerkonto entfernt.',
 	'openiddelete-error' => 'Beim Entfernen der OpenID von deinem Benutzerkonto ist ein Fehler aufgetreten.',
 	'openid-openids-were-not-merged' => 'Die OpenID(s) wurden während der Zusammenlegung der Benutzerkonten nicht zusammengeführt.',
-	'prefs-openid-show-openid' => 'Anzeige der OpenID auf deiner Benutzerseite',
+	'prefs-openid-hide-openid' => 'Anzeige der OpenID auf deiner Benutzerseite',
 	'prefs-openid-userinfo-update-on-login' => 'Daten, die vom OpenID-Konto bei jeder Anmeldung aktualisiert werden',
 	'prefs-openid-associated-openids' => 'Mit deinem {{SITENAME}} Benutzerkonto verbundene OpenIDs:',
 	'prefs-openid-trusted-sites' => 'Websites, denen du vertraust',
 	'prefs-openid-local-identity' => 'Deine OpenID zur Anmeldung auf anderen Websites',
-	'openid-show-openid-label' => 'Deine OpenID-URL auf deiner Benutzerseite ausblenden.',
+	'openid-hide-openid-label' => 'Deine OpenID-URL auf deiner Benutzerseite ausblenden.',
 	'openid-show-openid-url-on-userpage-always' => 'Deine OpenID wird immer auf deiner Benutzerseite angezeigt, wenn du sie besuchst.',
 	'openid-show-openid-url-on-userpage-never' => 'Deine OpenID wird niemals auf deiner Benutzerseite angezeigt.',
 	'openid-userinfo-update-on-login-label' => 'Diese Benutzerprofilfelder werden vom OpenID-Konto jedes Mal automatisch aktualisiert, wenn du dich anmeldest:',
@@ -1937,8 +1937,8 @@ Ohne OpenID könnten Sie sich nicht mehr anmelden.',
 Ohne OpenID könnten Sie sich nicht mehr anmelden.',
 	'openiddelete-success' => 'Die OpenID wurde erfolgreich von Ihrem Benutzerkonto entfernt.',
 	'openiddelete-error' => 'Beim Entfernen der OpenID von Ihrem Benutzerkonto ist ein Fehler aufgetreten.',
-	'prefs-openid-show-openid' => 'Verstecken Sie Ihre OpenID auf Ihrer Benutzerseite, wenn Sie sich mit OpenID anmelden.',
-	'openid-show-openid-label' => 'Verstecken Sie Ihre OpenID auf Ihrer Benutzerseite, wenn Sie sich mit OpenID anmelden.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Verstecken Sie Ihre OpenID auf Ihrer Benutzerseite, wenn Sie sich mit OpenID anmelden.',
+	'openid-hide-openid-label' => 'Verstecken Sie Ihre OpenID auf Ihrer Benutzerseite, wenn Sie sich mit OpenID anmelden.', # Fuzzy
 	'openid-associated-openids-label' => 'Mit Ihrem Benutzerkonto verbundene OpenIDs:',
 	'openid-provider-label-openid' => 'Geben Sie Ihre OpenID-URL an',
 	'openid-provider-label-google' => 'Mit Ihrem Google-Benutzerkonto anmelden',
@@ -2048,11 +2048,11 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'openiddelete-success' => 'OpenID jo se wuspěšnje z twójogo konta wótpórał.',
 	'openiddelete-error' => 'Pśi wótwónoźowanju OpenID z twójogo konta jo zmólka jo nastata.',
 	'openid-openids-were-not-merged' => 'Pśi zjadnośenju wužywarskich kontow OpenID njejsu se zjadnośili.',
-	'prefs-openid-show-openid' => 'Schowaj swój OpenID na swójom wužywarskem boku, jolic se pśizjawjaś z OpenID.',
+	'prefs-openid-hide-openid' => 'Schowaj swój OpenID na swójom wužywarskem boku, jolic se pśizjawjaś z OpenID.',
 	'prefs-openid-userinfo-update-on-login' => 'Aktualizacija informacijow OpenID-wužywarja',
 	'prefs-openid-associated-openids' => 'Twóje OpenID za pśizjawjenje k {{GRAMMAR:datiw|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Dowěry gódne sedła',
-	'openid-show-openid-label' => 'Twój OpenID-URL na twójom wužywarskem boku schowaś',
+	'openid-hide-openid-label' => 'Twój OpenID-URL na twójom wužywarskem boku schowaś',
 	'openid-userinfo-update-on-login-label' => 'Póla informacijow wužywarskego profila, kótarež aktualizěruju se kuždy raz, gaž se pśizjawjaš:',
 	'openid-associated-openids-label' => 'OpenID, kótarež su z twójim kontom zwězane:',
 	'openid-urls-url' => 'URL',
@@ -2174,8 +2174,8 @@ $messages['el'] = array(
  Δεν θα μπορέσετε να συνδεθείτε χωρίς ένα OpenID.',
 	'openiddelete-success' => 'Το OpenID αφαιρέθηκε επιτυχώς από τον λογαριασμό σας.',
 	'openiddelete-error' => 'Ένα σφάλμα προέκυψε κατά την αφαίρεση του OpenID από το λογαριασμό σας.',
-	'prefs-openid-show-openid' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.',
-	'openid-show-openid-label' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.',
+	'openid-hide-openid-label' => 'Απόκρυψη του OpenID URL στη σελίδα χρήστη σας, αν συνδεθείτε με το OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Ενημέρωση των ακόλουθων πληροφοριών από το OpenID persona κάθε φορά που συνδέομαι:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID συνδεδεμένα με τον λογαριασμό σας:',
 	'openid-urls-url' => 'Διεύθυνση URL',
@@ -2259,8 +2259,8 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
 	'openiddelete-button' => 'Konfirmi',
 	'openiddelete-success' => 'La OpenID estis sukcese forigita de via konto.',
 	'openiddelete-error' => 'Eraro okazis dum forigado de la OpenID de via konto.',
-	'prefs-openid-show-openid' => 'Kaŝi viajn identigon OpenID en via uzantopaĝo, se vi ensalutas kun OpenID.',
-	'openid-show-openid-label' => 'Kaŝi viajn identigon OpenID en via uzantopaĝo, se vi ensalutas kun OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Kaŝi viajn identigon OpenID en via uzantopaĝo, se vi ensalutas kun OpenID.',
+	'openid-hide-openid-label' => 'Kaŝi viajn identigon OpenID en via uzantopaĝo, se vi ensalutas kun OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Ĝisdatigi mian informon de OpenID-konto ĉiam, kiam mi ensalutos:', # Fuzzy
 	'openid-associated-openids-label' => 'Indentigoj OpenID asociigita kun via konto:',
 	'openid-urls-action' => 'Ago',
@@ -2370,8 +2370,8 @@ No podrás iniciar sesión sin un OpenID.',
 	'openiddelete-success' => 'El OpenID fue eliminado exitosamente de tu cuenta.',
 	'openiddelete-error' => 'Ocurrió un error al eliminar el OpenID de tu cuenta.',
 	'openid-openids-were-not-merged' => 'El(los) OpenID(s) no se fusionaron cuando se fusionaban las cuentas de usuario.',
-	'prefs-openid-show-openid' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.',
-	'openid-show-openid-label' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.',
+	'openid-hide-openid-label' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Actualizar la siguiente información desde mi perfil OpenID cada vez que inicie sesión:', # Fuzzy
 	'openid-associated-openids-label' => 'Los OpenID asociados a tu cuenta:',
 	'openid-urls-url' => 'Dirección URL',
@@ -2556,9 +2556,9 @@ Et kykenisi kirjautumaan sisään ilman OpenID-tunnusta.',
 Et kykenisi kirjautumaan ilman OpenID-tunnusta.',
 	'openiddelete-success' => 'OpenID on onnistuneesti poistettu tilistäsi.',
 	'openiddelete-error' => 'Virhe poistettaessa OpenID:tä tilistäsi.',
-	'prefs-openid-show-openid' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.',
+	'prefs-openid-hide-openid' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.',
 	'prefs-openid-trusted-sites' => 'Luotetut sivustot',
-	'openid-show-openid-label' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.', # Fuzzy
+	'openid-hide-openid-label' => 'Piilota OpenID:si käyttäjäsivultani, jos kirjaudun sisään OpenID-tunnuksilla.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Päivitä seuraavat tiedot OpenID-tiedoista jokaisella kirjautumisella:', # Fuzzy
 	'openid-associated-openids-label' => 'Tiliisi liitetyt OpenID:eet:',
 	'openid-urls-action' => 'Toiminto',
@@ -2684,12 +2684,12 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openiddelete-success' => "L'OpenID a été supprimé avec succès de votre compte.",
 	'openiddelete-error' => "Une erreur est survenue pendant la suppression de l'OpenID de votre compte.",
 	'openid-openids-were-not-merged' => "Les OpenID n'ont pas été fusionnés lors de la fusion des comptes d'utilisateurs.",
-	'prefs-openid-show-openid' => 'Cacher votre OpenID sur votre page utilisateur, si vous vous connectez avec OpenID.',
+	'prefs-openid-hide-openid' => 'Cacher votre OpenID sur votre page utilisateur, si vous vous connectez avec OpenID.',
 	'prefs-openid-userinfo-update-on-login' => 'Mise à jour des informations utilisateur de OpenID',
 	'prefs-openid-associated-openids' => 'Vos OpenIDs pour vous connecter à {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Sites de confiance',
 	'prefs-openid-local-identity' => 'Votre OpenID pour vous connecter à d’autres sites',
-	'openid-show-openid-label' => 'Masquer l’URL de votre OpenID sur votre page utilisateur.',
+	'openid-hide-openid-label' => 'Masquer l’URL de votre OpenID sur votre page utilisateur.',
 	'openid-show-openid-url-on-userpage-always' => 'Votre OpenID est toujours affiché sur votre page utilisateur quand vous la visitez.',
 	'openid-show-openid-url-on-userpage-never' => 'Votre OpenID n’est jamais affiché sur votre page utilisateur.',
 	'openid-userinfo-update-on-login-label' => 'Champs d’information du profil utilisateur qui seront mis à jour automatiquement depuis votre personne OpenID chaque fois que vous vous connecterez:',
@@ -2794,8 +2794,8 @@ Vos pouede administrar (vêre, suprimar et pués nen apondre d’ôtres) OpenIDs
 	'openidupdateuserinfo' => 'Betar a jorn mes balyês a mè :',
 	'openiddelete' => 'Suprimar l’OpenID',
 	'openiddelete-button' => 'Confirmar',
-	'prefs-openid-show-openid' => 'Cachiér voutron OpenID sur voutra pâge utilisator, se vos vos branchiéd avouéc OpenID.',
-	'openid-show-openid-label' => 'Cachiér voutron OpenID sur voutra pâge utilisator, se vos vos branchiéd avouéc OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Cachiér voutron OpenID sur voutra pâge utilisator, se vos vos branchiéd avouéc OpenID.',
+	'openid-hide-openid-label' => 'Cachiér voutron OpenID sur voutra pâge utilisator, se vos vos branchiéd avouéc OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Betar a jorn cetes enformacions dês OpenID a tôs los côps que mè brancho :', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associyêyes avouéc voutron compto :',
 	'openid-urls-url' => 'URL',
@@ -2932,12 +2932,12 @@ Non podería conectarse sen un OpenID.',
 	'openiddelete-success' => 'O OpenID foi eliminado con éxito da súa conta.',
 	'openiddelete-error' => 'Houbo un erro ao eliminar o OpenID da súa conta.',
 	'openid-openids-were-not-merged' => 'Os OpenID non se fusionaron ao mesturar as contas de usuario.',
-	'prefs-openid-show-openid' => 'Enderezo URL do OpenID na súa páxina de usuario',
+	'prefs-openid-hide-openid' => 'Enderezo URL do OpenID na súa páxina de usuario',
 	'prefs-openid-userinfo-update-on-login' => 'Actualización da información de usuario do OpenID',
 	'prefs-openid-associated-openids' => 'Os seus OpenID para acceder a {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Sitios de confianza',
 	'prefs-openid-local-identity' => 'O seu OpenID para acceder a outros sitios',
-	'openid-show-openid-label' => 'Agoche o enderezo URL do seu OpenID na súa páxina de usuario.',
+	'openid-hide-openid-label' => 'Agoche o enderezo URL do seu OpenID na súa páxina de usuario.',
 	'openid-show-openid-url-on-userpage-always' => 'O seu OpenID móstrase sempre na súa páxina de usuario cando a visita.',
 	'openid-show-openid-url-on-userpage-never' => 'O seu OpenID non se mostra nunca na súa páxina de usuario.',
 	'openid-userinfo-update-on-login-label' => 'Os campos de información do perfil que se actualizarán desde o OpenID cada vez que acceda ao sistema:',
@@ -3077,8 +3077,8 @@ Derno wärsch nimmi imstand, di ohni OpenID aazmälde.',
 	'openiddeleteerroropenidonly' => 'Du chasch nit Dyyni ganze OpenID lesche, wel Du di numme mit ere OpenID aamälde derfsch. Derno wärsch nimmi imstand, di ohni OpenID aazmälde.',
 	'openiddelete-success' => 'D OpenID isch erfolgryych us Dyym Benutzerkonto uusegnuu wore.',
 	'openiddelete-error' => 'E Fähler isch ufträtte, derwylscht d OpenID us Dyym Benutzerkonto uusegnuu woren isch.',
-	'prefs-openid-show-openid' => 'Versteck Dyyni OpenID uf Dyynere Benutzersyte, wänn Di mit OpenID aamäldsch.',
-	'openid-show-openid-label' => 'Versteck Dyyni OpenID uf Dyynere Benutzersyte, wänn Di mit OpenID aamäldsch.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Versteck Dyyni OpenID uf Dyynere Benutzersyte, wänn Di mit OpenID aamäldsch.',
+	'openid-hide-openid-label' => 'Versteck Dyyni OpenID uf Dyynere Benutzersyte, wänn Di mit OpenID aamäldsch.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Die Informatione mit em OpenID-Konto bi jedere Aamäldig aktualisiere', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs´, wu mit Dyym Benutzerkonto verbunde sin:',
 	'openid-urls-action' => 'Aktion',
@@ -3204,8 +3204,8 @@ OpenID מאפשר לכם להיכנס לחשבון במגוון אתרים מב�
 	'openiddelete-success' => 'ה־OpenID הוסר בהצלחה מחשבונכם.',
 	'openiddelete-error' => 'ארעה שגיאה בעת הסרת ה־OpenID מחשבונכם.',
 	'openid-openids-were-not-merged' => 'חשבונות OpenID לא מוזגו כאשר מוזג החשבון.',
-	'prefs-openid-show-openid' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.',
-	'openid-show-openid-label' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.',
+	'openid-hide-openid-label' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'עדכון המידע הבא מכרטיס ה־OpenID עם כל כניסה לחשבון:', # Fuzzy
 	'openid-associated-openids-label' => 'כתובות OpenID המשויכות לחשבונכם:',
 	'openid-urls-url' => 'כתובת URL',
@@ -3278,8 +3278,8 @@ $messages['hi'] = array(
 	'openidbadusername' => 'गलत सदस्यनाम दिया हैं।',
 	'openidclientonlytext' => 'इस विकिपर खोले गये खाते आप अन्य साइटपर ओपनID के तौर पर इस्तेमाल नहीं कर सकतें हैं।',
 	'openidloginlabel' => 'ओपनID URL',
-	'prefs-openid-show-openid' => 'अगर आपने ओपनID का इस्तेमाल करके लॉग इन किया हैं, तो आपके सदस्यपन्नेपर आपका ओपनID छुपायें।',
-	'openid-show-openid-label' => 'अगर आपने ओपनID का इस्तेमाल करके लॉग इन किया हैं, तो आपके सदस्यपन्नेपर आपका ओपनID छुपायें।', # Fuzzy
+	'prefs-openid-hide-openid' => 'अगर आपने ओपनID का इस्तेमाल करके लॉग इन किया हैं, तो आपके सदस्यपन्नेपर आपका ओपनID छुपायें।',
+	'openid-hide-openid-label' => 'अगर आपने ओपनID का इस्तेमाल करके लॉग इन किया हैं, तो आपके सदस्यपन्नेपर आपका ओपनID छुपायें।', # Fuzzy
 	'openid-urls-url' => 'यू॰आर॰एल',
 	'openid-urls-action' => 'कार्य',
 	'openid-urls-delete' => 'हटाएँ',
@@ -3372,8 +3372,8 @@ Nećete se moći prijaviti bez OpenID.',
 Bez OpenId nećete se moći prijaviti.',
 	'openiddelete-success' => 'OpenID je uspješno uklonjen iz vašeg računa.',
 	'openiddelete-error' => 'Došlo je do pogreška pri uklanjanju OpenID iz Vašeg računa.',
-	'prefs-openid-show-openid' => 'Sakrij Vaš OpenID na Vašoj suradničkoj stranici, ako ste prijavljeni s OpenID.',
-	'openid-show-openid-label' => 'Sakrij Vaš OpenID na Vašoj suradničkoj stranici, ako ste prijavljeni s OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Sakrij Vaš OpenID na Vašoj suradničkoj stranici, ako ste prijavljeni s OpenID.',
+	'openid-hide-openid-label' => 'Sakrij Vaš OpenID na Vašoj suradničkoj stranici, ako ste prijavljeni s OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Ažuriraj sljedeće informacije iz OpenID identiteta svaki put kad se prijavim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-ovi povezani s Vašim računom:',
 	'openid-urls-action' => 'Radnja',
@@ -3472,12 +3472,12 @@ Ty njemóhł so bjez OpenID přizjewić.',
 	'openiddelete-success' => 'OpenID je so wuspěšnje z twojeho konta wotstronił.',
 	'openiddelete-error' => 'Při wotstronjenju OpenID z twojeho konto je zmylk wustupił.',
 	'openid-openids-were-not-merged' => 'Při zjednoćenju wužiwarskich kontow OpenID njejsu so zjednoćili.',
-	'prefs-openid-show-openid' => 'Twój OpenID na twojej wužiwarskej stronje schować, jeli so z OpenID přizjewješ.',
+	'prefs-openid-hide-openid' => 'Twój OpenID na twojej wužiwarskej stronje schować, jeli so z OpenID přizjewješ.',
 	'prefs-openid-userinfo-update-on-login' => 'Aktualizacija informacijow OpenID-wužiwarja',
 	'prefs-openid-associated-openids' => 'Twoje OpenID za přizjewjenje k {{GRAMMAR:datiw|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Dowěryhódne sydła',
 	'prefs-openid-local-identity' => 'Twój OpenID za přizjewjenje pola druhich sydłow',
-	'openid-show-openid-label' => 'Twój OpenID-URL na twojej wužiwarskej stronje schować',
+	'openid-hide-openid-label' => 'Twój OpenID-URL na twojej wužiwarskej stronje schować',
 	'openid-show-openid-url-on-userpage-always' => 'Twój OpenID so přeco na twojej wužiwarskej stronje pokazuje, hdyž ju wopytuješ.',
 	'openid-show-openid-url-on-userpage-never' => 'Twój OpenID so na twojej wužiwarskej stronje ženje pokazuje.',
 	'openid-userinfo-update-on-login-label' => 'Pola informacijow wužiwarskeho profila, kotrež so kóždy raz, hdyž so přizjewješ, aktualizuja:',
@@ -3601,8 +3601,8 @@ Nem tudnál bejelentkezni OpenID nélkül.',
 Nem tudnál bejelentkezni OpenID nélkül.',
 	'openiddelete-success' => 'Az OpenID sikeresen eltávolítva a felhasználói fiókodból.',
 	'openiddelete-error' => 'Hiba történt az OpenID felhasználói fiókodból való eltávolításakor.',
-	'prefs-openid-show-openid' => 'Az OpenID-d elrejtése a felhasználói lapodon, amikor OpenID-vel jelentkezel be.',
-	'openid-show-openid-label' => 'Az OpenID-d elrejtése a felhasználói lapodon, amikor OpenID-vel jelentkezel be.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Az OpenID-d elrejtése a felhasználói lapodon, amikor OpenID-vel jelentkezel be.',
+	'openid-hide-openid-label' => 'Az OpenID-d elrejtése a felhasználói lapodon, amikor OpenID-vel jelentkezel be.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'A következő információ frissítése az OpenID fiókom alapján minden bejelentkezéskor:', # Fuzzy
 	'openid-associated-openids-label' => 'A felhasználói fiókodhoz kapcsolt OpenID-k:',
 	'openid-urls-url' => 'URL',
@@ -3707,8 +3707,8 @@ Il esserea impossibile aperir un session sin OpenID.',
 	'openiddelete-success' => 'Le OpenID ha essite removite de tu conto con successo.',
 	'openiddelete-error' => 'Un error occurreva durante le remotion del OpenID de tu conto.',
 	'openid-openids-were-not-merged' => 'Solmente le contos de usator, non le OpenID(s), ha essite fusionate.',
-	'prefs-openid-show-openid' => 'Celar tu OpenID in tu pagina de usator, si tu aperi un session con OpenID.',
-	'openid-show-openid-label' => 'Celar tu OpenID in tu pagina de usator.',
+	'prefs-openid-hide-openid' => 'Celar tu OpenID in tu pagina de usator, si tu aperi un session con OpenID.',
+	'openid-hide-openid-label' => 'Celar tu OpenID in tu pagina de usator.',
 	'openid-userinfo-update-on-login-label' => 'Ecce le informationes de profilo que essera actualisate automaticamente ab le personage OpenID cata vice que tu aperi un session:',
 	'openid-associated-openids-label' => 'OpenIDs associate con tu conto:',
 	'openid-urls-action' => 'Action',
@@ -3822,8 +3822,8 @@ Anda tidak akan dapat masuk log tanpa OpenID.',
 Anda tidak akan dapat masuk log tanpa OpenID.',
 	'openiddelete-success' => 'OpenID telah dihapus dari akun Anda.',
 	'openiddelete-error' => 'Terjadi kesalahan saat berusaha menghapus OpenID dari akun Anda.',
-	'prefs-openid-show-openid' => 'Sembunyikan URL OpenID Anda di halaman pengguna Anda, jika Anda masuk log dengan OpenID.',
-	'openid-show-openid-label' => 'Sembunyikan URL OpenID Anda di halaman pengguna Anda, jika Anda masuk log dengan OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Sembunyikan URL OpenID Anda di halaman pengguna Anda, jika Anda masuk log dengan OpenID.',
+	'openid-hide-openid-label' => 'Sembunyikan URL OpenID Anda di halaman pengguna Anda, jika Anda masuk log dengan OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Mutakhirkan informasi dari persona OpenID berikut setiap kali saya masuk log:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID yang dihubungkan dengan akun Anda:',
 	'openid-urls-action' => 'Tindakan',
@@ -3947,9 +3947,9 @@ Non saresti in grado di accedere senza un OpenID.',
 	'openiddelete-success' => "L'OpenID è stato rimosso con successo dall'account.",
 	'openiddelete-error' => "Si è verificato un errore durante la rimozione dell'account OpenID.",
 	'openid-openids-were-not-merged' => 'Gli OpenID non sono uniti quando vengono uniti gli account utenti.',
-	'prefs-openid-show-openid' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
+	'prefs-openid-hide-openid' => 'Nascondi il tuo OpenID sulla tua pagina utente, se effettui il login con OpenID.',
 	'prefs-openid-trusted-sites' => 'Siti attendibili',
-	'openid-show-openid-label' => 'Nascondi il tuo OpenID sulla tua pagina utente.',
+	'openid-hide-openid-label' => 'Nascondi il tuo OpenID sulla tua pagina utente.',
 	'openid-show-openid-url-on-userpage-never' => 'Il tuo OpenID non è mai mostrato nella tua pagina utente.',
 	'openid-userinfo-update-on-login-label' => 'Informazioni del profilo utente che sono automaticamente aggiornate dalla persona OpenID a ogni accesso:',
 	'openid-associated-openids-label' => 'OpenID associati al proprio account:',
@@ -4084,12 +4084,12 @@ $messages['ja'] = array(
 	'openiddelete-success' => 'あなたのアカウントから OpenID を除去しました。',
 	'openiddelete-error' => 'あなたのアカウントから OpenID を除去する際にエラーが発生しました。',
 	'openid-openids-were-not-merged' => '利用者アカウントを統合する際に、OpenID は統合されませんでした。',
-	'prefs-openid-show-openid' => '利用者ページでの OpenID URL の表示',
+	'prefs-openid-hide-openid' => '利用者ページでの OpenID URL の表示',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID 利用者情報の更新',
 	'prefs-openid-associated-openids' => '{{SITENAME}}へのログインに使用する OpenID',
 	'prefs-openid-trusted-sites' => '信頼済みサイト',
 	'prefs-openid-local-identity' => '他のサイトへのログインに使用する OpenID',
-	'openid-show-openid-label' => 'OpenID を利用者ページに表示しない',
+	'openid-hide-openid-label' => 'OpenID を利用者ページに表示しない',
 	'openid-show-openid-url-on-userpage-always' => 'あなたの OpenID が利用者ページに常に表示されます。',
 	'openid-show-openid-url-on-userpage-never' => 'あなたの OpenID が利用者ページに表示されることはありません。',
 	'openid-userinfo-update-on-login-label' => 'ログインするたびに OpenID ペルソナの内容をもとに自動的に更新するプロフィール情報:',
@@ -4217,8 +4217,8 @@ $messages['ka'] = array(
 	'openiddelete-success' => 'OpenID წარმატებით წაიშალა თქვენი ანგარიშიდან.',
 	'openiddelete-error' => 'OpenID-ის თქვენი ანგარიშიდან წაშლისას მოხდა შეცდომა.',
 	'openid-openids-were-not-merged' => 'OpenID(-ები) არ გაერთიანდა ანგარიშების შერწყმისას.',
-	'prefs-openid-show-openid' => 'თქვენი მომხმარებლის გვერდზე OpenID-ის URL-ის დამალვა, თუ თქვენ შეხვედით OpenID-ის საშუალებით.',
-	'openid-show-openid-label' => 'თქვენი მომხმარებლის გვერდზე OpenID-ის URL-ის დამალვა.',
+	'prefs-openid-hide-openid' => 'თქვენი მომხმარებლის გვერდზე OpenID-ის URL-ის დამალვა, თუ თქვენ შეხვედით OpenID-ის საშუალებით.',
+	'openid-hide-openid-label' => 'თქვენი მომხმარებლის გვერდზე OpenID-ის URL-ის დამალვა.',
 	'openid-userinfo-update-on-login-label' => 'შემდეგი ინფორმაციის განახლება ჩემ შესახებ OpenID-ით ყოველ ჯერზე, როდესაც შევალ სისტემაში:', # Fuzzy
 	'openid-associated-openids-label' => 'თქვენ ანგარიშთან დაკავშირებული OpenID-ები:',
 	'openid-urls-url' => 'URL',
@@ -4297,8 +4297,8 @@ $messages['km'] = array(
 ប្រសិនបើអ្នកចង់់ប្រើ OpenID ដើម្បីចុះឈ្មោះចូលនាពេលអនាគត អ្នកអាច[[Special:OpenIDConvert|បម្លែងគណនីរបស់អ្នកដើម្បីប្រើ OpenID]]។", # Fuzzy
 	'openidnousername' => 'មិនមានអត្តនាមបានបញ្ជាក់ទេ។',
 	'openidbadusername' => 'ឈ្មោះមិនត្រឹមត្រូវត្រូវបានបញ្ជាក់',
-	'prefs-openid-show-openid' => 'អាសយដ្ឋាន URL នៃ OpenID របស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក',
-	'openid-show-openid-label' => 'លាក់OpenIDរបស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក ប្រសិនបើអ្នកកត់ឈ្មោះចូលដោយប្រើOpenID។', # Fuzzy
+	'prefs-openid-hide-openid' => 'អាសយដ្ឋាន URL នៃ OpenID របស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក',
+	'openid-hide-openid-label' => 'លាក់OpenIDរបស់អ្នកនៅលើទំព័រអ្នកប្រើប្រាស់របស់អ្នក ប្រសិនបើអ្នកកត់ឈ្មោះចូលដោយប្រើOpenID។', # Fuzzy
 );
 
 /** Kannada (ಕನ್ನಡ)
@@ -4411,12 +4411,12 @@ OpenID 없이 로그인 할 수 없습니다.',
 	'openiddelete-error' => '사용자 계정으로부터 OpenID 정보를 삭제하는 과정에 오류가 발생했습니다.',
 	'openid-openids-were-not-merged' => 'OpenID가 사용자 계정을 병합하는 동안 병합하지 못했습니다.',
 	'prefs-openid' => 'OpenID',
-	'prefs-openid-show-openid' => '사용자 문서에서 OpenID URL',
+	'prefs-openid-hide-openid' => '사용자 문서에서 OpenID URL',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID 사용자 정보 업데이트',
 	'prefs-openid-associated-openids' => '{{SITENAME}}에 로그인한 OpenID',
 	'prefs-openid-trusted-sites' => '신뢰하는 사이트',
 	'prefs-openid-local-identity' => '다른 사이트에 로그인한 OpenID',
-	'openid-show-openid-label' => '사용자 문서에 OpenID URL을 숨깁니다.',
+	'openid-hide-openid-label' => '사용자 문서에 OpenID URL을 숨깁니다.',
 	'openid-show-openid-url-on-userpage-always' => '사용자 문서를 방문할 때 내 OpenID를 사용자 문서에 항상 보여줍니다.',
 	'openid-show-openid-url-on-userpage-never' => '내 OpenID를 사용자 문서에 절대 보여주지 않습니다.',
 	'openid-userinfo-update-on-login-label' => '로그인할 때 매번 OpenID 페르소나에서 자동으로 업데이트할 사용자 프로필 정보 필드:',
@@ -4565,8 +4565,8 @@ Ohne <i lang="en">OpenID</i> künnts De nit mieh enlogge.',
 	'openiddelete-success' => 'Di <i lang="en">OpenID</i> es jäz nit mieh met Dinge Aanmeldung verbonge.',
 	'openiddelete-error' => 'Et es ene Fähler opjetrodde, wi mer di <i lang="en">OpenID</i> vun Dinge Aanmeldung fott nämme wullte.',
 	'prefs-openid' => '<i lang="en">OpenID</i>',
-	'prefs-openid-show-openid' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.',
-	'openid-show-openid-label' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.',
+	'openid-hide-openid-label' => 'Versteich Ding OpenID op Dinge Metmaacher-Sigg, wann de met <span lang="en">OpenID</span> enloggs.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Donn jedesmol wann_esch hee enloggen, di Enfomazjuhne övver mesch heh noh vun <i lang="en">OpenID</i> op der neuste Stand bränge:', # Fuzzy
 	'openid-associated-openids-label' => 'De <i lang="en">OpenIDs</i>, di jez met Dinge Aanmeldung heh verbonge sin:',
 	'openid-urls-url' => 'de URL',
@@ -4675,9 +4675,9 @@ Dir kéint Iech net ouni eng OpenID aloggen.',
 Dir kéint Iech ouni OpenID net aloggen.',
 	'openiddelete-success' => "D'OpenID gouf vun Ärem Benotzerkont ewechgeholl",
 	'openiddelete-error' => 'Beim Ewehhuele vun der OpenID vun Ärem Benotzerkont ass e Feeler geschitt.',
-	'prefs-openid-show-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann Dir Iech mat OpenID aloggt.',
+	'prefs-openid-hide-openid' => 'Verstoppt Är OpenID op ärer Benotzersäit, wann Dir Iech mat OpenID aloggt.',
 	'prefs-openid-trusted-sites' => 'Siten, deenen Dir traut',
-	'openid-show-openid-label' => 'Verstoppt Är OpenID URL op ärer Benotzersäit.',
+	'openid-hide-openid-label' => 'Verstoppt Är OpenID URL op ärer Benotzersäit.',
 	'openid-userinfo-update-on-login-label' => "D'Informatioune vum Benotzerprofil vun dësem OpenID-Kont ginn all Kéier aktualiséiert wann Dir Iech aloggt:",
 	'openid-associated-openids-label' => 'OpendIden déi mat Ärem Benotzerkont asoziéiert sinn',
 	'openid-urls-url' => 'URL',
@@ -4851,12 +4851,12 @@ OpenID ви овозможува да се најавувате на многу 
 	'openiddelete-success' => 'Овој OpenID е успешно отстранет од вашата сметка.',
 	'openiddelete-error' => 'Настана грешка при отстранувањето на OpenID од вашата сметка.',
 	'openid-openids-were-not-merged' => 'OpenID-јата не се споија при спојувањето на корисничките сметки.',
-	'prefs-openid-show-openid' => 'Скријте ја вашата OpenID URL адреса на вашата корисничката страница, ако се најавувате со OpenID.',
+	'prefs-openid-hide-openid' => 'Скријте ја вашата OpenID URL адреса на вашата корисничката страница, ако се најавувате со OpenID.',
 	'prefs-openid-userinfo-update-on-login' => 'Поднова на информациите на корисник на OpenID',
 	'prefs-openid-associated-openids' => 'Вашите OpenID-сметки за најавување на {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Мрежни места од доверба',
 	'prefs-openid-local-identity' => 'Вашиот OpenID за најава на други мрежни места',
-	'openid-show-openid-label' => 'Скриј ја адресата на мојот OpenID на корисничката страница.',
+	'openid-hide-openid-label' => 'Скриј ја адресата на мојот OpenID на корисничката страница.',
 	'openid-show-openid-url-on-userpage-always' => 'Вашиот OpenID секогаш стои на корисничката страница кога ќе ја посетите.',
 	'openid-show-openid-url-on-userpage-never' => 'Вашиот OpenID никогаш не се прикажува на корисничката страница.',
 	'openid-userinfo-update-on-login-label' => 'Полињата за профилни информации што автоматски се подновуваат од OpenID-сметката секојпат кога ќе се најавите:',
@@ -5025,8 +5025,8 @@ $messages['mr'] = array(
 ; [//dev.aol.com/aol-and-63-million-openids एओएल] : जर तुमच्याकडे [//www.aol.com/ एओएल]चे खाते असेल, जसे की [//www.aim.com/ एम] खाते, तुम्ही {{SITENAME}} वर वरील पृष्ठपेटीमध्ये एओएल ने दिलेल्या ओपनआयडीचा वापर करून प्रवेश करू शकता. एओएल ओपनआयडी URL ची रुपरेषा ''<nowiki>//openid.aol.com/तुमचेसदस्यनाव</nowiki>'' अशी आहे. तुमच्या सदस्यनावात अंतर (space) चालणार नाही.
 ; [//bloggerindraft.blogspot.com/2008/01/new-feature-blogger-as-openid-provider.html ब्लॉगर], [//faq.wordpress.com/2007/03/06/what-is-openid/ वर्डप्रेस.कॉम], [//www.livejournal.com/openid/about.bml लाईव्ह जर्नल], [//bradfitz.vox.com/library/post/openid-for-vox.html वॉक्स] : जर यापैकी कुठेही तुमचा ब्लॉग असेल, तर वरील पृष्ठपेटीमध्ये तुमच्या ब्लॉगची URL भरा. उदाहरणार्थ, ''<nowiki>//yourusername.blogspot.com/</nowiki>'', ''<nowiki>//yourusername.wordpress.com/</nowiki>'', ''<nowiki>//yourusername.livejournal.com/</nowiki>'', किंवा ''<nowiki>//yourusername.vox.com/</nowiki>''.", # Fuzzy
 	'openiddelete-button' => 'खात्री करा',
-	'prefs-openid-show-openid' => 'जर तुम्ही ओपनID वापरून प्रवेश केला, तर तुमच्या सदस्यपानावरील तुमचा ओपनID लपवा.',
-	'openid-show-openid-label' => 'जर तुम्ही ओपनID वापरून प्रवेश केला, तर तुमच्या सदस्यपानावरील तुमचा ओपनID लपवा.', # Fuzzy
+	'prefs-openid-hide-openid' => 'जर तुम्ही ओपनID वापरून प्रवेश केला, तर तुमच्या सदस्यपानावरील तुमचा ओपनID लपवा.',
+	'openid-hide-openid-label' => 'जर तुम्ही ओपनID वापरून प्रवेश केला, तर तुमच्या सदस्यपानावरील तुमचा ओपनID लपवा.', # Fuzzy
 	'openid-urls-delete' => 'वगळा',
 );
 
@@ -5125,12 +5125,12 @@ Anda tidak boleh log masuk tanpa OpenID.',
 	'openiddelete-success' => 'OpenID ini berjaya dibuang dari akaun anda.',
 	'openiddelete-error' => 'Ralat berlaku ketika membuang OpenID ini dari akaun anda.',
 	'openid-openids-were-not-merged' => 'OpenID tidak digabungkan sekali ketika akaun-akaun pengguna digabungkan.',
-	'prefs-openid-show-openid' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.',
+	'prefs-openid-hide-openid' => 'Sorokkan URL OpenID anda pada laman pengguna anda, jika anda log masuk dengan OpenID.',
 	'prefs-openid-userinfo-update-on-login' => 'Kemaskini maklumat pengguna OpenID',
 	'prefs-openid-associated-openids' => 'OpenID anda untuk log masuk ke {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Tapak-tapak yang dipercayai',
 	'prefs-openid-local-identity' => 'OpenID anda untuk log masuk ke tapak-tapak lain',
-	'openid-show-openid-label' => 'Sorokkan URL OpenID anda pada laman pengguna anda.',
+	'openid-hide-openid-label' => 'Sorokkan URL OpenID anda pada laman pengguna anda.',
 	'openid-show-openid-url-on-userpage-always' => 'OpenID anda sentiasa dipaparkan pada halaman pengguna anda apabila anda mengunjunginya.',
 	'openid-show-openid-url-on-userpage-never' => 'OpenID anda tidak sesekali dipaparkn pada halaman pengguna anda.',
 	'openid-userinfo-update-on-login-label' => 'Medan-medan maklumat profil pengguna yang akan dikemaskinikan secara automatik dari persona OpenID setia kali anda log masuk:',
@@ -5305,8 +5305,8 @@ Du ville ikke kunne logge inn uten en OpenID.',
 Du ville ikke kunne logge inn uten en OpenID.',
 	'openiddelete-success' => 'OpenID-en har blitt fjernet fra din konto.',
 	'openiddelete-error' => 'En feil oppsto i prosessen med å fjerne OpenID-en fra din konto.',
-	'prefs-openid-show-openid' => 'Skjul OpenID på brukersiden din om du logger inn med en.',
-	'openid-show-openid-label' => 'Skjul OpenID på brukersiden din om du logger inn med en.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Skjul OpenID på brukersiden din om du logger inn med en.',
+	'openid-hide-openid-label' => 'Skjul OpenID på brukersiden din om du logger inn med en.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Oppdater den følgende informasjonen fra OpenID-persona hver gang jeg logger inn:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-er knyttet til din brukerkonto:',
 	'openid-urls-action' => 'Handling',
@@ -5443,12 +5443,12 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openiddelete-success' => 'De OpenID is verwijderd uit uw gebruiker.',
 	'openiddelete-error' => 'Er is een fout opgetreden tijdens het verwijderen van de OpenID uit uw gebruiker.',
 	'openid-openids-were-not-merged' => "Bij het samenvoegen van de gebruikers zijn een of meer OpenID's niet samengevoegd.",
-	'prefs-openid-show-openid' => 'OpenID-URL op uw gebruikerspagina weergeven',
+	'prefs-openid-hide-openid' => 'OpenID-URL op uw gebruikerspagina weergeven',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID gebruikersinformatie bewerken',
 	'prefs-openid-associated-openids' => "Uw OpenID's om aan te melden bij {{SITENAME}}",
 	'prefs-openid-trusted-sites' => 'Vertrouwde sites',
 	'prefs-openid-local-identity' => 'Uw OpenID voor aanmelden bij andere sites',
-	'openid-show-openid-label' => 'Uw OpenID-URL verbergen op uw gebruikerspagina.',
+	'openid-hide-openid-label' => 'Uw OpenID-URL verbergen op uw gebruikerspagina.',
 	'openid-show-openid-url-on-userpage-always' => 'Uw OpenID wordt altijd weergegeven op uw gebruikerspagina als u die bezoekt.',
 	'openid-show-openid-url-on-userpage-never' => 'Uw OpenID wordt nooit weergegeven op uw gebruikerspagina.',
 	'openid-userinfo-update-on-login-label' => 'Velden van uw gebruikersprofiel die iedere keer dat u aanmeldt worden bijgewerkt vanuit uw OpenID-persona:',
@@ -5570,8 +5570,8 @@ Du ville ikkje ha kunna logga inn utan ein OpenID.',
 Du ville ikkje ha kunna logga inn utan ein OpenID.',
 	'openiddelete-success' => 'OpenID har vorte fjerna frå kontoen din',
 	'openiddelete-error' => 'Ein feil oppstod i prosessen med å fjerna OpenID frå kontoen din.',
-	'prefs-openid-show-openid' => 'Gøym OpenID på brukarsida di om du loggar inn med ein.',
-	'openid-show-openid-label' => 'Gøym OpenID på brukarsida di om du loggar inn med ein.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Gøym OpenID på brukarsida di om du loggar inn med ein.',
+	'openid-hide-openid-label' => 'Gøym OpenID på brukarsida di om du loggar inn med ein.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Oppdatér den fylgjande informasjonen frå OpenID-persona kvar gong eg loggar inn', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID-ar knytte til brukarkontoen din:',
 	'openid-urls-action' => 'Handling',
@@ -5656,8 +5656,8 @@ Vos poiretz pas pus connectar amb aquesta OpenID.",
 	'openiddelete-button' => 'Confirmar',
 	'openiddelete-success' => "L'OpenID es estada suprimida amb succès de vòstre compte.",
 	'openiddelete-error' => "Una error es arribada pendent la supression de l'OpenID de vòstre compte.",
-	'prefs-openid-show-openid' => "Amaga vòstra OpenID sus vòstra pagina d'utilizaire, se vos connectaz amb OpenID.",
-	'openid-show-openid-label' => "Amaga vòstra OpenID sus vòstra pagina d'utilizaire, se vos connectaz amb OpenID.", # Fuzzy
+	'prefs-openid-hide-openid' => "Amaga vòstra OpenID sus vòstra pagina d'utilizaire, se vos connectaz amb OpenID.",
+	'openid-hide-openid-label' => "Amaga vòstra OpenID sus vòstra pagina d'utilizaire, se vos connectaz amb OpenID.", # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Metre a jorn las donadas seguentas dempuèi OpenID a cada còp que me connecti :', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associadas amb vòstre compte :',
 	'openid-urls-action' => 'Accion',
@@ -5796,9 +5796,9 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openiddelete-success' => 'OpenID został pomyślnie usunięty z Twojego konta.',
 	'openiddelete-error' => 'Wystąpił błąd podczas usuwania powiązania Twojego konta z OpenID.',
 	'openid-openids-were-not-merged' => 'OpenID nie zostały połączone w trakcie scalania kont użytkownika.',
-	'prefs-openid-show-openid' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.',
+	'prefs-openid-hide-openid' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.',
 	'prefs-openid-trusted-sites' => 'Zaufane witryny',
-	'openid-show-openid-label' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.', # Fuzzy
+	'openid-hide-openid-label' => 'Ukryj mój adres URL OpenID na stronie użytkownika, jeśli zaloguję się za pomocą OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Aktualizuj następujące informacje o mnie z OpenID przy każdym logowaniu', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID powiązane z Twoim kontem:',
 	'openid-urls-url' => 'URL',
@@ -5913,8 +5913,8 @@ A podrà pa intré sensa n'OpenID.",
 	'openiddelete-success' => "L'OpenID a l'é stàit gavà da bin da tò cont.",
 	'openiddelete-error' => "A l'é capitaje n'eror an gavand l'OpenID da tò cont.",
 	'openid-openids-were-not-merged' => "J'OpenID a son pa stàit unì cand a son unisse ij cont d'utent.",
-	'prefs-openid-show-openid' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.",
-	'openid-show-openid-label' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.", # Fuzzy
+	'prefs-openid-hide-openid' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.",
+	'openid-hide-openid-label' => "Stërmé soa adrëssa OpenID dzora a soa pàgina utent, s'a intra con openID.", # Fuzzy
 	'openid-userinfo-update-on-login-label' => "Modifiché j'anformassion përsonaj sì-sota OpenID minca vira ch'i intro:", # Fuzzy
 	'openid-associated-openids-label' => 'OpenID associà con tò cont:',
 	'openid-urls-url' => "Adrëssa an sl'aragnà",
@@ -6060,8 +6060,8 @@ Sem um OpenID não se poderia autenticar.',
 	'openiddelete-success' => 'O OpenID foi removido da sua conta com sucesso.',
 	'openiddelete-error' => 'Ocorreu um erro ao remover o OpenID da sua conta.',
 	'openid-openids-were-not-merged' => 'Os OpenIDs não foram fundidos ao fundir as contas.',
-	'prefs-openid-show-openid' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.',
-	'openid-show-openid-label' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.',
+	'openid-hide-openid-label' => 'Esconder o seu OpenID na sua página de utilizador, se se autenticar com OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Actualizar a seguinte informação a partir do meu OpenID de cada vez que me autentico:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associados à sua conta:',
 	'openid-urls-action' => 'Ação',
@@ -6166,8 +6166,8 @@ Você ficaria impossibilitado de entrar na sua conta sem um OpenID.',
 Você não poderia entrar sem um OpenID.',
 	'openiddelete-success' => 'O OpenID foi removido de sua conta com sucesso.',
 	'openiddelete-error' => 'Ocorreu um erro enquanto removia o OpenID de sua conta.',
-	'prefs-openid-show-openid' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
-	'openid-show-openid-label' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.',
+	'openid-hide-openid-label' => 'Ocultar o seu URL de OpenID da sua página de usuário ao se autenticar com OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Atualizar a seguinte informação a partir da minha "persona" OpenID cada vez que me autentico', # Fuzzy
 	'openid-associated-openids-label' => 'OpenIDs associadas à sua conta:',
 	'openid-urls-action' => 'Ação',
@@ -6405,10 +6405,10 @@ OpenID позволяет вам заходить на различные веб
 	'openiddelete-success' => 'OpenID успешно удалён из Вашей учётной записи.',
 	'openiddelete-error' => 'Произошла ошибка при удалении OpenID из Вашей учётной записи.',
 	'openid-openids-were-not-merged' => 'OpenID(s) не были объединены при слиянии учетных записей.',
-	'prefs-openid-show-openid' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
+	'prefs-openid-hide-openid' => 'Скрывать ваш OpenID на вашей странице участника, если вы вошли с помощью OpenID.',
 	'prefs-openid-trusted-sites' => 'Доверенные сайты',
 	'prefs-openid-local-identity' => 'Ваш OpenID для входа на другие сайты',
-	'openid-show-openid-label' => 'Скрывать ваш OpenID URL на вашей странице участника.',
+	'openid-hide-openid-label' => 'Скрывать ваш OpenID URL на вашей странице участника.',
 	'openid-show-openid-url-on-userpage-always' => 'Ваш OpenID всегда отображается на вашей странице пользователя, когда вы посещаете её.',
 	'openid-userinfo-update-on-login-label' => 'Поля пользовательского профиля, которые будут автоматически обновляться через OpenID каждый раз, когда я представляюсь системе:',
 	'openid-associated-openids-label' => 'OpenID, связанные с Вашей учётной записью:',
@@ -6516,8 +6516,8 @@ Ci sunnu assai [http://wiki.openid.net/Public_OpenID_providers Provider OpenID p
 ; [//openid.yahoo.com/ Yahoo!] : Si pussedi n'account cu Yahoo!, poi fari lu login a stu situ nzirennu lu tò OpenID Yahoo! ntô box currispunnenti. Li URL OpenID Yahoo! pussèdunu la furma ''<nowiki>https://me.yahoo.com/yourusername</nowiki>''.
 ; [//dev.aol.com/aol-and-63-million-openids AOL] : Si pussedi n'account cu [//www.aol.com/ AOL], comu a n'account [//www.aim.com/ AIM], poi fari lu login a {{SITENAME}} nzirennu lu tò OpenID AOL ntô box curripunnenti. Li URL OpenID AOL pussèdunu la furma ''<nowiki>//openid.aol.com/yourusername</nowiki>''. Lu tò nomu utenti avissi a èssiri tuttu paru 'n caràttiri nichi, senza spàzii.
 ; [//bloggerindraft.blogspot.com/2008/01/new-feature-blogger-as-openid-provider.html Blogger], [//faq.wordpress.com/2007/03/06/what-is-openid/ Wordpress.com], [//www.livejournal.com/openid/about.bml LiveJournal], [//bradfitz.vox.com/library/post/openid-for-vox.html Vox] : Si pussedi nu blog supr'a unu di sti siti, nzirisci l'URL dû blog ntô box currispunnenti. P'asèmpiu, ''<nowiki>//yourusername.blogspot.com/</nowiki>'', ''<nowiki>//yourusername.wordpress.com/</nowiki>'', ''<nowiki>//yourusername.livejournal.com/</nowiki>'', o ''<nowiki>//yourusername.vox.com/</nowiki>''.", # Fuzzy
-	'prefs-openid-show-openid' => "Ammuccia lu tò OpenID supr'a tò pàggina utenti, si fai lu login cu OpenID.",
-	'openid-show-openid-label' => "Ammuccia lu tò OpenID supr'a tò pàggina utenti, si fai lu login cu OpenID.", # Fuzzy
+	'prefs-openid-hide-openid' => "Ammuccia lu tò OpenID supr'a tò pàggina utenti, si fai lu login cu OpenID.",
+	'openid-hide-openid-label' => "Ammuccia lu tò OpenID supr'a tò pàggina utenti, si fai lu login cu OpenID.", # Fuzzy
 	'openid-urls-action' => 'Azzioni',
 	'openid-provider-label-google' => 'Accedi utilizzannu lu tò account Google',
 	'openid-provider-label-aol' => 'Nserisci lu tò screenname AOL',
@@ -6658,8 +6658,8 @@ Bez OpenID by ste sa nemohli prihlásiť.',
 Bez OpenID by ste sa nemohli prihlásiť.',
 	'openiddelete-success' => 'OpenID bolo úspešne odstránené z vášho účtu.',
 	'openiddelete-error' => 'Počas odstraňovania OpenIOD z vášho účtu sa vyskytla chyba.',
-	'prefs-openid-show-openid' => 'Nezobrazovať váš OpenID na vašej používateľskej stránke ak sa prihlasujete pomocou OpenID.',
-	'openid-show-openid-label' => 'Nezobrazovať váš OpenID na vašej používateľskej stránke ak sa prihlasujete pomocou OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Nezobrazovať váš OpenID na vašej používateľskej stránke ak sa prihlasujete pomocou OpenID.',
+	'openid-hide-openid-label' => 'Nezobrazovať váš OpenID na vašej používateľskej stránke ak sa prihlasujete pomocou OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Aktualizovať nasledovné informácie z OpenID identity vždy, keď sa prihlásim:', # Fuzzy
 	'openid-associated-openids-label' => 'OpenID asociované s vašim účtom:',
 	'openid-urls-action' => 'Operácia',
@@ -6759,8 +6759,8 @@ Brez OpenID se ne boste mogli prijaviti.',
 	'openiddelete-success' => 'OpenID je bil uspešno odstranjen iz vašega računa.',
 	'openiddelete-error' => 'Pri odstranjevanju OpenID iz vašega računa je prišlo do napake.',
 	'openid-openids-were-not-merged' => 'OpenID(-ji) med združevanjem uporabniških računov niso bili združeni.',
-	'prefs-openid-show-openid' => 'Skrijte svoj URL OpenID na svoji uporabniški strani, če se prijavite z OpenID.',
-	'openid-show-openid-label' => 'Skrijte svoj URL OpenID na svoji uporabniški strani.',
+	'prefs-openid-hide-openid' => 'Skrijte svoj URL OpenID na svoji uporabniški strani, če se prijavite z OpenID.',
+	'openid-hide-openid-label' => 'Skrijte svoj URL OpenID na svoji uporabniški strani.',
 	'openid-userinfo-update-on-login-label' => 'Polja informacij profila osebe, ki bodo samodejno posodobljena iz osebe Open ID vsakič, ko se prijavite:',
 	'openid-associated-openids-label' => 'OpenID-ji, povezani z vašim računom:',
 	'openid-urls-url' => 'URL',
@@ -6848,8 +6848,8 @@ $messages['sr-ec'] = array(
 	'openidupdateuserinfo' => 'Ажурирај моје личне податке:',
 	'openiddelete-button' => 'Потврди',
 	'prefs-openid' => 'OpenID',
-	'prefs-openid-show-openid' => 'Сакријте своју адресу OpenID-а са корисничке странице ако се с њим пријављујете.',
-	'openid-show-openid-label' => 'Сакријте своју адресу OpenID-а са корисничке странице ако се с њим пријављујете.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Сакријте своју адресу OpenID-а са корисничке странице ако се с њим пријављујете.',
+	'openid-hide-openid-label' => 'Сакријте своју адресу OpenID-а са корисничке странице ако се с њим пријављујете.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Ажурирај следеће податке OpenID-а сваки пут када се пријавим:', # Fuzzy
 	'openid-urls-url' => 'Адреса',
 	'openid-urls-action' => 'Радња',
@@ -6910,8 +6910,8 @@ Možete da izaberete jednu od opcija ispod.',
 	'openidupdateuserinfo' => 'Aktualizuj moje lične podatke:',
 	'openiddelete-button' => 'Potvrdi',
 	'prefs-openid' => 'OpenID',
-	'prefs-openid-show-openid' => 'Sakrijte svoj OpenID URL sa korisničke strane, ako se sa njim logujete.',
-	'openid-show-openid-label' => 'Sakrijte svoj OpenID URL sa korisničke strane, ako se sa njim logujete.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Sakrijte svoj OpenID URL sa korisničke strane, ako se sa njim logujete.',
+	'openid-hide-openid-label' => 'Sakrijte svoj OpenID URL sa korisničke strane, ako se sa njim logujete.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Aktualizuj sledeće informacije OpenID identiteta svaki put kad se ulogujem:', # Fuzzy
 	'openid-urls-url' => 'Adresa',
 	'openid-urls-action' => 'Radnja',
@@ -6990,8 +6990,8 @@ Dät rakt fuul [http://wiki.openid.net/Public_OpenID_providers eepentelke OpenID
 	'openiddelete-button' => 'Bestäätigje',
 	'openiddelete-success' => 'Ju OpenID wuud mäd Ärfoulch fon din Benutserkonto wächhoald.',
 	'openiddelete-error' => 'Bie dät Wächhoaljen fon ju OpenID fon din Benutserkonto is n Failer aptreeden.',
-	'prefs-openid-show-openid' => 'Fersteet dien OpenID ap dien Benutsersiede, wan du die mäd OpenID anmäldest.',
-	'openid-show-openid-label' => 'Fersteet dien OpenID ap dien Benutsersiede, wan du die mäd OpenID anmäldest.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Fersteet dien OpenID ap dien Benutsersiede, wan du die mäd OpenID anmäldest.',
+	'openid-hide-openid-label' => 'Fersteet dien OpenID ap dien Benutsersiede, wan du die mäd OpenID anmäldest.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Ju foulgjende Information fon dät OpenID-Konto bie älke Login aktualisierje', # Fuzzy
 	'openid-urls-action' => 'Aktion',
 	'openid-urls-delete' => 'Läskje',
@@ -7110,11 +7110,11 @@ Du skulle inte kunna logga in utan ett OpenID.',
 	'openiddelete-success' => 'OpenID-kopplingen har tagits bort från ditt konto.',
 	'openiddelete-error' => 'Ett fel uppstod när OpenID-kopplingen skulle tas bort från ditt konto.',
 	'openid-openids-were-not-merged' => "Eventuella OpenID:n som varit kopplade till de sammanslagna kontona har ''inte'' slagits samman.",
-	'prefs-openid-show-openid' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
+	'prefs-openid-hide-openid' => 'Dölj OpenID-URL:en på din användarsida, om du loggar in med OpenID.',
 	'prefs-openid-associated-openids' => 'Dina OpenIDs för att logga in på {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Betrodda sidor',
 	'prefs-openid-local-identity' => 'Ditt OpenID för att logga in på andra sidor',
-	'openid-show-openid-label' => 'Dölj OpenID-adressen på din användarsida.',
+	'openid-hide-openid-label' => 'Dölj OpenID-adressen på din användarsida.',
 	'openid-show-openid-url-on-userpage-always' => 'Ditt OpenID visas alltid på din användarsida när du besöker den.',
 	'openid-show-openid-url-on-userpage-never' => 'Ditt OpenID visas aldrig på din användarsida.',
 	'openid-userinfo-update-on-login-label' => 'Informationsfälten på användarprofilen som kommer att uppdateras automatiskt från OpenID-profilen varje gång du loggar in:',
@@ -7241,8 +7241,8 @@ $messages['te'] = array(
 	'openiddelete-button' => 'నిర్ధారించు',
 	'openiddelete-success' => 'మీ ఖాతా నుండి ఆ ఓపెన్ఐడీని విజయవంతంగా తొలగించాం.',
 	'openiddelete-error' => 'మీ ఖాతా నుండి ఓపెన్ఐడీని తొలగించడంలో పొరపాటు జరిగింది.',
-	'prefs-openid-show-openid' => 'నేను ఓపెన్ఐడీతో ప్రవేశిస్తే, నా ఓపెన్ఐడీ చిరునామాని నా వాడుకరి పేజీలో కనబడకుండా దాచు.',
-	'openid-show-openid-label' => 'నేను ఓపెన్ఐడీతో ప్రవేశిస్తే, నా ఓపెన్ఐడీ చిరునామాని నా వాడుకరి పేజీలో కనబడకుండా దాచు.', # Fuzzy
+	'prefs-openid-hide-openid' => 'నేను ఓపెన్ఐడీతో ప్రవేశిస్తే, నా ఓపెన్ఐడీ చిరునామాని నా వాడుకరి పేజీలో కనబడకుండా దాచు.',
+	'openid-hide-openid-label' => 'నేను ఓపెన్ఐడీతో ప్రవేశిస్తే, నా ఓపెన్ఐడీ చిరునామాని నా వాడుకరి పేజీలో కనబడకుండా దాచు.', # Fuzzy
 	'openid-associated-openids-label' => 'మీ ఖాతాతో సంధానమై ఉన్న ఓపెన్ఐడీలు:',
 	'openid-urls-action' => 'చర్య',
 	'openid-urls-delete' => 'తొలగించు',
@@ -7404,8 +7404,8 @@ Hindi ka maaaring makalagda na walang OpenID.',
 	'openiddelete-error' => 'Naganap ang isang kamalian habang tinatanggal ang OpenID mula sa iyong akawnt.',
 	'openid-openids-were-not-merged' => 'Hindi napagsanib ang (mga) OpenID noong pinagsasanib ang mga akawnt ng tagagamit.',
 	'prefs-openid' => 'OpenID',
-	'prefs-openid-show-openid' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.',
-	'openid-show-openid-label' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.',
+	'openid-hide-openid-label' => 'Itago ang OpenID mo sa ibabaw ng iyong pahina ng tagagamit, kapag lumagda ka sa pamamagitan ng OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Isapanahon ang sumusunod na kabatiran mula sa katauhang pang-OpenID sa bawat pagkakataong lalagda akong papasok:', # Fuzzy
 	'openid-associated-openids-label' => 'Mga openID na may kaugnayan sa akawnt mo:',
 	'openid-urls-url' => 'URL',
@@ -7513,8 +7513,8 @@ OpenID olmadan giriş yapamazsınız.",
 OpenID olmadan giriş yapamazsınız.",
 	'openiddelete-success' => 'OpenID hesabınızdan başarıyla kaldırıldı.',
 	'openiddelete-error' => 'OpenID hesabınızdan çıkarılırken bir hata oluştu.',
-	'prefs-openid-show-openid' => 'Eğer OpenID ile giriş yaparsanız, kullanıcı sayfanızda OpenID URLnizi gizle.',
-	'openid-show-openid-label' => 'Eğer OpenID ile giriş yaparsanız, kullanıcı sayfanızda OpenID URLnizi gizle.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Eğer OpenID ile giriş yaparsanız, kullanıcı sayfanızda OpenID URLnizi gizle.',
+	'openid-hide-openid-label' => 'Eğer OpenID ile giriş yaparsanız, kullanıcı sayfanızda OpenID URLnizi gizle.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => 'Her oturum açışımda OpenID karakterinden aşağıdaki bilgileri güncelle:', # Fuzzy
 	'openid-associated-openids-label' => "Hesabınızla ilişkili OpenID'ler:",
 	'openid-urls-action' => 'Eylem',
@@ -7655,12 +7655,12 @@ OpenID дозволяє Вам заходити на різні сайти, не
 	'openiddelete-success' => 'OpenID успішно вилучений з Вашого облікового запису.',
 	'openiddelete-error' => 'Відбулася помилка при видаленні OpenID з Вашого облікового запису.',
 	'openid-openids-were-not-merged' => "OpenID не були об'єднані при об'єднанні облікових записів.",
-	'prefs-openid-show-openid' => 'Приховувати ваш OpenID на вашій сторінці користувача, якщо ви ввійшли з допомогою OpenID.',
+	'prefs-openid-hide-openid' => 'Приховувати ваш OpenID на вашій сторінці користувача, якщо ви ввійшли з допомогою OpenID.',
 	'prefs-openid-userinfo-update-on-login' => 'Оновлення інформації користувача OpenID',
 	'prefs-openid-associated-openids' => 'Ваші OpenID для входу на {{GRAMMAR:accusative|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Надійні сайти',
 	'prefs-openid-local-identity' => 'Ваш OpenID для входу на інші сайти',
-	'openid-show-openid-label' => 'Приховувати Ваше OpenID-посилання на Вашій сторінці користувача.',
+	'openid-hide-openid-label' => 'Приховувати Ваше OpenID-посилання на Вашій сторінці користувача.',
 	'openid-show-openid-url-on-userpage-always' => 'Ваш OpenID завжди відображається на Вашій сторінці користувача під час відвідування.',
 	'openid-show-openid-url-on-userpage-never' => 'Ваш OpenID ніколи не відображається на Вашій сторінці користувача.',
 	'openid-userinfo-update-on-login-label' => 'Оновлювати наступну інформацію про мене через OpenID щораз, коли я представляюся системі:',
@@ -7795,8 +7795,8 @@ Ghe xe molti [//openid.net/get/ Provider OpenID], e te podaressi verghe zà un a
 	'openidupdateuserinfo' => 'Ajorna le me informassion personài', # Fuzzy
 	'openiddelete' => 'Scancela OpenID',
 	'openiddelete-button' => 'Va ben',
-	'prefs-openid-show-openid' => 'Scondi el to OpenID su la to pàxena utente, se te fè el login con OpenID.',
-	'openid-show-openid-label' => 'Scondi el to OpenID su la to pàxena utente, se te fè el login con OpenID.', # Fuzzy
+	'prefs-openid-hide-openid' => 'Scondi el to OpenID su la to pàxena utente, se te fè el login con OpenID.',
+	'openid-hide-openid-label' => 'Scondi el to OpenID su la to pàxena utente, se te fè el login con OpenID.', # Fuzzy
 	'openid-userinfo-update-on-login-label' => "Ajorna le seguenti informassion da l'utensa de OpenID ogni olta che me conéto:", # Fuzzy
 	'openid-urls-action' => 'Azion',
 	'openid-urls-delete' => 'Scancela',
@@ -7913,8 +7913,8 @@ Bạn sẽ không đăng nhập được dùng OpenID này.',
 	'openiddelete-success' => 'Đã dời OpenID thành công khỏi tài khoản của bạn.',
 	'openiddelete-error' => 'Đã gặp lỗi khi dời OpenID khỏi tài khoản của bạn.',
 	'openid-openids-were-not-merged' => 'Các OpenID không được hợp nhất lúc khi hợp nhất các tài khoản người dùng.',
-	'prefs-openid-show-openid' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
-	'openid-show-openid-label' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
+	'prefs-openid-hide-openid' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
+	'openid-hide-openid-label' => 'Ẩn địa chỉ OpenID của bạn khỏi trang cá nhân, nếu bạn đăng nhập bằng OpenID.',
 	'openid-userinfo-update-on-login-label' => 'Cập nhật thông tin cá nhân sau từ persona OpenID mỗi khi tôi đăng nhập:',
 	'openid-associated-openids-label' => 'Các OpenID được gắn vào tài khoản của bạn:',
 	'openid-urls-url' => 'URL',
@@ -8078,12 +8078,12 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
 	'openiddelete-success' => 'OpenID已被成功删除。',
 	'openiddelete-error' => '在移除你的OpenID的时候出现了一个错误。',
 	'openid-openids-were-not-merged' => '合并用户帐号时，OpenID 没有被合并。',
-	'prefs-openid-show-openid' => 'OpenID登录时，在用户页隐藏OpenID。',
+	'prefs-openid-hide-openid' => 'OpenID登录时，在用户页隐藏OpenID。',
 	'prefs-openid-userinfo-update-on-login' => 'OpenID 用户信息更新',
 	'prefs-openid-associated-openids' => '您登陆至{{SITENAME}}的OpenID',
 	'prefs-openid-trusted-sites' => '受信任的站点',
 	'prefs-openid-local-identity' => '您登陆至其他网站的OpenID',
-	'openid-show-openid-label' => '如果您用OpenID登录时，在用户页隐藏您的OpenID。',
+	'openid-hide-openid-label' => '如果您用OpenID登录时，在用户页隐藏您的OpenID。',
 	'openid-show-openid-url-on-userpage-always' => '您访问您的用户页时将会一直显示您的OpenID。',
 	'openid-show-openid-url-on-userpage-never' => '您的OpenID永远不会显示在您的用户页上。',
 	'openid-userinfo-update-on-login-label' => '每次登陆时都会从OpenID个人信息系统更新的用户信息栏：',
@@ -8221,8 +8221,8 @@ OpenID 可以讓您不必使用不同的密碼登錄不同的站點。
 	'openiddelete-success' => 'OpenID 已被成功刪除。',
 	'openiddelete-error' => '在移除你的 OpenID 的時候出現了一個錯誤。',
 	'openid-openids-were-not-merged' => '合并用戶帳號時，OpenID 沒有被合并。',
-	'prefs-openid-show-openid' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。',
-	'openid-show-openid-label' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。', # Fuzzy
+	'prefs-openid-hide-openid' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。',
+	'openid-hide-openid-label' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。', # Fuzzy
 	'openid-userinfo-update-on-login-label' => '每次登入時，都從 OpenID 的使用者資料中更新以下資料。', # Fuzzy
 	'openid-associated-openids-label' => '和你的帳號關聯的 OpenID：',
 	'openid-urls-action' => '動作',
