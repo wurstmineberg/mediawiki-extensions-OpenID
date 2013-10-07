@@ -1836,7 +1836,7 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'prefs-openid-associated-openids' => 'Mit deinem {{SITENAME}} Benutzerkonto verbundene OpenIDs:',
 	'prefs-openid-trusted-sites' => 'Websites, denen du vertraust',
 	'prefs-openid-local-identity' => 'Deine OpenID zur Anmeldung auf anderen Websites',
-	'openid-show-openid-label' => 'Deine OpenID-URL auf deiner Benutzerseite ausblenden.',
+	'openid-show-openid-url-on-userpage-user' => 'Die OpenID-URL auf deiner Benutzerseite anzeigen.',
 	'openid-show-openid-url-on-userpage-always' => 'Deine OpenID wird immer auf deiner Benutzerseite angezeigt, wenn du sie besuchst.',
 	'openid-show-openid-url-on-userpage-never' => 'Deine OpenID wird niemals auf deiner Benutzerseite angezeigt.',
 	'openid-userinfo-update-on-login-label' => 'Diese Benutzerprofilfelder werden vom OpenID-Konto jedes Mal automatisch aktualisiert, wenn du dich anmeldest:',
@@ -2678,7 +2678,7 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'prefs-openid-associated-openids' => 'Vos OpenIDs pour vous connecter à {{SITENAME}}',
 	'prefs-openid-trusted-sites' => 'Sites de confiance',
 	'prefs-openid-local-identity' => 'Votre OpenID pour vous connecter à d’autres sites',
-	'openid-show-openid-label' => 'Masquer l’URL de votre OpenID sur votre page utilisateur.',
+	'openid-show-openid-url-on-userpage-user' => 'Afficher votre URL d’OpenID sur votre page utilisateur.',
 	'openid-show-openid-url-on-userpage-always' => 'Votre OpenID est toujours affiché sur votre page utilisateur quand vous la visitez.',
 	'openid-show-openid-url-on-userpage-never' => 'Votre OpenID n’est jamais affiché sur votre page utilisateur.',
 	'openid-userinfo-update-on-login-label' => 'Champs d’information du profil utilisateur qui seront mis à jour automatiquement depuis votre personne OpenID chaque fois que vous vous connecterez:',
@@ -4302,6 +4302,7 @@ $messages['kn'] = array(
 /** Korean (한국어)
  * @author Devunt
  * @author Ficell
+ * @author Hym411
  * @author Kwj2772
  * @author happyday19c
  * @author 아라
@@ -4402,7 +4403,7 @@ OpenID 없이 로그인 할 수 없습니다.',
 	'prefs-openid-associated-openids' => '{{SITENAME}}에 로그인한 OpenID',
 	'prefs-openid-trusted-sites' => '신뢰하는 사이트',
 	'prefs-openid-local-identity' => '다른 사이트에 로그인한 OpenID',
-	'openid-show-openid-label' => '사용자 문서에 OpenID URL을 숨깁니다.',
+	'openid-show-openid-url-on-userpage-user' => '사용자 문서에 OpenID URL을 보여줍니다.',
 	'openid-show-openid-url-on-userpage-always' => '사용자 문서를 방문할 때 내 OpenID를 사용자 문서에 항상 보여줍니다.',
 	'openid-show-openid-url-on-userpage-never' => '내 OpenID를 사용자 문서에 절대 보여주지 않습니다.',
 	'openid-userinfo-update-on-login-label' => '로그인할 때 매번 OpenID 페르소나에서 자동으로 업데이트할 사용자 프로필 정보 필드:',
