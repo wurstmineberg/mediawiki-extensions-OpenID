@@ -1930,6 +1930,7 @@ Ohne OpenID könnten Sie sich nicht mehr anmelden.',
 
 /** Zazaki (Zazaki)
  * @author Erdemaslancan
+ * @author Gorizon
  * @author Mirzali
  */
 $messages['diq'] = array(
@@ -1944,6 +1945,7 @@ $messages['diq'] = array(
 	'openidchoosepassword' => 'Parola:',
 	'openidloginlabel' => 'OpenID URL',
 	'openiddelete-button' => 'Tesdiq',
+	'prefs-openid-show-openid' => 'Grey OPENID perda karberda şımad',
 	'openid-urls-url' => 'URL',
 	'openid-urls-action' => 'Kerdış',
 	'openid-urls-delete' => 'Bestere',
