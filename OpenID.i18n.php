@@ -699,6 +699,7 @@ $messages['an'] = array(
  * @author Meno25
  * @author Orango
  * @author OsamaK
+ * @author Uwe
  */
 $messages['ar'] = array(
 	'openid-desc' => 'سجل الدخول للويكي [//openid.net/ بهوية مفتوحة]، وسجل الدخول لمواقع الوب الأخرى التي تعترف بالهوية المفتوحة بحساب مستخدم ويكي',
@@ -752,8 +753,8 @@ $messages['ar'] = array(
 	'openidalreadyloggedin' => 'أنت مسجل الدخول بالفعل.',
 	'openidnousername' => 'لا اسم مستخدم تم تحديده.',
 	'openidbadusername' => 'اسم المستخدم المحدد سيء.',
-	'openidautosubmit' => 'هذه الصفحة تحتوي على استمارة ينبغي أن يتم إرسالها تلقائيا لو أنك لديك الجافاسكريبت مفعلة.
-لو لا، جرب زر "Continue".',
+	'openidautosubmit' => 'هذه الصفحة تحتوى على إستمارة ينبغى أن يتم إرسالها تلقائيا لو أن الجافاسكريبت مفعلة لديك.
+إن لم تكن، جرب زر "Continue".',
 	'openidclientonlytext' => 'لا يمكنك استخدام حسابات هذه الويكي كهوية مفتوحة على موقع آخر.',
 	'openidloginlabel' => 'مسار الهوية المفتوحة',
 	'openidlogininstructions' => '{{SITENAME}} تدعم معيار [//openid.net/ الهوية المفتوحة] للدخول الفردي بين مواقع الوب.
@@ -818,6 +819,7 @@ $messages['arc'] = array(
  * @author Dudi
  * @author Ghaly
  * @author Meno25
+ * @author Uwe
  */
 $messages['arz'] = array(
 	'openid-desc' => 'سجل الدخول للويكى [//openid.net/ بهوية مفتوحة]، وسجل الدخول لمواقع ويب أخرى تعرف الهوية المفتوحة بحساب مستخدم ويكي',
@@ -2430,6 +2432,7 @@ $messages['eu'] = array(
 
 /** Persian (فارسی)
  * @author Mjbmr
+ * @author Omidh
  */
 $messages['fa'] = array(
 	'openidoptional' => 'اختیاری',
