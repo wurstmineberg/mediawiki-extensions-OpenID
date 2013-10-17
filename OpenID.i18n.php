@@ -4602,7 +4602,7 @@ En optionaalt Passwuert fir de Benotzerkont kann an Ärem [[Special:Preferences#
 	'openidfullname' => 'Richtegen Numm',
 	'openidemail' => 'E-Mail-Adress',
 	'openidlanguage' => 'Sprooch',
-	'openidtimezone' => 'Zäitzone',
+	'openidtimezone' => 'Zäitzon',
 	'openidchooselegend' => 'Eraussiche vum Benotzernumm a vum Benotzerkont',
 	'openidchooseinstructions' => 'All Benotzer brauchen e Spëtznumm; Dir kënnt iech ee vun de Méiglechkeeten ënnendrënner auswielen.',
 	'openidchoosenick' => 'Äre Spëtznumm ($1)',
