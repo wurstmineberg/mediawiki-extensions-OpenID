@@ -2174,6 +2174,14 @@ $messages['el'] = array(
 	'openid-provider-label-other-username' => 'Εισαγωγή του δικού σας $1 ονόματος χρήστη',
 );
 
+/** British English (British English)
+ * @author Shirayuki
+ */
+$messages['en-gb'] = array(
+	'openidlogininstructions-passwordloginallowed' => 'If you already have an account on {{SITENAME}}, you can [[Special:UserLogin|log in]] with your username and password as usual.
+To use OpenID in future, you can [[Special:OpenIDConvert|convert your account to OpenID]] after you have logged in normally.',
+);
+
 /** Esperanto (Esperanto)
  * @author ArnoLagrange
  * @author Lucas
