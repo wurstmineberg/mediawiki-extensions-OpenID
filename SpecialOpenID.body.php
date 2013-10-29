@@ -475,7 +475,7 @@ class SpecialOpenID extends SpecialPage {
 			array(
 				'uoi_user' => $user->getId(),
 				'uoi_openid' => $url,
-				'uoi_user_registration' => wfTimestamp( TS_MW )
+				'uoi_user_registration' => $dbw->timestamp()
 			),
 			__METHOD__
 		);

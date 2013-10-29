@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+3.43  20131103  bug 34844 and 34846
+                add uoi_user_registration for PostgreSQL
+                add uoi_user_registration field to the user_openid table
+                separate schema update functions for MySQL and PostgreSQL
+                bail explicitly on other databases
+                database-specific timestamp
 3.42  20131004  fixed a problem with label text on the preferences tab.
                 inverted internal hide/show OpenID property name,
                 but kept the default meaning "show OpenID on user pages"

@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.42 20131004' );
+define( 'MEDIAWIKI_OPENID_VERSION', '3.43 20131103' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -417,7 +417,6 @@ $wgHooks['BeforePageDisplay'][] = 'OpenIDHooks::onBeforePageDisplay';
 $wgHooks['ArticleViewHeader'][] = 'OpenIDHooks::onArticleViewHeader';
 $wgHooks['SpecialPage_initList'][] = 'OpenIDHooks::onSpecialPage_initList';
 $wgHooks['LoadExtensionSchemaUpdates'][] = 'OpenIDHooks::onLoadExtensionSchemaUpdates';
-
 $wgHooks['DeleteAccount'][] = 'OpenIDHooks::onDeleteAccount';
 $wgHooks['MergeAccountFromTo'][] = 'OpenIDHooks::onMergeAccountFromTo';
 

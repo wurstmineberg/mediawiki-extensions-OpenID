@@ -471,6 +471,21 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onLoadExtensionSchemaUpdates( $updater = null ) {
+		switch ( $updater->getDB()->getType() ) {
+		case "mysql":
+			return self::MySQLSchemaUpdates( $updater );
+		case "postgres":
+			return self::PostgreSQLSchemaUpdates( $updater );
+		default:
+			throw new MWException("OpenID does not support {$updater->getDB()->getType()} yet.");
+		}
+	}
+
+	/**
+	 * @param $updater MysqlUpdater
+	 * @return bool
+	 */
+	public static function MySQLSchemaUpdates( $updater = null ) {
 		// >= 1.17 support
 		$updater->addExtensionTable( 'user_openid',
 			dirname( __FILE__ ) . '/patches/openid_table.sql' );
@@ -490,6 +505,22 @@ class OpenIDHooks {
 		# uoi_user_registration field was added in OpenID version 0.937
 		$updater->addExtensionField( 'user_openid', 'uoi_user_registration',
 			dirname( __FILE__ ) . '/patches/patch-add_uoi_user_registration.sql' );
+
+		return true;
+	}
+
+	/**
+	 * @param $updater PostgresUpdater
+	 * @return bool
+	 */
+	public static function PostgreSQLSchemaUpdates( $updater = null ) {
+		$base = dirname( __FILE__ ) . '/patches';
+		foreach ( array (
+			array( 'addTable', 'user_openid', $base . '/openid_table.pg.sql', true ),
+			array( 'addPgField', 'user_openid', 'uoi_user_registration', 'TIMESTAMPTZ' ),
+		) as $update ) {
+			$updater->addExtensionUpdate( $update );
+		}
 
 		return true;
 	}
