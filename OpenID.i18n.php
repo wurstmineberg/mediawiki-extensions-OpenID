@@ -1541,6 +1541,7 @@ podeu triar-ne un de les opcions a continuació.',
  * @author Умар
  */
 $messages['ce'] = array(
+	'openidpermission' => 'OpenID тӀекхачарна бакъона гӀалат',
 	'openidlanguage' => 'Мотт',
 	'openidchooseusername' => 'декъашхочун цӀе:',
 	'openidchoosepassword' => 'Пароль:',
@@ -6152,6 +6153,13 @@ Você não poderia entrar sem um OpenID.',
 	'openid-provider-label-other-username' => 'Introduza o seu nome de utilizador $1',
 );
 
+/** Quechua (Runa Simi)
+ * @author AlimanRuna
+ */
+$messages['qu'] = array(
+	'openiddelete-button' => 'Takyachiy',
+);
+
 /** Romanian (română)
  * @author Firilacroco
  * @author KlaudiuMihaila
@@ -6298,11 +6306,19 @@ $messages['ru'] = array(
 	'openid-identifier-page-text-user' => 'Эта страница является идентификатором пользователя «$1».',
 	'openid-identifier-page-text-different-user' => 'Эта страница является идентификатором пользователя с ID $1.',
 	'openid-identifier-page-text-no-such-local-openid' => 'Это недопустимый локальный идентификатор OpenID.',
+	'openid-server-identity-page-text' => 'Это техническая серверная страница OpenID для начала проверки подлинности OpenID.
+У этой страницы нет других предназначений.',
 	'openidxrds' => 'Файл Yadis',
 	'openidconvert' => 'Преобразователь OpenID',
 	'openiderror' => 'Ошибка проверки полномочий',
 	'openiderrortext' => 'Во время проверки адреса OpenID произошла ошибка.',
+	'openid-error-no-auth' => 'Произошла неопределенная ошибка ответа/запроса при проверке подлинности OpenID-адреса $1.',
+	'openid-error-server-response' => "Произошла ошибка при проверке OpenID-адреса $1.
+
+Ответ сервера: ''$2''",
 	'openid-error-request-forgery' => 'Произошла ошибка: обнаружен недопустимый токен.',
+	'openid-error-wrong-force-provider-setting' => 'Произошла внутренняя ошибка: было найдено неправильное значение URL-адреса для принудительно установленного поставщика «$1».',
+	'openid-error-openid-convert-not-allowed-forced-provider' => "Невозможно привязать дополнительные OpenID к вашей учётной записи, потому что вы можете использовать только ''«принудительно установленный»'' OpenID-провайдер «$1» для входа на этот сайт.",
 	'openidconfigerror' => 'Ошибка настройки OpenID',
 	'openidconfigerrortext' => 'Настройка хранилища OpenID для этой вики ошибочна.
 Пожалуйста, обратитесь к [[Special:ListUsers/sysop|администратору сайта]].',
@@ -6366,6 +6382,8 @@ OpenID позволяет вам заходить на различные веб
 
 Существует множество [//openid.net/get/ общедоступных провайдеров OpenID], возможно, вы уже имеете учётную запись OpenID на другом сайте.',
 	'openidlogininstructions-openidloginonly' => "{{SITENAME}} позволяет вам войти ''только'' с использованием OpenID.",
+	'openidlogininstructions-passwordloginallowed' => 'Если у вас уже есть учётная запись на {{SITENAME}}, вы можете, как обычно, [[Special:UserLogin|авторизоваться]] с помощью своего имени участника и пароля.
+Чтобы использовать OpenID в будущем, вы можете [[Special:OpenIDConvert|преобразовать учётную запись в OpenID]] после того, как вошли нормально.',
 	'openidupdateuserinfo' => 'Обновить мою личную информацию:',
 	'openiddelete' => 'Удалить OpenID',
 	'openiddelete-text' => 'Нажав на кнопку «{{int:openiddelete-button}}», Вы удалите OpenID $1 из своей учётной записи.
@@ -6385,6 +6403,7 @@ OpenID позволяет вам заходить на различные веб
 	'prefs-openid-local-identity' => 'Ваш OpenID для входа на другие сайты',
 	'openid-show-openid-url-on-userpage-user' => 'Показывать ваш OpenID URL на странице участника.',
 	'openid-show-openid-url-on-userpage-always' => 'Ваш OpenID всегда отображается на вашей странице пользователя, когда вы посещаете её.',
+	'openid-show-openid-url-on-userpage-never' => 'Ваш OpenID никогда не отображается на вашей странице участника.',
 	'openid-userinfo-update-on-login-label' => 'Поля пользовательского профиля, которые будут автоматически обновляться через OpenID каждый раз, когда я представляюсь системе:',
 	'openid-associated-openids-label' => 'OpenID, связанные с Вашей учётной записью:',
 	'openid-urls-action' => 'Действие',
@@ -6397,6 +6416,8 @@ OpenID позволяет вам заходить на различные веб
 	'openid-trusted-sites-delete-link-action-text' => 'Удалить',
 	'openid-trusted-sites-delete-all-link-action-text' => 'Удалить все доверенные сайты',
 	'openid-trusted-sites-delete-confirmation-page-title' => 'Удаление доверенных сайтов',
+	'openid-trusted-sites-delete-confirmation-question' => 'Нажав кнопку «{{int:openid-trusted-sites-delete-confirmation-button-text}}», вы удалите «$1» из списка сайтов, которым доверяете.',
+	'openid-trusted-sites-delete-all-confirmation-question' => 'Нажав кнопку «{{int:openid-trusted-sites-delete-confirmation-button-text}}», вы удалите из своего профиля все сайты, которым доверяете.',
 	'openid-trusted-sites-delete-confirmation-button-text' => 'Подтвердить',
 	'openid-trusted-sites-delete-confirmation-success-text' => '«$1» был успешно удален из списка сайтов, которым вы доверяете.',
 	'openid-trusted-sites-delete-all-confirmation-success-text' => 'Все сайты, которым вы ранее доверяли, были успешно удалены из вашего пользовательского профиля.',
@@ -6408,6 +6429,13 @@ OpenID позволяет вам заходить на различные веб
 	'openid-provider-label-aol' => 'Введите ваше имя в AOL',
 	'openid-provider-label-wmflabs' => 'Представиться, используя учётную запись Wmflabs',
 	'openid-provider-label-other-username' => 'Введите ваше имя участника $1',
+	'specialpages-group-openid' => 'Страницы обслуживания OpenID и информация о состоянии',
+	'right-openid-converter-access' => 'Может добавлять или преобразовывать свою учётную запись для использования OpenID',
+	'right-openid-dashboard-access' => 'Стандартный доступ к панели наблюдения OpenID',
+	'right-openid-dashboard-admin' => 'Администраторский доступ к панели наблюдения OpenID',
+	'action-openid-converter-access' => 'добавление или преобразование вашей учётной записи для использования удостоверений OpenID',
+	'action-openid-dashboard-access' => 'доступ к панели наблюдения OpenID',
+	'action-openid-dashboard-admin' => 'доступ к администраторской панели наблюдения OpenID',
 	'openid-dashboard-title' => 'панель OpenID',
 	'openid-dashboard-title-admin' => 'Панель OpenID (администратор)',
 	'openid-dashboard-introduction' => 'Текущие настройки расширения OpenID ([$1 помощь])',
