@@ -4637,11 +4637,11 @@ Wann net, da verich et mam Knäppche "Continue" (Weider).',
 	'openidclientonlytext' => 'Dir kënnt keng Benotzerkonten aus dëser Wiki als OpendIDen op anere Site benotzen.',
 	'openidloginlabel' => 'URL vun der OpenID',
 	'openidlogininstructions' => '{{SITENAME}} ënnerstëtzt den [//openid.net/ OpenID]-Standard fir eng eenheetlech Umeldung fir méi Websäiten.
-OpenID mellt Iech bäi ville verschiddene Websäiten un, ouni datt Dir fir jiddwer Säiten een anert Passwuert gebrauche musst.
+OpenID mellt Iech bei ville verschiddene Websäiten un, ouni datt Dir fir jiddwer Säiten een anert Passwuert gebrauche musst.
 (Méi Informatiounen fannt Dir am [//de.wikipedia.org/wiki/OpenID Wikipedia-Artikel iwwer OpenID].)
 
 
-Et gëtt vill [//openid.net/get/ OpenID-Provider] a méiglecherweis hutt Dir schonn e Benotzerkont mat aktivéierter OpenID bäi engem aneren Ubidder.',
+Et gëtt vill [//openid.net/get/ OpenID-Provider] a méiglecherweis hutt Dir schonn e Benotzerkont mat aktivéierter OpenID bei engem aneren Ubidder.',
 	'openidlogininstructions-openidloginonly' => 'Op {{SITENAME}} kann ee sech "nëmme" mat OpenID aloggen.',
 	'openidupdateuserinfo' => 'Meng perséinlech Informatiounen aktualiséieren:',
 	'openiddelete' => 'OpenID läschen',
@@ -5581,9 +5581,14 @@ Metetz-vos en rapòrt amb l’[[Special:ListUsers/sysop|administrator]].",
 	'openidfailure' => 'Fracàs de la verificacion',
 	'openidfailuretext' => 'La verificacion de l’adreça OpenID a fracassat. Messatge d’error : « $1 »',
 	'openidsuccess' => 'Verificacion capitada',
-	'openidsuccesstext' => 'Verificacion de l’adreça OpenID capitada.', # Fuzzy
+	'openidsuccesstext' => "'''La verificacion de l’adreça OpenID es reüssida e sètz identificat en tant qu'utilizaire $1.'''
+
+Vòstre OpenID es $2.
+
+Aqueste OpenID e d'autres opcionals pòdon èsser gerits dins l'[[Special:Preferences#mw-prefsection-openid|onglet OpenID]] de vòstras preferéncias.<br />
+Un senhal facultatiu de compte pòt èsser apondut dins vòstre [[Special:Preferences#mw-prefsection-personal|perfil d'utilizaire]].",
 	'openidusernameprefix' => 'Utilizaire OpenID',
-	'openidserverlogininstructions' => "Picatz vòstre senhal çaijós per vos connectar sus $3 coma utilizaire '''$2''' (pagina d'utilizaire $1).", # Fuzzy
+	'openidserverlogininstructions' => "$3 demanda qu'entretz vòstre senhal per vòstra pagina $1 utilizaire $2 (URL OpenID)",
 	'openidtrustinstructions' => 'Marcatz se desiratz partejar las donadas amb $1.',
 	'openidallowtrust' => "Autoriza $1 a far fisança a aqueste compte d'utilizaire.",
 	'openidnopolicy' => 'Lo site a pas indicat una politica de donadas personalas.',
@@ -5608,22 +5613,18 @@ Metetz-vos en rapòrt amb l’[[Special:ListUsers/sysop|administrator]].",
 	'openidconvertsuccesstext' => 'Avètz convertit amb succès vòstra OpenID cap a $1.',
 	'openid-convert-already-your-openid-text' => 'L’OpenID $1 es ja associat a vòstre compte.',
 	'openid-convert-other-users-openid-text' => "Aquò es quicòm d'autre qu'una OpenID.", # Fuzzy
-	'openidalreadyloggedin' => "'''Ja sètz connectat, $1 !'''
-
-Se desiratz utilizar vòstra OpenID per vos connectar ulteriorament, podètz [[Special:OpenIDConvert|convertir vòstre compte per utilizar OpenID]].", # Fuzzy
+	'openidalreadyloggedin' => 'Sètz ja connectat.',
 	'openidnousername' => 'Cap de nom d’utilizaire es pas estat indicat.',
 	'openidbadusername' => 'Un nom d’utilizaire marrit es estat indicat.',
 	'openidautosubmit' => "Aquesta pagina conten un formulari que poiriá èsser mandat automaticament s'avètz activat JavaScript.
 S’èra pas lo cas, ensajatz lo boton « Continue » (Contunhar).",
 	'openidclientonlytext' => 'Podètz pas utilizar de comptes dempuèi aqueste wiki en tant qu’OpenID sus d’autres sites.',
 	'openidloginlabel' => 'Adreça OpenID',
-	'openidlogininstructions' => "{{SITENAME}} supòrta lo format [//openid.net/ OpenID] estandard per una sola signatura entre de sites Internet.
+	'openidlogininstructions' => "{{SITENAME}} pren en carga la nòrma [//openid.net/ OpenID] per l'autentificacion entre de sites.
 OpenID vos permet de vos connectar sus mantun site diferent sens aver d'utilizar un senhal diferent per cadun d’entre eles.
-(Vejatz [//en.wikipedia.org/wiki/OpenID Wikipedia's OpenID article] per mai d'entresenhas.)
+(Vejatz [//fr.wikipedia.org/wiki/OpenID l'article de Wikipèdia] per mai d'entresenhas.)
 
-S'avètz ja un compte sus {{SITENAME}}, vos podètz [[Special:UserLogin|connectar]] amb vòstre nom d'utilizaire e son senhal coma de costuma. Per utilizar OpenID, a l’avenidor, podètz [[Special:OpenIDConvert|convertir vòstre compte en OpenID]] aprèp vos èsser connectat normalament.
-
-Existís mantun [http://wiki.openid.net/Public_OpenID_providers provesidor d'OpenID publicas], e podètz ja obténer un compte OpenID activat sus un autre servici.", # Fuzzy
+Existís mantun [//openid.net/get/ provesidor d'OpenID], e benlèu que podètz ja obténer un compte OpenID activat sus un autre servici.",
 	'openidupdateuserinfo' => 'Metre a jorn mas donadas personalas :',
 	'openiddelete' => "Suprimir l'OpenID",
 	'openiddelete-text' => "En clicant sul boton « {{int:openiddelete-button}} », suprimtz l'OpenID $1 de vòstre compte.
