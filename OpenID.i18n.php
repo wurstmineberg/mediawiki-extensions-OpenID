@@ -5612,7 +5612,7 @@ Un senhal facultatiu de compte pòt èsser apondut dins vòstre [[Special:Prefer
 	'openidconvertsuccess' => 'Convertit amb succès cap a OpenID',
 	'openidconvertsuccesstext' => 'Avètz convertit amb succès vòstra OpenID cap a $1.',
 	'openid-convert-already-your-openid-text' => 'L’OpenID $1 es ja associat a vòstre compte.',
-	'openid-convert-other-users-openid-text' => "Aquò es quicòm d'autre qu'una OpenID.", # Fuzzy
+	'openid-convert-other-users-openid-text' => '$1 es l’OpenID de qualqu’un mai. Podètz pas utilizar l’OpenID d’un autre utilizaire.',
 	'openidalreadyloggedin' => 'Sètz ja connectat.',
 	'openidnousername' => 'Cap de nom d’utilizaire es pas estat indicat.',
 	'openidbadusername' => 'Un nom d’utilizaire marrit es estat indicat.',
