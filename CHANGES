@@ -1,5 +1,45 @@
 CHANGES
 =======
+4.00  20131121  introducing OpenID::isAllowedMode()
+                deprecating $wgOpenIDConsumerAndAlsoProvider
+
+                depends on 9a362d64c86989837f9a0755abc7c5a78457ca78 MediaWiki
+                core https://gerrit.wikimedia.org/r/#/c/96029/ merged 2013-11-18
+
+                Add "provider only" mode
+
+                introducing new rights:
+                openid-create-account-with-openid
+                openid-login-with-openid
+                openid-login-without-openid
+
+                bug 46617: allowing sysops to always create accounts
+                In SpecialPages OpenID section, Sysops will always find a link
+                to create a new user account by mail
+
+                bug 54508: introducing $wgOpenIDMode which replaces
+                $wgOpenIDConsumerAndAlsoProvider and can have values
+                'consumer', 'provider', array( 'consumer', 'provider' ), false
+
+                bug 54507: When having a forced provider, disallow adding
+                (converting) further OpenIDs from non-allowed providers:
+                only allow to add the forced provider
+
+                hiding OpenID login links if these are not working
+                (consumer mode, or missing or empty list of providers,
+                or no forced provider)
+
+                hiding irrelevant sections in the OpenID preferences tab
+                (depending on OpenIDMode)
+
+                adding message texts for rights and actions
+
+                bug fix: correcting a permission check during account creation:
+                the check was previously (mistakenly) done for the user-to-be-created
+                instead checking the account creation right of account-creating user
+
+                when attaching an OpenID: adding a reset password link under
+                username/password in the name picker screen
 
 3.44  20131122  bug 54511 Let OpenIDServer show a meaningful error message in
                 case of untrusted trust root

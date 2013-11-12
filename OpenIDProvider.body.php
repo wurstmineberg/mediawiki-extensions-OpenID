@@ -139,24 +139,28 @@ class OpenIDProvider {
 
 		$ret = array();
 
-		foreach ( $wgOpenIDProviders as $providerName => $provider ) {
-			if ( isset( $provider['label'] ) ) {
-				// fixed, non-localized label string
-				$label = $provider['label'];
-			} elseif ( wfMessage( 'openid-provider-label-' . strtolower( $providerName ) )->exists() ) {
-					$label = wfMessage( 'openid-provider-label-' . strtolower( $providerName ) )->text();
-			} else {
+		if ( is_array( $wgOpenIDProviders ) ) {
+
+			foreach ( $wgOpenIDProviders as $providerName => $provider ) {
+				if ( isset( $provider['label'] ) ) {
+					// fixed, non-localized label string
+					$label = $provider['label'];
+				} elseif ( wfMessage( 'openid-provider-label-' . strtolower( $providerName ) )->exists() ) {
+						$label = wfMessage( 'openid-provider-label-' . strtolower( $providerName ) )->text();
+				} else {
 					$label = wfMessage( 'openid-provider-label-other-username', array( $providerName ) )->text();
+				}
+				$provider = new self( $providerName,
+					$provider['large-provider'] ? 'large' : 'small',
+					$label,
+					$provider['openid-url']
+				);
+				if ( $largeOrSmallProvider === null
+					|| $largeOrSmallProvider == $provider->largeOrSmallProvider ) {
+					$ret[] = $provider;
+				}
 			}
-			$provider = new self( $providerName,
-				$provider['large-provider'] ? 'large' : 'small',
-				$label,
-				$provider['openid-url']
-			);
-			if ( $largeOrSmallProvider === null
-				|| $largeOrSmallProvider == $provider->largeOrSmallProvider ) {
-				$ret[] = $provider;
-			}
+
 		}
 
 		return $ret;

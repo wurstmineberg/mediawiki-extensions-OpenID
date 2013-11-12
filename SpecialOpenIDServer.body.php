@@ -54,7 +54,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function execute( $par ) {
-		global $wgOut, $wgOpenIDConsumerAndAlsoProvider, $wgOpenIDIdentifierSelect, $wgRequest, $wgUser;
+		global $wgOut, $wgOpenIDIdentifierSelect, $wgRequest, $wgUser;
 
 		$this->setHeaders();
 
@@ -62,7 +62,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		# Note: special page is un-registered if this flag is set,
 		# so it'd be unusual to get here.
 
-		if ( !$wgOpenIDConsumerAndAlsoProvider ) {
+		if ( !OpenID::isAllowedMode( 'provider' ) ) {
 			$wgOut->showErrorPage( 'openiderror', 'openidclientonlytext' );
 			return;
 		}

@@ -44,7 +44,8 @@ If this is enabled on the wiki, they can also use their user account URL of this
 The page has no other purpose.',
 	'openidxrds' => 'Yadis file',
 	'openidconvert' => 'OpenID converter',
-	'openiderror' => 'Verification error',
+	'openiderror' => 'OpenID error',
+	'openid-error-openid-consumer-mode-disabled' => 'You cannot login with OpenID to this wiki, because the OpenID consumer mode has been disabled.',
 	'openiderrortext' => 'An error occurred during verification of the OpenID URL.',
 	'openid-error-no-auth' => 'An unspecified authentication response/request error occurred during the verification of the OpenID URL $1.',
 	'openid-error-server-response' => "An error occurred during the verification of the OpenID URL $1.
@@ -176,11 +177,17 @@ You would not able to log in without an OpenID.',
 	'right-openid-converter-access' => 'Can add or convert their account to use OpenID identities',
 	'right-openid-dashboard-access' => 'Standard access to the OpenID dashboard',
 	'right-openid-dashboard-admin' => 'Administrator access to the OpenID dashboard',
+	'right-openid-login-with-openid' => 'Can login with OpenID',
+	'right-openid-create-account-with-openid' => 'Can create account with OpenID',
+	'right-openid-create-account-without-openid' => 'Manual account creation without OpenID',
 
 	# Associated actions - in the sentence "You do not have permission to X"
 	'action-openid-converter-access' => 'add or convert your account to use OpenID identities',
 	'action-openid-dashboard-access' => 'access the OpenID dashboard',
 	'action-openid-dashboard-admin' => 'access the OpenID administrator dashboard',
+	'action-openid-login-with-openid' => 'login with OpenID',
+	'action-openid-create-account-with-openid' => 'create an account with OpenID',
+	'action-openid-create-account-without-openid' => 'manually create an account i.e. without OpenID',
 
 	'openid-dashboard-title' => 'OpenID dashboard',
 	'openid-dashboard-title-admin' => 'OpenID dashboard (administrator)',

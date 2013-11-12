@@ -32,14 +32,25 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 
 	function __construct() {
 		global $wgOpenIDForcedProvider;
-		$listed = !is_string( $wgOpenIDForcedProvider );
+		$listed = !OpenID::isForcedProvider();
 		parent::__construct( 'OpenIDConvert', 'openid-converter-access', $listed );
 	}
 
 	function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOut, $wgOpenIDForcedProvider;
+		global $wgRequest, $wgUser, $wgOut, $wgOpenIDProviders, $wgOpenIDForcedProvider;
 
-		if ( is_string( $wgOpenIDForcedProvider ) ) {
+		if ( !OpenID::isAllowedMode( 'consumer' ) ) {
+			$wgOut->showErrorPage(
+				'openiderror',
+				'openid-error-openid-consumer-mode-disabled'
+			);
+			return;
+		}
+
+/*		use this
+		if you want to always suppress the convert screen if forced provider
+
+		if ( OpenID::isForcedProvider() ) {
 			$wgOut->showErrorPage(
 				'openiderror',
 				'openid-error-openid-convert-not-allowed-forced-provider',
@@ -47,6 +58,7 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			);
 			return;
 		}
+*/
 
 		if ( !$this->userCanExecute( $wgUser ) ) {
 			$this->displayRestrictionError();
@@ -68,9 +80,51 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 			break;
 
 		default:
-			$openid_url = $wgRequest->getText( 'openid_url' );
+
+			// if a forced OpenID provider is specified, bypass
+			// the form and any openid_url in the request.
+
+			$skipTokenTestBecauseForcedProvider = false;
+
+			if ( OpenID::isForcedProvider() ) {
+
+				if ( array_key_exists( $wgOpenIDForcedProvider, $wgOpenIDProviders ) ) {
+
+					$url = $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-url'];
+					wfDebug( "OpenID: wgOpenIDForcedProvider $wgOpenIDForcedProvider defined => $url\n" );
+
+					// make sure that the associated provider Url does not contain {username} placeholder
+					// and try to use an optional openid-selection-url from the $wgOpenIDProviders array
+					if ( strpos( $url, '{username}' ) === false ) {
+						$skipTokenTestBecauseForcedProvider = true;
+						$openid_url = $url;
+					} else {
+						if ( isset ( $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-selection-url'] ) ) {
+							$skipTokenTestBecauseForcedProvider = true;
+							$openid_url = $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-selection-url'];
+						} else {
+							wfDebug( "OpenID: Error: wgOpenIDForcedProvider $wgOpenIDForcedProvider defined, but wgOpenIDProviders array has an invalid provider Url. Must not contain a username placeholder!\n");
+							$this->showErrorPage( 'openid-error-wrong-force-provider-setting', array( $wgOpenIDForcedProvider ) );
+							return;
+						}
+					}
+
+				} else {
+
+					// a fully qualified URL is given
+					$skipTokenTestBecauseForcedProvider = true;
+					$openid_url = $wgOpenIDForcedProvider;
+
+				}
+
+			} else {
+
+				$openid_url = $wgRequest->getText( 'openid_url' );
+
+			}
+
 			if ( isset( $openid_url ) && strlen( $openid_url ) > 0 ) {
-				$this->convert( $openid_url );
+				$this->convert( $openid_url, $skipTokenTestBecauseForcedProvider  );
 			} else {
 				$this->form();
 			}
@@ -78,13 +132,17 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 		}
 	}
 
-	function convert( $openid_url ) {
+	function convert( $openid_url, $skipTokenTestBecauseForcedProvider = false ) {
 		global $wgUser, $wgOut, $wgRequest;
 
-		if ( !$wgUser->matchEditToken( $wgRequest->getVal( 'openidConvertToken' ), 'openidConvertToken' ) ) {
+		if ( !$skipTokenTestBecauseForcedProvider
+			&& ( LoginForm::getLoginToken() !== $wgRequest->getVal( 'openidProviderSelectionLoginToken' ) )
+			&& !( $wgUser->matchEditToken( $wgRequest->getVal( 'openidConvertToken' ), 'openidConvertToken' ) ) ) {
+
 			$wgOut->showErrorPage( 'openiderror', 'openid-error-request-forgery' );
 			return;
 		}
+
 
 		# Expand Interwiki
 		$openid_url = $this->interwikiExpand( $openid_url );
@@ -118,7 +176,8 @@ class SpecialOpenIDConvert extends SpecialOpenID {
 		}
 
 		// If we're OK to here, let the user go log in
-		$this->login( $openid_url, SpecialPage::getTitleFor( 'OpenIDConvert', 'Finish' ) );
+		$this->login( $openid_url, SpecialPage::getTitleFor( 'OpenIDConvert', 'Finish' ), $skipTokenTestBecauseForcedProvider );
+
 	}
 
 	public static function renderProviderIcons( &$inputFormHTML, &$largeButtonsHTML, &$smallButtonsHTML ) {

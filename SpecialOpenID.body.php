@@ -215,7 +215,7 @@ class SpecialOpenID extends SpecialPage {
 	 * @param $finish_page
 	 */
 	function login( $openid_url, $finish_page, $skipTokenTestBecauseForcedProvider = false ) {
-		global $wgOut, $wgUser, $wgRequest, $wgOpenIDTrustRoot;
+		global $wgOut, $wgUser, $wgRequest;
 
 		// Check whether an login or a convert token is present
 
@@ -242,12 +242,7 @@ class SpecialOpenID extends SpecialPage {
 			return;
 		}
 
-		if ( !is_null( $wgOpenIDTrustRoot ) ) {
-			$trust_root = $wgOpenIDTrustRoot;
-		} else {
-			global $wgScriptPath, $wgCanonicalServer;
-			$trust_root = $wgCanonicalServer . $wgScriptPath;
-		}
+		$trust_root = OpenID::getTrustRoot();
 
 		wfSuppressWarnings();
 

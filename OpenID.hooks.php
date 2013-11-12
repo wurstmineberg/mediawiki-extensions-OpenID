@@ -5,42 +5,58 @@
  * they're so badly written as to be impossible to extend
  */
 
-class SpecialOpenIDCreateAccount extends SpecialRedirectToSpecial {
-	function __construct() {
-		parent::__construct( 'SpecialOpenIDCreateAccount', 'OpenIDLogin' );
-	}
-}
-class SpecialOpenIDUserLogin extends SpecialRedirectToSpecial {
-	function __construct() {
-		parent::__construct( 'SpecialOpenIDUserLogin', 'OpenIDLogin', false, array( 'returnto', 'returntoquery' ) );
-	}
-}
-
 class OpenIDHooks {
-	public static function onSpecialPage_initList( &$list ) {
-		global $wgOpenIDLoginOnly, $wgOpenIDConsumerAndAlsoProvider, $wgSpecialPageGroups, $wgOpenIDSmallLogoUrl;
 
-		$wgOpenIDSmallLogoUrl = self::getOpenIDSmallLogoUrl();
+	public static function onSpecialPage_initList( &$specialPagesList ) {
+		global $wgOpenIDLoginOnly, $wgSpecialPageGroups, $wgUser;
 
-		if ( $wgOpenIDLoginOnly ) {
-			$list['Userlogin'] = 'SpecialOpenIDLogin';
+		# redirect all special login pages to our own OpenID login pages
+		# but only for entitled users
 
-			# as Special:CreateAccount is an alias for Special:UserLogin/signup
-			# we show our own OpenID page here, too
-			$list['CreateAccount'] = 'SpecialOpenIDLogin';
+		$addOpenIDSpecialPagesList = array();
+
+		if ( OpenID::isAllowedMode( 'consumer' ) ) {
+
+			if ( $wgOpenIDLoginOnly
+				&& !$wgUser->isAllowed( 'openid-create-account-without-openid' )
+				&& $wgUser->isAllowed( 'openid-login-with-openid' ) ) {
+
+				$specialPagesList['Userlogin'] = 'SpecialOpenIDLogin';
+
+				# as Special:CreateAccount is an alias for Special:UserLogin/signup
+				# we show our own OpenID page here, too
+
+				$specialPagesList['CreateAccount'] = 'SpecialOpenIDLogin';
+
+			}
+
 		}
 
-		# Special pages are added at global scope;
-		# remove server-related ones if client-only flag is set
-		$addList = array( 'Login', 'Convert', 'Dashboard', 'Identifier' );
-		if ( $wgOpenIDConsumerAndAlsoProvider ) {
-			$addList[] = 'Server';
-			$addList[] = 'XRDS';
+		# Special pages for both modes are added at global scope
+
+		if ( OpenID::isAllowedMode( 'provider' ) || OpenID::isAllowedMode( 'consumer' ) ) {
+
+			if ( !$wgUser->isLoggedIn()
+				&& ( $wgUser->isAllowed( 'openid-login-with-openid' )
+					|| $wgUser->isAllowed( 'openid-create-account-with-openid' ) ) ) {
+				$addOpenIDSpecialPagesList[] = 'Login';
+			}
+
+			$addOpenIDSpecialPagesList[] = 'Convert';
+			$addOpenIDSpecialPagesList[] = 'Dashboard';
 		}
 
-		foreach ( $addList as $sp ) {
+		# add the server-related Special pages
+
+		if ( OpenID::isAllowedMode( 'provider' ) ) {
+			$addOpenIDSpecialPagesList[] = 'Identifier';
+			$addOpenIDSpecialPagesList[] = 'Server';
+			$addOpenIDSpecialPagesList[] = 'XRDS';
+		}
+
+		foreach ( $addOpenIDSpecialPagesList as $sp ) {
 			$key = 'OpenID' . $sp;
-			$list[$key] = 'SpecialOpenID' . $sp;
+			$specialPagesList[$key] = 'SpecialOpenID' . $sp;
 			$wgSpecialPageGroups[$key] = 'openid';
 		}
 
@@ -86,7 +102,10 @@ class OpenIDHooks {
 	public static function onPersonalUrls( &$personal_urls, &$title ) {
 		global $wgOpenIDHideOpenIDLoginLink, $wgUser, $wgOpenIDLoginOnly;
 
-		if ( !$wgOpenIDHideOpenIDLoginLink && $wgUser->getID() == 0 ) {
+		if ( !$wgOpenIDHideOpenIDLoginLink
+			&& ( $wgUser->getID() == 0 )
+			&& OpenID::isAllowedMode( 'consumer' ) ) {
+
 			$sk = $wgUser->getSkin();
 			$returnto = $title->isSpecial( 'Userlogout' ) ? '' : ( 'returnto=' . $title->getPrefixedURL() );
 
@@ -104,6 +123,7 @@ class OpenIDHooks {
 					}
 				}
 			}
+
 		}
 
 		return true;
@@ -158,7 +178,7 @@ class OpenIDHooks {
 			$rows .= Xml::tags( 'tr', array(),
 				Xml::tags( 'td',
 					array(),
-					self::getOpenIDSmallLogoUrlImageTag() .
+					OpenID::getOpenIDSmallLogoUrlImageTag() .
 						"&nbsp;" .
 						Xml::element( 'a', array( 'href' => $url_reg->uoi_openid ), $url_reg->uoi_openid )
 				) .
@@ -190,7 +210,7 @@ class OpenIDHooks {
 			$rows
 		);
 
-		if ( !is_string( $wgOpenIDForcedProvider ) ) {
+		if ( true || !OpenID::isForcedProvider() ) {
 			$info .= Linker::link(
 				SpecialPage::getTitleFor( 'OpenIDConvert' ),
 				wfMessage( 'openid-add-url' )->escaped()
@@ -273,9 +293,9 @@ class OpenIDHooks {
 	 */
 	public static function onGetPreferences( $user, &$preferences ) {
 		global $wgOpenIDShowUrlOnUserPage, $wgHiddenPrefs,
-			$wgAuth, $wgUser, $wgLang, $wgOpenIDConsumerAndAlsoProvider;
+			$wgAuth, $wgUser, $wgLang;
 
-		if ( $wgOpenIDConsumerAndAlsoProvider ) {
+		if ( OpenID::isAllowedMode( 'provider' ) ) {
 
 			switch ( $wgOpenIDShowUrlOnUserPage ) {
 
@@ -308,7 +328,10 @@ class OpenIDHooks {
 
 			}
 
-		}
+		} /* provider mode */
+
+
+		if ( OpenID::isAllowedMode( 'consumer' ) ) {
 
 		// setting up user_properties up_property database key names
 		// example 'openid-userinfo-update-on-login-nickname'
@@ -345,14 +368,18 @@ class OpenIDHooks {
 				'type' => 'hidden',
 			);
 
-		if ( $wgOpenIDConsumerAndAlsoProvider ) {
+		} /* consumer mode */
+
+
+		if ( OpenID::isAllowedMode( 'provider' ) ) {
 
 			$preferences['openid-your-openid'] =
 				array(
 					'section' => 'openid/openid-local-identity',
 					'type' => 'info',
 					'label-message' => 'openid-local-identity',
-					'default' => self::getOpenIDSmallLogoUrlImageTag() . "&nbsp;" . SpecialOpenIDServer::getLocalIdentityLink( $user ),
+					'default' => OpenID::getOpenIDSmallLogoUrlImageTag() . "&nbsp;" .
+						SpecialOpenIDServer::getLocalIdentityLink( $user ),
 					'raw' => true,
 				);
 
@@ -365,9 +392,11 @@ class OpenIDHooks {
 					'raw' => true,
 				);
 
-		}
+		} /* provider mode */
+
 
 		if ( $wgAuth->allowPasswordChange() ) {
+
 			$resetlink = Linker::link(
 				SpecialPage::getTitleFor( 'PasswordReset' ),
 				wfMessage( 'passwordreset' )->escaped(),
@@ -376,6 +405,7 @@ class OpenIDHooks {
 			);
 
 			if ( empty( $wgUser->mPassword ) && empty( $wgUser->mNewpassword ) ) {
+
  				$preferences['password'] = array(
 					'section' => 'personal/info',
 					'type' => 'info',
@@ -383,7 +413,9 @@ class OpenIDHooks {
 					'default' => $resetlink,
 					'label-message' => 'yourpassword',
 				);
+
 			} else {
+
 				$preferences['resetpassword'] = array(
 					'section' => 'personal/info',
 					'type' => 'info',
@@ -391,10 +423,13 @@ class OpenIDHooks {
 					'default' => $resetlink,
 					'label-message' => null,
 				);
+
 			}
 
 			global $wgCookieExpiration;
+
 			if ( $wgCookieExpiration > 0 ) {
+
 				unset( $preferences['rememberpassword'] );
 				$preferences['rememberpassword'] = array(
 					'section' => 'personal/info',
@@ -404,6 +439,7 @@ class OpenIDHooks {
 						$wgLang->formatNum( ceil( $wgCookieExpiration / ( 3600 * 24 ) ) )
 						)->escaped(),
 				);
+
 			}
 
 		}
@@ -528,30 +564,6 @@ class OpenIDHooks {
 	/**
 	 * @return string
 	 */
-	private static function getOpenIDSmallLogoUrl() {
-		global $wgOpenIDSmallLogoUrl, $wgExtensionAssetsPath;
-
-		if ( !$wgOpenIDSmallLogoUrl ) {
-			return $wgExtensionAssetsPath . '/OpenID/skin/icons/openid-inputicon.png';
-		} else {
-			return $wgOpenIDSmallLogoUrl;
-		}
-
-	}
-
-	/**
-	 * @return string
-	 */
-	public static function getOpenIDSmallLogoUrlImageTag() {
-		return Xml::element( 'img',
-			array( 'src' => self::getOpenIDSmallLogoUrl(), 'alt' => 'OpenID' ),
-			''
-		);
-	}
-
-	/**
-	 * @return string
-	 */
 	private static function providerStyle() {
 		global $wgExtensionAssetsPath;
 
@@ -570,7 +582,7 @@ class OpenIDHooks {
 	 * @return string
 	 */
 	private static function loginStyle() {
-		$openIDLogo = self::getOpenIDSmallLogoUrl();
+		$openIDLogo = OpenID::getOpenIDSmallLogoUrl();
 		return <<<EOS
 <style type='text/css'>
 li#pt-openidlogin {

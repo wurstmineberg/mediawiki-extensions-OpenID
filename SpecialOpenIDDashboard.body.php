@@ -39,17 +39,27 @@ class SpecialOpenIDDashboard extends SpecialPage {
 	 * @return string
 	 */
 	function show( $string, $value ) {
+
 		if  ( $value === null ) {
 			$value = 'null';
 		} elseif ( is_bool( $value ) ) {
 			$value = wfBoolToStr( $value );
 		} else {
-			$value = htmlspecialchars( $value );
+			$value = htmlspecialchars( $value, ENT_QUOTES );
 		}
-		return Html::openElement( 'tr' ) .
-			Html::openElement( 'td' ) . $string . Html::closeElement( 'td' ) .
-			Html::openElement( 'td' ) . $value . Html::closeElement( 'td' ) .
-			Html::closeElement( 'tr' ) . "\n";
+
+		return Html::rawElement( 'tr',
+			array(),
+			Html::rawElement( 'td',
+				array(),
+				$string
+			) .
+			Html::rawElement( 'td',
+				array(),
+				$value
+			)
+		) . "\n";
+
 	}
 
 	/**
@@ -59,18 +69,13 @@ class SpecialOpenIDDashboard extends SpecialPage {
 	 */
 	function execute( $par ) {
 
-		global $wgOut, $wgUser;
-		global $wgOpenIDShowUrlOnUserPage;
-		global $wgOpenIDTrustEmailAddress;
-		global $wgOpenIDAllowExistingAccountSelection;
-		global $wgOpenIDAllowNewAccountname;
-		global $wgOpenIDUseEmailAsNickname;
-		global $wgOpenIDProposeUsernameFromSREG;
-		global $wgOpenIDAllowAutomaticUsername;
-		global $wgOpenIDLoginOnly;
-		global $wgOpenIDConsumerAndAlsoProvider;
-		global $wgOpenIDAllowServingOpenIDUserAccounts;
-		global $wgOpenIDShowProviderIcons;
+		global $wgOut, $wgUser,
+			$wgOpenIDShowUrlOnUserPage, $wgOpenIDTrustEmailAddress,
+			$wgOpenIDAllowExistingAccountSelection, $wgOpenIDAllowNewAccountname,
+			$wgOpenIDUseEmailAsNickname, $wgOpenIDProposeUsernameFromSREG,
+			$wgOpenIDAllowAutomaticUsername, $wgOpenIDLoginOnly,
+			$wgOpenIDAllowServingOpenIDUserAccounts, $wgOpenIDShowProviderIcons,
+			$wgOpenIDForcedProvider;
 
 		if ( !$this->userCanExecute( $wgUser ) ) {
 			$this->displayRestrictionError();
@@ -87,15 +92,36 @@ class SpecialOpenIDDashboard extends SpecialPage {
 		$wgOut->addWikiMsg( 'openid-dashboard-introduction', 'http://www.mediawiki.org/wiki/Extension:OpenID' );
 
 		$wgOut->addHTML(
-			Html::openElement( 'table', array( 'style' => 'width:50%;', 'class' => 'mw-openiddashboard-table wikitable' ) )
+			Html::openElement( 'table',
+				array(
+					'style' => 'width:50%;',
+					'class' => 'mw-openiddashboard-table wikitable'
+				)
+			)
 		);
 
 		# Here we show some basic version infos. Retrieval of SVN revision number of OpenID appears to be too difficult
 		$out  = $this->show( 'OpenID ' . wfMessage( 'version-software-version' )->text(), MEDIAWIKI_OPENID_VERSION );
 		$out .= $this->show( 'MediaWiki ' . wfMessage( 'version-software-version' )->text(), SpecialVersion::getVersion() );
 		$out .= $this->show( '$wgOpenIDLoginOnly', $wgOpenIDLoginOnly );
-		$out .= $this->show( '$wgOpenIDConsumerAndAlsoProvider', $wgOpenIDConsumerAndAlsoProvider );
+
+		$forced = OpenID::isForcedProvider() ? "forced " : "";
+
+		$mode = "-";
+		if ( OpenID::isAllowedMode( 'consumer' ) && OpenID::isAllowedMode( 'provider' ) ) {
+			$mode = "consumer, {$forced}provider";
+		} elseif ( OpenID::isAllowedMode( 'consumer' ) ) {
+			$mode = "consumer";
+		} else {
+			$mode = "provider";
+		}
+		$out .= $this->show( '$wgOpenIDMode', $mode );
+
+		$forced = OpenID::isForcedProvider() ? $wgOpenIDForcedProvider : '-';
+		$out .= $this->show( '$wgOpenIDForcedProvider', $forced );
+
 		$out .= $this->show( '$wgOpenIDAllowServingOpenIDUserAccounts', $wgOpenIDAllowServingOpenIDUserAccounts );
+		$out .= $this->show( '$wgOpenIDTrustRoot', OpenID::getTrustRoot() );
 		$out .= $this->show( '$wgOpenIDTrustEmailAddress', $wgOpenIDTrustEmailAddress );
 		$out .= $this->show( '$wgOpenIDAllowExistingAccountSelection', $wgOpenIDAllowExistingAccountSelection );
 		$out .= $this->show( '$wgOpenIDAllowAutomaticUsername', $wgOpenIDAllowAutomaticUsername );

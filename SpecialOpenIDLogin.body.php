@@ -32,7 +32,9 @@ require_once( "Auth/Yadis/XRI.php" );
 class SpecialOpenIDLogin extends SpecialOpenID {
 
 	function __construct() {
-		parent::__construct( 'OpenIDLogin' );
+		global $wgUser;
+		$listed = !$wgUser->isLoggedIn();
+		parent::__construct( 'OpenIDLogin' , 'openid-login-with-openid', $listed );
 	}
 
 	/**
@@ -41,12 +43,20 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $par String or null
 	 */
 	function execute( $par ) {
-		global $wgRequest, $wgUser, $wgOpenIDForcedProvider, $wgOpenIDProviders;
+		global $wgRequest, $wgUser, $wgOpenIDForcedProvider, $wgOpenIDProviders, $wgOut;
 
 		$this->setHeaders();
 
 		if ( $wgUser->getID() != 0 ) {
 			$this->alreadyLoggedIn();
+			return;
+		}
+
+		if ( !OpenID::isAllowedMode( 'consumer' ) ) {
+			$wgOut->showErrorPage(
+				'error',
+				'openid-error-openid-consumer-mode-disabled'
+			);
 			return;
 		}
 
@@ -62,6 +72,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			break;
 
 		default: # Main entry point
+
 			if ( $wgRequest->getText( 'returnto' ) ) {
 				$this->setReturnTo( $wgRequest->getText( 'returnto' ), $wgRequest->getVal( 'returntoquery' ) );
 			}
@@ -71,7 +82,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 			$skipTokenTestBecauseForcedProvider = false;
 
-			if ( is_string( $wgOpenIDForcedProvider ) ) {
+			if ( OpenID::isForcedProvider() ) {
 
 				if ( array_key_exists( $wgOpenIDForcedProvider, $wgOpenIDProviders ) ) {
 
@@ -113,15 +124,9 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			} else {
 				$this->providerSelectionLoginForm();
 			}
-		}
-	}
 
-	/**
-	 * Displays an error message
-	 */
-	function showErrorPage( $msg, $params = array() ) {
-		global $wgUser, $wgOut;
-		$wgOut->showErrorPage( 'openiderror', $msg, $params );
+		} /* switch $par */
+
 	}
 
 	/**
@@ -195,7 +200,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @param $messagekey String or null: message name to display at the top
 	 */
 	function chooseNameForm( $openid, $sreg, $ax, $messagekey = null ) {
-		global $wgOut, $wgOpenIDAllowExistingAccountSelection, $wgHiddenPrefs,
+		global $wgAuth, $wgOut, $wgOpenIDAllowExistingAccountSelection, $wgHiddenPrefs,
 			$wgUser, $wgOpenIDProposeUsernameFromSREG,
 			$wgOpenIDAllowAutomaticUsername, $wgOpenIDAllowNewAccountname;
 
@@ -303,18 +308,49 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 						array(
 							'id' => 'wpExistingName'
 						)
-					) .
+					) . " " .
 					wfMessage( 'openidchoosepassword' )->text() .
 					Xml::password( 'wpExistingPassword' ) .
 					$oidAttributesUpdate
 				) .
 				Xml::closeElement( 'tr' )
 			);
+
+		if ( $wgAuth->allowPasswordChange() ) {
+
+			$wgOut->addHTML(
+				Xml::openElement( 'tr' ) .
+
+				Xml::tags( 'td',
+					array(),
+					"&nbsp;"
+				) .
+
+				Xml::tags( 'td',
+					array(),
+					Linker::link(
+						SpecialPage::getTitleFor( 'PasswordReset' ),
+						wfMessage( 'passwordreset' )->escaped(),
+						array(),
+						array( 'returnto' => SpecialPage::getTitleFor( 'OpenIDLogin' ) )
+					)
+				) .
+
+				Xml::closeElement( 'tr' )
+			);
+
+		}
+
+
+
 			$def = true;
+
 		} // $wgOpenIDAllowExistingAccountSelection
 
-		# These are only available if all visitors are allowed to create accounts
-		if ( $wgUser->isAllowed( 'createaccount' ) && !$wgUser->isBlockedFromCreateAccount() ) {
+		# These are only available if the visitor is allowed to create account
+		if ( $wgUser->isAllowed( 'createaccount' )
+			&& $wgUser->isAllowed( 'openid-create-account-with-openid' )
+			&& !$wgUser->isBlockedFromCreateAccount() ) {
 
 			if ( $wgOpenIDProposeUsernameFromSREG ) {
 
@@ -523,13 +559,16 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		$nameValue = $wgRequest->getText( 'wpNameValue' );
 
 		if ( $choice == 'existing' ) {
+
 			$user = $this->attachUser( $openid, $sreg,
 				$wgRequest->getText( 'wpExistingName' ),
 				$wgRequest->getText( 'wpExistingPassword' )
 			);
 
-			if ( !$user ) {
-				$this->chooseNameForm( $openid, $sreg, $ax, 'wrongpassword' );
+			if ( is_null( $user ) || !$user ) {
+
+				$this->clearValues();
+				// $this->chooseNameForm( $openid, $sreg, $ax, 'wrongpassword' );
 				return;
 			}
 
@@ -543,6 +582,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			$this->updateUser( $user, $sreg, $ax );
 
 		} else {
+
 			$name = $this->getUserName( $openid, $sreg, $ax, $choice, $nameValue );
 
 			if ( !$name || !$this->userNameOK( $name ) ) {
@@ -552,13 +592,16 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			}
 
 			$user = $this->createUser( $openid, $sreg, $ax, $name );
+
 		}
 
 		if ( is_null( $user ) ) {
+
 			wfDebug( "OpenID: aborting in ChooseName because we could not create user object\n" );
 			$this->clearValues();
 			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
 			return;
+
 		}
 
 		$wgUser = $user;
@@ -650,6 +693,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 				$this->saveValues( $openid, $sreg, $ax );
 				$this->chooseNameForm( $openid, $sreg, $ax );
+
 				return;
 			}
 		}
@@ -795,16 +839,17 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	function createUser( $openid, $sreg, $ax, $name ) {
 		global $wgUser, $wgAuth;
 
-		$user = User::newFromName( $name );
-
-		# Check permissions
-		if ( !$user->isAllowed( 'createaccount' ) ) {
+		# Check permissions of the creating $wgUser
+		if ( !$wgUser->isAllowed( 'createaccount' )
+			|| !$wgUser->isAllowed( 'openid-create-account-with-openid' ) ) {
 			wfDebug( "OpenID: User is not allowed to create an account.\n" );
 			return null;
-		} elseif ( $user->isBlockedFromCreateAccount() ) {
+		} elseif ( $wgUser->isBlockedFromCreateAccount() ) {
 			wfDebug( "OpenID: User is blocked.\n" );
 			return null;
 		}
+
+		$user = User::newFromName( $name );
 
 		if ( !$user ) {
 			wfDebug( "OpenID: Error adding new user.\n" );
@@ -844,19 +889,36 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 	 * @return bool|null|User
 	 */
 	function attachUser( $openid, $sreg, $name, $password ) {
+		global $wgAuth;
+
 		$user = User::newFromName( $name );
 
-		if ( !$user ) {
-			return null;
+		if ( $user->checkPassword( $password ) ) {
+
+			// de-validate the temporary password
+			// requires MediaWiki core with https://gerrit.wikimedia.org/r/#/c/96029/ merged 2013-11-18
+			$user->setNewPassword( null );
+			self::addUserUrl( $user, $openid );
+
+			return $user;
+
 		}
 
-		if ( !$user->checkPassword( $password ) ) {
+		if ( $user->checkTemporaryPassword( $password ) ) {
+
+			$wgAuth->updateUser( $user );
+			$user->saveSettings();
+
+			$reset = new SpecialChangePassword();
+			$reset->setContext( $this->getContext()->setUser( $user ) );
+			$reset->execute( null );
+
 			return null;
+
 		}
 
-		self::addUserUrl( $user, $openid );
+		return null;
 
-		return $user;
 	}
 
 	/**
@@ -887,7 +949,10 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			}
 
 			# try AX
-			$fullname = ( ( array_key_exists( 'http://axschema.org/namePerson/first', $ax ) || array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) ? $ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0] : null );
+			$fullname = ( ( array_key_exists( 'http://axschema.org/namePerson/first', $ax )
+				|| array_key_exists( 'http://axschema.org/namePerson/last', $ax ) ) ?
+				$ax['http://axschema.org/namePerson/first'][0] . " " . $ax['http://axschema.org/namePerson/last'][0] : null
+			);
 
 			return $fullname;
 		case 'url':

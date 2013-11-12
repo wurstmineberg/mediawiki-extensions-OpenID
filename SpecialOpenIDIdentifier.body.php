@@ -29,10 +29,10 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	}
 
 	function execute( $par ) {
-		global $wgOpenIDConsumerAndAlsoProvider, $wgOut;
+		global $wgOut;
 		$this->setHeaders();
 
-		if ( !$wgOpenIDConsumerAndAlsoProvider ) {
+		if ( !OpenID::isAllowedMode( 'provider' ) ) {
 			$wgOut->showErrorPage( 'openiderror', 'openidclientonlytext' );
 			return;
 		}
@@ -50,8 +50,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 	 * @param bool $showSpecialPageText
 	 */
 	public static function showOpenIDIdentifier( $user, $delegate = false, $showSpecialPageText = false ) {
-		global $wgOut, $wgUser, $wgOpenIDConsumerAndAlsoProvider, $wgOpenIDShowUrlOnUserPage,
-			$wgOpenIDAllowServingOpenIDUserAccounts;
+		global $wgOut, $wgUser, $wgOpenIDShowUrlOnUserPage, $wgOpenIDAllowServingOpenIDUserAccounts;
 
 		// show the own OpenID Url as a subtitle on the user page
 		// but only for the user when visiting their own page
@@ -65,7 +64,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 		$openid = SpecialOpenID::getUserOpenIDInformation( $user );
 
 		# Add OpenID data if its allowed
-		if ( $wgOpenIDConsumerAndAlsoProvider ) {
+		if ( OpenID::isAllowedMode( 'provider' ) ) {
 			if ( !( count( $openid )
 				&& ( strlen( $openid[0]->uoi_openid ) != 0 )
 				&& !$wgOpenIDAllowServingOpenIDUserAccounts )
@@ -92,7 +91,7 @@ class SpecialOpenIDIdentifier extends unlistedSpecialPage {
 					|| ( ( $wgOpenIDShowUrlOnUserPage === 'user' ) && $wgUser->getOption( 'openid-show-openid' ) ) )
 			) {
 				$wgOut->setSubtitle( "<span class='subpages'>" .
-					OpenIDHooks::getOpenIDSmallLogoUrlImageTag() .
+					OpenID::getOpenIDSmallLogoUrlImageTag() .
 					SpecialOpenIDServer::getLocalIdentityLink( $wgUser ) .
 					"</span>" );
 

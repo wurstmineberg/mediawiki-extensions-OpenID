@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '3.44 20131122' );
+define( 'MEDIAWIKI_OPENID_VERSION', '4.00 20131122' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -43,12 +43,20 @@ set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . g
 $wgOpenIDLoginOnly = true;
 
 /**
- * If true, user accounts on this wiki can be used as OpenIDs on other
- * sites. This is called "OpenID Provider" (or "OpenID Server") mode.
- *
- * @deprecated $wgOpenIDClientOnly since E:OpenID v3.12. Use $wgOpenIDConsumerAndAlsoProvider with inverted logic instead
+ * @deprecated $wgOpenIDClientOnly since E:OpenID v3.12. Instead set $wgOpenIDMode = 'consumer'
+ * @deprecated $wgOpenIDConsumerAndAlsoProvider since E:OpenID v3.44. Instead set $wgOpenIDMode = array( 'consumer', 'provider' )
  */
-$wgOpenIDConsumerAndAlsoProvider = true;
+# if you want to disable the OpenID extension
+# $wgOpenIDMode = false;
+
+# if you want to allow Users of this wiki to use their identity as OpenIDs for logins on other sites
+# $wgOpenIDMode = 'provider';
+
+# and if you want to allow logins to this wiki with OpenID from elsewhere, or OpenID from a forced provider
+# $wgOpenIDMode = 'consumer';
+
+# if you want to allow Users of this wiki to use their identity as OpenIDs for logins on other sites
+$wgOpenIDMode = array( 'consumer', 'provider' );
 
 /**
  * If true, users can use their OpenID identity provided by this site A
@@ -234,6 +242,7 @@ $wgOpenIDProviders = array(
 	)
 );
 
+
 /**
  * when creating a new account or associating an existing account with OpenID:
  *
@@ -370,18 +379,6 @@ $wgExtensionCredits['other'][] = array(
 	'descriptionmsg' => 'openid-desc',
 );
 
-function OpenIDGetServerPath() {
-	$rel = 'Auth/OpenID/Server.php';
-
-	foreach ( explode( PATH_SEPARATOR, get_include_path() ) as $pe ) {
-		$full = $pe . DIRECTORY_SEPARATOR . $rel;
-		if ( file_exists( $full ) ) {
-			return $full;
-		}
-	}
-	return $rel;
-}
-
 $dir = $path . '/';
 
 $wgExtensionMessagesFiles['OpenID'] = $dir . 'OpenID.i18n.php';
@@ -404,8 +401,8 @@ $wgAutoloadClasses['SpecialOpenIDDashboard'] = $dir . 'SpecialOpenIDDashboard.bo
 # UI class
 $wgAutoloadClasses['OpenIDProvider'] = $dir . 'OpenIDProvider.body.php';
 
-# Gets stored in the session, needs to be reified before our setup
-$wgAutoloadClasses['Auth_OpenID_CheckIDRequest'] = OpenIDGetServerPath();
+# Gets stored in the session, needs to be verified before our setup
+$wgAutoloadClasses['Auth_OpenID_CheckIDRequest'] = OpenID::OpenIDGetServerPath();
 
 $wgAutoloadClasses['MediaWikiOpenIDDatabaseConnection'] = $dir . 'DatabaseConnection.php';
 $wgAutoloadClasses['MediaWikiOpenIDMemcachedStore'] = $dir . 'MemcachedStore.php';
@@ -427,10 +424,17 @@ $wgHooks['GetPreferences'][] = 'OpenIDHooks::onGetPreferences';
 # $wgHooks['UserLoginForm'][] = 'OpenIDHooks::onUserLoginForm';
 
 # new user rights
+$wgAvailableRights[] = 'openid-converter-access';
 $wgAvailableRights[] = 'openid-dashboard-access';
 $wgAvailableRights[] = 'openid-dashboard-admin';
+$wgAvailableRights[] = 'openid-login-with-openid';
+$wgAvailableRights[] = 'openid-create-account-with-openid';
+$wgAvailableRights[] = 'openid-create-account-without-openid';
 
-# uncomment to allow users to read access the dashboard
+# allow everyone to login with OpenID
+$wgGroupPermissions['*']['openid-login-with-openid'] = true;
+
+# uncomment to allow users read access the dashboard
 # $wgGroupPermissions['user']['openid-dashboard-access'] = true;
 
 # allow users to add or convert OpenIDs to their accounts
@@ -438,10 +442,17 @@ $wgAvailableRights[] = 'openid-dashboard-admin';
 # if $wgOpenIDForcedProvider is set, the permission is set false
 $wgGroupPermissions['user']['openid-converter-access'] = true;
 
-# allow sysops to read access the dashboard and
-# allow sysops to adminstrate the OpenID settings (feature under construction)
+# allow sysops read access the dashboard and
+# allow sysops to administrate the OpenID settings (feature under construction)
 $wgGroupPermissions['sysop']['openid-dashboard-access'] = true;
 $wgGroupPermissions['sysop']['openid-dashboard-admin'] = true;
+
+# allow sysops always to create accounts
+# i.e. also in case of $wgOpenIDLoginOnly==true
+$wgGroupPermissions['*']['openid-login-with-openid'] = true;
+$wgGroupPermissions['*']['openid-create-account-with-openid'] = true;
+$wgGroupPermissions['*']['openid-create-account-without-openid'] = false;
+$wgGroupPermissions['sysop']['openid-create-account-without-openid'] = true;
 
 $myResourceTemplate = array(
 	'localBasePath' => $path . '/skin',
@@ -467,3 +478,103 @@ $wgResourceModules['ext.openid.icons'] = $myResourceTemplate + array(
 		'ext.openid'
 	)
 );
+
+class OpenID {
+	/*
+	 * @param $mode string|array|boolean: mode 'provider'|'consumer'|array('provider','consumer') to be checked if allowed
+	 * @return boolean
+	*/
+	static function isAllowedMode( $mode = false ) {
+		global $wgOpenIDMode, $wgOpenIDProviders, $wgOpenIDForcedProvider;
+
+		if ( !is_string( $mode )
+			|| is_null( $wgOpenIDMode )
+			|| ( $wgOpenIDMode === false )
+			|| !in_array( $mode, array( 'provider', 'consumer' ) ) ) {
+			return false;
+		}
+
+		# An empty list of providers _and_ no forced provider implies
+		# that the wiki cannot act as consumer because it would not accept
+		# any provider
+
+		if ( $mode === 'consumer'
+			&& !is_array( $wgOpenIDProviders )
+			&& !self::isForcedProvider() ) {
+			return false;
+		}
+
+		if ( is_array( $wgOpenIDMode ) && in_array( $mode, $wgOpenIDMode ) ) {
+			return true;
+		} elseif ( is_string( $wgOpenIDMode ) && ( $wgOpenIDMode == $mode ) ) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+	/*
+	 * @return boolean
+	*/
+	static function isForcedProvider() {
+		global $wgOpenIDForcedProvider;
+		return is_string( $wgOpenIDForcedProvider );
+	}
+
+	static function getTrustRoot() {
+		global $wgOpenIDTrustRoot;
+
+		if ( !is_null( $wgOpenIDTrustRoot ) ) {
+
+			$trust_root = $wgOpenIDTrustRoot;
+
+		} else {
+
+			global $wgScriptPath, $wgCanonicalServer;
+			$trust_root = $wgCanonicalServer . $wgScriptPath;
+
+		}
+
+		return $trust_root;
+
+	}
+
+	static function OpenIDGetServerPath() {
+		$rel = 'Auth/OpenID/Server.php';
+
+		foreach ( explode( PATH_SEPARATOR, get_include_path() ) as $pe ) {
+			$full = $pe . DIRECTORY_SEPARATOR . $rel;
+			if ( file_exists( $full ) ) {
+				return $full;
+			}
+		}
+		return $rel;
+
+	}
+
+	/**
+	 * @return string
+	 */
+	static function getOpenIDSmallLogoUrl() {
+		global $wgOpenIDSmallLogoUrl, $wgExtensionAssetsPath;
+
+		if ( !$wgOpenIDSmallLogoUrl ) {
+			return $wgExtensionAssetsPath . '/OpenID/skin/icons/openid-inputicon.png';
+		} else {
+			return $wgOpenIDSmallLogoUrl;
+		}
+
+	}
+
+	/**
+	 * @return string
+	 */
+	public static function getOpenIDSmallLogoUrlImageTag() {
+		return Xml::element( 'img',
+			array( 'src' => self::getOpenIDSmallLogoUrl(), 'alt' => 'OpenID' ),
+			''
+		);
+	}
+
+} /* class OpenID */
