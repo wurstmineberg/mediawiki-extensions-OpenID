@@ -626,18 +626,26 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			$user = self::getUserFromUrl( $openid );
 
 			if ( $user instanceof User ) {
+
 				$this->updateUser( $user, $sreg, $ax ); # update from server
 				$wgUser = $user;
 				$this->displaySuccessLogin( $openid );
+
 			} else {
+
 				// if we are hardcoding nickname, and a valid e-mail address was returned, create a user with this name
 				if ( $wgOpenIDUseEmailAsNickname ) {
+
 					$name = $this->getNameFromEmail( $openid, $sreg, $ax );
+
 					if ( !empty( $name ) && $this->userNameOk( $name ) ) {
+
 						$wgUser = $this->createUser( $openid, $sreg, $ax, $name );
 						$this->displaySuccessLogin( $openid );
 						return;
+
 					}
+
 				}
 
 				$this->saveValues( $openid, $sreg, $ax );
@@ -669,27 +677,33 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		if ( $this->updateOption( 'email', $user, $force ) ) {
 			// first check SREG, then AX; if both, AX takes higher priority
 			$email = false;
-			if ( array_key_exists( 'email', $sreg ) ) {
+
+			if ( array_key_exists( 'email', $sreg )
+				&& Sanitizer::validateEmail( $sreg['email'] ) ) {
 				$email = $sreg['email'];
 			}
-			if ( isset ( $ax['http://axschema.org/contact/email'][0] ) ) {
+
+			if ( isset ( $ax['http://axschema.org/contact/email'][0] )
+				 && Sanitizer::validateEmail( $ax['http://axschema.org/contact/email'][0] ) ) {
 				$email = $ax['http://axschema.org/contact/email'][0];
 			}
+
 			if ( $email ) {
-				// If email changed, then email a confirmation mail
+
+				// send a confirmation mail if email has changed
+
 				if ( $email != $user->getEmail() ) {
-					$user->setEmail( $email );
+
 					if ( $wgOpenIDTrustEmailAddress ) {
+						$user->setEmail( $email );
 						$user->confirmEmail();
 					} else {
-						$user->invalidateEmail();
-						if ( $wgEmailAuthentication && $email != '' ) {
-							$result = $user->sendConfirmationMail();
-							if ( WikiError::isError( $result ) ) {
-								$wgOut->addWikiMsg( 'mailerror', $result->getMessage() );
-							}
+						$status = $user->setEmailWithConfirmation( $email );
+						if ( !$status->isOK() ) {
+							$wgOut->addWikiMsg( 'mailerror', $result->getMessage() );
 						}
 					}
+
 				}
 			}
 		}
@@ -912,18 +926,25 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		# return the part before the @ in the e-mail address;
 		# look first at SREG, then AX
 
-		if ( array_key_exists( 'email', $sreg ) ) {
+		if ( array_key_exists( 'email', $sreg )
+			&& Sanitizer::validateEmail( $sreg['email'] ) ) {
+
 			$addr = explode( "@", $sreg['email'] );
 			if ( $addr ) {
 				return $addr[0];
 			}
+
 		}
 
-		if ( isset( $ax['http://axschema.org/contact/email'][0] ) ) {
+		if ( isset( $ax['http://axschema.org/contact/email'][0] )
+			&& Sanitizer::validateEmail( $ax['http://axschema.org/contact/email'][0] ) ) {
+
 			$addr = explode( "@", $ax['http://axschema.org/contact/email'][0] );
+
 			if ( $addr ) {
 				return $addr[0];
 			}
+
 		}
 
 	}

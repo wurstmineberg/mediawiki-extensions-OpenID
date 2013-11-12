@@ -635,8 +635,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			$user->setRealName( $value );
 			return true;
 		case 'email':
-			# FIXME: deal with validation
-			$user->setEmail( $value );
+			if ( Sanitizer::validateEmail( $value ) ) {
+				$user->setEmail( $value );
+			} else {
+				$user->setEmail( "" );
+			}
 			return true;
 		 case 'language':
 			$user->setOption( 'language', $value );
