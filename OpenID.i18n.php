@@ -1550,6 +1550,7 @@ $messages['ce'] = array(
 	'openid-urls-action' => 'Дийраш',
 	'openid-urls-delete' => 'ДӀаяккха',
 	'openid-add-url' => 'ТӀетоха керла OpenID',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Тешаме сайташ дӀаяхар',
 );
 
 /** Sorani Kurdish (کوردی)
