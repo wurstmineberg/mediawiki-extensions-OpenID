@@ -189,6 +189,15 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			return;
 		}
 
+		if ( is_a( $request, 'Auth_OpenID_ServerError' ) ) {
+			$wgOut->showErrorPage(
+				'openiderror',
+				'openid-error-server-response',
+				array( "", wfEscapeWikiText( $request->toString() ) . "." )
+			);
+			return;
+		}
+
 		switch ( $request->mode ) {
 
 		case "checkid_setup":
@@ -606,7 +615,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 	}
 
 	function SregFromQuery( $query ) {
-		$sreg = array( 
+		$sreg = array(
 			'required' => array(),
 			'optional' => array(),
 			'policy_url' => null

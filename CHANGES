@@ -1,6 +1,8 @@
 CHANGES
 =======
 
+3.44  20131122  bug 54511 Let OpenIDServer show a meaningful error message in
+                case of untrusted trust root
 3.43  20131103  bug 34844 and 34846
                 add uoi_user_registration for PostgreSQL
                 add uoi_user_registration field to the user_openid table
