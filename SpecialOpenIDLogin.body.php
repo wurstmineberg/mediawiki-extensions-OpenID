@@ -87,7 +87,6 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 				if ( array_key_exists( $wgOpenIDForcedProvider, $wgOpenIDProviders ) ) {
 
 					$url = $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-url'];
-					wfDebug( "OpenID: wgOpenIDForcedProvider $wgOpenIDForcedProvider defined => $url\n" );
 
 					// make sure that the associated provider Url does not contain {username} placeholder
 					// and try to use an optional openid-selection-url from the $wgOpenIDProviders array
@@ -99,7 +98,6 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 							$skipTokenTestBecauseForcedProvider = true;
 							$openid_url = $wgOpenIDProviders[$wgOpenIDForcedProvider]['openid-selection-url'];
 						} else {
-							wfDebug( "OpenID: Error: wgOpenIDForcedProvider $wgOpenIDForcedProvider defined, but wgOpenIDProviders array has an invalid provider Url. Must not contain a username placeholder!\n");
 							$this->showErrorPage( 'openid-error-wrong-force-provider-setting', array( $wgOpenIDForcedProvider ) );
 							return;
 						}
@@ -542,7 +540,6 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 		list( $openid, $sreg, $ax ) = $this->fetchValues();
 		if ( is_null( $openid ) ) {
-			wfDebug( "OpenID: aborting in ChooseName because identity_url is missing\n" );
 			$this->clearValues();
 			# No messing around, here
 			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
@@ -586,7 +583,6 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			$name = $this->getUserName( $openid, $sreg, $ax, $choice, $nameValue );
 
 			if ( !$name || !$this->userNameOK( $name ) ) {
-				wfDebug( "OpenID: Name not OK: '$name'\n" );
 				$this->chooseNameForm( $openid, $sreg, $ax );
 				return;
 			}
@@ -597,7 +593,6 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 
 		if ( is_null( $user ) ) {
 
-			wfDebug( "OpenID: aborting in ChooseName because we could not create user object\n" );
 			$this->clearValues();
 			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
 			return;
@@ -623,7 +618,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 		wfRestoreWarnings();
 
 		if ( is_null( $response ) ) {
-			wfDebug( "OpenID: aborting in auth because no response was recieved\n" );
+			wfDebug( "OpenID: aborting in auth because no response was received\n" );
 			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
 			return;
 		}
@@ -661,7 +656,6 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 			wfRestoreWarnings();
 
 			if ( is_null( $openid ) ) {
-				wfDebug( "OpenID: aborting in auth success because identity URL is missing\n" );
 				$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
 				return;
 			}

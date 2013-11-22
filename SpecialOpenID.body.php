@@ -164,11 +164,9 @@ class SpecialOpenID extends SpecialPage {
 			$canLogin = false;
 			foreach ( $wgOpenIDConsumerAllow as $allow ) {
 				if ( preg_match( $allow, $openid_url ) ) {
-					wfDebug( "OpenID: $openid_url matched allow pattern $allow.\n" );
 					$canLogin = true;
 					foreach ( $wgOpenIDConsumerDeny as $deny ) {
 						if ( preg_match( $deny, $openid_url ) ) {
-							wfDebug( "OpenID: $openid_url matched deny pattern $deny.\n" );
 							$canLogin = false;
 							break;
 						}
@@ -180,11 +178,9 @@ class SpecialOpenID extends SpecialPage {
 			$canLogin = true;
 			foreach ( $wgOpenIDConsumerDeny as $deny ) {
 				if ( preg_match( $deny, $openid_url ) ) {
-					wfDebug( "OpenID: $openid_url matched deny pattern $deny.\n" );
 					$canLogin = false;
 					foreach ( $wgOpenIDConsumerAllow as $allow ) {
 						if ( preg_match( $allow, $openid_url ) ) {
-							wfDebug( "OpenID: $openid_url matched allow pattern $allow.\n" );
 							$canLogin = true;
 							break;
 						}
@@ -249,7 +245,6 @@ class SpecialOpenID extends SpecialPage {
 		$consumer = $this->getConsumer();
 
 		if ( !$consumer ) {
-			wfDebug( "OpenID: no consumer\n" );
 			$wgOut->showErrorPage( 'openiderror', 'openiderrortext' );
 			return;
 		}

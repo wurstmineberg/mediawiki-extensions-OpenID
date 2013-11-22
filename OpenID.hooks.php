@@ -464,8 +464,6 @@ class OpenIDHooks {
 			$dbw->delete( 'user_openid', array( 'uoi_user' => $userID ) );
 			$wgOut->addHTML( "OpenID " . wfMessage( 'usermerge-userdeleted', $username, $userID )->escaped() . "<br />\n" );
 
-			wfDebug( "OpenID: deleted OpenID user $username ($userID)\n" );
-
 		}
 
 		return true;
@@ -492,11 +490,10 @@ class OpenIDHooks {
 				$dbw->update( 'user_openid', array( 'uoi_user' => $toUserID ), array( 'uoi_user' => $fromUserID ) );
 				$wgOut->addHTML( "OpenID " . wfMessage( 'usermerge-updating', 'user_openid', $fromUsername, $toUsername )->escaped() . "<br />\n" );
 
-				wfDebug( "OpenID: transferred OpenID(s) of $fromUsername ($fromUserID) => $toUsername ($toUserID)\n" );
-
 			} else {
+
 				$wgOut->addHTML( wfMessage( 'openid-openids-were-not-merged' )->escaped() . "<br />\n" );
-				wfDebug( "OpenID: OpenID(s) were not merged for merged users $fromUsername ($fromUserID) => $toUsername ($toUserID)\n" );
+
 			}
 		}
 		return true;

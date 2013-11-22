@@ -322,16 +322,12 @@ class SpecialOpenIDServer extends SpecialOpenID {
 
 		assert( isset( $url ) && strlen( $url ) > 0 );
 
-		wfDebug( "OpenID: OpenIDServer received: '$url'.\n" );
-		wfDebug( "OpenID: OpenIDServer received request: " . print_r( $request, true ) . "\n" );
-
 		# by default, use the $wgUser if s/he is logged-in on this OpenID-Server-Wiki
 
 		# check, if there is an expressed request for a distinct OpenID-Server-Username
 		# from the received OpenID Url /User:Name
 
 		$otherName = $this->UrlToUserName( $url );
-		wfDebug( "OpenID: received name '$otherName'\n");
 
 		# if there is a expressed request for /User:Name and
 		# if this is an existing user Name on the OpenID-Server Wiki
@@ -350,7 +346,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		if ( ( $wgUser->getId() == 0 )
 			|| ( isset( $otherUser ) && ( $otherUser->getId() != $wgUser->getId() ) ) ) {
 
-			wfDebug( "OpenID: User '$otherName' not logged in, prepare login form for '$otherName'\n" );
 			if ( $imm ) {
 				return $request->answer( false, $this->serverUrl() );
 			} else {
@@ -369,13 +364,11 @@ class SpecialOpenIDServer extends SpecialOpenID {
 			}
 		}
 
-		wfDebug( "OpenID: User is logged in\n" );
 		assert( $wgUser->getId() != 0 );
 
 		# Is the user an OpenID user?
 
 		if ( !$wgOpenIDAllowServingOpenIDUserAccounts && $this->getUserOpenIDInformation( $wgUser ) ) {
-			wfDebug( "OpenID: Not one of our users; logs in with OpenID.\n" );
 			return $request->answer( false, $this->serverUrl() );
 		}
 
@@ -408,7 +401,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		# Is there a trust record?
 
 		if ( is_null( $trust ) ) {
-			wfDebug( "OpenID: No trust record.\n" );
 			if ( $imm ) {
 				return $request->answer( false, $this->serverUrl() );
 			} else {
@@ -425,7 +417,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		# NB: exactly equal
 
 		if ( $trust === false ) {
-			wfDebug( "OpenID: User specified not to allow trust.\n" );
 			return $request->answer( false, $this->serverUrl() );
 		}
 
@@ -462,7 +453,6 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		wfSuppressWarnings();
 
 		$response = $request->answer( true, $this->serverUrl(), $this->getLocalIdentity( $wgUser ), null );
-		wfDebug( "OpenID: response: " . print_r( $response, true ) . "\n" );
 
 		wfRestoreWarnings();
 
