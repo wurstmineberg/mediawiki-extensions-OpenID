@@ -542,6 +542,10 @@ See also:
 ** Vidoop
 ** ClaimID
 {{Related|Openid-provider-label}}',
+	'openid-provider-selection-button-login-or-create-account' => 'Button label text for "Log in / create account with OpenID"',
+	'openid-provider-selection-button-login' => 'Button label text for "Log in" only',
+	'openid-provider-selection-button-create-account' => 'Button label text for "Create account" only',
+	'openid-provider-selection-button-convert' => 'Button label text for "Convert or add OpenID"',
 	'specialpages-group-openid' => '{{doc-special-group|that=are related to the OpenID extension|like=[[Special:OpenIDLogin]], [[Special:OpenIDConvert]], [[Special:OpenIDDashboard]], [[Special:OpenIDIdentifier]], [[Special:OpenIDServer]], [[Special:OpenIDXRDS]]}}',
 	'right-openid-converter-access' => '{{doc-right|openid-converter-access}}
 {{doc-singularthey}}',
@@ -573,12 +577,6 @@ See also
 {{Related|Openid-dashboard-number}}',
 	'openid-dashboard-number-users-without-openid' => 'Used as the label in the information table on Special:OpenIDDashboard.
 {{Related|Openid-dashboard-number}}',
-
-	'openid-provider-selection-button-login-or-create-account' => 'Button label text for "Log in / create account with OpenID"',
-	'openid-provider-selection-button-login' => 'Button label text for "Log in" only',
-	'openid-provider-selection-button-create-account' => 'Button label text for "Create account" only',
-	'openid-provider-selection-button-convert' => 'Button label text for "Convert or add OpenID"',
-
 );
 
 /** Afrikaans (Afrikaans)
@@ -1762,7 +1760,8 @@ $messages['de'] = array(
 	'openid-server-identity-page-text' => 'Dies ist eine technische OpenID-Server-Seite während der OpenID-Authentifizierung, die keine weitere Bedeutung hat.',
 	'openidxrds' => 'Yadis-Datei',
 	'openidconvert' => 'OpenID-Konverter',
-	'openiderror' => 'Überprüfungsfehler',
+	'openiderror' => 'OpenID-Fehler',
+	'openid-error-openid-consumer-mode-disabled' => 'Du kannst dich mit OpenID nicht bei diesem Wiki anmelden, da der OpenID-Verbrauchermodus deaktiviert wurde.',
 	'openiderrortext' => 'Ein Fehler ist während der Überprüfung der OpenID-URL aufgetreten.',
 	'openid-error-no-auth' => 'Bei der Verifizierung der OpenID-URL $1 ist ein unspezifizierter Authentifikations-Antwort/Anfragen-Fehler aufgetreten.',
 	'openid-error-server-response' => "Während der Verifizierung der OpenID-URL $1 ist ein Fehler aufgetreten.
@@ -1879,13 +1878,23 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openid-provider-label-aol' => 'Gib deinen AOL-Namen an',
 	'openid-provider-label-wmflabs' => 'Mit deinem Wmflabs-Benutzerkonto anmelden',
 	'openid-provider-label-other-username' => 'Gib deinen „$1“-Benutzernamen an',
+	'openid-provider-selection-button-login-or-create-account' => 'Mit OpenID anmelden / ein Benutzerkonto erstellen',
+	'openid-provider-selection-button-login' => 'Mit OpenID anmelden',
+	'openid-provider-selection-button-create-account' => 'Benutzerkonto mit OpenID erstellen',
+	'openid-provider-selection-button-convert' => 'OpenID konvertieren oder hinzufügen',
 	'specialpages-group-openid' => 'Websites von OpenID-Diensten und Statusinformationen',
 	'right-openid-converter-access' => 'Benutzerkonto zur Nutzung von OpenID erstellen oder konvertieren',
 	'right-openid-dashboard-access' => 'Standardzugang zur OpenID-Übersichts- und Einstellungsseite',
 	'right-openid-dashboard-admin' => 'Administratorzugang zur OpenID-Übersichts- und Einstellungsseite',
+	'right-openid-login-with-openid' => 'Mit OpenID anmelden',
+	'right-openid-create-account-with-openid' => 'Mit OpenID ein Benutzerkonto erstellen',
+	'right-openid-create-account-without-openid' => 'Manuelle Benutzerkontenerstellung ohne OpenID',
 	'action-openid-converter-access' => 'ein Benutzerkonto zur Nutzung von OpenID zu erstellen oder zu konvertieren',
 	'action-openid-dashboard-access' => 'die OpenID-Übersichts- und Einstellungsseite anzusehen',
 	'action-openid-dashboard-admin' => 'die OpenID-Administrator-Übersichts- und -Einstellungsseite anzusehen',
+	'action-openid-login-with-openid' => 'dich mit OpenID anzumelden',
+	'action-openid-create-account-with-openid' => 'ein Benutzerkonto mit OpenID zu erstellen',
+	'action-openid-create-account-without-openid' => 'manuell ein Benutzerkonto ohne OpenID zu erstellen',
 	'openid-dashboard-title' => 'OpenID – Übersicht',
 	'openid-dashboard-title-admin' => 'OpenID – Übersicht und Einstellungen',
 	'openid-dashboard-introduction' => 'Die aktuellen Einstellungen zu OpenID ([$1 Hilfe])',
