@@ -1,6 +1,8 @@
 CHANGES
 =======
-4.00  20131121  introducing OpenID::isAllowedMode()
+
+4.01  20131123  bug 45304 show correct button texts login/create account/convert
+4.00  20131122  introducing OpenID::isAllowedMode()
                 deprecating $wgOpenIDConsumerAndAlsoProvider
 
                 depends on 9a362d64c86989837f9a0755abc7c5a78457ca78 MediaWiki

@@ -122,11 +122,10 @@ class OpenIDProvider {
 				'data-provider-name' => $this->providerName
 			),
 			Html::rawElement( 'label', null, $this->label . '<br />' . $inputHtml ) .
-			Xml::submitButton( wfMessage( 'userlogin' )->text() )
+			Xml::submitButton( OpenID::loginOrCreateAccountOrConvertButtonLabel()  )
 		);
 		return $html;
 	}
-
 
 	/**
 	 * Get the list of major OpenID providers

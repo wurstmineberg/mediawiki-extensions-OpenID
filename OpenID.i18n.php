@@ -171,6 +171,11 @@ You would not able to log in without an OpenID.',
 	'openid-provider-label-wmflabs' => 'Log in using your Wmflabs account',
 	'openid-provider-label-other-username' => 'Enter your $1 username',
 
+	'openid-provider-selection-button-login-or-create-account' => 'Log in / create account with OpenID',
+	'openid-provider-selection-button-login' => 'Log in with OpenID',
+	'openid-provider-selection-button-create-account' => 'Create account with OpenID',
+	'openid-provider-selection-button-convert' => 'Convert or add OpenID',
+
 	'specialpages-group-openid' => 'OpenID service pages and status information',
 
 	# Rights
@@ -568,6 +573,12 @@ See also
 {{Related|Openid-dashboard-number}}',
 	'openid-dashboard-number-users-without-openid' => 'Used as the label in the information table on Special:OpenIDDashboard.
 {{Related|Openid-dashboard-number}}',
+
+	'openid-provider-selection-button-login-or-create-account' => 'Button label text for "Log in / create account with OpenID"',
+	'openid-provider-selection-button-login' => 'Button label text for "Log in" only',
+	'openid-provider-selection-button-create-account' => 'Button label text for "Create account" only',
+	'openid-provider-selection-button-convert' => 'Button label text for "Convert or add OpenID"',
+
 );
 
 /** Afrikaans (Afrikaans)

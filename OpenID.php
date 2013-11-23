@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '4.00 20131122' );
+define( 'MEDIAWIKI_OPENID_VERSION', '4.01 20131123' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -576,5 +576,35 @@ class OpenID {
 			''
 		);
 	}
+
+	/**
+	 * @return string
+	 */
+	public static function loginOrCreateAccountOrConvertButtonLabel() {
+		global $wgUser, $wgOut;
+
+		if ( $wgOut->getTitle()->equals( SpecialPage::getTitleFor( 'OpenIDConvert' ) ) ) {
+
+			return wfMessage( 'openid-provider-selection-button-convert' )->text();
+
+		} else {
+
+			if ( $wgUser->isAllowed( 'openid-create-account-with-openid' )
+				&& !$wgUser->isAllowed( 'openid-login-with-openid' ) ) {
+				return wfMessage( 'openid-provider-selection-button-create-account' )->text();
+			}
+
+			if ( !$wgUser->isAllowed( 'openid-create-account-with-openid' )
+				&& $wgUser->isAllowed( 'openid-login-with-openid' ) ) {
+				return wfMessage( 'openid-provider-selection-button-login' )->text();
+			}
+
+			return wfMessage( 'openid-provider-selection-button-login-or-create-account' )->text();
+
+		}
+
+
+	}
+
 
 } /* class OpenID */

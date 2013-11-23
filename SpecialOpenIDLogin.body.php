@@ -516,7 +516,7 @@ class SpecialOpenIDLogin extends SpecialOpenID {
 				array(
 					'class' => 'mw-submit'
 				),
-				Xml::submitButton( wfMessage( 'userlogin' )->text(), array( 'name' => 'wpOK' ) ) .
+				Xml::submitButton( OpenID::loginOrCreateAccountOrConvertButtonLabel(), array( 'name' => 'wpOK' ) ) .
 				Xml::submitButton( wfMessage( 'cancel' )->text(), array( 'name' => 'wpCancel' ) )
 			) .
 			Xml::closeElement( 'tr' ) .
