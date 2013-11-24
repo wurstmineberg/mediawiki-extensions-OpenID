@@ -1,5 +1,5 @@
 #openid_form {
-	width: 470px;
+	width: 550px;
 }
 
 #openid_form legend {
@@ -52,6 +52,13 @@
 	background-color: #fff;
 	color: #000;
 	padding-left: 18px;
+}
+
+.openid-provider-selection-input {
+	width: 15em;
+}
+#openid-provider-selection-submit-button {
+	margin-left: 3px;
 }
 
 #openid_provider_selection_error_box {
