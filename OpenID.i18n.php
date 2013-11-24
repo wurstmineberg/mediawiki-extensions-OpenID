@@ -543,7 +543,8 @@ See also:
 ** ClaimID
 {{Related|Openid-provider-label}}',
 	'openid-provider-selection-button-login-or-create-account' => 'Button label text for "Log in / create account with OpenID"',
-	'openid-provider-selection-button-login' => 'Button label text for "Log in" only',
+	'openid-provider-selection-button-login' => 'Button label text for "Log in" only.
+{{Identical|Login with OpenID}}',
 	'openid-provider-selection-button-create-account' => 'Button label text for "Create account" only',
 	'openid-provider-selection-button-convert' => 'Button label text for "Convert or add OpenID"',
 	'specialpages-group-openid' => '{{doc-special-group|that=are related to the OpenID extension|like=[[Special:OpenIDLogin]], [[Special:OpenIDConvert]], [[Special:OpenIDDashboard]], [[Special:OpenIDIdentifier]], [[Special:OpenIDServer]], [[Special:OpenIDXRDS]]}}',
@@ -553,12 +554,19 @@ See also:
 the standard access right for the OpenID dashboard, which is a restricted special page',
 	'right-openid-dashboard-admin' => '{{doc-right|openid-dashboard-admin}}
 the special adminstrator access right for the OpenID dashboard, which is a restricted special page',
+	'right-openid-login-with-openid' => '{{doc-right|openid-login-with-openid}}',
+	'right-openid-create-account-with-openid' => '{{doc-right|openid-create-account-with-openid}}',
+	'right-openid-create-account-without-openid' => '{{doc-right|openid-create-account-without-openid}}',
 	'action-openid-converter-access' => '{{doc-action|openid-converter-access}}
 {{doc-singularthey}}',
 	'action-openid-dashboard-access' => '{{doc-action|openid-dashboard-access}}
 the standard access right for the OpenID dashboard, which is a restricted special page',
 	'action-openid-dashboard-admin' => '{{doc-action|openid-dashboard-admin}}
 the special adminstrator access right for the OpenID dashboard, which is a restricted special page',
+	'action-openid-login-with-openid' => '{{doc-action|openid-login-with-openid}}
+{{Identical|Login with OpenID}}',
+	'action-openid-create-account-with-openid' => '{{doc-action|openid-create-account-with-openid}}',
+	'action-openid-create-account-without-openid' => '{{doc-action|openid-create-account-without-openid}}',
 	'openid-dashboard-title' => '{{doc-special|OpenIDDashboard}}
 This title is for non-admins.
 
@@ -2304,6 +2312,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
  * @author Drini
  * @author Fitoschido
  * @author Imre
+ * @author Larjona
  * @author McDutchie
  * @author Sanbec
  * @author Translationista
@@ -2312,11 +2321,14 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
  */
 $messages['es'] = array(
 	'openid-desc' => 'Permite a los usuarios iniciar sesión en el wiki con un [//openid.net/ OpenID]. Si esto está activado en el wiki, también pueden utilizar su URL de cuenta de usuario de este wiki como OpenID para iniciar sesión en otros sitios web que utilicen OpenID',
+	'openididentifier' => 'Identificador de OpenID',
 	'openidlogin' => 'Iniciar sesión / crear cuenta con OpenID',
 	'openidserver' => 'Servidor de OpenID',
+	'openid-identifier-page-text-user' => 'Esta página es el identificador para el usuario «$1».',
 	'openidxrds' => 'Archivo de Yadis',
 	'openidconvert' => 'Convertidor de OpenID',
-	'openiderror' => 'Error de verificación',
+	'openiderror' => 'Error de OpenID',
+	'openid-error-openid-consumer-mode-disabled' => 'No puede iniciar sesión con OpenID en esta wiki, porque el modo de consumo de OpenID se ha deshabilitado.',
 	'openiderrortext' => 'Un error ocurrió durante la verificación del URL de OpenID.',
 	'openidconfigerror' => 'Error de configuración de OpenID',
 	'openidconfigerrortext' => 'La configuración de almacenamiento OpenID de este wiki es inválido.
@@ -2394,6 +2406,7 @@ No podrás iniciar sesión sin un OpenID.',
 	'openiddelete-error' => 'Ocurrió un error al eliminar el OpenID de tu cuenta.',
 	'openid-openids-were-not-merged' => 'El(los) OpenID(s) no se fusionaron cuando se fusionaban las cuentas de usuario.',
 	'prefs-openid-show-openid' => 'Ocultar tu OpenID en tu página de usuario, si inicias sesión con OpenID.',
+	'prefs-openid-userinfo-update-on-login' => 'Actualización de información de usuario de OpenID',
 	'openid-userinfo-update-on-login-label' => 'Actualizar la siguiente información desde mi perfil OpenID cada vez que inicie sesión:', # Fuzzy
 	'openid-associated-openids-label' => 'Los OpenID asociados a tu cuenta:',
 	'openid-urls-url' => 'Dirección URL',
@@ -2401,19 +2414,34 @@ No podrás iniciar sesión sin un OpenID.',
 	'openid-urls-registration' => 'Fecha y hora de registro',
 	'openid-urls-delete' => 'Eliminar',
 	'openid-add-url' => 'Añadir un OpenID nuevo', # Fuzzy
+	'openid-trusted-sites-table-header-column-action' => 'Acción',
+	'openid-trusted-sites-delete-link-action-text' => 'Eliminar',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Confirmar',
+	'openid-local-identity' => 'Tu OpenID:',
 	'openid-login-or-create-account' => 'Iniciar sesión o crear una cuenta nueva',
 	'openid-provider-label-openid' => 'Introduce la URL de OpenID',
 	'openid-provider-label-google' => 'Iniciar sesión usando tu cuenta de Google',
 	'openid-provider-label-yahoo' => 'Iniciar sesión usando tu cuenta de Yahoo',
 	'openid-provider-label-aol' => 'Introduce tu nombre de usuario de AOL',
+	'openid-provider-label-wmflabs' => 'Acceder con tu cuenta de Wmflabs',
 	'openid-provider-label-other-username' => 'Introduce tu nombre de usuario de $1',
+	'openid-provider-selection-button-login-or-create-account' => 'Iniciar sesión / crear cuenta con OpenID',
+	'openid-provider-selection-button-login' => 'Iniciar sesión con OpenID',
+	'openid-provider-selection-button-create-account' => 'Crear cuenta con OpenID',
+	'openid-provider-selection-button-convert' => 'Convertir o añadir OpenID',
 	'specialpages-group-openid' => 'Páginas de servicio de OpenID e información de estado',
 	'right-openid-converter-access' => 'Puede agregar o convertir su cuenta para utilizar identidades OpenID',
 	'right-openid-dashboard-access' => 'Acceso estándar al tablero de OpenID',
 	'right-openid-dashboard-admin' => 'Acceso de administrador al tablero de OpenID',
+	'right-openid-login-with-openid' => 'Puede iniciar sesión con OpenID',
+	'right-openid-create-account-with-openid' => 'Puede crear una cuenta con OpenID',
+	'right-openid-create-account-without-openid' => 'Creación manual de cuenta sin OpenID',
 	'action-openid-converter-access' => 'añadir o convertir tu cuenta para utilizar identidades OpenID',
 	'action-openid-dashboard-access' => 'acceder al tablero del OpenID',
 	'action-openid-dashboard-admin' => 'acceder al tablero de administración del OpenID',
+	'action-openid-login-with-openid' => 'iniciar sesión con OpenID',
+	'action-openid-create-account-with-openid' => 'crear una cuenta con OpenID',
+	'action-openid-create-account-without-openid' => 'crear manualmente una cuenta, sin OpenID',
 	'openid-dashboard-title' => 'Tablero de OpenID',
 	'openid-dashboard-title-admin' => 'Tablero de OpenID (administrador)',
 	'openid-dashboard-introduction' => 'La configuración actual de la extensión de OpenID ([$1 ayuda])',
@@ -2622,7 +2650,8 @@ $messages['fr'] = array(
 	'openid-server-identity-page-text' => 'Ceci est une page du serveur technique OpenID pour démarrer l’authentification OpenID. La page n’a pas d’autre but.',
 	'openidxrds' => 'Fichier Yadis',
 	'openidconvert' => 'Convertisseur OpenID',
-	'openiderror' => 'Erreur de vérification',
+	'openiderror' => 'Erreur OpenID',
+	'openid-error-openid-consumer-mode-disabled' => 'Vous ne pouvez vous identifier avec OpenID à ce wiki, car le mode de consommation OpenID a été désactivé.',
 	'openiderrortext' => 'Une erreur est intervenue pendant la vérification de l’adresse OpenID.',
 	'openid-error-no-auth' => 'Une erreur de question/réponse d’authentification non spécifiée s’est produite pendant la vérification de l’URL d’OpenID $1.',
 	'openid-error-server-response' => 'Une erreur s’est produite durant la vérification de l’URL d’OpenID $1.
@@ -2740,13 +2769,23 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-provider-label-aol' => 'Entrez votre nom AOL',
 	'openid-provider-label-wmflabs' => 'Vous connecter en utilisant votre compte Wmflabs',
 	'openid-provider-label-other-username' => 'Entrez votre nom d’utilisateur $1',
+	'openid-provider-selection-button-login-or-create-account' => 'Se connecter ou créer un compte avec OpenID',
+	'openid-provider-selection-button-login' => 'Connectez-vous avec OpenID',
+	'openid-provider-selection-button-create-account' => 'Créer un compte avec OpenID',
+	'openid-provider-selection-button-convert' => 'Convertir ou ajouter OpenID',
 	'specialpages-group-openid' => "Pages de service OpenID et d'information sur le statut",
 	'right-openid-converter-access' => 'Peut ajouter ou convertir leur compte pour utiliser les identités OpenID',
 	'right-openid-dashboard-access' => 'Accès standard au tableau de bord OpenID',
 	'right-openid-dashboard-admin' => 'Accès administrateur au tableau de bord OpenID',
+	'right-openid-login-with-openid' => 'Connexion autorisé avec OpenID',
+	'right-openid-create-account-with-openid' => 'Peut créer un compte avec OpenID',
+	'right-openid-create-account-without-openid' => 'Création manuelle de compte sans OpenID',
 	'action-openid-converter-access' => 'ajouter ou convertir votre compte pour utiliser les identifiants OpenID',
 	'action-openid-dashboard-access' => 'accès au tableau de bord OpenID',
 	'action-openid-dashboard-admin' => 'accéder au tableau de bord de l’administrateur OpenID',
+	'action-openid-login-with-openid' => 'Connexion avec OpenID',
+	'action-openid-create-account-with-openid' => 'Créer un compte avec OpenID',
+	'action-openid-create-account-without-openid' => "créer manuellement un compte c'est-à-dire sans OpenID",
 	'openid-dashboard-title' => 'Tableau de bord OpenID',
 	'openid-dashboard-title-admin' => 'Tableau de bord OpenID (administrateur)',
 	'openid-dashboard-introduction' => "Les paramètres actuels de l'extension OpenID ([$1 aide])",
@@ -3635,6 +3674,18 @@ Nem tudnál bejelentkezni OpenID nélkül.',
 	'openid-dashboard-number-users-without-openid' => 'OpenID nélküli felhasználók száma',
 );
 
+/** Armenian (Հայերեն)
+ * @author M hamlet
+ */
+$messages['hy'] = array(
+	'openiderror' => 'OpenID սխալ',
+	'openid-provider-selection-button-login-or-create-account' => 'Մուտք գործել / ստեղծել հաշիվ OpenID֊ի միջոցով',
+	'openid-provider-selection-button-login' => 'Մուտք գործել OpenID֊ի միջոցով',
+	'openid-provider-selection-button-create-account' => 'Ստեղծել հաշիվ OpenID֊ի միջոցով',
+	'action-openid-login-with-openid' => 'մուտք գործել OpenID֊ի միջոցով',
+	'action-openid-create-account-with-openid' => 'ստեղծել հաշիվ OpenID֊ի միջոցով',
+);
+
 /** Interlingua (interlingua)
  * @author Malafaya
  * @author McDutchie
@@ -3850,6 +3901,17 @@ Anda tidak akan dapat masuk log tanpa OpenID.',
 	'openid-provider-label-other-username' => 'Masukkan nama pengguna $1 Anda',
 );
 
+/** Interlingue (Interlingue)
+ * @author Makuba
+ */
+$messages['ie'] = array(
+	'openiderror' => 'OpenID-erra',
+	'openid-error-openid-consumer-mode-disabled' => 'Tu ne posse inregistrar per OpenID in ti wiki, proque li OpenID-mode de consumers ha esset desactivat.',
+	'openid-provider-selection-button-login' => 'Inregistrar per OpenID',
+	'right-openid-create-account-with-openid' => 'Crear un conto per OpenID',
+	'action-openid-create-account-without-openid' => 'por manualmen crear un conto sin OpenID',
+);
+
 /** Igbo (Igbo)
  * @author Ukabia
  */
@@ -4017,7 +4079,8 @@ $messages['ja'] = array(
 それ以外の目的はありません。',
 	'openidxrds' => 'Yadis ファイル',
 	'openidconvert' => 'OpenID コンバーター',
-	'openiderror' => '検証エラー',
+	'openiderror' => 'OpenID エラー',
+	'openid-error-openid-consumer-mode-disabled' => 'このウィキでは OpenID のコンシューマー モードが無効化されているため、OpenID でログインできません。',
 	'openiderrortext' => 'OpenID URL の検証中にエラーが発生しました。',
 	'openid-error-no-auth' => 'OpenID URL $1 を検証する際に、不明な認証レスポンス/リクエスト エラーが発生しました。',
 	'openid-error-server-response' => "OpenID URL $1 を検証する際にエラーが発生しました。
@@ -4129,13 +4192,23 @@ $messages['ja'] = array(
 	'openid-provider-label-aol' => 'あなたの AOL スクリーンネームを入力してください',
 	'openid-provider-label-wmflabs' => 'あなたの Wmflabs アカウントを使用してログインしてください',
 	'openid-provider-label-other-username' => 'あなたの $1 でのユーザー名を入力してください',
+	'openid-provider-selection-button-login-or-create-account' => 'OpenID でログイン / アカウント作成',
+	'openid-provider-selection-button-login' => 'OpenID でログイン',
+	'openid-provider-selection-button-create-account' => 'OpenID でアカウントを作成',
+	'openid-provider-selection-button-convert' => 'OpenID を変換または追加',
 	'specialpages-group-openid' => 'OpenID のサービスページとステータス情報',
 	'right-openid-converter-access' => 'OpenID を使用するアカウントを追加/変換',
 	'right-openid-dashboard-access' => 'OpenID ダッシュボードに標準アクセス',
 	'right-openid-dashboard-admin' => 'OpenID ダッシュボードに管理者アクセス',
+	'right-openid-login-with-openid' => 'OpenID でログイン',
+	'right-openid-create-account-with-openid' => 'OpenID でアカウントを作成',
+	'right-openid-create-account-without-openid' => 'OpenID なしでアカウントを手動作成',
 	'action-openid-converter-access' => 'OpenID を使用するアカウントの追加/変換',
 	'action-openid-dashboard-access' => 'OpenID ダッシュボードへのアクセス',
 	'action-openid-dashboard-admin' => 'OpenID 管理者ダッシュボードへのアクセス',
+	'action-openid-login-with-openid' => 'OpenID でのログイン',
+	'action-openid-create-account-with-openid' => 'OpenID でのアカウント作成',
+	'action-openid-create-account-without-openid' => '手動 (OpenID なし) でのアカウント作成',
 	'openid-dashboard-title' => 'OpenID ダッシュボード',
 	'openid-dashboard-title-admin' => 'OpenID ダッシュボード (管理者)',
 	'openid-dashboard-introduction' => '現在の OpenID 拡張機能の設定 ([$1 ヘルプ])',
@@ -4613,7 +4686,7 @@ $messages['lb'] = array(
 	'openidserver' => 'OpenID-Server',
 	'openidxrds' => 'Yadis Fichier',
 	'openidconvert' => 'OpenID-Ëmwandler',
-	'openiderror' => 'Feeler bei der Iwwerpréifung',
+	'openiderror' => 'OpenID Feeler',
 	'openiderrortext' => 'Beim Iwwerpréifen vun der OpenID URL ass e Feeler geschitt.',
 	'openidconfigerror' => 'OpenId-Konfiguratiounsfeeler',
 	'openidconfigerrortext' => "D'OpenID-Späicherastellung fir dës Wiki ass falsch.
@@ -4705,6 +4778,9 @@ Dir kéint Iech ouni OpenID net aloggen.',
 	'openid-provider-label-yahoo' => 'Loggt Iech mat Ärem Yahoo-Benotzerkont an',
 	'openid-provider-label-aol' => 'Gitt Ären AOL Numm un',
 	'openid-provider-label-other-username' => 'Gitt Äre(n) $1 Benotzernumm un',
+	'openid-provider-selection-button-login' => 'Alogge mat OpenID',
+	'action-openid-login-with-openid' => 'alogge mat OpenID',
+	'action-openid-create-account-with-openid' => 'e Benotzerkont mat OpenID uleeën',
 	'openid-dashboard-number-openid-users' => 'Zuel vun de Benotzer mat OpenID',
 	'openid-dashboard-number-users-without-openid' => 'Zuel vun de Benotzer ouni OpenID',
 );
@@ -5186,6 +5262,7 @@ Anda tidak boleh log masuk tanpa OpenID.',
  * @author Roderick Mallia
  */
 $messages['mt'] = array(
+	'openiderror' => 'Żball fl-OpenID',
 	'openidlanguage' => 'Lingwa',
 	'openidchooseusername' => 'Isem tal-utent',
 	'openidchoosepassword' => 'Password:',
@@ -6342,7 +6419,8 @@ $messages['ru'] = array(
 У этой страницы нет других предназначений.',
 	'openidxrds' => 'Файл Yadis',
 	'openidconvert' => 'Преобразователь OpenID',
-	'openiderror' => 'Ошибка проверки полномочий',
+	'openiderror' => 'Ошибка OpenID',
+	'openid-error-openid-consumer-mode-disabled' => 'Вы не можете войти с помощью OpenID в эту вики, потому что использование OpenID было отключено.',
 	'openiderrortext' => 'Во время проверки адреса OpenID произошла ошибка.',
 	'openid-error-no-auth' => 'Произошла неопределенная ошибка ответа/запроса при проверке подлинности OpenID-адреса $1.',
 	'openid-error-server-response' => "Произошла ошибка при проверке OpenID-адреса $1.
@@ -6461,13 +6539,23 @@ OpenID позволяет вам заходить на различные веб
 	'openid-provider-label-aol' => 'Введите ваше имя в AOL',
 	'openid-provider-label-wmflabs' => 'Представиться, используя учётную запись Wmflabs',
 	'openid-provider-label-other-username' => 'Введите ваше имя участника $1',
+	'openid-provider-selection-button-login-or-create-account' => 'Войти / создать учётную запись с помощью OpenID',
+	'openid-provider-selection-button-login' => 'Войти с помощью OpenID',
+	'openid-provider-selection-button-create-account' => 'Создать учётную запись с помощью OpenID',
+	'openid-provider-selection-button-convert' => 'Конвертировать или добавить OpenID',
 	'specialpages-group-openid' => 'Страницы обслуживания OpenID и информация о состоянии',
 	'right-openid-converter-access' => 'Может добавлять или преобразовывать свою учётную запись для использования OpenID',
 	'right-openid-dashboard-access' => 'Стандартный доступ к панели наблюдения OpenID',
 	'right-openid-dashboard-admin' => 'Администраторский доступ к панели наблюдения OpenID',
+	'right-openid-login-with-openid' => 'Вход с помощью OpenID',
+	'right-openid-create-account-with-openid' => 'Создание учётной записи с помощью OpenID',
+	'right-openid-create-account-without-openid' => 'Ручное создание учётной записи без OpenID',
 	'action-openid-converter-access' => 'добавление или преобразование вашей учётной записи для использования удостоверений OpenID',
 	'action-openid-dashboard-access' => 'доступ к панели наблюдения OpenID',
 	'action-openid-dashboard-admin' => 'доступ к администраторской панели наблюдения OpenID',
+	'action-openid-login-with-openid' => 'вход с помощью OpenID',
+	'action-openid-create-account-with-openid' => 'создание учётной записи с помощью OpenID',
+	'action-openid-create-account-without-openid' => 'ручное создание учётной записи (без OpenID)',
 	'openid-dashboard-title' => 'панель OpenID',
 	'openid-dashboard-title-admin' => 'Панель OpenID (администратор)',
 	'openid-dashboard-introduction' => 'Текущие настройки расширения OpenID ([$1 помощь])',
@@ -7599,7 +7687,8 @@ $messages['uk'] = array(
 	'openid-server-identity-page-text' => 'Це технічна сторінка сервера OpenID, призначена для запуску OpenID-аутентифікації. Сторінка не має іншої мети.',
 	'openidxrds' => 'Файл Yadis',
 	'openidconvert' => 'Перетворювач OpenID',
-	'openiderror' => 'Помилка перевірки повноважень',
+	'openiderror' => 'Помилка OpenID',
+	'openid-error-openid-consumer-mode-disabled' => 'Вам не вдасться увійти за допомогою OpenID для цієї вікі, тому що режим клієнта OpenID вже вимкнено.',
 	'openiderrortext' => 'Під час перевірки адреси OpenID сталася помилка.',
 	'openid-error-no-auth' => 'При перевірці OpenID URL $1 трапилася помилка відповіді/запиту невизначеної автентифікації.',
 	'openid-error-server-response' => 'Сталася помилка при перевірці OpenID URL $1.
@@ -7716,13 +7805,23 @@ OpenID дозволяє Вам заходити на різні сайти, не
 	'openid-provider-label-aol' => "Введіть ваше ім'я в AOL",
 	'openid-provider-label-wmflabs' => 'Увійти в систему з допомогою облікового запису Wmflabs',
 	'openid-provider-label-other-username' => "Введіть Ваше ім'я користувача $1",
+	'openid-provider-selection-button-login-or-create-account' => 'Ввійти/створити профіль з OpenID',
+	'openid-provider-selection-button-login' => 'Увійти з допомогою OpenID',
+	'openid-provider-selection-button-create-account' => 'Створити обліковий запис з OpenID',
+	'openid-provider-selection-button-convert' => 'Перетворити або додати OpenID',
 	'specialpages-group-openid' => 'Службові сторіки OpenID та інформація про статус',
 	'right-openid-converter-access' => 'Можливість додавати або конвертувати свій обліковий запис для використання OpenID',
 	'right-openid-dashboard-access' => 'Стандартний доступ до панелі OpenID',
 	'right-openid-dashboard-admin' => 'Доступ адміністратора до панелі OpenID',
+	'right-openid-login-with-openid' => 'Можна увійти з OpenID',
+	'right-openid-create-account-with-openid' => 'Можна створити обліковий запис з OpenID',
+	'right-openid-create-account-without-openid' => 'Створення ручного облікового запису без OpenID',
 	'action-openid-converter-access' => 'додавання/перетворення свого облікового запису для використання OpenID',
 	'action-openid-dashboard-access' => 'доступ до панелі OpenID',
 	'action-openid-dashboard-admin' => 'доступ до панелі адміністратора OpenID',
+	'action-openid-login-with-openid' => 'вхід з OpenID',
+	'action-openid-create-account-with-openid' => 'створити обліковий запис з OpenID',
+	'action-openid-create-account-without-openid' => 'вручну створити обліковий запис, тобто без OpenID',
 	'openid-dashboard-title' => 'Панель OpenID',
 	'openid-dashboard-title-admin' => 'Панель OpenID (адміністратор)',
 	'openid-dashboard-introduction' => 'Поточні налаштування розширення OpenID ([$1 довідка])',
