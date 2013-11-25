@@ -587,7 +587,7 @@ See also
 {{Related|Openid-dashboard-number}}',
 	'openid-dashboard-number-users-without-openid' => 'Used as the label in the information table on Special:OpenIDDashboard.
 {{Related|Openid-dashboard-number}}',
-	'openid-empty-param-error' => 'Message displayed on the provider selection form when a user fails to enter a username for providers that require it'
+	'openid-empty-param-error' => 'Message displayed on the provider selection form when a user fails to enter a username for providers that require it',
 );
 
 /** Afrikaans (Afrikaans)
@@ -1912,6 +1912,7 @@ Ohne OpenID könntest du dich nicht mehr anmelden.',
 	'openid-dashboard-number-openid-users' => 'Anzahl der Benutzer mit mindestens einer OpenID',
 	'openid-dashboard-number-openids-in-database' => 'Anzahl der OpenIDs (gesamt)',
 	'openid-dashboard-number-users-without-openid' => 'Anzahl der Benutzer ohne OpenID',
+	'openid-empty-param-error' => 'Bitte gib deinen Benutzernamen beziehungsweise deine OpenID-URL ein.',
 );
 
 /** German (formal address) (Deutsch (Sie-Form)‎)
@@ -4855,7 +4856,7 @@ $messages['mk'] = array(
 	'openid-server-identity-page-text' => 'Ова е техничка страница на опслужувачот на OpenID што се однесува на започнувањето на заверката. Страницата нема друга цел.',
 	'openidxrds' => 'Yadis податотека',
 	'openidconvert' => 'OpenID претворач',
-	'openiderror' => 'Грешка при потврдувањето',
+	'openiderror' => 'Грешка во OpenID',
 	'openiderrortext' => 'Настана грешка при потврдувањето на URL адресата на OpenID.',
 	'openid-error-no-auth' => 'Се појави неукажана грешка во одговорот на/барањето за заверка при проверката на URL-адресата $1 за OpenID.',
 	'openid-error-server-response' => "Се појави грешка при заверката на URL-адресата $1 за OpenID.
@@ -4973,13 +4974,23 @@ OpenID ви овозможува да се најавувате на многу 
 	'openid-provider-label-aol' => 'Внесете го вашето име на AOL',
 	'openid-provider-label-wmflabs' => 'Најавете се со вашата сметка на Wmflabs',
 	'openid-provider-label-other-username' => 'Внесете го вашето $1 корисничко име',
+	'openid-provider-selection-button-login-or-create-account' => 'Најава / регистрација со OpenID',
+	'openid-provider-selection-button-login' => 'Најава со OpenID',
+	'openid-provider-selection-button-create-account' => 'Направи сметка со OpenID',
+	'openid-provider-selection-button-convert' => 'Претвори или додај OpenID',
 	'specialpages-group-openid' => 'Службени страници и статусни информации на OpenID',
 	'right-openid-converter-access' => 'Може да ја додава или претвора својата сметка за употреба на OpenID-идентитети',
 	'right-openid-dashboard-access' => 'Стандарден пристап до таблата на OpenID',
 	'right-openid-dashboard-admin' => 'Администраторски пристап до таблата на OpenID',
+	'right-openid-login-with-openid' => 'Можност за најава со OpenID',
+	'right-openid-create-account-with-openid' => 'Можност за создавање на сметки со OpenID',
+	'right-openid-create-account-without-openid' => 'Рачно создавање на сметки без OpenID',
 	'action-openid-converter-access' => 'додавање или претворање на вашата сметка за да користи идентитети со OpenID',
 	'action-openid-dashboard-access' => 'пристап на контролната табла на OpenID',
 	'action-openid-dashboard-admin' => 'пристап на администраторската контролна табла на OpenID',
+	'action-openid-login-with-openid' => 'најава со OpenID',
+	'action-openid-create-account-with-openid' => 'создавање на сметки со OpenID',
+	'action-openid-create-account-without-openid' => 'рачно создавање на сметки, т.е. без OpenID',
 	'openid-dashboard-title' => 'Табла на OpenID',
 	'openid-dashboard-title-admin' => 'Табла на OpenID (администратор)',
 	'openid-dashboard-introduction' => 'Тековни нагодувања на додатокот за OpenID ([$1 помош])',
@@ -5294,7 +5305,7 @@ $messages['myv'] = array(
 	'openidoptional' => 'Мелень коряс',
 	'openidrequired' => 'Тентеме кодаяк',
 	'openidnickname' => 'Путонь лем',
-	'openidfullname' => 'Лем педе-пес', # Fuzzy
+	'openidfullname' => 'Алкуксонь леметь',
 	'openidemail' => 'Е-сёрма парго',
 	'openidlanguage' => 'Кель',
 	'openidtimezone' => 'Шкань каркс',
@@ -5452,7 +5463,7 @@ $messages['nl'] = array(
 	'openid-server-identity-page-text' => 'Dit is een technische pagina voor OpenID-server voor het beginnen van de OpenID-authenticatie. De pagina heeft geen ander doel.',
 	'openidxrds' => 'Yadis-bestand',
 	'openidconvert' => 'OpenID-convertor',
-	'openiderror' => 'Controlefout',
+	'openiderror' => 'Controlefout', # Fuzzy
 	'openiderrortext' => 'Er is een fout opgetreden tijdens de verificatie van de OpenID URL.',
 	'openid-error-request-forgery' => 'Er is een fout opgetreden: er is een ongeldig token aangetroffen.',
 	'openid-error-wrong-force-provider-setting' => 'Er is een interne fout opgetreden: er is een onjuiste URL-waarde aangetroffen voor de geforceerde provider "$1".',
@@ -5564,6 +5575,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'openid-provider-label-aol' => 'Aanmelden met uw AOL-gebruiker',
 	'openid-provider-label-wmflabs' => 'Aanmelden met uw gebruiker van WMF-labs',
 	'openid-provider-label-other-username' => 'Geef uw gebruikersnaam bij $1 in',
+	'openid-provider-selection-button-login' => 'Aanmelden met OpenID',
 	'specialpages-group-openid' => "OpenID-servicepagina's en statusinformatie",
 	'right-openid-converter-access' => 'Kan gebruiker toevoegen of converteren om OpenID-identiteiten te gebruiken',
 	'right-openid-dashboard-access' => 'Standaard toegang tot het OpenID-dashboard',
@@ -5571,6 +5583,7 @@ Dan zou u niet langer kunnen aanmelden zonder een OpenID.",
 	'action-openid-converter-access' => 'uw gebruiker toe te voegen of te converteren om OpenID-identiteiten te gebruiken',
 	'action-openid-dashboard-access' => 'toegang te krijgen tot het OpenID-dashboard',
 	'action-openid-dashboard-admin' => 'toegang te krijgen tot het OpenID-beheerdersdashboard',
+	'action-openid-login-with-openid' => 'aanmelden met OpenID',
 	'openid-dashboard-title' => 'OpenID-dashboard',
 	'openid-dashboard-title-admin' => 'OpenID-dashboard (beheerder)',
 	'openid-dashboard-introduction' => 'De huidige instellingen van de OpenID-uitbreiding ([$1 hulp])',
@@ -8128,9 +8141,9 @@ $messages['zh-hans'] = array(
 	'openid-identifier-page-text-no-such-local-openid' => '这是一个无效的本地OpenID标识符。',
 	'openidxrds' => 'Yadis文件',
 	'openidconvert' => 'OpenID转换',
-	'openiderror' => '验证错误',
+	'openiderror' => '验证错误', # Fuzzy
 	'openiderrortext' => '在验证OpenID地址时出现了一个错误。',
-	'openid-error-request-forgery' => '发生错误：发现无效权标。',
+	'openid-error-request-forgery' => '出错：找到无效密钥。',
 	'openidconfigerror' => 'OpenID配置出错',
 	'openidconfigerrortext' => 'OpenID存储配置对此wiki是无效的。
 请联系[[Special:ListUsers/sysop|管理员]]。',
