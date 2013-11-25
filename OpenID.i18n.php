@@ -201,7 +201,7 @@ You would not able to log in without an OpenID.',
 	'openid-dashboard-number-openids-in-database' => 'Number of OpenIDs (total)',
 	'openid-dashboard-number-users-without-openid' => 'Number of users without OpenID',
 
-	'openid-empty-param-error' => 'Please fill in your username respectively your OpenID Url.'
+	'openid-empty-param-error' => 'Please fill in your username respectively your OpenID URL.'
 );
 
 /** Message documentation (Message documentation)
