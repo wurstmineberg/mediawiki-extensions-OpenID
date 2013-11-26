@@ -2796,6 +2796,7 @@ Vous ne pourriez pas vous connecter sans un OpenID.",
 	'openid-dashboard-number-openid-users' => "Nombre d'utilisateurs avec OpenID",
 	'openid-dashboard-number-openids-in-database' => 'Nombre de OpenID (total)',
 	'openid-dashboard-number-users-without-openid' => "Nombre d'utilisateurs sans OpenID",
+	'openid-empty-param-error' => 'Veuillez remplir votre nom d’utilisateur, respectivement votre Url d’OpenID.',
 );
 
 /** Franco-Provençal (arpetan)
@@ -4219,6 +4220,7 @@ $messages['ja'] = array(
 	'openid-dashboard-number-openid-users' => 'OpenID を持つ利用者の数',
 	'openid-dashboard-number-openids-in-database' => 'OpenID の数 (合計)',
 	'openid-dashboard-number-users-without-openid' => 'OpenID を持たない利用者の数',
+	'openid-empty-param-error' => 'OpenID URL それぞれについて利用者名を記入してください。',
 );
 
 /** Javanese (Basa Jawa)
@@ -5818,7 +5820,7 @@ $messages['pl'] = array(
 	'openidserver' => 'Serwer OpenID',
 	'openidxrds' => 'Plik Yadis',
 	'openidconvert' => 'Obsługa OpenID',
-	'openiderror' => 'Błąd weryfikacji',
+	'openiderror' => 'Błąd OpenID',
 	'openiderrortext' => 'Wystąpił błąd podczas weryfikacji adresu URL OpenID.',
 	'openidconfigerror' => 'Błąd konfiguracji OpenID',
 	'openidconfigerrortext' => 'Konfiguracja przechowywania w OpenID dla tej wiki jest nieprawidłowa.
@@ -5915,6 +5917,8 @@ Nie będziesz mógł się zalogować bez OpenID.',
 	'openid-provider-label-aol' => 'Wprowadź nazwę wyświetlaną AOL',
 	'openid-provider-label-wmflabs' => 'Zaloguj się korzystając z konta Wmflabs',
 	'openid-provider-label-other-username' => 'Wprowadź swoją nazwę użytkownika $1',
+	'openid-provider-selection-button-login-or-create-account' => 'Zaloguj lub utwórz konto korzystając z OpenID',
+	'openid-provider-selection-button-login' => 'Zaloguj używając OpenID',
 	'specialpages-group-openid' => 'OpenID – strony diagnostyczne i statusu',
 	'right-openid-converter-access' => 'Można dodać lub przystosować ich konto do używania tożsamości OpenID',
 	'right-openid-dashboard-access' => 'Standardowy dostęp do zarządzania OpenID',
@@ -6578,6 +6582,7 @@ OpenID позволяет вам заходить на различные веб
 	'openid-dashboard-number-openid-users' => 'Чисто пользователей с OpenID',
 	'openid-dashboard-number-openids-in-database' => 'Число OpenID (всего)',
 	'openid-dashboard-number-users-without-openid' => 'Чисто пользователей без OpenID',
+	'openid-empty-param-error' => 'Пожалуйста, заполните Ваше имя пользователя в соответствии с URL вашего OpenID.',
 );
 
 /** Rusyn (русиньскый)
