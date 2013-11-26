@@ -1,5 +1,5 @@
 MediaWiki OpenID extension README
-version 3.43 20131103
+version 4.03 20131126
 
 Homepage and manual
 http://www.mediawiki.org/wiki/Extension:OpenID
@@ -64,43 +64,46 @@ Thomas Gries
 
 Always use latest MediaWiki and latest OpenID versions.
 
-This software has been tested with all versions MediaWiki 1.19 rev. 88135
-until MediaWiki 1.22alpha.
+This software has been tested with all versions MediaWiki since 1.19 rev. 88135.
+It depends on PHP library for OpenID https://github.com/openid/php-openid
 
-The software depends on the PHP library for OpenID
-https://github.com/openid/php-openid
+The former original homepage was http://www.openidenabled.com/php-openid/
+but this page not maintained any more.
 
-Information: the original homepage for the library was
-http://www.openidenabled.com/php-openid/ but this page not maintained any more.
-
-This software requires PHP being installed with gmp, mcrypt, curl, openssl, xml
+The extension requires PHP being installed with gmp, mcrypt, curl, openssl, xml
 and certain other extensions. See http://www.mediawiki.org/wiki/Extension:OpenID
 for details.
 
-/* FIXME: */
 Note that some versions of MediaWiki overwrite the PHP library path in
-LocalSettings.php. Perhaps you may need to add the path to your PHP library
+LocalSettings.php. Perhaps you may then need to add the path to your PHP library
 directory to the $path variable, like "/usr/share/php" or "/usr/local/share/php".
 
 == Installation ==
 
-Note that the software currently depends on having all its code in the "OpenID"
-sub-directory; naming it "OpenID-Test" or "newextension1" or whatever
-won't work.
+See https://www.mediawiki.org/wiki/Extension:OpenID#Installation
+
+The software currently depends on having all its code in the /OpenID
+sub-directory; renaming it to "OpenID-Test" or something else won't work!
 
 In your MediaWiki LocalSettings.php, add the following line some place towards
 the bottom of the file:
 
    require_once( "$IP/extensions/OpenID/OpenID.php" );
 
-Run update.php script in in your MediaWiki maintenance folder to conditionally
-create a new table in MediaWiki database as required by the OpenID extension:
+Install the Auth subdirectory of the required OpenID PHP library in
+$IP/extensions/OpenID/Auth as explained in the following.
 
-   cd $IP/maintenance
-   php update.php
+Run the update.php script in in your MediaWiki maintenance folder
+$IP/maintenance to create a new table in the MediaWiki database which is used
+by the OpenID extension:
 
-Theoretically it should work out of the box, but you'll almost definitely want
-to set the trust root and access controls (see Configuration below).
+cd $IP/extensions/OpenID
+git clone git://github.com/openid/php-openid.git
+mv php-openid/Auth/ Auth
+rm -r php-openid
+cd $IP/maintenance# php update.php
+
+It should work out of the box, but perhaps you want to fine-tune the extension.
 
 == Upgrade from OpenID versions before 3.x ==
 
@@ -194,37 +197,10 @@ itself.
 
 == Configuration ==
 
-FIXME
-THIS SECTION IS NOT UP TO DATE
-PLEASE VISIT http://www.mediawiki.org/wiki/Extension:OpenID
-FOR UP-TO-DATE INFORMATION
+PLEASE ALSO VISIT http://www.mediawiki.org/wiki/Extension:OpenID
 
 The administrator can configure these variables in the
 LocalSettings.php file. Please read carefully.
-
-* $wgOpenIDTrustRoot -- This is an URL that identifies your site to OpenID
-  servers. Typically, it's the "root" url of the site, like
-  "http://en.wikipedia.org/" or with a path like "http://wikitravel.org/it/".
-  If this is not set, the software will make a half-hearted guess,
-  but it's not very good and you should probably just set it.
-
-* $wgOpenIDConsumerDenyByDefault -- The administrator can decide which
-  OpenIDs are allowed to login to their server. If this flag is
-  true, only those OpenIDs that match one of the $wgOpenIDConsumerAllow
-  and not one of the $wgOpenIDConsumerDeny patterns will be allowed to
-  log in. If it is false, all OpenIDs are allowed to log in, unless
-  they are matched by an $wgOpenIDConsumerDeny pattern and not an
-  $wgOpenIDConsumerAllow. Typically you'll set this to true for
-  testing and then false for general use.
-
-* $wgOpenIDConsumerAllow -- an array of regular expressions that match
-  OpenIDs you want to allow to log in. For example,
-  "@^(http://)?wikitravel.org/@" will allow OpenIDs from the Wikitravel
-  domain.
-
-* $wgOpenIDConsumerDeny -- an array of regular expressions that match
-  OpenIDs you want to deny access to. This is mostly useful for
-  servers that are known to be bad. Example: "#^(http://)?example.com/#".
 
 * $wgOpenIDForcedProvider -- (null or string) a name of a supported provider,
   or a fully qualified url of the Id selection page of an arbitrary provider,
@@ -293,7 +269,11 @@ LocalSettings.php file. Please read carefully.
 * $wgOpenIDConsumerStoreType and $wgOpenIDServerStoreType -- strings
   denoting the type of storage to be used to store OpenID assocation
   data when acting as an OpenID relying party (consumer) and server,
-  respectively. Valid values are "file", "memcached" and "db".
+  respectively.
+
+  Currently, the only valid values is "file".
+  "memcached" and "db" are untested, see
+  https://bugzilla.wikimedia.org/show_bug.cgi?id=54510
 
 * $wgOpenIDConsumerStorePath and $wgOpenIDServerStorePath -- strings
   specifying the paths where OpenID assocation data should be stored
@@ -312,26 +292,25 @@ LocalSettings.php file. Please read carefully.
   the user navigates to Special:OpenIDLogin directly; it's simply
   cosmetic. This is mostly a backwards-compatibility option.
 
-* $wgOpenIDLoginLogoUrl ($wgOpenIDSmallLogoUrl until v3.05)
+* $wgOpenIDSmallLogoUrl
   -- Url of the OpenID login logo. Defaults to a built-in logo like
   'http://www.openid.net/login-bg.gif', but you may want to move it to
-  a local URL, or an URL on a CDN, if that kind of thing floats your
-  boat.
+  another or local URL
 
 * $wgOpenIDShowUrlOnUserPage -- whether to show the OpenID identity URL
   on a user's home page. Possible values are 'always', 'never', or 'user'
   (lets the user decide). Default is 'user'.
 
-* $wgOpenIDLoginOnly ($wgOpenIDOnly until 3.09)
-  -- defaults to false. With this enabled, users can
-  ''only'' log in with OpenID.
+* $wgOpenIDLoginOnly
+  -- defaults to false. With this enabled, users can ''only'' log in with OpenID.
 
-* $wgOpenIDConsumerAndAlsoProvider ($wgOpenIDClientOnly until version 3.11)
-  -- defaults to false. With this enabled, users
-  cannot use their accounts on the local wiki as OpenIDs on another
-  site. Sucks for users, but some admins have emailed me about not
-  wanting the responsibility of being an OpenID server, so this flag
-  is for them.
+* $wgOpenIDMode
+  array( 'consumer', 'provider' ) - consumer and provider (default)
+  'provider' - if you want to allow Users of this wiki to use their identity as
+               OpenIDs for logins on other sites
+  'consumer' - if you want to allow logins to this wiki with OpenID from
+               elsewhere, or OpenID from a forced provider
+  false - (extension disabled)
 
 * $wgOpenIDAllowServingOpenIDUserAccounts -- defaults to false.
   Having this enabled, it allows to use Urls of this wiki's users' pages
@@ -342,12 +321,6 @@ LocalSettings.php file. Please read carefully.
   False prevents the serving of User page URLs as OpenID accounts
   on other sites.
 
-  Remark:
-
-  User page urls can (currently) only act as OpenID if the user page really
-  exists i.e. has content. The mere existence of a user account is (currently)
-  not sufficient.
-
 * $wgOpenIDMergeOnAccountMerge (default: false)
   When merging accounts with the UserMerge and Delete extension,
   should OpenIDs associated to the "from" account automatically be associated
@@ -356,6 +329,30 @@ LocalSettings.php file. Please read carefully.
 * $wgOpenIDShowProviderIcons -- defaults to false due to potential
   brand issues. With this enabled, users will see button graphics
   instead of just links in OpenID provider UI.
+
+* $wgOpenIDTrustRoot -- This is an URL that identifies your site to OpenID
+  servers. Typically, it's the "root" url of the site, like
+  "http://en.wikipedia.org/" or with a path like "http://wikitravel.org/it/".
+  If this is not set, the software will make a half-hearted guess.
+
+* $wgOpenIDConsumerDenyByDefault -- The administrator can decide which
+  OpenIDs are allowed to login to their server. If this flag is
+  true, only those OpenIDs that match one of the $wgOpenIDConsumerAllow
+  and not one of the $wgOpenIDConsumerDeny patterns will be allowed to
+  log in. If it is false, all OpenIDs are allowed to log in, unless
+  they are matched by an $wgOpenIDConsumerDeny pattern and not an
+  $wgOpenIDConsumerAllow. Typically you'll set this to true for
+  testing and then false for general use.
+
+* $wgOpenIDConsumerAllow -- an array of regular expressions that match
+  OpenIDs you want to allow to log in. For example,
+  "@^(http://)?wikitravel.org/@" will allow OpenIDs from the Wikitravel
+  domain.
+
+* $wgOpenIDConsumerDeny -- an array of regular expressions that match
+  OpenIDs you want to deny access to. This is mostly useful for
+  servers that are known to be bad. Example: "#^(http://)?example.com/#".
+
 
 == Setups of standard scenarios ==
 This section shows some settings for typical applications.

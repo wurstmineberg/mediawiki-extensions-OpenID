@@ -1,6 +1,7 @@
 CHANGES
 =======
 
+4.03  20131126  changed default value $wgOpenIDLoginOnly to true
 4.02  20131124  bug 18528 show error for empty username for providers
 4.01  20131123  bug 45304 show correct button texts login/create account/convert
 4.00  20131122  introducing OpenID::isAllowedMode()

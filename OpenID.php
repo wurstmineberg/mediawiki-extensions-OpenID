@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '4.02 20131124' );
+define( 'MEDIAWIKI_OPENID_VERSION', '4.03 20131126' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -38,9 +38,9 @@ set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . g
 
 /**
  * Only allow login with OpenID.
- * Default: true
+ * Default: false
  */
-$wgOpenIDLoginOnly = true;
+$wgOpenIDLoginOnly = false;
 
 /**
  * @deprecated $wgOpenIDClientOnly since E:OpenID v3.12. Instead set $wgOpenIDMode = 'consumer'
