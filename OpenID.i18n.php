@@ -1545,6 +1545,7 @@ Bez OpenId nećete moći da se prijavite.',
 );
 
 /** Catalan (català)
+ * @author Fitoschido
  * @author Paucabot
  * @author SMP
  * @author Solde
@@ -1556,7 +1557,7 @@ $messages['ca'] = array(
 	'openidserver' => 'Servidor OpenID',
 	'openidxrds' => 'Fitxer Yadis',
 	'openidconvert' => 'Conversor OpenID',
-	'openiderror' => 'Error de verificació',
+	'openiderror' => 'Error de verificació', # Fuzzy
 	'openidfailure' => 'Verificació fallida',
 	'openidusernameprefix' => 'Usuari OpenID',
 	'openidoptional' => 'Opcional',
@@ -1565,7 +1566,7 @@ $messages['ca'] = array(
 	'openidfullname' => 'Nom complet', # Fuzzy
 	'openidemail' => 'Adreça de correu electrònic',
 	'openidlanguage' => 'Idioma',
-	'openidtimezone' => 'Zona horaria',
+	'openidtimezone' => 'Fus horari',
 	'openidchooseinstructions' => 'Tots els usuaris cal que tinguin un sobrenom;
 podeu triar-ne un de les opcions a continuació.',
 	'openidchoosefull' => 'El vostre nom complet ($1)', # Fuzzy
@@ -2913,6 +2914,7 @@ $messages['ga'] = array(
 );
 
 /** Galician (galego)
+ * @author Fitoschido
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -2926,7 +2928,7 @@ $messages['gl'] = array(
 	'openid-server-identity-page-text' => 'Esta é unha páxina do servidor técnico do OpenID para comezar a autenticación do OpenID. A páxina non ten outro propósito.',
 	'openidxrds' => 'Ficheiro Yadis',
 	'openidconvert' => 'Transformador OpenID',
-	'openiderror' => 'Erro de verificación',
+	'openiderror' => 'Erro de verificación', # Fuzzy
 	'openiderrortext' => 'Ocorreu un erro durante a verificación do URL do OpenID.',
 	'openid-error-no-auth' => 'Ocorreu un erro de resposta/solicitude de autenticación durante a verificación do URL do OpenID $1.',
 	'openid-error-server-response' => "Ocorreu un erro durante a verificación do URL do OpenID $1.
@@ -2963,7 +2965,7 @@ Pode engadir un contrasinal opcional no seu [[Special:Preferences#mw-prefsection
 	'openidfullname' => 'Nome real',
 	'openidemail' => 'Enderezo de correo electrónico',
 	'openidlanguage' => 'Lingua',
-	'openidtimezone' => 'Zona horaria',
+	'openidtimezone' => 'Fuso horario',
 	'openidchooselegend' => 'Elección do nome de usuario e da conta',
 	'openidchooseinstructions' => 'Todos os usuarios precisan un alcume; pode escoller un de entre as opcións de embaixo.',
 	'openidchoosenick' => 'O seu alcume ($1)',
