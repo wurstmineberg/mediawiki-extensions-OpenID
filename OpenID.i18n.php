@@ -3200,11 +3200,18 @@ $messages['haw'] = array(
  */
 $messages['he'] = array(
 	'openid-desc' => 'כניסה לחשבון בוויקי באמצעות [//openid.net/ OpenID], והתחברות לאתרים נוספים הפועלים עם OpenID באמצעות חשבון משתמש בוויקי',
+	'openididentifier' => 'מזהה OpenID',
 	'openidlogin' => 'כניסה או יצירת חשבון עם OpenID',
 	'openidserver' => 'שרת OpenID',
+	'openid-identifier-page-text-user' => 'הדף הזה הוא המזהה עבור המשתמש "$1".',
+	'openid-identifier-page-text-different-user' => 'הדף הזה הוא המזהה עובר החשבון בעל המספר המזהה $1.',
+	'openid-identifier-page-text-no-such-local-openid' => 'זהו מזהה OpenID מקומי בלתי־תקין.',
+	'openid-server-identity-page-text' => 'זהו דף טכני בשרת OpenID בשביל תחילת אימות ב־OpenID.
+לדף הזה אין שום מטרה אחרת.',
 	'openidxrds' => 'קובץ Yadis',
 	'openidconvert' => 'ממיר OpenID',
-	'openiderror' => 'שגיאת אימות',
+	'openiderror' => 'שגיאת OpenID',
+	'openid-error-openid-consumer-mode-disabled' => 'לא ניתן להיכנס לוויקי הזה באמצעות OpenID משום שמצב צרכן OpenID כובה.',
 	'openiderrortext' => 'אירעה שגיאה במהלך אימות כתובת ה־OpenID.',
 	'openidconfigerror' => 'שגיאה בתצורת OpenID',
 	'openidconfigerrortext' => 'תצורת איחסון ה־OpenID עבור ויקי זה אינה תקינה.
@@ -3232,7 +3239,7 @@ $messages['he'] = array(
 	'openidoptional' => 'אופציונאלי',
 	'openidrequired' => 'נדרש',
 	'openidnickname' => 'כינוי',
-	'openidfullname' => 'שם מלא', # Fuzzy
+	'openidfullname' => 'שם אמתי',
 	'openidemail' => 'כתובת דוא"ל',
 	'openidlanguage' => 'שפה',
 	'openidtimezone' => 'אזור זמן',
@@ -3240,7 +3247,7 @@ $messages['he'] = array(
 	'openidchooseinstructions' => 'כל המשתמשים זקוקים לכינוי;
 תוכלו לבחור אחת מהאפשרויות שלהלן.',
 	'openidchoosenick' => 'הכינוי שלך ($1)',
-	'openidchoosefull' => 'שמכם המלא ($1)', # Fuzzy
+	'openidchoosefull' => 'שמך האמתי ($1)',
 	'openidchooseurl' => 'שם שנבחר מה־OpenID שלכם ($1)',
 	'openidchooseauto' => 'שם שנוצר אוטומטית ($1)',
 	'openidchoosemanual' => 'השם הנבחר:',
@@ -3251,8 +3258,9 @@ $messages['he'] = array(
 	'openidconvertoraddmoreids' => 'המרה ל־OpenID או הוספת כתובת OpenID נוספת',
 	'openidconvertsuccess' => 'הומר בהצלחה ל־OpenID',
 	'openidconvertsuccesstext' => 'המרתם בהצלחה את ה־OpenID שלכם ל־$1.',
-	'openid-convert-already-your-openid-text' => 'זהו כבר ה־OpenID שלכם.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'זהו ה־OpenID של מישהו אחר.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'ה־OpenId בשם $1 כבר משויך לחשבון שלך.',
+	'openid-convert-other-users-openid-text' => '$1 הוא כבר OpenID של מישהו אחר.
+אין באפשרותך להשתמש ב־OpenID של משתמש אחר.',
 	'openidalreadyloggedin' => 'אתם כבר מחוברים לחשבון.',
 	'openidalreadyloggedintext' => "'''$1, {{GENDER:$1|אתה כבר מחובר|את כבר מחוברת}} לחשבון!'''
 
@@ -3283,13 +3291,13 @@ OpenID מאפשר לכם להיכנס לחשבון במגוון אתרים מב�
 	'openiddelete-error' => 'ארעה שגיאה בעת הסרת ה־OpenID מחשבונכם.',
 	'openid-openids-were-not-merged' => 'חשבונות OpenID לא מוזגו כאשר מוזג החשבון.',
 	'prefs-openid-show-openid' => 'הסתרת כתובת ה־OpenID בדף המשתמש, במקרה של כניסה לחשבון עם OpenID.',
-	'openid-userinfo-update-on-login-label' => 'עדכון המידע הבא מכרטיס ה־OpenID עם כל כניסה לחשבון:', # Fuzzy
+	'openid-userinfo-update-on-login-label' => 'שדות המידע על משתמש שיעודכנו אוטומטית מהאישיות ב־OpenID בכל כניסה שלך:',
 	'openid-associated-openids-label' => 'כתובות OpenID המשויכות לחשבונכם:',
 	'openid-urls-url' => 'כתובת URL',
 	'openid-urls-action' => 'פעולה',
 	'openid-urls-registration' => 'זמן ההרשמה',
 	'openid-urls-delete' => 'מחיקה',
-	'openid-add-url' => 'הוספת OpenID חדש', # Fuzzy
+	'openid-add-url' => 'הוספת OpenID חדש לחשבון שלך',
 	'openid-login-or-create-account' => 'כניסה או יצירת חשבון חדש',
 	'openid-provider-label-openid' => 'הזינו את כתובת ה־OpenID שלכם',
 	'openid-provider-label-google' => 'היכנסו באמצעות חשבונכם ב־Google',
