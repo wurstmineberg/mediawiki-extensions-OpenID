@@ -1545,6 +1545,7 @@ Bez OpenId nećete moći da se prijavite.',
 );
 
 /** Catalan (català)
+ * @author Alvaro Vidal-Abarca
  * @author Fitoschido
  * @author Paucabot
  * @author SMP
@@ -1553,23 +1554,23 @@ Bez OpenId nećete moći da se prijavite.',
  */
 $messages['ca'] = array(
 	'openid-desc' => 'Inicieu una sessió al wiki amb un [//openid.net/ OpenID], i inicieu una sessió a qualsevol lloc web compatible amb OpenID amb el vostre compte wiki',
-	'openidlogin' => 'Inicia una sessió amb OpenID', # Fuzzy
+	'openidlogin' => 'Inicia una sessió o crea un compte amb OpenID',
 	'openidserver' => 'Servidor OpenID',
 	'openidxrds' => 'Fitxer Yadis',
 	'openidconvert' => 'Conversor OpenID',
-	'openiderror' => 'Error de verificació', # Fuzzy
+	'openiderror' => 'Error de OpenID',
 	'openidfailure' => 'Verificació fallida',
 	'openidusernameprefix' => 'Usuari OpenID',
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Requerit',
 	'openidnickname' => 'Sobrenom',
-	'openidfullname' => 'Nom complet', # Fuzzy
+	'openidfullname' => 'Nom real',
 	'openidemail' => 'Adreça de correu electrònic',
 	'openidlanguage' => 'Idioma',
 	'openidtimezone' => 'Fus horari',
 	'openidchooseinstructions' => 'Tots els usuaris cal que tinguin un sobrenom;
 podeu triar-ne un de les opcions a continuació.',
-	'openidchoosefull' => 'El vostre nom complet ($1)', # Fuzzy
+	'openidchoosefull' => 'El vostre nom real ($1)',
 	'openidchooseexisting' => 'Un compte existent en aquesta wiki',
 	'openidchoosepassword' => 'Contrasenya',
 	'openid-urls-action' => 'Acció',
