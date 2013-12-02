@@ -254,6 +254,7 @@ This message is title for the following error messages:
 * {{msg-mw|openid-error-server-response}}
 * {{msg-mw|openid-error-request-forgery}}
 * {{msg-mw|openid-error-openid-convert-not-allowed-forced-provider}}',
+	'openid-error-openid-consumer-mode-disabled' => 'Used as error message if someone tries to login with their OpenID to this wiki, but the OpenID consumer mode not being enabled here.',
 	'openiderrortext' => 'Used as error message.
 
 The title for this error message is {{msg-mw|Openiderror}}.',
