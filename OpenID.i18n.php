@@ -4899,6 +4899,7 @@ $messages['mk'] = array(
 	'openidxrds' => 'Yadis податотека',
 	'openidconvert' => 'OpenID претворач',
 	'openiderror' => 'Грешка во OpenID',
+	'openid-error-openid-consumer-mode-disabled' => 'На ова вики не можете да се најавувате со OpenID бидејќи тоа е оневозможено.',
 	'openiderrortext' => 'Настана грешка при потврдувањето на URL адресата на OpenID.',
 	'openid-error-no-auth' => 'Се појави неукажана грешка во одговорот на/барањето за заверка при проверката на URL-адресата $1 за OpenID.',
 	'openid-error-server-response' => "Се појави грешка при заверката на URL-адресата $1 за OpenID.
@@ -5039,6 +5040,7 @@ OpenID ви овозможува да се најавувате на многу 
 	'openid-dashboard-number-openid-users' => 'Број на корисници со OpenID',
 	'openid-dashboard-number-openids-in-database' => 'Број на OpenID-ја (вкупно)',
 	'openid-dashboard-number-users-without-openid' => 'Број на корисници без OpenID',
+	'openid-empty-param-error' => 'Внесете го вашето корисничко име за URL на OpenID.',
 );
 
 /** Malayalam (മലയാളം)
