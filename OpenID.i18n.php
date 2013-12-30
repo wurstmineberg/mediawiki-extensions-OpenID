@@ -2521,6 +2521,7 @@ $messages['eu'] = array(
 /** Persian (فارسی)
  * @author Mjbmr
  * @author Omidh
+ * @author Reza1615
  */
 $messages['fa'] = array(
 	'openidoptional' => 'اختیاری',
@@ -2535,9 +2536,14 @@ $messages['fa'] = array(
 	'openidchooseusername' => 'نام کاربری:',
 	'openidchoosepassword' => 'گذرواژه:',
 	'openiddelete-button' => 'تأیید',
+	'openid-urls-url' => 'نشانی اینترنتی',
 	'openid-urls-action' => 'اقدام',
 	'openid-urls-registration' => 'زمان ثبت نام',
 	'openid-urls-delete' => 'حذف',
+	'openid-trusted-sites-table-header-column-action' => 'فعالیت',
+	'openid-trusted-sites-delete-link-action-text' => 'حذف',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'تأیید',
+	'openid-provider-selection-button-login' => 'با استفاده از OpenID وارد شوید',
 );
 
 /** Finnish (suomi)
