@@ -1733,13 +1733,14 @@ $messages['cy'] = array(
 );
 
 /** Danish (dansk)
+ * @author Christian List
  * @author Froztbyte
  * @author Jon Harald Søby
  */
 $messages['da'] = array(
 	'openidserver' => 'OpenID-server',
 	'openidxrds' => 'Yadis-fil',
-	'openiderror' => 'Bekræftelsesfejl', # Fuzzy
+	'openiderror' => 'OpenID fejl',
 	'openidcancel' => 'Bekræftelse annulleret',
 	'openidusernameprefix' => 'OpenID-bruger',
 	'openidrequired' => 'Påkrævet',
@@ -1757,7 +1758,7 @@ du kan vælge et fra nedenstående muligheder.',
 	'openiddelete-success' => 'OpenID er blevet fjernet fra din konto.',
 	'openid-urls-action' => 'Handling',
 	'openid-urls-delete' => 'Slet',
-	'openid-add-url' => 'Tilføj en ny OpenID', # Fuzzy
+	'openid-add-url' => 'Tilføj en ny OpenID til din konto',
 	'openid-provider-label-aol' => 'Indtast dit AOL-brugernavn',
 );
 
