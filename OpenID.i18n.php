@@ -2244,6 +2244,7 @@ To use OpenID in future, you can [[Special:OpenIDConvert|convert your account to
 
 /** Esperanto (Esperanto)
  * @author ArnoLagrange
+ * @author KuboF
  * @author Lucas
  * @author Michawiki
  * @author Yekrats
@@ -2276,7 +2277,7 @@ Bonvolu konsulti [[Special:ListUsers/sysop|administranton]].',
 	'openidoptional' => 'Nedeviga',
 	'openidrequired' => 'Deviga',
 	'openidnickname' => 'Kaŝnomo',
-	'openidfullname' => 'Plena nomo', # Fuzzy
+	'openidfullname' => 'Vera nomo',
 	'openidemail' => 'Retadreso',
 	'openidlanguage' => 'Lingvo',
 	'openidtimezone' => 'Horzono',
@@ -2284,7 +2285,7 @@ Bonvolu konsulti [[Special:ListUsers/sysop|administranton]].',
 	'openidchooseinstructions' => 'Ĉiuj uzantoj bezonas kromnomo;
 vi povas selekti el unu la jenaj opcioj.',
 	'openidchoosenick' => 'Via kromnomo ($1)',
-	'openidchoosefull' => 'Via plena nomo ($1)', # Fuzzy
+	'openidchoosefull' => 'Via vera nomo ($1)',
 	'openidchooseurl' => 'Nomo eltenita de via OpenID ($1)',
 	'openidchooseauto' => 'Automate generita nomo ($1)',
 	'openidchoosemanual' => 'Nomo de via elekto:',
@@ -2317,7 +2318,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
 	'openid-urls-action' => 'Ago',
 	'openid-urls-delete' => 'Forigi',
 	'openid-add-url' => 'Aldoni novan OpenID', # Fuzzy
-	'openid-login-or-create-account' => 'Ensaluti aŭ Krei Novan Konton', # Fuzzy
+	'openid-login-or-create-account' => 'Ensaluti aŭ krei novan konton',
 	'openid-provider-label-openid' => 'Enigi vian OpenID-URL-on',
 	'openid-provider-label-google' => 'Ensaluti per via Google-konto',
 	'openid-provider-label-yahoo' => 'Ensaluti per via Yahoo-konto',
@@ -7419,13 +7420,13 @@ $messages['te'] = array(
 	'openidoptional' => 'ఐచ్చికం',
 	'openidrequired' => 'తప్పనిసరి',
 	'openidnickname' => 'ముద్దుపేరు',
-	'openidfullname' => 'పూర్తిపేరు', # Fuzzy
+	'openidfullname' => 'అసలు పేరు',
 	'openidemail' => 'ఈ-మెయిల్ చిరునామా',
 	'openidlanguage' => 'భాష',
 	'openidtimezone' => 'కాలమానం',
 	'openidchooseinstructions' => 'సభ్యులందరికీ ముద్దు పేరు ఉండవలెను.
 క్రింద పేర్కొన్న వాటిలో ఒకటి ఎంచుకోండి',
-	'openidchoosefull' => 'మీ పూర్తి పేరు ($1)', # Fuzzy
+	'openidchoosefull' => 'మీ అసలు పేరు ($1)',
 	'openidchooseurl' => 'మీ ఓపెన్ఐడీ నుండి తీసుకున్న పేరు ($1)',
 	'openidchoosemanual' => 'మీరు ఎన్నుకున్న పేరు:',
 	'openidchooseexisting' => 'ఈ వికీలో ఇప్పటికే ఉన్న ఖాతా',
