@@ -2015,6 +2015,7 @@ $messages['diq'] = array(
 );
 
 /** Lower Sorbian (dolnoserbski)
+ * @author Derbeth
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -2032,7 +2033,7 @@ Pšosym staj se z [[Special:ListUsers/sysop|administratorom]] do zwiska.',
 	'openidpermissiontext' => 'OpenID, kótaryž sy pódał, njedowólujo pśizjawjenje pla toś togo serwera.',
 	'openidcancel' => 'Pśeglědanje pśetergnjone',
 	'openidcanceltext' => 'Pśeglědanje URL OpenID jo se pśetergnuło.',
-	'openidfailure' => 'Pséglědanje jo se njeraźiło',
+	'openidfailure' => 'Pśeglědanje njejo se raźiło',
 	'openidfailuretext' => 'Pśeglědanje URL OpenID je so njeraźiło. Zmólkowa powěźeńka: "$1"',
 	'openidsuccess' => 'Pśeglědanje wuspěšne',
 	'openidsuccesstext' => "'''Pśeglědanje a pśizjawjenje ako wužywaŕ $1 stej byłej wuspěšnej.'''
