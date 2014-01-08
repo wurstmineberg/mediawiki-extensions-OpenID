@@ -3734,7 +3734,7 @@ $messages['ia'] = array(
 	'openidserver' => 'Servitor OpenID',
 	'openidxrds' => 'File Yadis',
 	'openidconvert' => 'Convertitor de OpenID',
-	'openiderror' => 'Error de verification', # Fuzzy
+	'openiderror' => 'Error de OpenID',
 	'openiderrortext' => 'Un error occurreva durante le verification del adresse URL de OpenID.',
 	'openidconfigerror' => 'Error de configuration de OpenID',
 	'openidconfigerrortext' => 'Le configuration de immagazinage OpenID pro iste wiki es invalide.
@@ -3780,7 +3780,7 @@ tu pote seliger un del optiones in basso.',
 	'openidconvertoraddmoreids' => 'Converter in OpenID o adder un altere URL de OpenID',
 	'openidconvertsuccess' => 'Conversion a OpenID succedite',
 	'openidconvertsuccesstext' => 'Tu ha convertite con successo tu OpenID a $1.',
-	'openid-convert-already-your-openid-text' => 'Le OpenID $1 es jam associate a tu conto.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'Le OpenID $1 es jam associate a tu conto.',
 	'openid-convert-other-users-openid-text' => '$1 es le OpenID de alcuno altere. Non es possibile usar le OpenID de un altere usator.',
 	'openidalreadyloggedin' => 'Tu es jam authenticate.',
 	'openidalreadyloggedintext' => "'''Tu es jam authenticate, \$1!'''
