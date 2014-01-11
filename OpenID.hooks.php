@@ -100,13 +100,13 @@ class OpenIDHooks {
 	 * @return bool
 	 */
 	public static function onPersonalUrls( &$personal_urls, &$title ) {
-		global $wgOpenIDHideOpenIDLoginLink, $wgUser, $wgOpenIDLoginOnly;
+		global $wgOpenIDHideOpenIDLoginLink, $wgUser, $wgOut, $wgOpenIDLoginOnly;
 
 		if ( !$wgOpenIDHideOpenIDLoginLink
 			&& ( $wgUser->getID() == 0 )
 			&& OpenID::isAllowedMode( 'consumer' ) ) {
 
-			$sk = $wgUser->getSkin();
+			$sk = $wgOut->getSkin();
 			$returnto = $title->isSpecial( 'Userlogout' ) ? '' : ( 'returnto=' . $title->getPrefixedURL() );
 
 			$personal_urls['openidlogin'] = array(

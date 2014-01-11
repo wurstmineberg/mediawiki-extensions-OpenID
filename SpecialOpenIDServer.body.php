@@ -812,7 +812,7 @@ class SpecialOpenIDServer extends SpecialOpenID {
 		$ok = wfMessage( 'ok' )->text();
 		$cancel = wfMessage( 'cancel' )->text();
 
-		$sk = $wgUser->getSkin();
+		$sk = $wgOut->getSkin();
 
 		$wgOut->addHTML( "<p>{$instructions}</p>" .
 			'<form action="' . $sk->makeSpecialUrl( 'OpenIDServer/Trust' ) . '" method="POST">' .
