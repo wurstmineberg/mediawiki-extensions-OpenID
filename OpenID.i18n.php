@@ -2020,12 +2020,18 @@ $messages['diq'] = array(
  */
 $messages['dsb'] = array(
 	'openid-desc' => 'Pśizjawjenje pla wikija z [//openid.net/ OpenID] a pśizjawjenje pla drugich websedłow, kótarež pódpěraju OpenID z wikijowym wužywarskim kontom',
+	'openididentifier' => 'OpenID-identifikator',
 	'openidlogin' => 'Z OpenID pśizjawiś / konto załožyś',
 	'openidserver' => 'Serwer OpenID',
+	'openid-identifier-page-text-user' => 'Toś ten bok jo identifikator za wužywarja "$1".',
+	'openid-identifier-page-text-different-user' => 'Toś ten bok jo identifikator za wužywarski ID $1.',
+	'openid-identifier-page-text-no-such-local-openid' => 'To jo njepłaśiwy lokalny OpenID-identifikator.',
 	'openidxrds' => 'Yadis-dataja',
 	'openidconvert' => 'Konwerter OpenID',
 	'openiderror' => 'OpenID-zmólka',
 	'openiderrortext' => 'Zmólka jo nastała pśi pśeglědowanju URL OpenID.',
+	'openid-error-request-forgery' => 'Zmólka jo nastała: Njepłaśiwy token jo se namakał.',
+	'openid-error-wrong-force-provider-setting' => 'Nutśikowna zmólka jo nastała: Za wunuźonego póbitowarja "$1" jo se wopacna URL-gódnota namakała.',
 	'openidconfigerror' => 'Konfiguraciska zmólka OpenID',
 	'openidconfigerrortext' => 'Konfiguracija składowaka OpenID za toś ten wiki jo njepłaśiwy.
 Pšosym staj se z [[Special:ListUsers/sysop|administratorom]] do zwiska.',
@@ -2099,6 +2105,9 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'prefs-openid-userinfo-update-on-login' => 'Aktualizacija informacijow OpenID-wužywarja',
 	'prefs-openid-associated-openids' => 'Twóje OpenID za pśizjawjenje k {{GRAMMAR:datiw|{{SITENAME}}}}',
 	'prefs-openid-trusted-sites' => 'Dowěry gódne sedła',
+	'prefs-openid-local-identity' => 'Twój OpenID za pśizjawjenje pla drugich sedłow',
+	'openid-show-openid-url-on-userpage-user' => 'Twój URL OpenID na twójom wužywarskem boku pokazaś',
+	'openid-show-openid-url-on-userpage-never' => 'Twój OpenID njepokazujo se nigda na twójom wužywarskem boku.',
 	'openid-userinfo-update-on-login-label' => 'Póla informacijow wužywarskego profila, kótarež aktualizěruju se kuždy raz, gaž se pśizjawjaš:',
 	'openid-associated-openids-label' => 'OpenID, kótarež su z twójim kontom zwězane:',
 	'openid-urls-url' => 'URL',
@@ -2108,6 +2117,12 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'openid-add-url' => 'Nowy OpenID twójomu kontoju pśidaś',
 	'openid-trusted-sites-label' => 'Sedła, kótarymž dowěriš a źož sy swój OpenID za pśizjawjenje wužył:',
 	'openid-trusted-sites-table-header-column-url' => 'Dowěry gódne sedła',
+	'openid-trusted-sites-table-header-column-action' => 'Akcija',
+	'openid-trusted-sites-delete-link-action-text' => 'Lašowaś',
+	'openid-trusted-sites-delete-all-link-action-text' => 'Wšykne dowěry gódne sedła wulašowaś',
+	'openid-trusted-sites-delete-confirmation-page-title' => 'Lašowanje dowěry gódnych sedłow',
+	'openid-trusted-sites-delete-confirmation-button-text' => 'Wobkšuśiś',
+	'openid-local-identity' => 'Twój OpenID:',
 	'openid-login-or-create-account' => 'Pśizjawiś abo nowe konto załožyś',
 	'openid-provider-label-openid' => 'Zapódaj swój URL OpenID',
 	'openid-provider-label-google' => 'Z pomocu twójogo konta Google se pśizjawiś',
@@ -2115,13 +2130,21 @@ Ty njeby se bźez OpenID pśizjawiś.',
 	'openid-provider-label-aol' => 'Zapódaj swójo wužywarske mě AOL',
 	'openid-provider-label-wmflabs' => 'Ze swójim kontom Wmflabs se pśizjawiś',
 	'openid-provider-label-other-username' => 'Zapódaj swójo wužywarske mě $1',
+	'openid-provider-selection-button-login-or-create-account' => 'Z OpenID pśizjawiś / konto załožyś',
+	'openid-provider-selection-button-login' => 'Z OpenID pśizjawiś',
+	'openid-provider-selection-button-create-account' => 'Z OpenID konto załožyś',
+	'openid-provider-selection-button-convert' => 'OpenID konwertěrowaś abo pśidaś',
 	'specialpages-group-openid' => 'Boki OpenID-słužbow a statusowych informacijow',
 	'right-openid-converter-access' => 'Móźo konto za wužywanje OpenID-identitow pśidaś abo konwertěrowaś',
 	'right-openid-dashboard-access' => 'Standardny pśistup k tofli OpenID',
 	'right-openid-dashboard-admin' => 'Administratorowy přistup k tofli OpenID',
+	'right-openid-create-account-without-openid' => 'Manuelne załoženje konta bźez OpenID',
 	'action-openid-converter-access' => 'Twójo konto za wužywanje identitow OpenID pśidać abo konwertěrowaś',
 	'action-openid-dashboard-access' => 'pśistup k tofli OpenID',
 	'action-openid-dashboard-admin' => 'pśistup k administratorowej tofli OpenID',
+	'action-openid-login-with-openid' => 'Z OpenID pśizjawiś',
+	'action-openid-create-account-with-openid' => 'Z OpenID konto załožyś',
+	'action-openid-create-account-without-openid' => 'konto manuelnje załožyś, t.gr. bźez OpenID',
 	'openid-dashboard-title' => 'OpenID-pśeglěd',
 	'openid-dashboard-title-admin' => 'OpenID-pśeglěd (administrator)',
 	'openid-dashboard-introduction' => 'Aktualne nastajenja rozšyrjenja OpenID ([$1 pomoc])',
@@ -2330,6 +2353,7 @@ Se ne, klaku la butonon "Continue" (Daŭri).',
 /** Spanish (español)
  * @author Armando-Martin
  * @author Ascánder
+ * @author Ciencia Al Poder
  * @author Crazymadlover
  * @author Drini
  * @author Fitoschido
@@ -2377,7 +2401,7 @@ Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preference
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Obligatorio',
 	'openidnickname' => 'Apodo',
-	'openidfullname' => 'Nombre completo', # Fuzzy
+	'openidfullname' => 'Nombre real',
 	'openidemail' => 'Dirección de correo electrónico',
 	'openidlanguage' => 'Idioma',
 	'openidtimezone' => 'Huso horario',
@@ -2385,7 +2409,7 @@ Una contraseña de cuenta opcional puede ser añadida en su [[Special:Preference
 	'openidchooseinstructions' => 'Todos los usuarios necesitan un sobrenombre;
 puedes escoger uno de las opciones debajo.',
 	'openidchoosenick' => 'Tu apodo ($1)',
-	'openidchoosefull' => 'Su nombre completo ($1)', # Fuzzy
+	'openidchoosefull' => 'Tu nombre completo ($1)',
 	'openidchooseurl' => 'Un nombre escogido a partir de tu OpenID ($1)',
 	'openidchooseauto' => 'Un nombre autogenerado ($1)',
 	'openidchoosemanual' => 'Un nombre de su preferencia:',
@@ -2396,8 +2420,8 @@ puedes escoger uno de las opciones debajo.',
 	'openidconvertoraddmoreids' => 'Convertir a OpenID o añadir otra URL OpenID',
 	'openidconvertsuccess' => 'Convertido exitosamente a OpenID',
 	'openidconvertsuccesstext' => 'Has convertido correctamente tu OpenID a $1.',
-	'openid-convert-already-your-openid-text' => 'Ya es tu OpenID.', # Fuzzy
-	'openid-convert-other-users-openid-text' => 'Esto es el OpenID de alguien más.', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'El OpenID $1 ya está asociado a tu cuenta.',
+	'openid-convert-other-users-openid-text' => '$1 es el OpenID de otro. No puedes usar el OpenID de otro usuario.',
 	'openidalreadyloggedin' => 'Ya has iniciado sesión.',
 	'openidalreadyloggedintext' => "'''¡Ya ha iniciado sesión, $1!'''
 
@@ -3496,7 +3520,15 @@ $messages['hsb'] = array(
 	'openidxrds' => 'Yadis-dataja',
 	'openidconvert' => 'Konwerter OpenID',
 	'openiderror' => 'OpenID-zmylk',
+	'openid-error-openid-consumer-mode-disabled' => 'Njemóžeš so z OpenID pola tutoho wikija přizjewić, dokelž přetrjebowarski modus OpenID je so znjemóžnił.',
 	'openiderrortext' => 'Zmylk je při pruwowanju URL OpenID wustupił.',
+	'openid-error-no-auth' => 'Při přepruwowanju URL OpenID $1 je njeznaty awtentifikaciski wotmołwny/naprašowanski zmylk wustupił.',
+	'openid-error-server-response' => "Při přepruwowanju URL OpenID $1 je zmylk wustupił.
+
+Wotmołwa serwera bě: ''$2''",
+	'openid-error-request-forgery' => 'Zmylk je wustupił: Njepłaćiwy token je so namakał.',
+	'openid-error-wrong-force-provider-setting' => 'Nutřkowny zmylk je wustupił: Za wunuzowaneho poskićowarja "$1" je so wopačna URL-hódnota namakała.',
+	'openid-error-openid-convert-not-allowed-forced-provider' => 'Njeje móžno, dalše OpenID z twojim kontom zwjazać, dokelž móžeš jenož \'\'"wunuzowaneho"\'\' OpenID-poskićowarja "$1" za přizjewjenja w tutym wikiju wužiwać.',
 	'openidconfigerror' => 'OpenID konfiguraciski zmylk',
 	'openidconfigerrortext' => 'Składowanska konfiguracija OpenID zu tutón wiki je njepłaćiwy. Prošu skonsultuj administratora tutoho sydła.',
 	'openidpermission' => 'Zmylk w prawach OpenID',
@@ -3616,12 +3648,14 @@ Ty njemóhł so bjez OpenID přizjewić.',
 	'action-openid-dashboard-admin' => 'přistup k administratorowej tafli OpenID',
 	'action-openid-login-with-openid' => 'Z OpenID přizjewić',
 	'action-openid-create-account-with-openid' => 'Z OpenID konto załožić',
+	'action-openid-create-account-without-openid' => 'konto manuelnje załožić, t.r. bjez OpenID',
 	'openid-dashboard-title' => 'OpenID-přehlad',
 	'openid-dashboard-title-admin' => 'OpenID-přehlad (administrator)',
 	'openid-dashboard-introduction' => 'Aktualne nastajenja rozšěrjenja OpenID ([$1 pomoc])',
 	'openid-dashboard-number-openid-users' => 'Ličba wužiwarjow z OpenID',
 	'openid-dashboard-number-openids-in-database' => 'Ličba wšěch OpenID (dohromady)',
 	'openid-dashboard-number-users-without-openid' => 'Ličba wužiwarjow bjez OpenID',
+	'openid-empty-param-error' => 'Prošu zapodaj swoje wužiwarske mjeno resp. swój URL OpenID.',
 );
 
 /** Hungarian (magyar)
