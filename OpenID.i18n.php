@@ -2040,7 +2040,7 @@ Pšosym staj se z [[Special:ListUsers/sysop|administratorom]] do zwiska.',
 	'openidcancel' => 'Pśeglědanje pśetergnjone',
 	'openidcanceltext' => 'Pśeglědanje URL OpenID jo se pśetergnuło.',
 	'openidfailure' => 'Pśeglědanje njejo se raźiło',
-	'openidfailuretext' => 'Pśeglědanje URL OpenID je so njeraźiło. Zmólkowa powěźeńka: "$1"',
+	'openidfailuretext' => 'Pśeglědanje URL OpenID njejo se raźiło. Zmólkowa powěźeńka: "$1"',
 	'openidsuccess' => 'Pśeglědanje wuspěšne',
 	'openidsuccesstext' => "'''Pśeglědanje a pśizjawjenje ako wužywaŕ $1 stej byłej wuspěšnej.'''
 
