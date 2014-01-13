@@ -2546,11 +2546,15 @@ $messages['eu'] = array(
 );
 
 /** Persian (فارسی)
+ * @author Armin1392
  * @author Mjbmr
  * @author Omidh
  * @author Reza1615
  */
 $messages['fa'] = array(
+	'openid-identifier-page-text-user' => 'این صفحه برای شناسهٔ کاربری $1 شناسا است.',
+	'openid-identifier-page-text-different-user' => 'این صفحه برای شناسهٔ کاربری $1 شناسا است.',
+	'openidtrustinstructions' => 'اگر می‌خواهید اطلاعات را با $1 اشتراک‌گذاری کنید، بررسی کنید.',
 	'openidoptional' => 'اختیاری',
 	'openidrequired' => 'اجباری',
 	'openidnickname' => 'نام مستعار',
@@ -2558,10 +2562,17 @@ $messages['fa'] = array(
 	'openidemail' => 'نشانی پست الکترونیکی',
 	'openidlanguage' => 'زبان',
 	'openidtimezone' => 'منطقهٔ زمانی',
+	'openidchooselegend' => 'انتخاب نام‌ کاربری و حساب',
 	'openidchoosenick' => 'نام مستعار شما ($1)',
 	'openidchoosefull' => 'نام واقعی شما ($1)',
+	'openidchoosemanual' => 'نام انتخاب شما:',
+	'openidchooseexisting' => 'یک حساب موجود در این ویکی',
 	'openidchooseusername' => 'نام کاربری:',
 	'openidchoosepassword' => 'گذرواژه:',
+	'openidalreadyloggedin' => 'شما هم‌اکنون وارد شده‌اید.',
+	'openidnousername' => 'هیچ نام کاربری تعیین نشده.',
+	'openidbadusername' => 'نام کاربری بدی تعیین شده.',
+	'openidupdateuserinfo' => 'به‌ روز رسانی اطلاعات شخصی من:',
 	'openiddelete-button' => 'تأیید',
 	'openid-urls-url' => 'نشانی اینترنتی',
 	'openid-urls-action' => 'اقدام',
@@ -2570,6 +2581,10 @@ $messages['fa'] = array(
 	'openid-trusted-sites-table-header-column-action' => 'فعالیت',
 	'openid-trusted-sites-delete-link-action-text' => 'حذف',
 	'openid-trusted-sites-delete-confirmation-button-text' => 'تأیید',
+	'openid-login-or-create-account' => 'وارد شوید یا حساب جدید ایجاد کنید',
+	'openid-provider-label-google' => 'با استفاده از حساب گوگل خود وارد شوید',
+	'openid-provider-label-yahoo' => 'با استفاده از حساب یاهوی خود وارد شوید',
+	'openid-provider-label-other-username' => 'نام کاربری $1 خود را وارد کنید',
 	'openid-provider-selection-button-login' => 'با استفاده از OpenID وارد شوید',
 );
 
