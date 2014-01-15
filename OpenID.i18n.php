@@ -2552,10 +2552,12 @@ $messages['eu'] = array(
  * @author Reza1615
  */
 $messages['fa'] = array(
+	'openididentifier' => 'شناسانهٔ ایجاد حساب کاربری',
 	'openidlogin' => 'ورود/ایجاد حساب با ایجاد حساب کاربری',
 	'openidserver' => 'سرور ایجاد حساب کاربری',
 	'openid-identifier-page-text-user' => 'این صفحه برای شناسهٔ کاربری $1 شناسا است.',
 	'openid-identifier-page-text-different-user' => 'این صفحه برای شناسهٔ کاربری $1 شناسا است.',
+	'openid-identifier-page-text-no-such-local-openid' => 'این یک شناسانهٔ‌ ایجاد حساب کاربری داخلی است.',
 	'openidconvert' => 'مبدل ایجاد حساب',
 	'openiderror' => 'خطا در ایجاد حساب کاربری',
 	'openid-error-request-forgery' => 'خطایی رخ داد: یک نماد نامعتبر پیدا شد.',
@@ -4528,6 +4530,7 @@ $messages['kn'] = array(
  * @author Ficell
  * @author Hym411
  * @author Kwj2772
+ * @author Priviet
  * @author happyday19c
  * @author 아라
  */
