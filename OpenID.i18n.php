@@ -4546,7 +4546,7 @@ $messages['ko'] = array(
 	'openid-server-identity-page-text' => '이 문서는 OpenID 인증을 시작하기 위한 기술적인 OpenID 서버의 문서입니다. 다른 목적은 없습니다.',
 	'openidxrds' => 'Yadis 파일',
 	'openidconvert' => 'OpenID 변환기',
-	'openiderror' => '인증 오류', # Fuzzy
+	'openiderror' => 'OpenID 오류',
 	'openiderrortext' => 'OpenID URL을 인증하는 과정에 오류가 발생했습니다.',
 	'openid-error-request-forgery' => '오류가 발생했습니다: 잘못된 토큰을 찾았습니다.',
 	'openidconfigerror' => 'OpenID 설정 오류',
@@ -5057,7 +5057,7 @@ OpenID ви овозможува да се најавувате на многу 
 За да користите OpenID во иднина, [[Special:OpenIDConvert|претворете ја вашата сметка во OpenID]] откако ќе се најавите нормално.',
 	'openidupdateuserinfo' => 'Поднови ги моите лични информации:',
 	'openiddelete' => 'Избриши го овој OpenID',
-	'openiddelete-text' => 'Со кликнување на копчето „{{int:openiddelete-button}}“ ќе го отстраните OpenID $1 од вашата сметка.
+	'openiddelete-text' => 'Стискајќи на копчето „{{int:openiddelete-button}}“ ќе го отстраните OpenID $1 од вашата сметка.
 Повеќе нема да можете да се најавувате со овој OpenID.',
 	'openiddelete-button' => 'Потврди',
 	'openiddeleteerrornopassword' => 'Не можете да ги избришете сите ваши OpenID-ја бидејќи вашата сметка нема лозинка.
