@@ -2647,6 +2647,7 @@ $messages['fa'] = array(
 	'openid-dashboard-number-openid-users' => 'تعداد کاربران با ایجاد حساب کاربری',
 	'openid-dashboard-number-openids-in-database' => 'تعداد حساب‌های کاربری ایجاد شده (کل)',
 	'openid-dashboard-number-users-without-openid' => 'تعداد کاربران بدون ایجاد حساب کاربری',
+	'openid-empty-param-error' => 'لطفاً يوآر‌ال حساب کاربری خود را به ترتیب در نام کاربری خود پر کنید.',
 );
 
 /** Finnish (suomi)
@@ -4593,6 +4594,7 @@ $messages['ko'] = array(
 	'openidxrds' => 'Yadis 파일',
 	'openidconvert' => 'OpenID 변환기',
 	'openiderror' => 'OpenID 오류',
+	'openid-error-openid-consumer-mode-disabled' => 'OpenID 고객 모드가 비활성화되어 있으므로 OpenID로 이 위키에 로그인할 수 없습니다.',
 	'openiderrortext' => 'OpenID URL을 인증하는 과정에 오류가 발생했습니다.',
 	'openid-error-request-forgery' => '오류가 발생했습니다: 잘못된 토큰을 찾았습니다.',
 	'openidconfigerror' => 'OpenID 설정 오류',
