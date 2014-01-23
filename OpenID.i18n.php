@@ -4596,7 +4596,13 @@ $messages['ko'] = array(
 	'openiderror' => 'OpenID 오류',
 	'openid-error-openid-consumer-mode-disabled' => 'OpenID 고객 모드가 비활성화되어 있으므로 OpenID로 이 위키에 로그인할 수 없습니다.',
 	'openiderrortext' => 'OpenID URL을 인증하는 과정에 오류가 발생했습니다.',
+	'openid-error-no-auth' => 'OpenID URL $1의 검증하는 도중 지정되지 않은 인증 응답/요청 오류가 발생했습니다.',
+	'openid-error-server-response' => 'OpenID URL $1을 검증하는 도중 오류가 발생했습니다.
+
+서버 응답: "$2"',
 	'openid-error-request-forgery' => '오류가 발생했습니다: 잘못된 토큰을 찾았습니다.',
+	'openid-error-wrong-force-provider-setting' => '내부 오류 발생: "$1" 공급자에 대한 정확하지 않은 URL 값을 찾을 수 없습니다.',
+	'openid-error-openid-convert-not-allowed-forced-provider' => '당신의 계정에 OpenID를 연결시킬 수 없습니다. 고정된 OpenD "$1" 공급자를 사용할 수 없기 때문입니다.',
 	'openidconfigerror' => 'OpenID 설정 오류',
 	'openidconfigerrortext' => '이 위키에 OpenID 저장소 설정이 잘못되었습니다.
 [[Special:ListUsers/sysop|{{SITENAME}} 관리자]]에게 문의하시기 바랍니다.',
