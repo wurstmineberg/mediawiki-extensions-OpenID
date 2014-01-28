@@ -2558,6 +2558,7 @@ $messages['fa'] = array(
 	'openid-identifier-page-text-user' => 'این صفحه برای شناسهٔ کاربری $1 شناسا است.',
 	'openid-identifier-page-text-different-user' => 'این صفحه برای شناسهٔ کاربری $1 شناسا است.',
 	'openid-identifier-page-text-no-such-local-openid' => 'این یک شناسانهٔ‌ ایجاد حساب کاربری داخلی است.',
+	'openidxrds' => 'پوشهٔ یادیس',
 	'openidconvert' => 'مبدل ایجاد حساب',
 	'openiderror' => 'خطا در ایجاد حساب کاربری',
 	'openid-error-request-forgery' => 'خطایی رخ داد: یک نماد نامعتبر پیدا شد.',
