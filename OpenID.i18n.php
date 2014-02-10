@@ -2547,6 +2547,7 @@ $messages['eu'] = array(
 
 /** Persian (فارسی)
  * @author Armin1392
+ * @author Ebraminio
  * @author Mjbmr
  * @author Omidh
  * @author Reza1615
@@ -2575,7 +2576,7 @@ $messages['fa'] = array(
 	'openidrequired' => 'اجباری',
 	'openidnickname' => 'نام مستعار',
 	'openidfullname' => 'نام واقعی',
-	'openidemail' => 'نشانی پست الکترونیکی',
+	'openidemail' => 'نشانی رایانامه',
 	'openidlanguage' => 'زبان',
 	'openidtimezone' => 'منطقهٔ زمانی',
 	'openidchooselegend' => 'انتخاب نام‌ کاربری و حساب',
@@ -2632,11 +2633,13 @@ $messages['fa'] = array(
 	'openid-provider-selection-button-create-account' => 'ایجاد حساب با ایجاد حساب کاربری',
 	'openid-provider-selection-button-convert' => 'تبدیل یا اضافه کردن حساب کاربری',
 	'specialpages-group-openid' => 'صفحات سرویس ایجاد حساب کاربری و اطلاعات وضعیت',
+	'right-openid-converter-access' => 'می‌توانید حساب آنها را به استفاده از هویت‌های ایجاد حساب کاربری بیافزایید یا تبدیل کنید',
 	'right-openid-dashboard-access' => 'دسترسی استاندارد به داشبورد ایجاد حساب کاربری',
 	'right-openid-dashboard-admin' => 'دسترسی سرپرست به داشبورد ایجاد حساب کاربری',
 	'right-openid-login-with-openid' => 'می‌توانید با ایجاد حساب کاربری وارد شوید',
 	'right-openid-create-account-with-openid' => 'می‌توانید با ایجاد حساب کاربری، حساب ایجاد کنید',
 	'right-openid-create-account-without-openid' => 'ایجاد حساب دستی بدون ایجاد حساب کاربری',
+	'action-openid-converter-access' => 'افزودن یا تبدیل کردن حساب شما برای استفاده از هویت‌های ایجاد حساب کاربری',
 	'action-openid-dashboard-access' => 'دسترسی به داشبورد ایجاد حساب کاربری',
 	'action-openid-dashboard-admin' => 'دسترسی به داشبورد سرپرست حساب کاربری',
 	'action-openid-login-with-openid' => 'ورود با حساب کاربری',
