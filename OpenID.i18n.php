@@ -4631,7 +4631,7 @@ $messages['ko'] = array(
 	'openidsuccess' => '인증 성공',
 	'openidsuccesstext' => "'''성공적으로 인증되었고 $1 사용자로 로그인했습니다'''.
 
-당신의 OpenID는 $2 입니다.
+당신의 OpenID는 $2입니다.
 
 이와 선택적인 추가 OpenID는 사용자 환경 설정의 [[Special:Preferences#mw-prefsection-openid|OpenID 탭]]에서 관리할 수 있습니다.<br />
 선택적인 계정 비밀번호는 [[Special:Preferences#mw-prefsection-personal|기본 정보]]에서 추가할 수 있습니다.",
@@ -8387,6 +8387,7 @@ $messages['yi'] = array(
  * @author Hzy980512
  * @author Kuailong
  * @author Liangent
+ * @author Liuxinyu970226
  * @author Onecountry
  * @author Qiyue2001
  * @author Wrightbus
@@ -8405,6 +8406,7 @@ $messages['zh-hans'] = array(
 	'openidxrds' => 'Yadis文件',
 	'openidconvert' => 'OpenID转换',
 	'openiderror' => 'OpenID错误',
+	'openid-error-openid-consumer-mode-disabled' => '您不能使用OpenID登陆此wiki，因为OpenID消费者模式被禁用。',
 	'openiderrortext' => '在验证OpenID地址时出现了一个错误。',
 	'openid-error-request-forgery' => '出错：找到无效密钥。',
 	'openidconfigerror' => 'OpenID配置出错',
@@ -8547,6 +8549,7 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
  * @author Gzdavidwong
  * @author Horacewai2
  * @author Liangent
+ * @author Liuxinyu970226
  * @author Mark85296341
  * @author Shangkuanlc
  * @author Simon Shek
@@ -8555,11 +8558,14 @@ OpenID 可以让您不必使用不同的密码登录不同的站点。
  */
 $messages['zh-hant'] = array(
 	'openid-desc' => '使用者請以 [//openid.net/ OpenID] 登入此 wiki網站，以及使用 wiki 用戶帳號登入到其他接受 OpenID 的網站',
+	'openididentifier' => 'OpenID識別碼',
 	'openidlogin' => '使用OpenID登錄或創建賬號',
 	'openidserver' => 'OpenID 伺服器',
+	'openid-identifier-page-text-user' => '此頁面是用戶「$1」的識別碼',
 	'openidxrds' => 'Yadis 檔案',
 	'openidconvert' => 'OpenID 轉換器',
-	'openiderror' => '驗證錯誤', # Fuzzy
+	'openiderror' => 'OpenID錯誤',
+	'openid-error-openid-consumer-mode-disabled' => '您不能經由OpenID登陸此wiki，因為OpenID消費者模式被禁用。',
 	'openiderrortext' => '在驗證 OpenID 地址時出現了一個錯誤。',
 	'openidconfigerror' => 'OpenID 配置出錯',
 	'openidconfigerrortext' => '這個 wiki 的 OpenID 儲存設定是無效的。
@@ -8605,8 +8611,8 @@ $messages['zh-hant'] = array(
 	'openidconvertoraddmoreids' => '轉換到 OpenID 或加入另一個 OpenID URL',
 	'openidconvertsuccess' => '成功轉換為 OpenID',
 	'openidconvertsuccesstext' => '您已經成功的將您的 OpenID 轉化為 $1。',
-	'openid-convert-already-your-openid-text' => '這已是您的 OpenID 了。', # Fuzzy
-	'openid-convert-other-users-openid-text' => '這是別人的 OpenID。', # Fuzzy
+	'openid-convert-already-your-openid-text' => 'OpenID $1已經與您的賬戶關聯了。',
+	'openid-convert-other-users-openid-text' => '$1是其他人的OpenID。您不能使用其他人的OpenID。',
 	'openidalreadyloggedin' => '您已經登入。',
 	'openidalreadyloggedintext' => "'''您已經登錄，$1！'''
 
@@ -8636,21 +8642,36 @@ OpenID 可以讓您不必使用不同的密碼登錄不同的站點。
 	'openiddelete-error' => '在移除你的 OpenID 的時候出現了一個錯誤。',
 	'openid-openids-were-not-merged' => '合并用戶帳號時，OpenID 沒有被合并。',
 	'prefs-openid-show-openid' => '如果使用 OpenID 登入，您可以在您的用戶頁隱藏您的 OpenID。',
+	'prefs-openid-userinfo-update-on-login' => 'OpenID用戶資訊更新',
+	'prefs-openid-associated-openids' => '您用於登陸{{SITENAME}}的OpenID',
+	'prefs-openid-trusted-sites' => '受信任站點',
 	'openid-userinfo-update-on-login-label' => '每次登入時，都從 OpenID 的使用者資料中更新以下資料。', # Fuzzy
 	'openid-associated-openids-label' => '和你的帳號關聯的 OpenID：',
 	'openid-urls-action' => '動作',
 	'openid-urls-registration' => '註冊時間',
 	'openid-urls-delete' => '刪除',
 	'openid-add-url' => '加入一個新的 OpenID', # Fuzzy
+	'openid-trusted-sites-table-header-column-url' => '受信任站點',
+	'openid-trusted-sites-table-header-column-action' => '動作',
+	'openid-trusted-sites-delete-link-action-text' => '刪除',
+	'openid-trusted-sites-delete-all-link-action-text' => '刪除所有受信任站點',
+	'openid-trusted-sites-delete-confirmation-page-title' => '刪除受信任站點',
+	'openid-trusted-sites-delete-confirmation-button-text' => '確認',
+	'openid-local-identity' => '您的OpenID：',
 	'openid-login-or-create-account' => '登錄或創建新賬號',
 	'openid-provider-label-openid' => '輸入你的 OpenID URL',
 	'openid-provider-label-google' => '以您的 Google 帳戶登入',
 	'openid-provider-label-yahoo' => '以您的 Yahoo 帳戶登入',
 	'openid-provider-label-aol' => '輸入你的 AOL 螢幕名稱',
 	'openid-provider-label-other-username' => '輸入你的 $1 用戶名',
+	'openid-provider-selection-button-login' => '經由OpenID登陸',
+	'openid-provider-selection-button-create-account' => '經由OpenID創建賬戶',
+	'openid-provider-selection-button-convert' => '轉換或添加OpenID',
 	'specialpages-group-openid' => 'OpenID 服務頁和狀態信息',
 	'right-openid-dashboard-access' => '對 OpenID 儀錶板的標準訪問',
 	'right-openid-dashboard-admin' => '對 OpenID 儀錶板的管理員訪問',
+	'action-openid-login-with-openid' => '經由OpenID登陸',
+	'action-openid-create-account-with-openid' => '經由OpenID創建賬戶',
 	'openid-dashboard-title' => 'OpenID 儀錶板',
 	'openid-dashboard-title-admin' => 'OpenID 儀錶板（管理員）',
 	'openid-dashboard-introduction' => '當前 OpenID 的擴展設置（[$1 help|$1 幫助]）',
