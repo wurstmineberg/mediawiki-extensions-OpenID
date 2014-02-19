@@ -33,6 +33,7 @@ $specialPageAliases['arz'] = array(
 	'OpenIDConvert' => array( 'تحويل_Open_ID' ),
 	'OpenIDServer' => array( 'خادم_Open_ID' ),
 	'OpenIDXRDS' => array( 'إكس_آر_دى_إس_Open_ID' ),
+	'OpenIDDashboard' => array( 'سبوره_الهويه-المفتوحه' ),
 );
 
 /** German (Deutsch) */
