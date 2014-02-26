@@ -7606,6 +7606,7 @@ $messages['ta'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Chaduvari
  * @author Kiranmayee
  * @author Ravichandra
  * @author Veeven
@@ -7614,14 +7615,14 @@ $messages['te'] = array(
 	'openid-desc' => '[//openid.net/ ఓపెన్ఐడీ]తో వికీ లోనికి ప్రవేశించండి, మరియు వికీ వాడుకరి ఖాతాతో ఓపెన్ఐడీని అంగీకరించే ఇతర వెబ్ సైట్లలోనికి ప్రవేశించండి',
 	'openidlogin' => 'ఓపెన్ఐడీతో ప్రవేశించండి', # Fuzzy
 	'openidserver' => 'ఓపెన్ఐడీ సేవకి',
-	'openiderror' => 'తనిఖీ పొరపాటు', # Fuzzy
+	'openiderror' => 'OpenID లోపం',
 	'openiderrortext' => 'ఓపెన్ఐడీ చిరునామాని తనిఖీ చేయడంలో పొరపాటు జరిగింది.',
-	'openidpermission' => 'ఓపెన్ఐడీ అనుమతుల పొరపాటు',
+	'openidpermission' => 'ఓపెన్ఐడీ అనుమతుల లోపం',
 	'openidpermissiontext' => 'మీరు ఇచ్చిన ఓపెన్ఐడీకి ఈ సేవకి లోనికి ప్రవేశించే అనుమతి లేదు.',
 	'openidcancel' => 'తనిఖీ రద్దయింది',
 	'openidcanceltext' => 'ఓపెన్ఐడీ చిరునామా యొక్క తనిఖీని రద్దుచేసారు.',
 	'openidfailure' => 'తనిఖీ విఫలమైంది',
-	'openidfailuretext' => 'ఓపెన్ఐడీ చిరునామా యొక్క తనిఖీ విఫలమైంది. పొరపాటు సందేశం: "$1"',
+	'openidfailuretext' => 'ఓపెన్ఐడీ చిరునామా యొక్క తనిఖీ విఫలమైంది. లోప సందేశం: "$1"',
 	'openidsuccess' => 'తనిఖీ విజయవంతమైంది',
 	'openidserverlogininstructions' => '$3 లోనికి $2 (వాడుకరి పేజీ $1) అనే వాడుకరిగా ప్రవేశించడానికి మీ సంకేతపదం ఇవ్వండి.', # Fuzzy
 	'openidallowtrust' => 'ఈ వాడుకరి ఖాతాని విశ్వసించడానికి $1ని అనుమతించు.',
