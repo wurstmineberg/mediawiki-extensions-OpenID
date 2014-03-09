@@ -6349,6 +6349,7 @@ $messages['ps'] = array(
 /** Portuguese (português)
  * @author Giro720
  * @author Hamilton Abreu
+ * @author Imperadeiro98
  * @author Lijealso
  * @author Luckas
  * @author Malafaya
@@ -6395,7 +6396,7 @@ Este OpenID pode ser gerido no separador do [[Special:Preferences#mw-prefsection
 	'openidchooseinstructions' => 'Todos os utilizadores precisam de uma alcunha;
 pode escolher uma das opções abaixo.',
 	'openidchoosenick' => 'A sua alcunha ($1)',
-	'openidchoosefull' => 'O seu nome completo ($1)', # Fuzzy
+	'openidchoosefull' => 'O seu nome verdadeiro ($1)',
 	'openidchooseurl' => 'Um nome escolhido a partir do seu OpenID ($1)',
 	'openidchooseauto' => 'Um nome gerado automaticamente ($1)',
 	'openidchoosemanual' => 'Um nome à sua escolha:',
