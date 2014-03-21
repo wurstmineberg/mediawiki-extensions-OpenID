@@ -50,6 +50,7 @@ $specialPageAliases['diq'] = array(
 	'OpenIDLogin' => array( 'KewtışéOpenID' ),
 	'OpenIDConvert' => array( 'VırnayışéOpenID' ),
 	'OpenIDServer' => array( 'ArdenéOpenID' ),
+	'OpenIDDashboard' => array( 'OpenIDPanel' ),
 );
 
 /** Finnish (suomi) */
