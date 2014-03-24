@@ -6388,7 +6388,7 @@ Este OpenID pode ser gerido no separador do [[Special:Preferences#mw-prefsection
 	'openidoptional' => 'Opcional',
 	'openidrequired' => 'Requerido',
 	'openidnickname' => 'Alcunha',
-	'openidfullname' => 'Nome completo', # Fuzzy
+	'openidfullname' => 'Nome Verdadeiro',
 	'openidemail' => 'Correio electrónico',
 	'openidlanguage' => 'Língua',
 	'openidtimezone' => 'Fuso horário',
