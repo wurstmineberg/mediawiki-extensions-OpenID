@@ -7752,6 +7752,7 @@ $messages['tk'] = array(
 
 /** Tagalog (Tagalog)
  * @author AnakngAraw
+ * @author Jojit fb
  */
 $messages['tl'] = array(
 	'openid-desc' => 'Lumagda sa wiki na may [//openid.net/ OpenID], at lumagda sa iba pang mga websayt na nakakaalam sa/nakababatid ng OpenID na may kuwenta/akawnt na pang-wiki',
@@ -7800,7 +7801,7 @@ makakapili ka mula sa mga pagpipiliang nasa ibaba.',
 	'openidchoosemanual' => 'Isang pangalang ikaw ang pumili:',
 	'openidchooseexisting' => 'Isang umiiral na akawnt sa wiking ito:',
 	'openidchooseusername' => 'Pangalan ng tagagamit:',
-	'openidchoosepassword' => 'Hudyat:',
+	'openidchoosepassword' => 'Password:',
 	'openidconvertinstructions' => 'Nagpapahintulot ang pormularyong ito upang mabago mo ang iyong akawnt na pangtagagamit upang magamit ang isang URL ng OpenID o makapagdagdag ng maraming pang mga URL na pang-OpenID.',
 	'openidconvertoraddmoreids' => 'Gawing OpenID o magdagdag ng iba pang URL na pang-OpenID',
 	'openidconvertsuccess' => 'Matagumpay na napalitan (nabago) upang maging OpenID',
