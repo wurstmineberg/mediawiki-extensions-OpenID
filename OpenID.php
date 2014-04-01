@@ -29,7 +29,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	exit( 1 );
 }
 
-define( 'MEDIAWIKI_OPENID_VERSION', '4.03 20131126' );
+define( 'MEDIAWIKI_OPENID_VERSION', '4.4.0 20140401' );
 
 $path = dirname( __FILE__ );
 set_include_path( implode( PATH_SEPARATOR, array( $path ) ) . PATH_SEPARATOR . get_include_path() );
@@ -381,6 +381,7 @@ $wgExtensionCredits['other'][] = array(
 
 $dir = $path . '/';
 
+$wgMessagesDirs['OpenID'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['OpenID'] = $dir . 'OpenID.i18n.php';
 $wgExtensionMessagesFiles['OpenIDAlias'] = $dir . 'OpenID.alias.php';
 
