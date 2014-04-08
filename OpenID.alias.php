@@ -78,7 +78,8 @@ $specialPageAliases['ia'] = array(
 
 /** Italian (italiano) */
 $specialPageAliases['it'] = array(
-	'OpenIDConvert' => array( 'OpenIDConverti' ),
+	'OpenIDLogin' => array( 'AccessoOpenID' ),
+	'OpenIDConvert' => array( 'ConvertiOpenID' ),
 );
 
 /** Japanese (日本語) */
