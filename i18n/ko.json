@@ -48,7 +48,7 @@
     "openidrequired": "필수",
     "openidnickname": "별명",
     "openidfullname": "실명",
-    "openidemail": "메일 주소",
+    "openidemail": "이메일 주소",
     "openidlanguage": "언어",
     "openidtimezone": "시간대",
     "openidchooselegend": "사용자 이름과 계정 선택",

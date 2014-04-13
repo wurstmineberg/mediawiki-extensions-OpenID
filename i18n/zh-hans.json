@@ -108,6 +108,7 @@
     "openid-trusted-sites-delete-all-link-action-text": "删除所有受信网站",
     "openid-trusted-sites-delete-confirmation-page-title": "删除信任网站",
     "openid-trusted-sites-delete-confirmation-question": "点击“{{int:openid-trusted-sites-delete-confirmation-button-text}}”按钮后，您将从您的信任网站列表中移除“$1”。",
+    "openid-trusted-sites-delete-all-confirmation-question": "通过点击“{{int:openid-trusted-sites-delete-confirmation-button-text}}”按钮，您将在您的用户设置中移除所有信任站点。",
     "openid-trusted-sites-delete-confirmation-button-text": "确认",
     "openid-trusted-sites-delete-confirmation-success-text": "“$1”已成功地从您的信任站点列表中移除。",
     "openid-trusted-sites-delete-all-confirmation-success-text": "您之前信任的所有站点都已成功地从您的用户档案中移除。",
