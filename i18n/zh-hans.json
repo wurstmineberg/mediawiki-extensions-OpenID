@@ -12,7 +12,8 @@
             "Wrightbus",
             "Xiaomingyan",
             "Yanmiao liu",
-            "Yfdyh000"
+            "Yfdyh000",
+            "Hudafu"
         ]
     },
     "openid-desc": "让用户可使用一个[//openid.net/ OpenID]来登录到这个wiki。如果启用相关设置，还可以使用他们在此wiki上用户帐号URL作为OpenID来登录到其他接受OpenID的网站。",
@@ -139,7 +140,7 @@
     "action-openid-create-account-without-openid": "手动创建一个账户，例如不用OpenID",
     "openid-dashboard-title": "OpenID 仪表板",
     "openid-dashboard-title-admin": "OpenID 仪表板（管理员）",
-    "openid-dashboard-introduction": "当前 OpenID 的扩展设置（[$1 help|$1 帮助]）",
+    "openid-dashboard-introduction": "当前的OpenID扩展程序设置（[$1 帮助]）",
     "openid-dashboard-number-openid-users": "拥有 OpenID 的用户数",
     "openid-dashboard-number-openids-in-database": "OpenID 的数量（总数）",
     "openid-dashboard-number-users-without-openid": "没有 OpenID 的用户数",
