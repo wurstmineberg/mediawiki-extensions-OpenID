@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "GreenZeb"
-        ]
-    },
-    "openidchooseusername": "Lietotājvārds:",
-    "openidchoosepassword": "Parole:"
+	"@metadata": {
+		"authors": [
+			"GreenZeb"
+		]
+	},
+	"openidchooseusername": "Lietotājvārds:",
+	"openidchoosepassword": "Parole:"
 }

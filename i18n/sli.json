@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Schläsinger"
-        ]
-    },
-    "openidxrds": "Yadis-Datei",
-    "openidemail": "E-Mail-Atresse:"
+	"@metadata": {
+		"authors": [
+			"Schläsinger"
+		]
+	},
+	"openidxrds": "Yadis-Datei",
+	"openidemail": "E-Mail-Atresse:"
 }

@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "MF-Warburg"
-        ]
-    },
-    "openidnickname": "Naran uza-na'in",
-    "openidfullname": "Naran kompletu",
-    "openidemail": "Diresaun korreiu eletróniku",
-    "openidlanguage": "Lian",
-    "openidchooseusername": "Naran uza-na'in:"
+	"@metadata": {
+		"authors": [
+			"MF-Warburg"
+		]
+	},
+	"openidnickname": "Naran uza-na'in",
+	"openidfullname": "Naran kompletu",
+	"openidemail": "Diresaun korreiu eletróniku",
+	"openidlanguage": "Lian",
+	"openidchooseusername": "Naran uza-na'in:"
 }

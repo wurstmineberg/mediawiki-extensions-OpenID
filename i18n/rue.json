@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gazeb"
-        ]
-    },
-    "openidchooseusername": "Мено хоснователя:",
-    "openidchoosepassword": "Гесло:"
+	"@metadata": {
+		"authors": [
+			"Gazeb"
+		]
+	},
+	"openidchooseusername": "Мено хоснователя:",
+	"openidchoosepassword": "Гесло:"
 }

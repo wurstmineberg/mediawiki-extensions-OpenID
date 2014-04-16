@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Codex Sinaiticus"
-        ]
-    },
-    "openidemail": "የኢ-ሜል አድራሻ",
-    "openidlanguage": "ቋንቋ"
+	"@metadata": {
+		"authors": [
+			"Codex Sinaiticus"
+		]
+	},
+	"openidemail": "የኢ-ሜል አድራሻ",
+	"openidlanguage": "ቋንቋ"
 }

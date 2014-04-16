@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Hanberke"
-        ]
-    },
-    "openidlanguage": "Dil",
-    "openid-urls-delete": "Öçür"
+	"@metadata": {
+		"authors": [
+			"Hanberke"
+		]
+	},
+	"openidlanguage": "Dil",
+	"openid-urls-delete": "Öçür"
 }
