@@ -9,7 +9,7 @@
 			"555"
 		]
 	},
-	"openid-desc": "Autentique-se no wiki com um [//openid.net/ OpenID], e autentique-se em outros sítios que usem OpenID com uma conta de utilizador wiki",
+	"openid-desc": "Autentique-se no wiki com um [//openid.net/ OpenID], e autentique-se em outros sítios que usem OpenID com uma conta de usuário wiki",
 	"openidlogin": "Autenticação com OpenID",
 	"openidserver": "Servidor OpenID",
 	"openidxrds": "Arquivo Yadis",
@@ -27,7 +27,7 @@
 	"openidsuccess": "Verificação com sucesso",
 	"openidsuccesstext": "A verificação da URL OpenID foi bem sucedida.",
 	"openidusernameprefix": "UtilizadorOpenID",
-	"openidserverlogininstructions": "Introduza a sua palavra-chave abaixo para se autenticar em $3 como utilizador $2 (página de utilizador $1).",
+	"openidserverlogininstructions": "$3 solicita que introduza a sua senha para sua página de usuário $2 $1 (esta é a URL do seu OpenID).",
 	"openidtrustinstructions": "Verifique se pretende compartilhar dados com $1.",
 	"openidallowtrust": "Permitir que $1 confie nesta conta de usuário.",
 	"openidnopolicy": "O sítio não especificou uma política de privacidade.",
@@ -83,5 +83,5 @@
 	"openid-provider-label-google": "Entrar usando a sua conta do Google",
 	"openid-provider-label-yahoo": "Entrar usando a sua conta do Yahoo",
 	"openid-provider-label-aol": "Digite seu nome de usuário AOL",
-	"openid-provider-label-other-username": "Introduza o seu nome de utilizador $1"
+	"openid-provider-label-other-username": "Introduza o seu nome de usuário $1"
 }
