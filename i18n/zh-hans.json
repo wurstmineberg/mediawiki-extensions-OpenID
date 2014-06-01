@@ -76,7 +76,7 @@
 	"openidautosubmit": "本页包含的表单在启用JavaScript的情况下可以自动提交。\n如果没有自动提交，请按 \"Continue\" （继续）按钮。",
 	"openidclientonlytext": "你不能在其他网站使用该wiki的账户作为OpenID。",
 	"openidloginlabel": "OpenID地址",
-	"openidlogininstructions": "{{SITENAME}}支持用于网站间单点登录的[//openid.net/ OpenID]标准。OpenID可以让您无需使用不同密码登录不同的网站。（详情请见[//en.wikipedia.org/wiki/OpenID 维基百科OpenID条目]。）[//openid.net/get/ OpenID供应商]很多，您可能已经拥有在其他服务上的启用OpenID的账户。",
+	"openidlogininstructions": "{{SITENAME}}支持用于网站间单点登录的[//openid.net/ OpenID]标准。OpenID可以让您无需使用不同密码登录不同的网站。（详情请见[//zh.wikipedia.org/wiki/OpenID 维基百科OpenID条目]。）[//openid.net/get/ OpenID供应商]很多，您可能已经拥有在其他服务上的启用OpenID的账户。",
 	"openidlogininstructions-openidloginonly": "{{SITENAME}} ''仅''允许用 OpenID 登录。",
 	"openidlogininstructions-passwordloginallowed": "如果您在 {{SITENAME}} 上已经拥有了账号，可以以通常的方式用用户名和密码[[Special:UserLogin|登录]]。\n将来使用 OpenID，您可以在正常登录后[[Special:OpenIDConvert|转换账号为 OpenID]]。",
 	"openidupdateuserinfo": "更新我的个人信息",
