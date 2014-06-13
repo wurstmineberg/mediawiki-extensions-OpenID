@@ -506,10 +506,11 @@ class OpenIDHooks {
 	public static function onLoadExtensionSchemaUpdates( $updater = null ) {
 		switch ( $updater->getDB()->getType() ) {
 		case "mysql":
-		case "sqlite":
 			return self::MySQLSchemaUpdates( $updater );
 		case "postgres":
 			return self::PostgreSQLSchemaUpdates( $updater );
+		case "sqlite":
+			return true;
 		default:
 			throw new MWException("OpenID does not support {$updater->getDB()->getType()} yet.");
 		}
